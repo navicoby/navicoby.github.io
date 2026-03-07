@@ -1,0 +1,18 @@
+baseURL = "https://navicoby.github.io/"
+languageCode = "ko-kr"
+title = "My Blog"
+theme = "PaperMod"
+
+[params]
+  author = "navicoby"
+  mainSections = ["posts"]
+
+[outputs]
+  home = ["HTML", "JSON"]
+  page = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
