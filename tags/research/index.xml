@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Research on My Blog</title><link>https://navicoby.github.io/tags/research/</link><description>Recent content in Research on My Blog</description><generator>Hugo -- 0.157.0</generator><language>ko-kr</language><lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://navicoby.github.io/tags/research/index.xml" rel="self" type="application/rss+xml"/><item><title>BIM / SLAM / Landscape AI 리서치 리포트 #1</title><link>https://navicoby.github.io/posts/second-article/</link><pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate><guid>https://navicoby.github.io/posts/second-article/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;수집일: 2026-03-08 | 수집 범위: 이번 주 | 분야: BIM / SLAM / Landscape AI&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="-bim-building-information-modeling"&gt;🏗️ BIM (Building Information Modeling)&lt;/h2&gt;
+&lt;h3 id="-논문"&gt;📄 논문&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Indoor Scan-to-BIM Automation: From Mobile Perception to 3D Building Modelling&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;출처: ScienceDirect (2025.12)&lt;/li&gt;
+&lt;li&gt;AI 기반 실내 Scan-to-BIM 워크플로우 전반을 다룬 리뷰 논문. 모바일 LiDAR 포인트 클라우드 생성, 건축 시맨틱 세그멘테이션, 요소 모델링까지 SLAM과 딥러닝의 최신 동향을 정리함.&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href="https://www.sciencedirect.com/science/article/abs/pii/S092658052500771X"&gt;https://www.sciencedirect.com/science/article/abs/pii/S092658052500771X&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Predictive Hybrid Scan-to-BIM Method for Heritage Building Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;저자: Salah, R., Géczy, N. et al. | 출처: Scientific Reports (2026)&lt;/li&gt;
+&lt;li&gt;문화재 건축물의 Scan-to-BIM 정확도와 완성도를 향상시키는 예측 기반 하이브리드 방법론 제안. UAV 사진측량과 지상 레이저 스캐닝 융합 접근.&lt;/li&gt;
+&lt;li&gt;🔗 &lt;a href="https://www.nature.com/articles/s41598-026-38200-8"&gt;https://www.nature.com/articles/s41598-026-38200-8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-기사"&gt;📰 기사&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;AEC Trends 2026: BIM 6.0, Digital Twins &amp;amp; AI의 통합&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
