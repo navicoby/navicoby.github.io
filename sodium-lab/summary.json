@@ -1,0 +1,561 @@
+{
+ "_schema": "sodium-ess-lab/summary/v1",
+ "generated": "2026-09-17 04:10",
+ "campaign_id": "C01-hc-nvpf-ess-baseline",
+ "objective": "정치형 ESS 운전점(0.25C, 25 °C)에서 전극 두께·공극률·입자크기·전해질 전도도·HC 확산계수 중 어느 변수가 사용가능 에너지·왕복효율·전해질 고갈·온도상승의 트레이드오프를 지배하며, 기준셀(Chayambuka2022)을 지배하는 Pareto 설계는 무엇인가.\n",
+ "chemistry": "Hard Carbon 음극 // Na3V2(PO4)2F3(NVPF) 양극 // 1 M NaPF6 계 액체전해질 (PyBaMM Chayambuka2022 파라미터셋)",
+ "stage": "doe",
+ "round": 4,
+ "started": "2026-09-15",
+ "n_experiments": 499,
+ "n_ok": 498,
+ "n_failed": 1,
+ "by_stage": {
+  "baseline": 3,
+  "sensitivity": 16,
+  "doe": 480
+ },
+ "baseline": {
+  "exp_id": "EXP-0001",
+  "usable_capacity_Ah": 0.0017507022205603656,
+  "usable_energy_Wh": 0.005824816972359928,
+  "round_trip_efficiency": 0.8577201123345539,
+  "areal_energy_Wh_m2": 22.932350284881608,
+  "specific_energy_Wh_kg_stack": 63.188392285803815,
+  "capacity_utilization": 0.44883777742392145,
+  "electrolyte_min_conc_ratio": 0.7606415251273212,
+  "temperature_rise_K": 0.05769174216487727
+ },
+ "dominant_vars": [
+  "pos_thickness_um",
+  "neg_thickness_um",
+  "neg_porosity",
+  "pos_porosity",
+  "neg_radius_um"
+ ],
+ "sensitivity_ranked": [
+  "pos_thickness_um",
+  "neg_thickness_um",
+  "neg_porosity",
+  "pos_porosity",
+  "neg_radius_um",
+  "pos_radius_um",
+  "neg_diff_scale",
+  "elyte_cond_scale"
+ ],
+ "objectives": [
+  {
+   "key": "areal_energy_Wh_m2",
+   "dir": "max"
+  },
+  {
+   "key": "round_trip_efficiency",
+   "dir": "max"
+  },
+  {
+   "key": "specific_energy_Wh_kg_stack",
+   "dir": "max"
+  },
+  {
+   "key": "electrolyte_min_conc_ratio",
+   "dir": "max"
+  },
+  {
+   "key": "temperature_rise_K",
+   "dir": "min"
+  }
+ ],
+ "pareto": [
+  {
+   "exp_id": "EXP-0023",
+   "design": {
+    "pos_thickness_um": 49.373480530708115,
+    "neg_thickness_um": 78.59795621006981,
+    "pos_porosity": 0.34517657566848864,
+    "neg_porosity": 0.4824459273496705,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 3.1353845100493913,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 25.109356763601046,
+    "round_trip_efficiency": 0.9036135357521832,
+    "specific_energy_Wh_kg_stack": 76.67091260921705,
+    "electrolyte_min_conc_ratio": 0.9277594214667387,
+    "temperature_rise_K": 0.03236852199040641
+   }
+  },
+  {
+   "exp_id": "EXP-0029",
+   "design": {
+    "pos_thickness_um": 91.31963789165309,
+    "neg_thickness_um": 146.064515292226,
+    "pos_porosity": 0.2826449951896001,
+    "neg_porosity": 0.5063373306352069,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 1.7190164366928415,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 53.28020913950831,
+    "round_trip_efficiency": 0.9115455285857156,
+    "specific_energy_Wh_kg_stack": 101.52264412591205,
+    "electrolyte_min_conc_ratio": 0.6620822107070725,
+    "temperature_rise_K": 0.06532799452861582
+   }
+  },
+  {
+   "exp_id": "EXP-0036",
+   "design": {
+    "pos_thickness_um": 110.57200865595513,
+    "neg_thickness_um": 120.87256093303223,
+    "pos_porosity": 0.27739448586544746,
+    "neg_porosity": 0.49620304930756154,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 1.9558834132241556,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 63.69784245697735,
+    "round_trip_efficiency": 0.9025048296877403,
+    "specific_energy_Wh_kg_stack": 118.8288482145625,
+    "electrolyte_min_conc_ratio": 0.5460100154673811,
+    "temperature_rise_K": 0.09558271942245256
+   }
+  },
+  {
+   "exp_id": "EXP-0039",
+   "design": {
+    "pos_thickness_um": 137.275558287215,
+    "neg_thickness_um": 152.84386625611296,
+    "pos_porosity": 0.3758720947562485,
+    "neg_porosity": 0.32221541139956045,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 2.3638840296378776,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 64.73279388973616,
+    "round_trip_efficiency": 0.9029383896994766,
+    "specific_energy_Wh_kg_stack": 103.2629117486129,
+    "electrolyte_min_conc_ratio": 0.6166959263741775,
+    "temperature_rise_K": 0.0820092623962978
+   }
+  },
+  {
+   "exp_id": "EXP-0042",
+   "design": {
+    "pos_thickness_um": 106.1305282820118,
+    "neg_thickness_um": 103.11880749285953,
+    "pos_porosity": 0.38473764440834873,
+    "neg_porosity": 0.45186540213940146,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 4.897352572508984,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 47.993962274567345,
+    "round_trip_efficiency": 0.892479964153079,
+    "specific_energy_Wh_kg_stack": 100.0239809886746,
+    "electrolyte_min_conc_ratio": 0.8008356857052429,
+    "temperature_rise_K": 0.06777781655046056
+   }
+  },
+  {
+   "exp_id": "EXP-0043",
+   "design": {
+    "pos_thickness_um": 56.23754923426161,
+    "neg_thickness_um": 54.70144898215037,
+    "pos_porosity": 0.2546944144533376,
+    "neg_porosity": 0.46221650526293523,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 3.037551374175598,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 32.68481680612279,
+    "round_trip_efficiency": 0.8853603515300683,
+    "specific_energy_Wh_kg_stack": 102.26807723694286,
+    "electrolyte_min_conc_ratio": 0.8634536876107548,
+    "temperature_rise_K": 0.05073883106416588
+   }
+  },
+  {
+   "exp_id": "EXP-0044",
+   "design": {
+    "pos_thickness_um": 61.90224098668666,
+    "neg_thickness_um": 66.49793918796288,
+    "pos_porosity": 0.24720252469345286,
+    "neg_porosity": 0.4485800064287091,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 3.146175787738868,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 37.54246385869159,
+    "round_trip_efficiency": 0.8956161850950803,
+    "specific_energy_Wh_kg_stack": 106.93356089638905,
+    "electrolyte_min_conc_ratio": 0.8210345115852258,
+    "temperature_rise_K": 0.06011072209179247
+   }
+  },
+  {
+   "exp_id": "EXP-0062",
+   "design": {
+    "pos_thickness_um": 63.217173746515954,
+    "neg_thickness_um": 69.73410364668158,
+    "pos_porosity": 0.21882453759078863,
+    "neg_porosity": 0.43571090304540566,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 2.8238002827526816,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 40.47848609075812,
+    "round_trip_efficiency": 0.8976366089286419,
+    "specific_energy_Wh_kg_stack": 111.57873421856878,
+    "electrolyte_min_conc_ratio": 0.7641408579776885,
+    "temperature_rise_K": 0.06366504514039661
+   }
+  },
+  {
+   "exp_id": "EXP-0063",
+   "design": {
+    "pos_thickness_um": 49.65771149116207,
+    "neg_thickness_um": 55.609077777280945,
+    "pos_porosity": 0.22486896335186798,
+    "neg_porosity": 0.4695239289968906,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 3.281370614211875,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 31.074904729154124,
+    "round_trip_efficiency": 0.8914380553727814,
+    "specific_energy_Wh_kg_stack": 100.8904597148812,
+    "electrolyte_min_conc_ratio": 0.8602407932747317,
+    "temperature_rise_K": 0.05165781275638892
+   }
+  },
+  {
+   "exp_id": "EXP-0067",
+   "design": {
+    "pos_thickness_um": 99.35887203576483,
+    "neg_thickness_um": 111.16918142764312,
+    "pos_porosity": 0.2133302568434761,
+    "neg_porosity": 0.356200605067381,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 1.6263798136281007,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 65.36266666743144,
+    "round_trip_efficiency": 0.9075405839794498,
+    "specific_energy_Wh_kg_stack": 126.8699182061242,
+    "electrolyte_min_conc_ratio": 0.3795363972715534,
+    "temperature_rise_K": 0.0868555362845882
+   }
+  },
+  {
+   "exp_id": "EXP-0068",
+   "design": {
+    "pos_thickness_um": 69.54366593498362,
+    "neg_thickness_um": 76.35349821105567,
+    "pos_porosity": 0.20360426026473155,
+    "neg_porosity": 0.3206418519884268,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 2.2531484083792868,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 46.571446523823056,
+    "round_trip_efficiency": 0.9065180499437447,
+    "specific_energy_Wh_kg_stack": 118.38883182302621,
+    "electrolyte_min_conc_ratio": 0.67078692646017,
+    "temperature_rise_K": 0.061620617365804264
+   }
+  },
+  {
+   "exp_id": "EXP-0081",
+   "design": {
+    "pos_thickness_um": 74.02220210777556,
+    "neg_thickness_um": 81.77109476045172,
+    "pos_porosity": 0.3554669079231354,
+    "neg_porosity": 0.31128334515846084,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 5.958162932102995,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "objectives": {
+    "areal_energy_Wh_m2": 36.14728373236609,
+    "round_trip_efficiency": 0.8906883265564199,
+    "specific_energy_Wh_kg_stack": 92.61330975208445,
+    "electrolyte_min_conc_ratio": 0.8621184195912278,
+    "temperature_rise_K": 0.05025869187960552
+   }
+  }
+ ],
+ "n_pareto": 192,
+ "hv_history": [
+  {
+   "round": 1,
+   "hv": 0.49155,
+   "improvement": 0.3576,
+   "n_front": 22,
+   "n_points": 62
+  },
+  {
+   "round": 2,
+   "hv": 0.5636,
+   "improvement": 0.10389999999999999,
+   "n_front": 94,
+   "n_points": 198
+  },
+  {
+   "round": 3,
+   "hv": 0.6172,
+   "improvement": 0.03894999999999993,
+   "n_front": 140,
+   "n_points": 333
+  },
+  {
+   "round": 4,
+   "hv": 0.49575,
+   "improvement": 0.012350000000000028,
+   "n_front": 192,
+   "n_points": 470
+  }
+ ],
+ "last_run": {
+  "date": "2026-09-17",
+  "stage": "doe",
+  "n_exp": 144,
+  "runtime_s": 261,
+  "note": "DOE r4: 144건(실패 0) · Pareto 192점 · HV 0.496 (Δ+0.012) · 정체 1/2"
+ },
+ "history": [
+  {
+   "date": "2026-09-15",
+   "stage": "baseline",
+   "next": "sensitivity",
+   "n_exp": 2,
+   "note": "baseline 재현: Q=1.751 mAh, E=5.82 mWh, RTE=0.858, N/P=0.79(DERIVED), 이용률=0.45; 메시 x2 에너지 차이 0.27% (독립 OK)"
+  },
+  {
+   "date": "2026-09-15",
+   "stage": "sensitivity",
+   "next": "doe",
+   "n_exp": 16,
+   "note": "민감도 순위: pos_thickness_um(1.70) > neg_thickness_um(0.96) > neg_porosity(0.76) > pos_porosity(0.54) > neg_radius_um(0.42) > pos_radius_um(0.12) > neg_diff_scale(0.12) > elyte_cond_scale(0.00) → DOE 변수 ['pos_thickness_um', 'neg_thickness_um', 'neg_porosity', 'pos_porosity', 'neg_radius_um']"
+  },
+  {
+   "date": "2026-09-15",
+   "stage": "doe",
+   "next": "doe",
+   "n_exp": 48,
+   "note": "DOE r1: 48건(실패 1) · Pareto 22점 · HV 0.492 (Δ+0.358) · 정체 0/2"
+  },
+  {
+   "date": "2026-09-15",
+   "stage": "doe",
+   "next": "doe",
+   "n_exp": 144,
+   "note": "DOE r2: 144건(실패 0) · Pareto 94점 · HV 0.564 (Δ+0.104) · 정체 0/2"
+  },
+  {
+   "date": "2026-09-16",
+   "stage": "doe",
+   "next": "doe",
+   "n_exp": 144,
+   "note": "DOE r3: 144건(실패 0) · Pareto 140점 · HV 0.617 (Δ+0.039) · 정체 0/2"
+  },
+  {
+   "date": "2026-09-17",
+   "stage": "doe",
+   "next": "doe",
+   "n_exp": 144,
+   "note": "DOE r4: 144건(실패 0) · Pareto 192점 · HV 0.496 (Δ+0.012) · 정체 1/2"
+  }
+ ],
+ "best_design": {
+  "mode": "ess",
+  "n_dominating": 6,
+  "dominating_ids": [
+   "EXP-0488",
+   "EXP-0255",
+   "EXP-0291",
+   "EXP-0450",
+   "EXP-0116",
+   "EXP-0320"
+  ],
+  "n_pool": 32,
+  "rebalanced_reference": {
+   "exp_id": "EXP-0355",
+   "design": {
+    "pos_thickness_um": 68.0,
+    "neg_thickness_um": 88.64409020458338,
+    "pos_porosity": 0.23,
+    "neg_porosity": 0.51,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 3.48,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "outputs": {
+    "usable_capacity_Ah": 0.003053506414338742,
+    "usable_energy_Wh": 0.010832475208179102,
+    "charge_energy_Wh": 0.012104470705059812,
+    "charge_capacity_Ah": 0.0030535767862647062,
+    "round_trip_efficiency": 0.8949152319110492,
+    "coulombic_efficiency": 0.9999769542635113,
+    "mean_discharge_voltage_V": 3.5475527928520663,
+    "areal_energy_Wh_m2": 42.64754018968151,
+    "areal_capacity_mAh_cm2": 1.2021678796609219,
+    "specific_energy_Wh_kg_stack": 107.3357516634828,
+    "volumetric_energy_Wh_L_stack": 201.50593455483087,
+    "capacity_utilization": 0.7828453155915968,
+    "electrolyte_min_conc_ratio": 0.741023604664026,
+    "first_discharge_capacity_Ah": 0.0030500524402417694,
+    "discharge_duration_s": 14656.830788825406,
+    "peak_temperature_C": 25.065654710834337,
+    "temperature_rise_K": 0.06565471083433749
+   }
+  },
+  "featured": {
+   "exp_id": "EXP-0488",
+   "design": {
+    "pos_thickness_um": 114.63211558886566,
+    "neg_thickness_um": 126.797734847897,
+    "pos_porosity": 0.2604202917841679,
+    "neg_porosity": 0.4525833641043,
+    "pos_radius_um": 0.59,
+    "neg_radius_um": 1.9683745095541014,
+    "elyte_cond_scale": 1.0,
+    "neg_diff_scale": 1.0
+   },
+   "spec": {
+    "양극": {
+     "활물질": "Na3V2(PO4)2F3 (NVPF)",
+     "두께 [µm]": 114.632,
+     "공극률": 0.26,
+     "활물질 부피분율": 0.52,
+     "입자 반경 [µm]": 0.59,
+     "활물질 면적당 로딩 [mg/cm²]": 19.07,
+     "이론용량 [mAh/cm²]": 2.446
+    },
+    "음극": {
+     "활물질": "Hard Carbon",
+     "두께 [µm]": 126.798,
+     "공극률": 0.453,
+     "활물질 부피분율": 0.546,
+     "입자 반경 [µm]": 1.968,
+     "활물질 면적당 로딩 [mg/cm²]": 11.08,
+     "이론용량 [mAh/cm²]": 2.7,
+     "HC 확산계수 배율": 1.0
+    },
+    "전해질·분리막": {
+     "전해질": "1 M NaPF6 계 액체(Chayambuka2022 전도도·확산도 곡선)",
+     "전도도 배율": 1.0,
+     "분리막 두께 [µm]": 25,
+     "분리막 공극률": 0.55
+    },
+    "셀 구조": {
+     "집전체": "Al 15 µm × 2 (ASSUMED)",
+     "N/P 비(이론용량)": 1.104,
+     "스택 두께 [µm]": 296.4,
+     "기준 면적 [cm²]": 2.54,
+     "정격용량(C-rate 기준) [mAh]": 4.778,
+     "질량 구성 [%]": {
+      "positive_am": 34.0,
+      "positive_inactive": 8.1,
+      "positive_elyte": 6.4,
+      "negative_am": 19.8,
+      "negative_inactive": 0.0,
+      "negative_elyte": 12.3,
+      "sep": 4.9,
+      "cc": 14.5
+     }
+    },
+    "운전창": {
+     "C-rate": 0.25,
+     "전압 [V]": "2.0–4.2",
+     "온도 [°C]": 25.0
+    }
+   },
+   "performance": {
+    "usable_capacity_Ah": 0.004880873887212441,
+    "usable_energy_Wh": 0.017423197016896357,
+    "areal_energy_Wh_m2": 68.59526384604865,
+    "areal_capacity_mAh_cm2": 1.921603892603323,
+    "specific_energy_Wh_kg_stack": 122.50343472383892,
+    "volumetric_energy_Wh_L_stack": 231.40471091214232,
+    "round_trip_efficiency": 0.9034846683609628,
+    "coulombic_efficiency": 0.9999570697138188,
+    "mean_discharge_voltage_V": 3.5696880147925873,
+    "capacity_utilization": 0.7857562061415326,
+    "electrolyte_min_conc_ratio": 0.44280757583820135,
+    "temperature_rise_K": 0.09656969568504792
+   },
+   "provenance": {
+    "usable_capacity_Ah": "COMPUTED",
+    "usable_energy_Wh": "COMPUTED",
+    "charge_energy_Wh": "COMPUTED",
+    "charge_capacity_Ah": "COMPUTED",
+    "mean_discharge_voltage_V": "COMPUTED",
+    "electrolyte_min_conc_ratio": "COMPUTED",
+    "first_discharge_capacity_Ah": "COMPUTED",
+    "discharge_duration_s": "COMPUTED",
+    "round_trip_efficiency": "DERIVED",
+    "coulombic_efficiency": "DERIVED",
+    "areal_energy_Wh_m2": "DERIVED",
+    "areal_capacity_mAh_cm2": "DERIVED",
+    "capacity_utilization": "DERIVED",
+    "specific_energy_Wh_kg_stack": "DERIVED(ASSUMED densities)",
+    "volumetric_energy_Wh_L_stack": "DERIVED(ASSUMED cc thickness)",
+    "peak_temperature_C": "COMPUTED(ASSUMED thermal params)",
+    "temperature_rise_K": "COMPUTED(ASSUMED thermal params)"
+   },
+   "improvement_vs_baseline_pct": {
+    "areal_energy_Wh_m2": 199.12,
+    "areal_capacity_mAh_cm2": 178.8,
+    "specific_energy_Wh_kg_stack": 93.87,
+    "round_trip_efficiency": 5.34,
+    "electrolyte_min_conc_ratio": -41.78
+   },
+   "improvement_vs_rebalanced_pct": {
+    "areal_energy_Wh_m2": 60.84,
+    "areal_capacity_mAh_cm2": 59.84,
+    "specific_energy_Wh_kg_stack": 14.13,
+    "round_trip_efficiency": 0.96,
+    "electrolyte_min_conc_ratio": -40.24
+   },
+   "hardware": "NS5 (Windows, 32 threads)",
+   "robustness": null
+  },
+  "criterion": "ESS 렌즈: N/P 1.05–1.2 · 면적용량 ≥1.0 mAh/cm² · (스택 Wh/kg, RTE) Pareto 중 RTE ≥ 재균형 레퍼런스(EXP-0355) 인 점의 Wh/kg 최대. 리뷰(2026-09-16) 반영 과도기 기준 — C02 에서 고정 면적용량·$/kWh 로 재정의 예정"
+ },
+ "backend": {
+  "configured": "rtx4080",
+  "used_today": "rtx4080",
+  "hardware_today": "NS5 (Windows, 32 threads)"
+ },
+ "llm_note": "전극 두께와 공극률이 사용가능 에너지 및 왕복효율을 지배하며, 특히 양극 두께가 49.37μm에서 91.32μm으로 증가하면서 에너지가 증가하고 효율이 0.903에서 0.912로 향했다. 공극률은 0.345에서 0.506으로 증가하면서 전해질 고갈 위험을 줄였고, 온도상승은 0.032K에서 0.065K로 증가했다. 다음에는 전해질 전도도와 확산계수의 영향을 조정해 더 균형 잡힌 트레이드오프를 탐색할 예정이다.",
+ "env": {
+  "pybamm": "26.8.0.0",
+  "python": "3.12.14",
+  "node": "m1pro"
+ },
+ "tokens": "0 (local)"
+}
