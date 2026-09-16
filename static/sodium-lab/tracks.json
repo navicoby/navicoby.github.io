@@ -1,0 +1,336 @@
+{
+ "_schema": "sodium-ess-lab/tracks/v1",
+ "generated": "2026-09-17 08:44",
+ "anode": {
+  "campaign_id": "A01-anode-two-phase",
+  "stage": "anode",
+  "round": 2,
+  "base": {
+   "NTP": {
+    "voltage_V": 1.4879512786865234,
+    "na_per_host": 1.0,
+    "dvol_pct": 8.012424255848671,
+    "capacity_mAh_g": 132.79725699368998,
+    "formula_desod": "NaTi2(PO4)3",
+    "converged": true,
+    "v_lit": 2.1
+   },
+   "TiO2": {
+    "voltage_V": 0.6574344635009766,
+    "na_per_host": 1.0,
+    "dvol_pct": 19.598489775654244,
+    "capacity_mAh_g": 335.57542778010117,
+    "formula_desod": "TiO2",
+    "converged": true,
+    "v_lit": 0.8
+   },
+   "Sb": {
+    "voltage_V": 0.5721495946248373,
+    "na_per_host": 3.0,
+    "dvol_pct": 284.98042189838463,
+    "capacity_mAh_g": 660.3400131406045,
+    "formula_desod": "Sb",
+    "converged": true,
+    "v_lit": 0.6
+   },
+   "Sn": {
+    "voltage_V": 0.22169329325358073,
+    "na_per_host": 3.75,
+    "dvol_pct": 385.7035501118305,
+    "capacity_mAh_g": 846.6325499115492,
+    "formula_desod": "Sn",
+    "converged": true,
+    "v_lit": 0.3
+   },
+   "P": {
+    "voltage_V": 0.4629077911376953,
+    "na_per_host": 3.0,
+    "dvol_pct": 349.3280596947362,
+    "capacity_mAh_g": 2595.8422486748623,
+    "formula_desod": "P",
+    "converged": true,
+    "v_lit": 0.4
+   },
+   "Bi": {
+    "voltage_V": 0.49911944071451825,
+    "na_per_host": 3.0,
+    "dvol_pct": 220.68775315367117,
+    "capacity_mAh_g": 384.7394301092351,
+    "formula_desod": "Bi",
+    "converged": true,
+    "v_lit": 0.6
+   }
+  },
+  "rows": [
+   {
+    "id": "anode|NTP|Zr|0.25",
+    "family": "NTP",
+    "sub": "Zr",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 1.3519039154052734,
+    "na_per_host": 1.0,
+    "dvol_pct": 7.4795463186883495,
+    "capacity_mAh_g": 126.02854165980052,
+    "formula_desod": "Na2ZrTi3(PO4)6",
+    "converged": true,
+    "dV_vs_base": -0.13604736328125,
+    "ddvol_vs_base": -0.5328779371603218,
+    "abundance_log": 2.22,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|NTP|Zr|0.5",
+    "family": "NTP",
+    "sub": "Zr",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 1.186849594116211,
+    "na_per_host": 1.0,
+    "dvol_pct": 7.151804956719857,
+    "capacity_mAh_g": 119.91636898465735,
+    "formula_desod": "NaZrTi(PO4)3",
+    "converged": true,
+    "dV_vs_base": -0.3011016845703125,
+    "ddvol_vs_base": -0.860619299128814,
+    "abundance_log": 2.22,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|NTP|Nb|0.25",
+    "family": "NTP",
+    "sub": "Nb",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 1.1738948822021484,
+    "na_per_host": 1.0,
+    "dvol_pct": 7.189136545493625,
+    "capacity_mAh_g": 125.77977462485536,
+    "formula_desod": "Na2Ti3Nb(PO4)6",
+    "converged": true,
+    "dV_vs_base": -0.314056396484375,
+    "ddvol_vs_base": -0.8232877103550464,
+    "abundance_log": 1.3,
+    "supply_risk": [
+     "Nb:중위험"
+    ],
+    "toxicity": []
+   },
+   {
+    "id": "anode|NTP|Nb|0.5",
+    "family": "NTP",
+    "sub": "Nb",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 1.0027904510498047,
+    "na_per_host": 1.0,
+    "dvol_pct": 6.885239642796975,
+    "capacity_mAh_g": 119.466725265322,
+    "formula_desod": "NaTiNb(PO4)3",
+    "converged": true,
+    "dV_vs_base": -0.48516082763671875,
+    "ddvol_vs_base": -1.1271846130516963,
+    "abundance_log": 1.3,
+    "supply_risk": [
+     "Nb:중위험"
+    ],
+    "toxicity": []
+   },
+   {
+    "id": "anode|NTP|V|0.25",
+    "family": "NTP",
+    "sub": "V",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 2.0323009490966797,
+    "na_per_host": 1.0,
+    "dvol_pct": 8.078154020204906,
+    "capacity_mAh_g": 132.29341907113923,
+    "formula_desod": "Na2Ti3V(PO4)6",
+    "converged": true,
+    "dV_vs_base": 0.5443496704101562,
+    "ddvol_vs_base": 0.06572976435623445,
+    "abundance_log": 2.08,
+    "supply_risk": [
+     "V:중위험(가격 변동)"
+    ],
+    "toxicity": [
+     "V:독성 산화물"
+    ]
+   },
+   {
+    "id": "anode|NTP|V|0.5",
+    "family": "NTP",
+    "sub": "V",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 2.490690231323242,
+    "na_per_host": 1.0,
+    "dvol_pct": 7.857135549796595,
+    "capacity_mAh_g": 131.79338985927254,
+    "formula_desod": "NaTiV(PO4)3",
+    "converged": true,
+    "dV_vs_base": 1.0027389526367188,
+    "ddvol_vs_base": -0.155288706052076,
+    "abundance_log": 2.08,
+    "supply_risk": [
+     "V:중위험(가격 변동)"
+    ],
+    "toxicity": [
+     "V:독성 산화물"
+    ]
+   },
+   {
+    "id": "anode|NTP|Fe|0.25",
+    "family": "NTP",
+    "sub": "Fe",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 2.366636276245117,
+    "na_per_host": 1.0,
+    "dvol_pct": 6.749982846821979,
+    "capacity_mAh_g": 131.4977148970733,
+    "formula_desod": "Na2Ti3Fe(PO4)6",
+    "converged": true,
+    "dV_vs_base": 0.8786849975585938,
+    "ddvol_vs_base": -1.2624414090266924,
+    "abundance_log": 3.75,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|NTP|Fe|0.5",
+    "family": "NTP",
+    "sub": "Fe",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 3.2282848358154297,
+    "na_per_host": 1.0,
+    "dvol_pct": 5.332379977716855,
+    "capacity_mAh_g": 130.22336071951713,
+    "formula_desod": "NaTiFe(PO4)3",
+    "converged": true,
+    "dV_vs_base": 1.7403335571289062,
+    "ddvol_vs_base": -2.680044278131817,
+    "abundance_log": 3.75,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Nb|0.25",
+    "family": "TiO2",
+    "sub": "Nb",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 0.6096038818359375,
+    "na_per_host": 1.0,
+    "dvol_pct": 15.734109516408907,
+    "capacity_mAh_g": 294.1104010841295,
+    "formula_desod": "Ti3NbO8",
+    "converged": true,
+    "dV_vs_base": -0.04783058166503906,
+    "ddvol_vs_base": -3.864380259245337,
+    "abundance_log": 1.3,
+    "supply_risk": [
+     "Nb:중위험"
+    ],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Nb|0.5",
+    "family": "TiO2",
+    "sub": "Nb",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 0.7067947387695312,
+    "na_per_host": 1.0,
+    "dvol_pct": 12.117099378487552,
+    "capacity_mAh_g": 261.76560760709356,
+    "formula_desod": "TiNbO4",
+    "converged": true,
+    "dV_vs_base": 0.04936027526855469,
+    "ddvol_vs_base": -7.481390397166692,
+    "abundance_log": 1.3,
+    "supply_risk": [
+     "Nb:중위험"
+    ],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Zr|0.25",
+    "family": "TiO2",
+    "sub": "Zr",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 0.4963817596435547,
+    "na_per_host": 1.0,
+    "dvol_pct": 17.65804442347016,
+    "capacity_mAh_g": 295.4741770166049,
+    "formula_desod": "ZrTi3O8",
+    "converged": true,
+    "dV_vs_base": -0.16105270385742188,
+    "ddvol_vs_base": -1.940445352184085,
+    "abundance_log": 2.22,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Zr|0.5",
+    "family": "TiO2",
+    "sub": "Zr",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 0.3173484802246094,
+    "na_per_host": 1.0,
+    "dvol_pct": 16.03999762492296,
+    "capacity_mAh_g": 263.934066215435,
+    "formula_desod": "ZrTiO4",
+    "converged": true,
+    "dV_vs_base": -0.3400859832763672,
+    "ddvol_vs_base": -3.5584921507312828,
+    "abundance_log": 2.22,
+    "supply_risk": [],
+    "toxicity": []
+   }
+  ],
+  "n_candidates": 28,
+  "n_done": 12,
+  "caveats": [
+   "두-상 평균전압(종점상 조합) — 중간상·비정질화 경로 무시",
+   "폴리음이온 Ti/V 전압은 MLIP 가 ~0.6 V 과소(NTP 1.49 vs 2.1) → 계열 기준 ΔV 로 볼 것",
+   "합금 팽창률은 종점상 부피 합(복합체 계면 무시)",
+   "하드카본은 비정질 → 원자 계산 제외, 셀 파라미터 트랙에서만"
+  ]
+ },
+ "electrolyte": {
+  "campaign_id": "E01-solid-electrolyte-md",
+  "stage": "electrolyte",
+  "round": 1,
+  "rows": [],
+  "rows_unreliable": [],
+  "n_candidates": 17,
+  "n_done": 0,
+  "caveats": [
+   "σ(300 K)는 600–1000 K MD 의 Arrhenius 외삽 + Nernst–Einstein(H_R=1) — 자릿수 수준 추정",
+   "짧은 MD(수십 ps)·작은 셀 → 통계 불확실성 큼(msd_r2 참고)",
+   "이가/삼가 도핑(전하 보상 필요)은 미포함, 등가 치환만",
+   "액체 전해질은 셀 모델 요구사양(전도도·이동수·확산계수) 트랙으로 별도"
+  ]
+ },
+ "last_run": {
+  "date": "2026-09-17",
+  "note": "전해질 20 ps 결과 미채택(통계 부족) — 60 ps 재실행 예정"
+ },
+ "history": [
+  {
+   "date": "2026-09-16",
+   "note": "음극 r1: 후보 6 평가(6 유효) · NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU)"
+  },
+  {
+   "date": "2026-09-17",
+   "note": "음극 r2: 후보 6 평가(6 유효) · NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU) / 전해질 r1: MD 4건(2 유효) · NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU, 3 procs)"
+  }
+ ]
+}
