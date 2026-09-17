@@ -1,12 +1,12 @@
 {
  "_schema": "sodium-ess-lab/materials/v1",
- "generated": "2026-09-17 04:14",
+ "generated": "2026-09-18 04:16",
  "campaign_id": "M02-cathode-substitution",
- "stage": "mlip",
- "round": 2,
+ "stage": "rank",
+ "round": 3,
  "n_candidates": 107,
- "n_evaluated": 29,
- "n_pareto": 10,
+ "n_evaluated": 39,
+ "n_pareto": 14,
  "families": {
   "NVPF": {
    "role": "cathode",
@@ -323,6 +323,37 @@
  },
  "pareto": [
   {
+   "id": "Olivine_NaFePO4|Ni|0.25",
+   "family": "Olivine_NaFePO4",
+   "formula": "Na1Fe0.75Ni0.25P1O4",
+   "sub": "Ni",
+   "frac": 0.25,
+   "role": "cathode",
+   "voltage_V": 3.34,
+   "dvol_pct": -12.16,
+   "capacity_mAh_g": 153.6,
+   "energy_density_Wh_kg": 513.0,
+   "abundance_log": 1.92,
+   "supply_risk": [
+    "Ni:중위험"
+   ],
+   "toxicity": [
+    "Ni:발암성 분류"
+   ],
+   "converged": true,
+   "max_disp_A": 0.49,
+   "v_window": [
+    2.5,
+    3.8
+   ],
+   "hardware": "NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)",
+   "date": "2026-09-18",
+   "dE_mix_meV_atom": -2.7,
+   "dE_mix_note": null,
+   "n_na_extract_fu": 1.0,
+   "dV_vs_base_V": 0.299
+  },
+  {
    "id": "Olivine_NaFePO4|Mn|0.5",
    "family": "Olivine_NaFePO4",
    "formula": "Na1Mn0.5Fe0.5P1O4",
@@ -512,6 +543,33 @@
    "dV_vs_base_V": -0.008
   },
   {
+   "id": "O3_NaFeO2|Cu|0.25",
+   "family": "O3_NaFeO2",
+   "formula": "Na1Fe0.75Cu0.25O2",
+   "sub": "Cu",
+   "frac": 0.25,
+   "role": "cathode",
+   "voltage_V": 3.051,
+   "dvol_pct": -1.54,
+   "capacity_mAh_g": 118.8,
+   "energy_density_Wh_kg": 362.4,
+   "abundance_log": 1.78,
+   "supply_risk": [],
+   "toxicity": [],
+   "converged": true,
+   "max_disp_A": 1.22,
+   "v_window": [
+    2.5,
+    3.8
+   ],
+   "hardware": "NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)",
+   "date": "2026-09-18",
+   "dE_mix_meV_atom": 1.0,
+   "dE_mix_note": null,
+   "n_na_extract_fu": 0.5,
+   "dV_vs_base_V": -0.205
+  },
+  {
    "id": "O3_NaFeO2|Ti|0.25",
    "family": "O3_NaFeO2",
    "formula": "Na1Ti0.25Fe0.75O2",
@@ -539,61 +597,92 @@
    "dV_vs_base_V": -0.704
   },
   {
-   "id": "O3_NaMnO2|Ti|0.5",
-   "family": "O3_NaMnO2",
-   "formula": "Na1Ti0.5Mn0.5O2",
-   "sub": "Ti",
-   "frac": 0.5,
+   "id": "Na2FePO4F|Mg|0.25",
+   "family": "Na2FePO4F",
+   "formula": "Na2Mg0.25Fe0.75P1O4F1",
+   "sub": "Mg",
+   "frac": 0.25,
    "role": "cathode",
-   "voltage_V": 2.007,
-   "dvol_pct": -5.7,
-   "capacity_mAh_g": 126.0,
-   "energy_density_Wh_kg": 252.9,
-   "abundance_log": 2.98,
+   "voltage_V": 3.19,
+   "dvol_pct": -0.88,
+   "capacity_mAh_g": 96.7,
+   "energy_density_Wh_kg": 308.4,
+   "abundance_log": 4.37,
    "supply_risk": [],
    "toxicity": [],
    "converged": true,
-   "max_disp_A": 1.08,
+   "max_disp_A": 0.38,
    "v_window": [
-    2.0,
+    2.8,
     3.8
    ],
-   "hardware": "NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU)",
-   "date": "2026-09-15",
-   "dE_mix_meV_atom": -146.8,
+   "hardware": "NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)",
+   "date": "2026-09-18",
+   "dE_mix_meV_atom": -0.4,
    "dE_mix_note": null,
-   "n_na_extract_fu": 0.5,
-   "dV_vs_base_V": -0.352
+   "n_na_extract_fu": 0.75,
+   "dV_vs_base_V": 0.044
   },
   {
-   "id": "O3_NaFeO2|Ti|0.5",
-   "family": "O3_NaFeO2",
-   "formula": "Na1Ti0.5Fe0.5O2",
-   "sub": "Ti",
-   "frac": 0.5,
+   "id": "MixedPoly_Fe|Mg|0.333",
+   "family": "MixedPoly_Fe",
+   "formula": "Na4MgFe2P4O15",
+   "sub": "Mg",
+   "frac": 0.3333333333333333,
    "role": "cathode",
-   "voltage_V": 1.758,
-   "dvol_pct": -2.95,
-   "capacity_mAh_g": 125.4,
-   "energy_density_Wh_kg": 220.4,
-   "abundance_log": 3.75,
+   "voltage_V": 3.087,
+   "dvol_pct": -3.14,
+   "capacity_mAh_g": 90.6,
+   "energy_density_Wh_kg": 279.7,
+   "abundance_log": 4.37,
    "supply_risk": [],
    "toxicity": [],
    "converged": true,
-   "max_disp_A": 1.43,
+   "max_disp_A": 0.82,
    "v_window": [
     2.5,
     3.8
    ],
-   "hardware": "NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU)",
-   "date": "2026-09-15",
-   "dE_mix_meV_atom": -126.6,
+   "hardware": "NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)",
+   "date": "2026-09-18",
+   "dE_mix_meV_atom": -1.4,
    "dE_mix_note": null,
-   "n_na_extract_fu": 0.5,
-   "dV_vs_base_V": -1.498
+   "n_na_extract_fu": 2.0,
+   "dV_vs_base_V": -0.043
   }
  ],
  "top_by_energy": [
+  {
+   "id": "Olivine_NaFePO4|Ni|0.25",
+   "family": "Olivine_NaFePO4",
+   "formula": "Na1Fe0.75Ni0.25P1O4",
+   "sub": "Ni",
+   "frac": 0.25,
+   "role": "cathode",
+   "voltage_V": 3.34,
+   "dvol_pct": -12.16,
+   "capacity_mAh_g": 153.6,
+   "energy_density_Wh_kg": 513.0,
+   "abundance_log": 1.92,
+   "supply_risk": [
+    "Ni:중위험"
+   ],
+   "toxicity": [
+    "Ni:발암성 분류"
+   ],
+   "converged": true,
+   "max_disp_A": 0.49,
+   "v_window": [
+    2.5,
+    3.8
+   ],
+   "hardware": "NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)",
+   "date": "2026-09-18",
+   "dE_mix_meV_atom": -2.7,
+   "dE_mix_note": null,
+   "n_na_extract_fu": 1.0,
+   "dV_vs_base_V": 0.299
+  },
   {
    "id": "Olivine_NaFePO4|Mn|0.5",
    "family": "Olivine_NaFePO4",
@@ -620,6 +709,37 @@
    "dE_mix_note": null,
    "n_na_extract_fu": 1.0,
    "dV_vs_base_V": 0.214
+  },
+  {
+   "id": "Olivine_NaFePO4|Co|0.25",
+   "family": "Olivine_NaFePO4",
+   "formula": "Na1Fe0.75Co0.25P1O4",
+   "sub": "Co",
+   "frac": 0.25,
+   "role": "cathode",
+   "voltage_V": 3.267,
+   "dvol_pct": -12.24,
+   "capacity_mAh_g": 153.5,
+   "energy_density_Wh_kg": 501.4,
+   "abundance_log": 1.4,
+   "supply_risk": [
+    "Co:고위험(콩고 편중·가격)"
+   ],
+   "toxicity": [
+    "Co:독성·규제"
+   ],
+   "converged": true,
+   "max_disp_A": 0.48,
+   "v_window": [
+    2.5,
+    3.8
+   ],
+   "hardware": "NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)",
+   "date": "2026-09-18",
+   "dE_mix_meV_atom": -2.2,
+   "dE_mix_note": null,
+   "n_na_extract_fu": 1.0,
+   "dV_vs_base_V": 0.226
   },
   {
    "id": "Olivine_NaFePO4|Mn|0.25",
@@ -755,66 +875,12 @@
    "dE_mix_note": null,
    "n_na_extract_fu": 3.0,
    "dV_vs_base_V": 0.07
-  },
-  {
-   "id": "Na2MnPO4F|Fe|0.25",
-   "family": "Na2MnPO4F",
-   "formula": "Na2Mn0.75Fe0.25P1O4F1",
-   "sub": "Fe",
-   "frac": 0.25,
-   "role": "cathode",
-   "voltage_V": 3.314,
-   "dvol_pct": -8.84,
-   "capacity_mAh_g": 124.6,
-   "energy_density_Wh_kg": 413.0,
-   "abundance_log": 2.98,
-   "supply_risk": [],
-   "toxicity": [],
-   "converged": true,
-   "max_disp_A": 1.13,
-   "v_window": [
-    2.8,
-    4.0
-   ],
-   "hardware": "NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU)",
-   "date": "2026-09-15",
-   "dE_mix_meV_atom": -1.5,
-   "dE_mix_note": null,
-   "n_na_extract_fu": 1.0,
-   "dV_vs_base_V": -0.123
-  },
-  {
-   "id": "Na2FePO4F|Mn|0.25",
-   "family": "Na2FePO4F",
-   "formula": "Na2Mn0.25Fe0.75P1O4F1",
-   "sub": "Mn",
-   "frac": 0.25,
-   "role": "cathode",
-   "voltage_V": 3.279,
-   "dvol_pct": -2.35,
-   "capacity_mAh_g": 124.3,
-   "energy_density_Wh_kg": 407.5,
-   "abundance_log": 2.98,
-   "supply_risk": [],
-   "toxicity": [],
-   "converged": true,
-   "max_disp_A": 0.51,
-   "v_window": [
-    2.8,
-    3.8
-   ],
-   "hardware": "NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU)",
-   "date": "2026-09-16",
-   "dE_mix_meV_atom": -1.1,
-   "dE_mix_note": null,
-   "n_na_extract_fu": 1.0,
-   "dV_vs_base_V": 0.133
   }
  ],
  "model": "MACE-MP-0 medium (rtx4080 CUDA)",
  "last_run": {
-  "date": "2026-09-17",
-  "note": "평가 29건 · Pareto 10건 · 남은 후보 62"
+  "date": "2026-09-18",
+  "note": "MLIP r3: 후보 10개(28/28 구조 OK) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)"
  },
  "history": [
   {
@@ -852,6 +918,12 @@
    "stage": "rank",
    "next": "mlip",
    "note": "평가 29건 · Pareto 10건 · 남은 후보 62"
+  },
+  {
+   "date": "2026-09-18",
+   "stage": "mlip",
+   "next": "rank",
+   "note": "MLIP r3: 후보 10개(28/28 구조 OK) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)"
   }
  ],
  "caveats": [
