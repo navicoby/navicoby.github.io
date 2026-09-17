@@ -1,10 +1,10 @@
 {
  "_schema": "sodium-ess-lab/tracks/v1",
- "generated": "2026-09-18 03:57",
+ "generated": "2026-09-18 07:00",
  "anode": {
   "campaign_id": "A01-anode-two-phase",
   "stage": "anode",
-  "round": 2,
+  "round": 3,
   "base": {
    "NTP": {
     "voltage_V": 1.4879512786865234,
@@ -293,10 +293,118 @@
     "abundance_log": 2.22,
     "supply_risk": [],
     "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Fe|0.25",
+    "family": "TiO2",
+    "sub": "Fe",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 1.6587772369384766,
+    "na_per_host": 1.0,
+    "dvol_pct": 19.503710801084864,
+    "capacity_mAh_g": 327.39923992460325,
+    "formula_desod": "Ti3FeO8",
+    "converged": true,
+    "dV_vs_base": 1.0013427734375,
+    "ddvol_vs_base": -0.09477897456937967,
+    "abundance_log": 3.75,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Fe|0.5",
+    "family": "TiO2",
+    "sub": "Fe",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 2.633625030517578,
+    "na_per_host": 1.0,
+    "dvol_pct": 22.938969594632198,
+    "capacity_mAh_g": 319.61199597399315,
+    "formula_desod": "TiFeO4",
+    "converged": true,
+    "dV_vs_base": 1.9761905670166016,
+    "ddvol_vs_base": 3.340479818977954,
+    "abundance_log": 3.75,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Sn|0.25",
+    "family": "TiO2",
+    "sub": "Sn",
+    "frac": 0.25,
+    "kind": "intercalation",
+    "voltage_V": 0.6734409332275391,
+    "na_per_host": 1.0,
+    "dvol_pct": 23.56261713450533,
+    "capacity_mAh_g": 274.6664029421003,
+    "formula_desod": "Ti3SnO8",
+    "converged": true,
+    "dV_vs_base": 0.0160064697265625,
+    "ddvol_vs_base": 3.964127358851087,
+    "abundance_log": 0.0,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|TiO2|Sn|0.5",
+    "family": "TiO2",
+    "sub": "Sn",
+    "frac": 0.5,
+    "kind": "intercalation",
+    "voltage_V": 1.3374309539794922,
+    "na_per_host": 1.0,
+    "dvol_pct": 52.74024435198373,
+    "capacity_mAh_g": 232.4713997118503,
+    "formula_desod": "TiSnO4",
+    "converged": true,
+    "dV_vs_base": 0.6799964904785156,
+    "ddvol_vs_base": 33.14175457632949,
+    "abundance_log": 0.0,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|Sb|Bi|0.25",
+    "family": "Sb",
+    "sub": "Bi",
+    "frac": 0.25,
+    "kind": "alloy",
+    "voltage_V": 0.5501008033752441,
+    "na_per_host": 3.0,
+    "dvol_pct": 252.15240195735043,
+    "capacity_mAh_g": 560.0455821087437,
+    "formula_desod": "BiSb3",
+    "converged": true,
+    "dV_vs_base": -0.022048791249593136,
+    "ddvol_vs_base": -32.8280199410342,
+    "abundance_log": 0.0,
+    "supply_risk": [],
+    "toxicity": []
+   },
+   {
+    "id": "anode|Sb|Bi|0.5",
+    "family": "Sb",
+    "sub": "Bi",
+    "frac": 0.5,
+    "kind": "alloy",
+    "voltage_V": 0.5274716218312582,
+    "na_per_host": 3.0,
+    "dvol_pct": 238.72807885111035,
+    "capacity_mAh_g": 486.20005297205904,
+    "formula_desod": "BiSb",
+    "converged": true,
+    "dV_vs_base": -0.0446779727935791,
+    "ddvol_vs_base": -46.25234304727428,
+    "abundance_log": 0.0,
+    "supply_risk": [],
+    "toxicity": []
    }
   ],
   "n_candidates": 28,
-  "n_done": 12,
+  "n_done": 18,
   "caveats": [
    "두-상 평균전압(종점상 조합) — 중간상·비정질화 경로 무시",
    "폴리음이온 Ti/V 전압은 MLIP 가 ~0.6 V 과소(NTP 1.49 vs 2.1) → 계열 기준 ΔV 로 볼 것",
@@ -307,7 +415,7 @@
  "electrolyte": {
   "campaign_id": "E01-solid-electrolyte-md",
   "stage": "electrolyte",
-  "round": 4,
+  "round": 5,
   "rows": [
    {
     "id": "elyte|Na3PS4|base|0:md",
@@ -382,6 +490,191 @@
     "sigma_lit_S_cm": 0.001,
     "sigma_ratio_vs_base": null,
     "D_hi_ratio_vs_base": 1.0
+   },
+   {
+    "id": "elyte|Na3PS4|P>As|0.5:md",
+    "formula": "Na81As14P13S108",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.13829541176366622,
+    "D300_m2_s": 1.7372947701658904e-11,
+    "sigma300_S_cm": 0.018590294276856486,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     2.7364505841279705e-10,
+     3.9514351455065656e-10,
+     8.42614464954668e-10
+    ],
+    "msd_r2": [
+     0.6963942273766012,
+     0.7354933582607548,
+     0.897993543782179
+    ],
+    "msd_tail_A2": [
+     45.90538024902344,
+     61.82267379760742,
+     100.69121551513672
+    ],
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 8.42614464954668e-10,
+    "reliable_hi": true,
+    "reliable": false,
+    "reliability_note": "고온점만 신뢰(σ300 외삽은 참고치)",
+    "sigma_lit_S_cm": 0.0002,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 2.0321304656705172
+   },
+   {
+    "id": "elyte|Na3PS4|S>Se|0.25:md",
+    "formula": "Na3PSeS3",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.1504057554606378,
+    "D300_m2_s": 1.6697675582367683e-11,
+    "sigma300_S_cm": 0.01718502842485847,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     3.514915076492283e-10,
+     4.3862922327948607e-10,
+     1.2336538168878837e-09
+    ],
+    "msd_r2": [
+     0.8996038732638515,
+     0.8813947523737572,
+     0.9742852605993697
+    ],
+    "msd_tail_A2": [
+     30.47405433654785,
+     34.81446838378906,
+     113.89361572265625
+    ],
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 1.2336538168878837e-09,
+    "reliable_hi": true,
+    "reliable": false,
+    "reliability_note": "고온점만 신뢰(σ300 외삽은 참고치)",
+    "sigma_lit_S_cm": 0.0002,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 2.9751987529948916
+   },
+   {
+    "id": "elyte|Na3PS4|S>Se|0.5:md",
+    "formula": "Na3P(SeS)2",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.35404814555252545,
+    "D300_m2_s": 5.845989070876014e-14,
+    "sigma300_S_cm": 5.8288908561462056e-05,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     6.627180763189401e-11,
+     1.858977709978914e-10,
+     1.160405365747772e-09
+    ],
+    "msd_r2": [
+     0.20809269875691894,
+     0.5063287172228288,
+     0.8797714667662461
+    ],
+    "msd_tail_A2": [
+     17.618915557861328,
+     30.629268646240234,
+     123.56079864501953
+    ],
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 1.160405365747772e-09,
+    "reliable_hi": true,
+    "reliable": false,
+    "reliability_note": "고온점만 신뢰(σ300 외삽은 참고치)",
+    "sigma_lit_S_cm": 0.0002,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 2.798545710214517
+   },
+   {
+    "id": "elyte|Na3SbS4|Sb>P|0.25:md",
+    "formula": "Na81Sb20P7S108",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.5146649882531101,
+    "D300_m2_s": 5.444731506447492e-16,
+    "sigma300_S_cm": 5.501116103715048e-07,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     2.427817430782553e-11,
+     1.860962977103626e-11,
+     2.1473863694439776e-09
+    ],
+    "msd_r2": [
+     0.024139462499931263,
+     0.009303962226887674,
+     0.9600658674101742
+    ],
+    "msd_tail_A2": [
+     15.431717872619629,
+     21.98765754699707,
+     188.27439880371094
+    ],
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 2.1473863694439776e-09,
+    "reliable_hi": true,
+    "reliable": false,
+    "reliability_note": "고온점만 신뢰(σ300 외삽은 참고치)",
+    "sigma_lit_S_cm": 0.001,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 0.8426898659116018
+   },
+   {
+    "id": "elyte|Na3SbS4|Sb>P|0.5:md",
+    "formula": "Na81Sb13(P7S54)2",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.1260766092746285,
+    "D300_m2_s": 3.219267692595655e-11,
+    "sigma300_S_cm": 0.032670149077939664,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     4.012918236068653e-10,
+     5.415266772960619e-10,
+     1.1259780904929906e-09
+    ],
+    "msd_r2": [
+     0.8887370918538482,
+     0.8977068615790327,
+     0.9343158030409178
+    ],
+    "msd_tail_A2": [
+     27.907501220703125,
+     41.83976364135742,
+     94.33423614501953
+    ],
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 1.1259780904929906e-09,
+    "reliable_hi": true,
+    "reliable": false,
+    "reliability_note": "고온점만 신뢰(σ300 외삽은 참고치)",
+    "sigma_lit_S_cm": 0.001,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 0.4418628801963688
    }
   ],
   "rows_unreliable": [
@@ -495,10 +788,47 @@
     "sigma_lit_S_cm": 0.0002,
     "sigma_ratio_vs_base": null,
     "D_hi_ratio_vs_base": 0.49735312213890664
+   },
+   {
+    "id": "elyte|Na3PS4|P>As|0.25:md",
+    "formula": "Na81As7(P5S27)4",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.15634577663904753,
+    "D300_m2_s": 2.9456881618093534e-12,
+    "sigma300_S_cm": 0.0031836716756352946,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     6.793577825131848e-11,
+     9.512729934179374e-11,
+     2.457577797557101e-10
+    ],
+    "msd_r2": [
+     0.335285705882546,
+     0.3616078790700735,
+     0.7335595583790251
+    ],
+    "msd_tail_A2": [
+     4.969389915466309,
+     10.045554161071777,
+     27.12298011779785
+    ],
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 2.457577797557101e-10,
+    "reliable_hi": false,
+    "reliable": false,
+    "reliability_note": "통계 부족(MSD 적합 r²<0.9 또는 온도 의존 없음) — 더 긴 MD 필요",
+    "sigma_lit_S_cm": 0.0002,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 0.592693209276904
    }
   ],
   "n_candidates": 17,
-  "n_done": 2,
+  "n_done": 8,
   "caveats": [
    "σ(300 K)는 600–1000 K MD 의 Arrhenius 외삽 + Nernst–Einstein(H_R=1) — 자릿수 수준 추정. 전 온도 r²≥0.9 인 행만 σ300 채택, 그 외는 1000 K 확산계수 상대비교(D_hi)만",
    "MACE-MP-0 는 PES 연화(softening) 편향으로 확산을 과대·활성화에너지를 과소 평가하는 경향(Deng et al. 2024 보고) — 절대값보다 기준 대비 비율로 읽을 것",
@@ -509,7 +839,7 @@
  },
  "last_run": {
   "date": "2026-09-18",
-  "note": "200 ps 3온도 재판정(고온점 신뢰도 도입)"
+  "note": "음극 r3: 후보 6 평가(6 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance) / 전해질 r5: MD 6건(6 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
  },
  "history": [
   {
@@ -531,6 +861,10 @@
   {
    "date": "2026-09-18",
    "note": "전해질 r4: MD 6건(5 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
+  },
+  {
+   "date": "2026-09-18",
+   "note": "음극 r3: 후보 6 평가(6 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance) / 전해질 r5: MD 6건(6 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
   }
  ]
 }
