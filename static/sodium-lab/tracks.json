@@ -1,6 +1,6 @@
 {
  "_schema": "sodium-ess-lab/tracks/v1",
- "generated": "2026-09-17 08:44",
+ "generated": "2026-09-18 03:57",
  "anode": {
   "campaign_id": "A01-anode-two-phase",
   "stage": "anode",
@@ -307,21 +307,209 @@
  "electrolyte": {
   "campaign_id": "E01-solid-electrolyte-md",
   "stage": "electrolyte",
-  "round": 1,
-  "rows": [],
-  "rows_unreliable": [],
+  "round": 4,
+  "rows": [
+   {
+    "id": "elyte|Na3PS4|base|0:md",
+    "formula": "Na3PS4",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.16495712005604615,
+    "D300_m2_s": 3.98594416026486e-12,
+    "sigma300_S_cm": 0.004373205946650443,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     1.0777337839267987e-10,
+     1.6172146864293686e-10,
+     4.146458503473304e-10
+    ],
+    "msd_r2": [
+     0.5286956450556596,
+     0.5205467064853069,
+     0.9136836239465156
+    ],
+    "msd_tail_A2": [
+     6.821115970611572,
+     13.190340995788574,
+     39.89711380004883
+    ],
+    "reliable": false,
+    "reliability_note": "통계 부족(MSD 적합 r²<0.9 또는 온도 의존 없음) — 더 긴 MD 필요",
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 4.146458503473304e-10,
+    "reliable_hi": true,
+    "sigma_lit_S_cm": 0.0002,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 1.0
+   },
+   {
+    "id": "elyte|Na3SbS4|base|0:md",
+    "formula": "Na3SbS4",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.3359354001962093,
+    "D300_m2_s": 1.741419568052322e-13,
+    "sigma300_S_cm": 0.0001758684275121129,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     1.5544764303747566e-10,
+     2.6558899752308764e-10,
+     2.5482522767981625e-09
+    ],
+    "msd_r2": [
+     0.5251134683008498,
+     0.6291928815254615,
+     0.9888267156814747
+    ],
+    "msd_tail_A2": [
+     32.57786178588867,
+     48.20082473754883,
+     248.29159545898438
+    ],
+    "reliable": false,
+    "reliability_note": "통계 부족(MSD 적합 r²<0.9 또는 온도 의존 없음) — 더 긴 MD 필요",
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 2.5482522767981625e-09,
+    "reliable_hi": true,
+    "sigma_lit_S_cm": 0.001,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 1.0
+   }
+  ],
+  "rows_unreliable": [
+   {
+    "id": "elyte|NASICON_NZSP|base|0:md",
+    "formula": "Na3Zr2Si2PO12",
+    "n_atoms": 160,
+    "converged": true,
+    "Ea_eV": 0.14034056201628975,
+    "D300_m2_s": 5.117743594215534e-11,
+    "sigma300_S_cm": 0.034177989210120094,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     8.125333572085767e-10,
+     1.3305957890417156e-09,
+     2.488860852746453e-09
+    ],
+    "msd_r2": [
+     0.7948337518912864,
+     0.9206465436526192,
+     0.8378255436209294
+    ],
+    "msd_tail_A2": [
+     112.37359619140625,
+     177.8728790283203,
+     257.5230407714844
+    ],
+    "reliable": false,
+    "reliability_note": "통계 부족(MSD 적합 r²<0.9 또는 온도 의존 없음) — 더 긴 MD 필요",
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 2.488860852746453e-09,
+    "reliable_hi": false,
+    "sigma_lit_S_cm": 0.001,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": null
+   },
+   {
+    "id": "elyte|Na3OCl|base|0:md",
+    "formula": "Na3ClO",
+    "n_atoms": 135,
+    "converged": true,
+    "Ea_eV": 0.06500600293749356,
+    "D300_m2_s": 1.3107425919639713e-10,
+    "sigma300_S_cm": 0.2689194230821701,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     4.64322200796258e-10,
+     6.184654093739734e-10,
+     7.71638281317164e-10
+    ],
+    "msd_r2": [
+     0.7017991345031959,
+     0.7010811723385867,
+     0.7019774748543393
+    ],
+    "msd_tail_A2": [
+     62.42704772949219,
+     83.26664733886719,
+     103.32344818115234
+    ],
+    "reliable": false,
+    "reliability_note": "통계 부족(MSD 적합 r²<0.9 또는 온도 의존 없음) — 더 긴 MD 필요",
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 7.71638281317164e-10,
+    "reliable_hi": false,
+    "sigma_lit_S_cm": 1e-06,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": null
+   },
+   {
+    "id": "elyte|Na3PS4|P>Sb|0.25:md",
+    "formula": "Na81Sb7(P5S27)4",
+    "n_atoms": 216,
+    "converged": true,
+    "Ea_eV": 0.3014368985794256,
+    "D300_m2_s": 5.335106861958826e-14,
+    "sigma300_S_cm": 5.63638638196138e-05,
+    "T_K": [
+     600,
+     800,
+     1000
+    ],
+    "D_m2_s": [
+     1.92564366909206e-11,
+     6.670526456000244e-11,
+     2.0622540825218662e-10
+    ],
+    "msd_r2": [
+     0.03474195945210201,
+     0.2159689137618992,
+     0.6120829737927221
+    ],
+    "msd_tail_A2": [
+     16.098468780517578,
+     25.534162521362305,
+     43.59032440185547
+    ],
+    "reliable": false,
+    "reliability_note": "통계 부족(MSD 적합 r²<0.9 또는 온도 의존 없음) — 더 긴 MD 필요",
+    "T_hi_K": 1000,
+    "D_hi_m2_s": 2.0622540825218662e-10,
+    "reliable_hi": false,
+    "sigma_lit_S_cm": 0.0002,
+    "sigma_ratio_vs_base": null,
+    "D_hi_ratio_vs_base": 0.49735312213890664
+   }
+  ],
   "n_candidates": 17,
-  "n_done": 0,
+  "n_done": 2,
   "caveats": [
-   "σ(300 K)는 600–1000 K MD 의 Arrhenius 외삽 + Nernst–Einstein(H_R=1) — 자릿수 수준 추정",
-   "짧은 MD(수십 ps)·작은 셀 → 통계 불확실성 큼(msd_r2 참고)",
+   "σ(300 K)는 600–1000 K MD 의 Arrhenius 외삽 + Nernst–Einstein(H_R=1) — 자릿수 수준 추정. 전 온도 r²≥0.9 인 행만 σ300 채택, 그 외는 1000 K 확산계수 상대비교(D_hi)만",
+   "MACE-MP-0 는 PES 연화(softening) 편향으로 확산을 과대·활성화에너지를 과소 평가하는 경향(Deng et al. 2024 보고) — 절대값보다 기준 대비 비율로 읽을 것",
+   "200 ps·216원자 셀에서도 600–800 K MSD 적합 r² 0.5–0.8 → 저온점 통계 부족(msd_r2 참고)",
    "이가/삼가 도핑(전하 보상 필요)은 미포함, 등가 치환만",
    "액체 전해질은 셀 모델 요구사양(전도도·이동수·확산계수) 트랙으로 별도"
   ]
  },
  "last_run": {
-  "date": "2026-09-17",
-  "note": "전해질 20 ps 결과 미채택(통계 부족) — 60 ps 재실행 예정"
+  "date": "2026-09-18",
+  "note": "200 ps 3온도 재판정(고온점 신뢰도 도입)"
  },
  "history": [
   {
@@ -331,6 +519,18 @@
   {
    "date": "2026-09-17",
    "note": "음극 r2: 후보 6 평가(6 유효) · NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU) / 전해질 r1: MD 4건(2 유효) · NS5 (Windows, NVIDIA GeForce RTX 4080 Laptop GPU, 3 procs)"
+  },
+  {
+   "date": "2026-09-17",
+   "note": "전해질 r2: MD 4건(3 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
+  },
+  {
+   "date": "2026-09-18",
+   "note": "전해질 r3: MD 4건(3 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
+  },
+  {
+   "date": "2026-09-18",
+   "note": "전해질 r4: MD 6건(5 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
   }
  ]
 }
