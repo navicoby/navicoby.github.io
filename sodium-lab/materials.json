@@ -1,8 +1,8 @@
 {
  "_schema": "sodium-ess-lab/materials/v1",
- "generated": "2026-09-18 04:16",
+ "generated": "2026-09-19 04:19",
  "campaign_id": "M02-cathode-substitution",
- "stage": "rank",
+ "stage": "mlip",
  "round": 3,
  "n_candidates": 107,
  "n_evaluated": 39,
@@ -879,8 +879,8 @@
  ],
  "model": "MACE-MP-0 medium (rtx4080 CUDA)",
  "last_run": {
-  "date": "2026-09-18",
-  "note": "MLIP r3: 후보 10개(28/28 구조 OK) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)"
+  "date": "2026-09-19",
+  "note": "평가 39건 · Pareto 14건 · 남은 후보 52"
  },
  "history": [
   {
@@ -924,6 +924,12 @@
    "stage": "mlip",
    "next": "rank",
    "note": "MLIP r3: 후보 10개(28/28 구조 OK) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance)"
+  },
+  {
+   "date": "2026-09-19",
+   "stage": "rank",
+   "next": "mlip",
+   "note": "평가 39건 · Pareto 14건 · 남은 후보 52"
   }
  ],
  "caveats": [

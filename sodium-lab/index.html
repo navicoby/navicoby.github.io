@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ko" data-theme="light" style="color-scheme:light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sodium ESS Virtual Lab: 정치형 ESS용 소듐이온 셀의 자율 가상실험</title>
 <meta name="description" content="정치형 ESS용 Hard Carbon // NVPF 소듐이온 셀의 전극 설계를 물리기반 DFN 시뮬레이션으로 최적화하고, 머신러닝 원자간 퍼텐셜로 양극·음극·전해질 신소재를 선별하는 자율 연구 캠페인의 결과.">
-<meta property="og:title" content="Sodium ESS Virtual Lab"><meta property="og:description" content="643건 가상 셀 실험, 최선 설계 EXP-0552: 스택 131 Wh/kg, RTE 90.0 %.">
+<meta property="og:title" content="Sodium ESS Virtual Lab"><meta property="og:description" content="715건 가상 셀 실험, 최선 설계 EXP-0552: 스택 131 Wh/kg, RTE 90.0 %.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
 :root{--bg:#fff;--paper:#f3f0e9;--line:#e7e2d8;--ink:#1a1a1a;--mute:#6a7282;--blue:#155dfc;--ours:#a73f30;--sand:#d3cfc5;--cath:#c98a2b;--anode:#3a6ea5;--na:#e0a526;--road:#b9b2a4;--serif:'Noto Serif KR',Georgia,serif;--sans:'IBM Plex Sans KR',system-ui,sans-serif;--mono:'IBM Plex Mono',Menlo,monospace}
@@ -25,14 +25,14 @@ pre{background:var(--paper);border:1px solid var(--line);padding:14px;font-famil
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media (max-width:720px){.sh{grid-template-columns:1fr} figcaption{grid-template-columns:1fr}}
 </style></head><body><main>
-<header><div class="eyebrow"><span>Sodium-ion battery / Stationary ESS</span><span>Autonomous virtual R&amp;D · updated 2026-09-18</span></div>
+<header><div class="eyebrow"><span>Sodium-ion battery / Stationary ESS</span><span>Autonomous virtual R&amp;D · updated 2026-09-19</span></div>
 <h1>Sodium ESS Virtual Lab</h1>
 <p class="title-line">정치형 ESS용 Hard Carbon // Na₃V₂(PO₄)₂F₃ 소듐이온 셀의 전극 설계 최적화와 신소재 탐색: 물리기반 가상실험과 머신러닝 원자간 퍼텐셜을 결합한 자율 연구 캠페인</p>
 <div class="authors"><p>Sodium ESS Virtual Laboratory<sup>1</sup> · 자율 에이전트 캠페인(m1pro 허브 · rtx4080 GPU)<sup>2</sup></p>
 <div class="affil"><p><sup>1</sup> navicoby 함대 AI 운영체계 — 매일 04:10 한 단계씩 자동 진행되는 폐루프 연구</p><p><sup>2</sup> PyBaMM 26.8.0.0 DFN · MACE-MP-0 · Materials Project (OPTIMADE)</p></div></div>
 <div class="actions"><a class="btn primary" href="data-cell.html">셀 캠페인 데이터 →</a><a class="btn" href="data-cathode.html">양극 트랙 데이터 →</a><a class="btn" href="data-tracks.html">음극·전해질 데이터 →</a><a class="btn" href="#limits">한계와 검증 상태 ↓</a></div></header>
 <nav class="sec"><a href="#insight">01 / Insight</a><a href="#design">02 / Best design</a><a href="#materials">03 / Materials</a><a href="#limits">04 / Limits</a><a href="#method">Method</a><a href="#cite">Citation</a></nav>
-<div class="metrics"><div><strong>643</strong><span>가상 셀 실험 · DFN, 0.25C · 25 °C</span></div><div><strong>131<span>Wh/kg</span></strong><span>최선 설계 · 전극 스택 기준</span></div><div><strong>90.0<span>%</span></strong><span>왕복 에너지효율(RTE)</span></div><div><strong>57</strong><span>MLIP로 평가한 신소재 후보 · 4080 GPU</span></div></div>
+<div class="metrics"><div><strong>715</strong><span>가상 셀 실험 · DFN, 0.25C · 25 °C</span></div><div><strong>131<span>Wh/kg</span></strong><span>최선 설계 · 전극 스택 기준</span></div><div><strong>90.0<span>%</span></strong><span>왕복 에너지효율(RTE)</span></div><div><strong>63</strong><span>MLIP로 평가한 신소재 후보 · 4080 GPU</span></div></div>
 
 <section id="insight"><div class="sh"><div class="sn"><b>01</b>The observation</div><h2>레퍼런스 셀은 재료가 아니라 균형이 문제였다.<br>N/P 재균형이 설계 효과보다 컸다.</h2></div>
 <p class="intro">공개 파라미터셋 그대로의 기준 셀은 N/P 0.79로 방전 시 음극이 먼저 고갈되어 양극 용량의 <strong>45 %</strong>만 쓰였다. 재료를 그대로 두고 음극 두께만 늘려 N/P 1.10으로 맞추자 스택 에너지밀도가 <strong>63 → 107 Wh kg⁻¹</strong>이 되었다. 전극 설계는 그 위에 <strong>+22 %</strong>를 더했다. 개선율은 반드시 재균형 기준에 대해 읽어야 한다.</p>
@@ -41,7 +41,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-
 
 <section id="design"><div class="sh"><div class="sn"><b>02</b>Best design</div><h2>EXP-0552: 두꺼운 양극, 조밀한 음극,<br>N/P 1.16.</h2></div>
 <p class="intro">ESS 관행(N/P 1.05–1.2, 면적당 용량 ≥ 1 mAh cm⁻²)을 만족하는 설계 39건의 (스택 Wh/kg, RTE) Pareto 프론트에서 선정했다. 양극 NVPF 114 µm·기공도 20 %, 음극 하드카본 132 µm·기공도 38 %·입자 반경 1.6 µm. 집전체·분리막 질량 비중이 줄어 <strong>130.8 Wh kg⁻¹</strong>, <strong>254 Wh L⁻¹</strong>, RTE <strong>90.0 %</strong>, 면적당 용량 2.14 mAh cm⁻². 대가로 전해질 염 농도 최소비가 0.05로 낮아져 고율 운전 여유는 별도 검토가 필요하다.</p>
-<figure><img src="fig2_pareto.png" alt="평가된 전 설계의 스택 에너지밀도–RTE 분포" style="max-width:640px;margin:0 auto"><figcaption><span class="fl">Pareto</span><span>평가된 643건 설계의 스택 에너지밀도–RTE 분포. 주황: N/P 창 안 설계, 사각: 기준 셀, 마름모: 재균형 기준, 별: 최선 설계.</span><a href="data-cell.html">데이터 →</a></figcaption></figure>
+<figure><img src="fig2_pareto.png" alt="평가된 전 설계의 스택 에너지밀도–RTE 분포" style="max-width:640px;margin:0 auto"><figcaption><span class="fl">Pareto</span><span>평가된 715건 설계의 스택 에너지밀도–RTE 분포. 주황: N/P 창 안 설계, 사각: 기준 셀, 마름모: 재균형 기준, 별: 최선 설계.</span><a href="data-cell.html">데이터 →</a></figcaption></figure>
 <h3>설계 사양</h3><div class="table-scroll"><table><thead><tr><th>구분</th><th>항목</th><th>값</th></tr></thead><tbody><tr><td>양극</td><td>두께 [µm]</td><td>114.0</td></tr><tr><td>양극</td><td>공극률</td><td>0.197</td></tr><tr><td>양극</td><td>활물질 부피분율</td><td>0.583</td></tr><tr><td>양극</td><td>입자 반경 [µm]</td><td>0.59</td></tr><tr><td>양극</td><td>활물질 면적당 로딩 [mg/cm²]</td><td>21.3</td></tr><tr><td>양극</td><td>이론용량 [mAh/cm²]</td><td>2.73</td></tr><tr><td>음극</td><td>두께 [µm]</td><td>132.1</td></tr><tr><td>음극</td><td>공극률</td><td>0.383</td></tr><tr><td>음극</td><td>활물질 부피분율</td><td>0.616</td></tr><tr><td>음극</td><td>입자 반경 [µm]</td><td>1.64</td></tr><tr><td>음극</td><td>활물질 면적당 로딩 [mg/cm²]</td><td>13.0</td></tr><tr><td>음극</td><td>이론용량 [mAh/cm²]</td><td>3.17</td></tr><tr><td>셀 구조</td><td>N/P 비(이론용량)</td><td>1.16</td></tr><tr><td>셀 구조</td><td>스택 두께 [µm]</td><td>301.1</td></tr></tbody></table></div>
 <p class="small">두께·기공도·입자반경은 탐색 입력값, 로딩·이론용량·N/P·스택두께는 가정 밀도 기반 유도값, 성능은 DFN 계산값.</p></section>
 
@@ -51,7 +51,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-
 <p class="small">혼합에너지 ≤ 0은 고용체 안정, 부피변화가 작을수록 수명에 유리. 이론용량은 가역 Na 분율 규칙 기반 유도값. 훌(hull) 안정성은 미계산.</p>
 <h3>음극: 두-상 평가의 문헌 대조와 치환 후보</h3>
 <div class="table-scroll"><table><thead><tr><th>계열</th><th>탈소듐상</th><th>MLIP V</th><th>문헌 V</th><th>팽창 [%]</th></tr></thead><tbody><tr><td>NTP</td><td>NaTi2(PO4)3</td><td>1.49</td><td>2.1</td><td>8</td></tr><tr><td>TiO2</td><td>TiO2</td><td>0.66</td><td>0.8</td><td>20</td></tr><tr><td>Sb</td><td>Sb</td><td>0.57</td><td>0.6</td><td>285</td></tr><tr><td>Sn</td><td>Sn</td><td>0.22</td><td>0.3</td><td>386</td></tr><tr><td>P</td><td>P</td><td>0.46</td><td>0.4</td><td>349</td></tr><tr><td>Bi</td><td>Bi</td><td>0.50</td><td>0.6</td><td>221</td></tr></tbody></table></div>
-<div class="table-scroll"><table><thead><tr><th>치환 후보</th><th>V (Δ vs base)</th><th>팽창 [%]</th><th>mAh/g</th></tr></thead><tbody><tr><td><b>NaTiNb(PO4)3</b></td><td>1.00 (-0.49)</td><td>7</td><td>119</td></tr><tr><td><b>ZrTiO4</b></td><td>0.32 (-0.34)</td><td>16</td><td>264</td></tr><tr><td><b>Na2Ti3Nb(PO4)6</b></td><td>1.17 (-0.31)</td><td>7</td><td>126</td></tr><tr><td><b>NaZrTi(PO4)3</b></td><td>1.19 (-0.30)</td><td>7</td><td>120</td></tr><tr><td><b>ZrTi3O8</b></td><td>0.50 (-0.16)</td><td>18</td><td>295</td></tr><tr><td><b>Na2ZrTi3(PO4)6</b></td><td>1.35 (-0.14)</td><td>7</td><td>126</td></tr></tbody></table></div>
+<div class="table-scroll"><table><thead><tr><th>치환 후보</th><th>V (Δ vs base)</th><th>팽창 [%]</th><th>mAh/g</th></tr></thead><tbody><tr><td><b>NaTiNb(PO4)3</b></td><td>1.00 (-0.49)</td><td>7</td><td>119</td></tr><tr><td><b>ZrTiO4</b></td><td>0.32 (-0.34)</td><td>16</td><td>264</td></tr><tr><td><b>Na2Ti3Nb(PO4)6</b></td><td>1.17 (-0.31)</td><td>7</td><td>126</td></tr><tr><td><b>NaZrTi(PO4)3</b></td><td>1.19 (-0.30)</td><td>7</td><td>120</td></tr><tr><td><b>SnSb</b></td><td>0.37 (-0.20)</td><td>323</td><td>752</td></tr><tr><td><b>ZrTi3O8</b></td><td>0.50 (-0.16)</td><td>18</td><td>295</td></tr></tbody></table></div>
 <p class="small">합금 음극(Sb·Sn·Bi·P)의 전압·팽창률은 문헌과 일치한다. NASICON 음극에 Zr·Nb를 넣으면 전압이 내려가고(음극에 유리) 팽창 7 %를 유지한다. 기저상태 다형체는 MLIP 에너지로 선택했다.</p>
 <h3>고체 전해질: Na⁺ 확산</h3><p class="section-intro small">기준 물질(Na₃PS₄, NASICON)의 분자동역학 검증이 진행 중이다. 첫 20 ps 계산은 MSD 적합 r² &lt; 0.9로 통계가 부족해 채택하지 않았고, 60 ps로 재계산한다.</p></section>
 
@@ -65,11 +65,11 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-
 <strong>기록.</strong> 실험 레코드는 입력·출력·검증 JSON으로 append-only 보존되며 모든 수치에 산출 근거(계산값·유도값·가정값·문헌값)가 붙는다. 이 페이지는 레코드에서 스크립트로 생성한다.</p></section>
 
 <section id="cite"><div class="sh"><div class="sn">Citation</div><h2>인용</h2></div>
-<pre>@misc{sodium_ess_virtual_lab_20260918,
+<pre>@misc{sodium_ess_virtual_lab_20260919,
   title  = {Sodium ESS Virtual Lab: autonomous virtual experiments for stationary-ESS sodium-ion cells},
   author = {navicoby fleet, Sodium ESS Virtual Laboratory},
   year   = {2026},
-  note   = {Simulation-only results (PyBaMM DFN, MACE-MP-0). Updated 2026-09-18. https://navicoby.github.io/sodium-lab/}
+  note   = {Simulation-only results (PyBaMM DFN, MACE-MP-0). Updated 2026-09-19. https://navicoby.github.io/sodium-lab/}
 }</pre></section>
-<footer><span>Sodium ESS Virtual Lab · 2026-09-18</span><span>결과는 매일 자동 갱신되며 이 페이지는 수동 게시 · 모든 값은 시뮬레이션</span></footer>
+<footer><span>Sodium ESS Virtual Lab · 2026-09-19</span><span>결과는 매일 자동 갱신되며 이 페이지는 수동 게시 · 모든 값은 시뮬레이션</span></footer>
 </main></body></html>
