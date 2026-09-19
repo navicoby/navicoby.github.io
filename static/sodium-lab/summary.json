@@ -1,6 +1,6 @@
 {
  "_schema": "sodium-ess-lab/summary/v1",
- "generated": "2026-09-19 04:10",
+ "generated": "2026-09-20 04:10",
  "campaign_id": "C01-hc-nvpf-ess-baseline",
  "objective": "정치형 ESS 운전점(0.25C, 25 °C)에서 전극 두께·공극률·입자크기·전해질 전도도·HC 확산계수 중 어느 변수가 사용가능 에너지·왕복효율·전해질 고갈·온도상승의 트레이드오프를 지배하며, 기준셀(Chayambuka2022)을 지배하는 Pareto 설계는 무엇인가.\n",
  "chemistry": "Hard Carbon 음극 // Na3V2(PO4)2F3(NVPF) 양극 // 1 M NaPF6 계 액체전해질 (PyBaMM Chayambuka2022 파라미터셋)",
@@ -347,11 +347,11 @@
   }
  ],
  "last_run": {
-  "date": "2026-09-19",
-  "stage": "robustness",
-  "n_exp": 72,
-  "runtime_s": 545,
-  "note": "robustness: 후보 8 × 72런 완료 → 캠페인 종료(done)"
+  "date": "2026-09-20",
+  "stage": "done",
+  "n_exp": 0,
+  "runtime_s": 0,
+  "note": "캠페인 완료 상태 — project.yaml 의 campaign_id/objective 를 바꾸면 새 캠페인 시작"
  },
  "history": [
   {
@@ -409,6 +409,13 @@
    "next": "done",
    "n_exp": 72,
    "note": "robustness: 후보 8 × 72런 완료 → 캠페인 종료(done)"
+  },
+  {
+   "date": "2026-09-20",
+   "stage": "done",
+   "next": "done",
+   "n_exp": 0,
+   "note": "캠페인 완료 상태 — project.yaml 의 campaign_id/objective 를 바꾸면 새 캠페인 시작"
   }
  ],
  "best_design": {
@@ -570,10 +577,10 @@
  },
  "backend": {
   "configured": "rtx4080",
-  "used_today": "rtx4080",
-  "hardware_today": "NS5 (Windows, 32 threads)"
+  "used_today": null,
+  "hardware_today": null
  },
- "llm_note": "전극 두께가 증가하면서 에너지와 왕복효율이 향상되었고, 공극률과 확산계수는 에너지 효율과 온도 상승 사이의 트레이드오프를 지배한다. 다음에는 전해질 전도도와 입자 크기의 영향을 추가로 검토할 예정이다.",
+ "llm_note": "전극 두께가 증가하면서 면적당 에너지와 배터리 용량이 향상되었고, 반면 왕복 효율과 전해질 고갈이 약간 저하되었습니다. 최적 설계는 전극 두께와 공극률 조정을 통해 에너지와 효율의 균형을 추구하는 것이 핵심입니다. 다음에는 전해질 전도도와 확산계수의 영향을 추가로 분석해 보겠습니다.",
  "env": {
   "pybamm": "26.8.0.0",
   "python": "3.12.14",
