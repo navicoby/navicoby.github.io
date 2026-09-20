@@ -1,9 +1,9 @@
 {
  "_schema": "sodium-ess-lab/tracks/v1",
- "generated": "2026-09-20 06:59",
+ "generated": "2026-09-21 04:10",
  "anode": {
   "campaign_id": "A01-anode-two-phase",
-  "stage": "rank",
+  "stage": "done",
   "round": 5,
   "base": {
    "NTP": {
@@ -594,7 +594,7 @@
  },
  "electrolyte": {
   "campaign_id": "E01-solid-electrolyte-md",
-  "stage": "rank",
+  "stage": "done",
   "round": 7,
   "rows": [
    {
@@ -1351,8 +1351,8 @@
   ]
  },
  "last_run": {
-  "date": "2026-09-20",
-  "note": "음극 r5: 후보 4 평가(4 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance) / 전해질 r7: MD 3건(3 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
+  "date": "2026-09-21",
+  "note": "음극 트랙 완료(rank) / 전해질 트랙 완료(rank)"
  },
  "history": [
   {
@@ -1386,6 +1386,10 @@
   {
    "date": "2026-09-20",
    "note": "음극 r5: 후보 4 평가(4 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU+cuEquivariance) / 전해질 r7: MD 3건(3 유효) · NS5 (Linux, NVIDIA GeForce RTX 4080 Laptop GPU, torchsim batch 8+cuEquivariance)"
+  },
+  {
+   "date": "2026-09-21",
+   "note": "음극 트랙 완료(rank) / 전해질 트랙 완료(rank)"
   }
  ]
 }
