@@ -25,14 +25,14 @@ pre{background:var(--paper);border:1px solid var(--line);padding:14px;font-famil
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media (max-width:720px){.sh{grid-template-columns:1fr} figcaption{grid-template-columns:1fr}}
 </style></head><body><main>
-<header><div class="eyebrow"><span>Sodium-ion battery / Stationary ESS</span><span>Autonomous virtual R&amp;D · updated 2026-09-21</span></div>
+<header><div class="eyebrow"><span>Sodium-ion battery / Stationary ESS</span><span>Autonomous virtual R&amp;D · updated 2026-09-22</span></div>
 <h1>Sodium ESS Virtual Lab</h1>
 <p class="title-line">정치형 ESS용 Hard Carbon // Na₃V₂(PO₄)₂F₃ 소듐이온 셀의 전극 설계 최적화와 신소재 탐색: 물리기반 가상실험과 머신러닝 원자간 퍼텐셜을 결합한 자율 연구 캠페인</p>
 <div class="authors"><p>Sodium ESS Virtual Laboratory<sup>1</sup> · 자율 에이전트 캠페인(m1pro 허브 · rtx4080 GPU)<sup>2</sup></p>
 <div class="affil"><p><sup>1</sup> navicoby 함대 AI 운영체계 — 매일 04:10 한 단계씩 자동 진행되는 폐루프 연구</p><p><sup>2</sup> PyBaMM 26.8.0.0 DFN · MACE-MP-0 · Materials Project (OPTIMADE)</p></div></div>
 <div class="actions"><a class="btn primary" href="data-cell.html">셀 캠페인 데이터 →</a><a class="btn" href="data-cathode.html">양극 트랙 데이터 →</a><a class="btn" href="data-tracks.html">음극·전해질 데이터 →</a><a class="btn" href="#limits">한계와 검증 상태 ↓</a></div></header>
 <nav class="sec"><a href="#insight">01 / Insight</a><a href="#design">02 / Best design</a><a href="#materials">03 / Materials</a><a href="#limits">04 / Limits</a><a href="#method">Method</a><a href="#cite">Citation</a></nav>
-<div class="metrics"><div><strong>715</strong><span>가상 셀 실험 · DFN, 0.25C · 25 °C</span></div><div><strong>131<span>Wh/kg</span></strong><span>최선 설계 · 전극 스택 기준</span></div><div><strong>90.0<span>%</span></strong><span>왕복 에너지효율(RTE)</span></div><div><strong>77</strong><span>MLIP로 평가한 신소재 후보 · 4080 GPU</span></div></div>
+<div class="metrics"><div><strong>715</strong><span>가상 셀 실험 · DFN, 0.25C · 25 °C</span></div><div><strong>131<span>Wh/kg</span></strong><span>최선 설계 · 전극 스택 기준</span></div><div><strong>90.0<span>%</span></strong><span>왕복 에너지효율(RTE)</span></div><div><strong>87</strong><span>MLIP로 평가한 신소재 후보 · 4080 GPU</span></div></div>
 
 <section id="insight"><div class="sh"><div class="sn"><b>01</b>The observation</div><h2>레퍼런스 셀은 재료가 아니라 균형이 문제였다.<br>N/P 재균형이 설계 효과보다 컸다.</h2></div>
 <p class="intro">공개 파라미터셋 그대로의 기준 셀은 N/P 0.79로 방전 시 음극이 먼저 고갈되어 양극 용량의 <strong>45 %</strong>만 쓰였다. 재료를 그대로 두고 음극 두께만 늘려 N/P 1.10으로 맞추자 스택 에너지밀도가 <strong>63 → 107 Wh kg⁻¹</strong>이 되었다. 전극 설계는 그 위에 <strong>+22 %</strong>를 더했다. 개선율은 반드시 재균형 기준에 대해 읽어야 한다.</p>
@@ -47,7 +47,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-
 
 <section id="materials"><div class="sh"><div class="sn"><b>03</b>Materials</div><h2>원자 하나씩 바꿔 본 양극·음극·전해질 후보.</h2></div>
 <p class="intro">Materials Project 구조를 받아 pymatgen으로 치환·탈소듐 구조를 만들고 MACE-MP-0으로 완화해 전압·부피변화·혼합에너지를 계산했다. 비활성 치환 원소(Mg, Al, Ti⁴⁺, Zr)는 산화환원 전자 예산으로 추출 가능 Na를 제한했다. 폴리음이온 계열의 MLIP 절대 전압은 약 0.5 V 낮게 나오므로 기준 계열 대비 Δ로 읽는다.</p>
-<h3>양극 치환 후보 (Pareto 상위)</h3><div class="table-scroll"><table><thead><tr><th>조성</th><th>계열</th><th>V</th><th>ΔV vs base</th><th>ΔE_mix [meV/atom]</th><th>ΔVol [%]</th><th>mAh/g</th></tr></thead><tbody><tr class="ours"><td>Na1Fe0.5Ni0.5P1O4</td><td>Olivine_NaFePO4</td><td>3.69</td><td>+0.65</td><td>-4.4</td><td>-11.6</td><td>153</td></tr><tr class=""><td>Na1Mn0.5Fe0.5P1O4</td><td>Olivine_NaFePO4</td><td>3.25</td><td>+0.21</td><td>-1.4</td><td>-13.1</td><td>155</td></tr><tr class=""><td>Na3Mn0.5V1.5P2O8F3</td><td>NVPF</td><td>3.61</td><td>+0.24</td><td>-10.6</td><td>-4.0</td><td>128</td></tr><tr class=""><td>Na1Al0.5Fe0.5O2</td><td>O3_NaFeO2</td><td>3.06</td><td>-0.19</td><td>10.7</td><td>-2.1</td><td>139</td></tr><tr class=""><td>Na2Mn0.5Fe0.5P1O4F1</td><td>Na2FePO4F</td><td>3.41</td><td>+0.26</td><td>-1.7</td><td>-2.9</td><td>124</td></tr><tr class=""><td>Na2Mn0.25Fe0.75P1O4F1</td><td>Na2FePO4F</td><td>3.28</td><td>+0.13</td><td>-1.1</td><td>-2.4</td><td>124</td></tr></tbody></table></div>
+<h3>양극 치환 후보 (Pareto 상위)</h3><div class="table-scroll"><table><thead><tr><th>조성</th><th>계열</th><th>V</th><th>ΔV vs base</th><th>ΔE_mix [meV/atom]</th><th>ΔVol [%]</th><th>mAh/g</th></tr></thead><tbody><tr class="ours"><td>Na1Fe0.5Ni0.5P1O4</td><td>Olivine_NaFePO4</td><td>3.69</td><td>+0.65</td><td>-4.4</td><td>-11.6</td><td>153</td></tr><tr class=""><td>Na1Mn0.5Fe0.5P1O4</td><td>Olivine_NaFePO4</td><td>3.25</td><td>+0.21</td><td>-1.4</td><td>-13.1</td><td>155</td></tr><tr class=""><td>Na3MnVP2O8F3</td><td>NVPF</td><td>3.82</td><td>+0.45</td><td>-14.4</td><td>-2.9</td><td>127</td></tr><tr class=""><td>Na4Fe2NiP4O15</td><td>MixedPoly_Fe</td><td>3.57</td><td>+0.44</td><td>-2.8</td><td>-2.7</td><td>128</td></tr><tr class=""><td>Na3V1.5Fe0.5P2O8F3</td><td>NVPF</td><td>3.55</td><td>+0.18</td><td>-4.7</td><td>-2.7</td><td>128</td></tr><tr class=""><td>Na3V1.5Cr0.5P2O8F3</td><td>NVPF</td><td>3.52</td><td>+0.15</td><td>-2.8</td><td>-2.6</td><td>128</td></tr></tbody></table></div>
 <p class="small">혼합에너지 ≤ 0은 고용체 안정, 부피변화가 작을수록 수명에 유리. 이론용량은 가역 Na 분율 규칙 기반 유도값. 훌(hull) 안정성은 미계산.</p>
 <h3>음극: 두-상 평가의 문헌 대조와 치환 후보</h3>
 <div class="table-scroll"><table><thead><tr><th>계열</th><th>탈소듐상</th><th>MLIP V</th><th>문헌 V</th><th>팽창 [%]</th></tr></thead><tbody><tr><td>NTP</td><td>NaTi2(PO4)3</td><td>1.49</td><td>2.1</td><td>8</td></tr><tr><td>TiO2</td><td>TiO2</td><td>0.66</td><td>0.8</td><td>20</td></tr><tr><td>Sb</td><td>Sb</td><td>0.57</td><td>0.6</td><td>285</td></tr><tr><td>Sn</td><td>Sn</td><td>0.22</td><td>0.3</td><td>386</td></tr><tr><td>P</td><td>P</td><td>0.46</td><td>0.4</td><td>349</td></tr><tr><td>Bi</td><td>Bi</td><td>0.50</td><td>0.6</td><td>221</td></tr></tbody></table></div>
@@ -65,11 +65,11 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--mute);font-
 <strong>기록.</strong> 실험 레코드는 입력·출력·검증 JSON으로 append-only 보존되며 모든 수치에 산출 근거(계산값·유도값·가정값·문헌값)가 붙는다. 이 페이지는 레코드에서 스크립트로 생성한다.</p></section>
 
 <section id="cite"><div class="sh"><div class="sn">Citation</div><h2>인용</h2></div>
-<pre>@misc{sodium_ess_virtual_lab_20260921,
+<pre>@misc{sodium_ess_virtual_lab_20260922,
   title  = {Sodium ESS Virtual Lab: autonomous virtual experiments for stationary-ESS sodium-ion cells},
   author = {navicoby fleet, Sodium ESS Virtual Laboratory},
   year   = {2026},
-  note   = {Simulation-only results (PyBaMM DFN, MACE-MP-0). Updated 2026-09-21. https://navicoby.github.io/sodium-lab/}
+  note   = {Simulation-only results (PyBaMM DFN, MACE-MP-0). Updated 2026-09-22. https://navicoby.github.io/sodium-lab/}
 }</pre></section>
-<footer><span>Sodium ESS Virtual Lab · 2026-09-21</span><span>결과는 매일 자동 갱신되며 이 페이지는 수동 게시 · 모든 값은 시뮬레이션</span></footer>
+<footer><span>Sodium ESS Virtual Lab · 2026-09-22</span><span>결과는 매일 자동 갱신되며 이 페이지는 수동 게시 · 모든 값은 시뮬레이션</span></footer>
 </main></body></html>
