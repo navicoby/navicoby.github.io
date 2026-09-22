@@ -1,0 +1,12 @@
+# Build outputs are published by the deployment workflow, not stored on main.
+/public/
+/resources/_gen/
+.hugo_build.lock
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.pyc
