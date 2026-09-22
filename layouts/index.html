@@ -15,17 +15,8 @@
     --accent:#2f7d5a;      /* metered green — graphic mark */
     --accent-ink:#245f45;  /* darker green — link text (AA) */
   }
-  @media (prefers-color-scheme:dark){
-    :root{
-      --bg:#141915;
-      --panel:#1a211c;
-      --ink:#e4e9e4;
-      --mut:#93a098;
-      --line:#2a332d;
-      --accent:#5fae83;
-      --accent-ink:#7cc39a;
-    }
-  }
+  /* 이 페이지는 항상 밝게 — OS 다크모드를 따르지 않는다. */
+  :root{color-scheme:light}
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
   body{
