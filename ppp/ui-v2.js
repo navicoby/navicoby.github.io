@@ -1,5 +1,5 @@
 (function(){
-var src=window.PPP_SOURCE||{}, flows=window.PPP_FLOWS||{};
+var src=window.PPP_SOURCE||{}, flows=window.PPP_FLOWS||{}, deep=window.PPP_DEEP||{};
 var rp={2:44,3:74,4:104,5:140,6:173,7:203,8:231,9:259,10:291,11:320,12:345,13:377,14:406,15:431,16:459,17:489,18:520,19:549,20:580,21:609,22:633,23:669,24:705,25:749,26:787,27:827};
 function e(s){return String(s).replace(/[&<>"']/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]})}
 function pos(c){
@@ -17,6 +17,12 @@ function flowHTML(c){
 function conceptHTML(c){
  var h='<section class="section"><div class="section-kicker">Core concepts</div><h3>핵심 개념을 한 단계 더 자세히</h3><div class="concept-list">';
  c.concepts.forEach(function(x,i){h+='<details class="concept" '+(i===0?'open':'')+'><summary>'+e(x[0])+'</summary><div class="concept-body"><p>'+e(x[1])+'</p><p><strong>읽는 포인트.</strong> 정의만 외우지 말고 위 흐름도에서 이 개념이 어떤 문제를 해결하는지 연결해서 보세요.</p></div></details>'});
+ return h+'</div></section>';
+}
+function deepHTML(c){
+ var a=deep[c.n]||[]; if(!a.length)return "";
+ var h='<section class="section"><div class="section-kicker">Deep dive</div><h3>조금 더 깊게 이해하기</h3><p class="deep-copy">이 장의 본문 흐름을 세 가지 질문으로 다시 풀어 썼다. 정의를 외우기보다 왜 이런 설계가 필요한지에 초점을 맞춘다.</p><div class="concept-list">';
+ a.forEach(function(x,i){h+='<details class="concept" '+(i===0?'open':'')+'><summary>'+e(x[0])+'</summary><div class="concept-body"><p>'+e(x[1])+'</p></div></details>'});
  return h+'</div></section>';
 }
 function sourceHTML(c){
@@ -39,7 +45,7 @@ function chapterV2(n){
  '<div class="chapter-actions"><button id="doneBtn" class="done '+(isDone(c.n)?'done-on':'')+'">'+(isDone(c.n)?'✓ 읽음':'읽음 표시')+'</button><button class="soft-btn" id="mapBtn">전체 학습지도</button><button class="soft-btn" id="glossaryBtn">개념 사전</button><button class="soft-btn" id="printBtn">인쇄 / PDF</button></div><div class="source-meta">'+meta+'</div></header>'+
  '<p class="one-liner">'+e(c.one)+'</p>'+
  '<section class="section easy"><div class="section-kicker">Why this chapter</div><h3>아주 쉽게 설명하면</h3><p>'+e(c.easy)+'</p><p class="deep-copy"><strong>책 전체에서의 위치.</strong> '+e(pos(c))+'</p></section>'+
- flowHTML(c)+conceptHTML(c)+sourceHTML(c)+
+ flowHTML(c)+conceptHTML(c)+deepHTML(c)+sourceHTML(c)+
  '<section class="section"><div class="section-kicker">Common trap</div><h3>헷갈리기 쉬운 점</h3><div class="warning">'+e(c.pitfall)+'</div></section>'+
  '<section class="section"><div class="section-kicker">Code</div><h3>코드로 확인하기</h3><p class="deep-copy">코드를 외우기보다 위 개념이 코드의 어느 부분에 나타나는지 찾는 용도로 보세요.</p><div class="code-wrap"><button class="copy-btn" id="copyBtn">코드 복사</button><pre><code>'+e(c.code)+'</code></pre></div></section>'+
  quizHTML(c)+
