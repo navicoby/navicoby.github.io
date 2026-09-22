@@ -13,12 +13,10 @@
     return {mode,dose,ratio,total,ice,hot,steps:cumulative.map((value,i)=>({at:recipes[mode].times[i],amount:value-(cumulative[i-1]||0),cumulative:value}))};
   }
   function hardness(ca,mg) { if(!Number.isFinite(ca)||!Number.isFinite(mg)||ca<0||mg<0||ca>1000||mg>1000) throw Error('칼슘과 마그네슘을 0~1,000mg/L 범위로 입력하세요.'); return 2.497*ca+4.118*mg; }
-  function csvCell(value) { let s=String(value ?? ''); if (/^[\s]*[=+@-]/.test(s) || /^[\t\r\n]/.test(s)) s="'"+s; return '"'+s.replaceAll('"','""')+'"'; }
   function clock(ms) { const sec=Math.floor(ms/1000); return `${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`; }
   function numeric(id) { const el=$(id); return el.value.trim() === '' ? NaN : Number(el.value); }
   // Exposed only to the local build checks; the site sends no data to a server.
-  if (typeof module !== 'undefined' && module.exports) { module.exports={brewPlan,hardness,csvCell}; return; }
-  document.querySelectorAll('[data-print]').forEach(button=>button.addEventListener('click',()=>window.print()));
+  if (typeof module !== 'undefined' && module.exports) { module.exports={brewPlan,hardness}; return; }
   const search=$('chapter-search');
   if(search) search.addEventListener('input',()=>{
     const q=search.value.trim().toLocaleLowerCase('ko'); let count=0;
@@ -77,11 +75,11 @@
     [['dose','entry-dose',5,60],['water','entry-water',1,2000],['ice','entry-ice',0,2000],['temp','entry-temp',0,100]].forEach(([p,id,min,max])=>{const n=Number(query.get(p));if(query.has(p)&&Number.isFinite(n)&&n>=min&&n<=max)$(id).value=n;});
     function validRecord(r){return r && typeof r==='object' && typeof r.id==='string' && typeof r.bean==='string' && typeof r.date==='string' && ['hot','kasuya','iced','other'].includes(r.method) && ['dose','water','ice'].every(k=>Number.isFinite(r[k])) && ['grind','temp','time','notes','next'].every(k=>typeof r[k]==='string');}
     try{const saved=localStorage.getItem(KEY);if(saved){const data=JSON.parse(saved);if(!Array.isArray(data)||!data.every(validRecord))throw Error();records=data;}}catch{storageOK=false;$('journal-status').textContent='저장된 기록을 읽을 수 없거나 브라우저가 저장을 막고 있습니다. 기존 자료를 덮어쓰지 않았습니다. 브라우저 설정을 확인해 주세요.';}
-    function persist(next){if(!storageOK){$('journal-status').textContent='브라우저 저장 공간을 사용할 수 없어 저장하지 못했습니다.';return false;}try{localStorage.setItem(KEY,JSON.stringify(next));records=next;return true;}catch{$('journal-status').textContent='저장 공간을 사용할 수 없습니다. 작성 중인 내용을 복사해 보관하거나 기존 기록을 내보내 주세요.';return false;}}
+    function persist(next){if(!storageOK){$('journal-status').textContent='브라우저 저장 공간을 사용할 수 없어 저장하지 못했습니다.';return false;}try{localStorage.setItem(KEY,JSON.stringify(next));records=next;return true;}catch{$('journal-status').textContent='저장 공간을 사용할 수 없습니다. 브라우저 설정과 남은 저장 공간을 확인해 주세요.';return false;}}
     const methodName=key=>recipes[key]?.name||'기타';
     function render(){
       $('record-list').replaceChildren();$('record-count').textContent=`${records.length}잔의 기록`;
-      ['export-csv','export-json','clear-records'].forEach(id=>$(id).disabled=!records.length);
+      ['clear-records'].forEach(id=>$(id).disabled=!records.length);
       if(!records.length){const p=document.createElement('p');p.className='empty';p.textContent='아직 기록이 없습니다. 오늘의 한 잔에서 느낀 점을 남겨 보세요.';$('record-list').append(p);return;}
       [...records].reverse().forEach(r=>{
         const article=document.createElement('article');article.className='journal-entry';
@@ -96,16 +94,13 @@
     }
     $('journal-form').addEventListener('submit',e=>{
       e.preventDefault();if(!$('journal-form').reportValidity())return;
-      if(records.length>=500){$('journal-status').textContent='이 브라우저에는 최대 500잔을 보관합니다. 기록을 내보낸 뒤 공간을 비워 주세요.';return;}
+      if(records.length>=500){$('journal-status').textContent='이 브라우저에는 최대 500잔을 보관합니다. 더 이상 필요하지 않은 기록을 지운 뒤 다시 저장해 주세요.';return;}
       const bean=$('entry-bean').value.trim();if(!bean){$('journal-status').textContent='원두 이름을 입력해 주세요.';$('entry-bean').focus();return;}
       const r={id:globalThis.crypto?.randomUUID?.()||`${Date.now()}-${Math.random().toString(36).slice(2)}`,date:$('entry-date').value,bean,method:$('entry-method').value,dose:numeric('entry-dose'),water:numeric('entry-water'),ice:numeric('entry-ice'),grind:$('entry-grind').value.trim(),temp:$('entry-temp').value,time:$('entry-time').value.trim(),notes:$('entry-notes').value.trim(),next:$('entry-next').value.trim()};
       if(!validRecord(r)){$('journal-status').textContent='배합과 기록 값을 확인해 주세요.';return;}
       if(persist([...records,r])){render();$('journal-status').textContent='오늘의 한 잔을 이 브라우저에 저장했습니다.';$('entry-notes').value='';$('entry-next').value='';}
     });
-    function download(content,type,extension){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`coffee-journal-${new Date().toISOString().slice(0,10)}.${extension}`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);$('journal-status').textContent='기록 파일의 다운로드를 시작했습니다.';}
-    $('export-json').addEventListener('click',()=>download(JSON.stringify(records,null,2),'application/json;charset=utf-8','json'));
-    $('export-csv').addEventListener('click',()=>{const rows=[['날짜','원두','방식','원두(g)','물(g)','얼음(g)','분쇄','온도(°C)','종료 시간','느낀 맛','다음 한 잔'],...records.map(r=>[r.date,r.bean,methodName(r.method),r.dose,r.water,r.ice,r.grind,r.temp,r.time,r.notes,r.next])];download('\ufeff'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8','csv');});
-    $('clear-records').addEventListener('click',()=>{if(window.confirm('이 브라우저의 커피 기록을 모두 지울까요? 필요한 기록은 먼저 내보내 주세요.')&&persist([])){render();$('journal-status').textContent='저장된 기록을 모두 삭제했습니다.';}});
+    $('clear-records').addEventListener('click',()=>{if(window.confirm('이 브라우저의 커피 기록을 모두 지울까요? 삭제한 기록은 되돌릴 수 없습니다.')&&persist([])){render();$('journal-status').textContent='저장된 기록을 모두 삭제했습니다.';}});
     render();
   }
 })();
