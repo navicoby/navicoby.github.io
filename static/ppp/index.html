@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Programming: Principles and Practice Using C++ 2판 학습노트를 바탕으로 재구성한 쉬운 C++ 학습 가이드">
+  <title>PPP C++ 쉬운 설명 — 27장 학습 가이드</title>
+  <style>
+    :root{
+      --bg:#0b1020; --panel:#11182c; --panel2:#171f36; --text:#e9edf8; --muted:#a8b2cc;
+      --line:#26314e; --accent:#77a7ff; --accent2:#77e0c5; --warn:#ffcb77; --good:#83e6a7;
+      --shadow:0 14px 42px rgba(0,0,0,.25); --radius:18px; --max:1180px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f5f7fb;--panel:#ffffff;--panel2:#f7f9fe;--text:#172033;--muted:#5d6982;--line:#dce3f2;--accent:#2f67d8;--accent2:#087e69;--warn:#946200;--good:#147a3f;--shadow:0 12px 34px rgba(44,61,94,.10);}
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.72}
+    a{color:inherit}
+    button,input{font:inherit}
+    .hero{border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(119,167,255,.16),rgba(119,224,197,.08));}
+    .hero-inner{max-width:var(--max);margin:auto;padding:42px 24px 34px}
+    .eyebrow{color:var(--accent2);font-weight:800;letter-spacing:.08em;font-size:.82rem;text-transform:uppercase}
+    h1{font-size:clamp(2rem,5vw,4.4rem);line-height:1.05;margin:.4rem 0 1rem;letter-spacing:-.045em}
+    .lead{max-width:820px;color:var(--muted);font-size:1.06rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .pill,.action{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 13px;color:var(--muted)}
+    .action{cursor:pointer;color:var(--text)}
+    .action:hover{border-color:var(--accent)}
+    .layout{max-width:var(--max);margin:auto;display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;padding:28px 24px 70px}
+    aside{position:sticky;top:16px;height:calc(100vh - 32px);overflow:auto;border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
+    .search{width:100%;border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:11px 12px;outline:none;margin-bottom:10px}
+    .search:focus{border-color:var(--accent)}
+    .nav-title{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin:14px 8px 6px}
+    .chapter-link{display:flex;gap:9px;align-items:flex-start;text-decoration:none;border-radius:12px;padding:9px 9px;margin:2px 0;color:var(--muted);border:1px solid transparent}
+    .chapter-link:hover{background:var(--panel2);color:var(--text)}
+    .chapter-link.active{background:rgba(119,167,255,.12);border-color:rgba(119,167,255,.35);color:var(--text)}
+    .chapter-link .num{min-width:28px;color:var(--accent);font-weight:800}
+    main{min-width:0}
+    .overview,.chapter{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .overview{padding:24px;margin-bottom:20px}
+    .parts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}
+    .part{border:1px solid var(--line);background:var(--panel2);border-radius:14px;padding:14px}
+    .part strong{display:block;color:var(--accent2)}
+    .part small{color:var(--muted)}
+    .chapter{padding:clamp(20px,4vw,42px)}
+    .chapter-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px}
+    .chapter-kicker{color:var(--accent);font-weight:800}
+    h2{font-size:clamp(1.8rem,4vw,3.1rem);line-height:1.15;margin:.2rem 0 .4rem;letter-spacing:-.03em}
+    .en{color:var(--muted)}
+    .source-page{color:var(--muted);font-size:.88rem;text-align:right}
+    .done{margin-top:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:8px 10px;cursor:pointer}
+    .done.done-on{border-color:var(--good);color:var(--good)}
+    .one-liner{font-size:1.18rem;font-weight:800;border-left:4px solid var(--accent2);padding:12px 16px;background:var(--panel2);border-radius:0 14px 14px 0;margin:0 0 24px}
+    .section{margin:30px 0}
+    .section h3{font-size:1.2rem;margin:0 0 10px}
+    .easy{font-size:1.03rem}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .card{border:1px solid var(--line);background:var(--panel2);border-radius:14px;padding:15px}
+    .card strong{display:block;margin-bottom:4px;color:var(--accent2)}
+    ul{padding-left:1.25rem}
+    li{margin:.35rem 0}
+    .pitfall{border-color:rgba(255,203,119,.4)}
+    .pitfall strong{color:var(--warn)}
+    pre{overflow:auto;border:1px solid var(--line);background:#080d18;color:#e8edf7;padding:16px;border-radius:14px;line-height:1.55;font-size:.9rem}
+    @media (prefers-color-scheme: light){pre{background:#101624;color:#f0f4ff}}
+    .quiz{display:grid;gap:9px}
+    .q{border:1px dashed var(--line);border-radius:12px;padding:12px 14px}
+    .footer-note{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:18px;margin-top:34px}
+    .pager{display:flex;justify-content:space-between;gap:12px;margin-top:26px}
+    .pager button{flex:1;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:12px;border-radius:12px;cursor:pointer}
+    .pager button:disabled{opacity:.35;cursor:not-allowed}
+    .empty{padding:20px;color:var(--muted)}
+    .progress{height:7px;background:var(--panel2);border-radius:999px;overflow:hidden;margin-top:14px}
+    .progress > div{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0}
+    .progress-label{color:var(--muted);font-size:.82rem;margin-top:5px}
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      aside{position:relative;top:0;height:auto;max-height:420px}
+      .parts{grid-template-columns:1fr 1fr}
+      .cards{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .hero-inner,.layout{padding-left:15px;padding-right:15px}
+      .parts{grid-template-columns:1fr}
+      .chapter-head{grid-template-columns:1fr}
+      .source-page{text-align:left}
+    }
+    @media print{
+      aside,.hero-actions,.pager,.done,.search{display:none!important}
+      body{background:white;color:black}
+      .layout{display:block;max-width:none;padding:0}
+      .hero,.chapter,.overview{box-shadow:none;border:0}
+      .chapter{padding:0}
+      pre{white-space:pre-wrap;color:black;background:#f3f3f3}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">C++ · Personal Study Guide</div>
+      <h1>PPP C++를<br>쉽게 읽는 27장</h1>
+      <p class="lead">Bjarne Stroustrup & Lawrence Petersen의 <em>Programming: Principles and Practice Using C++ (2nd ed.)</em>를 바탕으로 만든 한국어 학습노트 통합본을, 처음 배우는 사람도 흐름을 놓치지 않도록 다시 풀어쓴 개인 학습용 웹 가이드입니다.</p>
+      <div class="hero-actions">
+        <span class="pill">27 chapters</span><span class="pill">5 learning paths</span><span class="pill">검색 · 진도 저장 · 모바일 지원</span>
+        <button class="action" id="resetProgress">진도 초기화</button>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="progress-label" id="progressLabel">0 / 27 읽음</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <input id="search" class="search" type="search" placeholder="장·개념 검색 (예: 객체, vector, 테스트)">
+      <div id="nav"></div>
+    </aside>
+
+    <main>
+      <section class="overview" id="overview">
+        <h2 style="font-size:1.55rem;margin-top:0">책 전체를 먼저 한 장으로 보면</h2>
+        <p>이 책은 C++ 문법 목록이 아니라 <strong>생각을 프로그램으로 바꾸는 법</strong>을 단계적으로 보여준다. 1~7장에서 기본 사고와 프로그램 작성 과정을 잡고, 8~11장에서 언어와 입출력 규칙을 정리한다. 12~16장은 그래픽·GUI를 클래스 설계의 연습장으로 쓰고, 17~21장은 메모리·vector·STL로 일반화한다. 22~27장은 역사·텍스트·수치·임베디드·테스트·C로 시야를 넓힌다.</p>
+        <div class="parts">
+          <div class="part"><strong>Part 1 · 1–7</strong><small>기초 사고, 타입, 계산, 오류, 계산기</small></div>
+          <div class="part"><strong>Part 2 · 8–11</strong><small>함수·클래스의 규칙, 스트림 I/O</small></div>
+          <div class="part"><strong>Part 3 · 12–16</strong><small>그래픽, 상속, 함수 그래프, GUI</small></div>
+          <div class="part"><strong>Part 4 · 17–21</strong><small>포인터, RAII, vector, 반복자, 알고리즘</small></div>
+          <div class="part"><strong>Part 5 · 22–27</strong><small>역사, regex, 수치, 임베디드, 테스트, C</small></div>
+        </div>
+      </section>
+
+      <article class="chapter" id="chapter"></article>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
