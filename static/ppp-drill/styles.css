@@ -97,3 +97,9 @@ html[data-theme="light"] .sidebar.open{box-shadow:20px 0 60px rgba(20,30,40,.18)
   .theme-toggle{display:inline-flex!important;min-width:auto}
   .top-actions .theme-toggle{padding-left:9px;padding-right:9px}
 }
+
+
+/* 저작권 고지 */
+.legal{margin:36px 0 0;padding:16px 18px;border-top:1px solid var(--line,#e2e4e7);
+  font-size:12.5px;line-height:1.7;color:var(--muted,#6b7280)}
+.legal b{color:inherit;font-weight:600}
