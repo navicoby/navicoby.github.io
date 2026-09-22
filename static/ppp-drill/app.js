@@ -5,9 +5,31 @@
   const storageKey = "cpp100drills:v1";
   const recallKey = "cpp100drills:recall:v1";
   const lastKey = "cpp100drills:last";
+  const themeKey = "cpp100drills:theme";
   let done = new Set(JSON.parse(localStorage.getItem(storageKey) || "[]"));
   let recalls = new Set(JSON.parse(localStorage.getItem(recallKey) || "[]"));
   let current = null;
+
+  function applyTheme(theme){
+    const value = theme === "light" ? "light" : "dark";
+    document.documentElement.dataset.theme = value;
+    try { localStorage.setItem(themeKey,value); } catch (_) {}
+    const meta=document.querySelector('meta[name="theme-color"]');
+    if(meta) meta.setAttribute("content", value==="light" ? "#f7f8fa" : "#0b0d10");
+    const btn=$("#themeToggle");
+    if(btn){
+      const isLight=value==="light";
+      btn.textContent=isLight ? "☾ 어둡게" : "☀ 밝게";
+      btn.setAttribute("aria-pressed",isLight ? "true" : "false");
+      btn.title=isLight ? "어두운 배경으로 전환" : "밝은 배경으로 전환";
+    }
+  }
+
+  function initTheme(){
+    let theme=document.documentElement.dataset.theme;
+    if(theme!=="light" && theme!=="dark") theme="dark";
+    applyTheme(theme);
+  }
 
   const pad = n => String(n).padStart(3,"0");
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -114,6 +136,10 @@
   function openSidebar(){ $("#sidebar").classList.add("open"); $("#scrim").classList.add("show"); }
   function closeSidebar(){ $("#sidebar").classList.remove("open"); $("#scrim").classList.remove("show"); }
 
+  $("#themeToggle").addEventListener("click",()=>{
+    const currentTheme=document.documentElement.dataset.theme==="light" ? "light" : "dark";
+    applyTheme(currentTheme==="light" ? "dark" : "light");
+  });
   $("#completeBtn").addEventListener("click",toggleComplete);
   $("#recallCheck").addEventListener("change",e=>{
     if(!current)return; if(e.target.checked) recalls.add(current); else recalls.delete(current); save();
@@ -154,7 +180,7 @@
     if(e.key==="ArrowRight" && current<drills.length) openDrill(current+1);
   });
 
-  fillPartFilter(); updateProgress(); renderList();
+  initTheme(); fillPartFilter(); updateProgress(); renderList();
   if(drills.length!==100){
     console.warn(`Expected 100 drills, loaded ${drills.length}`);
   }
