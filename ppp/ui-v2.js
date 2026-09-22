@@ -1,5 +1,5 @@
 (function(){
-var src=window.PPP_SOURCE||{}, flows=window.PPP_FLOWS||{}, deep=window.PPP_DEEP||{};
+var src=window.PPP_SOURCE||{}, flows=window.PPP_FLOWS||{}, deep=window.PPP_DEEP||{}, demos=window.PPP_DEMOS||{};
 var rp={2:44,3:74,4:104,5:140,6:173,7:203,8:231,9:259,10:291,11:320,12:345,13:377,14:406,15:431,16:459,17:489,18:520,19:549,20:580,21:609,22:633,23:669,24:705,25:749,26:787,27:827};
 function e(s){return String(s).replace(/[&<>"']/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]})}
 function pos(c){
@@ -25,6 +25,44 @@ function deepHTML(c){
  a.forEach(function(x,i){h+='<details class="concept" '+(i===0?'open':'')+'><summary>'+e(x[0])+'</summary><div class="concept-body"><p>'+e(x[1])+'</p></div></details>'});
  return h+'</div></section>';
 }
+function demoHTML(c){
+ var d=demos[c.n]; if(!d)return "";
+ var h='<section class="section"><div class="section-kicker">Interactive demo</div><h3>'+e(d.title)+'</h3><div class="demo-box" data-demo="'+d.type+'">';
+ if(d.type==='pipeline'||d.type==='parser'){
+   h+='<div class="demo-row">'+d.items.map(function(x,i){return (i?'<span class="demo-arrow">→</span>':'')+'<button class="demo-step" data-demo-step="'+i+'"><b>'+e(x[0])+'</b><br><small>'+e(x[1])+'</small></button>'}).join('')+'</div><div class="flow-detail demo-detail">단계를 눌러 역할을 확인하세요.</div>';
+ }
+ if(d.type==='objects'){
+   h+='<div class="memory-grid">'+d.items.map(function(x){return '<div class="memory-cell"><b>'+e(x[0])+'</b><span>'+e(x[1])+'</span><div style="font-size:1.35rem;margin-top:6px">'+e(x[2])+'</div></div>'}).join('')+'</div><div class="flow-detail">같은 메모리도 타입에 따라 해석과 허용 연산이 달라진다.</div>';
+ }
+ if(d.type==='pointer'){
+   h+='<div class="demo-row"><div class="demo-step"><b>'+e(d.items[0])+'</b><small>포인터 변수</small></div><span class="demo-arrow">→</span><div class="demo-step" id="ptrAddr"><b>'+e(d.items[1])+'</b><small>주소</small></div><span class="demo-arrow">→</span><div class="demo-step" id="ptrTarget"><b>'+e(d.items[3])+'</b><small>'+e(d.items[2])+' 객체</small></div></div><div class="demo-controls"><button id="ptrNull">nullptr로 바꾸기</button><button id="ptrReset">다시 연결</button></div>';
+ }
+ if(d.type==='vector'){
+   h+='<div><b>size: <span id="vSize"></span> · capacity: <span id="vCap"></span></b></div><div class="slot-row" id="vSlots" style="margin-top:12px"></div><div class="demo-controls"><button id="vPush">push_back()</button><button id="vReset">초기화</button></div><div class="flow-detail">capacity가 꽉 찬 상태에서 추가하면 더 큰 저장공간을 확보하고 원소를 옮긴다.</div>';
+ }
+ if(d.type==='iterator'){
+   h+='<div class="iter-row" id="iterRow">'+d.items.map(function(x,i){return '<div class="iter-item '+(i===0?'current':'')+'" data-i="'+i+'">'+e(x)+'</div>'}).join('')+'<div class="iter-item" data-i="'+d.items.length+'">end</div></div><div class="demo-controls"><button id="iterNext">++it</button><button id="iterReset">begin()</button></div><div class="flow-detail">end는 마지막 원소가 아니라 마지막 다음 위치다.</div>';
+ }
+ if(d.type==='tests'){
+   h+='<div class="memory-grid">'+d.items.map(function(x){return '<div class="memory-cell"><b>'+e(x[0])+'</b><span>'+e(x[1])+'</span></div>'}).join('')+'</div><div class="flow-detail">정상 사례만 반복하지 말고 실패 가능성이 높은 경계를 체계적으로 고른다.</div>';
+ }
+ return h+'</div></section>';
+}
+function initDemo(c){
+ var d=demos[c.n]; if(!d)return;
+ if(d.type==='pipeline'||d.type==='parser'){
+   var items=d.items;chapterEl.querySelectorAll('[data-demo-step]').forEach(function(b){b.onclick=function(){chapterEl.querySelectorAll('[data-demo-step]').forEach(function(x){x.classList.remove('active')});b.classList.add('active');var x=items[Number(b.dataset.demoStep)];chapterEl.querySelector('.demo-detail').innerHTML='<strong style="color:var(--accent)">'+e(x[0])+'</strong> — '+e(x[1])}});
+ }
+ if(d.type==='pointer'){
+   var a=document.getElementById('ptrAddr'),t=document.getElementById('ptrTarget');document.getElementById('ptrNull').onclick=function(){a.querySelector('b').textContent='nullptr';t.style.opacity='.35'};document.getElementById('ptrReset').onclick=function(){a.querySelector('b').textContent=d.items[1];t.style.opacity='1'};
+ }
+ if(d.type==='vector'){
+   var start=d.initial.slice(),vals=start.slice(),cap=4;function draw(){document.getElementById('vSize').textContent=vals.length;document.getElementById('vCap').textContent=cap;var h='';for(var i=0;i<cap;i++)h+='<div class="slot '+(i>=vals.length?'empty':'')+'">'+(i<vals.length?vals[i]:'·')+'</div>';document.getElementById('vSlots').innerHTML=h}draw();document.getElementById('vPush').onclick=function(){if(vals.length===cap)cap*=2;vals.push((vals.length+1)*10);draw()};document.getElementById('vReset').onclick=function(){vals=start.slice();cap=4;draw()};
+ }
+ if(d.type==='iterator'){
+   var idx=0,max=d.items.length,els=chapterEl.querySelectorAll('#iterRow .iter-item');function draw(){els.forEach(function(x){x.classList.toggle('current',Number(x.dataset.i)===idx)})}document.getElementById('iterNext').onclick=function(){idx=Math.min(idx+1,max);draw()};document.getElementById('iterReset').onclick=function(){idx=0;draw()};
+ }
+}
 function sourceHTML(c){
  var s=src[c.n]; if(!s||!s.points)return "";
  var h='<section class="section"><div class="section-kicker">From the source notes</div><h3>원 학습노트에서 더 챙길 것</h3><p class="deep-copy">업로드된 학습노트의 장별 핵심 정리와 본문 논지를 기준으로 다시 압축했다.</p><div class="source-points">';
@@ -45,7 +83,7 @@ function chapterV2(n){
  '<div class="chapter-actions"><button id="doneBtn" class="done '+(isDone(c.n)?'done-on':'')+'">'+(isDone(c.n)?'✓ 읽음':'읽음 표시')+'</button><button class="soft-btn" id="mapBtn">전체 학습지도</button><button class="soft-btn" id="glossaryBtn">개념 사전</button><button class="soft-btn" id="printBtn">인쇄 / PDF</button></div><div class="source-meta">'+meta+'</div></header>'+
  '<p class="one-liner">'+e(c.one)+'</p>'+
  '<section class="section easy"><div class="section-kicker">Why this chapter</div><h3>아주 쉽게 설명하면</h3><p>'+e(c.easy)+'</p><p class="deep-copy"><strong>책 전체에서의 위치.</strong> '+e(pos(c))+'</p></section>'+
- flowHTML(c)+conceptHTML(c)+deepHTML(c)+sourceHTML(c)+
+ flowHTML(c)+conceptHTML(c)+deepHTML(c)+demoHTML(c)+sourceHTML(c)+
  '<section class="section"><div class="section-kicker">Common trap</div><h3>헷갈리기 쉬운 점</h3><div class="warning">'+e(c.pitfall)+'</div></section>'+
  '<section class="section"><div class="section-kicker">Code</div><h3>코드로 확인하기</h3><p class="deep-copy">코드를 외우기보다 위 개념이 코드의 어느 부분에 나타나는지 찾는 용도로 보세요.</p><div class="code-wrap"><button class="copy-btn" id="copyBtn">코드 복사</button><pre><code>'+e(c.code)+'</code></pre></div></section>'+
  quizHTML(c)+
@@ -60,7 +98,7 @@ function chapterV2(n){
  var cb=document.getElementById('copyBtn');cb.onclick=async function(){try{await navigator.clipboard.writeText(c.code);cb.textContent='복사됨 ✓';setTimeout(function(){cb.textContent='코드 복사'},1200)}catch(err){cb.textContent='복사 실패'}};
  chapterEl.querySelectorAll('.quiz-card').forEach(function(card){card.querySelector('.answer-btn').onclick=function(){card.classList.toggle('open');this.textContent=card.classList.contains('open')?'정답 숨기기':'정답 보기'}});
  var f=flows[c.n]||[];chapterEl.querySelectorAll('[data-flow]').forEach(function(b){b.onclick=function(){chapterEl.querySelectorAll('[data-flow]').forEach(function(x){x.style.outline='none'});b.style.outline='2px solid var(--accent)';var x=f[Number(b.dataset.flow)];chapterEl.querySelector('.flow-detail').innerHTML='<strong style="color:var(--accent)">'+e(x[0])+'</strong> — '+e(x[1])}});
- renderNav(search.value);window.scrollTo({top:document.querySelector('.shell').offsetTop-50,behavior:'smooth'});
+ initDemo(c);renderNav(search.value);window.scrollTo({top:document.querySelector('.shell').offsetTop-50,behavior:'smooth'});
 }
 function modals(){
  if(document.getElementById('studyMapModal'))return;
