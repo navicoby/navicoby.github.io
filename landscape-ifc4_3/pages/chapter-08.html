@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>현황에서 준공 인계까지 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-08.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a aria-current="page" href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a aria-current="page" href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 08</p><h1>현황에서 준공 인계까지</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#객체와-작업을-연결한다">객체와 작업을 연결한다</a><a href="#긴-보행축과-선형-정보">긴 보행축과 선형 정보</a><a href="#문서를-연결한-뒤-실제-접근을-확인한다">문서를 연결한 뒤 실제
+접근을 확인한다</a></nav><div class="prose"><p>모델의 정보는 한 번 입력하고 끝나지 않는다. 조사 자료를 근거로 설계를
+만들고, 설계 객체를 시공 작업과 연결한 뒤 실제 설치 상태를 확인해야
+한다. 각 단계에서 무엇이 확정됐고 무엇이 아직 확인되지 않았는지
+구분한다.</p>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>단계</th>
+<th>남길 정보</th>
+<th>다음 단계에서 쓰는 판단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>현황 조사</td>
+<td>자료원, 조사일, 좌표 기준, 기존 수목·시설의 상태</td>
+<td>설계의 기준과 불확실성</td>
+</tr>
+<tr>
+<td>설계</td>
+<td>대상·유형, 재료, 설계값, 수량 기준, 판본</td>
+<td>조달과 시공에 필요한 사양</td>
+</tr>
+<tr>
+<td>시공</td>
+<td>작업 구간, 대상 객체, 승인 문서, 변경 기록</td>
+<td>작업 지시와 검사 대상</td>
+</tr>
+<tr>
+<td>준공 검토</td>
+<td>실측 위치·규격, 검사 결과, 미해결 사항</td>
+<td>설치 상태와 인계 가능 범위</td>
+</tr>
+<tr>
+<td>유지관리</td>
+<td>관리번호, 담당자, 점검·교체 이력, 문서</td>
+<td>점검과 보수의 대상 및 시점</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="객체와-작업을-연결한다">객체와 작업을 연결한다</h2>
+<p><code>IfcTask</code>는 식별 가능한 작업을 표현한다. 식재 작업, 지주
+설치, 포장 시공 같은 단위를 구분하고
+<code>IfcRelAssignsToProcess</code>로 대상 객체와 연결할 수 있다. 선후
+관계는 <code>IfcRelSequence</code>를 검토한다. 모든 현장 시스템이 이러한
+IFC 공정 정보를 읽는 것은 아니므로, 일정의 원본을 관리하는 시스템과
+교환할 범위를 정한다.</p>
+<p>수목 T01의 식재 위치를 바꾸는 경우에는 설계 객체, 작업 지시, 준공
+실측값과 승인 기록이 함께 갱신돼야 한다. 어느 하나만 고치면 같은
+관리번호에 서로 다른 위치가 남는다. 변경 사유, 승인 주체, 적용 판본을
+기록한다.</p>
+<h2 id="긴-보행축과-선형-정보">긴 보행축과 선형 정보</h2>
+<p><code>IfcAlignment</code>는 선형 시설의 기준을 표현한다. 길게
+이어지는 도로변 식재나 시설물 위치를 측점 기준으로 관리할 때 검토할 수
+있다. 수평·종단 구성과 해당 업무에 필요한 정보를 확인한다. 작은 공원의
+모든 보행로에 선형 객체를 넣을 필요는 없다. 선형 기준이 실제 설계·시공
+위치를 정하는 경우에 적용한다.</p>
+<h2 id="문서를-연결한-뒤-실제-접근을-확인한다">문서를 연결한 뒤 실제
+접근을 확인한다</h2>
+<p><code>IfcDocumentReference</code>와 관련 관계를 통해 시방서,
+제품자료, 검사표 등을 연결할 수 있다. 연결은 파일 자체를 IFC 안에
+내장했다는 뜻이 아니다. 수신자가 문서를 열 수 있는 위치와 권한을 갖는지
+확인하고, 판본과 식별자를 유지한다. 개인 PC의 경로만 남기면 인계 후
+접근할 수 없다.</p>
+<p>현장 사진이나 검사 기록에 개인정보·비공개 위치정보가 포함돼 있으면
+공개 교육 자료와 분리한다. 이 설명서의 공원과 수치는 모두 가상이며 현장
+자료를 공개하지 않는다.</p>
+<p><strong>공식 근거:</strong> <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcTask.htm">작업</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcRelAssignsToProcess.htm">작업
+대상 연결</a> · <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcAlignment.htm">선형</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcDocumentReference.htm">문서
+참조</a></p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-07.html"><small>이전 장</small>07. 포장·시설물·배수를 연결하기</a><a href="chapter-09.html"><small>다음 장</small>09. 가상 공원으로 따라가기</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>

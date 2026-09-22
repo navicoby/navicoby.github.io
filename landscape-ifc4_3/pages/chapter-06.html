@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>지형과 좌표를 맞추는 방법 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-06.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a aria-current="page" href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a aria-current="page" href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 06</p><h1>지형과 좌표를 맞추는 방법</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#로컬-모델과-실제-위치의-연결">로컬 모델과 실제 위치의 연결</a><a href="#이해를-위한-간단한-계산">이해를 위한 간단한 계산</a><a href="#지형은-표면과-조사-근거를-함께-보낸다">지형은 표면과 조사 근거를
+함께 보낸다</a></nav><div class="prose"><p>조경 모델은 측량, 건축, 토목, GIS 자료와 함께 쓰인다. 지형과 수목이
+같은 화면에 보인다는 사실만으로 같은 좌표 기준을 사용한다고 판단할 수
+없다. 파일을 교환하기 전에 로컬 원점, 실제 좌표계, 높이 기준, 단위를
+문서로 맞춘다.</p>
+<h2 id="로컬-모델과-실제-위치의-연결">로컬 모델과 실제 위치의 연결</h2>
+<p><code>IfcProjectedCRS</code>는 목표 좌표 참조체계를 기록하는 데
+쓰이고, <code>IfcMapConversion</code>은 로컬 모델 좌표와 그 좌표체계를
+연결한다. 대표적으로 동·북 좌표와 높이의 이동량, 수평 회전, 축척을
+다룬다. 지도 투영 자체를 수행하는 만능 좌표변환 함수로 이해하지
+않는다.</p>
+<p><code>IfcSite</code>의 위도·경도만으로 정밀한 지리참조가 완성되지는
+않는다. 좌표계의 식별, 수평·수직 기준, 단위와 변환 관계가 함께 있어야
+다른 자료와 일치 여부를 판단할 수 있다.</p>
+<h2 id="이해를-위한-간단한-계산">이해를 위한 간단한 계산</h2>
+<p>회전이 없고 축척이 1이며 양쪽 단위가 m라고 가정하자. 로컬 원점이 지도
+좌표 E=200,000, N=500,000, H=50에 대응하면 로컬 위치 (10, 20, 2)는 지도
+위치 (200,010, 500,020, 52)가 된다. <strong>이 값들은 계산 설명용 가상
+좌표이며 실제 대상지나 지정 좌표계가 아니다.</strong></p>
+<p>실제 교환에서는 회전·축척·축 방향·단위가 다를 수 있다. 좌표계 코드만
+같다고 판단을 끝내지 않는다. 서로 떨어진 여러 기준점과 높이를 비교해
+평행이동, 회전, 축척 또는 높이 기준의 오류를 찾는다. 허용오차는 업무
+목적과 측량·계약 기준에 따라 정한다.</p>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<thead>
+<tr>
+<th>확인 항목</th>
+<th>기록하거나 비교할 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수평 기준</td>
+<td>좌표계 이름·식별자, 축 방향, 단위</td>
+</tr>
+<tr>
+<td>수직 기준</td>
+<td>기준면, 표고 자료원, 단위</td>
+</tr>
+<tr>
+<td>모델 기준</td>
+<td>로컬 원점, 배치 계층, 진북과 도북의 관계</td>
+</tr>
+<tr>
+<td>변환 정보</td>
+<td>동·북·높이 오프셋, 회전, 축척</td>
+</tr>
+<tr>
+<td>검증 근거</td>
+<td>기준점 좌표, 계산 결과, 차이와 허용값</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="지형은-표면과-조사-근거를-함께-보낸다">지형은 표면과 조사 근거를
+함께 보낸다</h2>
+<p><code>IfcGeographicElement / TERRAIN</code>은 지형을 표현할 때 검토할
+수 있다. 현황 지형과 계획 지형은 목적과 기준 시점이 다르다. 원자료,
+조사일, 해상도 또는 정밀도, 가공 방법을 남겨 구분한다. TIN과 같은 삼각망
+형상은 프로그램별 지원 범위를 시험한다.</p>
+<p>토공량을 계산할 때는 비교한 두 표면, 경계, 단위, 절·성토 산정 방법을
+함께 기록한다. 모델의 체적값이 내역 산출 기준과 같다고 가정하지 않는다.
+지중시설의 미확인 위치도 확정된 실측값처럼 표현하지 않는다.</p>
+<p><strong>공식 근거:</strong> <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMapConversion.htm">좌표
+변환</a> · <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcProjectedCRS.htm">투영
+좌표체계</a> · <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcSite.htm">대지</a></p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-05.html"><small>이전 장</small>05. 수목의 속성을 설계하는 방법</a><a href="chapter-07.html"><small>다음 장</small>07. 포장·시설물·배수를 연결하기</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>

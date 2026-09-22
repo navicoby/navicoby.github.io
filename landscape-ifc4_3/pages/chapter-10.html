@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>납품 요구와 검증 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-10.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a aria-current="page" href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a aria-current="page" href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 10</p><h1>납품 요구와 검증</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#ifcmvdids의-역할">IFC·MVD·IDS의 역할</a><a href="#검사를-여섯-층으로-나눈다">검사를 여섯 층으로 나눈다</a><a href="#교목-인계-요구를-작성하는-예">교목 인계 요구를 작성하는 예</a><a href="#납품-전-작은-시험에서-확인할-것">납품 전 작은 시험에서 확인할
+것</a></nav><div class="prose"><p>납품 요구는 ‘속성을 많이 넣는다’는 지시보다 구체적이어야 한다. 누가
+어떤 시점에 어떤 판단을 할지 정하고, 그 판단에 필요한
+대상·정보·단위·증거를 적는다. 요구한 값이 존재하는지와 요구 자체가
+적절한지는 별도로 검토한다.</p>
+<h2 id="ifcmvdids의-역할">IFC·MVD·IDS의 역할</h2>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>이름</th>
+<th>하는 일</th>
+<th>조경 업무에서의 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IFC 스키마</td>
+<td>표현 가능한 객체와 관계를 정의</td>
+<td>수목·포장·배치·속성을 구성</td>
+</tr>
+<tr>
+<td>MVD</td>
+<td>특정 교환을 위한 구현 범위를 정함</td>
+<td>사용할 뷰와 수신 도구의 지원 확인</td>
+</tr>
+<tr>
+<td>IDS</td>
+<td>필요한 정보의 조건을 기계가 읽도록 표현</td>
+<td>교목에 수종·관리번호 등이 있는지 검사</td>
+</tr>
+<tr>
+<td>bSDD</td>
+<td>용어·분류·속성 정의를 참조하는 사전</td>
+<td>같은 속성이 같은 뜻인지 확인</td>
+</tr>
+<tr>
+<td>BCF</td>
+<td>모델 객체와 시점을 연결해 이슈를 전달</td>
+<td>위치 오류와 수정 요청을 공유</td>
+</tr>
+</tbody>
+</table></div>
+<p>IDS는 규정한 정보 조건의 검토에 쓰인다. 수목의 활착, 현장 측량의
+정확도, 배수 성능을 자동으로 보증하지 않는다. 이 자료의 요구사항 표는
+IDS로 작성할 내용을 정리하는 출발점이며, 실행 가능한 IDS 자체는
+아니다.</p>
+<h2 id="검사를-여섯-층으로-나눈다">검사를 여섯 층으로 나눈다</h2>
+<ol type="1">
+<li><strong>파일과 문법:</strong> 파일이 열리고 선언한 스키마에 맞는지
+확인한다.</li>
+<li><strong>스키마·교환 범위:</strong> 엔티티, 관계, 적용 뷰와 지원
+기능을 확인한다.</li>
+<li><strong>정보요구:</strong> 필수 속성, 자료형, 허용값, 단위와 적용
+대상을 검사한다.</li>
+<li><strong>형상과 좌표:</strong> 배치, 표고, 간섭, 수량과 허용오차를
+검토한다.</li>
+<li><strong>업무 의미:</strong> 객체 구분과 정보가 인계 목적에 충분한지
+판단한다.</li>
+<li><strong>현장 근거:</strong> 측량·사진·검사 기록과 실제 설치 상태를
+대조한다.</li>
+</ol>
+<h2 id="교목-인계-요구를-작성하는-예">교목 인계 요구를 작성하는 예</h2>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>요구</th>
+<th>확인 방법</th>
+<th>추가로 남는 확인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>관리 대상 교목을 구분할 수 있다</td>
+<td>엔티티·유효 유형·합의된 분류값 확인</td>
+<td>대상 교목을 빠뜨리지 않았는가</td>
+</tr>
+<tr>
+<td>관리번호가 있고 중복되지 않는다</td>
+<td>속성 존재 검사와 목록의 고유성 검사</td>
+<td>현장 표찰과 같은 번호인가</td>
+</tr>
+<tr>
+<td>수종·실측값·측정일이 있다</td>
+<td>값과 자료형 검사</td>
+<td>실제 수종·측정 기록과 일치하는가</td>
+</tr>
+<tr>
+<td>위치를 재현할 수 있다</td>
+<td>배치·좌표 변환과 기준점 비교</td>
+<td>허용오차가 목적에 적합한가</td>
+</tr>
+<tr>
+<td>검사표에 접근할 수 있다</td>
+<td>문서 연결과 수신 권한 확인</td>
+<td>문서가 해당 개체·판본의 근거인가</td>
+</tr>
+</tbody>
+</table></div>
+<p>번호의 전체 목록 고유성, 좌표 편차, 문서 접근성처럼 별도 로직이
+필요한 항목을 모두 IDS 한 파일에서 해결한다고 가정하지 않는다. 검사
+도구가 실제로 지원하는 규칙과 결과 보고 범위를 확인한다.</p>
+<h2 id="납품-전-작은-시험에서-확인할-것">납품 전 작은 시험에서 확인할
+것</h2>
+<p>객체 수와 GlobalId, 공간 포함, 유형, 속성과 단위, 재료, 좌표, 수량,
+문서 참조를 원본과 비교한다. 결과는 ‘합격’ 한 칸으로 끝내지 말고 도구
+버전·검사 대상·판정 기준·차이·미해결 사항을 남긴다. IFC 4.3 지원이라는
+제품 설명을 실제 프로젝트의 교환 성공으로 대신하지 않는다.</p>
+<p><strong>공식 근거:</strong> <a
+href="https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/">IDS</a>
+· <a
+href="https://technical.buildingsmart.org/standards/ifc/mvd/">MVD</a> ·
+<a
+href="https://www.buildingsmart.org/users/services/buildingsmart-data-dictionary/">bSDD</a>
+· <a
+href="https://technical.buildingsmart.org/standards/bcf/">BCF</a></p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-09.html"><small>이전 장</small>09. 가상 공원으로 따라가기</a><a href="chapter-11.html"><small>다음 장</small>11. 용어와 자주 묻는 질문</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>

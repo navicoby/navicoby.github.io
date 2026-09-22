@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>조경 대상을 IFC 객체로 표현하기 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-03.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a aria-current="page" href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a aria-current="page" href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 03</p><h1>조경 대상을 IFC 객체로 표현하기</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#객체-선택의-순서">객체 선택의 순서</a><a href="#조경-객체의-매핑-후보">조경 객체의 매핑 후보</a><a href="#이름만으로-의미를-대신하지-않는다">이름만으로 의미를 대신하지
+않는다</a></nav><div class="prose"><p>먼저 무엇을 하나의 관리 대상으로 볼지 정한다. 개별 수목의 이력 관리가
+목적이라면 수목별 객체가 필요하다. 잔디 교체 면적이 목적이라면 관리
+구획별 면적 객체가 더 적합할 수 있다. 화면을 그리기 편한 단위와 정보를
+인계하기 좋은 단위가 항상 같지는 않다.</p>
+<h2 id="객체-선택의-순서">객체 선택의 순서</h2>
+<p>대상의 기능과 의미에 맞는 구체 엔티티를 먼저 찾는다. 이어
+<code>PredefinedType</code>의 허용값과 표준 속성의 적용 범위를 확인한다.
+프로젝트 분류가 더 필요하면 분류 코드나 사용자 속성을 보완한다. 적합한
+구조가 없을 때 일반 엔티티나 Proxy를 검토하고, 그 선택 이유를
+기록한다.</p>
+<h2 id="조경-객체의-매핑-후보">조경 객체의 매핑 후보</h2>
+<p>다음 표는 공식 엔티티의 의미에 근거한 <strong>적용 후보</strong>다.
+모든 프로젝트에 강제되는 분류표는 아니다.</p>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>조경 대상</th>
+<th>검토할 IFC 표현</th>
+<th>추가로 결정할 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>현황·계획 지형</td>
+<td>IfcGeographicElement / TERRAIN</td>
+<td>조사 시점, 표면 표현, 원자료, 정밀도</td>
+</tr>
+<tr>
+<td>개별 수목</td>
+<td>IfcGeographicElement / VEGETATION</td>
+<td>관리번호, 수종, 개체별 실측값</td>
+</tr>
+<tr>
+<td>관목군·초지</td>
+<td>IfcGeographicElement / VEGETATION</td>
+<td>군식 범위, 면적, 개수·밀도의 산출 기준</td>
+</tr>
+<tr>
+<td>보행 포장</td>
+<td>IfcPavement</td>
+<td>전체 포장과 층의 구분, 구간 분할</td>
+</tr>
+<tr>
+<td>경계석</td>
+<td>IfcKerb</td>
+<td>길이 산정 기준, 곡선부와 세그먼트</td>
+</tr>
+<tr>
+<td>벤치</td>
+<td>IfcFurniture</td>
+<td>제품 사양, 고정 방식, 기초와의 관계</td>
+</tr>
+<tr>
+<td>안내판의 표지판</td>
+<td>IfcSign</td>
+<td>판면과 지주를 분리할지, 문안·방향</td>
+</tr>
+<tr>
+<td>배수관 구간</td>
+<td>IfcPipeSegment</td>
+<td>관경, 구배, 흐름, 연결 구조</td>
+</tr>
+<tr>
+<td>집수정·맨홀</td>
+<td>IfcDistributionChamberElement</td>
+<td>기능에 맞는 유형, 표고, 유지관리 접근</td>
+</tr>
+</tbody>
+</table></div>
+<p>벤치는 고정됐다는 이유만으로 가구에서 제외하지 않는다.
+<code>IfcFurniture</code>의 정의에는 영구 부착 여부와 무관한 가구가
+포함된다. 다만 벤치 본체, 기초, 지붕 등을 묶은 복합 시설이라면 부품과
+조립체의 범위를 별도로 정한다.</p>
+<h2 id="이름만으로-의미를-대신하지-않는다">이름만으로 의미를 대신하지
+않는다</h2>
+<p>객체 이름이 ‘북측 수목 T01’이어도 엔티티가 일반 Proxy라면 식생만
+고르는 검사에서 누락될 수 있다. 반대로 <code>VEGETATION</code>만으로는
+교목과 잔디를 구별할 수 없다. 이 자료의 예시에서는 사용자 속성
+<code>Landscape_ObjectClass</code>의 <code>Category</code>를 사용해
+<code>TREE</code>, <code>SHRUB_GROUP</code>, <code>LAWN</code>을
+구분한다. 이 값들은 교육용 합의안이며 IFC 표준 열거값이 아니다.</p>
+<p>분류체계를 연결할 때는 체계 이름·판본·코드·정의를 함께 정한다. 이름이
+비슷한 두 분류 코드가 같은 뜻인지 확인하지 않은 채 합치지 않는다. 객체
+수량을 집계할 때는 개체와 군식 구획이 섞이지 않도록 한다.</p>
+<p><strong>공식 근거:</strong> <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcGeographicElement.htm">지리
+요소</a> · <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcPavement.htm">포장</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcKerb.htm">경계석</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcFurniture.htm">가구</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcSign.htm">표지판</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcPipeSegment.htm">배수관</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcDistributionChamberElement.htm">챔버</a></p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-02.html"><small>이전 장</small>02. 버전의 흐름과 선택 기준</a><a href="chapter-04.html"><small>다음 장</small>04. 공간과 관계의 구조</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>

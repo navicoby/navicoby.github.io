@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>포장·시설물·배수를 연결하기 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-07.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a aria-current="page" href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a aria-current="page" href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 07</p><h1>포장·시설물·배수를 연결하기</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#포장-전체와-구성층">포장 전체와 구성층</a><a href="#수량에는-산출-기준이-필요하다">수량에는 산출 기준이
+필요하다</a><a href="#시설의-본체와-구성품">시설의 본체와 구성품</a><a href="#배수는-연결과-높이를-함께-읽는다">배수는 연결과 높이를 함께
+읽는다</a></nav><div class="prose"><p>같은 포장이라도 설계자는 마감과 구배를, 시공자는 단면과 작업 구간을,
+관리자는 교체 범위를 읽는다. 객체를 나누는 기준과 전달할 정보는 이러한
+사용 목적에서 정한다.</p>
+<h2 id="포장-전체와-구성층">포장 전체와 구성층</h2>
+<p><code>IfcPavement</code>는 포장 구조를 다룰 때 검토하는 엔티티다.
+구성층을 독립 객체로 관리해야 한다면 <code>IfcCourse</code> 등을
+검토하고, 재료층 정보만으로 목적을 달성할 수 있다면 해당 객체의 재료
+표현을 확인한다. 두 방식을 함께 사용할 때는 전체와 부분의 관계를 명확히
+하고 수량을 중복 합산하지 않는다.</p>
+<p>가상 보행로에서 표층 60 mm, 기층 100 mm라는 값을 정했다고 하자. 이는
+설명을 위한 값이며 시방 권장 두께가 아니다. 모델에는 각 두께의 단위와
+어느 설계 판본의 값인지 남긴다. 두께만 입력하고 재료·다짐·배수 성능이
+검증됐다고 해석하지 않는다.</p>
+<h2 id="수량에는-산출-기준이-필요하다">수량에는 산출 기준이
+필요하다</h2>
+<p><code>IfcElementQuantity</code>는 길이·면적·체적 같은 수량 묶음을
+담는다. <code>MethodOfMeasurement</code> 등으로 산출 방법을 명시할 수
+있다. 표준 수량 세트를 사용할 때도 대상 엔티티와 정의를 확인한다.</p>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<thead>
+<tr>
+<th>수량</th>
+<th>먼저 정할 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>포장 면적</td>
+<td>수평 투영면적인가, 경사면의 실제 면적인가?</td>
+</tr>
+<tr>
+<td>포장 체적</td>
+<td>층별 순체적인가, 전체 체적인가? 공제 기준은 무엇인가?</td>
+</tr>
+<tr>
+<td>경계석 길이</td>
+<td>중심선·한쪽 면·제품 길이 중 어느 기준인가?</td>
+</tr>
+<tr>
+<td>식재 수량</td>
+<td>개별 수목 수인가, 군식 면적에 밀도를 적용한 추정값인가?</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="시설의-본체와-구성품">시설의 본체와 구성품</h2>
+<p>안내판의 판면은 <code>IfcSign</code>을 검토할 수 있다. 지주와
+기초까지 하나의 표지판으로 취급할지, 구성품을 나눌지는 제작·관리 목적에
+따라 정한다. 벤치 역시 제품 전체, 기초, 교체 가능한 부품의 경계를 먼저
+정한다. 작은 부품까지 모두 모델링하기보다 필요한 정보와 교환 성능을
+비교한다.</p>
+<h2 id="배수는-연결과-높이를-함께-읽는다">배수는 연결과 높이를 함께
+읽는다</h2>
+<p>배수관은 <code>IfcPipeSegment</code>, 집수정과 맨홀은
+<code>IfcDistributionChamberElement</code>를 후보로 검토한다. 관경과
+재료뿐 아니라 유입·유출 위치, 연결 구조, 바닥 표고, 흐름 방향을
+확인한다. 화면에서 관이 집수정에 닿는 것과 데이터상 연결된 것은 다를 수
+있다. IFC 객체의 존재만으로 배수 성능이 입증되지는 않는다.</p>
+<p><strong>공식 근거:</strong> <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcPavement.htm">포장</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcCourse.htm">구성층</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcElementQuantity.htm">수량</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcPipeSegment.htm">배수관</a>
+· <a
+href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcDistributionChamberElement.htm">챔버</a></p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-06.html"><small>이전 장</small>06. 지형과 좌표를 맞추는 방법</a><a href="chapter-08.html"><small>다음 장</small>08. 현황에서 준공 인계까지</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>

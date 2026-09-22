@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>용어와 자주 묻는 질문 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-11.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a aria-current="page" href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a  href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a aria-current="page" href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 11</p><h1>용어와 자주 묻는 질문</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#읽다가-막힐-때-찾는-용어">읽다가 막힐 때 찾는 용어</a><a href="#ifc-4.3이면-모든-조경-정보가-표준화됐나">IFC 4.3이면 모든 조경
+정보가 표준화됐나?</a><a href="#속성은-유형에-모으면-관리하기-편하지-않나">속성은 유형에 모으면
+관리하기 편하지 않나?</a><a href="#화면에서-위치와-모양이-맞으면-교환에-성공한-것인가">화면에서
+위치와 모양이 맞으면 교환에 성공한 것인가?</a><a href="#ifc를-내보내면-원본-프로그램에서-그대로-편집할-수-있나">IFC를
+내보내면 원본 프로그램에서 그대로 편집할 수 있나?</a><a href="#납품-전에-가장-먼저-할-작은-일은-무엇인가">납품 전에 가장 먼저
+할 작은 일은 무엇인가?</a><a href="#공식-엔티티-페이지는-어디부터-읽나">공식 엔티티 페이지는
+어디부터 읽나?</a></nav><div class="prose"><h2 id="읽다가-막힐-때-찾는-용어">읽다가 막힐 때 찾는 용어</h2>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<thead>
+<tr>
+<th>용어</th>
+<th>이 자료에서의 뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>엔티티</td>
+<td>IFC가 정의한 데이터 대상의 종류</td>
+</tr>
+<tr>
+<td>객체·인스턴스</td>
+<td>엔티티에 따라 실제로 생성한 개별 데이터</td>
+</tr>
+<tr>
+<td>occurrence</td>
+<td>현장에 놓이는 개별 대상의 객체</td>
+</tr>
+<tr>
+<td>type</td>
+<td>여러 개체가 공유하는 사양을 담는 유형 객체</td>
+</tr>
+<tr>
+<td>GlobalId</td>
+<td>IFC에서 객체를 식별하는 전역 식별자</td>
+</tr>
+<tr>
+<td>PredefinedType</td>
+<td>엔티티를 더 구체화하는 표준 열거값</td>
+</tr>
+<tr>
+<td>ObjectType</td>
+<td>해당 엔티티 규칙에 따라 쓰는 추가 유형 설명</td>
+</tr>
+<tr>
+<td>Pset</td>
+<td>이름과 정의를 가진 속성의 묶음</td>
+</tr>
+<tr>
+<td>수량 세트</td>
+<td>길이·면적·체적 등 수량을 담는 묶음</td>
+</tr>
+<tr>
+<td>배치</td>
+<td>객체 좌표계와 다른 좌표계의 위치 관계</td>
+</tr>
+<tr>
+<td>지리참조</td>
+<td>모델 위치와 실세계 좌표체계의 연결</td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td>더 적절한 의미 구조를 쓰기 어려울 때 검토하는 일반 표현</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ifc-4.3이면-모든-조경-정보가-표준화됐나">IFC 4.3이면 모든 조경
+정보가 표준화됐나?</h2>
+<p>식생·지형·인프라를 표현할 구조가 있어도 조경 업무의 모든 정보 항목과
+납품 방식이 정해진 것은 아니다. 관리 단위, 지역 분류, 규격 측정 방식과
+승인 절차는 프로젝트에 맞게 정해야 한다.</p>
+<h2 id="속성은-유형에-모으면-관리하기-편하지-않나">속성은 유형에 모으면
+관리하기 편하지 않나?</h2>
+<p>공통 사양을 유형으로 묶으면 반복을 줄일 수 있다. 그러나 모든 표준
+속성 세트를 유형에 둘 수 있는 것은 아니다. 세트의 적용 범위를 먼저
+확인한다. 특히 <code>Pset_VegetationCommon</code>은 개별 객체에 부착하는
+세트다.</p>
+<h2 id="화면에서-위치와-모양이-맞으면-교환에-성공한-것인가">화면에서
+위치와 모양이 맞으면 교환에 성공한 것인가?</h2>
+<p>시각 확인은 필요하지만 충분하지 않다. 공간 소속, 유형, 속성, 단위,
+수량과 문서가 유실될 수 있다. 반대로 정보는 남았지만 형상이 잘못 보일
+수도 있다. 시각과 데이터 검토를 함께 수행한다.</p>
+<h2 id="ifc를-내보내면-원본-프로그램에서-그대로-편집할-수-있나">IFC를
+내보내면 원본 프로그램에서 그대로 편집할 수 있나?</h2>
+<p>교환한 형상과 정보를 읽는 것과 원래의 설계 기능을 복원하는 것은
+다르다. 필요한 편집 작업이 가능한지 시험하고 원본 모델, 교환 설정과 IFC
+파일을 함께 보관한다.</p>
+<h2 id="납품-전에-가장-먼저-할-작은-일은-무엇인가">납품 전에 가장 먼저
+할 작은 일은 무엇인가?</h2>
+<p>수목 몇 그루와 포장·시설물 일부를 포함한 시험 파일을 정한다. 작성자와
+수신자가 객체·속성·좌표를 비교하고, 실패한 항목을 해결한 뒤 범위를
+넓힌다. 전체 모델을 만든 뒤에 처음 교환해 보는 일을 피할 수 있다.</p>
+<h2 id="공식-엔티티-페이지는-어디부터-읽나">공식 엔티티 페이지는
+어디부터 읽나?</h2>
+<p>먼저 <code>Semantic definition</code>으로 의미를 읽는다. 이어 상속,
+속성, <code>Formal propositions</code>의 조건, 표준 속성 세트의 적용
+범위를 확인한다. <code>OPTIONAL</code>은 스키마에서 생략할 수 있다는
+뜻이다. 해당 프로젝트의 인계 요구까지 선택사항이라는 뜻은 아니다.</p>
+<p><strong>관련 근거:</strong> 앞선 각 장의 공식 엔티티 링크와 12장의
+출처 안내를 참조한다.</p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-10.html"><small>이전 장</small>10. 납품 요구와 검증</a><a href="chapter-12.html"><small>다음 장</small>12. 출처와 자료의 범위</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>

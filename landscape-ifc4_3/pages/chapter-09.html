@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>가상 공원으로 따라가기 | 조경 BIM을 위한 IFC 4.3</title><meta name="description" content="조경의 수목·지형·포장·시설물을 IFC 4.3 정보모델로 이해하는 한국어 안내. 공식 출처, 가상 공원 사례, PDF 설명서와 점검 서식."><link rel="canonical" href="https://navicoby.github.io/landscape-ifc4_3/pages/chapter-09.html"><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#main">본문으로 바로가기</a><header class="site-head"><div class="head-inner"><a class="brand" href="../index.html">LANDSCAPE <span>/ IFC 4.3</span></a><nav aria-label="주 메뉴"><a href="../index.html#chapters">목차</a><a href="../pages/chapter-03.html">객체 대응표</a><a href="../index.html#downloads">설명서·서식</a></nav></div></header><div class="reader-layout"><aside class="sidebar"><p class="eyebrow">전체 목차</p><nav aria-label="장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a aria-current="page" href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav><a class="pdf-small" href="../downloads/landscape-ifc4_3-guide.pdf" download>PDF 설명서 내려받기 ↓</a></aside><main id="main" class="reader"><details class="mobile-toc"><summary>전체 목차</summary><nav aria-label="모바일 장별 목차"><a  href="../pages/chapter-01.html"><span>01</span>조경에서 IFC를 읽는 방법</a><a  href="../pages/chapter-02.html"><span>02</span>버전의 흐름과 선택 기준</a><a  href="../pages/chapter-03.html"><span>03</span>조경 대상을 IFC 객체로 표현하기</a><a  href="../pages/chapter-04.html"><span>04</span>공간과 관계의 구조</a><a  href="../pages/chapter-05.html"><span>05</span>수목의 속성을 설계하는 방법</a><a  href="../pages/chapter-06.html"><span>06</span>지형과 좌표를 맞추는 방법</a><a  href="../pages/chapter-07.html"><span>07</span>포장·시설물·배수를 연결하기</a><a  href="../pages/chapter-08.html"><span>08</span>현황에서 준공 인계까지</a><a aria-current="page" href="../pages/chapter-09.html"><span>09</span>가상 공원으로 따라가기</a><a  href="../pages/chapter-10.html"><span>10</span>납품 요구와 검증</a><a  href="../pages/chapter-11.html"><span>11</span>용어와 자주 묻는 질문</a><a  href="../pages/chapter-12.html"><span>12</span>출처와 자료의 범위</a></nav></details><article><div class="article-title"><p class="eyebrow">CHAPTER 09</p><h1>가상 공원으로 따라가기</h1><p class="meta">IFC4X3_ADD2 · 2026.09.23</p></div><nav class="on-page" aria-label="이 장의 내용"><a href="#단계-인계-목적을-좁힌다">1단계: 인계 목적을 좁힌다</a><a href="#단계-공간과-객체를-정한다">2단계: 공간과 객체를 정한다</a><a href="#단계-값의-의미와-시점을-정한다">3단계: 값의 의미와 시점을
+정한다</a><a href="#단계-정보-확인과-현장-확인을-나눈다">4단계: 정보 확인과 현장
+확인을 나눈다</a><a href="#단계-작은-교환-결과를-기록한다">5단계: 작은 교환 결과를
+기록한다</a></nav><div class="prose"><p>40 m × 30 m의 가상 공원을 생각해 보자. 진입부, 보행로, 휴게 공간,
+식재 구역과 빗물 정원이 있다. 이 예시는 <strong>준공 수목의 위치와 관리
+정보를 인계하는 방법</strong>을 설명한다. 실제 공원의 조사·설계·시공
+성과가 아니며, 실행 가능한 IFC 모델이나 인증된 납품 규칙을 제공하는
+예시도 아니다.</p>
+<h2 id="단계-인계-목적을-좁힌다">1단계: 인계 목적을 좁힌다</h2>
+<p>수신자는 공원 관리 담당자다. 필요한 판단은 ‘관리할 교목이 빠짐없이
+들어 있는가’, ‘현장에서 해당 나무를 찾을 수 있는가’, ‘수종·설치
+상태·검사 근거를 확인할 수 있는가’다. 이 판단에 필요하지 않은 속성을
+관행적으로 늘리지 않는다.</p>
+<h2 id="단계-공간과-객체를-정한다">2단계: 공간과 객체를 정한다</h2>
+<p>대상지는 <code>IfcSite</code>, 식재 구역은 외부
+<code>IfcSpace</code>로 표현하는 단순한 안을 사용한다. 교목
+T01·T02·T03은 각각 독립된 <code>IfcGeographicElement</code>로 두고
+<code>VEGETATION</code>으로 구분한다. 동일한 조달 사양을 공유하면
+<code>IfcGeographicElementType</code>과 연결한다. 교목을 골라내는 사용자
+구분값은 <code>Landscape_ObjectClass.Category = TREE</code>로
+합의한다.</p>
+<h2 id="단계-값의-의미와-시점을-정한다">3단계: 값의 의미와 시점을
+정한다</h2>
+<p>다음은 현장 결과가 아닌 합성 학습 데이터다. x·y·z는 설명용 로컬 m
+좌표이며 정밀한 실제 위치를 뜻하지 않는다.</p>
+<div class="table-scroll" role="region" aria-label="본문 표" tabindex="0"><table>
+<thead>
+<tr>
+<th>관리번호</th>
+<th>로컬 x, y, z (m)</th>
+<th>수종명</th>
+<th>준공 수고 (m)</th>
+<th>기록 상태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T01</td>
+<td>8, 22, 0</td>
+<td>느티나무</td>
+<td>4.2</td>
+<td>AS_BUILT</td>
+</tr>
+<tr>
+<td>T02</td>
+<td>16, 22, 0</td>
+<td>느티나무</td>
+<td>4.0</td>
+<td>AS_BUILT</td>
+</tr>
+<tr>
+<td>T03</td>
+<td>28, 20, 0</td>
+<td>느티나무</td>
+<td>미확인</td>
+<td>REVIEW_REQUIRED</td>
+</tr>
+</tbody>
+</table></div>
+<p>T03은 빈칸을 임의의 값으로 채우지 않는다. 측정 누락으로 남기고
+담당자와 확인 절차를 정한다. <code>REVIEW_REQUIRED</code>는 이 예시의
+상태값이며 IFC가 정한 품질 등급이 아니다. 실제 IFC로 작성할 때는 배치,
+지리참조, 식별자와 관계까지 완성해야 한다.</p>
+<h2 id="단계-정보-확인과-현장-확인을-나눈다">4단계: 정보 확인과 현장
+확인을 나눈다</h2>
+<p>교목 구분, 관리번호, 수종명, 측정일과 수고값은 규칙으로 확인할 수
+있다. 반면 그 값이 실제 나무와 일치하는지는 측량과 검사 기록을 대조해야
+한다. 모델이 모든 항목을 갖췄더라도 T03의 실측 근거가 없다면 인계 완료로
+처리하지 않는다.</p>
+<h2 id="단계-작은-교환-결과를-기록한다">5단계: 작은 교환 결과를
+기록한다</h2>
+<p>작성 프로그램에서 내보낸 파일을 수신 프로그램으로 가져온다. 세 수목의
+식별자, 공간 소속, 유형, 속성, 좌표가 유지됐는지 비교한다. 재내보내기가
+업무에 포함된다면 그 결과도 다시 비교한다. 보기 방식이 달라졌는지와
+정보가 사라졌는지를 구분해서 기록한다.</p>
+<p>사이트에서 제공하는 ‘요구사항 작성표’와 ‘교환 점검표’는 이 과정을
+기록하기 위한 CSV 서식이다. 작성 예시이며 실행 가능한 IDS 파일이나 검사
+결과를 대신하지 않는다.</p>
+<p><strong>관련 근거:</strong> 객체와 공간은 3~5장의 공식 정의를 따른다.
+대상지, 배치, 속성 합의안과 수치는 이 설명서에서 구성했다.</p>
+</div></article><nav class="prev-next" aria-label="이전 다음 장"><a href="chapter-08.html"><small>이전 장</small>08. 현황에서 준공 인계까지</a><a href="chapter-10.html"><small>다음 장</small>10. 납품 요구와 검증</a></nav></main></div><footer><div class="footer-inner"><p><strong>조경 BIM을 위한 IFC 4.3</strong><br>IFC4X3_ADD2 · 자료 확인 2026.09.23 · 판본 1.0</p><p>조경 학습과 실무 참조를 위한 독립 해설입니다.<br><a href="../pages/chapter-12.html">출처와 자료의 범위</a> · <a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/landscape-ifc4_3">GitHub 원고</a></p></div></footer></body></html>
