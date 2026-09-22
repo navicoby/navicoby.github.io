@@ -155,4 +155,5 @@
     if(e.key==='ArrowLeft') go(current-1);
     if(e.key==='ArrowRight') go(current+1);
   });
+  if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 })();
