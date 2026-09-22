@@ -6,6 +6,14 @@
   <meta name="theme-color" content="#0b0d10">
   <meta name="description" content="C++ 완전 초보를 위한 100개 반복 훈련. 직접 타이핑하고, 컴파일하고, 고장내고, 고치는 C++ Drill.">
   <title>C++ 100 Drills</title>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("cpp100drills:theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (_) {}
+  </script>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -54,6 +62,7 @@
         <button class="icon-btn mobile-only" id="openSidebar" aria-label="목록 열기">☰</button>
         <a class="crumb" href="../ppp/">PPP 해설판</a>
         <div class="top-actions">
+          <button class="ghost-btn compact theme-toggle" id="themeToggle" type="button" aria-label="밝은 배경과 어두운 배경 전환" aria-pressed="false">☀ 밝게</button>
           <button class="ghost-btn compact" id="prevBtn">← 이전</button>
           <button class="ghost-btn compact" id="nextBtn">다음 →</button>
         </div>

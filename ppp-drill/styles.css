@@ -36,3 +36,64 @@ footer{padding-top:30px;padding-bottom:50px;color:#5f6973;font-size:11px;border-
 @media(max-width:560px){
   .hero h1{font-size:48px}.hero-stats>div{padding:15px}.hero-actions{flex-direction:column}.hero-actions button{width:100%}.lesson-head{flex-direction:column}.complete-btn{margin-top:0}.top-actions .ghost-btn:first-child{display:none}.concept-card,.work-card,.challenge-card,.recall-card,.step-card{padding:20px}.lesson-nav{gap:8px}.lesson-nav button{flex:1;padding-left:8px;padding-right:8px}.crumb{display:none}
 }
+
+
+/* Light theme */
+:root{color-scheme:dark}
+html[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f7f8fa;
+  --panel:#ffffff;
+  --panel2:#f1f3f5;
+  --line:#d9dee4;
+  --text:#17202a;
+  --muted:#66727e;
+  --accent:#4f7f00;
+  --accent2:#087e98;
+  --danger:#c93b3b;
+  --code:#f1f3f5;
+}
+body,.sidebar,.topbar,.concept-card,.ghost-btn,.icon-btn,.copy-btn,.command,.recall-check,.drill-item{
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease;
+}
+html[data-theme="light"] .sidebar{background:#ffffff;border-right-color:var(--line)}
+html[data-theme="light"] .brand-mark{border-color:#c8cfd7;background:#fff}
+html[data-theme="light"] .progress-track{background:#e3e7eb}
+html[data-theme="light"] .search-box:focus-within{border-color:#8d98a4}
+html[data-theme="light"] .part-label{color:#7a8692}
+html[data-theme="light"] .drill-item{color:#53606c}
+html[data-theme="light"] .drill-item:hover{background:#edf1f4;color:#17202a}
+html[data-theme="light"] .drill-item.active{background:#edf6df;color:#17202a}
+html[data-theme="light"] .drill-item .num{color:#7b8792}
+html[data-theme="light"] .drill-item .state{color:#a3abb4}
+html[data-theme="light"] .topbar{background:rgba(247,248,250,.92);border-bottom-color:rgba(20,30,40,.09)}
+html[data-theme="light"] .hero>p{color:#5f6b76}
+html[data-theme="light"] .note code{color:#46525e}
+html[data-theme="light"] .ghost-btn{background:#ffffff;color:#34404b}
+html[data-theme="light"] .ghost-btn:hover{border-color:#aab3bc;background:#f0f3f5}
+html[data-theme="light"] .icon-btn{background:#ffffff;color:#17202a}
+html[data-theme="light"] .complete-btn{background:#ffffff;color:#5e6974}
+html[data-theme="light"] .complete-btn.done{background:#eef7e3;border-color:#b6ce98;color:#3f6f00}
+html[data-theme="light"] .concept-card{background:linear-gradient(145deg,#ffffff,#f3f5f7)}
+html[data-theme="light"] .concept-card p,
+html[data-theme="light"] .step-card p,
+html[data-theme="light"] .challenge-card p{color:#4f5c67}
+html[data-theme="light"] .concept-card strong{color:#17202a}
+html[data-theme="light"] .copy-btn{background:#f3f5f7;color:#52606c}
+html[data-theme="light"] pre{background:#f5f6f8;border-color:#d9dee4}
+html[data-theme="light"] pre code{color:#202a33}
+html[data-theme="light"] .command{background:#eef1f4;color:#3e4a55}
+html[data-theme="light"] .micro{color:#78838e!important}
+html[data-theme="light"] .step-card ul,
+html[data-theme="light"] .challenge-card ul{color:#4f5c67}
+html[data-theme="light"] summary{color:#25313c}
+html[data-theme="light"] .details-body{color:#4f5c67}
+html[data-theme="light"] .recall-check{background:#f4f6f7}
+html[data-theme="light"] footer{color:#7a8590;border-top-color:rgba(20,30,40,.08)}
+html[data-theme="light"] .scrim{background:rgba(25,32,40,.35)}
+html[data-theme="light"] .sidebar.open{box-shadow:20px 0 60px rgba(20,30,40,.18)}
+.theme-toggle{min-width:78px}
+@media(max-width:560px){
+  .theme-toggle{display:inline-flex!important;min-width:auto}
+  .top-actions .theme-toggle{padding-left:9px;padding-right:9px}
+}
