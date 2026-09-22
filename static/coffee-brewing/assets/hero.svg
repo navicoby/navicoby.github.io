@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 660" fill="none">
+<defs><linearGradient id="glass" x1="230" y1="300" x2="480" y2="550" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#e5d4bb" stop-opacity=".3"/></linearGradient><linearGradient id="coffee" x1="255" y1="430" x2="440" y2="550"><stop stop-color="#b47748"/><stop offset="1" stop-color="#663c2b"/></linearGradient><pattern id="grain" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".5" fill="#a48a67" opacity=".18"/></pattern></defs>
+<circle cx="327" cy="318" r="240" fill="#e9dfce"/><circle cx="327" cy="318" r="219" stroke="#bfae91" stroke-dasharray="2 9"/>
+<path d="M79 534H556" stroke="#bca991"/><ellipse cx="335" cy="552" rx="178" ry="16" fill="#dacbb8"/>
+<path d="M260 334L250 385 195 501Q183 533 219 541L439 541Q475 530 460 499L406 385 396 334Z" fill="url(#glass)" stroke="#695b4b" stroke-width="2"/>
+<path d="M411 387Q509 365 502 433Q498 475 446 470" stroke="#695b4b" stroke-width="12"/><path d="M415 391Q499 374 494 433Q490 466 449 464" stroke="#e7dccb" stroke-width="7"/>
+<path d="M235 438Q332 462 430 438L457 503Q466 529 435 534H221Q194 528 204 503Z" fill="url(#coffee)"/><ellipse cx="333" cy="440" rx="98" ry="14" fill="#ad744e"/>
+<path d="M237 482L220 516M251 449L242 469" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M282 331L280 358M376 332L379 358" stroke="#968776" stroke-width="2"/><path d="M327 309V399" stroke="#a96538" stroke-width="3" stroke-dasharray="14 9"/>
+<ellipse cx="329" cy="330" rx="105" ry="12" fill="#dad1bd" stroke="#695b4b" stroke-width="2"/>
+<path d="M218 210L288 322Q328 340 369 322L439 210" fill="#a7b292" stroke="#4b614d" stroke-width="2"/>
+<path d="M230 215L296 318M253 220L306 323M278 224L316 326M308 225L326 328M339 225L336 328M369 222L347 324M399 217L358 320M425 214L367 313" stroke="#6b805e" stroke-width="3"/>
+<path d="M220 211L238 181 420 181 438 211" fill="#faf5e9" stroke="#8d7c67" stroke-width="1.5"/>
+<ellipse cx="329" cy="182" rx="91" ry="24" fill="#ded2bd" stroke="#8d7c67" stroke-width="1.5"/><ellipse cx="329" cy="184" rx="74" ry="17" fill="#644b37"/>
+<ellipse cx="329" cy="184" rx="67" ry="13" fill="url(#grain)"/><path d="M303 184Q327 173 348 185Q327 197 303 184" stroke="#aa805a" stroke-width="2"/>
+<path d="M211 213Q170 209 171 239Q175 265 241 250" stroke="#4b614d" stroke-width="11"/><path d="M211 213Q177 215 178 237Q181 255 237 245" stroke="#abb797" stroke-width="6"/>
+<path d="M328 75Q313 92 329 109Q343 126 328 146M356 94Q347 105 358 117Q365 127 359 139" stroke="#aa8b67" stroke-width="2" stroke-linecap="round"/>
+<g transform="translate(123 451) rotate(-28)"><ellipse rx="18" ry="27" fill="#69482e"/><path d="M0-22Q-9-7 1 2Q10 10 0 23" stroke="#c39469" stroke-width="2"/></g>
+<g transform="translate(157 491) rotate(38)"><ellipse rx="14" ry="22" fill="#96704e"/><path d="M0-18Q8-5 0 3Q-6 10 0 18" stroke="#d2b18b" stroke-width="2"/></g>
+<path d="M444 209H507M418 443H529M368 321H486" stroke="#978674"/><circle cx="507" cy="209" r="3" fill="#978674"/><circle cx="529" cy="443" r="3" fill="#978674"/>
+<g fill="#6f665a" font-family="Arial,sans-serif" font-size="11" letter-spacing="2"><text x="451" y="197">POUR OVER</text><text x="451" y="431">ONE GOOD CUP</text><text x="203" y="596">SEED · ORIGIN · WATER · TIME</text></g>
+</svg>
