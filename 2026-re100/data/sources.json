@@ -1,0 +1,167 @@
+[
+  {
+    "id": "S01",
+    "title": "RE100 공식 소개",
+    "publisher": "Climate Group",
+    "publication_date": "상시 갱신",
+    "url": "https://www.theclimategroup.org/re100",
+    "scope": "RE100의 목적과 글로벌 이니셔티브 소개",
+    "type": "공식 소개",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S02",
+    "title": "2025 RE100 Annual Disclosure Report",
+    "publisher": "Climate Group·CDP",
+    "publication_date": "2026-09",
+    "url": "https://www.theclimategroup.org/2025-re100-annual-disclosure-report",
+    "scope": "2025 공시 사이클. 408개사 분석, 대다수의 실적기간은 2024년. pp. 6–9, 19–23, 45–47",
+    "type": "공시 분석",
+    "verified_material": "웹 요약 및 연결 PDF 원문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S03",
+    "title": "Renewable supply shortfalls threaten companies’ 100% clean energy goals",
+    "publisher": "Climate Group",
+    "publication_date": "2026-09-18",
+    "url": "https://www.theclimategroup.org/our-work/news/re100-adr",
+    "scope": "최근 연차보고서 발표와 국가별 조달 장벽",
+    "type": "공식 발표",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S04",
+    "title": "RE100 Technical Criteria and Appendices",
+    "publisher": "RE100",
+    "publication_date": "2025-03-24",
+    "url": "https://www.theclimategroup.org/re100/technical-guidance",
+    "scope": "현행 안내 목록의 March 2025 판. Sections 3–6 및 Appendices A·B. 연결 파일명은 15 April 2025",
+    "type": "기술 기준",
+    "verified_material": "연결 PDF 원문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S05",
+    "title": "2026 RE100 Reporting Guidance",
+    "publisher": "RE100·CDP",
+    "publication_date": "2026-07",
+    "url": "https://www.theclimategroup.org/hubfs/RE100/RE100%20Technical%20and%20FAQ/RE100%20Reporting%20Guidance%202026-2.pdf?hsLang=en",
+    "scope": "Sections 1.4·1.11·3·4. 보고 일정, 시간대 매칭, 인정 판단",
+    "type": "보고 지침",
+    "verified_material": "PDF 원문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S06",
+    "title": "How RE100 members are held to account",
+    "publisher": "RE100",
+    "publication_date": "2026-07",
+    "url": "https://www.theclimategroup.org/hubfs/RE100/RE100%20Technical%20and%20FAQ/RE100%20Accountability%20Guidance%202026.pdf?hsLang=en",
+    "scope": "pp. 2–4. 인정 실적, claim quality, 초과조달 및 대외 표현",
+    "type": "공개 지침",
+    "verified_material": "PDF 원문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S07",
+    "title": "재생e 사용 확인(K-RE100)",
+    "publisher": "한국에너지공단 재생에너지센터",
+    "publication_date": "상시 갱신",
+    "url": "https://www.knrec.or.kr/biz/introduce/new_policy/intro_kre100.do",
+    "scope": "참여대상, 현재 안내된 5개 이행수단, 사용 확인 절차",
+    "type": "제도 안내",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S08",
+    "title": "재생에너지 중심 에너지 대전환, 공공기관이 선도한다",
+    "publisher": "기후에너지환경부 / KDI 정책자료 수록",
+    "publication_date": "2026-02-11",
+    "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=276878&pg=&pp=20&topic=P",
+    "scope": "88개 공공기관 경영평가 연계 및 2030년 60% 정책 목표. 모든 기관에 적용되는 의무로 일반화하지 않음",
+    "type": "정책 발표",
+    "verified_material": "KDI 수록 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S09",
+    "title": "RE100 확산에 따른 산업부문 재생에너지 전환 여건 분석",
+    "publisher": "에너지경제연구원",
+    "publication_date": "2026-07-21",
+    "url": "https://www.keei.re.kr/board.es?act=view&bid=0008&list_no=127877&mid=a10202020000&tag=",
+    "scope": "2023년 K-RE100 조달량 10,128GWh, 녹색프리미엄 비중 80.5%. 발표연도와 통계연도 구분",
+    "type": "연구기관 발표",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S10",
+    "title": "Electricity Mid-Year Update 2026 — Executive summary",
+    "publisher": "IEA",
+    "publication_date": "2026",
+    "url": "https://www.iea.org/reports/electricity-mid-year-update-2026/executive-summary",
+    "scope": "2026–2027년 전력수요 및 재생발전 전망. 전망치는 실적과 구분",
+    "type": "시장 전망",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S11",
+    "title": "Scope 2 Guidance",
+    "publisher": "GHG Protocol",
+    "publication_date": "2015 / 웹 갱신",
+    "url": "https://ghgprotocol.org/scope-2-guidance",
+    "scope": "구매한 전기·열 등의 배출량 산정 및 계약 수단의 품질 기준",
+    "type": "회계 지침",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S12",
+    "title": "Scope 2 Public Consultation Feedback",
+    "publisher": "GHG Protocol",
+    "publication_date": "2026-08-25 자료 포함",
+    "url": "https://ghgprotocol.org/scope-2-public-consultation-feedback",
+    "scope": "의견수렴 결과 공개. 개정안과 확정·시행 기준을 구분",
+    "type": "개정 논의",
+    "verified_material": "웹 자료 목록",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S13",
+    "title": "CBAM definitive regime",
+    "publisher": "European Commission",
+    "publication_date": "2026 / 상시 갱신",
+    "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "scope": "2026-01-01 본 시행 및 품목별 내재배출 관리. RE100과 별개의 제도",
+    "type": "제도 안내",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S14",
+    "title": "CBAM definitive-period guidance announcement",
+    "publisher": "European Commission",
+    "publication_date": "2026-08-14",
+    "url": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en",
+    "scope": "비EU 생산자 등을 위한 일반·품목별 지침 공개",
+    "type": "공식 발표",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S15",
+    "title": "Electricity 2026 — Executive summary",
+    "publisher": "IEA",
+    "publication_date": "2026",
+    "url": "https://www.iea.org/reports/electricity-2026/executive-summary",
+    "scope": "송전망 접속 지연, 유연성·저장장치·수요관리의 중요성. 단기 수치는 중간 업데이트 우선",
+    "type": "시장 분석",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-09-23"
+  }
+]
