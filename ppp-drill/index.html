@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="C++ 완전 초보를 위한 100개 반복 훈련. 직접 타이핑하고, 컴파일하고, 고장내고, 고치는 C++ Drill.">
+  <title>C++ 100 Drills</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <a class="brand-mark" href="./" aria-label="C++ 100 Drills 홈">C<span>++</span></a>
+        <div>
+          <strong>100 DRILLS</strong>
+          <small>type · compile · break · fix</small>
+        </div>
+        <button class="icon-btn mobile-only" id="closeSidebar" aria-label="목록 닫기">×</button>
+      </div>
+
+      <div class="side-progress">
+        <div class="progress-copy"><span>진행률</span><strong id="sideProgressText">0 / 100</strong></div>
+        <div class="progress-track"><div class="progress-fill" id="sideProgressFill"></div></div>
+      </div>
+
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Drill 검색 (예: vector, class)" autocomplete="off">
+      </label>
+
+      <div class="filter-row">
+        <select id="partFilter" aria-label="파트 필터">
+          <option value="all">전체 파트</option>
+        </select>
+        <select id="statusFilter" aria-label="완료 상태 필터">
+          <option value="all">전체 상태</option>
+          <option value="todo">미완료</option>
+          <option value="done">완료</option>
+        </select>
+      </div>
+
+      <nav class="drill-list" id="drillList" aria-label="C++ Drill 목록"></nav>
+
+      <div class="side-actions">
+        <button class="ghost-btn" id="randomBtn">미완료 하나 뽑기</button>
+        <button class="text-btn danger" id="resetBtn">진행률 초기화</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="openSidebar" aria-label="목록 열기">☰</button>
+        <a class="crumb" href="../ppp/">PPP 해설판</a>
+        <div class="top-actions">
+          <button class="ghost-btn compact" id="prevBtn">← 이전</button>
+          <button class="ghost-btn compact" id="nextBtn">다음 →</button>
+        </div>
+      </header>
+
+      <section class="hero" id="hero">
+        <div class="eyebrow">C++ FROM ZERO · 100 HANDS-ON DRILLS</div>
+        <h1>읽는 C++에서<br><em>쓰는 C++</em>로.</h1>
+        <p>코드를 눈으로만 이해하지 않습니다. 직접 타이핑하고, 컴파일하고, 일부러 고장내고, 오류를 읽고, 다시 고칩니다.</p>
+        <div class="hero-stats">
+          <div><strong>100</strong><span>Drills</span></div>
+          <div><strong>10</strong><span>Parts</span></div>
+          <div><strong>C++20</strong><span>Target</span></div>
+          <div><strong id="heroPercent">0%</strong><span>Complete</span></div>
+        </div>
+        <div class="hero-actions">
+          <button class="primary-btn" id="startBtn">Drill 001 시작</button>
+          <button class="ghost-btn" id="continueBtn">이어서 하기</button>
+        </div>
+        <p class="note">macOS 기준 예시: <code>clang++ -std=c++20 main.cpp -o main && ./main</code></p>
+      </section>
+
+      <section class="lesson hidden" id="lesson" aria-live="polite">
+        <div class="lesson-head">
+          <div>
+            <div class="eyebrow" id="lessonPart"></div>
+            <div class="lesson-number" id="lessonNumber"></div>
+            <h1 id="lessonTitle"></h1>
+            <p id="lessonGoal"></p>
+          </div>
+          <button class="complete-btn" id="completeBtn" aria-pressed="false"><span>✓</span> 완료</button>
+        </div>
+
+        <div class="concept-card">
+          <div class="section-kicker">01 · CONCEPT</div>
+          <h2>먼저 이것만 이해</h2>
+          <div id="lessonConcept"></div>
+        </div>
+
+        <div class="work-card">
+          <div class="section-kicker">02 · TYPE IT</div>
+          <div class="section-title-row">
+            <h2>보고 직접 타이핑</h2>
+            <button class="copy-btn" data-copy="codeBlock">Copy</button>
+          </div>
+          <pre><code id="codeBlock"></code></pre>
+          <div class="command" id="compileCommand"></div>
+          <p class="micro">복사해서 끝내지 말고, 첫 시도는 손으로 입력하세요. 오타도 훈련의 일부입니다.</p>
+        </div>
+
+        <div class="grid-two">
+          <article class="step-card break-card">
+            <div class="section-kicker">03 · BREAK IT</div>
+            <h2>일부러 고장내기</h2>
+            <div id="breakIt"></div>
+          </article>
+          <article class="step-card observe-card">
+            <div class="section-kicker">04 · OBSERVE</div>
+            <h2>컴파일러를 읽기</h2>
+            <div id="observe"></div>
+          </article>
+        </div>
+
+        <article class="challenge-card">
+          <div class="section-kicker">05 · CHANGE IT</div>
+          <h2>스스로 변형하기</h2>
+          <div id="challenge"></div>
+          <details>
+            <summary>힌트 보기</summary>
+            <div class="details-body" id="hint"></div>
+          </details>
+          <details>
+            <summary>예시 답안 보기</summary>
+            <div class="details-body">
+              <div class="section-title-row">
+                <span>한 가지 가능한 답입니다.</span>
+                <button class="copy-btn" data-copy="answerBlock">Copy</button>
+              </div>
+              <pre><code id="answerBlock"></code></pre>
+            </div>
+          </details>
+        </article>
+
+        <article class="recall-card">
+          <div>
+            <div class="section-kicker">06 · RECALL</div>
+            <h2>화면을 가리고 다시 작성</h2>
+            <p>마지막으로 예시 코드를 보지 않고 처음부터 다시 작성하세요. 막히면 딱 한 번만 위를 확인합니다.</p>
+          </div>
+          <label class="recall-check"><input type="checkbox" id="recallCheck"><span>기억으로 다시 썼다</span></label>
+        </article>
+
+        <div class="lesson-nav">
+          <button class="ghost-btn" id="lessonPrev">← 이전 Drill</button>
+          <button class="primary-btn" id="lessonNext">다음 Drill →</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>Original practice course for learning modern C++. Inspired by deliberate practice, not a reproduction of any textbook exercises.</p>
+      </footer>
+    </main>
+  </div>
+  <div class="scrim" id="scrim"></div>
+  <script src="./drills.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
