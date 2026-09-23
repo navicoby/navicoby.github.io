@@ -5,7 +5,7 @@
   const storageKey = "cpp100drills:v1";
   const recallKey = "cpp100drills:recall:v1";
   const lastKey = "cpp100drills:last";
-  const themeKey = "cpp100drills:theme";
+  const themeKey = "cpp100drills:theme:paper";
   let done = new Set(JSON.parse(localStorage.getItem(storageKey) || "[]"));
   let recalls = new Set(JSON.parse(localStorage.getItem(recallKey) || "[]"));
   let current = null;
@@ -15,7 +15,7 @@
     document.documentElement.dataset.theme = value;
     try { localStorage.setItem(themeKey,value); } catch (_) {}
     const meta=document.querySelector('meta[name="theme-color"]');
-    if(meta) meta.setAttribute("content", value==="light" ? "#f7f8fa" : "#0b0d10");
+    if(meta) meta.setAttribute("content", value==="light" ? "#fdfdfb" : "#191e1b");
     const btn=$("#themeToggle");
     if(btn){
       const isLight=value==="light";
@@ -27,7 +27,7 @@
 
   function initTheme(){
     let theme=document.documentElement.dataset.theme;
-    if(theme!=="light" && theme!=="dark") theme="dark";
+    if(theme!=="light" && theme!=="dark") theme="light";
     applyTheme(theme);
   }
 
