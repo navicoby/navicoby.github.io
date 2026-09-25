@@ -23,9 +23,9 @@
       "wind": "from_east",
       "rays": 256,
       "counts": [
-        93,
+        50,
         0,
-        151,
+        194,
         12
       ]
     },
@@ -35,8 +35,8 @@
       "rays": 256,
       "counts": [
         0,
-        82,
-        170,
+        55,
+        197,
         4
       ]
     },
@@ -67,9 +67,9 @@
       "wind": "calm",
       "rays": 256,
       "counts": [
-        91,
+        56,
         0,
-        165,
+        200,
         0
       ]
     },
@@ -78,9 +78,9 @@
       "wind": "from_east",
       "rays": 256,
       "counts": [
-        93,
+        57,
         0,
-        151,
+        187,
         12
       ]
     },
@@ -89,9 +89,9 @@
       "wind": "from_west",
       "rays": 256,
       "counts": [
-        92,
+        54,
         0,
-        160,
+        198,
         4
       ]
     },
@@ -100,9 +100,9 @@
       "wind": "from_north",
       "rays": 256,
       "counts": [
-        61,
+        41,
         0,
-        184,
+        204,
         11
       ]
     },
@@ -111,9 +111,9 @@
       "wind": "from_south",
       "rays": 256,
       "counts": [
-        128,
+        86,
         0,
-        123,
+        165,
         5
       ]
     }
@@ -140,7 +140,7 @@
       "wind": "calm",
       "face": "front",
       "analytic": 0.8660254037844387,
-      "gpu": 0.8651486455463729,
+      "gpu": 0.8673381542699725,
       "tolerance": 0.01
     },
     {
@@ -156,7 +156,7 @@
       "wind": "from_east",
       "face": "front",
       "analytic": 0.6,
-      "gpu": 0.5992811229174867,
+      "gpu": 0.6003083079599826,
       "tolerance": 0.01
     }
   ],
@@ -166,18 +166,18 @@
       "family": "vertical",
       "wind": "from_east",
       "case": "front, 10 mm, loose dominated, central coefficients",
-      "baseline_remaining_mg_m2": 36.4479104632423,
-      "large_sample_remaining_mg_m2": 36.214449250255086,
-      "absolute_difference_percentage_points": 0.23346121298721556,
+      "baseline_remaining_mg_m2": 36.405396121426634,
+      "large_sample_remaining_mg_m2": 36.21268850082095,
+      "absolute_difference_percentage_points": 0.19270762060568103,
       "acceptance_percentage_points": 1.0
     },
     {
       "family": "tilted",
       "wind": "from_east",
       "case": "front, 10 mm, loose dominated, central coefficients",
-      "baseline_remaining_mg_m2": 26.97773876256413,
-      "large_sample_remaining_mg_m2": 26.79156588662358,
-      "absolute_difference_percentage_points": 0.18617287594054943,
+      "baseline_remaining_mg_m2": 26.916784602900346,
+      "large_sample_remaining_mg_m2": 26.802899088694268,
+      "absolute_difference_percentage_points": 0.1138855142060784,
       "acceptance_percentage_points": 1.0
     }
   ],
@@ -192,7 +192,7 @@
     "monotonic washing with dose",
     "greater adhesion retains more dust"
   ],
-  "elapsed_seconds": 2.8755778999766335,
+  "elapsed_seconds": 1.5099404999054968,
   "field_validated": false,
   "annual_energy_adjusted": false
 }
