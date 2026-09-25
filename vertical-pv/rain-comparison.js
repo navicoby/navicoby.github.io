@@ -9,10 +9,10 @@
     const rain = Number(amount.value);
     const find = (family,face,pool,multiplier) => entries.get([family,wind.value,face,rain,pool,multiplier].join('|'));
     body.replaceChildren();
-    for (const [family,label] of [['vertical','수직형'],['tilted','경사형']]) {
+    for (const [family,label] of [['vertical','수직 양면형'],['tilted','경사 단면형']]) {
       for (const [face,side] of [['front','앞면'],['rear','뒷면']]) {
         const tr = document.createElement('tr');
-        const th = document.createElement('th'); th.scope='row';th.textContent=label+' '+side;tr.append(th);
+        const th = document.createElement('th'); th.scope='row';th.textContent=label+' '+(family==='tilted'&&face==='rear'?'비발전 뒷면':side);tr.append(th);
         const dose=document.createElement('td');dose.textContent=find(family,face,'loose_dominated',1).surface_rain_mm.toFixed(2)+' mm';tr.append(dose);
         const control=document.createElement('td');control.textContent='100.0%';tr.append(control);
         for (const pool of ['loose_dominated','adhered_dominated']) {
