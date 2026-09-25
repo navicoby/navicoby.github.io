@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "warp_version": "1.17.0",
+  "device_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+  "rain_ray_runs": 30,
+  "primary_water_parcels": 15000000,
+  "additional_convergence_parcels": 4000000,
+  "result_rows": 2520,
+  "independent_ray_checks": [
+    {
+      "family": "vertical",
+      "wind": "calm",
+      "rays": 256,
+      "counts": [
+        0,
+        0,
+        256,
+        0
+      ]
+    },
+    {
+      "family": "vertical",
+      "wind": "from_east",
+      "rays": 256,
+      "counts": [
+        93,
+        0,
+        151,
+        12
+      ]
+    },
+    {
+      "family": "vertical",
+      "wind": "from_west",
+      "rays": 256,
+      "counts": [
+        0,
+        82,
+        170,
+        4
+      ]
+    },
+    {
+      "family": "vertical",
+      "wind": "from_north",
+      "rays": 256,
+      "counts": [
+        0,
+        0,
+        245,
+        11
+      ]
+    },
+    {
+      "family": "vertical",
+      "wind": "from_south",
+      "rays": 256,
+      "counts": [
+        0,
+        0,
+        251,
+        5
+      ]
+    },
+    {
+      "family": "tilted",
+      "wind": "calm",
+      "rays": 256,
+      "counts": [
+        91,
+        0,
+        165,
+        0
+      ]
+    },
+    {
+      "family": "tilted",
+      "wind": "from_east",
+      "rays": 256,
+      "counts": [
+        93,
+        0,
+        151,
+        12
+      ]
+    },
+    {
+      "family": "tilted",
+      "wind": "from_west",
+      "rays": 256,
+      "counts": [
+        92,
+        0,
+        160,
+        4
+      ]
+    },
+    {
+      "family": "tilted",
+      "wind": "from_north",
+      "rays": 256,
+      "counts": [
+        61,
+        0,
+        184,
+        11
+      ]
+    },
+    {
+      "family": "tilted",
+      "wind": "from_south",
+      "rays": 256,
+      "counts": [
+        128,
+        0,
+        123,
+        5
+      ]
+    }
+  ],
+  "analytic_exposure_checks": [
+    {
+      "family": "vertical",
+      "wind": "calm",
+      "face": "front",
+      "analytic": 0.0,
+      "gpu": 0.0,
+      "tolerance": 0.01
+    },
+    {
+      "family": "vertical",
+      "wind": "calm",
+      "face": "rear",
+      "analytic": 0.0,
+      "gpu": 0.0,
+      "tolerance": 0.01
+    },
+    {
+      "family": "tilted",
+      "wind": "calm",
+      "face": "front",
+      "analytic": 0.8660254037844387,
+      "gpu": 0.8651486455463729,
+      "tolerance": 0.01
+    },
+    {
+      "family": "tilted",
+      "wind": "calm",
+      "face": "rear",
+      "analytic": 0.0,
+      "gpu": 0.0,
+      "tolerance": 0.01
+    },
+    {
+      "family": "vertical",
+      "wind": "from_east",
+      "face": "front",
+      "analytic": 0.6,
+      "gpu": 0.5992811229174867,
+      "tolerance": 0.01
+    }
+  ],
+  "wash_gpu_numpy_max_abs_error_mg_m2": 1.3804680662587998e-05,
+  "convergence": [
+    {
+      "family": "vertical",
+      "wind": "from_east",
+      "case": "front, 10 mm, loose dominated, central coefficients",
+      "baseline_remaining_mg_m2": 36.4479104632423,
+      "large_sample_remaining_mg_m2": 36.214449250255086,
+      "absolute_difference_percentage_points": 0.23346121298721556,
+      "acceptance_percentage_points": 1.0
+    },
+    {
+      "family": "tilted",
+      "wind": "from_east",
+      "case": "front, 10 mm, loose dominated, central coefficients",
+      "baseline_remaining_mg_m2": 26.97773876256413,
+      "large_sample_remaining_mg_m2": 26.79156588662358,
+      "absolute_difference_percentage_points": 0.18617287594054943,
+      "acceptance_percentage_points": 1.0
+    }
+  ],
+  "invariants": [
+    "parcel conservation",
+    "water volume conservation",
+    "surface count conservation",
+    "dust mass conservation",
+    "zero-rain identity",
+    "zero-exposure identity",
+    "nonnegative bounded residual",
+    "monotonic washing with dose",
+    "greater adhesion retains more dust"
+  ],
+  "elapsed_seconds": 2.8755778999766335,
+  "field_validated": false,
+  "annual_energy_adjusted": false
+}
