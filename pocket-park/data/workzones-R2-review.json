@@ -1,0 +1,319 @@
+{
+  "version": "R2-ZONING-REVIEW",
+  "status": "PROPOSED_NOT_SCHEDULED",
+  "source": "R1-WBS2-KCS2024-PUMSEM2026",
+  "baseline_geometry_sha256": "deb18b276c57f975490eb85eeff0ed7a93315ae3076f12ed1a90ecdb6bde3295",
+  "old": [
+    {
+      "zone": "A",
+      "name": "서측 벤치·식재",
+      "area_m2": 500.0,
+      "share_percent": 25.0,
+      "trees": 4,
+      "shrubs": 138,
+      "benches": 3,
+      "pergolas": 0,
+      "lawn_m2": 286.00407161337944,
+      "paving_m2": 80.0,
+      "curb_m": 62.0,
+      "tree_species": {
+        "느티나무": 1,
+        "이팝나무": 2,
+        "산딸나무": 1
+      },
+      "shrub_species": {
+        "산철쭉": 70,
+        "영산홍": 26,
+        "조팝나무": 42
+      },
+      "tree_crew_hours": 2.3636363636363638,
+      "shrub_crew_hours": 14.72,
+      "turf_crew_hours": 15.253550486046903,
+      "intact_masses": [
+        "R02",
+        "Y04"
+      ]
+    },
+    {
+      "zone": "B",
+      "name": "북측·동측 식재",
+      "area_m2": 500.0,
+      "share_percent": 25.0,
+      "trees": 6,
+      "shrubs": 221,
+      "benches": 0,
+      "pergolas": 0,
+      "lawn_m2": 275.21423617506696,
+      "paving_m2": 50.0,
+      "curb_m": 50.0,
+      "tree_species": {
+        "느티나무": 1,
+        "이팝나무": 1,
+        "산딸나무": 1,
+        "주목": 3
+      },
+      "shrub_species": {
+        "영산홍": 45,
+        "조팝나무": 133,
+        "산철쭉": 43
+      },
+      "tree_crew_hours": 2.496969696969697,
+      "shrub_crew_hours": 23.573333333333334,
+      "turf_crew_hours": 14.678092596003571,
+      "intact_masses": []
+    },
+    {
+      "zone": "C",
+      "name": "남서 진입·식재",
+      "area_m2": 500.0,
+      "share_percent": 25.0,
+      "trees": 2,
+      "shrubs": 181,
+      "benches": 1,
+      "pergolas": 0,
+      "lawn_m2": 266.16142519091443,
+      "paving_m2": 96.0,
+      "curb_m": 70.0,
+      "tree_species": {
+        "느티나무": 1,
+        "이팝나무": 1
+      },
+      "shrub_species": {
+        "회양목": 81,
+        "영산홍": 53,
+        "산철쭉": 47
+      },
+      "tree_crew_hours": 1.3333333333333333,
+      "shrub_crew_hours": 15.850666666666667,
+      "turf_crew_hours": 14.195276010182102,
+      "intact_masses": [
+        "B01",
+        "Y01"
+      ]
+    },
+    {
+      "zone": "D",
+      "name": "동남 휴게·시설",
+      "area_m2": 500.0,
+      "share_percent": 25.0,
+      "trees": 4,
+      "shrubs": 137,
+      "benches": 2,
+      "pergolas": 1,
+      "lawn_m2": 274.6088946778756,
+      "paving_m2": 132.0,
+      "curb_m": 74.0,
+      "tree_species": {
+        "이팝나무": 3,
+        "산딸나무": 1
+      },
+      "shrub_species": {
+        "회양목": 100,
+        "영산홍": 35,
+        "조팝나무": 2
+      },
+      "tree_crew_hours": 2.3636363636363638,
+      "shrub_crew_hours": 10.346666666666666,
+      "turf_crew_hours": 14.645807716153364,
+      "intact_masses": [
+        "B02",
+        "Y02"
+      ]
+    }
+  ],
+  "proposed": [
+    {
+      "zone": "A",
+      "name": "서측 벤치·식재",
+      "area_m2": 467.61000000000007,
+      "share_percent": 23.380500000000005,
+      "trees": 2,
+      "shrubs": 63,
+      "benches": 3,
+      "pergolas": 0,
+      "lawn_m2": 307.452546942818,
+      "paving_m2": 88.0,
+      "curb_m": 70.0,
+      "tree_species": {
+        "이팝나무": 1,
+        "산딸나무": 1
+      },
+      "shrub_species": {
+        "산철쭉": 37,
+        "영산홍": 26
+      },
+      "tree_crew_hours": 1.0303030303030303,
+      "shrub_crew_hours": 6.720000000000001,
+      "turf_crew_hours": 16.397469170283628,
+      "intact_masses": [
+        "R02",
+        "Y04"
+      ]
+    },
+    {
+      "zone": "B",
+      "name": "북측·동측 식재",
+      "area_m2": 563.4399999999999,
+      "share_percent": 28.171999999999997,
+      "trees": 9,
+      "shrubs": 301,
+      "benches": 0,
+      "pergolas": 0,
+      "lawn_m2": 278.2924480972258,
+      "paving_m2": 44.0,
+      "curb_m": 44.0,
+      "tree_species": {
+        "느티나무": 2,
+        "이팝나무": 3,
+        "산딸나무": 1,
+        "주목": 3
+      },
+      "shrub_species": {
+        "영산홍": 48,
+        "조팝나무": 177,
+        "산철쭉": 76
+      },
+      "tree_crew_hours": 4.496969696969697,
+      "shrub_crew_hours": 32.10666666666667,
+      "turf_crew_hours": 14.842263898518711,
+      "intact_masses": [
+        "Y05",
+        "S01",
+        "R03",
+        "S02"
+      ]
+    },
+    {
+      "zone": "C",
+      "name": "남서 진입·식재",
+      "area_m2": 553.63,
+      "share_percent": 27.6815,
+      "trees": 2,
+      "shrubs": 181,
+      "benches": 1,
+      "pergolas": 0,
+      "lawn_m2": 289.0608099565393,
+      "paving_m2": 122.4,
+      "curb_m": 86.4,
+      "tree_species": {
+        "느티나무": 1,
+        "이팝나무": 1
+      },
+      "shrub_species": {
+        "회양목": 81,
+        "영산홍": 53,
+        "산철쭉": 47
+      },
+      "tree_crew_hours": 1.3333333333333333,
+      "shrub_crew_hours": 15.850666666666667,
+      "turf_crew_hours": 15.416576531015428,
+      "intact_masses": [
+        "B01",
+        "Y01",
+        "R01",
+        "Y03"
+      ]
+    },
+    {
+      "zone": "D",
+      "name": "동남 휴게·시설",
+      "area_m2": 415.31999999999994,
+      "share_percent": 20.766,
+      "trees": 3,
+      "shrubs": 132,
+      "benches": 2,
+      "pergolas": 1,
+      "lawn_m2": 227.18282266065327,
+      "paving_m2": 103.6,
+      "curb_m": 55.599999999999994,
+      "tree_species": {
+        "이팝나무": 2,
+        "산딸나무": 1
+      },
+      "shrub_species": {
+        "회양목": 100,
+        "영산홍": 32
+      },
+      "tree_crew_hours": 1.6969696969696968,
+      "shrub_crew_hours": 9.813333333333334,
+      "turf_crew_hours": 12.116417208568175,
+      "intact_masses": [
+        "B02",
+        "Y02"
+      ]
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "site_area_m2": 2000,
+    "zones_valid_connected_polygons": true,
+    "gap_area_m2": 0,
+    "overlap_area_m2": 0,
+    "old_split_masses": [
+      {
+        "mass_id": "R01",
+        "zones": [
+          "A",
+          "C"
+        ]
+      },
+      {
+        "mass_id": "Y03",
+        "zones": [
+          "A",
+          "C"
+        ]
+      },
+      {
+        "mass_id": "Y05",
+        "zones": [
+          "B",
+          "D"
+        ]
+      },
+      {
+        "mass_id": "S01",
+        "zones": [
+          "B",
+          "D"
+        ]
+      },
+      {
+        "mass_id": "R03",
+        "zones": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "mass_id": "S02",
+        "zones": [
+          "A",
+          "B"
+        ]
+      }
+    ],
+    "new_split_masses": [],
+    "intact_tree_base_disks": 16,
+    "intact_recessed_plazas": 5,
+    "plant_and_facility_objects_unchanged": 700,
+    "totals_conserved": true,
+    "ifc_tasks_rescheduled": false,
+    "rl_retrained": false,
+    "physical_access_validated": false
+  },
+  "principles": [
+    "Keep every shrub mass intact",
+    "Keep pergola and benches with their complete recessed plazas",
+    "Do not cut tree-base disks",
+    "Use lawn gaps and pavement work joints for boundaries",
+    "Keep connected drainage and whole-site grading as sitewide operations"
+  ],
+  "scope": "Administrative work-zone review only. Design objects, quantities and published R1 IFC task dates remain unchanged. No R2 construction-duration or RL-improvement claim.",
+  "next_model_changes": [
+    "Reclip surface quantities and reassign individual planting/facility objects",
+    "Represent each shrub bed and plaza as a sub-workface",
+    "Model shared entrance and crossing haul paths independently of zone labels",
+    "Update IFC/WBS quantities, dependencies and work envelopes; then retrain and evaluate"
+  ]
+}
