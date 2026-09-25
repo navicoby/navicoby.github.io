@@ -1,0 +1,26 @@
+{
+  "sequence_version": "R1-WBS2-PUMSEM2026",
+  "runs": [
+    {
+      "run_id": "PUMSEM2026_B0_STAGE_deterministic",
+      "status": "COMPLETED",
+      "elapsed_hours": 1344.5089111091281,
+      "audit_errors": []
+    },
+    {
+      "run_id": "PUMSEM2026_B1_ZONE_deterministic",
+      "status": "COMPLETED",
+      "elapsed_hours": 1225.667015524443,
+      "audit_errors": []
+    },
+    {
+      "run_id": "PUMSEM2026_B2_READY_deterministic",
+      "status": "COMPLETED",
+      "elapsed_hours": 1274.8937934621508,
+      "audit_errors": []
+    }
+  ],
+  "deterministic_only": true,
+  "new_monte_carlo_performed": false,
+  "schedule_status": "PARTIAL_NORM_CONDITIONAL_SCOPE_GAPS"
+}

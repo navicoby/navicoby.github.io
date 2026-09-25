@@ -1,0 +1,93 @@
+﻿wbs_code,parent_code,name,level,node_role,task_guid
+PK,,소공원 조성공사,0,SUMMARY,3ylE8grxvR1PCBEoNT3TUy
+PK.10,PK,표토·일반토공,1,SUMMARY,37lEz6LtzMpfFRfoX$mhe$
+PK.10.10,PK.10,표토 제거,2,SUMMARY,3arIVJBxjKB84ZXVwwTSyz
+PK.10.10.SITE,PK.10.10,표토 제거 / 전체,3,LEAF,0wh5VStxDOpRBQl4$02gXs
+PK.10.20,PK.10,일반토공·정지,2,SUMMARY,2ufu0b8lvH9uRja$yBjmxU
+PK.10.20.SITE,PK.10.20,일반토공·정지 / 전체,3,LEAF,2Qw50kcy1Qd8IPt09I0Com
+PK.20,PK,우배수공,1,SUMMARY,3WwPj0HQTQK9lJFGk2mqXD
+PK.20.05,PK.20,배수 기준고·관저고 측량,2,SUMMARY,0myFYqlODRfRcnD7Ddnxff
+PK.20.05.SITE,PK.20.05,배수 기준고·관저고 측량 / 전체,3,LEAF,3VwCg$IGbHHgVNMMSF_X$y
+PK.20.10,PK.20,관로·집수정 굴착,2,SUMMARY,0jE9xv1q9U880Po3kMkAx5
+PK.20.10.A,PK.20.10,관로·집수정 굴착 / A구역,3,LEAF,1awomNFVnRZwldlF77MUPX
+PK.20.10.B,PK.20.10,관로·집수정 굴착 / B구역,3,LEAF,3VQFKE61PQGAfmUUqZompD
+PK.20.10.C,PK.20.10,관로·집수정 굴착 / C구역,3,LEAF,3nDxESg1nV2esLD9_Z00Ou
+PK.20.10.D,PK.20.10,관로·집수정 굴착 / D구역,3,LEAF,3OJwMFDGDPRRu_rQF61JFL
+PK.20.30,PK.20,집수정·우수관 연계 시공,2,SUMMARY,0c5J9w2V9Uye1s3nmqttZR
+PK.20.30.SITE,PK.20.30,집수정·우수관 연계 시공 / 전체,3,LEAF,1QNME35wzTeRhIdKsqH3PQ
+PK.20.40,PK.20,관망 전체 관저고·구배 검사,2,SUMMARY,2vYXPlHaLR0wsZ2lDKY$az
+PK.20.40.SITE,PK.20.40,관망 전체 관저고·구배 검사 / 전체,3,LEAF,3NBhirqOPNgO5G87SYJ2x7
+PK.20.50,PK.20,되메우기·다짐,2,SUMMARY,3ElHJIJRPLW8SO6V3ShThZ
+PK.20.50.A,PK.20.50,되메우기·다짐 / A구역,3,LEAF,3TE4OM_MnK6egz$zYtXsmN
+PK.20.50.B,PK.20.50,되메우기·다짐 / B구역,3,LEAF,13T0myAS9R8wqFPwu8ct82
+PK.20.50.C,PK.20.50,되메우기·다짐 / C구역,3,LEAF,1r0fUENpbL7O6nViXdNDBw
+PK.20.50.D,PK.20.50,되메우기·다짐 / D구역,3,LEAF,2RyHpbymTUXgigqCmoLPK4
+PK.30,PK,시설기초·경계석,1,SUMMARY,3QNkcIDHnQev68GscMYHxr
+PK.30.10,PK.30,휴게시설 기초,2,SUMMARY,2rQkDEcdDNfQ3uLtfdxDHj
+PK.30.10.A,PK.30.10,휴게시설 기초 / A구역,3,LEAF,1BmVQr1c5M_gfXjzhM7L$0
+PK.30.10.C,PK.30.10,휴게시설 기초 / C구역,3,LEAF,3MzvogOPfP49hPGElBmD2e
+PK.30.10.D,PK.30.10,휴게시설 기초 / D구역,3,LEAF,3eeK9C23XMD84XUyOI3f1f
+PK.30.20,PK.30,화강석 경계석 설치,2,SUMMARY,2FJnGqMUTTnvhijDAApPIo
+PK.30.20.A,PK.30.20,화강석 경계석 설치 / A구역,3,LEAF,3joyYSC8HKEPbgAZ4qajEA
+PK.30.20.B,PK.30.20,화강석 경계석 설치 / B구역,3,LEAF,3S9A7ncEzPFhZ7Ppmow_zB
+PK.30.20.C,PK.30.20,화강석 경계석 설치 / C구역,3,LEAF,0$9KHyMNTPFwSkfydDXBB$
+PK.30.20.D,PK.30.20,화강석 경계석 설치 / D구역,3,LEAF,0DGSQDY45Gceiff83hevpq
+PK.40,PK,포장공,1,SUMMARY,2sb7_PbjPIah74fmhxV4eh
+PK.40.10,PK.40,쇄석 포장기층,2,SUMMARY,0O$JvKOw5QvRnDnDkxlv3B
+PK.40.10.A,PK.40.10,쇄석 포장기층 / A구역,3,LEAF,0f3W6sURTVEen7o62Sslid
+PK.40.10.B,PK.40.10,쇄석 포장기층 / B구역,3,LEAF,0YMNSLFZLNwOb8tVCDs4aE
+PK.40.10.C,PK.40.10,쇄석 포장기층 / C구역,3,LEAF,28ZYQISCHUhR9PyPT7JVT2
+PK.40.10.D,PK.40.10,쇄석 포장기층 / D구역,3,LEAF,3v5$yVh5XHqRQZyLa758Ke
+PK.40.20,PK.40,포장 기층 검사,2,SUMMARY,38OdCR5NjOex0miVasiBXU
+PK.40.20.A,PK.40.20,포장 기층 검사 / A구역,3,LEAF,1tCdFKdqzKCBAYvGGCw_gZ
+PK.40.20.B,PK.40.20,포장 기층 검사 / B구역,3,LEAF,0wE8rrGgXG193rmP_zS3MK
+PK.40.20.C,PK.40.20,포장 기층 검사 / C구역,3,LEAF,3tcJijSsfR58MsDa6mzsFa
+PK.40.20.D,PK.40.20,포장 기층 검사 / D구역,3,LEAF,1mFe$AFOnLlP1bScivpQVV
+PK.40.30,PK.40,모래·콘크리트블록 포장,2,SUMMARY,1GM_14l4bSivZLEj2MQrTh
+PK.40.30.A,PK.40.30,모래·콘크리트블록 포장 / A구역,3,LEAF,3l7YMsKq9LKQ4fikZrT1Lj
+PK.40.30.B,PK.40.30,모래·콘크리트블록 포장 / B구역,3,LEAF,0DRinPDDjLLRxqR$W4uAZ_
+PK.40.30.C,PK.40.30,모래·콘크리트블록 포장 / C구역,3,LEAF,2ciU9Q1aXTmBj9GQHLSb_L
+PK.40.30.D,PK.40.30,모래·콘크리트블록 포장 / D구역,3,LEAF,3yndDAaojVGfVpR1$YFOQp
+PK.50,PK,식재공,1,SUMMARY,3bqnaxvKPQYx0p59qVGW_T
+PK.50.20,PK.50,식재기반 정비,2,SUMMARY,1hA7gVEyXITAo9ftPhifmJ
+PK.50.20.A,PK.50.20,식재기반 정비 / A구역,3,LEAF,3dyUbdsNrVCwHVzxa3$Rzk
+PK.50.20.B,PK.50.20,식재기반 정비 / B구역,3,LEAF,0hBqgI0_nK_8KlMb1sbLCd
+PK.50.20.C,PK.50.20,식재기반 정비 / C구역,3,LEAF,3phl_q9RzUouelbUOY22gM
+PK.50.20.D,PK.50.20,식재기반 정비 / D구역,3,LEAF,13wPMcmMfMEgX3OeQq2Yv5
+PK.50.30,PK.50,교목 식재(구덩이 포함),2,SUMMARY,1M542tUdDIGwloXdB1a2j5
+PK.50.30.A,PK.50.30,교목 식재(구덩이 포함) / A구역,3,LEAF,0So0jbh9rNau6qaei8hHvw
+PK.50.30.B,PK.50.30,교목 식재(구덩이 포함) / B구역,3,LEAF,24LdlA5grQvwnUaOYHVOox
+PK.50.30.C,PK.50.30,교목 식재(구덩이 포함) / C구역,3,LEAF,2fkikDmWfJ1vR$Sq8fBH35
+PK.50.30.D,PK.50.30,교목 식재(구덩이 포함) / D구역,3,LEAF,1EdgMDHArHZvmYZkI7HuMq
+PK.50.40,PK.50,관목 식재,2,SUMMARY,183Z4xGEHS5e1lj$v51Gml
+PK.50.40.A,PK.50.40,관목 식재 / A구역,3,LEAF,3z0rsh1xfHIhyJPLV9W5WU
+PK.50.40.B,PK.50.40,관목 식재 / B구역,3,LEAF,0C8tSAGf9OcwiEKQo3xru7
+PK.50.40.C,PK.50.40,관목 식재 / C구역,3,LEAF,2hEwCNlHLLfwqMtDdNdGi_
+PK.50.40.D,PK.50.40,관목 식재 / D구역,3,LEAF,2lNFjVF3XTvO7rdvjQNo6m
+PK.50.50,PK.50,평떼 잔디붙임,2,SUMMARY,1HGGrz$KvLFfNvj0xsX405
+PK.50.50.A,PK.50.50,평떼 잔디붙임 / A구역,3,LEAF,2vCwpNLMPUVeYPeZCgPZF8
+PK.50.50.B,PK.50.50,평떼 잔디붙임 / B구역,3,LEAF,2T1IF9gVHSD82oYe08_sRB
+PK.50.50.C,PK.50.50,평떼 잔디붙임 / C구역,3,LEAF,18Tkd5H2bNbfp2DnQiAhYt
+PK.50.50.D,PK.50.50,평떼 잔디붙임 / D구역,3,LEAF,1xqy6j7lDSUQrwc6EQSc0d
+PK.50.60,PK.50,수목 하부 멀칭,2,SUMMARY,18MwS$yPXLu9BOg75YzVKc
+PK.50.60.A,PK.50.60,수목 하부 멀칭 / A구역,3,LEAF,0qcn$1YPnK4RH8XJ8hOzYX
+PK.50.60.B,PK.50.60,수목 하부 멀칭 / B구역,3,LEAF,34hj5tkgTNLQ5jAjR8d_3I
+PK.50.60.C,PK.50.60,수목 하부 멀칭 / C구역,3,LEAF,18HPlXDF9SXuOM7vaDyxua
+PK.50.60.D,PK.50.60,수목 하부 멀칭 / D구역,3,LEAF,3jIwiso2zK08gyhvYvk2yk
+PK.60,PK,휴게시설공,1,SUMMARY,1t5f9YQlnUI8XhGsWc8h8W
+PK.60.10,PK.60,벤치 설치,2,SUMMARY,3SSy2o6MvUjhLOI4iZYJys
+PK.60.10.A,PK.60.10,벤치 설치 / A구역,3,LEAF,1JxWIS5BLTD9df1rvsFUAo
+PK.60.10.C,PK.60.10,벤치 설치 / C구역,3,LEAF,2ZZuVLGG5HL9UR2dcuTRnL
+PK.60.10.D,PK.60.10,벤치 설치 / D구역,3,LEAF,1cV9jjJRHIjuIqr2q2nErS
+PK.60.20,PK.60,퍼걸러 설치,2,SUMMARY,0KWZcJzT1U1BDeC5$D6WSE
+PK.60.20.D,PK.60.20,퍼걸러 설치 / D구역,3,LEAF,3Rvg5nVnXUWut1Q3eG$WzC
+PK.70,PK,복구·준공검사,1,SUMMARY,2say4MX7THaQboiWcA5Ey6
+PK.70.10,PK.70,구역 마무리 검사,2,SUMMARY,2t5XL$r$1Q2giDIMx4yFc7
+PK.70.10.A,PK.70.10,구역 마무리 검사 / A구역,3,LEAF,0QpginrLjSj9CDjtEXJ5e4
+PK.70.10.B,PK.70.10,구역 마무리 검사 / B구역,3,LEAF,3n7dHmu61RGOxSFzmYZMsK
+PK.70.10.C,PK.70.10,구역 마무리 검사 / C구역,3,LEAF,0TLh3R24LJzPazNU4Uoi5b
+PK.70.10.D,PK.70.10,구역 마무리 검사 / D구역,3,LEAF,164omsjYPJa9_Pi5RLjGJg
+PK.70.20,PK.70,임시동선 복구,2,SUMMARY,0kJeLWz91OJfKaNrrlgaG3
+PK.70.20.SITE,PK.70.20,임시동선 복구 / 전체,3,LEAF,0dt$1QUmrUhvcqPNX1gO8o
+PK.70.30,PK.70,준공검사,2,SUMMARY,1xWf2CpczRAgv_v5CVEJtQ
+PK.70.30.SITE,PK.70.30,준공검사 / 전체,3,LEAF,3be2cWMYLN3BQh0uKZC07h

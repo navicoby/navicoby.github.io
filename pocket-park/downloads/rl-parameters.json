@@ -1,0 +1,259 @@
+{
+  "version": "RL-PARAM1",
+  "source_model": "R1-WBS2-KCS2024-PUMSEM2026",
+  "status": "EXPERIMENTAL_ASSUMPTIONS_NOT_FIELD_VALIDATED",
+  "workday_hours": 8,
+  "design_fixed": true,
+  "cost_estimation": false,
+  "parameters": [
+    {
+      "key": "excavators",
+      "label": "굴삭기 동시 투입",
+      "default": 1,
+      "values": [
+        1,
+        2
+      ],
+      "unit": "대",
+      "rule": "장비 1대당 동시 작업 1건. 장비 규격별 진입·회전반경과 2대의 공간 적합성은 미검증."
+    },
+    {
+      "key": "earth_teams",
+      "label": "토공 작업반",
+      "default": 1,
+      "values": [
+        1,
+        2
+      ],
+      "unit": "개 반",
+      "rule": "작업반 단위 자원. 현재 토공반의 직종별 인원은 미확정이므로 총 인원에 합산하지 않음."
+    },
+    {
+      "key": "landscape_teams",
+      "label": "식재·시설 작업반",
+      "default": 1,
+      "values": [
+        1,
+        2
+      ],
+      "unit": "개 반",
+      "rule": "교목·관목·토양·시설 작업의 동시 착수 상한. 직종별 공유 인원과 장비도 충족해야 함."
+    },
+    {
+      "key": "paving_teams",
+      "label": "포장 작업반",
+      "default": 1,
+      "values": [
+        1,
+        2
+      ],
+      "unit": "개 반",
+      "rule": "경계석·기층·블록포장에 배정. 포설작업 기준 포장공3+특별인부2+보통인부2 및 장비 필요."
+    },
+    {
+      "key": "turf_gangs",
+      "label": "평떼 작업조",
+      "default": 1,
+      "values": [
+        1,
+        2,
+        3
+      ],
+      "unit": "개 조",
+      "rule": "1개 조=조경공1+보통인부4. 전체 보유 작업조이며 각 구역에 1개 조씩 배정; 같은 구역 작업시간을 자동으로 나누지 않음."
+    },
+    {
+      "key": "landscapers",
+      "label": "조경공 공유 인원",
+      "default": 3,
+      "values": [
+        3,
+        6
+      ],
+      "unit": "명",
+      "rule": "교목·관목 1개 반은 조경공3+보통인부1. 평떼와 같은 인력 풀을 공유."
+    },
+    {
+      "key": "general_workers",
+      "label": "보통인부 공유 인원",
+      "default": 4,
+      "values": [
+        4,
+        8,
+        12
+      ],
+      "unit": "명",
+      "rule": "식재·포장·평떼에 중복 배정 금지. 평떼 3개 조에는 조경공3+보통인부12 필요."
+    },
+    {
+      "key": "special_workers",
+      "label": "특별인부 공유 인원",
+      "default": 3,
+      "values": [
+        3,
+        6
+      ],
+      "unit": "명",
+      "rule": "경계석·포장 작업 공유."
+    },
+    {
+      "key": "pavers",
+      "label": "포장공 공유 인원",
+      "default": 3,
+      "values": [
+        3,
+        6
+      ],
+      "unit": "명",
+      "rule": "1개 블록포장반당 포장공3 필요."
+    },
+    {
+      "key": "trucks",
+      "label": "운반차량 동시 투입",
+      "default": 1,
+      "values": [
+        1,
+        2
+      ],
+      "unit": "대",
+      "rule": "반입구는 1개 슬롯으로 유지. 실제 차량 회차·대기는 단순화."
+    },
+    {
+      "key": "compactors",
+      "label": "다짐장비 동시 투입",
+      "default": 1,
+      "values": [
+        1,
+        2
+      ],
+      "unit": "대",
+      "rule": "블록포장 자원 묶음에 포함."
+    },
+    {
+      "key": "workfronts",
+      "label": "최대 동시 작업",
+      "default": 4,
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unit": "건",
+      "rule": "작업구역별 1건. 전체 부지정지·관저고 조정 작업은 A~D 모두 점유하므로 병행 불가."
+    }
+  ],
+  "fixed_constraints": {
+    "entry_slots": 1,
+    "inspectors": 1,
+    "same_zone_parallel": false,
+    "site_grading_whole_site": true,
+    "drainage_level_control_whole_system": true,
+    "sod_module_mm": [
+      300,
+      300
+    ],
+    "sod_reference_m2_per_8h_per_gang": 150
+  },
+  "baseline_caveat": "현재 공개 원본은 경계석이 4구역으로 나뉜 62개 작업 모델. 경계석 일괄 시공 59개 작업안은 별도 검토본이며 본 실험에 혼합하지 않음.",
+  "objective": "동일 자원 조건에서 공기 단축을 학습하고, 자원 증감 효과는 별도 비교. 비용단가 미검증으로 경제적 최적이라고 판정하지 않음.",
+  "resource_scaling": "작업반 증가=다른 구역의 작업을 병행할 수 있는 상한 증가. 생산성 자동 배수 없음.",
+  "efficiency_sensitivity": {
+    "gang_efficiency": [
+      1.0,
+      0.85
+    ],
+    "implemented_in_first_pilot": false
+  },
+  "seeds": {
+    "train": [
+      31000,
+      31001,
+      31002,
+      31003,
+      31004,
+      31005,
+      31006,
+      31007,
+      31008,
+      31009,
+      31010,
+      31011,
+      31012,
+      31013,
+      31014,
+      31015,
+      31016,
+      31017,
+      31018,
+      31019,
+      31020,
+      31021,
+      31022,
+      31023,
+      31024,
+      31025,
+      31026,
+      31027,
+      31028,
+      31029,
+      31030,
+      31031
+    ],
+    "validation": [
+      41000,
+      41001,
+      41002,
+      41003,
+      41004,
+      41005,
+      41006,
+      41007
+    ],
+    "test": [
+      51000,
+      51001,
+      51002,
+      51003,
+      51004,
+      51005,
+      51006,
+      51007,
+      51008,
+      51009,
+      51010,
+      51011,
+      51012,
+      51013,
+      51014,
+      51015,
+      51016,
+      51017,
+      51018,
+      51019,
+      51020,
+      51021,
+      51022,
+      51023
+    ],
+    "policy_initialization": [
+      11,
+      22,
+      33
+    ]
+  },
+  "algorithm": {
+    "name": "Masked linear REINFORCE",
+    "epochs": 24,
+    "episodes_per_epoch": 8,
+    "learning_rate": 0.025,
+    "discount": 1.0,
+    "checkpoint_epochs": [
+      8,
+      16,
+      24
+    ]
+  },
+  "campaign_run_cap": 2000,
+  "total_project_cap": 10000
+}

@@ -1,0 +1,210 @@
+[
+  {
+    "code": "KCS 34 10 10",
+    "display_code": "KCS 34.10.10",
+    "title": "조경공사 일반",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5511,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2010%2010%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2010%2010",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 10 10",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 20 10",
+    "display_code": "KCS 34.20.10",
+    "title": "조경 토공사",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5512,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2020%2010%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2020%2010",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 20 10",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 30 10",
+    "display_code": "KCS 34.30.10",
+    "title": "식재기반 조성",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5513,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2030%2010%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2030%2010",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 30 10",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 40 05",
+    "display_code": "KCS 34.40.05",
+    "title": "식재공통",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5514,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2040%2005%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2040%2005",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 40 05",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 40 10",
+    "display_code": "KCS 34.40.10",
+    "title": "일반식재기반 식재",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5515,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2040%2010%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2040%2010",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 40 10",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 40 25",
+    "display_code": "KCS 34.40.25",
+    "title": "잔디식재",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5518,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2040%2025%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2040%2025",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 40 25",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 50 05",
+    "display_code": "KCS 34.50.05",
+    "title": "조경시설물공통",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5519,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2050%2005%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2050%2005",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 50 05",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 50 15",
+    "display_code": "KCS 34.50.15",
+    "title": "현장제작설치 시설",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5521,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2050%2015%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2050%2015",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 50 15",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 50 20",
+    "display_code": "KCS 34.50.20",
+    "title": "옥외시설물",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5719,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2050%2020%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2050%2020",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 50 20",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 50 65",
+    "display_code": "KCS 34.50.65",
+    "title": "조경 급․배수 및 관수",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5527,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2050%2065%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2050%2065",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 50 65",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 60 05",
+    "display_code": "KCS 34.60.05",
+    "title": "조경포장공통",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5528,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2060%2005%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2060%2005",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 60 05",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 60 15",
+    "display_code": "KCS 34.60.15",
+    "title": "친환경블록포장",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5530,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2060%2015%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2060%2015",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 60 15",
+      "ymd": "2024-12-10"
+    }
+  },
+  {
+    "code": "KCS 34 60 25",
+    "display_code": "KCS 34.60.25",
+    "title": "조경포장경계",
+    "edition": "2024",
+    "revision_date": "2024-12-10",
+    "checked_on": "2026-09-25",
+    "doc_info_seq": 5532,
+    "url": "https://www.kcsc.re.kr/standardCode/viewer/KCS%2034%2060%2025%3A2024-12-10",
+    "metadata_url": "https://kcsc.re.kr/api/api/v1/tn_document_infos/by-kcsc_cd?kcsc_cd=KCS%2034%2060%2025",
+    "body_api": "https://kcsc.re.kr/api/standardCode/getCodeDetailInfo.do",
+    "body_query": {
+      "docCode": "KCS 34 60 25",
+      "ymd": "2024-12-10"
+    }
+  }
+]
