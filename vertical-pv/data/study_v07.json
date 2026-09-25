@@ -1,0 +1,26 @@
+{
+  "revision": "v0.7",
+  "clearance_m": 0.3,
+  "clear_gap_m": 2.0,
+  "height_candidates_m": [
+    0.3,
+    0.5,
+    0.8
+  ],
+  "weeds_present": false,
+  "snow_present": false,
+  "albedos": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "representative_albedo": 0.2,
+  "years": 10,
+  "module_width_m": 1.1,
+  "module_length_m": 2.2,
+  "module_kwp": 0.5,
+  "geometry_scope": "Same lower-edge height and clear aisle for both systems. Tilted monofacial 30 degrees south; vertical bifacial 90 degrees east/west. No weeds or snow.",
+  "representative_height_status": "Research scenario, not a legal minimum or validated optimum",
+  "coupled_scopes": "New geometry -> pvlib annual energy and Warp dry/rain -> no-cleaning 10-year optical loss. ESS uses clean hourly energy plus equipment aging, not uncertain soiling."
+}

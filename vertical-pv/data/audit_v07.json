@@ -1,0 +1,333 @@
+{
+  "status": "PASS",
+  "revision": "v0.7",
+  "study": {
+    "revision": "v0.7",
+    "clearance_m": 0.3,
+    "clear_gap_m": 2.0,
+    "height_candidates_m": [
+      0.3,
+      0.5,
+      0.8
+    ],
+    "weeds_present": false,
+    "snow_present": false,
+    "albedos": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "representative_albedo": 0.2,
+    "years": 10,
+    "module_width_m": 1.1,
+    "module_length_m": 2.2,
+    "module_kwp": 0.5,
+    "geometry_scope": "Same lower-edge height and clear aisle for both systems. Tilted monofacial 30 degrees south; vertical bifacial 90 degrees east/west. No weeds or snow.",
+    "representative_height_status": "Research scenario, not a legal minimum or validated optimum",
+    "coupled_scopes": "New geometry -> pvlib annual energy and Warp dry/rain -> no-cleaning 10-year optical loss. ESS uses clean hourly energy plus equipment aging, not uncertain soiling."
+  },
+  "site": {
+    "vertical_modules": 1520,
+    "tilted_modules": 1280,
+    "albedo_020_vertical_vs_tilted_percent": -15.041622812611855,
+    "albedo_060_vertical_vs_tilted_percent": 2.3812769914742793
+  },
+  "checks": [
+    "all main sections regenerated",
+    "figure geometry matches representative case",
+    "baseline and one-hectare yields match",
+    "Warp module counts match site layout",
+    "long-term clean baseline matches same geometry",
+    "ESS clean inputs regenerated",
+    "old representative conclusions removed",
+    "download lineage documented"
+  ],
+  "numerical": {
+    "site": {
+      "status": "PASS",
+      "scenarios": 52,
+      "height_scenarios": 12,
+      "geometry_bounds": "PASS",
+      "area_energy_identity": "PASS",
+      "baseline_clear_gap_2m_consistency": "PASS",
+      "site_conditions": {
+        "revision": "v0.7",
+        "clearance_m": 0.3,
+        "clear_gap_m": 2.0,
+        "height_candidates_m": [
+          0.3,
+          0.5,
+          0.8
+        ],
+        "weeds_present": false,
+        "snow_present": false,
+        "albedos": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "representative_albedo": 0.2,
+        "years": 10,
+        "module_width_m": 1.1,
+        "module_length_m": 2.2,
+        "module_kwp": 0.5,
+        "geometry_scope": "Same lower-edge height and clear aisle for both systems. Tilted monofacial 30 degrees south; vertical bifacial 90 degrees east/west. No weeds or snow.",
+        "representative_height_status": "Research scenario, not a legal minimum or validated optimum",
+        "coupled_scopes": "New geometry -> pvlib annual energy and Warp dry/rain -> no-cleaning 10-year optical loss. ESS uses clean hourly energy plus equipment aging, not uncertain soiling."
+      },
+      "field_validated": false
+    },
+    "longterm": {
+      "status": "PASS",
+      "years": 10,
+      "hourly_steps_per_case": 87600,
+      "scenarios": 36,
+      "field_validated": false,
+      "first_year_independent_recurrence_max_abs_kwh_kwp": 4.774847184307873e-12,
+      "mass_balance_max_abs_g_m2": 3.268496584496461e-13,
+      "hourly_recurrence_crosscheck": true,
+      "year_boundary_mass_not_reset": true,
+      "identical_tmy_repeated": true,
+      "module_aging_included": false,
+      "out_of_domain_power_is_NA": true,
+      "partial_energy_totals_not_reported": true,
+      "monofacial_rear_does_not_block_power": true,
+      "central_first_out_of_domain_year": {
+        "tilted_no_rain": 2.1246575342465754,
+        "tilted_periodic_rain": null,
+        "vertical_no_rain": 2.5932648401826484,
+        "vertical_periodic_rain": null
+      },
+      "maximum_scenario_mass_g_m2": 93.29304054751985,
+      "python_version": "3.11.9",
+      "input_sha256": {
+        "baseline.csv": "b2fd110354ba5f3df79f2945b7535ae4d25f3b468cf73c0dc8b26a8585e037e0",
+        "rain_exposure.csv": "f1a7a3e1861fd65fc50fd4f1738980dd9c26e8678ec30a78d77ac3647df20202",
+        "warp_soiling_results.csv": "8194b107ca07c4d4fe098e5ef044abc43a5b5228ef76c013b00b6555a61d0ff8",
+        "weather.csv.gz": "1810bfcbf4b99a5087b0f756b95d40ee0b174cd4d8808209737818534087b72f"
+      }
+    },
+    "rain": {
+      "status": "PASS",
+      "warp_version": "1.17.0",
+      "device_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+      "rain_ray_runs": 30,
+      "primary_water_parcels": 15000000,
+      "additional_convergence_parcels": 4000000,
+      "result_rows": 2520,
+      "independent_ray_checks": [
+        {
+          "family": "vertical",
+          "wind": "calm",
+          "rays": 256,
+          "counts": [
+            0,
+            0,
+            256,
+            0
+          ]
+        },
+        {
+          "family": "vertical",
+          "wind": "from_east",
+          "rays": 256,
+          "counts": [
+            50,
+            0,
+            194,
+            12
+          ]
+        },
+        {
+          "family": "vertical",
+          "wind": "from_west",
+          "rays": 256,
+          "counts": [
+            0,
+            55,
+            197,
+            4
+          ]
+        },
+        {
+          "family": "vertical",
+          "wind": "from_north",
+          "rays": 256,
+          "counts": [
+            0,
+            0,
+            245,
+            11
+          ]
+        },
+        {
+          "family": "vertical",
+          "wind": "from_south",
+          "rays": 256,
+          "counts": [
+            0,
+            0,
+            251,
+            5
+          ]
+        },
+        {
+          "family": "tilted",
+          "wind": "calm",
+          "rays": 256,
+          "counts": [
+            56,
+            0,
+            200,
+            0
+          ]
+        },
+        {
+          "family": "tilted",
+          "wind": "from_east",
+          "rays": 256,
+          "counts": [
+            57,
+            0,
+            187,
+            12
+          ]
+        },
+        {
+          "family": "tilted",
+          "wind": "from_west",
+          "rays": 256,
+          "counts": [
+            54,
+            0,
+            198,
+            4
+          ]
+        },
+        {
+          "family": "tilted",
+          "wind": "from_north",
+          "rays": 256,
+          "counts": [
+            41,
+            0,
+            204,
+            11
+          ]
+        },
+        {
+          "family": "tilted",
+          "wind": "from_south",
+          "rays": 256,
+          "counts": [
+            86,
+            0,
+            165,
+            5
+          ]
+        }
+      ],
+      "analytic_exposure_checks": [
+        {
+          "family": "vertical",
+          "wind": "calm",
+          "face": "front",
+          "analytic": 0.0,
+          "gpu": 0.0,
+          "tolerance": 0.01
+        },
+        {
+          "family": "vertical",
+          "wind": "calm",
+          "face": "rear",
+          "analytic": 0.0,
+          "gpu": 0.0,
+          "tolerance": 0.01
+        },
+        {
+          "family": "tilted",
+          "wind": "calm",
+          "face": "front",
+          "analytic": 0.8660254037844387,
+          "gpu": 0.8673381542699725,
+          "tolerance": 0.01
+        },
+        {
+          "family": "tilted",
+          "wind": "calm",
+          "face": "rear",
+          "analytic": 0.0,
+          "gpu": 0.0,
+          "tolerance": 0.01
+        },
+        {
+          "family": "vertical",
+          "wind": "from_east",
+          "face": "front",
+          "analytic": 0.6,
+          "gpu": 0.6003083079599826,
+          "tolerance": 0.01
+        }
+      ],
+      "wash_gpu_numpy_max_abs_error_mg_m2": 1.3804680662587998e-05,
+      "convergence": [
+        {
+          "family": "vertical",
+          "wind": "from_east",
+          "case": "front, 10 mm, loose dominated, central coefficients",
+          "baseline_remaining_mg_m2": 36.405396121426634,
+          "large_sample_remaining_mg_m2": 36.21268850082095,
+          "absolute_difference_percentage_points": 0.19270762060568103,
+          "acceptance_percentage_points": 1.0
+        },
+        {
+          "family": "tilted",
+          "wind": "from_east",
+          "case": "front, 10 mm, loose dominated, central coefficients",
+          "baseline_remaining_mg_m2": 26.916784602900346,
+          "large_sample_remaining_mg_m2": 26.802899088694268,
+          "absolute_difference_percentage_points": 0.1138855142060784,
+          "acceptance_percentage_points": 1.0
+        }
+      ],
+      "invariants": [
+        "parcel conservation",
+        "water volume conservation",
+        "surface count conservation",
+        "dust mass conservation",
+        "zero-rain identity",
+        "zero-exposure identity",
+        "nonnegative bounded residual",
+        "monotonic washing with dose",
+        "greater adhesion retains more dust"
+      ],
+      "elapsed_seconds": 1.5099404999054968,
+      "field_validated": false,
+      "annual_energy_adjusted": false
+    },
+    "ess": {
+      "status": "SCREENING_BALANCES_PASS",
+      "designs": 759,
+      "design_years": 7590,
+      "financial_scenarios": 182160,
+      "selected_rows": 5760,
+      "max_hourly_energy_balance_error_kwh": 1.5987211554602254e-14,
+      "config_sha256": "80801409764cae59eb92d36584e8dae9630c4550400c218a3bc33cd76eba5d2b",
+      "source_run": "v0.7_clearance_0.3m_clear_gap_2m",
+      "dispatch_optimality_proven": false,
+      "field_validated": false,
+      "demand_charge_savings_included": false,
+      "actual_tariff_or_cost_quote": false
+    },
+    "ess_independent": {
+      "status": "SAVED_RESULTS_AUDIT_PASS",
+      "user_energy_balance_max_kwh": 5.318725015968084e-09,
+      "ten_year_system_energy_balance_max_kwh": 5.3187250159680843e-08,
+      "candidate_selections_checked": 5760,
+      "maximum_cost_ranking_error_krw": 0.0,
+      "scope": "Energy balance, bookkeeping and finite candidate selection; not measured validation or optimal dispatch verification."
+    }
+  }
+}

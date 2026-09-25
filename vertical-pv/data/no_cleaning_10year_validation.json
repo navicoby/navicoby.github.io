@@ -4,8 +4,8 @@
   "hourly_steps_per_case": 87600,
   "scenarios": 36,
   "field_validated": false,
-  "first_year_max_abs_kwh_kwp": 2.7284841053187847e-12,
-  "mass_balance_max_abs_g_m2": 1.8474111129762605e-13,
+  "first_year_independent_recurrence_max_abs_kwh_kwp": 4.774847184307873e-12,
+  "mass_balance_max_abs_g_m2": 3.268496584496461e-13,
   "hourly_recurrence_crosscheck": true,
   "year_boundary_mass_not_reset": true,
   "identical_tmy_repeated": true,
@@ -14,18 +14,17 @@
   "partial_energy_totals_not_reported": true,
   "monofacial_rear_does_not_block_power": true,
   "central_first_out_of_domain_year": {
-    "tilted_no_rain": 2.773059360730594,
+    "tilted_no_rain": 2.1246575342465754,
     "tilted_periodic_rain": null,
-    "vertical_no_rain": 4.288013698630137,
+    "vertical_no_rain": 2.5932648401826484,
     "vertical_periodic_rain": null
   },
-  "maximum_scenario_mass_g_m2": 71.50248398760239,
+  "maximum_scenario_mass_g_m2": 93.29304054751985,
   "python_version": "3.11.9",
   "input_sha256": {
-    "baseline.csv": "d16334882f06b52f91c19cd2cc4551861e4839c6e5f3c56796b63df0bc9d3487",
-    "first_year_reference.csv": "7b88a35f68fedc700375e5a0f6c6e35d5dbbca50ce6cf22f1f0898beb8feff75",
-    "rain_exposure.csv": "cfe24f8ae3da5a5e0f117d06ac04697284c8867cb48494b6c20ee99dc38bf019",
-    "warp_soiling_results.csv": "2e586a601895dc9ad4772cb1c68a394fe8cf7d5dede9896c29e54ea9b468c19d",
+    "baseline.csv": "b2fd110354ba5f3df79f2945b7535ae4d25f3b468cf73c0dc8b26a8585e037e0",
+    "rain_exposure.csv": "f1a7a3e1861fd65fc50fd4f1738980dd9c26e8678ec30a78d77ac3647df20202",
+    "warp_soiling_results.csv": "8194b107ca07c4d4fe098e5ef044abc43a5b5228ef76c013b00b6555a61d0ff8",
     "weather.csv.gz": "1810bfcbf4b99a5087b0f756b95d40ee0b174cd4d8808209737818534087b72f"
   }
 }
