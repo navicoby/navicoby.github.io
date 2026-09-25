@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "field_validated": false,
+  "scenarios": 36,
+  "hourly_steps": 8760,
+  "tilted_baseline_abs_kwh_kwp": 0.0,
+  "vertical_baseline_abs_kwh_kwp": 0.0,
+  "mass_balance_max_abs_g_m2": 6.732392421326949e-13,
+  "maximum_mass_g_m2_all_scenarios": 7.2402483987609125,
+  "adopted_hsu_domain_g_m2": [
+    0,
+    10
+  ],
+  "zero_dust_equals_clean": true,
+  "no_rain_mass_monotonic": true,
+  "persistent_two_pool_rain_check": true,
+  "monofacial_rear_has_zero_power_effect": true,
+  "ac_bounded_by_clean_reference": true,
+  "rain_does_not_reduce_yield": true,
+  "implementation": "CPU extension of archived Warp results; no new Warp run",
+  "versions": {
+    "python": "3.11.9",
+    "pvlib": "0.15.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6"
+  },
+  "input_sha256": {
+    "baseline.csv": "d16334882f06b52f91c19cd2cc4551861e4839c6e5f3c56796b63df0bc9d3487",
+    "rain_exposure.csv": "cfe24f8ae3da5a5e0f117d06ac04697284c8867cb48494b6c20ee99dc38bf019",
+    "warp_soiling_results.csv": "2e586a601895dc9ad4772cb1c68a394fe8cf7d5dede9896c29e54ea9b468c19d",
+    "weather.csv.gz": "1810bfcbf4b99a5087b0f756b95d40ee0b174cd4d8808209737818534087b72f"
+  }
+}

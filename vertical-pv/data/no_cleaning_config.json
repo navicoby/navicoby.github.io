@@ -1,0 +1,37 @@
+{
+  "status": "ILLUSTRATIVE_NO_MANUAL_CLEANING_NOT_FIELD_VALIDATED",
+  "albedo": 0.2,
+  "concentration_ug_m3": 10,
+  "wind_weights": {"from_east": 0.25, "from_west": 0.25, "from_north": 0.25, "from_south": 0.25},
+  "initial_dust_g_m2_per_face": 0.1,
+  "bound_fraction": 0.7,
+  "loose_washoff_per_mm": 0.25,
+  "bound_washoff_per_mm": 0.015,
+  "rain_interval_days": 14,
+  "rain_event_mm": 10,
+  "deposition_multipliers": [0.5, 1, 2],
+  "wash_multipliers": [0.5, 1, 2],
+  "cases": {
+    "tilted": {"module_type": "monofacial", "tilt_deg": 30, "azimuth_deg": 180, "bifaciality": 0, "pitch_m": 1.9526279441628827, "baseline_case": "M01"},
+    "vertical": {"module_type": "bifacial", "tilt_deg": 90, "azimuth_deg": 90, "bifaciality": 0.8, "pitch_m": 1.5, "baseline_case": "B05"}
+  },
+  "assumptions": [
+    "365 days, no manual cleaning. Initial residual dust is assumed, not measured after a specific rain event.",
+    "Archived dry Warp runs: 100 ug/m3, 1 m/s wind, 0.01 m/s settling, capture probability 1, one hour. Scale mass linearly to 10 ug/m3 and repeat uniform hourly deposition.",
+    "Four winds have equal weights in dry deposition and rain exposure. These are not measured wind frequencies.",
+    "Use seed-mean then wind-mean fluxes and exposure; assume spatially uniform mass on each family/face. Unlike the single rain-event experiment, do not resolve individual modules.",
+    "Deposit first, then rain wash, then evaluate power at the end-of-hour dust state. Retain separate loose and bound pools across all events.",
+    "The periodic rain case has 26 synthetic 10 mm events on days 14,28,...364 at 00:00 KST. Rain sequence is independent of the irradiance weather file, which contains no rainfall. This is a controlled scenario, not Seoul rain history.",
+    "Use only the HSU mass-to-transmission relation with g/m2 units; do not use its complete-cleaning reset or gravitational cos(tilt) deposition model. Treat application to both faces and dust composition as uncalibrated.",
+    "Freeze clean-reference Faiman module temperature for both clean and dirty power, isolating optical loss. Monofacial temperature uses front irradiance only, bifacial uses front+rear, matching manuscript v0.5. Do not solve thermal feedback or electrical mismatch.",
+    "Treat common 8% DC loss as fixed non-soiling loss in this extension; add explicit optical soiling separately. Inverter efficiency 96%, DC/AC ratio 1.2.",
+    "Same 1m clear gap, assumed 0.5m minimum vertical strip, 1.1m slant length, 0.8m clearance; report AC per kWp rather than unequal site capacities.",
+    "Existing TMY midpoint interpretation is preserved; documented irradiance timing limitations remain.",
+    "Sensitivity multipliers are scenario ranges, not probabilities or confidence intervals. No ESS or cost recalculation is included."
+  ],
+  "references": [
+    "https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.soiling.hsu.html",
+    "https://doi.org/10.1109/JPHOTOV.2019.2919628",
+    "https://samrepo.nlr.gov/help/pv_losses.html"
+  ]
+}
