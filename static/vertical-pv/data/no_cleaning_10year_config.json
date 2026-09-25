@@ -1,0 +1,82 @@
+{
+  "status": "ILLUSTRATIVE_NO_MANUAL_CLEANING_NOT_FIELD_VALIDATED",
+  "albedo": 0.2,
+  "concentration_ug_m3": 10,
+  "wind_weights": {
+    "from_east": 0.25,
+    "from_west": 0.25,
+    "from_north": 0.25,
+    "from_south": 0.25
+  },
+  "initial_dust_g_m2_per_face": 0.1,
+  "bound_fraction": 0.7,
+  "loose_washoff_per_mm": 0.25,
+  "bound_washoff_per_mm": 0.015,
+  "rain_interval_days": 14,
+  "rain_event_mm": 10,
+  "deposition_multipliers": [
+    0.5,
+    1,
+    2
+  ],
+  "wash_multipliers": [
+    0.5,
+    1,
+    2
+  ],
+  "cases": {
+    "tilted": {
+      "module_type": "monofacial",
+      "tilt_deg": 30,
+      "azimuth_deg": 180,
+      "bifaciality": 0,
+      "pitch_m": 1.9526279441628827,
+      "baseline_case": "M01"
+    },
+    "vertical": {
+      "module_type": "bifacial",
+      "tilt_deg": 90,
+      "azimuth_deg": 90,
+      "bifaciality": 0.8,
+      "pitch_m": 1.5,
+      "baseline_case": "B05"
+    }
+  },
+  "assumptions": [
+    "Archived dry Warp runs: 100 ug/m3, 1 m/s wind, 0.01 m/s settling, capture probability 1, one hour. Scale mass linearly to 10 ug/m3 and repeat uniform hourly deposition.",
+    "Four winds have equal weights in dry deposition and rain exposure. These are not measured wind frequencies.",
+    "Use seed-mean then wind-mean fluxes and exposure; assume spatially uniform mass on each family/face. Unlike the single rain-event experiment, do not resolve individual modules.",
+    "Deposit first, then rain wash, then evaluate power at the end-of-hour dust state. Retain separate loose and bound pools across all events.",
+    "Use only the HSU mass-to-transmission relation with g/m2 units; do not use its complete-cleaning reset or gravitational cos(tilt) deposition model. Treat application to both faces and dust composition as uncalibrated.",
+    "Freeze clean-reference Faiman module temperature for both clean and dirty power, isolating optical loss. Monofacial temperature uses front irradiance only, bifacial uses front+rear, matching manuscript v0.5. Do not solve thermal feedback or electrical mismatch.",
+    "Treat common 8% DC loss as fixed non-soiling loss in this extension; add explicit optical soiling separately. Inverter efficiency 96%, DC/AC ratio 1.2.",
+    "Same 1m clear gap, assumed 0.5m minimum vertical strip, 1.1m slant length, 0.8m clearance; report AC per kWp rather than unequal site capacities.",
+    "Existing TMY midpoint interpretation is preserved; documented irradiance timing limitations remain.",
+    "Sensitivity multipliers are scenario ranges, not probabilities or confidence intervals. No ESS or cost recalculation is included.",
+    "10 repeated non-leap 365-day TMY years; no observed 10-year weather record or climate forecast. Dust persists across year boundaries.",
+    "No manual cleaning and no equipment aging. Optical dust loss is isolated; annual degradation is fixed at zero.",
+    "Rain every 14 days across all 3650 days, at the beginning of each designated rain day. No year-boundary reset of rain phase; 260 events in 10 years.",
+    "Report 1-, 5- and 10-year checkpoints. The existing first-year result is retained as a regression reference.",
+    "Daily and monthly electricity totals are NA if any hour in the interval is outside the adopted optical mass range. Mass estimates continue but remain scenario-dependent.",
+    "No weeds and no snow, as specified by the user; no vegetation shading, snow cover, snowmelt cleaning or snow albedo adjustment."
+  ],
+  "references": [
+    "https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.soiling.hsu.html",
+    "https://doi.org/10.1109/JPHOTOV.2019.2919628",
+    "https://samrepo.nlr.gov/help/pv_losses.html"
+  ],
+  "simulation_years": 10,
+  "checkpoints_years": [
+    1,
+    5,
+    10
+  ],
+  "hours_per_simulation_year": 8760,
+  "module_degradation_per_year": 0,
+  "out_of_domain": "Do not evaluate HSU above 10 g/m2 on any electricity-producing face. Report NA rather than clip or extrapolate. Cumulative energy is NA if any included hour is invalid.",
+  "site_conditions": {
+    "weeds_present": false,
+    "snow_present": false,
+    "note": "User-specified boundary conditions: no weeds or snow. Existing calculations already omitted these effects."
+  }
+}

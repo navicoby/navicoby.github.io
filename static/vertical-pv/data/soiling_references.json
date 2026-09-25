@@ -1,0 +1,121 @@
+[
+  {
+    "key": "Coello2019",
+    "doi": "10.1109/JPHOTOV.2019.2919628",
+    "title": "Simple Model for Predicting Time Series Soiling of Photovoltaic Panels",
+    "authors": [
+      "Merissa Coello",
+      "Liza Boyle"
+    ],
+    "journal": "IEEE Journal of Photovoltaics",
+    "volume": "9",
+    "issue": "5",
+    "pages": "1382-1387",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          9
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1109/jphotov.2019.2919628"
+  },
+  {
+    "key": "Figgis2019",
+    "doi": "10.1016/j.solener.2019.10.062",
+    "title": "Effect of tilt angle on soiling in perpendicular wind",
+    "authors": [
+      "Benjamin Figgis",
+      "Dirk Goossens",
+      "Bing Guo",
+      "Klemens Ilse"
+    ],
+    "journal": "Solar Energy",
+    "volume": "194",
+    "issue": null,
+    "pages": "294-301",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          12
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1016/j.solener.2019.10.062"
+  },
+  {
+    "key": "Ilse2018",
+    "doi": "10.1016/j.solmat.2018.06.051",
+    "title": "Comprehensive analysis of soiling and cementation processes on PV modules in Qatar",
+    "authors": [
+      "Klemens K. Ilse",
+      "Benjamin W. Figgis",
+      "Martina Werner",
+      "Volker Naumann",
+      "Christian Hagendorf",
+      "Herbert Pöllmann",
+      "Jörg Bagdahn"
+    ],
+    "journal": "Solar Energy Materials and Solar Cells",
+    "volume": "186",
+    "issue": null,
+    "pages": "309-323",
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          11
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1016/j.solmat.2018.06.051"
+  },
+  {
+    "key": "Micheli2021",
+    "doi": "10.1016/j.solener.2021.08.081",
+    "title": "Photovoltaic cleaning optimization through the analysis of historical time series of environmental parameters",
+    "authors": [
+      "Leonardo Micheli",
+      "Eduardo F. Fernández",
+      "Florencia Almonacid"
+    ],
+    "journal": "Solar Energy",
+    "volume": "227",
+    "issue": null,
+    "pages": "645-654",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1016/j.solener.2021.08.081"
+  },
+  {
+    "key": "Boyle2015",
+    "doi": "10.1016/j.renene.2014.12.006",
+    "title": "Natural soiling of photovoltaic cover plates and the impact on transmission",
+    "authors": [
+      "L. Boyle",
+      "H. Flinchpaugh",
+      "M.P. Hannigan"
+    ],
+    "journal": "Renewable Energy",
+    "volume": "77",
+    "issue": null,
+    "pages": "166-173",
+    "published": {
+      "date-parts": [
+        [
+          2015,
+          5
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1016/j.renene.2014.12.006"
+  }
+]
