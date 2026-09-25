@@ -1,6 +1,6 @@
 {
-  "index.html": "586c403e4591f15f56e915f512aceaaf49adaae28d05b3053e256721c59032ed",
-  "paper.css": "50560bda8c063501eebf87e0c3e846ce83d53eefc652ffd8f70f1caac924d214",
+  "index.html": "dbfa62e418cf779d2aaf00d12c6937bb940bdab816875e3da89575e20dd9fe36",
+  "paper.css": "ab5da8c2b80193a54b0e99b14cbf0141b7319a4ff372fd35b8475fdec1832770",
   "paper.js": "f53315daf6f413ba7909d89692ebd44db1bc1146c33e7274a4abb2e13cf6efe8",
   "rain-comparison.css": "ae27234553d91d56af91e331265002b2f88eb9f31fe37df476f5c8358c3684c8",
   "rain-comparison.js": "12d705147cdb75fd7092fb116aeaae9606616c1fade3acc60a7fdf371ba11085",
@@ -50,5 +50,17 @@
   "figures/figS2_rain_adhesion.svg": "46aa85c313095bfed332f66ae20f674d2336e1f98ada03f77252f0a703609b87",
   "figures/pv_yield.png": "add6ebc18a361db2bdce6d2cff222890f6c40696f3991b50d60fb73011ff6d33",
   "figures/sizing_by_tenure.png": "9002185adb89e1748d8c8193ab1650831357e332c517ee349ba8a4a680cf06d3",
-  "figures/user_energy_supply.png": "41ae380e9a501902604ef0413c7b12380f1d77b44cf4a88b229a906e4dd166de"
+  "figures/user_energy_supply.png": "41ae380e9a501902604ef0413c7b12380f1d77b44cf4a88b229a906e4dd166de",
+  "data/no_cleaning_config.json": "6e2cf8509f15e6a709a92afffcfc15e2fd7d9048b3d9a4ead3f542159169b8c6",
+  "data/no_cleaning_daily.csv": "e3c0a6127e04477cbf6fef609a1b7e4298c400acb2589bd93051fde7070895c6",
+  "data/no_cleaning_monthly.csv": "99e01729a867ce38f0d865fff56301af3a995d9772417be2b74d7dbbc64d9bbf",
+  "data/no_cleaning_reproducible.zip": "6b7cf7edf02ac8a386ba83fcf97dda249ccd8716611a5f5b1c9a17af3e964bee",
+  "data/no_cleaning_summary.csv": "7b88a35f68fedc700375e5a0f6c6e35d5dbbca50ce6cf22f1f0898beb8feff75",
+  "data/no_cleaning_validation.json": "2a61fddf27e8c51f08a750c4341d6e7f3f11a391ae7036612b21eabe3d22aba8",
+  "figures/figS3_no_cleaning_time.pdf": "2cddfc109d93d65d1d8dce5ac9776ddfda01d0722d47a2e1b29b1178d29a12a9",
+  "figures/figS3_no_cleaning_time.png": "1f4dd14eecc7edc498374b029c111c80bb5658d0b8cfe8d91bf7dbe613e923e1",
+  "figures/figS3_no_cleaning_time.svg": "1fd9f8d462d4a25d9d1a83c660e13843b30b48e0f419810aee831817af07e04f",
+  "figures/figS4_no_cleaning_monthly.pdf": "98c1ed7f077823b1c55af22d7ba90adc8777fb96b9917d5a2808c11d45bcc3e4",
+  "figures/figS4_no_cleaning_monthly.png": "6bfc7efd63799c6cd95c9260918f5d90cb7edbfae614d77e086f0c996ccb8c28",
+  "figures/figS4_no_cleaning_monthly.svg": "84afa6a8c5a484666eb8eae08603c5f73801dbeff873472c9c94601261166071"
 }

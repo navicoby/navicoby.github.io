@@ -8,3 +8,6 @@
 
 /* Visible rain method inside manuscript section 6.4. */
 #rain-soiling{scroll-margin-top:105px}.section .rain-subhead{font-size:16px;line-height:1.7;margin:28px 0 12px}.rain-method .flow-step p{font-size:13px;line-height:1.85}.rain-method .flow-step b{font-size:14px}
+
+/* No manual cleaning analysis */
+#no-cleaning{scroll-margin-top:105px}.no-cleaning-details{margin:24px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0}.no-cleaning-details summary{font-size:15px;font-weight:600;cursor:pointer}.no-cleaning-details[open] summary{margin-bottom:16px}
