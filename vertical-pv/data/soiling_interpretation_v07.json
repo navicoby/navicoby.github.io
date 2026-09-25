@@ -1,0 +1,18 @@
+{
+  "revision": "v0.7",
+  "model_recalibrated": false,
+  "capture_probability": 1,
+  "wind_detachment_included": false,
+  "field_validated": false,
+  "dry_front_flux_mg_m2_h": {
+    "tilted": 5.319237474173508,
+    "vertical": 4.358123096998675
+  },
+  "vertical_front_flux_reduction_percent": 18.068649535602265,
+  "flux_scope": "Four winds equally weighted, 100 ug/m3, 1 m/s horizontal, 0.01 m/s settling; each front face area, not combined front/rear or field observation.",
+  "interpretation": "Vertical installations show low soiling in experiments. Present first-hit and assumed wash-off scenario cannot establish real-world long-term orientation ranking. Separate arrival, adhesion, detachment, rain removal and optical response before field calibration.",
+  "references": [
+    "https://doi.org/10.1109/jphotov.2018.2872555",
+    "https://doi.org/10.1016/j.esd.2023.01.001"
+  ]
+}
