@@ -1,0 +1,105 @@
+{
+  "datum": "가상 TBM 100.000m; IFC 국부 z에 100m를 더한 표시고",
+  "nodes": [
+    {
+      "node_id": "A",
+      "x_m": 9,
+      "y_m": 39,
+      "ground_level_m": 101.167,
+      "invert_level_m": 100.467,
+      "invert_local_z_m": 0.46699999999999986,
+      "datum": "ASSUMED_TBM_100m",
+      "status": "ASSUMED_NOT_SURVEYED"
+    },
+    {
+      "node_id": "B",
+      "x_m": 31,
+      "y_m": 39,
+      "ground_level_m": 100.837,
+      "invert_level_m": 100.137,
+      "invert_local_z_m": 0.137,
+      "datum": "ASSUMED_TBM_100m",
+      "status": "ASSUMED_NOT_SURVEYED"
+    },
+    {
+      "node_id": "C",
+      "x_m": 9,
+      "y_m": 11,
+      "ground_level_m": 100.663,
+      "invert_level_m": 99.963,
+      "invert_local_z_m": -0.03700000000000003,
+      "datum": "ASSUMED_TBM_100m",
+      "status": "ASSUMED_NOT_SURVEYED"
+    },
+    {
+      "node_id": "D",
+      "x_m": 31,
+      "y_m": 11,
+      "ground_level_m": 100.333,
+      "invert_level_m": 99.633,
+      "invert_local_z_m": -0.367,
+      "datum": "ASSUMED_TBM_100m",
+      "status": "ASSUMED_NOT_SURVEYED"
+    },
+    {
+      "node_id": "OUT",
+      "x_m": 31,
+      "y_m": 0,
+      "ground_level_m": 100.135,
+      "invert_level_m": 99.435,
+      "invert_local_z_m": -0.565,
+      "datum": "ASSUMED_TBM_100m",
+      "status": "ASSUMED_NOT_SURVEYED"
+    }
+  ],
+  "pipes": [
+    {
+      "object_id": "PIPE_A",
+      "from_node": "A",
+      "to_node": "B",
+      "length_m": 22.0,
+      "upstream_invert_m": 100.467,
+      "downstream_invert_m": 100.137,
+      "slope_percent": 1.4999999999999922,
+      "internal_diameter_mm": 200,
+      "assumed_outside_diameter_mm": 220
+    },
+    {
+      "object_id": "PIPE_B",
+      "from_node": "B",
+      "to_node": "D",
+      "length_m": 28.0,
+      "upstream_invert_m": 100.137,
+      "downstream_invert_m": 99.633,
+      "slope_percent": 1.8000000000000176,
+      "internal_diameter_mm": 200,
+      "assumed_outside_diameter_mm": 220
+    },
+    {
+      "object_id": "PIPE_C",
+      "from_node": "C",
+      "to_node": "D",
+      "length_m": 22.0,
+      "upstream_invert_m": 99.963,
+      "downstream_invert_m": 99.633,
+      "slope_percent": 1.4999999999999922,
+      "internal_diameter_mm": 200,
+      "assumed_outside_diameter_mm": 220
+    },
+    {
+      "object_id": "PIPE_D",
+      "from_node": "D",
+      "to_node": "OUT",
+      "length_m": 11.0,
+      "upstream_invert_m": 99.633,
+      "downstream_invert_m": 99.435,
+      "slope_percent": 1.7999999999999392,
+      "internal_diameter_mm": 200,
+      "assumed_outside_diameter_mm": 220
+    }
+  ],
+  "continuous_level_control": true,
+  "external_outlet_confirmed": false,
+  "hydraulic_capacity_verified": false,
+  "construction_method": "전체 관망 공통 기준고 확인 → 집수정·관로 연계 시공 및 지속 레벨 확인 → 전체 검사 → 되메우기"
+}

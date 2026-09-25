@@ -1,0 +1,17 @@
+﻿category,name,specification,quantity,unit,wbs_package,ifc_class,object_count
+신규 교목,느티나무,H4.0 X R12,3,주,PK.50.30,IfcGeographicElement / VEGETATION,3
+신규 교목,이팝나무,H4.0 X R15,7,주,PK.50.30,IfcGeographicElement / VEGETATION,7
+신규 교목,산딸나무,H3.0 X R8,3,주,PK.50.30,IfcGeographicElement / VEGETATION,3
+신규 교목,주목 (선주목),H3.0 X W1.5,3,주,PK.50.30,IfcGeographicElement / VEGETATION,3
+관목,회양목,H0.4 X W0.5,181,주,PK.50.40,IfcGeographicElement / VEGETATION,181
+관목,영산홍,H0.6 X W0.8,159,주,PK.50.40,IfcGeographicElement / VEGETATION,159
+관목,산철쭉,H0.8 X W0.8,160,주,PK.50.40,IfcGeographicElement / VEGETATION,160
+관목,조팝나무,H1.0 X W0.5,177,주,PK.50.40,IfcGeographicElement / VEGETATION,177
+잔디,잔디,평떼 300×300mm / 전면 붙임,1101.988627657236,㎡,PK.50.50,IfcGeographicElement,4
+퍼걸러,퍼걸러,4.0×4.0m,1,개,PK.60.20,IfcBuildingElementProxy,1
+벤치,벤치,1.8×0.6m (가정),6,개,PK.60.10,IfcFurniture,6
+보행로 블록포장,보행로 블록포장,200×200mm / 유효폭 2m,220.0,㎡,PK.40.30,IfcPavement,4
+휴게공간 블록포장,휴게공간 블록포장,200×200mm,138.0,㎡,PK.40.30,IfcPavement,3
+화강석 경계석,화강석 경계석,150×200mm (가정),256.0,m,PK.30.20,IfcKerb,4
+집수정,집수정,내측600×600 / 깊이1000mm (가정),4,개,PK.20.20,IfcDistributionChamberElement,4
+우수관,우수관,DN200 / 외경220mm (가정),83.0,m,PK.20.30,IfcPipeSegment,4

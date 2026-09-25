@@ -1,0 +1,18 @@
+{
+  "revision": "R1",
+  "preserved_trees": 0,
+  "pergola_m": [
+    4,
+    4
+  ],
+  "turf_module_m": [
+    0.3,
+    0.3
+  ],
+  "turf_area_m2": 1101.9886276572372,
+  "turf_net_equivalent_pieces": 12244.318085080415,
+  "turf_minimum_whole_pieces": 12245,
+  "waste_allowance_included": false,
+  "site_grading": "ONE_WHOLE_SITE_OPERATION",
+  "drainage": "ONE_CONNECTED_SYSTEM_OPERATION"
+}

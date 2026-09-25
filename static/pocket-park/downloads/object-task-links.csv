@@ -1,0 +1,1594 @@
+﻿object_id,object_guid,task_id,task_guid,wbs_code,task_name,role,ifc_relation
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_trench,1awomNFVnRZwldlF77MUPX,PK.20.10.A,관로·집수정 굴착 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_trench,1awomNFVnRZwldlF77MUPX,PK.20.10.A,관로·집수정 굴착 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_backfill,3TE4OM_MnK6egz$zYtXsmN,PK.20.50.A,되메우기·다짐 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_backfill,3TE4OM_MnK6egz$zYtXsmN,PK.20.50.A,되메우기·다짐 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH03,0DO7eAO81PzRAdZDBjckEm,A_foundation,1BmVQr1c5M_gfXjzhM7L$0,PK.30.10.A,휴게시설 기초 / A구역,INPUT,IfcRelAssignsToProcess
+BENCH04,0DcAGz_D9K3vbTlhvIdvjx,A_foundation,1BmVQr1c5M_gfXjzhM7L$0,PK.30.10.A,휴게시설 기초 / A구역,INPUT,IfcRelAssignsToProcess
+BENCH05,1kBOWpIzDQ7fM7xMqFX7sb,A_foundation,1BmVQr1c5M_gfXjzhM7L$0,PK.30.10.A,휴게시설 기초 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_foundation,1BmVQr1c5M_gfXjzhM7L$0,PK.30.10.A,휴게시설 기초 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+shrub_A,2mofXfJPLR3A3TC$sO0JuJ,A_soil,3dyUbdsNrVCwHVzxa3$Rzk,PK.50.20.A,식재기반 정비 / A구역,OUTPUT,IfcRelAssignsToProduct
+green_A,3Rtnkwg4bP8Rx7PpzPFj5M,A_soil,3dyUbdsNrVCwHVzxa3$Rzk,PK.50.20.A,식재기반 정비 / A구역,INPUT,IfcRelAssignsToProcess
+lawn_A,2TMfXTxhXNLvV7tqJ$0KgI,A_soil,3dyUbdsNrVCwHVzxa3$Rzk,PK.50.20.A,식재기반 정비 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_soil,3dyUbdsNrVCwHVzxa3$Rzk,PK.50.20.A,식재기반 정비 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_D02,02lVwwMzvLIBNFnth4sQVM,A_trees,0So0jbh9rNau6qaei8hHvw,PK.50.30.A,교목 식재(구덩이 포함) / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_I04,3VXnKSS4HHDg0dcHjSWwyv,A_trees,0So0jbh9rNau6qaei8hHvw,PK.50.30.A,교목 식재(구덩이 포함) / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_I07,3gv7DXWyvUxOSt8FJ_jBfG,A_trees,0So0jbh9rNau6qaei8hHvw,PK.50.30.A,교목 식재(구덩이 포함) / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_N02,32fq$v0WDOxPZsBdaKmGKv,A_trees,0So0jbh9rNau6qaei8hHvw,PK.50.30.A,교목 식재(구덩이 포함) / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_trees,0So0jbh9rNau6qaei8hHvw,PK.50.30.A,교목 식재(구덩이 포함) / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+CURB_A,1RAc42_8DO$vCGbKZAOVsl,A_curb,3joyYSC8HKEPbgAZ4qajEA,PK.30.20.A,화강석 경계석 설치 / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_curb,3joyYSC8HKEPbgAZ4qajEA,PK.30.20.A,화강석 경계석 설치 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_A,2RuwrdotDPRO4wT4PooqPW,A_subbase,0f3W6sURTVEen7o62Sslid,PK.40.10.A,쇄석 포장기층 / A구역,INPUT,IfcRelAssignsToProcess
+walkway_A,3q3q0DWtjTh8ZN5wMJC4TJ,A_subbase,0f3W6sURTVEen7o62Sslid,PK.40.10.A,쇄석 포장기층 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_subbase,0f3W6sURTVEen7o62Sslid,PK.40.10.A,쇄석 포장기층 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_A,2RuwrdotDPRO4wT4PooqPW,A_pavecheck,1tCdFKdqzKCBAYvGGCw_gZ,PK.40.20.A,포장 기층 검사 / A구역,INPUT,IfcRelAssignsToProcess
+walkway_A,3q3q0DWtjTh8ZN5wMJC4TJ,A_pavecheck,1tCdFKdqzKCBAYvGGCw_gZ,PK.40.20.A,포장 기층 검사 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_pavecheck,1tCdFKdqzKCBAYvGGCw_gZ,PK.40.20.A,포장 기층 검사 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_A,2RuwrdotDPRO4wT4PooqPW,A_finish,3l7YMsKq9LKQ4fikZrT1Lj,PK.40.30.A,모래·콘크리트블록 포장 / A구역,OUTPUT,IfcRelAssignsToProduct
+walkway_A,3q3q0DWtjTh8ZN5wMJC4TJ,A_finish,3l7YMsKq9LKQ4fikZrT1Lj,PK.40.30.A,모래·콘크리트블록 포장 / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_finish,3l7YMsKq9LKQ4fikZrT1Lj,PK.40.30.A,모래·콘크리트블록 포장 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_R02-001,0NOcLDmK1RyxPPku_YxLvo,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-002,2pUS92w95TcRN8FxZC6Yof,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-003,2S35Jn_yHKlfgu77aNwLSO,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-004,389TMcoWHIEBW0hGct0HR1,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-005,1lJgl9NtDH$9x6IJ6ddIjm,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-006,3Cc4KmW_XVrPrfzYR1K5G4,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-007,0rzb2RswjPQeFd7CYSFE8f,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-008,3l3AV1eEzHeuBHUFaFYcdc,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-009,1VOQ1x1_9JoPUFPRbU8s53,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-010,3Uj3o9yqzNPeYVitmK5Vfd,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-011,2e0VzmrqHUvvc7SFUf0epD,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-012,3_9O9H6q9PPgqYf5wFk2v_,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-013,3mKluvyzHGxOUE$H1Cpzgk,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-014,1vzNIh6RvSUgetsWoedXlG,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-015,1JXzoiQubQox9fxIN3wiXz,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-016,2$_yfp4JzNGPUVHrfXtTmE,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-017,20A6phFRHS1xAG_Blm5BKx,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-018,1ewi3oDerSCQlcciN_MjN8,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-019,3pH_owQJzU9OnhVDeJowdf,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-020,3jr$ki6TTNPfLiWWseG7UI,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-021,1I7iduzYTSOPl8fx_RCCb8,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-022,1T87eT6F1I_x6ntrAvvkJW,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-023,1GEAIBrLTLSBDG949FaBgK,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-024,3L66KKSsjGTOIx$9D080Qj,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-025,1rSoEKOrrLjuNJASoUyFow,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-026,0BzQ9BbffTyBTLA9XolhG9,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-027,2a4oM_B1jVRvQEICrE13ac,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-028,2MZHCh7srU$90y796R7mKN,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-029,03LXHLDYrLZgRBgt0B5ug8,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-030,1zL4l49J9PqRnIo1mhZOOI,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-031,0OqzYadAPSUAYA3yEYUJ1M,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-032,3wMGywESHNDOQ1KiHQj481,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-033,3Of1Dvci5RLQ9IA5Gub4d3,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-034,1_3C2MWYLMn9MPKc_h9ZV9,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-035,1FXdfD74LKYB5fvlt5e0TW,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-036,1TK0P9WcnSbwTGrPPbGgaT,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R02-037,3HrU74XFTHphBe9TQaaRrP,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-008,0_ERlnnBfTDugZu$_L5QH$,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-009,1xDoz_yXjL7fGebA$X1Mq6,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-010,3vTIejixPK0QGzLwgJA9jH,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-011,1Gqbl1DU1HBxjzgQFLCsVo,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-012,3_4rXW_WvMhA6vZbL76WHI,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-025,3nom9bvF1VNQKxr_QQYPI1,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-026,0Cg5b1nUfVRQcKkVIzzAPx,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-027,25WLYHTdTNyxkcAqy$fbD4,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-028,2PLxBply9KcOtdO1hX5oet,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-029,3tYXHHz8zRdxBX6lxUJXtn,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-030,0XlZJjA8PSgOza8AGPadFA,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-031,25Y8LQHT1UnwKrO$MjbEhf,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-032,2fqQlDxPXLX8$nGBlQy0FG,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-033,2ApB9owwvJe8iIfnbf6XiL,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-034,0uWUEIc3bQbRZQLXAv0BCt,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-035,0gE7XTeg9UCxRk_sNFRYtD,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-036,3sY0mVJSPGgO69v7FzOThX,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-050,1GQy9jbA5Hfvw84RizJSvr,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-051,3McPgNNGTLWwMKmiojwCAc,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-052,1NhboNSMHNZREObV6p7jEI,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-053,3Gome6L9HKgAgo9v5vrpIS,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-054,1_w6_PJnjG$v9AnZsg1v45,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-055,0_YUKAHXXNZgGusAaO1og0,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-056,2fEXNEBs5O5eq2DqlXkZ3O,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-057,1fLVLTL9TNkQ6fPpeq3rJG,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-058,37lmDcfN9KxxN6PMVtAwnL,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-059,21WcP9kBDGUAiX4XY72gQW,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-060,1tDUGA34jOxQ2ipe9qgJzg,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-072,1Xw_sB2F9Ox8swOnwvswjy,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-073,1V3l36eAbHpAONorOuojvD,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-074,0E8DIS$OHUpuGgKYjL2wn3,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-075,0dniKJ6ZfK$BtSWr73Ikh8,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-076,37i7SM67DHZOHxfS8VJftR,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-005,20Ge7Cs45Ri8Awst2jO2k4,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-006,1zRHdBPA5SRx9sM50AKOSb,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-007,0AC98q_yjOThIyGA7TzIYB,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-008,39iEr0cZ1Vbg8aSsv5LOfu,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-009,35Ckl215zN2gr9Q0oLxY8w,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-010,2yQb1ROo5HtPZN_oqN$W0J,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-011,0yZieefDDHR8s2HdaxaVJ5,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-012,3MOWxa2snIRQu4mW7px2fp,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-013,0BKp8d_$jQJ9P4PUJrQ$62,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-014,1ctuk0YKDMXQK0YicJqST$,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-026,2g2fIIdDvIIPBQN8huBwlx,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-027,2ZLwja9kXJ9OPL9DCsiTr6,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-028,2gHpCQmZ1M5OPsaz73qpyJ,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-029,2Y5RAR_DPNRgQ_v22ZQuNp,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-030,30OZHPOu9Giup5ajdLOBsf,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-031,1XzgWvbV5TzOObVbwlpUrh,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-032,2FBB4m$9nJBvlCXxm4sySD,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-033,29aUJ7y1nMchP7IO1V5jf$,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-034,3XSfoBALrT4ugeTvZazjQs,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-035,3ucbViVAXLghcv33Tl7Kx9,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-036,3fq$_8HhLH5gTGYoGdxQHN,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-037,1ea8QHOZnJVhF8Z01T93b4,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-038,2Oj$5MA45NkBgk6KEW8t7Z,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-039,3MxcK6OsbLI9TlFeZWYt5N,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-040,1vwClNQWDKwRTMX71HIP_d,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-041,285s2VJPjTd9j$N_$gof1K,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-052,1ihe_82mrR0Pmv7mZP3fyI,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-053,1AD7sux2DVdvjrWZoDhqmb,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-054,2LjMcTjcHHrxanBgHGQEe7,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-055,28thloXMPVieSCkV8HfOvl,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-056,3W6OT$g5nUeAsFOVkQuije,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-057,3vSX2UZTHLiu_iNKvHRpzj,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-058,1LTcUdegLGz9BbGcEyUnxN,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-059,2u3hpRnx5Vh9ar1ZtXX7H9,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-060,26zSsWTCrG_AWexUwirCjK,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-061,3o4G9qZnLMl8fJIUV$Pky_,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-062,3ZoedHQUjTL9ODlH4vErdE,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-063,1Y3sRN2RPTiQUaI1sixYQ2,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-064,0KgiBE7hzL7Ook8$6XkNLb,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-065,1_TYfzMVPTWw4$uiav6QAg,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-066,2$YKdw_HTGsQOiDCCa6g8I,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-067,1uvzxM2v5MPBAktGrQ9Y9j,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-001,3m64OmMfjGNPiNnBM6wcB9,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-002,2N2DTb7$9MtQDkuUWmZZVJ,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-003,2223tC855On8C4DJOXMAb4,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-004,1Y$UmqWWbHePd3AaNu64oU,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-005,1bCFD0MNDGmeTZbv72uOft,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-006,3lbQlQ9L5PzxF9CfV5fscz,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-007,3494JPDYbO9ffLV8cpEcCq,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-008,1qka4H2MHQmgZcr$Wv7MqY,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-009,2NCSPis6zQYPR7qpl_zWSD,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-010,0le66vJSXQSwp_suDFHCJN,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-011,1f_o1rDufVhxlde8Y$Es93,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-012,3C7_j1JBLNIftrCPFEfgqj,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-013,0O9WTXxLbNkRHG3MVkOsH8,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-014,0invy$IxDIxOnUb6CaC_HX,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-015,1MXI1PwuLIifHD3$ftKd7Q,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-016,0dK$Y7nzXIq9bjnqXx4o$6,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-017,1s3bfjxHfOWwZyu8YdOjfg,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-018,3GXVorGNLHmfI6vvmqAnw2,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-019,0iEsXvz0LLf9xvmTZ90clT,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-020,3gf8DQCLDKzuWiKIaIv5Ff,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-021,1qrELowbjKMuaYxPZuRof1,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-022,0wszkpkMjJ2QnmvAFMuvs5,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-023,1$lgYtyVDGlPcqJTd0WJf_,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-024,3EjK6IReLIqee0389T0RiS,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-025,0ld97vuUjNqfxU89NDzJYC,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y04-026,1B_7v0fQDL_eLewYpD3tcj,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_shrubs,3z0rsh1xfHIhyJPLV9W5WU,PK.50.40.A,관목 식재 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+lawn_A,2TMfXTxhXNLvV7tqJ$0KgI,A_turf,2vCwpNLMPUVeYPeZCgPZF8,PK.50.50.A,평떼 잔디붙임 / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_turf,2vCwpNLMPUVeYPeZCgPZF8,PK.50.50.A,평떼 잔디붙임 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+green_A,3Rtnkwg4bP8Rx7PpzPFj5M,A_mulch,0qcn$1YPnK4RH8XJ8hOzYX,PK.50.60.A,수목 하부 멀칭 / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_mulch,0qcn$1YPnK4RH8XJ8hOzYX,PK.50.60.A,수목 하부 멀칭 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH03,0DO7eAO81PzRAdZDBjckEm,A_bench,1JxWIS5BLTD9df1rvsFUAo,PK.60.10.A,벤치 설치 / A구역,OUTPUT,IfcRelAssignsToProduct
+BENCH04,0DcAGz_D9K3vbTlhvIdvjx,A_bench,1JxWIS5BLTD9df1rvsFUAo,PK.60.10.A,벤치 설치 / A구역,OUTPUT,IfcRelAssignsToProduct
+BENCH05,1kBOWpIzDQ7fM7xMqFX7sb,A_bench,1JxWIS5BLTD9df1rvsFUAo,PK.60.10.A,벤치 설치 / A구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_bench,1JxWIS5BLTD9df1rvsFUAo,PK.60.10.A,벤치 설치 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH03,0DO7eAO81PzRAdZDBjckEm,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+BENCH04,0DcAGz_D9K3vbTlhvIdvjx,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+BENCH05,1kBOWpIzDQ7fM7xMqFX7sb,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+CHAMBER_A,3gmuPO0wrGOvUL8XzIqdyM,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+CURB_A,1RAc42_8DO$vCGbKZAOVsl,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_D02,02lVwwMzvLIBNFnth4sQVM,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_I04,3VXnKSS4HHDg0dcHjSWwyv,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_I07,3gv7DXWyvUxOSt8FJ_jBfG,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_N02,32fq$v0WDOxPZsBdaKmGKv,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-001,0NOcLDmK1RyxPPku_YxLvo,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-002,2pUS92w95TcRN8FxZC6Yof,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-003,2S35Jn_yHKlfgu77aNwLSO,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-004,389TMcoWHIEBW0hGct0HR1,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-005,1lJgl9NtDH$9x6IJ6ddIjm,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-006,3Cc4KmW_XVrPrfzYR1K5G4,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-007,0rzb2RswjPQeFd7CYSFE8f,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-008,3l3AV1eEzHeuBHUFaFYcdc,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-009,1VOQ1x1_9JoPUFPRbU8s53,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-010,3Uj3o9yqzNPeYVitmK5Vfd,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-011,2e0VzmrqHUvvc7SFUf0epD,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-012,3_9O9H6q9PPgqYf5wFk2v_,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-013,3mKluvyzHGxOUE$H1Cpzgk,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-014,1vzNIh6RvSUgetsWoedXlG,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-015,1JXzoiQubQox9fxIN3wiXz,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-016,2$_yfp4JzNGPUVHrfXtTmE,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-017,20A6phFRHS1xAG_Blm5BKx,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-018,1ewi3oDerSCQlcciN_MjN8,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-019,3pH_owQJzU9OnhVDeJowdf,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-020,3jr$ki6TTNPfLiWWseG7UI,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-021,1I7iduzYTSOPl8fx_RCCb8,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-022,1T87eT6F1I_x6ntrAvvkJW,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-023,1GEAIBrLTLSBDG949FaBgK,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-024,3L66KKSsjGTOIx$9D080Qj,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-025,1rSoEKOrrLjuNJASoUyFow,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-026,0BzQ9BbffTyBTLA9XolhG9,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-027,2a4oM_B1jVRvQEICrE13ac,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-028,2MZHCh7srU$90y796R7mKN,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-029,03LXHLDYrLZgRBgt0B5ug8,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-030,1zL4l49J9PqRnIo1mhZOOI,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-031,0OqzYadAPSUAYA3yEYUJ1M,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-032,3wMGywESHNDOQ1KiHQj481,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-033,3Of1Dvci5RLQ9IA5Gub4d3,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-034,1_3C2MWYLMn9MPKc_h9ZV9,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-035,1FXdfD74LKYB5fvlt5e0TW,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-036,1TK0P9WcnSbwTGrPPbGgaT,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R02-037,3HrU74XFTHphBe9TQaaRrP,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-008,0_ERlnnBfTDugZu$_L5QH$,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-009,1xDoz_yXjL7fGebA$X1Mq6,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-010,3vTIejixPK0QGzLwgJA9jH,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-011,1Gqbl1DU1HBxjzgQFLCsVo,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-012,3_4rXW_WvMhA6vZbL76WHI,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-025,3nom9bvF1VNQKxr_QQYPI1,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-026,0Cg5b1nUfVRQcKkVIzzAPx,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-027,25WLYHTdTNyxkcAqy$fbD4,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-028,2PLxBply9KcOtdO1hX5oet,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-029,3tYXHHz8zRdxBX6lxUJXtn,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-030,0XlZJjA8PSgOza8AGPadFA,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-031,25Y8LQHT1UnwKrO$MjbEhf,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-032,2fqQlDxPXLX8$nGBlQy0FG,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-033,2ApB9owwvJe8iIfnbf6XiL,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-034,0uWUEIc3bQbRZQLXAv0BCt,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-035,0gE7XTeg9UCxRk_sNFRYtD,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-036,3sY0mVJSPGgO69v7FzOThX,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-050,1GQy9jbA5Hfvw84RizJSvr,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-051,3McPgNNGTLWwMKmiojwCAc,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-052,1NhboNSMHNZREObV6p7jEI,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-053,3Gome6L9HKgAgo9v5vrpIS,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-054,1_w6_PJnjG$v9AnZsg1v45,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-055,0_YUKAHXXNZgGusAaO1og0,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-056,2fEXNEBs5O5eq2DqlXkZ3O,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-057,1fLVLTL9TNkQ6fPpeq3rJG,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-058,37lmDcfN9KxxN6PMVtAwnL,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-059,21WcP9kBDGUAiX4XY72gQW,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-060,1tDUGA34jOxQ2ipe9qgJzg,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-072,1Xw_sB2F9Ox8swOnwvswjy,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-073,1V3l36eAbHpAONorOuojvD,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-074,0E8DIS$OHUpuGgKYjL2wn3,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-075,0dniKJ6ZfK$BtSWr73Ikh8,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_R03-076,37i7SM67DHZOHxfS8VJftR,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-005,20Ge7Cs45Ri8Awst2jO2k4,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-006,1zRHdBPA5SRx9sM50AKOSb,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-007,0AC98q_yjOThIyGA7TzIYB,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-008,39iEr0cZ1Vbg8aSsv5LOfu,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-009,35Ckl215zN2gr9Q0oLxY8w,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-010,2yQb1ROo5HtPZN_oqN$W0J,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-011,0yZieefDDHR8s2HdaxaVJ5,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-012,3MOWxa2snIRQu4mW7px2fp,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-013,0BKp8d_$jQJ9P4PUJrQ$62,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-014,1ctuk0YKDMXQK0YicJqST$,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-026,2g2fIIdDvIIPBQN8huBwlx,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-027,2ZLwja9kXJ9OPL9DCsiTr6,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-028,2gHpCQmZ1M5OPsaz73qpyJ,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-029,2Y5RAR_DPNRgQ_v22ZQuNp,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-030,30OZHPOu9Giup5ajdLOBsf,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-031,1XzgWvbV5TzOObVbwlpUrh,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-032,2FBB4m$9nJBvlCXxm4sySD,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-033,29aUJ7y1nMchP7IO1V5jf$,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-034,3XSfoBALrT4ugeTvZazjQs,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-035,3ucbViVAXLghcv33Tl7Kx9,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-036,3fq$_8HhLH5gTGYoGdxQHN,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-037,1ea8QHOZnJVhF8Z01T93b4,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-038,2Oj$5MA45NkBgk6KEW8t7Z,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-039,3MxcK6OsbLI9TlFeZWYt5N,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-040,1vwClNQWDKwRTMX71HIP_d,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-041,285s2VJPjTd9j$N_$gof1K,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-052,1ihe_82mrR0Pmv7mZP3fyI,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-053,1AD7sux2DVdvjrWZoDhqmb,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-054,2LjMcTjcHHrxanBgHGQEe7,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-055,28thloXMPVieSCkV8HfOvl,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-056,3W6OT$g5nUeAsFOVkQuije,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-057,3vSX2UZTHLiu_iNKvHRpzj,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-058,1LTcUdegLGz9BbGcEyUnxN,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-059,2u3hpRnx5Vh9ar1ZtXX7H9,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-060,26zSsWTCrG_AWexUwirCjK,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-061,3o4G9qZnLMl8fJIUV$Pky_,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-062,3ZoedHQUjTL9ODlH4vErdE,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-063,1Y3sRN2RPTiQUaI1sixYQ2,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-064,0KgiBE7hzL7Ook8$6XkNLb,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-065,1_TYfzMVPTWw4$uiav6QAg,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-066,2$YKdw_HTGsQOiDCCa6g8I,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_S02-067,1uvzxM2v5MPBAktGrQ9Y9j,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-001,3m64OmMfjGNPiNnBM6wcB9,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-002,2N2DTb7$9MtQDkuUWmZZVJ,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-003,2223tC855On8C4DJOXMAb4,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-004,1Y$UmqWWbHePd3AaNu64oU,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-005,1bCFD0MNDGmeTZbv72uOft,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-006,3lbQlQ9L5PzxF9CfV5fscz,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-007,3494JPDYbO9ffLV8cpEcCq,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-008,1qka4H2MHQmgZcr$Wv7MqY,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-009,2NCSPis6zQYPR7qpl_zWSD,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-010,0le66vJSXQSwp_suDFHCJN,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-011,1f_o1rDufVhxlde8Y$Es93,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-012,3C7_j1JBLNIftrCPFEfgqj,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-013,0O9WTXxLbNkRHG3MVkOsH8,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-014,0invy$IxDIxOnUb6CaC_HX,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-015,1MXI1PwuLIifHD3$ftKd7Q,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-016,0dK$Y7nzXIq9bjnqXx4o$6,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-017,1s3bfjxHfOWwZyu8YdOjfg,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-018,3GXVorGNLHmfI6vvmqAnw2,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-019,0iEsXvz0LLf9xvmTZ90clT,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-020,3gf8DQCLDKzuWiKIaIv5Ff,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-021,1qrELowbjKMuaYxPZuRof1,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-022,0wszkpkMjJ2QnmvAFMuvs5,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-023,1$lgYtyVDGlPcqJTd0WJf_,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-024,3EjK6IReLIqee0389T0RiS,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-025,0ld97vuUjNqfxU89NDzJYC,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+P2_Y04-026,1B_7v0fQDL_eLewYpD3tcj,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+PIPE_A,1bd12Rq9vHkwu_IDooReN2,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+green_A,3Rtnkwg4bP8Rx7PpzPFj5M,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+lawn_A,2TMfXTxhXNLvV7tqJ$0KgI,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+plaza_A,2RuwrdotDPRO4wT4PooqPW,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+shrub_A,2mofXfJPLR3A3TC$sO0JuJ,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+walkway_A,3q3q0DWtjTh8ZN5wMJC4TJ,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,INPUT,IfcRelAssignsToProcess
+ZONE_A,05s0DvC$jRV929XyJ91g6F,A_check,0QpginrLjSj9CDjtEXJ5e4,PK.70.10.A,구역 마무리 검사 / A구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_trench,3VQFKE61PQGAfmUUqZompD,PK.20.10.B,관로·집수정 굴착 / B구역,INPUT,IfcRelAssignsToProcess
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_trench,3VQFKE61PQGAfmUUqZompD,PK.20.10.B,관로·집수정 굴착 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_backfill,13T0myAS9R8wqFPwu8ct82,PK.20.50.B,되메우기·다짐 / B구역,INPUT,IfcRelAssignsToProcess
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_backfill,13T0myAS9R8wqFPwu8ct82,PK.20.50.B,되메우기·다짐 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+shrub_B,1TDXd0_SnQ5RCqmS8RbvCO,B_soil,0hBqgI0_nK_8KlMb1sbLCd,PK.50.20.B,식재기반 정비 / B구역,OUTPUT,IfcRelAssignsToProduct
+green_B,3K6pWDCm1KuRkDLYGXyhSh,B_soil,0hBqgI0_nK_8KlMb1sbLCd,PK.50.20.B,식재기반 정비 / B구역,INPUT,IfcRelAssignsToProcess
+lawn_B,3DQ93yPh9H9gS6aKs3R_3F,B_soil,0hBqgI0_nK_8KlMb1sbLCd,PK.50.20.B,식재기반 정비 / B구역,INPUT,IfcRelAssignsToProcess
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_soil,0hBqgI0_nK_8KlMb1sbLCd,PK.50.20.B,식재기반 정비 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_D01,0ZenG1k7vSWeZohT8fL$kw,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_I05,3QMDNvBXzIjQKTQOQ$O8i$,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_N03,1KzHpDp8TOfg3ND1kZypKE,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_T01,2gSA55vanH8ODXPrevY6hS,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_T02,1r03ubKVPIAPU_R$4tVrbd,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_T03,1qbKJG7tzOvwuITtIff3ER,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_trees,24LdlA5grQvwnUaOYHVOox,PK.50.30.B,교목 식재(구덩이 포함) / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+CURB_B,3vt7aax3bJzQ4MvcKH4gak,B_curb,3S9A7ncEzPFhZ7Ppmow_zB,PK.30.20.B,화강석 경계석 설치 / B구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_curb,3S9A7ncEzPFhZ7Ppmow_zB,PK.30.20.B,화강석 경계석 설치 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+walkway_B,2uUU441FzPTQzrtbwPLFUK,B_subbase,0YMNSLFZLNwOb8tVCDs4aE,PK.40.10.B,쇄석 포장기층 / B구역,INPUT,IfcRelAssignsToProcess
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_subbase,0YMNSLFZLNwOb8tVCDs4aE,PK.40.10.B,쇄석 포장기층 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+walkway_B,2uUU441FzPTQzrtbwPLFUK,B_pavecheck,0wE8rrGgXG193rmP_zS3MK,PK.40.20.B,포장 기층 검사 / B구역,INPUT,IfcRelAssignsToProcess
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_pavecheck,0wE8rrGgXG193rmP_zS3MK,PK.40.20.B,포장 기층 검사 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+walkway_B,2uUU441FzPTQzrtbwPLFUK,B_finish,0DRinPDDjLLRxqR$W4uAZ_,PK.40.30.B,모래·콘크리트블록 포장 / B구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_finish,0DRinPDDjLLRxqR$W4uAZ_,PK.40.30.B,모래·콘크리트블록 포장 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_R03-001,2C7HcL1ezQQwv_LcGbsLaO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-002,1ys5x7pcXNCv0Xi5TmbGpz,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-003,1lvC3XDhXQufGjMTYG3rWP,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-004,3b9vaiVdrReu0k98j$dMsP,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-005,2PRivOwW9VNuUOzJNC1Km6,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-006,1M7DbCUDHPH8HWukDThCc_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-007,1p0LDVLRLPzR4h5P13Htur,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-013,0d4vRAQjDUNxJ0tVVB0HsL,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-014,2ywJGX0KvOUhAucWSIYwjP,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-015,0HamKLGJHGwQezYYD9Avq6,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-016,0be43HZSDPKg7BWdha3fQy,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-017,1aJvheSx5S1uVHb$Ad7tNF,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-018,2RnalGdSLTm8Y_k9RSOrFf,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-019,3vrR3taxXUJhWrChWaO7cb,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-020,2FyLBtudDNWBG8yjISab6n,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-021,1YOU7y3K1JBeRUxnTH2IDQ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-022,2oQqVZ8mvVMe0rU9yiHvhG,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-023,2NiJThPrHPzOtgabjoFLgJ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-024,32$_t4EBfJbRGDOvEaKANU,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-037,1XaTKWsIfJDQGr5YW8SjZg,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-038,0zUH97VuPVefMI3gi$P$gf,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-039,1Q8g7NuYnUnhR6Y5NCcP2x,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-040,3IvRzWHuLOiPNWxYqrl7oM,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-041,302PGIBvrQ$fdD0eYsfvSX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-042,0If1iBtWDUveixsKq9L8c8,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-043,3P8U0B8h9GMfSKPNTeMYIs,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-044,1sckp7689V1QEsB_lMEtN5,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-045,0i4FyfagTHVxLqyCUoNuOh,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-046,0Hpt5nViTM8Aj9y_R6JL$j,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-047,3oMIVpmXvSUeY49fan8Kpw,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-048,279s2tXrTPYvYzG7R12eXk,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-049,1AGMkMHibRdAmeDYhL1fLo,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-061,09Rp2jQgTRWP$3w7iGHoCO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-062,24CvRaiinKlhpHdLltYu5E,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-063,1gID4LdiXH9u2ZJ_6$MROe,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-064,0OyTmxT3LUKuQmYmtyKdeV,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-065,1KtWSyVbnV5fculDzmJqoP,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-066,1wqOxGRMnHZw9RjxSVTD5e,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-067,2_s9botu1LxQ8cMmdAwMHc,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-068,0LbSE$KPXV3gOF7uoPjIZM,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-069,2_QzP7IvXTXO$jQmkteDEN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-070,0wQ9Dpkk1G2eqNUPQgRi3d,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_R03-071,0Xbs78gpPSL8UTBCQ80Nyp,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-003,0EjZLAGHPLuBanm2d6ONIz,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-004,0Tr1YU8YfINPwtuA2wc7ao,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-005,28lJOQOb5QAxtJA6WBQpHv,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-006,3vg1su2VbG5wkhqCQBFr$r,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-007,1WPKJRgcnM3BUU$ycAq9EX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-008,0nHaqCWhPU$hCvCDsjRoPP,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-009,2YUm$$gyLPtvyS0eWHv9dK,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-010,0TIQj$FtDQROvr7OgN8wwQ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-011,07xtQGU$TIvxTwZYxEXalO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-012,2UAs43U0rICvA5r7L$zm9x,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-013,2u55pcrwjHLvCvRBv4NMFU,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-014,2VBV2MFcnGHgPMWP4xkn8z,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-015,0LgJPh8ZjUjPilm$xZi3q3,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-016,3u1sIrgcLHrfOfR80BuSMT,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-017,0PrvGfd05UFeXgizTww507,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-018,22KQT2yaPN5eRhvWENenhg,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-019,3IwhVQBk9MW823gZ7Xp$CY,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-020,0oiR5FVbLI59okKRmr2LZe,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-021,1k3vq2apfM5OmF3PU$UxIn,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-022,2nu8_jVDLK0vo_EJ1ps134,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-023,1N$yGTz81Q1uwMeh4tOVL2,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-024,3VZbePGrfOTgmlYQoE2Rlm,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-025,1y3VB3CevTz8IygtmJqRHi,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-026,1KstQXH0fQzxK$QbB1pppp,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-027,3X3Z0w_p1TaRyWgjQViMt5,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-028,2FYAuh69zHAhFbkrHm9WqZ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-029,26DU4CzHbSYxw9$VjOmmRZ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-030,0L88Z_7ifTSRZI2W9HMHm$,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-031,3KdQMQ129Q4P80ge69whbF,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-032,2a4FnjjHHTlAjSa76$5xfq,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-033,2lEDhdn1DHZf7vzHVHHbC8,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-034,0uoH0Cp1zGuwC1r8gElsL_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-035,0e4dPUc2fNXvTpoh5cjjln,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-036,2Z1VHf6GDNrvPHZEydfueO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-037,09mEGyYCjPIBbDDU19wsYo,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-038,2JOfe3QnvLdwyq4kQaEk0Q,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-039,1t9H3LjfHVieDEcXF36dB1,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-040,0L53HJjN5MJw63nY5wqnlv,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-041,1z0a6zANzQoAcgw5a9S3Bs,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-042,20Fpxahf9NuxIsni8Aq$wV,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-043,2XAgoVYEDK4ug7EFHA0YmH,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-044,3Opvc95JnGgOCPNa6AMUNV,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-045,34xxNlGi5OgxGT31dWjdJo,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-046,1h3DN95PXPtxQzA5NZr3b0,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-047,3Qp8qaV9HMYvqvB$4RMy0f,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-048,33WNHxQCTTTg2pJI5MMrKN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-049,1Zh6yPy8jQv97guz8Iofvn,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-050,28Zm4LgZPUqQFOzZrLK$pb,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-051,10LF5jwzzV1uf$1WcTx9ra,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-052,3v$y$MoN5HHxszDjCr6IYR,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-053,2CeR922uXUSfxLT6aAVjQH,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-054,1TnIJ5veXPKggSxqBl1MT0,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-055,2HFkph9TTSz9r9LUrRPW$k,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-056,3MDHA4TxnT$BkDTI4S2ZlX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-057,1EgSKxOw5LAhB5XsrsEBmt,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-058,3TsMtmRKHPJhwmB$DMYpr8,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-059,2zplSe$OLKjhMs022tAZl8,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-060,1B9Uy0i75MV8wN6Hlv7kRF,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-061,0ukMzZOOfPywcelatmMrwL,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-062,0fvQpLxVTPghJr1nkEYom_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-063,1W4rhFmuXNf85W$Dy7hQjN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-064,3mafPXPM9HaOjEd8xvSRgz,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-065,1vazRs4pjOFvZZ51F1FfQ8,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-066,0_7BhYE1LIVeWAv4K11hTC,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-067,3Qv5nAWajL9fzw9Bki8IpL,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-068,3dmzGbrhPRRxsSXdCu9knd,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-069,1_05nVKXPKJfrGJ$6IgCEv,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-070,2tIGVJCqDOxg$3tYXI4E40,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-071,2mW7$SpirOrAOWldZMr0pX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-072,1pbKk27x1OYhR3fB11JOaL,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-073,13CQhCYovNa8j1E8rEpWS8,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-074,2yIwy_S3zSe8QNvHAKi7pc,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-075,32d_IhzfzMzAmtZ96dQ4uN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-076,2y5D8GnnTQlxYr0iywTy5H,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-077,0bn$RJXejHZ8wEbwj_yQ9i,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-078,0WoCZ3EvDHBxwygrqYa79e,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-079,20H4ELDs9Js9ZM$8CALs5O,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-080,1aQbJ3wLTHFusteLLp1RlU,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-081,0rnXdYcv9Q2gyUxki7hxUw,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-082,2GXotVuYLSAQpYYStpxEJQ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-083,3EWnouTWHS9R7g__9OIOns,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-084,1rD8lAPdPNefMP47f8Ww57,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-085,0KwAp0M1vNTgFXrhd7QnJN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-086,31SCB912vGTBExQNOevDIF,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-087,2WGw8jTeLJEO7N5I7YbSkl,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-088,0QxP4g9ILSfhBMp7rERhwI,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-089,0lgE5NSDLPDQoaaV7PPqZo,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-090,1RsirfXYvL7fOpdm3k$$pu,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-091,3zenA0YQTSGwObFdbDI7Xn,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-092,068AhrKvTHLQvq0uOt0CYw,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-093,2oEqAYZILO6ALpPfUzLZlL,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-094,29PiFaCOvILRHIxMpDgjJn,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-095,1CtZQAWSXMzepq2uaBNpR5,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-001,3XL$dORZLJbuccbS1wcXL5,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-002,0STGURFt1RWuwFdIFoKMSX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-003,1pRV0dxOLQy9v2Q0B0JgUQ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-004,0wqR5kpOjMCAiWqrvCV9_6,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-015,3zGPZ8pg1KLBxIKqG8JOfO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-016,14jnEuBZ9Te852E2cYwC5z,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-017,06YziVyCrO2AyAeTDGRjQx,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-018,2x$uFWaRLRihGbNemrUHW3,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-019,1vW9PSIvPS4QcvDu96Yems,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-020,1ehiW8qHPNS8t1QhM6fHBM,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-021,2Bs3$hCbLNwRrmFqOHzEFO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-022,1NmETY7q9NfgSkK1YKkYhz,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-023,0EN$$V2tTPXgzT2qCJFX2u,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-024,27H_KfMsXIyxiAhqfUGLzb,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-025,1r7KgbylbV2ujfkFzZNqVb,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-042,1VYUkiiOHOue5xs$yKADFy,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-043,0zUc5ZUMPMCvVrS0jziVoW,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-044,3PFG1bzcHRxBJsymqcLYh6,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-045,0P7GlhzlbMrfIxv0LvqrEk,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-046,0VXTvsh6DJPvzRlif7TOKB,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-047,18BEJ3$UzLn9jZJLWnSHS_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-048,0dI0EeZwDJc86wFzU10GqN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-049,2pwoBG4w9LnPUitYel$2NY,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-050,0n78uH6JHVRg0d3WK0LEpS,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-051,2JIQZzDlzMmfRrwLpERfpw,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-068,06J$AQuHvUNwOKFMR8TSrQ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-069,0T5wLhx1PRaRnCO6q26nWQ,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-070,3mN3O593DOKBYhTAyFHrKv,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-071,1sHD8RKKnUueguq$MUkn2L,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-072,2SRfZlIufTzOj6j8dZfQNi,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-073,2VIjDjdkPUshXR4MUuZA1d,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-074,062LfGCxXLEx1Yj0ouO_YE,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-075,0LKmWs9M9JhxoYYumW3ZH0,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-076,3nX33k7PzKqeAwRcwGbo5X,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-077,1bKbD4gu5IeeTrep3icamr,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-078,3noRKM0XTPA9h9K_KnRRkH,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-079,2RYiS70pvJ2uCgdJZDup5B,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-080,1uJwEF0Z5Ujxh03wxkCGV6,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-081,3CxKOUw0DKFe2jZImdssAM,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_S02-082,25rrQPT0XJpxjXtWgNEuTx,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-004,1pGR17_lLQfB5Dhng8iwoT,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-005,1D5lnKnWXTDBVP2qySqGv0,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-006,1O0jda4YbRFgQGMfI$OWEL,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-007,3UM1qnkubLlhT31RGncCLg,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-008,3PU_XRvK9Qjw_DaqpcA$jW,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-009,0nI6IK7wzJmfh_ezfkphcl,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-010,3nSKUZE6jL28f9dSelLaE_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-011,3WJL5_TWXSiA4Ld7l3o6kb,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-012,0Dt9b8EV1K0xJ2Prg3Ngih,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-013,3e09vQxibUqvML_82cDGu_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-014,2tBDQYDoDLWhZPYWzXywsr,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-015,0pBJHhvLPJoxHa5XOCA2Ig,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-016,3ZKaHgWUrKGv9MTIMhEPQW,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-017,3fcLH6agDMXQPNZ7FJAJRb,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-018,2u7Y7cJeTGt9L_Tben6QhV,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-019,3_puH7FpTTFuG_5qU1BM5I,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-020,3u8OqC_5jK2xza4MoOIPbS,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-021,2Qmyd5yI1PrhwwBi2TCVRO,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-022,3l7096eBPG3hMmb5xUCVPN,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-023,1Yxig0mVXOTgwwJ2EkaXsU,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-024,13D3MjA$1Qffje1Cm8iEfR,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-025,3Tqb34$x1JEPiYpqmuTJTt,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-026,07aXnrCvrORwKh8ZTb6QTH,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-027,2P3TeYJXLQrePyG1iAR7sf,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-028,3FiIGnQZLM49W8b6lmwsNn,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-029,0_DoRG62rJ8v$6tcBCUnG1,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-030,32WmS1wIjSzvFV9j2zXe5M,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-031,1X8sDXN7TL5hElMgbb6SQj,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-032,1JBJ$CL4HJTfr_ieTYIgHe,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-033,2KCFH38IbOOw4J0v0p8stq,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-034,18XPcFJw5QS9t994ykkanS,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-035,0mLhjF4PTO2PpeN17M_tkR,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-036,1DTxx2vZ1TBQ60HPkPaUiE,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-037,0HhNQN3dzU9giGliwsED4O,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-038,0kqPkEbfTQ2AlGqvLboRUX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-039,1NSY5$sCzNGRsbkGTn8VUX,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-040,2Ty8LlMcnJGhojPT1OKsxH,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-041,1VsfqHxaTTu8c_bzHG_oCw,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-042,1eAJARv9jNNOoA0mdqLyDp,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-043,0udROiGCLNeh4$2N$oyiXz,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-044,1mSEqAolHQog3Up$NIirSw,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-045,0iZTr0EQ1K5B631ba9Nif_,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-046,0zr12AOhLLX9hRzf_z7WWP,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-047,25W_jDA21RaeK1rJM5MQ92,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-048,1NpaDk49rKAwaq$6SOMJ21,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_shrubs,0C8tSAGf9OcwiEKQo3xru7,PK.50.40.B,관목 식재 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+lawn_B,3DQ93yPh9H9gS6aKs3R_3F,B_turf,2T1IF9gVHSD82oYe08_sRB,PK.50.50.B,평떼 잔디붙임 / B구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_turf,2T1IF9gVHSD82oYe08_sRB,PK.50.50.B,평떼 잔디붙임 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+green_B,3K6pWDCm1KuRkDLYGXyhSh,B_mulch,34hj5tkgTNLQ5jAjR8d_3I,PK.50.60.B,수목 하부 멀칭 / B구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_mulch,34hj5tkgTNLQ5jAjR8d_3I,PK.50.60.B,수목 하부 멀칭 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+CHAMBER_B,0bwDG433LK6Ow2eXkwOKWK,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+CURB_B,3vt7aax3bJzQ4MvcKH4gak,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_D01,0ZenG1k7vSWeZohT8fL$kw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_I05,3QMDNvBXzIjQKTQOQ$O8i$,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_N03,1KzHpDp8TOfg3ND1kZypKE,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-001,2C7HcL1ezQQwv_LcGbsLaO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-002,1ys5x7pcXNCv0Xi5TmbGpz,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-003,1lvC3XDhXQufGjMTYG3rWP,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-004,3b9vaiVdrReu0k98j$dMsP,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-005,2PRivOwW9VNuUOzJNC1Km6,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-006,1M7DbCUDHPH8HWukDThCc_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-007,1p0LDVLRLPzR4h5P13Htur,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-013,0d4vRAQjDUNxJ0tVVB0HsL,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-014,2ywJGX0KvOUhAucWSIYwjP,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-015,0HamKLGJHGwQezYYD9Avq6,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-016,0be43HZSDPKg7BWdha3fQy,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-017,1aJvheSx5S1uVHb$Ad7tNF,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-018,2RnalGdSLTm8Y_k9RSOrFf,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-019,3vrR3taxXUJhWrChWaO7cb,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-020,2FyLBtudDNWBG8yjISab6n,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-021,1YOU7y3K1JBeRUxnTH2IDQ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-022,2oQqVZ8mvVMe0rU9yiHvhG,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-023,2NiJThPrHPzOtgabjoFLgJ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-024,32$_t4EBfJbRGDOvEaKANU,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-037,1XaTKWsIfJDQGr5YW8SjZg,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-038,0zUH97VuPVefMI3gi$P$gf,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-039,1Q8g7NuYnUnhR6Y5NCcP2x,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-040,3IvRzWHuLOiPNWxYqrl7oM,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-041,302PGIBvrQ$fdD0eYsfvSX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-042,0If1iBtWDUveixsKq9L8c8,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-043,3P8U0B8h9GMfSKPNTeMYIs,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-044,1sckp7689V1QEsB_lMEtN5,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-045,0i4FyfagTHVxLqyCUoNuOh,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-046,0Hpt5nViTM8Aj9y_R6JL$j,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-047,3oMIVpmXvSUeY49fan8Kpw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-048,279s2tXrTPYvYzG7R12eXk,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-049,1AGMkMHibRdAmeDYhL1fLo,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-061,09Rp2jQgTRWP$3w7iGHoCO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-062,24CvRaiinKlhpHdLltYu5E,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-063,1gID4LdiXH9u2ZJ_6$MROe,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-064,0OyTmxT3LUKuQmYmtyKdeV,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-065,1KtWSyVbnV5fculDzmJqoP,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-066,1wqOxGRMnHZw9RjxSVTD5e,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-067,2_s9botu1LxQ8cMmdAwMHc,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-068,0LbSE$KPXV3gOF7uoPjIZM,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-069,2_QzP7IvXTXO$jQmkteDEN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-070,0wQ9Dpkk1G2eqNUPQgRi3d,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_R03-071,0Xbs78gpPSL8UTBCQ80Nyp,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-003,0EjZLAGHPLuBanm2d6ONIz,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-004,0Tr1YU8YfINPwtuA2wc7ao,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-005,28lJOQOb5QAxtJA6WBQpHv,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-006,3vg1su2VbG5wkhqCQBFr$r,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-007,1WPKJRgcnM3BUU$ycAq9EX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-008,0nHaqCWhPU$hCvCDsjRoPP,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-009,2YUm$$gyLPtvyS0eWHv9dK,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-010,0TIQj$FtDQROvr7OgN8wwQ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-011,07xtQGU$TIvxTwZYxEXalO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-012,2UAs43U0rICvA5r7L$zm9x,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-013,2u55pcrwjHLvCvRBv4NMFU,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-014,2VBV2MFcnGHgPMWP4xkn8z,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-015,0LgJPh8ZjUjPilm$xZi3q3,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-016,3u1sIrgcLHrfOfR80BuSMT,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-017,0PrvGfd05UFeXgizTww507,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-018,22KQT2yaPN5eRhvWENenhg,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-019,3IwhVQBk9MW823gZ7Xp$CY,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-020,0oiR5FVbLI59okKRmr2LZe,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-021,1k3vq2apfM5OmF3PU$UxIn,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-022,2nu8_jVDLK0vo_EJ1ps134,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-023,1N$yGTz81Q1uwMeh4tOVL2,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-024,3VZbePGrfOTgmlYQoE2Rlm,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-025,1y3VB3CevTz8IygtmJqRHi,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-026,1KstQXH0fQzxK$QbB1pppp,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-027,3X3Z0w_p1TaRyWgjQViMt5,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-028,2FYAuh69zHAhFbkrHm9WqZ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-029,26DU4CzHbSYxw9$VjOmmRZ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-030,0L88Z_7ifTSRZI2W9HMHm$,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-031,3KdQMQ129Q4P80ge69whbF,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-032,2a4FnjjHHTlAjSa76$5xfq,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-033,2lEDhdn1DHZf7vzHVHHbC8,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-034,0uoH0Cp1zGuwC1r8gElsL_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-035,0e4dPUc2fNXvTpoh5cjjln,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-036,2Z1VHf6GDNrvPHZEydfueO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-037,09mEGyYCjPIBbDDU19wsYo,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-038,2JOfe3QnvLdwyq4kQaEk0Q,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-039,1t9H3LjfHVieDEcXF36dB1,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-040,0L53HJjN5MJw63nY5wqnlv,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-041,1z0a6zANzQoAcgw5a9S3Bs,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-042,20Fpxahf9NuxIsni8Aq$wV,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-043,2XAgoVYEDK4ug7EFHA0YmH,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-044,3Opvc95JnGgOCPNa6AMUNV,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-045,34xxNlGi5OgxGT31dWjdJo,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-046,1h3DN95PXPtxQzA5NZr3b0,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-047,3Qp8qaV9HMYvqvB$4RMy0f,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-048,33WNHxQCTTTg2pJI5MMrKN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-049,1Zh6yPy8jQv97guz8Iofvn,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-050,28Zm4LgZPUqQFOzZrLK$pb,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-051,10LF5jwzzV1uf$1WcTx9ra,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-052,3v$y$MoN5HHxszDjCr6IYR,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-053,2CeR922uXUSfxLT6aAVjQH,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-054,1TnIJ5veXPKggSxqBl1MT0,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-055,2HFkph9TTSz9r9LUrRPW$k,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-056,3MDHA4TxnT$BkDTI4S2ZlX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-057,1EgSKxOw5LAhB5XsrsEBmt,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-058,3TsMtmRKHPJhwmB$DMYpr8,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-059,2zplSe$OLKjhMs022tAZl8,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-060,1B9Uy0i75MV8wN6Hlv7kRF,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-061,0ukMzZOOfPywcelatmMrwL,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-062,0fvQpLxVTPghJr1nkEYom_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-063,1W4rhFmuXNf85W$Dy7hQjN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-064,3mafPXPM9HaOjEd8xvSRgz,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-065,1vazRs4pjOFvZZ51F1FfQ8,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-066,0_7BhYE1LIVeWAv4K11hTC,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-067,3Qv5nAWajL9fzw9Bki8IpL,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-068,3dmzGbrhPRRxsSXdCu9knd,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-069,1_05nVKXPKJfrGJ$6IgCEv,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-070,2tIGVJCqDOxg$3tYXI4E40,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-071,2mW7$SpirOrAOWldZMr0pX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-072,1pbKk27x1OYhR3fB11JOaL,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-073,13CQhCYovNa8j1E8rEpWS8,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-074,2yIwy_S3zSe8QNvHAKi7pc,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-075,32d_IhzfzMzAmtZ96dQ4uN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-076,2y5D8GnnTQlxYr0iywTy5H,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-077,0bn$RJXejHZ8wEbwj_yQ9i,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-078,0WoCZ3EvDHBxwygrqYa79e,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-079,20H4ELDs9Js9ZM$8CALs5O,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-080,1aQbJ3wLTHFusteLLp1RlU,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-081,0rnXdYcv9Q2gyUxki7hxUw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-082,2GXotVuYLSAQpYYStpxEJQ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-083,3EWnouTWHS9R7g__9OIOns,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-084,1rD8lAPdPNefMP47f8Ww57,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-085,0KwAp0M1vNTgFXrhd7QnJN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-086,31SCB912vGTBExQNOevDIF,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-087,2WGw8jTeLJEO7N5I7YbSkl,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-088,0QxP4g9ILSfhBMp7rERhwI,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-089,0lgE5NSDLPDQoaaV7PPqZo,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-090,1RsirfXYvL7fOpdm3k$$pu,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-091,3zenA0YQTSGwObFdbDI7Xn,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-092,068AhrKvTHLQvq0uOt0CYw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-093,2oEqAYZILO6ALpPfUzLZlL,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-094,29PiFaCOvILRHIxMpDgjJn,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S01-095,1CtZQAWSXMzepq2uaBNpR5,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-001,3XL$dORZLJbuccbS1wcXL5,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-002,0STGURFt1RWuwFdIFoKMSX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-003,1pRV0dxOLQy9v2Q0B0JgUQ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-004,0wqR5kpOjMCAiWqrvCV9_6,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-015,3zGPZ8pg1KLBxIKqG8JOfO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-016,14jnEuBZ9Te852E2cYwC5z,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-017,06YziVyCrO2AyAeTDGRjQx,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-018,2x$uFWaRLRihGbNemrUHW3,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-019,1vW9PSIvPS4QcvDu96Yems,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-020,1ehiW8qHPNS8t1QhM6fHBM,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-021,2Bs3$hCbLNwRrmFqOHzEFO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-022,1NmETY7q9NfgSkK1YKkYhz,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-023,0EN$$V2tTPXgzT2qCJFX2u,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-024,27H_KfMsXIyxiAhqfUGLzb,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-025,1r7KgbylbV2ujfkFzZNqVb,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-042,1VYUkiiOHOue5xs$yKADFy,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-043,0zUc5ZUMPMCvVrS0jziVoW,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-044,3PFG1bzcHRxBJsymqcLYh6,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-045,0P7GlhzlbMrfIxv0LvqrEk,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-046,0VXTvsh6DJPvzRlif7TOKB,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-047,18BEJ3$UzLn9jZJLWnSHS_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-048,0dI0EeZwDJc86wFzU10GqN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-049,2pwoBG4w9LnPUitYel$2NY,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-050,0n78uH6JHVRg0d3WK0LEpS,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-051,2JIQZzDlzMmfRrwLpERfpw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-068,06J$AQuHvUNwOKFMR8TSrQ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-069,0T5wLhx1PRaRnCO6q26nWQ,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-070,3mN3O593DOKBYhTAyFHrKv,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-071,1sHD8RKKnUueguq$MUkn2L,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-072,2SRfZlIufTzOj6j8dZfQNi,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-073,2VIjDjdkPUshXR4MUuZA1d,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-074,062LfGCxXLEx1Yj0ouO_YE,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-075,0LKmWs9M9JhxoYYumW3ZH0,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-076,3nX33k7PzKqeAwRcwGbo5X,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-077,1bKbD4gu5IeeTrep3icamr,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-078,3noRKM0XTPA9h9K_KnRRkH,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-079,2RYiS70pvJ2uCgdJZDup5B,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-080,1uJwEF0Z5Ujxh03wxkCGV6,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-081,3CxKOUw0DKFe2jZImdssAM,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_S02-082,25rrQPT0XJpxjXtWgNEuTx,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_T01,2gSA55vanH8ODXPrevY6hS,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_T02,1r03ubKVPIAPU_R$4tVrbd,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_T03,1qbKJG7tzOvwuITtIff3ER,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-004,1pGR17_lLQfB5Dhng8iwoT,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-005,1D5lnKnWXTDBVP2qySqGv0,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-006,1O0jda4YbRFgQGMfI$OWEL,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-007,3UM1qnkubLlhT31RGncCLg,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-008,3PU_XRvK9Qjw_DaqpcA$jW,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-009,0nI6IK7wzJmfh_ezfkphcl,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-010,3nSKUZE6jL28f9dSelLaE_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-011,3WJL5_TWXSiA4Ld7l3o6kb,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-012,0Dt9b8EV1K0xJ2Prg3Ngih,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-013,3e09vQxibUqvML_82cDGu_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-014,2tBDQYDoDLWhZPYWzXywsr,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-015,0pBJHhvLPJoxHa5XOCA2Ig,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-016,3ZKaHgWUrKGv9MTIMhEPQW,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-017,3fcLH6agDMXQPNZ7FJAJRb,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-018,2u7Y7cJeTGt9L_Tben6QhV,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-019,3_puH7FpTTFuG_5qU1BM5I,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-020,3u8OqC_5jK2xza4MoOIPbS,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-021,2Qmyd5yI1PrhwwBi2TCVRO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-022,3l7096eBPG3hMmb5xUCVPN,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-023,1Yxig0mVXOTgwwJ2EkaXsU,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-024,13D3MjA$1Qffje1Cm8iEfR,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-025,3Tqb34$x1JEPiYpqmuTJTt,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-026,07aXnrCvrORwKh8ZTb6QTH,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-027,2P3TeYJXLQrePyG1iAR7sf,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-028,3FiIGnQZLM49W8b6lmwsNn,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-029,0_DoRG62rJ8v$6tcBCUnG1,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-030,32WmS1wIjSzvFV9j2zXe5M,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-031,1X8sDXN7TL5hElMgbb6SQj,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-032,1JBJ$CL4HJTfr_ieTYIgHe,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-033,2KCFH38IbOOw4J0v0p8stq,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-034,18XPcFJw5QS9t994ykkanS,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-035,0mLhjF4PTO2PpeN17M_tkR,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-036,1DTxx2vZ1TBQ60HPkPaUiE,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-037,0HhNQN3dzU9giGliwsED4O,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-038,0kqPkEbfTQ2AlGqvLboRUX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-039,1NSY5$sCzNGRsbkGTn8VUX,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-040,2Ty8LlMcnJGhojPT1OKsxH,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-041,1VsfqHxaTTu8c_bzHG_oCw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-042,1eAJARv9jNNOoA0mdqLyDp,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-043,0udROiGCLNeh4$2N$oyiXz,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-044,1mSEqAolHQog3Up$NIirSw,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-045,0iZTr0EQ1K5B631ba9Nif_,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-046,0zr12AOhLLX9hRzf_z7WWP,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-047,25W_jDA21RaeK1rJM5MQ92,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-048,1NpaDk49rKAwaq$6SOMJ21,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+PIPE_B,2uxjlQpbjUUv2UC$J$F1JC,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+green_B,3K6pWDCm1KuRkDLYGXyhSh,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+lawn_B,3DQ93yPh9H9gS6aKs3R_3F,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+shrub_B,1TDXd0_SnQ5RCqmS8RbvCO,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+walkway_B,2uUU441FzPTQzrtbwPLFUK,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,INPUT,IfcRelAssignsToProcess
+ZONE_B,2x_36Mv31GngMSBAisIBtD,B_check,3n7dHmu61RGOxSFzmYZMsK,PK.70.10.B,구역 마무리 검사 / B구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_trench,3nDxESg1nV2esLD9_Z00Ou,PK.20.10.C,관로·집수정 굴착 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_trench,3nDxESg1nV2esLD9_Z00Ou,PK.20.10.C,관로·집수정 굴착 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_backfill,1r0fUENpbL7O6nViXdNDBw,PK.20.50.C,되메우기·다짐 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_backfill,1r0fUENpbL7O6nViXdNDBw,PK.20.50.C,되메우기·다짐 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH06,1PKm$l7k9T09zfj6ArLesB,C_foundation,3MzvogOPfP49hPGElBmD2e,PK.30.10.C,휴게시설 기초 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_foundation,3MzvogOPfP49hPGElBmD2e,PK.30.10.C,휴게시설 기초 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+shrub_C,0u6PcUk4bRlxGZvc3a_Wfe,C_soil,3phl_q9RzUouelbUOY22gM,PK.50.20.C,식재기반 정비 / C구역,OUTPUT,IfcRelAssignsToProduct
+green_C,0xSKiI1HfMM9XaOKMx74R6,C_soil,3phl_q9RzUouelbUOY22gM,PK.50.20.C,식재기반 정비 / C구역,INPUT,IfcRelAssignsToProcess
+lawn_C,1p635B579Ue8dBXvP_ghrm,C_soil,3phl_q9RzUouelbUOY22gM,PK.50.20.C,식재기반 정비 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_soil,3phl_q9RzUouelbUOY22gM,PK.50.20.C,식재기반 정비 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_I01,02y87a1DbR9Q4AvdxI7PYf,C_trees,2fkikDmWfJ1vR$Sq8fBH35,PK.50.30.C,교목 식재(구덩이 포함) / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_N01,32o20Yq$fIu8Fbxd4ku08H,C_trees,2fkikDmWfJ1vR$Sq8fBH35,PK.50.30.C,교목 식재(구덩이 포함) / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_trees,2fkikDmWfJ1vR$Sq8fBH35,PK.50.30.C,교목 식재(구덩이 포함) / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+CURB_C,0pZzj_wsXG0Pip1nBWHTLN,C_curb,0$9KHyMNTPFwSkfydDXBB$,PK.30.20.C,화강석 경계석 설치 / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_curb,0$9KHyMNTPFwSkfydDXBB$,PK.30.20.C,화강석 경계석 설치 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_C,0qfwjhpMnKS8C9ETlQ6DvM,C_subbase,28ZYQISCHUhR9PyPT7JVT2,PK.40.10.C,쇄석 포장기층 / C구역,INPUT,IfcRelAssignsToProcess
+walkway_C,19Dv29Y7vGQPOnCF_RhSPQ,C_subbase,28ZYQISCHUhR9PyPT7JVT2,PK.40.10.C,쇄석 포장기층 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_subbase,28ZYQISCHUhR9PyPT7JVT2,PK.40.10.C,쇄석 포장기층 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_C,0qfwjhpMnKS8C9ETlQ6DvM,C_pavecheck,3tcJijSsfR58MsDa6mzsFa,PK.40.20.C,포장 기층 검사 / C구역,INPUT,IfcRelAssignsToProcess
+walkway_C,19Dv29Y7vGQPOnCF_RhSPQ,C_pavecheck,3tcJijSsfR58MsDa6mzsFa,PK.40.20.C,포장 기층 검사 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_pavecheck,3tcJijSsfR58MsDa6mzsFa,PK.40.20.C,포장 기층 검사 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_C,0qfwjhpMnKS8C9ETlQ6DvM,C_finish,2ciU9Q1aXTmBj9GQHLSb_L,PK.40.30.C,모래·콘크리트블록 포장 / C구역,OUTPUT,IfcRelAssignsToProduct
+walkway_C,19Dv29Y7vGQPOnCF_RhSPQ,C_finish,2ciU9Q1aXTmBj9GQHLSb_L,PK.40.30.C,모래·콘크리트블록 포장 / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_finish,2ciU9Q1aXTmBj9GQHLSb_L,PK.40.30.C,모래·콘크리트블록 포장 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_B01-001,1NYMvE5ILU8gm3vg1UN72i,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-002,2LwZ4BzNLO0uQXO2SvekPT,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-003,3WCKa4RnfVFfXRKywJupFW,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-004,2WiDxLF75RYf7RQD27Q_as,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-005,1xs6ajYEXPFeIg1_R5aygJ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-006,340wse$TTH9AA9DZxMuI98,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-007,3mrjTI8CPMGxBGH_NLbL0F,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-008,2QLpM_5mfVJQC6Ep6qgwCJ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-009,0VWPR_oJXJqBlm5lZM$l$r,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-010,1j2eaynWnTChuPM5RnTK$J,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-011,3VZy8Q56HVUBT9v6iTwVAj,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-012,0zCWKuk4bSrQT_gUll3iSr,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-013,1Qu9Y4VPvI8QSVeQDFsgcW,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-014,1BCiDsgbHVJeeGjnV4c8tP,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-015,0E7lEDYSbNrALcsBqA4E4Q,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-016,0nj58s_i1VCOsmu5EFP1GQ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-017,2sAv2f0y9SNQRX0STlhr$g,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-018,3NYLaHKibRuhozMjiyNc58,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-019,0VHIruTYTTTxcKg5YohOje,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-020,1mUY36l6HO_A0BN7rbpJ_W,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-021,2i38I4xgLMzBZMhqsSI5Ud,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-022,2AFZAlqPTSKBbsoubLeaj5,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-023,3mXTX8Q6HLLfasVSVQm1Kk,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-024,1HYU0LPCvI$vrqgpBtC7d_,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-025,3bJQJiDiDM7QmRG1qt5QLd,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-026,3ImQMWszbPDOUTISM$$NMl,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-027,0KWlfDxTfQohaUOQcnc73$,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-028,28dm_xvPPOzAlk35iXVLnL,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-029,38QFzX11nJRAZYpAxZki0q,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-030,1psr1n6AXTiepbYNL3e05d,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-031,00HqyoMsLO0gSOtdVEIt8J,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-032,1qwa6N2e5R8fBY_bCZt5MK,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-033,1DpgIZilbP7804Y1KC9tlw,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-034,3Ojce$eBTM98jRog6caZa_,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-035,0W3nzHvNzVMxUfOTv3jcUl,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-036,1iqKe5o$fVUP3gLrtpa5I5,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-037,1_gmCT1IzGJRTxf7rG3$m8,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-038,0960wVj6fL8fYtFZnmzpHF,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-039,3nfutFqbPGFweYz3W7udJH,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-040,2BoJNLrmjKg9oJW4gL1lRA,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-041,10Jm2hIXTGWuB3qbvsGNGk,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-042,0$3AhVBZHUewoEhD$NPcAL,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-043,0DI6heqBrGh9_oLpNkOARz,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-044,2iDAeYw8fHtPPd42iwXBeY,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-045,1KRxNkiAnMKxaWzZZI5ZzT,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-046,0Kzx8xtGzLruAOt4ybAhIS,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-047,0J494PjOXS1gRM5AbExuVA,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-048,2cDDBk8$jVQO48UKV6WzuL,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-049,04g2Xc0AfLTAj0qAXnSX4J,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-050,3rO35tUG9PKATzQZubieoZ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-051,3xV4f1MX1Lxw0gtDzWgBva,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-052,2sBN4BQXTSshFOjFM6ERAs,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-053,1ajY79SRvGSh5cvvoEhz3S,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-054,3fgYBR$Q9Ngx9QHat3nhpK,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-055,23Sbx_2_zUifsTqcHL$L89,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-056,395XnGulLH89_eigmczpMo,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-057,1R0dyVnPrVABvo25tbiYEB,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-058,0$LpI2kc1J8gxZG5bLB5fb,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-059,3YnjIpIPDRbhsJ7Ji6IWaj,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-060,1lFrzKO2bTI8HXaa4SRk2T,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-061,3nU29njE1MaxmEh$sOI3BP,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-062,0EOkSRN0rQWuCS16vz7zfI,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-063,2m52Od0gzVJevfHNKjqRpj,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-064,0XvCGVF51JLhcIvRx0BCUA,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-065,2TYYhIYV9TNxG3AlZCmvf8,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-066,0TOtWmCkzPyv9Cz4f0e$Lg,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-067,3mGKWp07DO6wOgJxWl8mMm,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-068,3RmEdSacvNGhmTNagDcbXm,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-069,3Y8ZM8XrnLlvaGTHLoifh9,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-070,1hku96nQLH784r$ccuajly,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-071,15oI82TfHItQn6tvOsGP6R,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-072,33PyTiASXPnefZrjcqzYDF,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-073,0$3QLzKsXQ6gGCLfRhLRxh,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-074,1E5IZPZjjSFOZNCMD$9kIF,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-075,3Y5WSVZzjGD9uctUBH6tRc,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-076,15IQz0rijRmANeCkhQXxK9,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-077,33LHln0ZLRu9fwJkYIoL5M,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-078,0vd57zx7XKOxwfQgFFTmZ_,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-079,1I7V25gcLQugQN8VMmyr54,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-080,1yM8g6kBrR0B4eyCb27xky,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_B01-081,1DyxVnh3vIyAJGdNUEvc$j,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-001,34ulYXPovGuvno_D$XFegX,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-002,1cvTK9urHKnu$zZjQ2sFfw,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-003,1rjzjktWPO_ht0nz5QtjeE,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-004,2r51_iq4bKnPlE9sqpUqoR,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-005,1Zgn2DhfPUzwweUppN2387,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-006,0gexFRWHXTduhdHPh40J4T,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-007,3hyV3b0APPJO_CYT5$v69y,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-008,32ls88HS5IPf8nSm8eIwEB,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-009,323oyGiZnMG8r11uZdngRm,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-010,3Af2f8awbSOAE$DF7T0tF6,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-011,0ga7TB7urPGQdYwUtFDAjx,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-012,3gCHXs9dzR78PoqSIvTpBk,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-013,2_CgA_MhzLOAsi7zlbvaaJ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-014,1gnYxaYJHKQRIOvR1xOWZl,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-015,1OI$3vILTRRxtrcl5u7oyQ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-016,08e7y0F7fMVhOgtu6CF4HK,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-017,2_m2dh5avJa9_2JJTH0pTX,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-018,0ldfJQOjLIngfGZzpTyFTy,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-019,1hl3UMoEPQN89AxITB7mGu,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-020,3i3wLaXUDMredYAlOY9F0k,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-021,3gphtraivHahGtnlxwjjNE,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-022,2KXEplgyTPzvzIFHcY7gFr,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-023,27C7q4w_LOC89tM6Xiuscj,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-024,2THjCFSbrUIv6enfxnLxJm,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-025,05x49oePTNeOEPoL$RGSUX,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-026,0rM4OtEIDKcOWMvSOYNi1d,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-027,0QAd_0xmPLlv4oUnbEoW8z,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-028,2bzteFUL5Jh8p3umlmiSJI,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-029,2HIyy4yFfPUOO3cvTFL8OS,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-030,2k_nNN54fRDRooR81SHtTM,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-031,24vyN2olzRyOo5SIhvn9db,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-032,2jHcT9gU1KqBdMgzBJijpl,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-033,0WE7CH_svHEwu__Y_yFh7c,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-034,0sqCSW6VbKWwOzemvAHx4f,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-035,2UtYM$4UjPBgdtcl805iSg,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-036,3UhjmgyvzLGe4E1xpaT281,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-037,332da6BW9T7hgBDCyG$qIB,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-038,3X_rUDE$XGaBKeWbaVk_Mn,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-039,3OOfrZ5IvK5v8UUZL9DMSy,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-040,22VR0GGFnLHwHwsrZkp8hU,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-041,0hsfchUavJkv9jOPB5RNEC,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-042,04qRRWAcTO_gwFwfM5jaMj,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-043,1b5YLbJRfHkxMeideaf$tb,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-044,1cXU67b01RBwWlQ0sIjF8q,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-045,2lhYeSKxnKyeF01tkamezD,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-046,1iB4cfnWvQUgU40c96NSeb,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_R01-047,1i1CVDVVTOPg96a5YMDbRW,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-001,0M0iH79kLHGxJ5LaEtPSdE,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-002,26dTlXDoLUpvUY0_NJbnPa,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-003,1_QMF7AjTLwxAa6M2esmin,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-004,27ol26vjjI98uAomxzmXhe,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-005,0H62th8YfSwBrmUMmKkUdI,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-006,2sx4PJPELNI9FFyTorSMcU,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-007,2juDyzDpLKqwUvwlIWmBbp,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-008,1Spe8uX2fO5eB_i34LUJN4,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-009,1WV8L4uPTGnBLBHCXujZks,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-010,3rkGdSLtzGs8BTWe9iym6$,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-011,0fD$KA1qjItOrT87CcHsIo,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-012,1qlySKqdTL$wS_umVyqlts,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-013,0SULF2RtHGmAbm4oVaNZX1,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-014,1v4XrGxeDKQxXz8e4BXrjo,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-015,1FM45rqUnI7QVLxZp9XuTX,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-016,1WAb7piRzK5PWv8Vq19fox,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-017,0W2V_mPknGlw2xVLh09_Pu,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-018,2eF$vPKYbVSheIYqySNQuX,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-019,0UtrvUQr5NrQpWCni3uynJ,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-020,3Bynax09zRPv0s2q6dEyVb,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-021,3HcPo0izXVcRSmIHIJA75C,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-022,2ajIYGPATPvfScuQMYAhsP,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-023,1VzQIwjKrSO8$WqG7prtgh,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-024,2EcvYWzO9TzAGtsLrJF2ei,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-025,2dZQTskgXQmOYCHl$9mxNb,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-026,0dclXMfkjMLQyAAU4k2dK1,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-027,3XDphuOCfRHOL6tN$kqRjN,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y01-028,0VrfpolUXK1hwTeI6KThaf,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-001,3_rpQllVbOKfblemkjIv1I,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-002,2TEQw3VtHRJOvGuL3w7icu,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-003,1jNJ1$M$9HSeb8WpIsSwlG,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-004,0XX$FtAyjGVgnbgQJEWSin,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-005,2R1garEgzJqQdDOxL4EGZd,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-006,2xeA4GoC1MrxClbzjvQpFg,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-007,1SRa8RzgfRkxR207mDqr$c,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-008,3Oam7eeNHQR8tsNmWH62G3,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-009,1lFlgqWz5RIwOAfsPpjM0S,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-010,1WZE4OrrPPwBEzCUJ5zZ_w,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-011,1wmWB5nmDSegOMAHezrpBG,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-012,2cPvD2fnvR0h2_hIa1ZYZ$,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-013,1MXInfX6HOw9g5nFD7NE9T,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-014,0FJDb0HT1NLOeuAkLS$260,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-015,0TZ2bvMiXRYRpKUnAIi8dU,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-016,14dhcChK5N4O5dYSVcfWZV,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-017,1U2sW7_UzLGOQZcg_mbc6L,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-018,0wxp2FKufGF9CgIHqG7vIV,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-019,2Qhob$ZwrGhhJeaab6lk4r,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-020,2CRwX2vYrHxuBb_d74xVNu,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-021,0X6IVkqYvHOArC0TbYZ6Ky,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-022,2Een$xhZLQtBprPRjXwSrK,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-023,3r7QguALTTHOEkw4oViYzi,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-024,13G5qfv5LLFfJlpK6KhaB5,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y03-025,3FFY3dSpDQdwABK7vkCFjD,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_shrubs,2hEwCNlHLLfwqMtDdNdGi_,PK.50.40.C,관목 식재 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+lawn_C,1p635B579Ue8dBXvP_ghrm,C_turf,18Tkd5H2bNbfp2DnQiAhYt,PK.50.50.C,평떼 잔디붙임 / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_turf,18Tkd5H2bNbfp2DnQiAhYt,PK.50.50.C,평떼 잔디붙임 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+green_C,0xSKiI1HfMM9XaOKMx74R6,C_mulch,18HPlXDF9SXuOM7vaDyxua,PK.50.60.C,수목 하부 멀칭 / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_mulch,18HPlXDF9SXuOM7vaDyxua,PK.50.60.C,수목 하부 멀칭 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH06,1PKm$l7k9T09zfj6ArLesB,C_bench,2ZZuVLGG5HL9UR2dcuTRnL,PK.60.10.C,벤치 설치 / C구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_bench,2ZZuVLGG5HL9UR2dcuTRnL,PK.60.10.C,벤치 설치 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH06,1PKm$l7k9T09zfj6ArLesB,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+CHAMBER_C,2IhHL6lirIew1ZMclMfFOK,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+CURB_C,0pZzj_wsXG0Pip1nBWHTLN,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-001,1NYMvE5ILU8gm3vg1UN72i,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-002,2LwZ4BzNLO0uQXO2SvekPT,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-003,3WCKa4RnfVFfXRKywJupFW,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-004,2WiDxLF75RYf7RQD27Q_as,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-005,1xs6ajYEXPFeIg1_R5aygJ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-006,340wse$TTH9AA9DZxMuI98,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-007,3mrjTI8CPMGxBGH_NLbL0F,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-008,2QLpM_5mfVJQC6Ep6qgwCJ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-009,0VWPR_oJXJqBlm5lZM$l$r,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-010,1j2eaynWnTChuPM5RnTK$J,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-011,3VZy8Q56HVUBT9v6iTwVAj,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-012,0zCWKuk4bSrQT_gUll3iSr,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-013,1Qu9Y4VPvI8QSVeQDFsgcW,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-014,1BCiDsgbHVJeeGjnV4c8tP,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-015,0E7lEDYSbNrALcsBqA4E4Q,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-016,0nj58s_i1VCOsmu5EFP1GQ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-017,2sAv2f0y9SNQRX0STlhr$g,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-018,3NYLaHKibRuhozMjiyNc58,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-019,0VHIruTYTTTxcKg5YohOje,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-020,1mUY36l6HO_A0BN7rbpJ_W,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-021,2i38I4xgLMzBZMhqsSI5Ud,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-022,2AFZAlqPTSKBbsoubLeaj5,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-023,3mXTX8Q6HLLfasVSVQm1Kk,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-024,1HYU0LPCvI$vrqgpBtC7d_,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-025,3bJQJiDiDM7QmRG1qt5QLd,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-026,3ImQMWszbPDOUTISM$$NMl,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-027,0KWlfDxTfQohaUOQcnc73$,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-028,28dm_xvPPOzAlk35iXVLnL,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-029,38QFzX11nJRAZYpAxZki0q,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-030,1psr1n6AXTiepbYNL3e05d,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-031,00HqyoMsLO0gSOtdVEIt8J,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-032,1qwa6N2e5R8fBY_bCZt5MK,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-033,1DpgIZilbP7804Y1KC9tlw,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-034,3Ojce$eBTM98jRog6caZa_,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-035,0W3nzHvNzVMxUfOTv3jcUl,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-036,1iqKe5o$fVUP3gLrtpa5I5,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-037,1_gmCT1IzGJRTxf7rG3$m8,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-038,0960wVj6fL8fYtFZnmzpHF,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-039,3nfutFqbPGFweYz3W7udJH,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-040,2BoJNLrmjKg9oJW4gL1lRA,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-041,10Jm2hIXTGWuB3qbvsGNGk,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-042,0$3AhVBZHUewoEhD$NPcAL,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-043,0DI6heqBrGh9_oLpNkOARz,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-044,2iDAeYw8fHtPPd42iwXBeY,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-045,1KRxNkiAnMKxaWzZZI5ZzT,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-046,0Kzx8xtGzLruAOt4ybAhIS,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-047,0J494PjOXS1gRM5AbExuVA,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-048,2cDDBk8$jVQO48UKV6WzuL,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-049,04g2Xc0AfLTAj0qAXnSX4J,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-050,3rO35tUG9PKATzQZubieoZ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-051,3xV4f1MX1Lxw0gtDzWgBva,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-052,2sBN4BQXTSshFOjFM6ERAs,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-053,1ajY79SRvGSh5cvvoEhz3S,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-054,3fgYBR$Q9Ngx9QHat3nhpK,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-055,23Sbx_2_zUifsTqcHL$L89,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-056,395XnGulLH89_eigmczpMo,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-057,1R0dyVnPrVABvo25tbiYEB,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-058,0$LpI2kc1J8gxZG5bLB5fb,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-059,3YnjIpIPDRbhsJ7Ji6IWaj,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-060,1lFrzKO2bTI8HXaa4SRk2T,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-061,3nU29njE1MaxmEh$sOI3BP,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-062,0EOkSRN0rQWuCS16vz7zfI,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-063,2m52Od0gzVJevfHNKjqRpj,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-064,0XvCGVF51JLhcIvRx0BCUA,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-065,2TYYhIYV9TNxG3AlZCmvf8,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-066,0TOtWmCkzPyv9Cz4f0e$Lg,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-067,3mGKWp07DO6wOgJxWl8mMm,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-068,3RmEdSacvNGhmTNagDcbXm,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-069,3Y8ZM8XrnLlvaGTHLoifh9,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-070,1hku96nQLH784r$ccuajly,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-071,15oI82TfHItQn6tvOsGP6R,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-072,33PyTiASXPnefZrjcqzYDF,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-073,0$3QLzKsXQ6gGCLfRhLRxh,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-074,1E5IZPZjjSFOZNCMD$9kIF,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-075,3Y5WSVZzjGD9uctUBH6tRc,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-076,15IQz0rijRmANeCkhQXxK9,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-077,33LHln0ZLRu9fwJkYIoL5M,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-078,0vd57zx7XKOxwfQgFFTmZ_,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-079,1I7V25gcLQugQN8VMmyr54,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-080,1yM8g6kBrR0B4eyCb27xky,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_B01-081,1DyxVnh3vIyAJGdNUEvc$j,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_I01,02y87a1DbR9Q4AvdxI7PYf,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_N01,32o20Yq$fIu8Fbxd4ku08H,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-001,34ulYXPovGuvno_D$XFegX,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-002,1cvTK9urHKnu$zZjQ2sFfw,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-003,1rjzjktWPO_ht0nz5QtjeE,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-004,2r51_iq4bKnPlE9sqpUqoR,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-005,1Zgn2DhfPUzwweUppN2387,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-006,0gexFRWHXTduhdHPh40J4T,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-007,3hyV3b0APPJO_CYT5$v69y,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-008,32ls88HS5IPf8nSm8eIwEB,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-009,323oyGiZnMG8r11uZdngRm,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-010,3Af2f8awbSOAE$DF7T0tF6,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-011,0ga7TB7urPGQdYwUtFDAjx,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-012,3gCHXs9dzR78PoqSIvTpBk,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-013,2_CgA_MhzLOAsi7zlbvaaJ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-014,1gnYxaYJHKQRIOvR1xOWZl,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-015,1OI$3vILTRRxtrcl5u7oyQ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-016,08e7y0F7fMVhOgtu6CF4HK,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-017,2_m2dh5avJa9_2JJTH0pTX,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-018,0ldfJQOjLIngfGZzpTyFTy,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-019,1hl3UMoEPQN89AxITB7mGu,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-020,3i3wLaXUDMredYAlOY9F0k,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-021,3gphtraivHahGtnlxwjjNE,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-022,2KXEplgyTPzvzIFHcY7gFr,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-023,27C7q4w_LOC89tM6Xiuscj,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-024,2THjCFSbrUIv6enfxnLxJm,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-025,05x49oePTNeOEPoL$RGSUX,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-026,0rM4OtEIDKcOWMvSOYNi1d,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-027,0QAd_0xmPLlv4oUnbEoW8z,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-028,2bzteFUL5Jh8p3umlmiSJI,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-029,2HIyy4yFfPUOO3cvTFL8OS,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-030,2k_nNN54fRDRooR81SHtTM,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-031,24vyN2olzRyOo5SIhvn9db,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-032,2jHcT9gU1KqBdMgzBJijpl,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-033,0WE7CH_svHEwu__Y_yFh7c,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-034,0sqCSW6VbKWwOzemvAHx4f,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-035,2UtYM$4UjPBgdtcl805iSg,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-036,3UhjmgyvzLGe4E1xpaT281,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-037,332da6BW9T7hgBDCyG$qIB,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-038,3X_rUDE$XGaBKeWbaVk_Mn,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-039,3OOfrZ5IvK5v8UUZL9DMSy,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-040,22VR0GGFnLHwHwsrZkp8hU,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-041,0hsfchUavJkv9jOPB5RNEC,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-042,04qRRWAcTO_gwFwfM5jaMj,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-043,1b5YLbJRfHkxMeideaf$tb,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-044,1cXU67b01RBwWlQ0sIjF8q,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-045,2lhYeSKxnKyeF01tkamezD,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-046,1iB4cfnWvQUgU40c96NSeb,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_R01-047,1i1CVDVVTOPg96a5YMDbRW,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-001,0M0iH79kLHGxJ5LaEtPSdE,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-002,26dTlXDoLUpvUY0_NJbnPa,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-003,1_QMF7AjTLwxAa6M2esmin,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-004,27ol26vjjI98uAomxzmXhe,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-005,0H62th8YfSwBrmUMmKkUdI,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-006,2sx4PJPELNI9FFyTorSMcU,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-007,2juDyzDpLKqwUvwlIWmBbp,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-008,1Spe8uX2fO5eB_i34LUJN4,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-009,1WV8L4uPTGnBLBHCXujZks,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-010,3rkGdSLtzGs8BTWe9iym6$,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-011,0fD$KA1qjItOrT87CcHsIo,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-012,1qlySKqdTL$wS_umVyqlts,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-013,0SULF2RtHGmAbm4oVaNZX1,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-014,1v4XrGxeDKQxXz8e4BXrjo,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-015,1FM45rqUnI7QVLxZp9XuTX,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-016,1WAb7piRzK5PWv8Vq19fox,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-017,0W2V_mPknGlw2xVLh09_Pu,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-018,2eF$vPKYbVSheIYqySNQuX,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-019,0UtrvUQr5NrQpWCni3uynJ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-020,3Bynax09zRPv0s2q6dEyVb,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-021,3HcPo0izXVcRSmIHIJA75C,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-022,2ajIYGPATPvfScuQMYAhsP,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-023,1VzQIwjKrSO8$WqG7prtgh,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-024,2EcvYWzO9TzAGtsLrJF2ei,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-025,2dZQTskgXQmOYCHl$9mxNb,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-026,0dclXMfkjMLQyAAU4k2dK1,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-027,3XDphuOCfRHOL6tN$kqRjN,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y01-028,0VrfpolUXK1hwTeI6KThaf,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-001,3_rpQllVbOKfblemkjIv1I,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-002,2TEQw3VtHRJOvGuL3w7icu,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-003,1jNJ1$M$9HSeb8WpIsSwlG,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-004,0XX$FtAyjGVgnbgQJEWSin,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-005,2R1garEgzJqQdDOxL4EGZd,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-006,2xeA4GoC1MrxClbzjvQpFg,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-007,1SRa8RzgfRkxR207mDqr$c,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-008,3Oam7eeNHQR8tsNmWH62G3,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-009,1lFlgqWz5RIwOAfsPpjM0S,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-010,1WZE4OrrPPwBEzCUJ5zZ_w,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-011,1wmWB5nmDSegOMAHezrpBG,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-012,2cPvD2fnvR0h2_hIa1ZYZ$,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-013,1MXInfX6HOw9g5nFD7NE9T,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-014,0FJDb0HT1NLOeuAkLS$260,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-015,0TZ2bvMiXRYRpKUnAIi8dU,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-016,14dhcChK5N4O5dYSVcfWZV,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-017,1U2sW7_UzLGOQZcg_mbc6L,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-018,0wxp2FKufGF9CgIHqG7vIV,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-019,2Qhob$ZwrGhhJeaab6lk4r,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-020,2CRwX2vYrHxuBb_d74xVNu,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-021,0X6IVkqYvHOArC0TbYZ6Ky,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-022,2Een$xhZLQtBprPRjXwSrK,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-023,3r7QguALTTHOEkw4oViYzi,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-024,13G5qfv5LLFfJlpK6KhaB5,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+P2_Y03-025,3FFY3dSpDQdwABK7vkCFjD,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+PIPE_C,0dKX0v4MnGaRajxAUcYi6n,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+green_C,0xSKiI1HfMM9XaOKMx74R6,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+lawn_C,1p635B579Ue8dBXvP_ghrm,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+plaza_C,0qfwjhpMnKS8C9ETlQ6DvM,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+shrub_C,0u6PcUk4bRlxGZvc3a_Wfe,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+walkway_C,19Dv29Y7vGQPOnCF_RhSPQ,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,INPUT,IfcRelAssignsToProcess
+ZONE_C,0q2_uZzdrVsxsTXBPSE5Qa,C_check,0TLh3R24LJzPazNU4Uoi5b,PK.70.10.C,구역 마무리 검사 / C구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_trench,3OJwMFDGDPRRu_rQF61JFL,PK.20.10.D,관로·집수정 굴착 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_trench,3OJwMFDGDPRRu_rQF61JFL,PK.20.10.D,관로·집수정 굴착 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_backfill,2RyHpbymTUXgigqCmoLPK4,PK.20.50.D,되메우기·다짐 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_backfill,2RyHpbymTUXgigqCmoLPK4,PK.20.50.D,되메우기·다짐 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH01,1cBKeX8qvQavDz0lALOOsz,D_foundation,3eeK9C23XMD84XUyOI3f1f,PK.30.10.D,휴게시설 기초 / D구역,INPUT,IfcRelAssignsToProcess
+BENCH02,3ZW7a2V_HHyB7uEe0sYGCf,D_foundation,3eeK9C23XMD84XUyOI3f1f,PK.30.10.D,휴게시설 기초 / D구역,INPUT,IfcRelAssignsToProcess
+PERGOLA01,0e6NF2t6XJ_PKo0bK2HlHe,D_foundation,3eeK9C23XMD84XUyOI3f1f,PK.30.10.D,휴게시설 기초 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_foundation,3eeK9C23XMD84XUyOI3f1f,PK.30.10.D,휴게시설 기초 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+shrub_D,25sRKXEljG6gNF8O0rabTH,D_soil,13wPMcmMfMEgX3OeQq2Yv5,PK.50.20.D,식재기반 정비 / D구역,OUTPUT,IfcRelAssignsToProduct
+green_D,22geK9FJnQrBvkSa8mSioj,D_soil,13wPMcmMfMEgX3OeQq2Yv5,PK.50.20.D,식재기반 정비 / D구역,INPUT,IfcRelAssignsToProcess
+lawn_D,30SBC5WpHJ3vOz9iiaguLl,D_soil,13wPMcmMfMEgX3OeQq2Yv5,PK.50.20.D,식재기반 정비 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_soil,13wPMcmMfMEgX3OeQq2Yv5,PK.50.20.D,식재기반 정비 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_D03,0GtydUzubMWxeS8$uNA2RA,D_trees,1EdgMDHArHZvmYZkI7HuMq,PK.50.30.D,교목 식재(구덩이 포함) / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_I02,2wA21KkBrHfA02Gl2eiITH,D_trees,1EdgMDHArHZvmYZkI7HuMq,PK.50.30.D,교목 식재(구덩이 포함) / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_I03,3Ebh5eESjRseZM_OJbax7z,D_trees,1EdgMDHArHZvmYZkI7HuMq,PK.50.30.D,교목 식재(구덩이 포함) / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_I06,00Qd1HSYfKH8QiDyHu9eeZ,D_trees,1EdgMDHArHZvmYZkI7HuMq,PK.50.30.D,교목 식재(구덩이 포함) / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_trees,1EdgMDHArHZvmYZkI7HuMq,PK.50.30.D,교목 식재(구덩이 포함) / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+CURB_D,1vu9PieP9JHBCWWvIrMoDn,D_curb,0DGSQDY45Gceiff83hevpq,PK.30.20.D,화강석 경계석 설치 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_curb,0DGSQDY45Gceiff83hevpq,PK.30.20.D,화강석 경계석 설치 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_D,3xEp6uVh9G9RMOhLExLruZ,D_subbase,3v5$yVh5XHqRQZyLa758Ke,PK.40.10.D,쇄석 포장기층 / D구역,INPUT,IfcRelAssignsToProcess
+walkway_D,0mPlDNkl1NYQPHTpc1fBtL,D_subbase,3v5$yVh5XHqRQZyLa758Ke,PK.40.10.D,쇄석 포장기층 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_subbase,3v5$yVh5XHqRQZyLa758Ke,PK.40.10.D,쇄석 포장기층 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_D,3xEp6uVh9G9RMOhLExLruZ,D_pavecheck,1mFe$AFOnLlP1bScivpQVV,PK.40.20.D,포장 기층 검사 / D구역,INPUT,IfcRelAssignsToProcess
+walkway_D,0mPlDNkl1NYQPHTpc1fBtL,D_pavecheck,1mFe$AFOnLlP1bScivpQVV,PK.40.20.D,포장 기층 검사 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_pavecheck,1mFe$AFOnLlP1bScivpQVV,PK.40.20.D,포장 기층 검사 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+plaza_D,3xEp6uVh9G9RMOhLExLruZ,D_finish,3yndDAaojVGfVpR1$YFOQp,PK.40.30.D,모래·콘크리트블록 포장 / D구역,OUTPUT,IfcRelAssignsToProduct
+walkway_D,0mPlDNkl1NYQPHTpc1fBtL,D_finish,3yndDAaojVGfVpR1$YFOQp,PK.40.30.D,모래·콘크리트블록 포장 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_finish,3yndDAaojVGfVpR1$YFOQp,PK.40.30.D,모래·콘크리트블록 포장 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+P2_B02-001,19UnKf3ZTMQfBwHarOCGAY,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-002,1KVBzha2fTWx36YZlxFruC,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-003,1EK_2fDcfO_xt2TpAHPtWW,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-004,26Hr2WtizQhOz5LWnyNFVE,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-005,3H0A2HlqXTJRH8_XL5Ozu5,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-006,1AouH4RYvJvQ_hvuDBdGBW,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-007,0moY_eYEfKGgdIiWoO0O1N,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-008,0rDyWfuvHNRw1l$qGsbx4G,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-009,3756lQSr5NYurbLUZNgGb9,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-010,1qaZEMQ5jInwicnhrMFZhb,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-011,0miIjqtkTPJhDUU6saWJPN,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-012,2T8B915TXIigfNz$wxZetq,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-013,19uBlnQgvMg8Gn_anAYAQ4,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-014,2AxRulHYPH$xp15rZ$dbtj,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-015,0osYJtEs5Sbgod4deKoahE,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-016,2IAkCIY$DUSxNvkQRbEImD,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-017,2CCjCsUd5IhvFwiUJt2ajj,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-018,3MSPqxHKPPoeuMNt2rxo1M,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-019,3MWXbq4V5GuwUE0nASlF8n,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-020,3ntOA1hurTSgeIwv2XPgYb,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-021,3QRKInOOHMdO6axKABKzpV,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-022,0i8jfoPVnVfv66xj_BVgw_,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-023,1nQZ7ZgV1HDAtptTHMz60i,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-024,0M_STCtu1HHhnwkyyP81xh,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-025,1oSsFcVCvNyOLUUbWRbZgn,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-026,1lnpOFZEvUW8xp0ueciVA_,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-027,0ZQjG$VzTSYR0vPnJIPxHJ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-028,1wFQwB9uTKHOb_VjXq8KhC,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-029,0Q01wiuVTKdvE$bhYvVQHE,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-030,0wF4F$v7DNBOzCik2mhtXC,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-031,1ng29UucXRYfR6dKQy201V,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-032,1BLI$XFK5KZPMkmZXIYPWh,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-033,3BwmWztm9IoxgYBoH861xH,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-034,2wl8HyhinORAerNegojv67,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-035,32jPPUosTGIOk4jC$7PxnR,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-036,1U8eZd8Y9IoAafZ8E32OmH,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-037,10k7kijNjNhQtof38cIO7b,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-038,2LEc2EUifTbQJtY3iEOYWj,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-039,32f4sEM6zPUuCn6CyfslJs,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-040,3C0G2i60HUZ8WzJOc7EyWX,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-041,0yW2_Hu7jPOhzN47Q1xuvd,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-042,3hpkMCZnXGdQngESO4hMqB,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-043,0GnLJ2yh1QtuE9sA7rNiMa,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-044,1KdWwm8HrJAv15wyil3PL_,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-045,1NM5x5TorRwuWXy_lG0PPJ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-046,3tYcq0cT9Jme$piD2xXBq2,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-047,3w5BTXVgnLSxbuLB7c1Y3g,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-048,0kPZnZvSfNkxeXAe$cgrUB,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-049,0P6O9mAc1RpgqrbCoKwF3Z,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-050,1vINH5uGTHTwu$flpzLoJU,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-051,3TTHamwC1LO8H7ypRj5Xk2,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-052,0jtu5AXVPOsRx5WFqShNd8,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-053,2jzq6vuiXNYA4R1lh1PzIy,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-054,2s1G$Wr4rNg8o$xNJy_u00,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-055,0ta8lLS65LAxCNHCt4vsjx,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-056,0Xs7yqxJPL19Bb4D497jGj,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-057,1aNixMQATOXg85829s8m4t,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-058,398nWdesTVEhQOokSd69OG,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-059,2lfN3RvZDMPQlF9DD35mzt,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-060,08jbWsA6DIV8HyLVslMvU5,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-061,3143Q3woPSLPKGH9LLy36U,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-062,10CRIVYRLJvApE4WsWYIQk,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-063,0gLcHazYHSeucFRzvIJ8I5,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-064,36BAcmQtLSTPHXoYAWTU6Q,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-065,1KiPGm0QHIEx_74Sv2lbWq,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-066,1NOWCLlVfGR8IHzI37hTen,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-067,1baS$714rJP9QjGHaBA5sZ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-068,225WXkW0vJXudtqx51yGFS,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-069,3KJfhQ9K1Skw1MzY2KgETp,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-070,1FUa76mq1IYO31CSBrZdbc,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-071,1eJbEth81VTxpYhBg9QTfu,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-072,3vOmWk7GXOXe9l$qV1pMp2,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-073,0IpkH07iPG7vLwp62HHiZb,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-074,3c8bTdCWLQ7P5DMxBQqNI_,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-075,1ZAtG34LPTmQwln5RiEyW$,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-076,2YMQMqwhHGywaHPYWOWqWt,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-077,0EBiUedKHTEOL3eErFrO4A,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-078,3FMjPXsnfGpP0DurOJSLG7,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-079,1xEbI2cTrLRheQA84xs8lP,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-080,1Z04rRnxvP4O2u8O_axddQ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-081,2XZ_FYS5nSs87P6_RnvUW1,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-082,1Hic1QqMrNgB7Gbzcdnm$C,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-083,3oZzkHiofJ8ulGxpAgcP9S,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-084,1loQVuRNjJyBYb6$AKhAIB,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-085,03rDAEfdXITBL6BEpwl1FD,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-086,31gWpKOaHTl8v1RSm5nFpZ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-087,1$vnc_buHSh8Q12vn_1WvU,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-088,1SbhZrugbVNfSGbjlz_Nbr,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-089,2XDc0yDWPMTvIEXaQgoC3c,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-090,3M6sWh9PLLZu162WuStDtW,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-091,0FaLduJaPMUgYeuzIOxgGb,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-092,0jJtCTqUPL3ft9tDBgPtwp,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-093,0vzpV254rQa8iHvljY3QM3,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-094,0NWhm4jlzHSAkFoIBLPPc_,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-095,2wQnHNmDDJNBaiMWQamcJH,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-096,3WlWxZ5nrRvOJMOVoAZhhF,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-097,39DT_JyjXQqfJAIXNvmD8s,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-098,1$jUzLQTvNM96K92TadM6N,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-099,2pl_OPPufTjBqa6DXz88LY,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_B02-100,17XM_gLujL8OomUALJg9lL,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-001,2JyKjlBSXOcO5cuCq3dnkQ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_S01-002,0Rtiubi8XK2O80exATHVbN,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-001,0JVtOADojS7hS1W3QoHQrZ,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-002,1LsoqFg0nK2uRcNlusjIon,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-003,2Sexj69MzKvBuvjK6F_Hgl,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-004,2R0yu1MGbNtR_2d3QfJwMi,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-005,3zqIKwKubSrAmC3blv_Mbv,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-006,39pPyKY21OkODw1Q4FuXSt,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-007,0ObqtzWTfOifnZ3j_cQp4J,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-008,3Ru$i9$HbJLgSOsCGag0V9,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-009,01LVPZcrDSBR9URD8oVazO,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-010,0NTWbxatLP$e8VALcJ$XpY,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-011,3oWsssxDXMGxJC1j_U$Dyv,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-012,3$GPjaFUXL2gRwwiHXm2df,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-013,3EF_TcXnHM8Ojrqqx03_rF,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-014,1yYRr2xpnOwuq$NdZFsYPG,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-015,2JN3EuDlLSeBIf5HIpLJtj,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-016,1OYSoeUQ5RzOGtrHgtmYnS,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-017,2c1CHqqMLRfe8Y28ZFn4gn,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-018,15IwRwXqTJBuW5B6QRcDj8,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-019,1Ns8vKXNfP78XSGTX7iaDs,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-020,2_3vAWn9bNowZpZiHOLxeV,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-021,25xw$VhJTLhRfJD5ABoEez,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-022,3Oc_Hmf8XVOuRXsZMCk2kH,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-023,1Im09dCY5JnezJZEi_FXYx,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-024,1jlEfXfujRzPg7k_llNDFU,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-025,3mKsy9WGLHhQAl4K$mucsx,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-026,31cj4S_$LRuwePS_L6i34u,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-027,2JFViFIPPOLwDYoNl3Ue5O,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-028,0moiyqRenMixd9T7rLzuVr,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-029,2hM8uYj31M5BI3pAHJ8skq,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-030,0FRI3iQWnME9NDbKB__$D0,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-031,2GHMfSDXvSEgtkmQd329S8,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y02-032,1AoZsLYl5Q0hmHB2fSQf_W,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-001,0ZPSUhGmPMIudE7R8_GL_L,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-002,22pnxWVNbMRuTUu0s8Ju5R,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+P2_Y05-003,0fONKxQ49V$Aex60nCOkZ2,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_shrubs,2lNFjVF3XTvO7rdvjQNo6m,PK.50.40.D,관목 식재 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+lawn_D,30SBC5WpHJ3vOz9iiaguLl,D_turf,1xqy6j7lDSUQrwc6EQSc0d,PK.50.50.D,평떼 잔디붙임 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_turf,1xqy6j7lDSUQrwc6EQSc0d,PK.50.50.D,평떼 잔디붙임 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+green_D,22geK9FJnQrBvkSa8mSioj,D_mulch,3jIwiso2zK08gyhvYvk2yk,PK.50.60.D,수목 하부 멀칭 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_mulch,3jIwiso2zK08gyhvYvk2yk,PK.50.60.D,수목 하부 멀칭 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH01,1cBKeX8qvQavDz0lALOOsz,D_bench,1cV9jjJRHIjuIqr2q2nErS,PK.60.10.D,벤치 설치 / D구역,OUTPUT,IfcRelAssignsToProduct
+BENCH02,3ZW7a2V_HHyB7uEe0sYGCf,D_bench,1cV9jjJRHIjuIqr2q2nErS,PK.60.10.D,벤치 설치 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_bench,1cV9jjJRHIjuIqr2q2nErS,PK.60.10.D,벤치 설치 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+PERGOLA01,0e6NF2t6XJ_PKo0bK2HlHe,D_pergola,3Rvg5nVnXUWut1Q3eG$WzC,PK.60.20.D,퍼걸러 설치 / D구역,OUTPUT,IfcRelAssignsToProduct
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_pergola,3Rvg5nVnXUWut1Q3eG$WzC,PK.60.20.D,퍼걸러 설치 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+BENCH01,1cBKeX8qvQavDz0lALOOsz,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+BENCH02,3ZW7a2V_HHyB7uEe0sYGCf,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+CHAMBER_D,2icV4is$9TWAu28Oy0KqpE,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+CURB_D,1vu9PieP9JHBCWWvIrMoDn,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-001,19UnKf3ZTMQfBwHarOCGAY,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-002,1KVBzha2fTWx36YZlxFruC,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-003,1EK_2fDcfO_xt2TpAHPtWW,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-004,26Hr2WtizQhOz5LWnyNFVE,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-005,3H0A2HlqXTJRH8_XL5Ozu5,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-006,1AouH4RYvJvQ_hvuDBdGBW,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-007,0moY_eYEfKGgdIiWoO0O1N,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-008,0rDyWfuvHNRw1l$qGsbx4G,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-009,3756lQSr5NYurbLUZNgGb9,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-010,1qaZEMQ5jInwicnhrMFZhb,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-011,0miIjqtkTPJhDUU6saWJPN,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-012,2T8B915TXIigfNz$wxZetq,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-013,19uBlnQgvMg8Gn_anAYAQ4,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-014,2AxRulHYPH$xp15rZ$dbtj,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-015,0osYJtEs5Sbgod4deKoahE,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-016,2IAkCIY$DUSxNvkQRbEImD,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-017,2CCjCsUd5IhvFwiUJt2ajj,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-018,3MSPqxHKPPoeuMNt2rxo1M,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-019,3MWXbq4V5GuwUE0nASlF8n,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-020,3ntOA1hurTSgeIwv2XPgYb,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-021,3QRKInOOHMdO6axKABKzpV,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-022,0i8jfoPVnVfv66xj_BVgw_,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-023,1nQZ7ZgV1HDAtptTHMz60i,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-024,0M_STCtu1HHhnwkyyP81xh,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-025,1oSsFcVCvNyOLUUbWRbZgn,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-026,1lnpOFZEvUW8xp0ueciVA_,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-027,0ZQjG$VzTSYR0vPnJIPxHJ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-028,1wFQwB9uTKHOb_VjXq8KhC,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-029,0Q01wiuVTKdvE$bhYvVQHE,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-030,0wF4F$v7DNBOzCik2mhtXC,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-031,1ng29UucXRYfR6dKQy201V,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-032,1BLI$XFK5KZPMkmZXIYPWh,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-033,3BwmWztm9IoxgYBoH861xH,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-034,2wl8HyhinORAerNegojv67,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-035,32jPPUosTGIOk4jC$7PxnR,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-036,1U8eZd8Y9IoAafZ8E32OmH,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-037,10k7kijNjNhQtof38cIO7b,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-038,2LEc2EUifTbQJtY3iEOYWj,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-039,32f4sEM6zPUuCn6CyfslJs,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-040,3C0G2i60HUZ8WzJOc7EyWX,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-041,0yW2_Hu7jPOhzN47Q1xuvd,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-042,3hpkMCZnXGdQngESO4hMqB,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-043,0GnLJ2yh1QtuE9sA7rNiMa,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-044,1KdWwm8HrJAv15wyil3PL_,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-045,1NM5x5TorRwuWXy_lG0PPJ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-046,3tYcq0cT9Jme$piD2xXBq2,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-047,3w5BTXVgnLSxbuLB7c1Y3g,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-048,0kPZnZvSfNkxeXAe$cgrUB,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-049,0P6O9mAc1RpgqrbCoKwF3Z,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-050,1vINH5uGTHTwu$flpzLoJU,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-051,3TTHamwC1LO8H7ypRj5Xk2,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-052,0jtu5AXVPOsRx5WFqShNd8,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-053,2jzq6vuiXNYA4R1lh1PzIy,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-054,2s1G$Wr4rNg8o$xNJy_u00,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-055,0ta8lLS65LAxCNHCt4vsjx,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-056,0Xs7yqxJPL19Bb4D497jGj,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-057,1aNixMQATOXg85829s8m4t,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-058,398nWdesTVEhQOokSd69OG,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-059,2lfN3RvZDMPQlF9DD35mzt,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-060,08jbWsA6DIV8HyLVslMvU5,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-061,3143Q3woPSLPKGH9LLy36U,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-062,10CRIVYRLJvApE4WsWYIQk,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-063,0gLcHazYHSeucFRzvIJ8I5,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-064,36BAcmQtLSTPHXoYAWTU6Q,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-065,1KiPGm0QHIEx_74Sv2lbWq,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-066,1NOWCLlVfGR8IHzI37hTen,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-067,1baS$714rJP9QjGHaBA5sZ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-068,225WXkW0vJXudtqx51yGFS,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-069,3KJfhQ9K1Skw1MzY2KgETp,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-070,1FUa76mq1IYO31CSBrZdbc,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-071,1eJbEth81VTxpYhBg9QTfu,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-072,3vOmWk7GXOXe9l$qV1pMp2,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-073,0IpkH07iPG7vLwp62HHiZb,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-074,3c8bTdCWLQ7P5DMxBQqNI_,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-075,1ZAtG34LPTmQwln5RiEyW$,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-076,2YMQMqwhHGywaHPYWOWqWt,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-077,0EBiUedKHTEOL3eErFrO4A,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-078,3FMjPXsnfGpP0DurOJSLG7,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-079,1xEbI2cTrLRheQA84xs8lP,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-080,1Z04rRnxvP4O2u8O_axddQ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-081,2XZ_FYS5nSs87P6_RnvUW1,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-082,1Hic1QqMrNgB7Gbzcdnm$C,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-083,3oZzkHiofJ8ulGxpAgcP9S,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-084,1loQVuRNjJyBYb6$AKhAIB,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-085,03rDAEfdXITBL6BEpwl1FD,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-086,31gWpKOaHTl8v1RSm5nFpZ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-087,1$vnc_buHSh8Q12vn_1WvU,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-088,1SbhZrugbVNfSGbjlz_Nbr,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-089,2XDc0yDWPMTvIEXaQgoC3c,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-090,3M6sWh9PLLZu162WuStDtW,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-091,0FaLduJaPMUgYeuzIOxgGb,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-092,0jJtCTqUPL3ft9tDBgPtwp,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-093,0vzpV254rQa8iHvljY3QM3,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-094,0NWhm4jlzHSAkFoIBLPPc_,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-095,2wQnHNmDDJNBaiMWQamcJH,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-096,3WlWxZ5nrRvOJMOVoAZhhF,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-097,39DT_JyjXQqfJAIXNvmD8s,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-098,1$jUzLQTvNM96K92TadM6N,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-099,2pl_OPPufTjBqa6DXz88LY,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_B02-100,17XM_gLujL8OomUALJg9lL,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_D03,0GtydUzubMWxeS8$uNA2RA,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_I02,2wA21KkBrHfA02Gl2eiITH,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_I03,3Ebh5eESjRseZM_OJbax7z,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_I06,00Qd1HSYfKH8QiDyHu9eeZ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_S01-001,2JyKjlBSXOcO5cuCq3dnkQ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_S01-002,0Rtiubi8XK2O80exATHVbN,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-001,0JVtOADojS7hS1W3QoHQrZ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-002,1LsoqFg0nK2uRcNlusjIon,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-003,2Sexj69MzKvBuvjK6F_Hgl,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-004,2R0yu1MGbNtR_2d3QfJwMi,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-005,3zqIKwKubSrAmC3blv_Mbv,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-006,39pPyKY21OkODw1Q4FuXSt,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-007,0ObqtzWTfOifnZ3j_cQp4J,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-008,3Ru$i9$HbJLgSOsCGag0V9,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-009,01LVPZcrDSBR9URD8oVazO,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-010,0NTWbxatLP$e8VALcJ$XpY,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-011,3oWsssxDXMGxJC1j_U$Dyv,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-012,3$GPjaFUXL2gRwwiHXm2df,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-013,3EF_TcXnHM8Ojrqqx03_rF,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-014,1yYRr2xpnOwuq$NdZFsYPG,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-015,2JN3EuDlLSeBIf5HIpLJtj,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-016,1OYSoeUQ5RzOGtrHgtmYnS,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-017,2c1CHqqMLRfe8Y28ZFn4gn,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-018,15IwRwXqTJBuW5B6QRcDj8,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-019,1Ns8vKXNfP78XSGTX7iaDs,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-020,2_3vAWn9bNowZpZiHOLxeV,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-021,25xw$VhJTLhRfJD5ABoEez,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-022,3Oc_Hmf8XVOuRXsZMCk2kH,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-023,1Im09dCY5JnezJZEi_FXYx,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-024,1jlEfXfujRzPg7k_llNDFU,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-025,3mKsy9WGLHhQAl4K$mucsx,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-026,31cj4S_$LRuwePS_L6i34u,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-027,2JFViFIPPOLwDYoNl3Ue5O,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-028,0moiyqRenMixd9T7rLzuVr,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-029,2hM8uYj31M5BI3pAHJ8skq,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-030,0FRI3iQWnME9NDbKB__$D0,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-031,2GHMfSDXvSEgtkmQd329S8,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y02-032,1AoZsLYl5Q0hmHB2fSQf_W,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-001,0ZPSUhGmPMIudE7R8_GL_L,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-002,22pnxWVNbMRuTUu0s8Ju5R,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+P2_Y05-003,0fONKxQ49V$Aex60nCOkZ2,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+PERGOLA01,0e6NF2t6XJ_PKo0bK2HlHe,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+PIPE_D,25UMDIw3fVWuVMTBD3leGG,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+green_D,22geK9FJnQrBvkSa8mSioj,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+lawn_D,30SBC5WpHJ3vOz9iiaguLl,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+plaza_D,3xEp6uVh9G9RMOhLExLruZ,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+shrub_D,25sRKXEljG6gNF8O0rabTH,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+walkway_D,0mPlDNkl1NYQPHTpc1fBtL,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,INPUT,IfcRelAssignsToProcess
+ZONE_D,3$1Stc6JfRHQZHDbAILU6L,D_check,164omsjYPJa9_Pi5RLjGJg,PK.70.10.D,구역 마무리 검사 / D구역,SCOPE,LCS_WBS.ScopeObjectIds
+ACCESS_A,01xanMY7jRe89UPATvInOp,RESTORE,0dt$1QUmrUhvcqPNX1gO8o,PK.70.20.SITE,임시동선 복구 / 전체,INPUT,IfcRelAssignsToProcess
+ACCESS_B,1eX417P69OPQK1O6VRVYb_,RESTORE,0dt$1QUmrUhvcqPNX1gO8o,PK.70.20.SITE,임시동선 복구 / 전체,INPUT,IfcRelAssignsToProcess
+ACCESS_C,3BbxMeDZXT6gq0VeU2X24r,RESTORE,0dt$1QUmrUhvcqPNX1gO8o,PK.70.20.SITE,임시동선 복구 / 전체,INPUT,IfcRelAssignsToProcess
+ACCESS_D,01bG$6HV5HXPuhKOvuUuxz,RESTORE,0dt$1QUmrUhvcqPNX1gO8o,PK.70.20.SITE,임시동선 복구 / 전체,INPUT,IfcRelAssignsToProcess
+ACCESS_trunk,2jsSQUMB9OFv7$SI5N$RPo,RESTORE,0dt$1QUmrUhvcqPNX1gO8o,PK.70.20.SITE,임시동선 복구 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,RESTORE,0dt$1QUmrUhvcqPNX1gO8o,PK.70.20.SITE,임시동선 복구 / 전체,SCOPE,LCS_WBS.ScopeObjectIds
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,HANDOVER,3be2cWMYLN3BQh0uKZC07h,PK.70.30.SITE,준공검사 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,HANDOVER,3be2cWMYLN3BQh0uKZC07h,PK.70.30.SITE,준공검사 / 전체,SCOPE,LCS_WBS.ScopeObjectIds
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_strip,0wh5VStxDOpRBQl4$02gXs,PK.10.10.SITE,표토 제거 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_strip,0wh5VStxDOpRBQl4$02gXs,PK.10.10.SITE,표토 제거 / 전체,SCOPE,LCS_WBS.ScopeObjectIds
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_grade,2Qw50kcy1Qd8IPt09I0Com,PK.10.20.SITE,일반토공·정지 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_grade,2Qw50kcy1Qd8IPt09I0Com,PK.10.20.SITE,일반토공·정지 / 전체,SCOPE,LCS_WBS.ScopeObjectIds
+CHAMBER_A,3gmuPO0wrGOvUL8XzIqdyM,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_B,0bwDG433LK6Ow2eXkwOKWK,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_C,2IhHL6lirIew1ZMclMfFOK,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_D,2icV4is$9TWAu28Oy0KqpE,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_A,1bd12Rq9vHkwu_IDooReN2,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_B,2uxjlQpbjUUv2UC$J$F1JC,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_C,0dKX0v4MnGaRajxAUcYi6n,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_D,25UMDIw3fVWuVMTBD3leGG,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_survey,3VwCg$IGbHHgVNMMSF_X$y,PK.20.05.SITE,배수 기준고·관저고 측량 / 전체,SCOPE,LCS_WBS.ScopeObjectIds
+CHAMBER_A,3gmuPO0wrGOvUL8XzIqdyM,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+CHAMBER_B,0bwDG433LK6Ow2eXkwOKWK,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+CHAMBER_C,2IhHL6lirIew1ZMclMfFOK,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+CHAMBER_D,2icV4is$9TWAu28Oy0KqpE,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+PIPE_A,1bd12Rq9vHkwu_IDooReN2,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+PIPE_B,2uxjlQpbjUUv2UC$J$F1JC,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+PIPE_C,0dKX0v4MnGaRajxAUcYi6n,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+PIPE_D,25UMDIw3fVWuVMTBD3leGG,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,OUTPUT,IfcRelAssignsToProduct
+CHAMBER_A,3gmuPO0wrGOvUL8XzIqdyM,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_B,0bwDG433LK6Ow2eXkwOKWK,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_C,2IhHL6lirIew1ZMclMfFOK,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_D,2icV4is$9TWAu28Oy0KqpE,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_A,1bd12Rq9vHkwu_IDooReN2,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_B,2uxjlQpbjUUv2UC$J$F1JC,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_C,0dKX0v4MnGaRajxAUcYi6n,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_D,25UMDIw3fVWuVMTBD3leGG,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_drainage,1QNME35wzTeRhIdKsqH3PQ,PK.20.30.SITE,집수정·우수관 연계 시공 / 전체,SCOPE,LCS_WBS.ScopeObjectIds
+CHAMBER_A,3gmuPO0wrGOvUL8XzIqdyM,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_B,0bwDG433LK6Ow2eXkwOKWK,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_C,2IhHL6lirIew1ZMclMfFOK,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+CHAMBER_D,2icV4is$9TWAu28Oy0KqpE,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_A,1bd12Rq9vHkwu_IDooReN2,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_B,2uxjlQpbjUUv2UC$J$F1JC,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_C,0dKX0v4MnGaRajxAUcYi6n,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+PIPE_D,25UMDIw3fVWuVMTBD3leGG,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,INPUT,IfcRelAssignsToProcess
+TERRAIN,1uMZzis_LV3fPfxrpIZhau,SITE_draincheck,3NBhirqOPNgO5G87SYJ2x7,PK.20.40.SITE,관망 전체 관저고·구배 검사 / 전체,SCOPE,LCS_WBS.ScopeObjectIds

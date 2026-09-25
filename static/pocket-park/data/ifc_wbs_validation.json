@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "schema": "IFC4X3_ADD2",
+  "checks": [
+    {
+      "check": "IFC4X3_ADD2 schema",
+      "passed": true
+    },
+    {
+      "check": "92 tasks = 30 summary + 62 executable",
+      "passed": true
+    },
+    {
+      "check": "exact task WBS code set",
+      "passed": true
+    },
+    {
+      "check": "exact hierarchy and single root, no orphan tasks",
+      "passed": true
+    },
+    {
+      "check": "single parent for every non-root task",
+      "passed": true
+    },
+    {
+      "check": "WBS codes recorded in native Identification",
+      "passed": true
+    },
+    {
+      "check": "all 92 tasks use IFC classification references",
+      "passed": true
+    },
+    {
+      "check": "classification hierarchy matches WBS",
+      "passed": true
+    },
+    {
+      "check": "revised leaf-level precedence edges match sequence review",
+      "passed": true
+    },
+    {
+      "check": "edge-specific cure lags match IFC TimeLag",
+      "passed": true
+    },
+    {
+      "check": "precedence is separate from hierarchy",
+      "passed": true
+    },
+    {
+      "check": "output product-task relation direction and exact pairs",
+      "passed": true
+    },
+    {
+      "check": "input task-product relation direction and exact pairs",
+      "passed": true
+    },
+    {
+      "check": "resource-task assignments retained",
+      "passed": true
+    },
+    {
+      "check": "native per-task resource quantities match normative crew sizes",
+      "passed": true
+    },
+    {
+      "check": "normative hours and source references persisted on all leaf tasks",
+      "passed": true
+    },
+    {
+      "check": "separate pit tasks removed to avoid double counting",
+      "passed": true
+    },
+    {
+      "check": "each installed object has one primary output task",
+      "passed": true
+    },
+    {
+      "check": "reference road/sidewalk/terrain excluded from installation outputs",
+      "passed": true
+    },
+    {
+      "check": "no preserved trees or protection objects",
+      "passed": true
+    },
+    {
+      "check": "all 743 object GUIDs and geometric representations retained",
+      "passed": true
+    },
+    {
+      "check": "all object quantity sets retained",
+      "passed": true
+    },
+    {
+      "check": "four granite curb objects use IfcKerb",
+      "passed": true
+    },
+    {
+      "check": "drainage 4 pipes / 4 chambers / 15 ports / 7 joins retained",
+      "passed": true
+    },
+    {
+      "check": "62 leaf GUIDs retained, dates match new deterministic sequence",
+      "passed": true
+    },
+    {
+      "check": "no false actual dates or milestones",
+      "passed": true
+    },
+    {
+      "check": "work plan/schedule/calendar structure",
+      "passed": true
+    },
+    {
+      "check": "work plan and schedule dates agree with WBS root",
+      "passed": true
+    },
+    {
+      "check": "IFC EXPRESS schema validation",
+      "passed": true
+    }
+  ],
+  "business_errors": [],
+  "schema_errors": [],
+  "geometry_errors": [],
+  "quantity_errors": [],
+  "leaf_tasks": 62,
+  "summary_tasks": 30,
+  "ifc_tasks": 92,
+  "wbs_hierarchy_edges": 91,
+  "precedence_edges": 90,
+  "output_pairs": 731,
+  "input_pairs": 800,
+  "resource_pairs": 156,
+  "objects": 743
+}
