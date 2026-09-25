@@ -1,5 +1,5 @@
 {
-  "index.html": "354ef37cc7f7988b071ac85f0bb820d331fd02b1be6ab23f2202a99d0bba85e9",
+  "index.html": "60d775ca46fd12d6cdda7c64140318f8330f61fb9128584afd8b59feee5e05df",
   "paper.css": "ab5da8c2b80193a54b0e99b14cbf0141b7319a4ff372fd35b8475fdec1832770",
   "paper.js": "f53315daf6f413ba7909d89692ebd44db1bc1146c33e7274a4abb2e13cf6efe8",
   "rain-comparison.css": "ae27234553d91d56af91e331265002b2f88eb9f31fe37df476f5c8358c3684c8",
@@ -63,8 +63,8 @@
   "figures/figS4_no_cleaning_monthly.pdf": "98c1ed7f077823b1c55af22d7ba90adc8777fb96b9917d5a2808c11d45bcc3e4",
   "figures/figS4_no_cleaning_monthly.png": "6bfc7efd63799c6cd95c9260918f5d90cb7edbfae614d77e086f0c996ccb8c28",
   "figures/figS4_no_cleaning_monthly.svg": "84afa6a8c5a484666eb8eae08603c5f73801dbeff873472c9c94601261166071",
-  "data/soiling_references.bib": "0f3808969a81112266e82766356332b1980641b27d534446b0cac56e0dd7cd33",
-  "data/soiling_references.json": "a2f26faa9e8badc81879685812253f97ac94bd60a19dfe21deb5713776221953",
+  "data/soiling_references.bib": "23b7fdfe150c96862d6458ebd61feafabad5df524ccfff36dc4d6ef3d9392412",
+  "data/soiling_references.json": "11af0dc6bcd1fc2e48ff4f654060642af034a7eeea94d1e2c154e5793b6d024d",
   "data/no_cleaning_10year_daily.csv": "fec33043e52ce9b967a683e157ea4c7902cf4d5f57978a00add6200308e56978",
   "data/no_cleaning_10year_monthly.csv": "831c6cce3664567320405cdb9aceb6ed6db473e315a0489493000c679ddbfeda",
   "data/no_cleaning_10year_annual.csv": "193362ab04259fe3064aeadee1dd6fe70ac37ea915165ac66637534aa44df568",
@@ -84,5 +84,6 @@
   "data/v07_longterm_reproducible.zip": "685cca790548f063b295b015b80980f97219750c461aedacdd14a0c2ab693c78",
   "data/v07_warp_reproducible.zip": "fdd1cc84cd9a249a9f06d4c6ee8dcd5a1b4ccb51bbe8c5f733d3e818bfefdae4",
   "data/height_comparison.csv": "5683112adb59ad56ed4cad10acea89ce817d7f7c4a7587543f23fa3ea802f44e",
-  "data/study_v07.json": "abb4b03d149723e51efdd4ee61199c1d9cd5bfcfcd166520bf2ae3b8f135212c"
+  "data/study_v07.json": "abb4b03d149723e51efdd4ee61199c1d9cd5bfcfcd166520bf2ae3b8f135212c",
+  "data/soiling_interpretation_v07.json": "8b2f3b6bcb5ac933dc607c4bece4f3fff52681b2e6ddd675ea0e3942c254df60"
 }

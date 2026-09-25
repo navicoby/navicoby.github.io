@@ -117,5 +117,49 @@
       ]
     },
     "url": "https://doi.org/10.1016/j.renene.2014.12.006"
+  },
+  {
+    "key": "Bhaduri2019",
+    "doi": "10.1109/jphotov.2018.2872555",
+    "title": "Mitigation of Soiling by Vertical Mounting of Bifacial Modules",
+    "authors": [
+      "Sonali Bhaduri",
+      "Anil Kottantharayil"
+    ],
+    "journal": "IEEE Journal of Photovoltaics",
+    "volume": "9",
+    "issue": "1",
+    "pages": "240-244",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          1
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1109/jphotov.2018.2872555"
+  },
+  {
+    "key": "Raina2023",
+    "doi": "10.1016/j.esd.2023.01.001",
+    "title": "Experimental investigations of front and rear side soiling on bifacial PV module under different installations and environmental conditions",
+    "authors": [
+      "Gautam Raina",
+      "Sunanda Sinha"
+    ],
+    "journal": "Energy for Sustainable Development",
+    "volume": "72",
+    "issue": null,
+    "pages": "301-313",
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          2
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1016/j.esd.2023.01.001"
   }
 ]
