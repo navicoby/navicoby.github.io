@@ -1,0 +1,15 @@
+{
+  "particles_per_run": 500000,
+  "seeds": [201, 202, 203],
+  "rainfall_mm": [0, 0.5, 2, 5, 10, 20, 40],
+  "rain_downward_speed_m_s": 5.0,
+  "rain_horizontal_speed_m_s": 3.0,
+  "initial_dust_mg_m2_per_face": 100.0,
+  "strongly_bound_fractions": {"loose_dominated": 0.2, "adhered_dominated": 0.7},
+  "loose_washoff_per_mm": 0.25,
+  "bound_washoff_per_mm": 0.015,
+  "coefficient_multipliers": [0.5, 1.0, 2.0],
+  "module_area_m2": 2.42,
+  "convergence_particles": 2000000,
+  "scope": "Hypothetical event scenarios, not measured coefficients. Rain amount is horizontal-gauge depth. Prescribed ballistic water parcels, then two-pool exponential removal per module face. No wet-dry cementation kinetics, CFD, runoff film, splashing, rainborne dust, optical loss or annual energy coupling. Uniform initial dust is a controlled comparison, not output of the dry pilot."
+}
