@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>설계 최적화 방법론 검토</title>
+<meta name="description" content="NSGA-II·III, CMA-ES, 베이지안 최적화, MAP-Elites, QD+CMA-ES, 서로게이트 결합, 강화학습 — 누가 만들었고 어떻게 작동하며 어디에 쓰여왔는지, 그리고 공원 파라메트릭 설계에 대한 적합성.">
+<style>
+  :root{
+    --bg:#eef1ee; --panel:#f6f8f6; --ink:#17201c; --mut:#57635c; --line:#d6ded8;
+    --accent:#2f7d5a; --accent-ink:#245f45;
+    --warm:#a8642a; --warm-bg:#f8f1e8;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:rgba(0,0,0,.05);padding:1px 5px;border-radius:3px;font-size:.88em}
+  .wrap{width:100%;max-width:840px;margin:0 auto;padding:clamp(40px,8vh,80px) clamp(22px,6vw,40px) 90px}
+
+  .eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 14px}
+  h1{font-size:clamp(28px,5.4vw,40px);line-height:1.12;letter-spacing:-.025em;font-weight:680;
+    margin:0 0 16px;text-wrap:balance}
+  .lede{font-size:clamp(15px,2.2vw,17px);color:var(--mut);margin:0 0 10px;max-width:62ch}
+  header{border-bottom:2px solid var(--line);padding-bottom:26px;margin-bottom:12px}
+
+  h2{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;
+    margin:48px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+
+  nav.toc{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:20px 0 0}
+  nav.toc ol{margin:0;padding-left:20px;font-size:14.6px;line-height:1.9}
+  nav.toc a{text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{border-bottom-color:var(--accent)}
+
+  article.m{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:22px 24px;margin-bottom:16px}
+  article.m.key{border-color:var(--accent);border-width:2px}
+  article.m h3{font-size:19px;font-weight:660;margin:0 0 4px;letter-spacing:-.015em;text-wrap:balance}
+  .origin{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;
+    color:var(--accent-ink);margin:0 0 14px;line-height:1.65}
+  .row{display:grid;grid-template-columns:5.6rem 1fr;gap:14px;margin:0 0 12px;font-size:15px;align-items:baseline}
+  .row > b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+    color:var(--mut);padding-top:3px}
+  .row.park{background:var(--warm-bg);border-radius:6px;padding:11px 13px;margin:14px -13px 0}
+  .row.park > b{color:var(--warm)}
+  .fit-hi{color:var(--accent-ink);font-weight:650}
+  .fit-mid{color:var(--warm);font-weight:650}
+  .fit-lo{color:var(--mut);font-weight:650}
+
+  table{border-collapse:collapse;width:100%;font-size:14.2px;margin:14px 0}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}
+  .scroll{overflow-x:auto}
+
+  .note{font-size:14.2px;color:var(--mut);margin:10px 0 0}
+  .callout{background:var(--warm-bg);border-left:3px solid var(--warm);border-radius:0 6px 6px 0;
+    padding:14px 16px;margin:18px 0;font-size:14.8px}
+  .callout b{color:var(--ink)}
+
+  ul{padding-left:20px;line-height:1.75}
+  li{margin-bottom:6px}
+  .dia{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+    padding:18px 16px;margin:16px 0;overflow-x:auto}
+  .dia > .cap{font-size:13px;color:var(--mut);margin:0 0 12px;line-height:1.6}
+  .dia > .cap b{color:var(--ink)}
+
+  .refs{font-size:13.6px;color:var(--mut);line-height:1.8;padding-left:20px}
+  .refs li{margin-bottom:9px}
+  a{color:var(--accent-ink)}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);
+    color:var(--mut);font-size:13px}
+  @media (max-width:560px){ .row{grid-template-columns:1fr;gap:3px} .row.park{margin-left:0;margin-right:0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Methodology Review</p>
+  <h1>설계 최적화 방법론, 무엇이 어디서 왔고 무엇을 하는가</h1>
+  <p class="lede">공원을 파라메트릭하게 설계하려면 탐색 알고리즘을 골라야 합니다. 후보가 여덟 가지쯤 되는데 출신과 목적이 제각각입니다. 어떤 것은 1990년대 공학 최적화에서, 어떤 것은 2010년대 로봇 학습에서 왔습니다.</p>
+  <p class="lede">이 글은 <b>각 방법이 누구 손에서 왜 만들어졌고, 어떻게 작동하며, 지금까지 어디에 쓰였는지</b>를 정리한 문헌 검토입니다. 그다음에 공원 설계에 맞는지를 항목마다 따로 적었습니다.</p>
+  <nav class="toc">
+    <ol>
+      <li><a href="#intro">공원 설계는 무엇을 동시에 만족해야 하는가</a></li>
+      <li><a href="#prior">선행 연구 — 자동설계는 어디까지 왔나</a></li>
+      <li><a href="#lineage">방법론 계보</a></li>
+      <li><a href="#nsga2">NSGA-II — 다목적 진화 최적화의 표준</a></li>
+      <li><a href="#nsga3">NSGA-III — 목적이 많아질 때</a></li>
+      <li><a href="#cmaes">CMA-ES — 연속 변수의 미분 없는 최적화</a></li>
+      <li><a href="#bo">베이지안 최적화 — 비싼 평가를 아끼는 법</a></li>
+      <li><a href="#mapelites">MAP-Elites와 품질·다양성 탐색</a></li>
+      <li><a href="#cmame">QD + CMA-ES — 다양성에 수치 정밀도를 더하다</a></li>
+      <li><a href="#surrogate">서로게이트 결합 — 평가를 학습으로 대체</a></li>
+      <li><a href="#rl">강화학습 — 설계 정책 자체를 배우기</a></li>
+    </ol>
+  </nav>
+</header>
+
+
+<h2 id="intro">공원 설계는 무엇을 동시에 만족해야 하는가</h2>
+<p>공원 설계에는 정답이 하나 없습니다. 그늘을 늘리면 잔디밭이 줄고, 동선을 곧게 하면 산책의 맛이 사라집니다. 빗물을 머금게 하면 유지관리 부담이 늘고, 수목을 빽빽이 심으면 조망과 안전감이 떨어집니다. 서로 당기는 목적이 예닐곱 개씩 됩니다.</p>
+<p>게다가 <b>평가가 비쌉니다.</b> 미기후를 보려면 전산유체역학이 필요하고 일사·그늘 분석에도 시간이 걸립니다. 후보안 수천 개를 그대로 돌릴 수 없습니다.</p>
+<p>마지막으로 <b>결과가 하나여서는 안 됩니다.</b> 발주처와 주민 앞에 최적안 한 장을 들고 가면 설계가 아니라 통보가 됩니다. 성격이 다른 대안을 놓고 고르게 하는 것이 실무입니다.</p>
+<div class="callout">
+  이 세 조건이 방법 선택을 결정합니다. <b>목적이 여럿</b>이고 <b>평가가 비싸며</b> <b>결과가 여러 개여야 한다</b>는 것입니다. 뒤에 나오는 여덟 방법은 이 셋 중 무엇을 잘하고 무엇을 못하는지로 갈립니다.
+</div>
+<p>자동설계라 하면 흔히 강화학습을 떠올리지만, 실제로는 규칙 기반 생성부터 진화 알고리즘, 품질·다양성 탐색, 생성 모델까지 계보가 여럿입니다. 각각 다른 시대에 다른 문제를 풀려고 나왔습니다. 먼저 그 흐름을 보겠습니다.</p>
+
+<h2 id="prior">선행 연구 — 자동설계는 어디까지 왔나</h2>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">1970년대 · 규칙으로 형태를 생성하다</h3>
+<p>출발은 <b>형상 문법</b>입니다. Stiny와 Gips가 1972년에 제안했고, 촘스키의 형식 문법을 도형으로 옮긴 것입니다. 추상 기호가 아니라 <b>공간에 놓인 도형을 규칙이 직접 조작</b>한다는 발상이었습니다.</p>
+<p>건축에 처음 적용된 것이 1978년 Stiny와 Mitchell의 <b>팔라디오 문법</b>입니다. 팔라디오가 베네토 지역에 지은 빌라들의 평면을 규칙 집합으로 환원하고, 그 규칙으로 <b>실재하지 않지만 팔라디오적인</b> 평면을 생성했습니다. 양식을 알고리즘으로 기술할 수 있다는 것을 보인 사건이었습니다.</p>
+<p class="note">한계도 분명했습니다. 규칙은 사람이 씁니다. 생성은 되지만 <b>평가와 선택이 없습니다.</b> 좋은 안과 나쁜 안을 가리는 장치가 문법 안에 없었습니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">1990년대 · 진화를 설계에 들이다</h3>
+<p>영국 건축협회 건축학교의 <b>John Frazer</b>가 이 지점을 파고들었습니다. 1989년부터 1996년까지 이어진 <b>7년 형태발생 프로젝트</b>와 1995년의 저서 <i>An Evolutionary Architecture</i>가 결과물입니다.</p>
+<p>핵심은 설계를 <b>유전자와 환경의 상호작용</b>으로 보는 것이었습니다. 형태를 직접 그리는 대신 형태를 만드는 규칙을 유전자로 두고, 환경 조건 아래서 세대를 거듭시킵니다. 목표는 건조환경이 자연환경처럼 <b>공생적이고 대사적인 균형</b>을 갖게 하는 것이라고 밝혔습니다.</p>
+<p class="note">생성에 선택압이 더해졌습니다. 다만 당시의 평가 함수는 거칠었고 계산 자원도 부족했습니다. 개념적 선언에 가까웠습니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">2010년대 · 다목적 탐색이 실무로 내려오다</h3>
+<p>결정적 사례가 <b>오토데스크 Project Discover</b>입니다. 2017년 토론토 MaRS 지구에 자사 사무소를 지으면서 평면 계획을 생성적으로 풀었습니다.</p>
+<ul>
+  <li>직원 <b>250명</b>에게 선호를 조사해 입력 변수로 삼았습니다.</li>
+  <li>기하 생성 시스템이 <b>약 1만 개</b>의 대안을 만들었습니다.</li>
+  <li><b>다목적 유전 알고리즘</b>이 그 공간을 탐색했습니다.</li>
+  <li>평가 목적은 여섯 개였습니다. <b>인접성 선호, 업무방식 선호, 활기, 생산성, 자연채광, 외부 조망</b>입니다.</li>
+</ul>
+<p>이 프로젝트가 이후 Dynamo용 최적화 엔진 <b>Project Refinery</b>로 이어졌고, Grasshopper 쪽에서는 <code>Wallacei</code>·<code>Octopus</code> 같은 다목적 최적화 플러그인이 같은 시기에 자리를 잡았습니다. 설계자가 코드를 쓰지 않고도 파레토 탐색을 돌릴 수 있게 된 것이 이 시기의 변화입니다.</p>
+<p class="note">여기서 주목할 것은 <b>목적 여섯 개 중 셋이 정량 물리량이 아니라는 점</b>입니다. 활기, 생산성, 선호는 설문에서 왔습니다. 자동설계의 난점이 알고리즘이 아니라 평가 함수에 있음을 보여줍니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">2020년대 · 학습된 생성 모델</h3>
+<p>흐름이 한 번 더 바뀝니다. 탐색 대신 <b>학습</b>입니다. 기존 도면을 대량으로 학습해 새 평면을 직접 그려내는 방향입니다.</p>
+<ul>
+  <li><b>House-GAN</b>은 방 사이의 인접 관계를 그래프로 주면 그에 맞는 평면을 생성합니다. 후속인 House-GAN++가 문 누락 같은 결함을 보완했습니다.</li>
+  <li><b>HouseDiffusion</b>은 확산 모델로 벡터 평면을 생성합니다. 이산과 연속을 함께 잡음 제거하는 방식입니다.</li>
+  <li>최근에는 언어모델을 붙여 <b>글로 지시하면 평면이 나오는</b> 방향과, 그래프 변환기로 연결 구조를 더 잘 잡는 방향이 동시에 진행됩니다.</li>
+</ul>
+<p class="note">빠르고 그럴듯하지만 <b>성능 보장이 없습니다.</b> 학습 자료를 닮은 것을 내놓을 뿐, 이 안이 여름에 시원한지 빗물을 얼마나 머금는지는 따로 평가해야 합니다. 그래서 탐색 계열과 대립이 아니라 보완 관계입니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">공원과 녹지는 어디까지 와 있나</h3>
+<p>건축보다 얕지만 사례가 없지는 않습니다.</p>
+<ul>
+  <li><b>생성적 적대 신경망 기반 녹지 설계</b> — "외부환경 → 배치 → 계획안"의 단계로 공원 녹지와 주거지 녹지의 생성 시스템을 구성한 연구가 있습니다. 주변 맥락이 생성 결과에 미치는 영향을 따로 평가한 연구도 나왔습니다.</li>
+  <li><b>Layout2Rendering</b> — 배치에서 3차원 공원 모델과 투시도까지 자동으로 잇는 시도입니다. 구상에서 도면·모델링·렌더링까지 걸리는 시간을 줄이는 것이 목표였습니다.</li>
+  <li><b>접근성 기반 배치 최적화</b> — 중국 시안 옌타구 사례에서 K-평균 군집과 개량 유전 알고리즘으로 공원 녹지 배치를 계획해 주거지의 공급·수요 접근성을 개선했습니다.</li>
+  <li><b>공원 공간의 정량 지표화</b> — 완성된 공원 사례들을 분류해 공간 배치의 정량 지표를 세우려는 연구도 진행 중입니다. 평가 함수를 만들려는 시도입니다.</li>
+</ul>
+<div class="callout">
+  선행 연구를 관통하는 사실이 하나 있습니다. <b>생성은 여러 방식으로 가능해졌지만, 무엇이 좋은 공원인지를 계산 가능한 식으로 쓰는 일은 여전히 미해결입니다.</b> 뒤에 볼 방법론들은 모두 "좋음"이 정의되어 있다고 전제합니다. 그 전제를 만드는 것이 실제로는 더 큰 일입니다.
+</div>
+
+<h2 id="lineage">방법론 계보</h2>
+<div class="dia">
+  <p class="cap"><b>두 갈래에서 왔습니다.</b> 왼쪽은 1990년대 공학 최적화, 오른쪽은 2010년대 인공생명·로봇 학습입니다. 설계 분야에서 이 둘이 만납니다.</p>
+<pre class="mermaid">
+flowchart TD
+  ES["진화 전략 · 1970s&lt;br/&gt;Rechenberg · Schwefel"] --> CMAES["CMA-ES · 1996/2001&lt;br/&gt;Hansen · Ostermeier"]
+  GA["유전 알고리즘 · 1975&lt;br/&gt;Holland"] --> NSGA["NSGA · 1994&lt;br/&gt;Srinivas · Deb"]
+  NSGA --> N2["NSGA-II · 2002&lt;br/&gt;Deb 외"]
+  N2 --> N3["NSGA-III · 2014&lt;br/&gt;Deb · Jain"]
+  KRIG["크리깅 · 1989&lt;br/&gt;Sacks 외"] --> EGO["EGO · 1998&lt;br/&gt;Jones 외"]
+  MOCK["Mockus · 1970s&lt;br/&gt;기대개선 획득함수"] --> EGO
+  EGO --> BO["실용 베이지안 최적화 · 2012&lt;br/&gt;Snoek 외"]
+  NOV["신규성 탐색 · 2011&lt;br/&gt;Lehman · Stanley"] --> ME["MAP-Elites · 2015&lt;br/&gt;Mouret · Clune"]
+  ME --> QD["품질·다양성 개념화 · 2016&lt;br/&gt;Pugh · Soros · Stanley"]
+  CMAES --> CMAME["CMA-ME · 2020&lt;br/&gt;Fontaine 외"]
+  ME --> CMAME
+  CMAME --> CMAMAE["CMA-MAE · 2023&lt;br/&gt;Fontaine · Nikolaidis"]
+  ME --> ARCH["ARCH-Elites · 2021&lt;br/&gt;도시설계 적용"]
+  BO --> ARCH
+  N3 --> PARK["공원 파라메트릭 설계"]
+  CMAMAE --> PARK
+  ARCH --> PARK
+  style PARK fill:#eaf0ea,stroke:#2f7d5a,stroke-width:2px
+  style ME fill:#f8f1e8,stroke:#a8642a
+  style N2 fill:#f8f1e8,stroke:#a8642a
+</pre>
+</div>
+
+<h2>방법별 검토</h2>
+
+<article class="m" id="nsga2">
+  <h3>1 · NSGA-II</h3>
+  <p class="origin">Kalyanmoy Deb, Amrit Pratap, Sameer Agarwal, T. Meyarivan (2002)<br>
+    IEEE Transactions on Evolutionary Computation 6(2) · 선행 NSGA는 Srinivas &amp; Deb (1994)</p>
+  <div class="row"><b>배경</b><span>Deb은 인도공과대 칸푸르에서 이 계열을 시작해 지금은 미시간주립대에 있습니다. 1994년의 NSGA는 계산이 O(MN³)로 느리고, 엘리트 보존이 없으며, 다양성 유지에 사용자가 정하는 매개변수가 필요하다는 세 가지 비판을 받았습니다. <b>NSGA-II는 그 셋을 한꺼번에 고친 개정판</b>입니다.</span></div>
+  <div class="row"><b>원리</b><span>두 장치가 핵심입니다. <b>빠른 비지배 정렬</b>로 해들을 "누구에게도 지지 않는 층"부터 차례로 벗겨내 O(MN²)로 줄였고, <b>혼잡도 거리</b>로 같은 층 안에서는 이웃이 드문 해를 우대해 파레토 전선이 고르게 퍼지도록 했습니다. 사용자가 조절할 다양성 매개변수가 사라진 것이 실무 확산의 결정적 이유였습니다.</span></div>
+  <div class="row"><b>활용</b><span>진화 계산 분야에서 가장 많이 인용된 논문 축에 듭니다. 공학 설계, 일정 계획, 수자원, 에너지 시스템에 두루 쓰입니다. 건축·도시 쪽에서는 Grasshopper용 <code>Wallacei</code>, <code>Octopus</code>가 이 계열을 얹어 배포되면서 설계자들이 코드 없이 쓰게 됐습니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-hi">기준선으로 적합.</span> 이미 조경 연구에 쓰이고 있습니다. 도시 블루그린 공간 연구가 <b>탄소흡수·냉각·빗물관리·생물다양성</b> 네 목적을 동시에 놓고 배치를 최적화했고, 건조기후 공원 연구는 식재·수경·미지형을 변수로 파레토 해를 구해 <b>수관 피복 68~76%, 수면 18~24%, 기복 4~6도</b>라는 구성과 균일 설계 대비 <b>열쾌적성 35~42% 개선</b>을 보고했습니다.</span></div>
+  <div class="row"><b>한계</b><span>목적이 다섯을 넘으면 거의 모든 해가 서로 비지배가 되어 선택압이 사라집니다. 또 결과가 파레토 전선 위의 점들이라 <b>성능은 다르되 형태는 비슷한 안</b>이 모이기 쉽습니다.</span></div>
+</article>
+
+<article class="m" id="nsga3">
+  <h3>2 · NSGA-III</h3>
+  <p class="origin">Kalyanmoy Deb, Himanshu Jain (2014) · IEEE TEC 18(4) 577–601, Part I<br>
+    제약 처리와 적응형 확장은 Jain &amp; Deb, Part II</p>
+  <div class="row"><b>배경</b><span>같은 연구실이 12년 뒤에 내놓은 후속입니다. 문제의식이 분명합니다. NSGA-II의 혼잡도 거리는 목적이 셋을 넘으면 제구실을 못 합니다. 고차원 목적 공간에서는 이웃이 드물다는 신호 자체가 의미를 잃기 때문입니다.</span></div>
+  <div class="row"><b>원리</b><span>혼잡도 거리를 버리고 <b>참조 방향</b>을 씁니다. 목적 공간에 기준점들을 미리 고르게 깔고, 각 방향에 가장 가까운 해를 골라 남깁니다. 다양성 유지를 알고리즘이 추측하는 대신 <b>사람이 미리 정한 좌표계</b>에 맡긴 셈입니다. 골격은 NSGA-II를 그대로 씁니다.</span></div>
+  <div class="row"><b>활용</b><span>목적이 넷에서 열다섯까지 가는 문제에 표준처럼 쓰입니다. 공정 계획, 통신망 라우팅, 구조 설계에 사례가 많습니다. 최근에는 강화학습과 묶어 스케줄링에 적용한 연구도 나옵니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-hi">평가 항목을 늘릴 계획이면 이쪽.</span> 공원 평가는 금세 예닐곱 개가 됩니다. 열쾌적성, 그늘 면적, 동선 효율, 빗물 저류, 생물다양성, 유지관리, 공사비입니다. 이 정도면 NSGA-II보다 유리합니다.</span></div>
+  <div class="row"><b>주의</b><span>참조점을 어떻게 까느냐가 결과를 좌우합니다. 목적의 단위와 범위가 제각각이면 정규화를 먼저 해야 하고, 그 정규화가 사실상 설계자의 가치판단이 됩니다.</span></div>
+</article>
+
+<article class="m" id="cmaes">
+  <h3>3 · CMA-ES</h3>
+  <p class="origin">Nikolaus Hansen, Andreas Ostermeier (1996, 2001)<br>
+    1996 IEEE CEC에서 처음 제안 · 2001 Evolutionary Computation 지에 정식화</p>
+  <div class="row"><b>배경</b><span>독일 베를린공대의 진화 전략 전통에서 나왔습니다. 1970년대 Rechenberg와 Schwefel이 세운 진화 전략은 변이 폭을 스스로 조절했지만 <b>변수들 사이의 상관</b>은 다루지 못했습니다. 길쭉하게 기울어진 골짜기 모양의 문제에서 특히 약했습니다. Hansen은 그 상관을 학습하게 만들었습니다.</span></div>
+  <div class="row"><b>원리</b><span>모집단을 정규분포에서 뽑고, 잘된 개체들이 놓인 방향으로 <b>분포의 공분산 행렬 전체를 갱신</b>합니다. 여기에 <b>진화 경로</b>라는 장치로 여러 세대에 걸친 이동 방향을 누적해 한 세대의 우연을 걸러냅니다. 결과적으로 탐색 타원이 문제의 지형을 따라 늘어나고 기울어집니다. 사용자가 손댈 매개변수가 사실상 없다는 점이 큰 장점입니다.</span></div>
+  <div class="row"><b>활용</b><span>연속 영역의 미분 없는 최적화에서 최고 수준으로 평가됩니다. 기계학습 하이퍼파라미터, 제어기 조정, 물리 시뮬레이션 보정, 최근에는 로봇 정책 탐색까지 폭넓습니다. 이산 변수가 섞이는 문제를 위한 확장도 나와 있습니다. 이웃한 점의 생성 확률을 유지해 조기 수렴을 막는 방식입니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-mid">단독으로는 어중간, 내부 엔진으로는 강력.</span> 본래 단일 목적용입니다. 수목 좌표, 파고라 각도, 포장 경계 곡률처럼 <b>연속값을 미세 조정</b>하는 데는 탁월하지만, 목적을 가중합으로 뭉쳐야 하므로 설계자가 가중치를 미리 정해야 합니다. 그 결정이 어려워서 다목적 방법을 쓰는 것이므로 앞뒤가 바뀝니다.</span></div>
+</article>
+
+<article class="m" id="bo">
+  <h3>4 · 베이지안 최적화</h3>
+  <p class="origin">뿌리는 Jonas Mockus와 Žilinskas (1970~80년대, 구소련) — 기대개선 획득함수<br>
+    Donald Jones, Matthias Schonlau, William Welch (1998) — EGO, 크리깅 기반<br>
+    Jasper Snoek, Hugo Larochelle, Ryan Adams (2012) — 기계학습 하이퍼파라미터로 대중화</p>
+  <div class="row"><b>배경</b><span>출발점이 앞의 방법들과 다릅니다. 진화 계산은 "많이 시도한다"를 전제하지만, 베이지안 최적화는 <b>한 번의 평가가 너무 비싸서 많이 시도할 수 없는 상황</b>을 위해 만들어졌습니다. 1998년의 EGO는 공학 시뮬레이션이, 2012년의 재부상은 딥러닝 학습이 각각 그런 상황이었습니다.</span></div>
+  <div class="row"><b>원리</b><span>지금까지의 평가 결과로 <b>가우시안 과정</b> 대리모형을 세웁니다. 이 모형은 각 지점의 예측값뿐 아니라 <b>불확실성</b>까지 내놓습니다. 그다음 <b>획득함수</b>가 "좋을 것 같은 곳"과 "아직 모르는 곳"을 저울질해 다음 평가 지점 하나를 고릅니다. 기대개선이 가장 널리 쓰이는 획득함수이고 Mockus가 제안한 것입니다.</span></div>
+  <div class="row"><b>활용</b><span>재료 설계, 약물 탐색, 로봇 제어기 조정, 기계학습 하이퍼파라미터가 대표적입니다. 건축·도시에서는 전산유체역학 기반 미기후 평가처럼 한 번에 수십 분 걸리는 문제에 맞습니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-mid">변수가 적고 목적이 하나둘일 때.</span> 미기후 시뮬레이션이 비싸다면 정확히 이 도구의 자리입니다. 다만 수목 수십 그루의 좌표를 다루면 차원이 금세 수십을 넘고, 가우시안 과정은 그 지점에서 버거워집니다.</span></div>
+  <div class="row"><b>덧붙임</b><span>이 방법은 <b>다른 방법의 보조</b>로 쓰일 때 특히 빛납니다. 뒤에 나오는 로봇 손상 적응 연구가 그 예입니다.</span></div>
+</article>
+
+<article class="m key" id="mapelites">
+  <h3>5 · MAP-Elites와 품질·다양성 탐색</h3>
+  <p class="origin">Jean-Baptiste Mouret (INRIA), Jeff Clune (2015) · arXiv:1504.04909<br>
+    계보 — 신규성 탐색: Lehman &amp; Stanley (2011) · 품질·다양성이라는 이름: Pugh, Soros, Stanley (2016)</p>
+  <div class="row"><b>배경</b><span>인공생명 연구에서 나왔습니다. 2011년 Lehman과 Stanley의 <b>신규성 탐색</b>이 출발점입니다. "목표를 향해 최적화하면 오히려 목표에 못 간다, 새로움 자체를 보상하면 간다"는 반직관적 주장이었습니다. 목적을 버린 대신 다양성을 얻은 셈인데, MAP-Elites는 <b>둘 다 갖겠다</b>는 발상입니다.</span></div>
+  <div class="row"><b>원리</b><span>먼저 <b>특성 축</b>을 사람이 정합니다. 해의 성격을 나타내는 값이면 됩니다. 로봇이면 다리를 얼마나 쓰는지, 설계면 수관 피복률이나 개방도 같은 것입니다. 이 축들로 격자를 만들고, 새 해가 나올 때마다 해당 칸에 넣되 <b>칸마다 가장 좋은 해 하나만</b> 남깁니다. 반복하면 격자가 채워지고, 결과는 최적해 하나가 아니라 <b>성격이 서로 다른 좋은 해들의 지도</b>가 됩니다.</span></div>
+  <div class="row"><b>활용</b><span>가장 유명한 사례는 2015년 네이처에 실린 <b>손상에 적응하는 로봇</b>입니다. 다리가 부러진 로봇이 2분 안에 걷는 법을 되찾는데, 원리는 이렇습니다. 미리 MAP-Elites로 수천 가지 걸음걸이 지도를 만들어 두고, 손상이 생기면 <b>베이지안 최적화</b>로 그 지도 위에서 몇 번만 시도해 살아남은 걸음을 찾습니다. 품질·다양성과 베이지안 최적화가 결합한 대표 사례이기도 합니다.</span></div>
+  <div class="row"><b>활용</b><span>이후 게임 레벨 생성, 신경망 구조 탐색, 로봇 형태 진화로 퍼졌고, <b>설계 분야로도 넘어왔습니다.</b> 2021년 <b>ARCH-Elites</b>는 MAP-Elites에 학습된 대리모형을 결합해 실제 대지의 대규모 도시 배치를 재구성했고 보스턴 두 곳에 적용했습니다. 오토데스크 연구진은 QD로 설계·속성 쌍 자료를 대량 생성해 언어모델을 미세조정하는 방향까지 밀었습니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-hi">설계 문제의 성격에 가장 가깝습니다.</span> 발주처와 주민에게 최적안 하나를 들고 가면 설계가 아니라 통보가 됩니다. "그늘 많은 안, 개방감 큰 안, 물을 중심에 둔 안"을 나란히 놓고 고르게 하는 것이 실무입니다. MAP-Elites의 출력이 정확히 그 형태입니다.</span></div>
+  <div class="row"><b>과제</b><span>특성 축을 무엇으로 잡느냐가 결과 전체를 결정하는데 <b>조경에는 표준이 없습니다.</b> 수관 피복률, 개방도, 동선 굴곡도, 수경 비율이 후보지만 합의된 바 없습니다. 이걸 정하는 일 자체가 연구 주제입니다.</span></div>
+</article>
+
+<article class="m key" id="cmame">
+  <h3>6 · QD + CMA-ES</h3>
+  <p class="origin">CMA-ME: Matthew Fontaine, Julian Togelius, Stefanos Nikolaidis, Amy Hoover (GECCO 2020) · arXiv:1912.02400<br>
+    CMA-MAE: Matthew Fontaine, Stefanos Nikolaidis (GECCO 2023) · arXiv:2205.10752</p>
+  <div class="row"><b>배경</b><span>MAP-Elites의 약점은 변이가 거칠다는 것입니다. 기존 해를 무작위로 흔들어 새 해를 만드니 연속 변수를 정밀하게 다듬지 못합니다. 한편 CMA-ES는 정밀하지만 해를 하나만 찾습니다. <b>두 알고리즘의 약점이 서로의 강점입니다.</b> 남캘리포니아대 Nikolaidis 연구실이 이를 결합했습니다.</span></div>
+  <div class="row"><b>원리</b><span>CMA-ME는 MAP-Elites의 무작위 변이를 <b>CMA-ES의 적응형 분포</b>로 바꿉니다. 격자의 빈 칸을 발견하거나 기존 해를 개선하면 그 방향으로 분포를 조정합니다. 2023년의 CMA-MAE는 여기에 <b>담금질</b> 개념을 더했습니다. 각 칸의 기준선을 서서히 올려, 초반에는 널리 탐색하고 후반에는 정밀하게 다듬도록 전환합니다.</span></div>
+  <div class="row"><b>활용</b><span>고차원 연속 문제의 품질·다양성 탐색에서 현재 기준선 취급을 받습니다. 로봇 보행, 게임 콘텐츠 생성, 잠재공간 탐색에 쓰입니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-hi">유력합니다.</span> 격자 축은 "그늘 대 개방"처럼 설계 성격을 잡고, 각 칸 안에서 수목 좌표와 포장 경계는 CMA-ES가 다듬습니다. 다양한 대안과 각 대안의 완성도를 동시에 얻습니다.</span></div>
+  <div class="row"><b>비용</b><span>구현 난도가 한 단계 높습니다. Grasshopper 플러그인으로 바로 쓸 수 있는 형태가 아직 없어 파이썬 쪽에서 직접 엮어야 합니다.</span></div>
+</article>
+
+<article class="m key" id="surrogate">
+  <h3>7 · 서로게이트 결합</h3>
+  <p class="origin">대리모형 자체는 Sacks 외 (1989)의 컴퓨터 실험 설계와 크리깅이 뿌리<br>
+    설계 적용: ARCH-Elites (GECCO 2021) · U-Net 가속 QD (Springer, 2026)</p>
+  <div class="row"><b>배경</b><span>비싼 평가와 대량 탐색은 정면으로 충돌합니다. 품질·다양성 계열은 원래 수만 번 평가를 전제하는데, 전산유체역학은 한 번에 수십 분입니다. 산술적으로 불가능합니다. 해법은 <b>평가를 학습으로 대체</b>하는 것입니다.</span></div>
+  <div class="row"><b>원리</b><span>시뮬레이션을 수천 번 돌려 입력과 결과의 쌍을 모으고, 신경망이 그 대응을 학습합니다. 이후 탐색은 시뮬레이터가 아니라 <b>신경망 위에서</b> 수십만 번 돕니다. 공간 분포를 예측해야 하므로 영상 분할에 쓰이는 U-Net 같은 구조가 쓰입니다. 최종 후보 몇 개만 진짜 시뮬레이션으로 검증합니다.</span></div>
+  <div class="row"><b>활용</b><span>ARCH-Elites가 이 방식으로 실제 대지의 도시 배치를 탐색했습니다. 2026년에는 U-Net으로 가속한 품질·다양성 최적화를 기후 적응형 도시 배치에 적용한 연구가 나왔습니다. 미기후 민감 도시설계에 대리모형을 붙인 프레임워크도 보고돼 있습니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-hi">대규모 생성이 목표라면 사실상 필수입니다.</span> 다만 <b>초기 비용이 큽니다.</b> 학습 자료를 만드는 데 작업의 절반이 들 수 있습니다. 그리고 실무의 관건은 따로 있습니다. <b>대지가 바뀌면 다시 학습해야 하는가.</b> 재사용이 안 되면 사무소 단위로는 수지가 안 맞습니다.</span></div>
+</article>
+
+<article class="m" id="rl">
+  <h3>8 · 강화학습</h3>
+  <p class="origin">PPO: John Schulman 외 (OpenAI, 2017) · SAC: Tuomas Haarnoja 외 (버클리, 2018)</p>
+  <div class="row"><b>배경</b><span>앞의 방법들과 목표가 다릅니다. 이들은 대지마다 처음부터 탐색하지만, 강화학습은 <b>"어떻게 배치할지"라는 정책 자체</b>를 학습합니다. 한 번 배우면 새 대지에 바로 적용된다는 것이 매력입니다.</span></div>
+  <div class="row"><b>원리</b><span>설계를 <b>순차적 결정</b>으로 봅니다. 빈 대지에 요소를 하나씩 놓는 과정으로 바꾸고, 각 배치를 행동으로, 완성된 안의 성능을 보상으로 둡니다. PPO는 정책을 한 번에 크게 바꾸지 못하도록 변화 폭을 잘라 안정성을 얻은 방법이고, SAC는 엔트로피를 보상에 넣어 탐색을 유지하는 오프폴리시 방법입니다.</span></div>
+  <div class="row"><b>활용</b><span>공장 배치 계획에 시뮬레이션 기반 심층강화학습으로 <b>전이 가능한 다목적 배치</b>를 다룬 연구가 있습니다. 칩 배치, 창고 레이아웃에도 적용 사례가 있습니다.</span></div>
+  <div class="row park"><b>공원에서</b><span><span class="fit-lo">연구 주제로는 유망, 단기 실무에는 이릅니다.</span> 학습에 드는 표본이 앞의 방법들보다 훨씬 많아 <b>대리모형이 먼저 있어야</b> 현실적입니다. 즉 7번이 선행 과제입니다.</span></div>
+</article>
+
+<h2>목적이 여럿인데 QD를 쓰면</h2>
+<p>MAP-Elites는 칸마다 <b>한 해</b>만 남깁니다. 목적이 하나면 문제없지만 공원 설계처럼 여러 목적이 걸리면 무엇을 기준으로 남길지가 모호해집니다. 한 목적만 극단적으로 잘하는 안이 살아남기 쉽습니다.</p>
+<p><b>T-DominO</b>(Boyle 외, PPSN 2022)가 이 지점을 다룹니다. 칸 안의 해를 격자 전체의 다른 해들과 견주어 순위를 매기되, 몇 가지만 뛰어난 해보다 <b>고르게 잘하는 해</b>를 남깁니다. 칸마다 하나씩이라는 성질, 곧 사람이 눈으로 훑을 수 있다는 장점을 지키면서 다수목적을 처리합니다. 다수목적 실제 건축 사례에 적용해 보였습니다.</p>
+<div class="callout">
+  공원 검토에 바로 쓸 수 있는 결론입니다. <b>QD 격자에 균형 잡힌 해를 남기는 순위 규칙</b>을 얹으면 "대안을 여러 개 보여주되 어느 한쪽으로 치우치지 않게"라는 실무 요구와 정확히 맞습니다.
+</div>
+
+<h2>한눈에 비교</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>방법</th><th>등장</th><th>출신 분야</th><th>결과물</th><th>목적 수</th><th>비싼 평가</th><th>공원 적합성</th></tr></thead>
+  <tbody>
+    <tr><td>NSGA-II</td><td>2002</td><td>공학 최적화</td><td>파레토 전선</td><td>2~4</td><td>보통</td><td class="fit-hi">기준선</td></tr>
+    <tr><td>NSGA-III</td><td>2014</td><td>공학 최적화</td><td>파레토 전선</td><td>4~15</td><td>보통</td><td class="fit-hi">항목 많을 때</td></tr>
+    <tr><td>CMA-ES</td><td>1996</td><td>진화 전략</td><td>단일 최적해</td><td>1</td><td>보통</td><td class="fit-mid">내부 엔진</td></tr>
+    <tr><td>베이지안 최적화</td><td>1998 / 2012</td><td>통계·기계학습</td><td>단일 최적해</td><td>1~2</td><td class="fit-hi">매우 강함</td><td class="fit-mid">변수 적을 때</td></tr>
+    <tr><td><b>MAP-Elites</b></td><td>2015</td><td>인공생명·로봇</td><td class="fit-hi">해의 지도</td><td>1 + 특성축</td><td>약함</td><td class="fit-hi">성격이 부합</td></tr>
+    <tr><td><b>CMA-ME / MAE</b></td><td>2020 / 2023</td><td>QD + 진화 전략</td><td class="fit-hi">정밀한 지도</td><td>1 + 특성축</td><td>약함</td><td class="fit-hi">유력</td></tr>
+    <tr><td><b>서로게이트 + QD</b></td><td>2021~</td><td>설계 응용</td><td class="fit-hi">대량 생성</td><td>다수 가능</td><td class="fit-hi">매우 강함</td><td class="fit-hi">대규모의 해법</td></tr>
+    <tr><td>강화학습</td><td>2017~</td><td>기계학습</td><td>설계 정책</td><td>다수 가능</td><td>약함</td><td class="fit-lo">연구 단계</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">‘비싼 평가’는 한 번 평가가 비쌀 때 얼마나 적은 횟수로 답에 도달하는가입니다. QD 계열이 약한 이유는 원래 수만 회 평가를 전제하기 때문이며, 그래서 서로게이트와 묶습니다.</p>
+
+<h2>조경에서 무엇이 걸림돌인가</h2>
+<p>국내 조경학회지의 사례 분석이 현실을 짚습니다. 전 세계 28개 조경사무소를 조사했고, 도구는 Grasshopper가 압도적이며 적용은 네 갈래였습니다. 자유곡면 형태 생성, 식재 분포 알고리즘, 지리정보 연동, BIM 연계입니다.</p>
+<p>건축에 비해 뒤처지는 이유로는 이런 것들을 듭니다.</p>
+<ul>
+  <li><b>식물 라이브러리가 빈약합니다.</b> 건축 부재와 달리 표준화된 자산이 부족합니다.</li>
+  <li><b>3차원 식생 모델은 계산 부담이 큽니다.</b> 대체 객체를 쓰지 않으면 돌아가지 않습니다.</li>
+  <li><b>연구 자체가 적습니다.</b> 국제적으로도 파라메트릭 조경설계 연구가 스무 편 남짓입니다.</li>
+</ul>
+<div class="callout">
+  뒤집어 보면 이런 뜻입니다. <b>알고리즘은 이미 충분히 좋습니다. 부족한 것은 평가 함수와 자산입니다.</b> 방법론을 고르는 일보다 "무엇을 어떻게 점수 매길 것인가"를 정하는 일이 더 큰 과제입니다.
+</div>
+
+<h2>이 검토의 한계</h2>
+<ul>
+  <li>문헌 기반이며 <b>직접 실험한 결과가 아닙니다.</b> 인용 수치는 각 연구의 대지와 기후에서 나온 값입니다.</li>
+  <li>인용 문헌의 대상이 대부분 <b>도시 블록이나 건축 매싱</b>이고 소공원 단위 사례는 드뭅니다. 규모가 달라지면 변수 수와 평가 비용이 달라집니다.</li>
+  <li>QD의 특성 축을 조경에서 무엇으로 잡을지에 관한 <b>합의된 기준이 없습니다.</b> 여기의 제안은 후보일 뿐입니다.</li>
+  <li>국내 기후·수종·법규 조건에서의 검증은 별도 과제입니다.</li>
+</ul>
+
+<h2>참고 문헌</h2>
+<ol class="refs">
+  <li><b>[선행]</b> Stiny, G., Gips, J. (1972). Shape Grammars and the Generative Specification of Painting and Sculpture. · Stiny, G., Mitchell, W. (1978). The Palladian Grammar. — <a href="https://www.researchgate.net/publication/360808712_Fifty_years_of_shape_grammars_A_systematic_mapping_of_its_application_in_engineering_and_architecture">50년 회고 리뷰</a> · <a href="https://novedge.com/blogs/design-news/design-software-history-shape-grammars-in-architectural-design-origins-theory-and-software-legacy">역사 정리</a></li>
+  <li><b>[선행]</b> Frazer, J. (1995). <a href="https://www.semanticscholar.org/paper/An-Evolutionary-Architecture-Frazer/ec84626533904449e84cf9cfd0f656926ef57988"><i>An Evolutionary Architecture</i></a>. Architectural Association. — 7년 형태발생 프로젝트(1989–1996).</li>
+  <li><b>[선행]</b> Nagy, D. 외. <a href="https://damassets.autodesk.net/content/dam/autodesk/research/publications-assets/pdf/project-discover-an-application.pdf">Project Discover: An Application of Generative Design for Architectural Space Planning</a>. Autodesk Research. — 토론토 MaRS 사무소, 목적 6개, 대안 약 1만 개. · <a href="https://www.autodesk.com/autodesk-university/article/Hands-Project-Rediscover-Generatively-Designing-Autodesk-Toronto-Office-2020">실행 보고</a></li>
+  <li><b>[선행]</b> Nauata, N. 외. House-GAN / House-GAN++ — 인접 그래프 조건부 평면 생성. · <a href="https://dl.acm.org/doi/10.1145/3731715.3733343">Floorplan-Diffusion</a> · <a href="https://arxiv.org/pdf/2411.12279">HouseTune</a> — 확산 모델과 언어모델 결합.</li>
+  <li><b>[선행·조경]</b> <a href="https://doi.org/10.3390/buildings13041083">Generative Design of Outdoor Green Spaces Based on Generative Adversarial Networks</a>. <i>Buildings</i> 13(4). · <a href="https://www.sciencedirect.com/science/article/pii/S0264275125004822">AI for Landscape Planning: Assessing Surrounding Contextual Impact on GAN-Generated Green Land Layouts</a>.</li>
+  <li><b>[선행·조경]</b> <a href="https://arxiv.org/pdf/2404.16067">Layout2Rendering: AI-aided Greenspace design</a>. — 배치에서 3차원 모델·투시도까지 자동화.</li>
+  <li><b>[선행·조경]</b> <a href="https://www.sustainable-buildings-journal.org/articles/sbuild/full_html/2025/01/sbuild20250012/sbuild20250012.html">Planning of urban park green space layout — adopting an optimization model</a>. — 시안 옌타구, K-평균과 개량 유전 알고리즘으로 접근성 개선. · <a href="https://doi.org/10.3390/land13122251">공원 공간 배치의 정량 지표화</a></li>
+
+  <li>Deb, K., Pratap, A., Agarwal, S., Meyarivan, T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. <i>IEEE TEC</i> 6(2). — <a href="https://dl.acm.org/doi/10.1007/s10462-023-10526-z">종합 리뷰</a></li>
+  <li>Deb, K., Jain, H. (2014). <a href="https://ieeexplore.ieee.org/document/6600851/">An Evolutionary Many-Objective Optimization Algorithm Using Reference-Point-Based Nondominated Sorting Approach, Part I</a>. <i>IEEE TEC</i> 18(4) 577–601.</li>
+  <li>Hansen, N., Ostermeier, A. (2001). <a href="http://www.cmap.polytechnique.fr/~nikolaus.hansen/cmaartic.pdf">Completely Derandomized Self-Adaptation in Evolution Strategies</a>. <i>Evolutionary Computation</i> 9(2). · <a href="https://cma-es.github.io/">CMA-ES 공식 자료</a></li>
+  <li>Hamano, R. 외 (2024). <a href="https://arxiv.org/abs/2408.13046">CMA-ES for Discrete and Mixed-Variable Optimization on Sets of Points</a>. PPSN.</li>
+  <li>Jones, D., Schonlau, M., Welch, W. (1998). Efficient Global Optimization of Expensive Black-Box Functions. · Snoek, J., Larochelle, H., Adams, R. (2012). <a href="https://proceedings.neurips.cc/paper/2012/file/05311655a15b75fab86956663e1819cd-Paper.pdf">Practical Bayesian Optimization of Machine Learning Algorithms</a>. NeurIPS. · <a href="https://arxiv.org/html/1807.02811v1">튜토리얼</a></li>
+  <li>Mouret, J-B., Clune, J. (2015). <a href="https://arxiv.org/pdf/1504.04909">Illuminating search spaces by mapping elites</a>. arXiv:1504.04909. · <a href="https://members.loria.fr/jbmouret/qd.html">저자의 QD 자료</a> · <a href="https://github.com/jbmouret/map_elites_tutorial">튜토리얼 노트북</a></li>
+  <li>Fontaine, M., Togelius, J., Nikolaidis, S., Hoover, A. (2020). <a href="https://arxiv.org/abs/1912.02400">Covariance Matrix Adaptation for the Rapid Illumination of Behavior Space</a>. GECCO.</li>
+  <li>Fontaine, M., Nikolaidis, S. (2023). <a href="https://arxiv.org/abs/2205.10752">Covariance Matrix Adaptation MAP-Annealing</a>. GECCO. · <a href="https://dl.acm.org/doi/full/10.1145/3665336">확장판</a></li>
+  <li>Boyle, J. 외 (2022). <a href="https://arxiv.org/abs/2207.01439">T-DominO: Exploring Multiple Criteria with Quality-Diversity and the Tournament Dominance Objective</a>. PPSN.</li>
+  <li>Galanos, T. 외 (2021). <a href="https://dl.acm.org/doi/10.1145/3449726.3459490">ARCH-Elites: Quality-Diversity for Urban Design</a>. GECCO.</li>
+  <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-36229-2_22">U-Net-Accelerated Quality-Diversity Optimization for Climate-Adaptive Urban Layouts</a>. Springer, 2026.</li>
+  <li><a href="https://www.research.autodesk.com/publications/generative-design-quality-diversity-data-synthesis-language-models/">Generative Design through Quality-Diversity Data Synthesis and Language Models</a>. Autodesk Research.</li>
+  <li><a href="https://www.nature.com/articles/s41598-026-59100-x">Multi-objective optimization of urban blue-green space configuration using NSGA-II</a>. <i>Scientific Reports</i>, 2026.</li>
+  <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1359431126004382">Optimizing park landscape configurations for microclimate regulation and outdoor thermal comfort in arid cities</a>. <i>Applied Thermal Engineering</i>, 2026.</li>
+  <li><a href="https://www.nature.com/articles/s41598-025-96763-4">Generative design optimization of tree distribution for enhanced thermal comfort</a>. <i>Scientific Reports</i>, 2025.</li>
+  <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S036013232100072X">A surrogate-assisted optimization framework for microclimate-sensitive urban design practice</a>. <i>Building and Environment</i>.</li>
+  <li><a href="https://www.sciencedirect.com/science/article/pii/S0278612524000736">Transferable multi-objective factory layout planning using simulation-based deep reinforcement learning</a>. <i>JMS</i>, 2024.</li>
+  <li>이유미 외. <a href="https://www.jkila.org/archive/view_article?pid=jkila-49-2-1">조경 설계 분야에서 파라메트릭 디자인의 사례 분석과 활용</a>. <i>한국조경학회지</i> 49(2).</li>
+</ol>
+
+<footer>
+  <p>문헌 검토 자료입니다. 인용 수치는 각 연구가 보고한 값이며 원문의 대지·기후·가정을 함께 확인해야 합니다. 해석과 적합성 판단은 필자의 것입니다.</p>
+</footer>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true, theme: "base",
+    themeVariables: {
+      background: "#f6f8f6", primaryColor: "#eef1ee", primaryTextColor: "#17201c",
+      primaryBorderColor: "#d6ded8", lineColor: "#57635c", fontSize: "12.5px",
+      fontFamily: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif"
+    },
+    flowchart: { htmlLabels: true, curve: "basis", padding: 12 }
+  });
+</script>
+</body>
+</html>
