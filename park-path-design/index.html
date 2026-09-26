@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>소공원 동선 자동설계 — 연구노트</title>
+<meta name="description" content="4,000㎡ 소공원의 순환형 보행동선을 자동 생성하기 위한 선행연구, 설계 원칙, Quality-Diversity 탐색, 구현 계획을 정리한 연구노트.">
+<style>
+:root{
+  --bg:#eef1ee; --panel:#f6f8f6; --ink:#17201c; --mut:#57635c; --line:#d6ded8;
+  --accent:#2f7d5a; --accent-ink:#245f45; --warm:#a8642a; --warm-bg:#f8f1e8;
+  --blue:#355f83; --blue-bg:#edf3f7; --red:#9a4a43; --red-bg:#f8eeee;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(0,0,0,.05);
+  padding:1px 5px;border-radius:3px;font-size:.9em}
+.wrap{width:100%;max-width:900px;margin:0 auto;padding:clamp(34px,7vh,72px) clamp(20px,5vw,42px) 90px}
+header{padding-bottom:28px;border-bottom:2px solid var(--line)}
+.eyebrow{font:600 12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 14px}
+h1{font-size:clamp(30px,5.4vw,44px);line-height:1.1;letter-spacing:-.03em;margin:0 0 16px;font-weight:700}
+.lede{font-size:clamp(15px,2vw,17px);color:var(--mut);max-width:70ch;margin:6px 0}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{font:12px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--accent-ink);
+  border:1px solid var(--line);background:var(--panel);padding:6px 9px;border-radius:5px}
+.home{display:inline-block;margin-top:18px;font-size:13px;text-decoration:none;border-bottom:1px solid var(--line)}
+nav.toc{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:22px 0 0}
+nav.toc ol{margin:0;padding-left:20px;font-size:14.5px;line-height:1.9}
+nav.toc a{text-decoration:none}
+h2{font:600 12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mut);margin:50px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line);
+  scroll-margin-top:20px}
+h3{font-size:19px;line-height:1.35;margin:25px 0 8px;letter-spacing:-.015em}
+p{margin:10px 0}
+ul,ol{padding-left:21px}
+li{margin:6px 0}
+.callout{background:var(--warm-bg);border-left:3px solid var(--warm);padding:15px 17px;border-radius:0 7px 7px 0;margin:18px 0}
+.callout.blue{background:var(--blue-bg);border-left-color:var(--blue)}
+.callout.red{background:var(--red-bg);border-left-color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:17px 18px}
+.card h3{font-size:16px;margin:0 0 8px}
+.card p{font-size:14.3px;color:var(--mut);margin:0}
+.k{font:600 11px/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:18px 0}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 10px;text-align:center;font-size:13px}
+.step b{display:block;color:var(--accent-ink);margin-bottom:4px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:15px 0}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font:600 11px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.scroll{overflow-x:auto}
+.paper{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 21px;margin:14px 0}
+.paper h3{font-size:18px;margin:0 0 3px}
+.paper .cite{font-size:13px;color:var(--mut);margin-bottom:12px}
+.paper .take{background:var(--warm-bg);padding:11px 13px;border-radius:6px;font-size:14.2px;margin-top:12px}
+.paper .take b{color:var(--warm)}
+.paper a{word-break:break-word}
+.eq{font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#e9eeea;border:1px solid var(--line);
+  padding:12px 14px;border-radius:7px;overflow-x:auto;margin:13px 0}
+.small{font-size:13.5px;color:var(--mut)}
+.refs{font-size:13.5px;color:var(--mut);line-height:1.75}
+.refs li{margin-bottom:9px}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+@media(max-width:720px){
+  .grid{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+  <p class="eyebrow">Landscape Generative Design · Research Note</p>
+  <h1>소공원 동선 자동설계</h1>
+  <p class="lede">4,000㎡ 소공원에서 남측 입구 1개와 동측 입구 1개를 폭 2m의 순환형 보행로로 연결한다. 목표는 ‘정답 한 개’를 그리는 것이 아니라, 물리적으로 가능한 동선 설계공간을 자동으로 생성하고 탐색하는 것이다.</p>
+  <p class="lede">이 노트는 관련 논문을 읽으면서 <b>무엇을 그대로 가져올 수 있는지</b>, 무엇은 우리 문제에 맞게 바꿔야 하는지, 그리고 동선 생성기를 전체 공원 자동설계 파이프라인으로 어떻게 확장할지를 정리한다.</p>
+  <div class="meta">
+    <span class="chip">site · 4,000㎡</span><span class="chip">entrances · south + east</span>
+    <span class="chip">path width · 2m</span><span class="chip">topology · circulation</span>
+    <span class="chip">QD · MAP-Elites</span>
+  </div>
+  <a class="home" href="/">← SpatialFlare 홈</a>
+  <nav class="toc">
+    <ol>
+      <li><a href="#problem">문제 정의와 현재 결론</a></li>
+      <li><a href="#principle">무엇을 금지하고 무엇을 다양성으로 남길 것인가</a></li>
+      <li><a href="#literature">직접 써먹을 선행연구</a></li>
+      <li><a href="#generator">동선 생성기 v0.1</a></li>
+      <li><a href="#qd">왜 Quality-Diversity인가</a></li>
+      <li><a href="#fulltrack">풀트랙 자동 공원설계로 확장</a></li>
+      <li><a href="#experiment">실험 계획</a></li>
+      <li><a href="#references">참고문헌</a></li>
+    </ol>
+  </nav>
+</header>
+
+<h2 id="problem">1 · 문제 정의와 현재 결론</h2>
+<p>초기 문제는 의도적으로 단순하게 잡는다. 부지 형상은 먼저 직사각형 또는 실제 필지 polygon으로 입력하고, 출입구는 남측과 동측 경계에 하나씩 둔다. 보행로 폭은 전 구간 2m다. 막다른 가지 없이 두 출입구를 연결하는 순환형 동선을 생성한다.</p>
+
+<div class="grid">
+  <div class="card"><span class="k">Fixed</span><h3>고정 조건</h3><p>부지 경계, 남측·동측 출입구, 보행로 폭 2m, 순환 연결.</p></div>
+  <div class="card"><span class="k">Variable</span><h3>탐색 대상</h3><p>길이, 굴곡, 내부면적, 경계와의 거리, 두 경로 사이 간격, 형태의 비대칭성.</p></div>
+  <div class="card"><span class="k">Goal</span><h3>목표</h3><p>최적안 하나가 아니라 서로 다른 성격의 유효한 대안을 가능한 넓게 수집한다.</p></div>
+  <div class="card"><span class="k">Output</span><h3>출력</h3><p>벡터 중심선 + 2m buffer polygon + 설계 특성값 + 평가값. 이후 GIS·CAD·BIM으로 연결한다.</p></div>
+</div>
+
+<div class="callout">
+  <b>현재의 핵심 결론.</b> “이상해 보이는 설계”를 너무 빨리 제거하지 않는다. 물리적으로 불가능하거나 실험에서 정의한 topology를 깨는 경우만 hard constraint로 제거하고, 길고 좁고 많이 휘어진 형태는 가능한 한 <b>descriptor</b>로 기록한다.
+</div>
+
+<h3>동선의 기본 표현</h3>
+<p>남측 출입구를 S, 동측 출입구를 E라고 하면 가장 단순한 순환형은 S와 E를 잇는 서로 다른 두 경로로 표현할 수 있다.</p>
+<div class="eq">P_A : S → E<br>P_B : S → E<br>Loop = P_A ∪ P_B</div>
+<p>초기 구현에서는 각 경로를 B-spline 또는 Bézier 계열 곡선으로 두고 제어점을 유전자로 사용한다. 다른 선택지는 하나의 기준선 R(t)을 만든 뒤 양쪽 offset 함수로 두 경로를 생성하는 것이다.</p>
+
+<h2 id="principle">2 · Hard constraint와 다양성을 분리한다</h2>
+<p>처음에는 자기교차, 좁은 고리, 긴 동선, 급한 굴곡을 모두 금지조건으로 두는 방안을 검토했다. 그러나 생성설계의 목적이 설계공간 탐색이라면 그렇게 할수록 사람이 이미 익숙한 형태만 남는다.</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th>항목</th><th>v0.1 처리</th><th>이유</th></tr></thead>
+<tbody>
+<tr><td>출입구 연결</td><td><b>Hard constraint</b></td><td>문제 정의 자체.</td></tr>
+<tr><td>부지 밖으로 이탈</td><td><b>Hard constraint</b></td><td>물리적으로 시공 불가능.</td></tr>
+<tr><td>폭 2m buffer가 성립하지 않음</td><td><b>Hard constraint</b></td><td>중심선만 존재하고 실제 보행면이 성립하지 않는 안은 제외.</td></tr>
+<tr><td>동선 길이</td><td>Descriptor</td><td>짧음·김 자체가 설계 유형. 나중에 효율 또는 체류성 평가에 사용.</td></tr>
+<tr><td>루프 내부면적</td><td>Descriptor</td><td>작은 내부공간도 다른 공간구성의 가능성.</td></tr>
+<tr><td>곡률·굴곡 복잡도</td><td>Descriptor</td><td>‘뱀 모양’도 먼저 기록하고 이후 품질 평가에서 다룬다.</td></tr>
+<tr><td>두 경로 최소간격</td><td>Descriptor + topology 검사</td><td>좁은 것은 허용하되 2m 포장면이 합쳐져 연결구조가 바뀌면 별도 분류.</td></tr>
+<tr><td>교차</td><td>실험 모드에 따라 다름</td><td>출입구 외 노드 없음이라는 strict topology에서는 제외. 탐색 범위를 넓히는 실험에서는 교차 횟수 자체를 descriptor로 둔다.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout blue">
+  <b>두 가지 실험 모드.</b> <b>Strict-loop</b>는 출입구 외 노드가 없는 단일 loop만 허용한다. <b>Exploratory-loop</b>는 교차와 국부 합류를 허용하고 intersection count와 graph topology를 별도 특성으로 기록한다. 이렇게 하면 “교차는 나쁜가?”를 사전에 결정하지 않고 결과로 비교할 수 있다.
+</div>
+
+<h2 id="literature">3 · 직접 써먹을 선행연구</h2>
+
+<article class="paper">
+  <h3>Yan et al. (2023) · 정원 길을 파라메트릭하게 생성하고 GA로 최적화</h3>
+  <div class="cite">International Journal of Environmental Research and Public Health 20(4), 3158 · DOI 10.3390/ijerph20043158</div>
+  <p>강남 고전정원의 도로체계를 대상으로 곡률, 각도, 조망 면적 같은 형상 특성을 추출하고 이를 파라메트릭 플랫폼에 옮긴 뒤 유전알고리즘으로 최적화했다. 논문 스스로 courtyard, community park, urban park 등으로의 적용 가능성을 제시한다.</p>
+  <div class="take"><b>가져올 것</b> · 보행로를 단순 선이 아니라 <b>곡률·각도·시각경험을 가진 파라메트릭 객체</b>로 표현하는 방식. 우리 v0.1의 spline generator와 가장 직접적으로 연결된다.</div>
+  <p class="small"><a href="https://doi.org/10.3390/ijerph20043158">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Galanos et al. (2021) · ARCH-Elites</h3>
+  <div class="cite">GECCO '21 Companion, pp. 313–314 · DOI 10.1145/3449726.3459490</div>
+  <p>MAP-Elites를 도시설계에 적용해 Boston의 실제 대상지에서 대규모 도시배치를 탐색했다. 비싼 시뮬레이션 대신 사전학습 surrogate model을 이용해 가능성 공간을 넓게 탐색하는 구조다.</p>
+  <div class="take"><b>가져올 것</b> · “최적안 한 장”이 아니라 <b>설계공간을 지도처럼 채우는 것</b>을 연구목적으로 삼는 논리. 동선 길이 × 내부면적 × 곡률 복잡도 같은 descriptor 축을 정의하는 근거가 된다.</div>
+  <p class="small"><a href="https://doi.org/10.1145/3449726.3459490">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Gaier et al. (2022) · T-DominO</h3>
+  <div class="cite">PPSN XVII · DOI 10.1007/978-3-031-14721-0_19</div>
+  <p>실제 설계문제는 objective, constraint, feature가 뒤섞인다. T-DominO는 QD archive의 다양성을 유지하면서 여러 objective에서 한쪽 성능만 극단적으로 좋은 해보다 균형 잡힌 해를 선호하도록 만든다.</p>
+  <div class="take"><b>가져올 것</b> · 나중에 그늘, 탄소, 공사비, 접근성, 시각성 등 평가항목이 늘어날 때 단일 quality score로 억지 합산하지 않고 <b>multi-criteria exploration</b>으로 확장하는 방법.</div>
+  <p class="small"><a href="https://doi.org/10.1007/978-3-031-14721-0_19">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Gaier et al. (2024) · TileGPT: QD → 언어모델 → 제약만족</h3>
+  <div class="cite">GECCO '24, pp. 823–831 · DOI 10.1145/3638529.3654138</div>
+  <p>Quality-Diversity 탐색으로 다양하면서 성능이 좋은 설계 데이터셋을 먼저 만든 뒤, 이를 언어모델 학습에 사용하고, 자연어로 생성된 고수준 설계를 Wave Function Collapse 기반 제약만족 단계로 정제한다.</p>
+  <div class="take"><b>가져올 것</b> · QD를 단순 최적화가 아니라 <b>미래 생성모델의 학습데이터 제작기</b>로 보는 관점. “잔디마당 크게, 그늘 많게, 산책길 250m” 같은 자연어 조건을 나중에 연결하기 좋다.</div>
+  <p class="small"><a href="https://doi.org/10.1145/3638529.3654138">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Ren et al. (2025) · Pocket park 식재의 생성 최적화</h3>
+  <div class="cite">Urban Forestry &amp; Urban Greening 112, 128993 · DOI 10.1016/j.ufug.2025.128993</div>
+  <p>20m × 20m pocket park에서 수종별 탄소저장 데이터를 갖춘 식물 DB와 식재 규칙을 파라미터화하고, GA로 biomass·shade·canopy diversity in view 세 목적을 최적화했다. 50개체 × 50세대의 2,500개 해에서 86개의 Pareto 해를 얻고 clustering과 ML로 다시 선별했다.</p>
+  <div class="take"><b>가져올 것</b> · 동선 다음 단계인 <b>식재 자동배치 모듈</b>의 거의 직접적인 선행연구. 수목 라이브러리의 수고·수관폭·수종·탄소·그늘 속성을 객체 데이터로 연결하면 된다.</div>
+  <p class="small"><a href="https://doi.org/10.1016/j.ufug.2025.128993">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Zandniapour et al. (2025) · GIS + 3D Isovist + NSGA-II</h3>
+  <div class="cite">International Journal of Geoheritage and Parks 13(1), 1–16 · DOI 10.1016/j.ijgeop.2024.08.002</div>
+  <p>GIS로 대상지를 표현하고 3D Isovist 분석과 constrained NSGA-II를 연결해 공원·공공오픈스페이스 설계를 연속적인 solution space로 탐색했다.</p>
+  <div class="take"><b>가져올 것</b> · 생성기를 평가기와 분리하는 구조. 동선 자체가 아니라 <b>동선에서 보이는 공간과 수목·건물의 시각성</b>을 별도 시뮬레이션 모듈로 계산할 수 있다.</div>
+  <p class="small"><a href="https://doi.org/10.1016/j.ijgeop.2024.08.002">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Chen et al. (2025) · 원격탐사 → GAN → Stable Diffusion</h3>
+  <div class="cite">Cities 166, 106181 · DOI 10.1016/j.cities.2025.106181</div>
+  <p>주변 도시환경을 원격탐사로 자동 추출하고, 외부 맥락을 조건으로 GAN이 공원·주거녹지 배치를 생성한 뒤 Stable Diffusion으로 세부와 해상도를 보강하는 full-process generative workflow를 제안한다.</p>
+  <div class="take"><b>가져올 것</b> · <b>site context를 자동으로 읽는 앞단</b>. 다만 우리 시스템의 핵심 중간표현은 raster image보다 graph·vector geometry로 두는 것이 BIM·시공 자동화까지 연결하기 쉽다.</div>
+  <p class="small"><a href="https://doi.org/10.1016/j.cities.2025.106181">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Liu et al. (2025) · Node-mediated landscape layout generation</h3>
+  <div class="cite">Landscape Architecture 32(12), 12–23 · DOI 10.3724/j.fjyl.LA20250217</div>
+  <p>End-to-end 생성모델의 낮은 통제성과 해석가능성을 문제로 보고, semantic·process-level interpretability와 인간 개입을 포함한 다중모델·다중경로 생성 프레임워크를 제안한다.</p>
+  <div class="take"><b>가져올 것</b> · 풀트랙 공원설계에서 Lawn, Plaza, Playground, Rest Area, Entrance 같은 <b>프로그램 노드와 관계를 먼저 만들고 geometry를 나중에 생성</b>하는 구조.</div>
+  <p class="small"><a href="https://doi.org/10.3724/j.fjyl.LA20250217">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Zhang et al. (2026) · MADDPG 기반 street-corner park 경로계획</h3>
+  <div class="cite">Applied Soft Computing 195, 115033 · DOI 10.1016/j.asoc.2026.115033</div>
+  <p>지형고도, POI, 위치정보를 CNN+MLP로 처리하는 ParkEnv를 만들고 MADDPG 다중에이전트로 공원 동선을 자동 생성했다. 32,462,344 training steps를 수행했고, 결과는 CAD/BIM과 호환 가능한 editable vector path로 출력한다.</p>
+  <div class="take"><b>가져올 것</b> · RL이 필요한 시점과 비교기준. 초기에는 spline + QD가 더 단순하지만, 지형·POI·장애물이 복잡해지면 <b>RL path planner를 비교군 또는 후속 모듈</b>로 붙일 수 있다.</div>
+  <p class="small"><a href="https://doi.org/10.1016/j.asoc.2026.115033">논문 DOI</a></p>
+</article>
+
+<article class="paper">
+  <h3>Zhang et al. (2026) · LLM으로 시각경험 요구를 계산가능한 목표로 번역</h3>
+  <div class="cite">Building and Environment 296, 114544 · DOI 10.1016/j.buildenv.2026.114544</div>
+  <p>이용자가 자연어로 표현한 visual perceptual expectation을 LLM이 정량적 trend로 번역하고, point-cloud 기반 visual metric과 다목적 경로 최적화를 연결했다.</p>
+  <div class="take"><b>가져올 것</b> · “더 개방적인 길”, “숲속처럼 느껴지는 길” 같은 <b>정성적 설계의도를 objective 또는 target profile로 바꾸는 인터페이스</b>. 풀트랙 시스템의 인간-설계자 입력 계층으로 유용하다.</div>
+  <p class="small"><a href="https://doi.org/10.1016/j.buildenv.2026.114544">논문 DOI</a></p>
+</article>
+
+<div class="callout">
+  <b>선행연구를 합치면 역할이 분명해진다.</b> Yan은 동선의 파라메트릭 생성, ARCH-Elites/T-DominO는 설계공간 탐색, Zhang 2026은 RL 경로계획과 이용자 요구 번역, Ren은 식재, Zandniapour는 성능평가, Liu는 semantic graph, Chen은 외부 맥락 자동입력, TileGPT는 QD 데이터와 언어 인터페이스를 담당한다.
+</div>
+
+<h2 id="generator">4 · 동선 생성기 v0.1</h2>
+<h3>4.1 최소 구현</h3>
+<div class="flow">
+  <div class="step"><b>01</b>Site polygon</div>
+  <div class="step"><b>02</b>S / E entrance</div>
+  <div class="step"><b>03</b>Spline generator</div>
+  <div class="step"><b>04</b>2m buffer check</div>
+  <div class="step"><b>05</b>Descriptor archive</div>
+</div>
+
+<p>첫 버전에서는 학습모델이 필요 없다. Python의 geometry stack으로 충분하다. 부지 polygon과 출입구 좌표를 입력하고 두 개의 spline 경로를 만든 뒤, 중심선에 1m buffer를 적용해 실제 2m 보행면 polygon을 만든다. Shapely 계열의 연산으로 경계 포함 여부, 교차, 면적, 길이, 최소거리 등을 계산할 수 있다.</p>
+
+<h3>4.2 설계 유전자</h3>
+<p>경로당 제어점 3~4개에서 시작한다. 제어점 자체를 유전자로 쓰면 하나의 설계안은 대략 다음과 같다.</p>
+<div class="eq">X = (xA1,yA1, xA2,yA2, xA3,yA3, xA4,yA4,<br>
+     xB1,yB1, xB2,yB2, xB3,yB3, xB4,yB4)</div>
+<p>다른 방식은 하나의 기준선과 양측 offset profile을 유전자로 두는 것이다. 이 방식은 처음부터 두 경로가 비슷한 흐름을 갖게 만들어 유효한 loop가 나올 확률을 높인다.</p>
+
+<h3>4.3 계산할 descriptor</h3>
+<div class="scroll">
+<table>
+<thead><tr><th>기호</th><th>의미</th><th>용도</th></tr></thead>
+<tbody>
+<tr><td>L</td><td>총 순환 길이</td><td>짧은 산책형 ↔ 긴 체류형</td></tr>
+<tr><td>A</td><td>루프가 둘러싼 내부면적</td><td>좁은 고리 ↔ 큰 중앙공간</td></tr>
+<tr><td>K</td><td>곡률 또는 곡률변화 통계</td><td>직선적 ↔ 굴곡이 많은 형태</td></tr>
+<tr><td>Dmin</td><td>두 경로 사이 최소거리</td><td>타이트한 loop ↔ 넓게 벌어진 loop</td></tr>
+<tr><td>B</td><td>경계와의 평균/최소거리</td><td>중앙집중 ↔ 경계추종</td></tr>
+<tr><td>I</td><td>교차 횟수</td><td>strict mode에서는 0, exploratory mode에서는 descriptor</td></tr>
+<tr><td>C</td><td>compactness / elongation</td><td>둥근 형태 ↔ 길쭉한 형태</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>길이의 경우 절대적으로 “200m 이상 금지”처럼 자르기보다, 입구 S–E 직선거리 D에 대한 비율 <code>L/D</code>와 전체 루프 길이를 기록한다. 이후 실제 이용성·시공비·공간프로그램과 함께 평가한다.</p>
+
+<h2 id="qd">5 · 왜 Quality-Diversity인가</h2>
+<p>NSGA-II는 좋은 Pareto 해집합을 찾는 데 강하지만, “성능은 비슷하더라도 형태가 전혀 다른 설계”를 의도적으로 넓게 수집하는 것이 주목적은 아니다. 소공원 초기설계에서는 오히려 서로 다른 성격의 대안을 빠르게 보는 것이 중요하다.</p>
+<div class="eq">MAP-Elites cell example<br><br>
+x-axis = circulation length<br>
+y-axis = enclosed area<br>
+(optional) feature = curvature complexity<br><br>
+각 cell에는 그 형태 영역에서 가장 성능이 좋은 설계안을 저장</div>
+<p>예를 들어 내부면적이 작고 길이가 긴 공원, 내부면적이 크고 동선이 짧은 공원, 굴곡이 많은 경계추종형 공원 등을 동시에 archive에 보존할 수 있다. 이때 ‘좁은 고리’는 실패가 아니라 하나의 cell이 된다.</p>
+
+<div class="callout blue">
+  <b>중요한 구분.</b> descriptor는 “어떤 종류의 설계인가”를 말하고, objective는 “그 종류 안에서 얼마나 좋은가”를 말한다. 둘을 섞지 않는 것이 QD 구조의 핵심이다.
+</div>
+
+<h3>초기 quality는 단순하게</h3>
+<p>첫 실험부터 미기후·탄소·공사비를 모두 넣지 않는다. 우선 geometry만으로 계산 가능한 품질을 쓴다. 예를 들어 유효 보행면적, 지나친 국부 중첩 여부, 경계위반량, 수치적 곡선 안정성 같은 항목이다. 설계공간 archive가 안정되면 그 위에 성능 evaluator를 붙인다.</p>
+
+<h2 id="fulltrack">6 · 풀트랙 자동 공원설계로 확장</h2>
+<p>동선 생성은 전체 시스템의 한 모듈이다. 최종 목표는 평면 그림을 자동으로 그리는 것이 아니라, 입력된 부지에서 설계·성능평가·BIM 객체화까지 이어지는 machine-readable workflow다.</p>
+
+<div class="flow">
+  <div class="step"><b>01</b>Site / GIS</div>
+  <div class="step"><b>02</b>Semantic graph</div>
+  <div class="step"><b>03</b>Geometry</div>
+  <div class="step"><b>04</b>Simulation</div>
+  <div class="step"><b>05</b>QD archive</div>
+  <div class="step"><b>06</b>Program layout</div>
+  <div class="step"><b>07</b>Planting</div>
+  <div class="step"><b>08</b>Cost / WBS</div>
+  <div class="step"><b>09</b>IFC / BIM</div>
+  <div class="step"><b>10</b>Construction sim.</div>
+</div>
+
+<h3>권장 내부 표현</h3>
+<p>Diffusion으로 평면 이미지를 바로 생성하면 보기에는 좋지만 좌표, 면적, 연결관계, 물량, IFC 속성을 안정적으로 이어가기 어렵다. 그래서 내부 핵심은 다음 순서를 유지하는 편이 좋다.</p>
+<div class="eq">Semantic Graph → Vector Geometry → Performance Simulation → QD Search → BIM/IFC</div>
+<p>GAN·diffusion·LLM은 이 구조를 대체하기보다 입력과 출력 계층에 둔다. LLM은 자연어 요구조건과 semantic graph 사이를 번역하고, diffusion은 최종 프레젠테이션 이미지를 만드는 식이다.</p>
+
+<h3>공원 객체 그래프 예</h3>
+<div class="eq">Nodes = {Entrance, Path, Lawn, Plaza, Playground, RestArea, TreeZone, Facility}<br>
+Relations = {Connected, Adjacent, Separated, Visible, Accessible, Contains}</div>
+<p>이 구조는 나중에 IFC 4.3 객체, WBS 작업, 시공순서와 연결하기도 쉽다. 즉 동선의 좌표만 생성하는 연구를 넘어 <b>설계 객체와 관계를 끝까지 유지하는 자동화</b>가 된다.</p>
+
+<h2 id="experiment">7 · 실험 계획</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>단계</th><th>실험</th><th>결과물</th></tr></thead>
+<tbody>
+<tr><td>v0.1</td><td>50×80m 가상부지, 고정 입구 2개, spline random sampling</td><td>1만~10만 개 raw circulation</td></tr>
+<tr><td>v0.2</td><td>2m buffer와 최소 hard constraint 적용</td><td>유효/무효 비율, 실패 유형</td></tr>
+<tr><td>v0.3</td><td>descriptor 계산</td><td>L, A, K, Dmin, B, I, C 데이터셋</td></tr>
+<tr><td>v0.4</td><td>MAP-Elites 적용</td><td>설계공간 archive와 coverage 지표</td></tr>
+<tr><td>v0.5</td><td>NSGA-II / CMA-ES와 비교</td><td>quality, diversity, coverage 비교</td></tr>
+<tr><td>v0.6</td><td>실제 비정형 필지 적용</td><td>형상 일반화 성능</td></tr>
+<tr><td>v0.7</td><td>프로그램·식재·시각성 evaluator 연결</td><td>공원 전체 설계안</td></tr>
+<tr><td>v1.0</td><td>GIS → QD → IFC/WBS export</td><td>full-track prototype</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>비교해야 할 핵심 질문</h3>
+<ol>
+  <li>최소 hard constraint만 사용했을 때 실제로 얼마나 넓은 형태공간이 나타나는가?</li>
+  <li>교차·좁은 고리·과도한 굴곡을 미리 제거하는 방식과 descriptor로 남기는 방식은 결과 다양성에 어떤 차이를 만드는가?</li>
+  <li>Random sampling, NSGA-II, CMA-ES, MAP-Elites가 같은 평가예산에서 각각 얼마나 넓고 좋은 설계공간을 발견하는가?</li>
+  <li>geometry-only archive에 식재·그늘·시각성·공사비 evaluator를 추가했을 때 어떤 형태가 살아남는가?</li>
+  <li>한 부지에서 만들어진 생성 규칙이 다른 비정형 소공원에도 일반화되는가?</li>
+</ol>
+
+<div class="callout red">
+  <b>주의.</b> 지금 단계에서 “좋은 공원의 길이는 몇 m다”, “교차는 나쁘다”, “좁은 고리는 나쁘다”를 먼저 답으로 넣으면 알고리즘이 그 편견을 재생산한다. 초기 연구에서는 가능한 설계공간을 먼저 밝히고, 이용성·미기후·비용·전문가 평가를 후단에 붙이는 편이 연구적으로 더 깨끗하다.
+</div>
+
+<h2 id="references">8 · 참고문헌</h2>
+<ol class="refs">
+<li>Yan, L., Chen, Y., Zheng, L., Zhang, Y., Liang, X., &amp; Zhu, C. (2023). Intelligent Generation Method and Sustainable Application of Road Systems in Urban Green Spaces: Taking Jiangnan Gardens as an Example. <i>International Journal of Environmental Research and Public Health</i>, 20(4), 3158. <a href="https://doi.org/10.3390/ijerph20043158">doi:10.3390/ijerph20043158</a></li>
+<li>Galanos, T., Liapis, A., Yannakakis, G. N., &amp; König, R. (2021). ARCH-Elites: Quality-Diversity for Urban Design. <i>GECCO '21 Companion</i>, 313–314. <a href="https://doi.org/10.1145/3449726.3459490">doi:10.1145/3449726.3459490</a></li>
+<li>Gaier, A., Stoddart, J., Villaggi, L., &amp; Bentley, P. J. (2022). T-DominO: Exploring Multiple Criteria with Quality-Diversity and the Tournament Dominance Objective. <i>PPSN XVII</i>, 263–277. <a href="https://doi.org/10.1007/978-3-031-14721-0_19">doi:10.1007/978-3-031-14721-0_19</a></li>
+<li>Gaier, A., Stoddart, J., Villaggi, L., &amp; Sudhakaran, S. (2024). Generative Design through Quality-Diversity Data Synthesis and Language Models. <i>GECCO '24</i>, 823–831. <a href="https://doi.org/10.1145/3638529.3654138">doi:10.1145/3638529.3654138</a></li>
+<li>Ren, T., Zeng, Z., Hao, X., &amp; Zhang, X. (2025). A generative optimization framework for pocket parks supported by mature plant carbon sequestration data. <i>Urban Forestry &amp; Urban Greening</i>, 112, 128993. <a href="https://doi.org/10.1016/j.ufug.2025.128993">doi:10.1016/j.ufug.2025.128993</a></li>
+<li>Zandniapour, K., Soroush, A., Khezerlu Agdam, E., &amp; Sanaieian, H. (2025). Integrating GIS, 3D-Isovist, and an NSGA-II multi-objective optimization algorithm for automation of design process in urban parks and public open spaces. <i>International Journal of Geoheritage and Parks</i>, 13(1), 1–16. <a href="https://doi.org/10.1016/j.ijgeop.2024.08.002">doi:10.1016/j.ijgeop.2024.08.002</a></li>
+<li>Chen, R. et al. (2025). AI for Landscape Planning: Assessing Surrounding Contextual Impact on GAN-Generated Green Land Layouts. <i>Cities</i>, 166, 106181. <a href="https://doi.org/10.1016/j.cities.2025.106181">doi:10.1016/j.cities.2025.106181</a></li>
+<li>Liu, Y., Ni, B., Ling, X., &amp; Zhao, J. (2025). Research on Node-Mediated Generative Design of Landscape Architecture Layout. <i>Landscape Architecture</i>, 32(12), 12–23. <a href="https://doi.org/10.3724/j.fjyl.LA20250217">doi:10.3724/j.fjyl.LA20250217</a></li>
+<li>Zhang, Z., Li, Z., Zhang, T., &amp; Wang, M. (2026). Automated path planning method for urban street-corner parks based on multi-agent deep reinforcement learning. <i>Applied Soft Computing</i>, 195, 115033. <a href="https://doi.org/10.1016/j.asoc.2026.115033">doi:10.1016/j.asoc.2026.115033</a></li>
+<li>Zhang, X., Cheng, Z., Fan, B., &amp; Zhang, D. (2026). Integrating LLM-based interpretation of visual perceptual expectations into path optimization for urban green space renewal. <i>Building and Environment</i>, 296, 114544. <a href="https://doi.org/10.1016/j.buildenv.2026.114544">doi:10.1016/j.buildenv.2026.114544</a></li>
+</ol>
+
+<footer>
+  <p>SpatialFlare · 소공원 동선 자동설계 연구노트 · 2026-09-26</p>
+  <p>이 페이지는 구현이 진행되면서 생성기·실험결과·코드 링크를 계속 추가하는 작업 노트다.</p>
+</footer>
+</main>
+</body>
+</html>
