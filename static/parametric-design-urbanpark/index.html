@@ -100,6 +100,11 @@
       <li><a href="#cmame">QD + CMA-ES — 다양성에 수치 정밀도를 더하다</a></li>
       <li><a href="#surrogate">서로게이트 결합 — 평가를 학습으로 대체</a></li>
       <li><a href="#rl">강화학습 — 설계 정책 자체를 배우기</a></li>
+      <li><a href="#moqd">다수목적 품질·다양성</a></li>
+      <li><a href="#metrics">평가 함수 — 실제로 무엇을 계산할 수 있나</a></li>
+      <li><a href="#tools">도구 생태계</a></li>
+      <li><a href="#korea">국내 제도 조건</a></li>
+      <li><a href="#barrier">조경에서 무엇이 걸림돌인가</a></li>
     </ol>
   </nav>
 </header>
@@ -274,11 +279,20 @@ flowchart TD
   <div class="row park"><b>공원에서</b><span><span class="fit-lo">연구 주제로는 유망, 단기 실무에는 이릅니다.</span> 학습에 드는 표본이 앞의 방법들보다 훨씬 많아 <b>대리모형이 먼저 있어야</b> 현실적입니다. 즉 7번이 선행 과제입니다.</span></div>
 </article>
 
-<h2>목적이 여럿인데 QD를 쓰면</h2>
-<p>MAP-Elites는 칸마다 <b>한 해</b>만 남깁니다. 목적이 하나면 문제없지만 공원 설계처럼 여러 목적이 걸리면 무엇을 기준으로 남길지가 모호해집니다. 한 목적만 극단적으로 잘하는 안이 살아남기 쉽습니다.</p>
-<p><b>T-DominO</b>(Boyle 외, PPSN 2022)가 이 지점을 다룹니다. 칸 안의 해를 격자 전체의 다른 해들과 견주어 순위를 매기되, 몇 가지만 뛰어난 해보다 <b>고르게 잘하는 해</b>를 남깁니다. 칸마다 하나씩이라는 성질, 곧 사람이 눈으로 훑을 수 있다는 장점을 지키면서 다수목적을 처리합니다. 다수목적 실제 건축 사례에 적용해 보였습니다.</p>
+<h2 id="moqd">다수목적 품질·다양성</h2>
+<p>MAP-Elites는 칸마다 <b>한 해</b>만 남깁니다. 목적이 하나면 문제없지만 공원 설계처럼 여러 목적이 걸리면 무엇을 남길지가 모호해집니다. 한 목적만 극단적으로 잘하는 안이 살아남기 쉽습니다. 이 문제를 푸는 방향이 둘로 갈립니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">방향 1 · 칸 안에 파레토 전선을 둔다 — MOME</h3>
+<p><b>Multi-Objective MAP-Elites</b>는 칸마다 해를 하나가 아니라 <b>그 칸의 지역 파레토 전선</b>으로 보관합니다. 새 해는 같은 칸의 기존 해들을 지배할 때만 들어갑니다. 결과는 "성격별로 나뉜 격자, 각 칸 안에 절충안들"이라는 이중 구조입니다.</p>
+<p>보고된 성질이 흥미롭습니다. 전역 초부피는 기존 다목적 진화 알고리즘과 <b>거의 같은데</b>, 특성 공간 피복률에서는 <b>크게 앞섭니다.</b> 즉 파레토 성능을 잃지 않으면서 다양성을 얻습니다.</p>
+<p class="note">후속으로 고차원 탐색을 위해 정책 경사와 혼잡도 기반 탐색을 더한 변형, 선호를 조건으로 주는 변형이 나왔고, 결정 공간이 격자로 나뉘지 않는 문제를 위한 무격자 방식도 제안됐습니다. 결정 구조 예측과 분자 설계에 적용 사례가 있습니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">방향 2 · 칸마다 하나를 두되 균형으로 고른다 — T-DominO</h3>
+<p><b>T-DominO</b>(Boyle 외, PPSN 2022)는 반대로 갑니다. 칸마다 하나라는 성질을 <b>일부러 지킵니다.</b> 사람이 격자를 눈으로 훑을 수 있다는 것이 MAP-Elites의 실질적 장점인데, 칸마다 전선이 들어가면 그게 사라지기 때문입니다.</p>
+<p>대신 <b>무엇을 남길지</b>를 바꿉니다. 칸 안의 해를 격자 전체의 다른 해들과 견주어 순위를 매기되, 몇 가지만 뛰어난 해보다 <b>고르게 잘하는 해</b>를 우대합니다. 다수목적 실제 건축 사례에 적용해 보였습니다.</p>
+
 <div class="callout">
-  공원 검토에 바로 쓸 수 있는 결론입니다. <b>QD 격자에 균형 잡힌 해를 남기는 순위 규칙</b>을 얹으면 "대안을 여러 개 보여주되 어느 한쪽으로 치우치지 않게"라는 실무 요구와 정확히 맞습니다.
+  <b>공원 검토에는 둘 다 쓸 자리가 있습니다.</b> 초기 탐색에서는 MOME로 절충의 폭을 보고, 발주처에 내놓을 대안을 추릴 때는 T-DominO처럼 균형 잡힌 해 하나씩만 남기는 편이 읽힙니다. 격자 하나에 안이 수십 개씩 들어 있으면 검토 자료가 되지 못합니다.
 </div>
 
 <h2>한눈에 비교</h2>
@@ -299,7 +313,93 @@ flowchart TD
 </div>
 <p class="note">‘비싼 평가’는 한 번 평가가 비쌀 때 얼마나 적은 횟수로 답에 도달하는가입니다. QD 계열이 약한 이유는 원래 수만 회 평가를 전제하기 때문이며, 그래서 서로게이트와 묶습니다.</p>
 
-<h2>조경에서 무엇이 걸림돌인가</h2>
+<h2 id="metrics">평가 함수 — 실제로 무엇을 계산할 수 있나</h2>
+<p>앞의 방법들은 모두 <b>"좋음"이 이미 정의돼 있다</b>고 전제합니다. 그런데 공원에서 그걸 쓰는 일이 실제로는 가장 어렵습니다. 무엇이 지금 계산 가능하고 무엇이 아직 아닌지 정리합니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">계산이 확립된 것</h3>
+<div class="scroll">
+<table>
+  <thead><tr><th>항목</th><th>지표</th><th>계산 방법</th><th>비용</th></tr></thead>
+  <tbody>
+    <tr><td>열쾌적성</td><td><b>UTCI</b>, PET, mPET</td><td>기온·습도·풍속·평균복사온도를 입력으로 하는 표준식. 미기후 시뮬레이션이 선행되어야 함</td><td>높음</td></tr>
+    <tr><td>일사·그늘</td><td>그늘 시간, 일사량</td><td>태양 궤적과 수관·구조물의 기하 차폐. 광선 추적</td><td>중간</td></tr>
+    <tr><td>천공 개방도</td><td><b>천공률(SVF)</b></td><td>한 점에서 하늘이 보이는 입체각 비율. 어안 투영 또는 반구 샘플링</td><td>낮음</td></tr>
+    <tr><td>접근성</td><td>보행 등시선, 최단거리</td><td>동선망을 그래프로 두고 최단경로. 유치거리 기준과 대조</td><td>낮음</td></tr>
+    <tr><td>수관 피복</td><td>피복률</td><td>수관 투영 면적의 합집합 ÷ 대상지 면적</td><td>낮음</td></tr>
+    <tr><td>빗물</td><td>저류 용량, 유출계수</td><td>포장·녹지·저류시설 면적에 유출계수를 곱해 합산</td><td>낮음</td></tr>
+    <tr><td>공사비</td><td>개략 공사비</td><td>수량 산출 × 단가. BIM 물량과 연동 가능</td><td>낮음</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">열쾌적성 지표 사이의 신뢰도 비교 연구가 있습니다. 몬테카를로 기반 비교에서 <b>UTCI가 PET보다 안정적</b>이라고 보고됐습니다. 지표를 고를 때 참고할 만합니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">최근 밝혀진 설계적 시사</h3>
+<ul>
+  <li><b>천공률이 체감 온도를 좌우합니다.</b> 공원 형태와 식재 밀도, 바람 노출이 겨울 중립 온도를 약 <b>2도</b> 움직인다는 보고가 있습니다. 같은 공원 안에 <b>양지 주머니와 바람길</b>을 함께 두라는 전략이 여기서 나옵니다.</li>
+  <li><b>지표면 온도와 체감은 다릅니다.</b> 회색 공원의 미시 규모 UTCI 시뮬레이션에서, 지표면 온도가 높아도 건물 그림자와 기류 덕에 체감은 시원해지는 구간이 나타났습니다. <b>위성 지표면 온도만으로 공원 성능을 판단하면 틀립니다.</b></li>
+  <li><b>공원 유형에 따라 중립 온도가 다릅니다.</b> 잔디밭이 넓고 하늘이 열린 지구공원 이용자의 중립 PET가 조밀한 가로공원보다 약 <b>2도 높게</b> 나타났습니다. 이용자가 그 환경에 적응한 결과로 해석됩니다.</li>
+</ul>
+<div class="callout">
+  설계 변수로 번역하면 이렇습니다. <b>천공률·수관 피복·배치·접근성</b>이 열쾌적성 인지를 바꾸는 주요 변수로 반복해 지목됩니다. QD의 특성 축 후보로 삼을 근거가 됩니다.
+</div>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">아직 계산이 어려운 것</h3>
+<ul>
+  <li><b>경관의 질과 선호.</b> 오토데스크 사례에서 목적 여섯 중 셋이 설문값이었던 이유입니다. 설문이나 대리지표 없이는 식으로 떨어지지 않습니다.</li>
+  <li><b>안전감과 범죄예방 설계.</b> 가시성 해석으로 일부 근사되지만 합의된 지표가 없습니다.</li>
+  <li><b>생물다양성.</b> 수종 다양도나 서식지 연결성으로 대리하지만, 실제 종 풍부도와의 관계는 대상지마다 다릅니다.</li>
+  <li><b>시간에 따른 변화.</b> 수목은 자랍니다. 준공 시점과 20년 후의 그늘이 전혀 다른데, 대부분의 평가는 한 시점만 봅니다.</li>
+</ul>
+<p class="note">마지막 항목이 조경 고유의 문제입니다. 건축은 준공 상태가 거의 유지되지만 <b>조경은 설계 대상이 살아서 변합니다.</b> 최적화 대상을 어느 시점으로 잡을지가 방법론과 무관한 근본 질문으로 남습니다.</p>
+
+<h2 id="tools">도구 생태계</h2>
+<p>알고리즘을 직접 구현할 수도 있지만, 실무에서는 대개 기성 도구를 씁니다. 두 갈래가 있습니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">설계 도구 쪽 — Grasshopper 계열</h3>
+<div class="scroll">
+<table>
+  <thead><tr><th>도구</th><th>알고리즘</th><th>성격</th></tr></thead>
+  <tbody>
+    <tr><td><b>Galapagos</b></td><td>진화 solver, 단일 목적</td><td>기본 내장. 가장 널리 알려졌지만 목적 하나만 다룸</td></tr>
+    <tr><td><b>Octopus</b></td><td>SPEA-2 기반 다목적</td><td>Galapagos를 다목적으로 확장. 파레토 전선을 3차원으로 보여줌</td></tr>
+    <tr><td><b>Wallacei</b></td><td>NSGA-II 계열</td><td>진화 과정의 통계 분석 도구가 풍부. 세대별 분포를 파고들 수 있음</td></tr>
+    <tr><td><b>Opossum</b></td><td>RBFOpt 등 모델 기반</td><td><b>대리모형을 내장.</b> 평가가 비쌀 때 적은 횟수로 수렴</td></tr>
+    <tr><td><b>Biomorpher</b></td><td>대화형 진화</td><td>사람이 매 세대 개입. 200개 안을 군집화해 <b>대표안만 보고 고름</b></td></tr>
+  </tbody>
+</table>
+</div>
+<p>환경 평가는 별도입니다. <b>Ladybug Tools</b>가 표준 기상 자료를 Grasshopper로 들여와 일사·그늘·열쾌적성을 계산하고, 미기후는 <b>ENVI-met</b> 같은 전용 도구로 넘어갑니다.</p>
+<p class="note"><b>Biomorpher를 눈여겨볼 만합니다.</b> 한 비교 연구에서 Octopus·Galapagos와 견주어 가장 짧은 시간에 가장 높은 그림자 피복을 달성했다고 보고됩니다. 더 중요한 것은 구조입니다. 사람이 매 세대 고르되 군집 중심만 평가하면 되도록 만들어, <b>주관적 기준을 식으로 쓰지 않고도 탐색에 넣습니다.</b> 앞에서 본 "경관의 질은 계산이 어렵다"는 문제에 대한 실용적 우회로입니다.</p>
+
+<h3 style="font-size:17px;font-weight:650;margin:22px 0 8px">연구 도구 쪽 — 파이썬 라이브러리</h3>
+<ul>
+  <li><b>pymoo</b> — 다목적 최적화 전문. NSGA-II·III를 포함한 표준 구현체. 저자가 Deb 연구실입니다.</li>
+  <li><b>pygmo</b> — 대규모 병렬에 강점. 섬 모형으로 분산 실행.</li>
+  <li><b>pyribs</b> — 품질·다양성 전용. ask-tell 구조라 평가 부분을 사용자가 자유롭게 붙입니다. CMA-ME·CMA-MAE 구현 포함.</li>
+  <li><b>qdpy</b> — 품질·다양성 종합. MAP-Elites와 CMA-ME 등을 바로 쓸 수 있는 형태로 제공.</li>
+  <li><b>DEAP</b> — 오래된 범용 진화 계산 틀. 파이썬 리스트 기반이라 최신 라이브러리보다 느리다는 비교가 있습니다.</li>
+</ul>
+<div class="callout">
+  <b>실무 경로가 갈립니다.</b> NSGA 계열까지는 Grasshopper 안에서 끝낼 수 있습니다. 하지만 <b>품질·다양성 계열은 Grasshopper 플러그인이 없어</b> 파이썬 쪽에서 pyribs나 qdpy로 엮고, 기하 생성과 평가만 Rhino와 주고받는 구조가 됩니다. 이 연결 비용이 실제 도입의 문턱입니다.
+</div>
+
+<h2 id="korea">국내 제도 조건</h2>
+<p>최적화 이전에 제약으로 들어가야 할 값들이 있습니다. 「도시공원 및 녹지 등에 관한 법률」 시행규칙의 설치·규모 기준입니다.</p>
+<div class="scroll">
+<table>
+  <thead><tr><th>공원 구분</th><th>유치거리</th><th>규모</th></tr></thead>
+  <tbody>
+    <tr><td><b>소공원</b></td><td>제한 없음</td><td>제한 없음</td></tr>
+    <tr><td>어린이공원</td><td>250m 이내</td><td>1,500㎡ 이상</td></tr>
+    <tr><td>근린생활권 근린공원</td><td>500m 이내</td><td>10,000㎡ 이상</td></tr>
+    <tr><td>도보권 근린공원</td><td>1,000m 이내</td><td>30,000㎡ 이상</td></tr>
+  </tbody>
+</table>
+</div>
+<p><b>소공원은 유치거리와 규모에 제한이 없습니다.</b> 뒤집어 말하면 설계 자유도가 가장 크고, 그래서 탐색 알고리즘을 적용할 여지도 가장 큽니다. 고밀 시가지에서 불특정 다수를 위한 소규모 휴식·녹지 공간으로 접근성이 좋은 곳에 지정된다는 것이 제도상 성격입니다.</p>
+<p>접근성 쪽에는 참고할 실증이 있습니다. <b>도보 10분</b>이 생활공원 접근성의 최대 지점이고, 그 범위 안에서는 도보와 자전거의 접근성이 거의 같다는 분석입니다. 등시선 기반 평가 함수를 쓸 때 기준 시간으로 삼을 만합니다.</p>
+
+<h2 id="barrier">조경에서 무엇이 걸림돌인가</h2>
 <p>국내 조경학회지의 사례 분석이 현실을 짚습니다. 전 세계 28개 조경사무소를 조사했고, 도구는 Grasshopper가 압도적이며 적용은 네 갈래였습니다. 자유곡면 형태 생성, 식재 분포 알고리즘, 지리정보 연동, BIM 연계입니다.</p>
 <p>건축에 비해 뒤처지는 이유로는 이런 것들을 듭니다.</p>
 <ul>
@@ -346,6 +446,13 @@ flowchart TD
   <li><a href="https://www.nature.com/articles/s41598-025-96763-4">Generative design optimization of tree distribution for enhanced thermal comfort</a>. <i>Scientific Reports</i>, 2025.</li>
   <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S036013232100072X">A surrogate-assisted optimization framework for microclimate-sensitive urban design practice</a>. <i>Building and Environment</i>.</li>
   <li><a href="https://www.sciencedirect.com/science/article/pii/S0278612524000736">Transferable multi-objective factory layout planning using simulation-based deep reinforcement learning</a>. <i>JMS</i>, 2024.</li>
+  <li><b>[다수목적 QD]</b> Pierrot, T. 외 (2022). <a href="https://arxiv.org/abs/2202.03057">Multi-Objective Quality Diversity Optimization</a>. — MOME, 칸마다 지역 파레토 전선. · <a href="https://arxiv.org/pdf/2411.12433">선호 조건부 변형</a> · <a href="https://arxiv.org/pdf/2504.03715">무격자 공간 확장</a></li>
+  <li><b>[평가지표]</b> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0360132324010011">A comprehensive review of thermal comfort evaluation methods and influencing factors for urban parks</a>. <i>Building and Environment</i>. · <a href="https://www.mdpi.com/2071-1050/17/5/2330">Outdoor Thermal Comfort Research and Its Implications for Landscape Architecture: A Systematic Review</a></li>
+  <li><b>[평가지표]</b> <a href="https://www.nature.com/articles/s41598-025-33440-6">Comparative reliability assessment of PET and UTCI thermal comfort indices using Monte Carlo simulation</a>. <i>Scientific Reports</i>, 2025. — UTCI가 PET보다 안정적. · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13056736/">공원 유형별 중립 온도 차이</a> · <a href="https://www.nature.com/articles/s41598-026-46003-0">계절별 중립 PET 임계</a></li>
+  <li><b>[도구]</b> Harding, J., Brandt-Olsen, C. (2018). <a href="https://centaur.reading.ac.uk/79580/1/2018_IJAC_Preprint.pdf">Biomorpher: Interactive evolution for parametric design</a>. <i>IJAC</i>. · <a href="https://github.com/johnharding/Biomorpher">코드</a> · <a href="http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper_Optimization_Plug-ins">Grasshopper 최적화 플러그인 정리(TU Delft)</a></li>
+  <li><b>[라이브러리]</b> Blank, J., Deb, K. (2020). <a href="https://arxiv.org/pdf/2002.04504">pymoo: Multi-objective Optimization in Python</a>. · Tjanaka, B. 외 (2023). <a href="https://arxiv.org/pdf/2303.00191">pyribs: A Bare-Bones Python Library for Quality Diversity Optimization</a>. GECCO.</li>
+  <li><b>[제도]</b> <a href="https://www.law.go.kr/flDownload.do?flSeq=47357254&flNm=%5B%EB%B3%84%ED%91%9C+3%5D+%EB%8F%84%EC%8B%9C%EA%B3%B5%EC%9B%90%EC%9D%98+%EC%84%A4%EC%B9%98+%EB%B0%8F+%EA%B7%9C%EB%AA%A8%EC%9D%98+%EA%B8%B0%EC%A4%80(%EC%A0%9C6%EC%A1%B0%EA%B4%80%EB%A0%A8)">도시공원 및 녹지 등에 관한 법률 시행규칙 별표 3 — 도시공원의 설치 및 규모의 기준</a> · <a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000142329">도시공원·녹지의 유형별 세부기준 등에 관한 지침</a></li>
+  <li><b>[제도]</b> <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002851924">이동수단에 따른 도시공원 접근성 분석</a> — 도보 10분이 최대 지점. · <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002871073">도심내 소공원의 위계 분석 및 이용현황 분석 연구</a></li>
   <li>이유미 외. <a href="https://www.jkila.org/archive/view_article?pid=jkila-49-2-1">조경 설계 분야에서 파라메트릭 디자인의 사례 분석과 활용</a>. <i>한국조경학회지</i> 49(2).</li>
 </ol>
 
