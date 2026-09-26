@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">소공원 동선 자동설계 개념도</title>
+<desc id="desc">4,000제곱미터 소공원의 남측과 동측 출입구를 잇는 폭 2미터 순환형 보행동선, 입력 조건, 자동설계 처리 흐름, 설계 지표와 대안 예시를 설명하는 연구용 개념도.</desc>
+<style>
+  text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;fill:#18231f}
+  .title{font-size:42px;font-weight:700;letter-spacing:-1px}
+  .sub{font-size:19px;fill:#66716c}
+  .panel{fill:#fff;stroke:#bcc8c1;stroke-width:1.4}
+  .ph{font-size:22px;font-weight:700}
+  .small{font-size:15px;fill:#5b6761}
+  .label{font-size:18px;font-weight:650}
+  .tiny{font-size:13px;fill:#5f6a65}
+  .green{fill:#2f6f55}
+  .line{stroke:#315f50;stroke-width:3;fill:none}
+  .muteline{stroke:#7e8d85;stroke-width:1.5;fill:none}
+  .road{fill:#e6e9e7}
+  .lawn{fill:#dfead5}
+  .path{fill:none;stroke:#eadbc4;stroke-width:46;stroke-linecap:round;stroke-linejoin:round}
+  .pathEdge{fill:none;stroke:#927f63;stroke-width:1.5}
+  .tree{fill:#7fa66d;stroke:#587852;stroke-width:1}
+  .tree2{fill:#9ab883;stroke:#6f8d62;stroke-width:1}
+  .card{fill:#f7f9f8;stroke:#d4ddd8;stroke-width:1}
+  .accent{fill:#edf4ef;stroke:#b9cdc1;stroke-width:1}
+</style>
+
+<rect width="1600" height="900" fill="#ffffff"/>
+<text x="800" y="58" text-anchor="middle" class="title">소공원 동선 자동설계 개념도</text>
+<text x="800" y="88" text-anchor="middle" class="sub">Conceptual framework for automated circulation design in a small park</text>
+
+<!-- panel a -->
+<rect x="28" y="115" width="790" height="720" rx="5" class="panel"/>
+<text x="48" y="151" class="ph">(a) 대상지 평면도 <tspan font-weight="400">(4,000 m² 소공원 예시)</tspan></text>
+<rect x="52" y="174" width="742" height="575" fill="#f7f8f7" stroke="#d3dad6"/>
+<rect x="82" y="206" width="660" height="470" class="lawn" stroke="#6f8077" stroke-width="1.3"/>
+<rect x="52" y="676" width="742" height="73" class="road"/>
+<rect x="742" y="174" width="52" height="575" class="road"/>
+<!-- boundary -->
+<rect x="82" y="206" width="660" height="470" fill="none" stroke="#52665c" stroke-dasharray="7 5"/>
+
+<!-- trees -->
+<g>
+  <circle cx="115" cy="235" r="25" class="tree"/><circle cx="165" cy="229" r="22" class="tree2"/>
+  <circle cx="225" cy="236" r="26" class="tree"/><circle cx="292" cy="225" r="22" class="tree2"/>
+  <circle cx="350" cy="234" r="28" class="tree"/><circle cx="420" cy="226" r="23" class="tree2"/>
+  <circle cx="486" cy="235" r="27" class="tree"/><circle cx="548" cy="229" r="23" class="tree2"/>
+  <circle cx="615" cy="235" r="26" class="tree"/><circle cx="686" cy="230" r="27" class="tree"/>
+  <circle cx="108" cy="301" r="22" class="tree2"/><circle cx="116" cy="640" r="26" class="tree"/>
+  <circle cx="170" cy="646" r="22" class="tree2"/><circle cx="236" cy="638" r="27" class="tree"/>
+  <circle cx="306" cy="648" r="22" class="tree2"/><circle cx="374" cy="640" r="25" class="tree"/>
+  <circle cx="447" cy="646" r="23" class="tree2"/><circle cx="520" cy="640" r="27" class="tree"/>
+  <circle cx="591" cy="648" r="22" class="tree2"/><circle cx="660" cy="638" r="26" class="tree"/>
+  <circle cx="712" cy="310" r="21" class="tree2"/><circle cx="707" cy="580" r="24" class="tree"/>
+  <circle cx="214" cy="390" r="20" class="tree2"/><circle cx="290" cy="330" r="22" class="tree"/>
+  <circle cx="375" cy="408" r="26" class="tree2"/><circle cx="460" cy="350" r="23" class="tree"/>
+  <circle cx="565" cy="410" r="22" class="tree2"/><circle cx="640" cy="350" r="20" class="tree"/>
+  <circle cx="270" cy="535" r="20" class="tree"/><circle cx="420" cy="545" r="22" class="tree2"/>
+  <circle cx="575" cy="535" r="21" class="tree"/>
+</g>
+
+<!-- circulation path -->
+<path d="M 365 650
+ C 270 645, 170 610, 160 520
+ C 150 420, 188 325, 280 290
+ C 385 250, 460 315, 548 300
+ C 640 285, 691 335, 690 420
+ C 688 500, 636 560, 558 584
+ C 490 605, 430 566, 365 590
+ C 330 603, 336 630, 365 650" class="path"/>
+<path d="M 365 650
+ C 270 645, 170 610, 160 520
+ C 150 420, 188 325, 280 290
+ C 385 250, 460 315, 548 300
+ C 640 285, 691 335, 690 420
+ C 688 500, 636 560, 558 584
+ C 490 605, 430 566, 365 590
+ C 330 603, 336 630, 365 650" class="pathEdge"/>
+
+<!-- east connection -->
+<line x1="690" y1="420" x2="742" y2="420" stroke="#eadbc4" stroke-width="46"/>
+<line x1="690" y1="420" x2="742" y2="420" stroke="#927f63" stroke-width="1.5"/>
+<!-- south connection -->
+<line x1="365" y1="650" x2="365" y2="692" stroke="#eadbc4" stroke-width="46"/>
+<line x1="365" y1="650" x2="365" y2="692" stroke="#927f63" stroke-width="1.5"/>
+
+<!-- benches -->
+<g fill="#9b6945" stroke="#6f4e35">
+ <rect x="535" y="252" width="42" height="10" transform="rotate(2 556 257)"/>
+ <rect x="254" y="478" width="42" height="10" transform="rotate(-25 275 483)"/>
+ <rect x="575" y="555" width="42" height="10" transform="rotate(-20 596 560)"/>
+</g>
+
+<!-- labels -->
+<rect x="469" y="315" width="93" height="38" rx="4" fill="#fff" stroke="#c8d0cb"/>
+<line x1="460" y1="319" x2="460" y2="349" stroke="#18231f" stroke-width="2"/>
+<polygon points="456,320 464,320 460,312" fill="#18231f"/><polygon points="456,348 464,348 460,356" fill="#18231f"/>
+<text x="515" y="340" text-anchor="middle" class="label">폭 2m</text>
+
+<polygon points="337,699 365,671 393,699" class="green"/>
+<rect x="316" y="703" width="98" height="38" rx="4" fill="#fff" stroke="#cad3ce"/>
+<text x="365" y="729" text-anchor="middle" class="label">남측 입구</text>
+
+<polygon points="745,396 718,420 745,444" class="green"/>
+<rect x="688" y="387" width="105" height="40" rx="4" fill="#fff" stroke="#cad3ce"/>
+<text x="741" y="414" text-anchor="middle" class="label">동측 입구</text>
+
+<!-- north/scale -->
+<polygon points="750,705 758,730 742,730" fill="#18231f"/><text x="750" y="746" text-anchor="middle" class="small">N</text>
+<line x1="560" y1="796" x2="730" y2="796" stroke="#18231f" stroke-width="7"/>
+<line x1="560" y1="789" x2="560" y2="803" stroke="#18231f"/><line x1="617" y1="789" x2="617" y2="803" stroke="#18231f"/>
+<line x1="674" y1="789" x2="674" y2="803" stroke="#18231f"/><line x1="730" y1="789" x2="730" y2="803" stroke="#18231f"/>
+<text x="560" y="783" text-anchor="middle" class="tiny">0</text><text x="617" y="783" text-anchor="middle" class="tiny">10</text>
+<text x="674" y="783" text-anchor="middle" class="tiny">20</text><text x="730" y="783" text-anchor="middle" class="tiny">30 m</text>
+
+<!-- panel b -->
+<rect x="835" y="115" width="737" height="215" rx="5" class="panel"/>
+<text x="855" y="151" class="ph">(b) 입력 조건 <tspan font-weight="400">(설계 파라미터)</tspan></text>
+<g>
+ <rect x="855" y="170" width="165" height="135" rx="5" class="card"/>
+ <rect x="892" y="193" width="36" height="36" fill="none" stroke="#315f50" stroke-width="3" stroke-dasharray="8 6"/>
+ <text x="938" y="253" text-anchor="middle" class="label">부지</text><text x="938" y="281" text-anchor="middle" class="label">4,000 m²</text>
+ <rect x="1032" y="170" width="165" height="135" rx="5" class="card"/>
+ <rect x="1100" y="191" width="26" height="43" fill="#315f50"/><rect x="1105" y="196" width="16" height="38" fill="#fff"/>
+ <text x="1114" y="253" text-anchor="middle" class="label">출입구 2개</text><text x="1114" y="279" text-anchor="middle" class="tiny">(남측 1, 동측 1)</text>
+ <rect x="1209" y="170" width="165" height="135" rx="5" class="card"/>
+ <path d="M1275 220 A28 28 0 1 1 1308 196" class="line"/><polygon points="1306,187 1320,195 1306,202" class="green"/>
+ <text x="1292" y="253" text-anchor="middle" class="label">순환형</text><text x="1292" y="279" text-anchor="middle" class="label">보행동선</text>
+ <rect x="1386" y="170" width="165" height="135" rx="5" class="card"/>
+ <line x1="1435" y1="214" x2="1502" y2="214" stroke="#315f50" stroke-width="3"/>
+ <polygon points="1435,214 1448,206 1448,222" class="green"/><polygon points="1502,214 1489,206 1489,222" class="green"/>
+ <text x="1468" y="253" text-anchor="middle" class="label">폭</text><text x="1468" y="281" text-anchor="middle" class="label">2 m</text>
+</g>
+
+<!-- panel c -->
+<rect x="835" y="345" width="737" height="190" rx="5" class="panel"/>
+<text x="855" y="381" class="ph">(c) 자동설계 방법론 <tspan font-weight="400">(처리 흐름도)</tspan></text>
+<g>
+ <rect x="856" y="407" width="120" height="96" rx="5" class="card"/><text x="916" y="466" text-anchor="middle" class="label">조건 입력</text>
+ <rect x="995" y="407" width="120" height="96" rx="5" class="card"/><text x="1055" y="466" text-anchor="middle" class="label">동선 생성</text>
+ <rect x="1134" y="407" width="120" height="96" rx="5" class="card"/><text x="1194" y="466" text-anchor="middle" class="label">기하 검증</text>
+ <rect x="1273" y="407" width="120" height="96" rx="5" class="card"/><text x="1333" y="466" text-anchor="middle" class="label">특성 계산</text>
+ <rect x="1412" y="407" width="120" height="96" rx="5" class="accent"/><text x="1472" y="466" text-anchor="middle" class="label">QD 탐색</text>
+ <g stroke="#62726a" stroke-width="2" fill="#62726a">
+   <line x1="976" y1="455" x2="993" y2="455"/><polygon points="993,455 984,449 984,461"/>
+   <line x1="1115" y1="455" x2="1132" y2="455"/><polygon points="1132,455 1123,449 1123,461"/>
+   <line x1="1254" y1="455" x2="1271" y2="455"/><polygon points="1271,455 1262,449 1262,461"/>
+   <line x1="1393" y1="455" x2="1410" y2="455"/><polygon points="1410,455 1401,449 1401,461"/>
+ </g>
+</g>
+
+<!-- panel d -->
+<rect x="835" y="550" width="737" height="285" rx="5" class="panel"/>
+<text x="855" y="586" class="ph">(d) 설계 지표 및 대안 예시</text>
+<text x="860" y="616" class="label">주요 설계 지표</text>
+<g>
+ <rect x="855" y="631" width="165" height="62" rx="4" class="card"/><text x="938" y="658" text-anchor="middle" class="label">길이 L</text><text x="938" y="680" text-anchor="middle" class="tiny">(총 보행거리)</text>
+ <rect x="1032" y="631" width="165" height="62" rx="4" class="card"/><text x="1114" y="658" text-anchor="middle" class="label">내부면적 A</text><text x="1114" y="680" text-anchor="middle" class="tiny">(동선 내부 면적)</text>
+ <rect x="1209" y="631" width="165" height="62" rx="4" class="card"/><text x="1292" y="658" text-anchor="middle" class="label">곡률 K</text><text x="1292" y="680" text-anchor="middle" class="tiny">(곡선의 형태)</text>
+ <rect x="1386" y="631" width="165" height="62" rx="4" class="card"/><text x="1468" y="658" text-anchor="middle" class="label">최소간격 Dₘᵢₙ</text><text x="1468" y="680" text-anchor="middle" class="tiny">(타 구간과의 최소 간격)</text>
+</g>
+<text x="860" y="721" class="label">설계 대안 예시</text>
+<text x="1000" y="721" class="small">(동일한 조건에서도 서로 다른 형태가 생성될 수 있음)</text>
+<g>
+ <rect x="855" y="735" width="210" height="82" rx="4" class="card"/><text x="960" y="754" text-anchor="middle" class="tiny">컴팩트형</text>
+ <path d="M885 785 C900 755 948 756 980 765 C1010 774 1025 798 1003 807 C968 821 906 816 885 785" fill="none" stroke="#d9c9aa" stroke-width="13" stroke-linecap="round"/>
+ <rect x="1080" y="735" width="210" height="82" rx="4" class="card"/><text x="1185" y="754" text-anchor="middle" class="tiny">길쭉형</text>
+ <path d="M1100 788 C1120 760 1160 760 1190 773 C1220 786 1255 775 1270 793 C1250 812 1215 810 1180 800 C1145 790 1120 814 1100 788" fill="none" stroke="#d9c9aa" stroke-width="13" stroke-linecap="round"/>
+ <rect x="1305" y="735" width="246" height="82" rx="4" class="card"/><text x="1428" y="754" text-anchor="middle" class="tiny">굴곡형</text>
+ <path d="M1325 792 C1340 760 1360 760 1382 790 C1400 815 1422 815 1440 784 C1458 754 1480 762 1530 792" fill="none" stroke="#d9c9aa" stroke-width="13" stroke-linecap="round"/>
+</g>
+
+<!-- note -->
+<rect x="28" y="850" width="1544" height="36" rx="4" fill="#f7f9f8" stroke="#c9d2cd"/>
+<text x="48" y="874" class="small"><tspan font-weight="700" fill="#2f6f55">주:</tspan> 본 개념도는 물리적으로 가능한 설계공간을 탐색하기 위한 초기 연구 프레임워크를 나타낸다.</text>
+</svg>
