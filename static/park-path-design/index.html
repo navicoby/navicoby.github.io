@@ -22,6 +22,10 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background
   padding:1px 5px;border-radius:3px;font-size:.9em}
 .wrap{width:100%;max-width:900px;margin:0 auto;padding:clamp(34px,7vh,72px) clamp(20px,5vw,42px) 90px}
 header{padding-bottom:28px;border-bottom:2px solid var(--line)}
+.research-figure{margin:28px 0 8px}
+.research-figure img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:6px}
+.research-figure figcaption{font-size:13.5px;line-height:1.6;color:var(--mut);margin-top:9px;padding:0 2px}
+.research-figure figcaption b{color:var(--ink)}
 .eyebrow{font:600 12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 14px}
 h1{font-size:clamp(30px,5.4vw,44px);line-height:1.1;letter-spacing:-.03em;margin:0 0 16px;font-weight:700}
@@ -100,6 +104,11 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);font-si
     </ol>
   </nav>
 </header>
+
+<figure class="research-figure" id="fig-framework">
+  <img src="figure-framework.svg" alt="4,000㎡ 소공원의 남측 및 동측 출입구, 폭 2m 순환형 보행동선, 자동설계 처리 흐름과 설계 지표를 정리한 개념도">
+  <figcaption><b>Figure 1.</b> 소공원 동선 자동설계의 초기 개념 프레임워크. 고정된 부지·출입구·보행폭 조건에서 동선을 생성하고, 기하 검증과 특성 계산을 거쳐 Quality-Diversity 탐색으로 다양한 설계 대안을 보존한다.</figcaption>
+</figure>
 
 <h2 id="problem">1 · 문제 정의와 현재 결론</h2>
 <p>초기 문제는 의도적으로 단순하게 잡는다. 부지 형상은 먼저 직사각형 또는 실제 필지 polygon으로 입력하고, 출입구는 남측과 동측 경계에 하나씩 둔다. 보행로 폭은 전 구간 2m다. 막다른 가지 없이 두 출입구를 연결하는 순환형 동선을 생성한다.</p>
