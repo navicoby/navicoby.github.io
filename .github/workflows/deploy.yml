@@ -1,6 +1,9 @@
 name: Deploy Hugo to GitHub Pages
 
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *'
   push:
     branches:
       - main
@@ -24,6 +27,9 @@ jobs:
 
       - name: Apply shared site header and footer
         run: python3 scripts/apply_site_chrome.py --public public
+
+      - name: Publish latest research index
+        run: python3 scripts/sync_research.py --public public
 
       - name: Check static page navigation
         run: python3 scripts/check_static_navigation.py --public public
