@@ -70,8 +70,10 @@ def apply(text, header, footer, is_home=False):
     if page_controls:
         controls = '<details class="sf-page-menu"><summary>페이지 메뉴</summary><div class="sf-page-menu-panel">' + ''.join(page_controls) + '</div></details>'
     edits.extend([
-        (parser.body_start, parser.body_start, '\n' + header + '\n'),
-        (parser.body_end, parser.body_end, '\n' + footer + '\n' + controls),
+        # Existing inline scripts initialize these controls while parsing the page.
+        # Keep their DOM before those scripts; CSS handles the bottom-right placement.
+        (parser.body_start, parser.body_start, '\n' + header + '\n' + controls),
+        (parser.body_end, parser.body_end, '\n' + footer + '\n'),
         (parser.head_end, parser.head_end, '<link rel="stylesheet" href="/assets/page-menu.css"><script defer src="/assets/site-chrome.js"></script>'),
     ])
     for start, end, replacement in sorted(edits, reverse=True):

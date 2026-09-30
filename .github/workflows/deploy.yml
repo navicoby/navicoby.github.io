@@ -28,6 +28,9 @@ jobs:
       - name: Apply shared site header and footer
         run: python3 scripts/apply_site_chrome.py --public public
 
+      - name: Check script-dependent page controls
+        run: python3 scripts/test_site_chrome.py
+
       - name: Publish latest research index
         run: python3 scripts/sync_research.py --public public
 

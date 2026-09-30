@@ -25,7 +25,11 @@ def main():
     text = re.sub(r'<spatialflare-(header|footer)\b.*?</spatialflare-\1>', '', text, flags=re.S)
     text = re.sub(r'<script\b[^>]*src=["\'][^"\']*site-chrome\.js["\'][^>]*>\s*</script>', '', text)
     heading = re.search(r'<header\b[^>]*>(.*?)</header>', text, re.S)
-    controls = ''
+    existing_controls = re.search(r'<details class="sf-page-menu">.*?</details>', text, re.S)
+    controls = existing_controls.group() if existing_controls else ''
+    if existing_controls:
+        text = text.replace(existing_controls.group(), '', 1)
+        heading = re.search(r'<header\b[^>]*>(.*?)</header>', text, re.S)
     if heading and '<h1' in heading.group(1):
         inner = heading.group(1)
         theme = re.search(r'<div class="theme".*?</div>', inner, re.S)
@@ -36,7 +40,7 @@ def main():
     # Preserve source attribution as article content, separate from the site footer.
     text = re.sub(r'<footer\b[^>]*>(.*?)</footer>', r'<p class="research-source-notice">\1</p>', text, flags=re.S)
     if controls:
-        text = text.replace('</body>', controls + '</body>', 1)
+        text = re.sub(r'(<body\b[^>]*>)', lambda m: m.group(1) + controls, text, count=1)
     header = (root / 'scripts/site-chrome/header.html').read_text(encoding='utf-8')
     footer = (root / 'scripts/site-chrome/footer.html').read_text(encoding='utf-8')
     text = apply(text, header, footer)
