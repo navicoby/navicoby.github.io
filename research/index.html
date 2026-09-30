@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spatial AI - Research</title>
+<meta name="description" content="공간 AI·건설과 조경 BIM·식물 세계모델 논문 자동 수집 색인">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d2321; --ink-soft:#55605b; --ink-faint:#8b9691;
+  --bg:#f7f5f0; --card:#fffefb; --line:#e0ddd4;
+  --accent:#4a6b52; --accent-soft:#eaf0ea; --mark:#b5812f;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e7e4dc; --ink-soft:#a7b0aa; --ink-faint:#78827c;
+    --bg:#15181a; --card:#1c2022; --line:#2c3134;
+    --accent:#8fb79a; --accent-soft:#232c26; --mark:#d2a458;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e7e4dc; --ink-soft:#a7b0aa; --ink-faint:#78827c;
+  --bg:#15181a; --card:#1c2022; --line:#2c3134;
+  --accent:#8fb79a; --accent-soft:#232c26; --mark:#d2a458;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:56rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+header{border-bottom:2px solid var(--line);padding-bottom:1.5rem;margin-bottom:1.75rem;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem}
+.theme{display:flex;gap:.15rem;border:1px solid var(--line);border-radius:999px;padding:.2rem;
+  background:var(--card);flex:none}
+.theme button{font:inherit;font-size:.78rem;cursor:pointer;border:0;background:transparent;
+  color:var(--ink-faint);border-radius:999px;padding:.28rem .6rem;line-height:1;transition:.15s}
+.theme button:hover{color:var(--ink)}
+.theme button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:500}
+h1{font-family:"Noto Serif KR",Georgia,serif;font-weight:600;font-size:2rem;margin:0 0 .4rem;
+  letter-spacing:-.01em;text-wrap:balance}
+h1 .dash{color:var(--ink-faint);font-weight:400}
+.lede{color:var(--ink-soft);margin:0;font-size:.95rem}
+.meta{color:var(--ink-faint);font-size:.8rem;margin-top:.6rem;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.25rem 0 1.75rem}
+.chip{font:inherit;font-size:.82rem;cursor:pointer;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-soft);border-radius:999px;padding:.32rem .8rem;
+  display:inline-flex;align-items:center;gap:.4rem;transition:.15s}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.chip .n{font-size:.72rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+article{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:1.15rem 1.25rem;margin-bottom:.8rem}
+article h2{font-size:1.02rem;font-weight:600;margin:0 0 .5rem;line-height:1.45;text-wrap:balance}
+article h2 a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+article h2 a:hover{border-bottom-color:var(--accent)}
+.tldr{border-left:3px solid var(--accent);padding-left:.75rem;margin:0 0 .6rem;
+  color:var(--ink);font-size:.93rem}
+.bib{color:var(--ink-faint);font-size:.78rem;display:flex;flex-wrap:wrap;gap:.5rem;
+  align-items:center;margin-top:.5rem}
+.bib .tag{background:var(--accent-soft);color:var(--accent);padding:.1rem .45rem;border-radius:4px;
+  font-size:.72rem;font-weight:500}
+.oa{color:var(--mark);font-weight:500}
+details summary{cursor:pointer;color:var(--ink-soft);font-size:.82rem;margin-top:.55rem;
+  list-style:none;user-select:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▸ ";color:var(--ink-faint)}
+details[open] summary::before{content:"▾ "}
+details p{font-size:.86rem;color:var(--ink-soft);margin:.55rem 0 0;
+  max-height:26rem;overflow:auto}
+details details{margin:.6rem 0 0;padding-left:.2rem}
+details details summary{font-size:.78rem;color:var(--ink-faint)}
+details details p{font-size:.82rem;max-height:20rem}
+.loading{font-size:.82rem;color:var(--ink-faint);margin:.55rem 0 0}
+footer{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line);
+  color:var(--ink-faint);font-size:.78rem}
+a{color:var(--accent)}
+@media (max-width:480px){h1{font-size:1.6rem} .wrap{padding-top:1.75rem}}
+</style>
+<style>:root[data-theme="light"]{--bg:#f5f6f2}.research-heading{padding:28px 0 24px;border-bottom:1px solid var(--line);margin-bottom:22px}.research-source-notice{font-size:12px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:22px;margin-top:32px}/* Page-specific controls live apart from the shared site header. */
+.sf-page-menu{position:fixed!important;right:24px!important;bottom:24px!important;z-index:900!important;width:auto!important;max-width:calc(100vw - 32px)!important;margin:0!important;padding:0!important;border:0!important;font:13px/1.5 "Segoe UI",Arial,sans-serif!important;color:#17201c!important}
+.sf-page-menu>summary{display:block!important;cursor:pointer!important;list-style:none!important;margin:0!important;padding:11px 17px!important;border:1px solid #d6ded8!important;border-radius:4px!important;background:#f5f6f2!important;color:#17201c!important;font:13px/1.5 "Segoe UI",Arial,sans-serif!important;box-shadow:0 3px 14px #17201c0c!important}
+.sf-page-menu>summary::-webkit-details-marker{display:none}
+.sf-page-menu>summary::after{content:" +"!important;color:#2f7d5a!important}
+.sf-page-menu[open]>summary::after{content:" −"!important}
+.sf-page-menu .sf-page-menu-panel{position:absolute!important;bottom:calc(100% + 10px)!important;right:0!important;width:320px!important;max-width:calc(100vw - 32px)!important;max-height:65vh!important;overflow:auto!important;background:#f5f6f2!important;border:1px solid #d6ded8!important;border-radius:5px!important;box-shadow:0 6px 24px #17201c18!important;padding:16px!important}
+.sf-page-menu [data-sf-local-nav],.sf-page-menu [data-sf-local-nav]>div{position:static!important;display:block!important;width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;transform:none!important}
+.sf-page-menu nav,.sf-page-menu .bar-actions,.sf-page-menu .header-inner,.sf-page-menu .top-inner{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;padding:0!important;width:100%!important;max-width:none!important;height:auto!important}
+.sf-page-menu a{font-size:13px!important;color:#245f45!important;white-space:normal!important}
+.sf-page-menu summary:focus-visible{outline:2px solid #2f7d5a!important;outline-offset:3px!important}
+@media(max-width:680px){.sf-page-menu{right:16px!important;bottom:16px!important}}
+@media print{.sf-page-menu{display:none!important}}
+</style><link rel="stylesheet" href="/assets/page-menu.css"><script defer src="/assets/site-chrome.js"></script><style>:root[data-theme="light"]{--bg:#f5f6f2}body{--bg:inherit;background-color:var(--bg)!important}.research-heading{padding:28px 0 24px;border-bottom:1px solid var(--line);margin-bottom:22px}.research-source-notice{font-size:12px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:22px;margin-top:32px}</style></head>
+<body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
+
+
+<div class="wrap">
+<section class="research-heading">
+  <div>
+    <h1>Spatial AI <span class="dash">—</span> Research</h1>
+    <p class="lede">공간 AI·건설과 조경 BIM·식물 세계모델 주변 문헌을 매일 훑어 쌓는 색인입니다.</p>
+    <p class="meta">834편 · 출처 OpenAlex, arXiv · 갱신 2026-09-30 01:30:00 UTC<br>
+    초록까지만 수록합니다. 원문은 각 논문의 출판사 링크로 가십시오.</p>
+  </div>
+  
+</section>
+<div class="chips"><button class="chip" data-topic="" aria-pressed="true">전체<span class="n">834</span></button><button class="chip" data-topic="world-models">세계모델<span class="n">490</span></button><button class="chip" data-topic="clonal-plant-modeling">클론식물 모델링<span class="n">83</span></button><button class="chip" data-topic="plant-3d-reconstruction">식물 3D 재구성<span class="n">71</span></button><button class="chip" data-topic="spatial-ai">공간 AI<span class="n">54</span></button><button class="chip" data-topic="plant-digital-twin">식물 디지털트윈<span class="n">44</span></button><button class="chip" data-topic="functional-structural-plant">기능구조 식물모델<span class="n">37</span></button><button class="chip" data-topic="agent-based-ecology">행위자기반 생태<span class="n">25</span></button><button class="chip" data-topic="construction-bim">건설 BIM<span class="n">21</span></button><button class="chip" data-topic="landscape-bim">조경 BIM<span class="n">9</span></button></div>
+<main id="list"></main>
+<p class="research-source-notice">arXiv와 OpenAlex 공개 메타데이터로 만들었습니다. 저작권은 각 논문 저작자와 출판사에 있습니다.</p>
+</div>
+<script>
+const TOPIC_LABEL = {"clonal-plant-modeling": "클론식물 모델링", "functional-structural-plant": "기능구조 식물모델", "plant-3d-reconstruction": "식물 3D 재구성", "world-models": "세계모델", "agent-based-ecology": "행위자기반 생태", "landscape-bim": "조경 BIM", "plant-digital-twin": "식물 디지털트윈", "construction-bim": "건설 BIM", "spatial-ai": "공간 AI"};
+let PAPERS = [], filter = "";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function card(p) {
+  const authors = Array.isArray(p.authors) ? p.authors.join(", ") : (p.authors || "");
+  const link = p.url || p.doi || "#";
+  return `<article>
+    <h2><a href="${esc(link)}" target="_blank" rel="noopener">${esc(p.title)}</a></h2>
+    ${p.tldr ? `<p class="tldr">${esc(p.tldr)}</p>` : ""}
+    <div class="bib">
+      <span class="tag">${esc(TOPIC_LABEL[p.topic] || p.topic || "")}</span>
+      ${p.venue ? `<span>${esc(p.venue)}</span>` : ""}
+      ${p.published ? `<span>${esc(String(p.published).slice(0,10))}</span>` : ""}
+      ${p.oa ? `<span class="oa">오픈액세스</span>` : ""}
+      ${p.pdf_url ? `<a href="${esc(p.pdf_url)}" target="_blank" rel="noopener">원문 PDF</a>` : ""}
+    </div>
+    ${authors ? `<div class="bib">${esc(authors)}</div>` : ""}
+    <details data-id="${esc(p.id)}"><summary>초록</summary>
+      <p class="loading">불러오는 중…</p></details>
+  </article>`;
+}
+
+// 초록 전문은 전체 용량의 79%라 따로 둔다. 처음 펼칠 때 한 번만 받아 전부 채운다.
+let ABS = null, absPending = null;
+function loadAbstracts() {
+  if (ABS) return Promise.resolve(ABS);
+  if (!absPending) absPending = fetch("abstracts.json").then(r => r.json()).then(d => (ABS = d));
+  return absPending;
+}
+function fillAbstract(det) {
+  if (det.dataset.filled) return;
+  det.dataset.filled = "1";
+  loadAbstracts().then(all => {
+    const a = all[det.dataset.id] || {};
+    const ko = a.summary_ko, en = a.summary;
+    if (!ko && !en) { det.querySelector("p").textContent = "초록이 없는 논문입니다."; return; }
+    det.querySelector("p").outerHTML =
+      (ko ? `<p>${esc(ko)}</p>` : "") +
+      (en ? `<details><summary>${ko ? "원문 초록 (English)" : "초록 (English)"}</summary>
+             <p>${esc(en)}</p></details>` : "");
+  }).catch(() => {
+    det.dataset.filled = "";
+    const p = det.querySelector("p");
+    if (p) p.textContent = "초록을 불러오지 못했습니다.";
+  });
+}
+document.addEventListener("toggle", ev => {
+  const d = ev.target;
+  if (d.tagName === "DETAILS" && d.open && d.dataset.id) fillAbstract(d);
+}, true);
+function draw() {
+  const rows = filter ? PAPERS.filter(p => p.topic === filter) : PAPERS;
+  document.getElementById("list").innerHTML = rows.slice(0, 400).map(card).join("") ||
+    `<article><p>해당 주제의 논문이 아직 없습니다.</p></article>`;
+}
+// 테마: 밝게/어둡게는 root에 data-theme을 찍고, 자동은 지워서 OS 설정을 따른다.
+const themeBtns = document.querySelectorAll(".theme button");
+function setTheme(mode, save) {
+  if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", mode);
+  themeBtns.forEach(b => b.setAttribute("aria-pressed", b.dataset.theme === mode));
+  if (save) { try { localStorage.setItem("theme", mode); } catch (e) {} }
+}
+themeBtns.forEach(b => b.addEventListener("click", () => setTheme(b.dataset.theme, true)));
+// 기본은 밝게. '자동'을 고르면 그때부터 OS 설정을 따른다.
+let saved = "light";
+try { saved = localStorage.getItem("theme") || "light"; } catch (e) {}
+setTheme(saved, false);
+
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.topic;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  draw();
+}));
+fetch("papers.json").then(r => r.json()).then(d => { PAPERS = d.papers; draw(); })
+  .catch(() => { document.getElementById("list").innerHTML =
+    `<article><p>목록을 불러오지 못했습니다.</p></article>`; });
+</script>
+
+
+<details class="sf-page-menu"><summary>페이지 메뉴</summary><div class="sf-page-menu-panel"><div class="theme" role="group" aria-label="화면 테마">
+    <button data-theme="light" aria-pressed="true">밝게</button>
+    <button data-theme="dark" aria-pressed="false">어둡게</button>
+    <button data-theme="auto" aria-pressed="false">자동</button>
+  </div></div></details>
+
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body>
+</html>
