@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" width="360" height="340" role="img" aria-labelledby="title desc">
+<title id="title">벡터: 객체의 모양</title>
+<desc id="desc">가상공원의 꺾인 경계는 면, 수목 세 그루는 점, 보행로는 선으로 표시했습니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#285f44"/></marker></defs>
+<rect width="360" height="340" fill="#fbfcfa"/>
+<g font-family="Malgun Gothic,Apple SD Gothic Neo,Arial,sans-serif"><rect x="20" y="32" width="320" height="240" rx="0" fill="#fbfcfa" stroke="#cbd8cb" stroke-width="2"/><polygon points="60,72 220,72 220,152 300,152 300,232 60,232" fill="#e4eee1" stroke="#285f44" stroke-width="3"/><path d="M 28 234 L 145 156 L 324 156" fill="none" stroke="#aa5b29" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="97" cy="108" r="9" fill="#285f44" stroke="#fbfcfa" stroke-width="3"/><circle cx="144" cy="111" r="9" fill="#285f44" stroke="#fbfcfa" stroke-width="3"/><circle cx="262" cy="205" r="9" fill="#285f44" stroke="#fbfcfa" stroke-width="3"/><text x="180" y="305" font-size="22" fill="#172a20" text-anchor="middle" font-weight="600">점 · 선 · 면을 각각 보관</text></g>
+</svg>

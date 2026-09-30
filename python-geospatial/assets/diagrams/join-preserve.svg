@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" width="360" height="340" role="img" aria-labelledby="title desc">
+<title id="title">공간조인: 건물은 그대로</title>
+<desc id="desc">건물 B01의 일부가 영역 P01에 걸쳐 있습니다. intersects 공간조인은 건물 전체 도형을 유지하고 P01 속성을 연결합니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#285f44"/></marker></defs>
+<rect width="360" height="340" fill="#fbfcfa"/>
+<g font-family="Malgun Gothic,Apple SD Gothic Neo,Arial,sans-serif"><rect x="40" y="48" width="210" height="140" rx="14" fill="#e4eee1" stroke="#285f44" stroke-width="2"/><text x="65" y="82" font-size="22" fill="#285f44" text-anchor="start" font-weight="400">영역 P01</text><rect x="205" y="123" width="105" height="103" rx="0" fill="#f1ddc4" stroke="#aa5b29" stroke-width="2"/><text x="257" y="176" font-size="23" fill="#aa5b29" text-anchor="middle" font-weight="600">B01</text><path d="M 180 236 V 265" fill="none" stroke="#285f44" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="28" y="275" width="304" height="45" rx="6" fill="#f1ddc4" stroke="#aa5b29" stroke-width="2"/><text x="180" y="305" font-size="21" fill="#172a20" text-anchor="middle" font-weight="600">B01 행에 P01 속성 추가</text></g>
+</svg>

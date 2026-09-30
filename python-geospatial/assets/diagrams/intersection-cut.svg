@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" width="360" height="340" role="img" aria-labelledby="title desc">
+<title id="title">Intersection: 공통 부분</title>
+<desc id="desc">같은 입력의 intersection 결과는 B01과 P01이 겹치는 부분만 남습니다. 원래 건물 외곽선은 점선으로 표시했습니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#285f44"/></marker></defs>
+<rect width="360" height="340" fill="#fbfcfa"/>
+<g font-family="Malgun Gothic,Apple SD Gothic Neo,Arial,sans-serif"><rect x="40" y="48" width="210" height="140" rx="14" fill="#e4eee1" stroke="#285f44" stroke-width="2"/><text x="65" y="82" font-size="22" fill="#285f44" text-anchor="start" font-weight="400">영역 P01</text><rect x="205" y="123" width="105" height="103" rx="0" fill="none" stroke="#aa5b29" stroke-width="2" stroke-dasharray="6 5"/><rect x="205" y="123" width="45" height="65" rx="0" fill="#f1ddc4" stroke="#aa5b29" stroke-width="2"/><text x="257" y="113" font-size="22" fill="#aa5b29" text-anchor="middle" font-weight="600">B01</text><path d="M 180 236 V 265" fill="none" stroke="#285f44" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/><rect x="28" y="275" width="304" height="45" rx="6" fill="#e4eee1" stroke="#285f44" stroke-width="2"/><text x="180" y="305" font-size="21" fill="#172a20" text-anchor="middle" font-weight="600">교차한 도형만 남김</text></g>
+</svg>
