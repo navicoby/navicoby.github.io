@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ontology101 · 온톨로지 입문 요약 | SpatialFlare</title>
-  <meta name="description" content="Noy와 McGuinness의 온톨로지 입문서를 짧게 읽는 한국어 문헌 노트. 개념·속성·관계·개체의 구분, 설계 절차와 스탠포드 원문 링크.">
+  <meta name="description" content="Noy와 McGuinness의 온톨로지 입문서를 읽는 한국어 문헌 노트. 개념·속성·관계·개체의 구분, 개발 일곱 단계, 설계 규칙과 흔한 실수, 속성 제약, 소공원 적용 예와 스탠포드 원문 링크.">
   <meta name="author" content="SpatialFlare">
   <meta property="og:type" content="article">
   <meta property="og:title" content="ontology101 · 개념과 관계를 설계하는 첫걸음">
@@ -39,7 +39,7 @@
         <h1>ontology101</h1>
         <p class="subtitle">개념과 관계를 설계하는 첫걸음</p>
         <p class="intro">서로 다른 사람이 같은 데이터를 같은 뜻으로 읽으려면 무엇을 정해야 할까. Noy와 McGuinness의 입문서에서 온톨로지 설계의 출발점을 살펴본다.</p>
-        <div class="meta"><span>원문 2001</span><span>요약·해설 SpatialFlare</span><time datetime="2026-09-26">2026.09.26</time></div>
+        <div class="meta"><span>원문 2001</span><span>요약·해설 SpatialFlare</span><time datetime="2026-09-26">2026.09.26</time><span>보강 <time datetime="2026-09-30">2026.09.30</time></span></div>
       </header>
 
       <aside class="source" aria-label="원문 안내">
@@ -68,18 +68,71 @@
       <section aria-labelledby="process-title">
         <span class="section-no">02 / 개발 흐름</span>
         <h2 id="process-title">답하고 싶은 질문부터 정한다</h2>
+        <p>원문은 개발 절차를 일곱 단계로 제시한다. 순서대로 한 번 지나가는 절차가 아니라, 초안을 만들고 써 보면서 되돌아가는 반복 과정이다.</p>
         <ol>
-          <li><strong>목적과 범위를 정한다.</strong> 누가 사용하며 어떤 질문에 답해야 하는지 적는다.</li>
-          <li><strong>기존 모델을 살피고 용어를 모은다.</strong> 재사용할 정의가 있는지 확인한다.</li>
-          <li><strong>개념·관계·제약을 함께 설계한다.</strong> 분류 체계와 속성을 오가며 다듬는다.</li>
-          <li><strong>사례를 넣고 검토한다.</strong> 처음의 질문에 답할 수 있는지 확인하며 수정한다.</li>
+          <li><strong>도메인과 범위를 정한다.</strong> 무엇을 다루고, 무엇에 쓰며, 누가 유지할지 적는다. 이때 온톨로지가 답해야 할 질문 목록을 미리 써 두는데, 원문은 이를 <b>역량 질문</b>(competency question)이라 부른다. 나중에 모델이 충분한지 판가름하는 시험지가 된다.</li>
+          <li><strong>기존 온톨로지의 재사용을 검토한다.</strong> 이미 공개된 어휘나 분류가 있으면 가져와 다듬는 편이 빠르고, 다른 시스템과 맞물려야 한다면 재사용이 요구사항이 되기도 한다.</li>
+          <li><strong>중요한 용어를 빠짐없이 나열한다.</strong> 이 단계에서는 중복이나 계층, 클래스인지 속성인지를 따지지 않는다. 목록을 넓게 얻는 것이 먼저다.</li>
+          <li><strong>클래스와 계층을 정한다.</strong> 일반적인 개념에서 내려가거나(하향식), 구체적인 개념에서 묶어 올라가거나(상향식), 눈에 띄는 개념에서 양쪽으로 넓히는(결합식) 방법이 있다. 원문은 어느 것이 본질적으로 낫다고 보지 않으며, 결합식이 많은 사람에게 가장 쉽다고 적는다.</li>
+          <li><strong>속성(슬롯)을 정한다.</strong> 용어 목록에서 클래스로 뽑히지 않은 것들이 대개 속성이다. 내재적 특성, 외재적 특성, 부분, 다른 개체와의 관계가 여기에 들어간다. 속성은 그것을 가질 수 있는 가장 일반적인 클래스에 붙이고, 하위클래스는 이를 상속받는다.</li>
+          <li><strong>속성의 제약(패싯)을 정한다.</strong> 값의 개수, 값의 유형, 값이 될 수 있는 클래스를 적는다(아래 05절).</li>
+          <li><strong>개체를 만든다.</strong> 클래스를 고르고 개체를 만들어 속성 값을 채운다. 여기서부터가 지식베이스다.</li>
         </ol>
-        <p class="takeaway">유일한 정답을 찾기보다 목적에 맞는 모델을 만들고, 실제 사용을 통해 계속 고쳐 나가는 것이 중요하다.</p>
-        <p class="page-ref">원문의 일곱 단계를 네 묶음으로 요약했다. <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=5">개발 절차 5–11쪽</a> · <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=23">결론 23쪽</a></p>
+        <p class="takeaway">4단계와 5단계는 서로 얽혀 있어 한쪽을 끝내고 다른 쪽으로 넘어가기 어렵다. 개념 몇 개를 정하고 그 속성을 적은 뒤 다시 개념으로 돌아가는 식으로 진행한다. 유일한 정답을 찾기보다 목적에 맞는 모델을 만들고, 실제 사용을 통해 계속 고쳐 나가는 것이 중요하다.</p>
+        <p class="page-ref">일곱 단계와 역량 질문: <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=5">원문 5–11쪽</a> · 결론: <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=23">23쪽</a></p>
+      </section>
+
+      <section aria-labelledby="rules-title">
+        <span class="section-no">03 / 설계 규칙</span>
+        <h2 id="rules-title">결정을 도와주는 규칙들</h2>
+        <p>원문은 본문 곳곳에 짧은 규칙을 박아 두었다. 아래는 그 규칙들을 자체 문장으로 묶은 것이다. 저자들은 이 규칙이 다소 독단적으로 보일 수 있지만 실제 결정에 도움이 된다고 밝힌다.</p>
+        <ol>
+          <li><strong>정답은 하나가 아니다.</strong> 같은 도메인을 모델링하는 방법은 언제나 여럿이고, 최선은 어떤 응용에 쓸지와 앞으로 어떻게 확장할지에 달려 있다. 개발은 반복적일 수밖에 없다.</li>
+          <li><strong>개념은 도메인을 설명하는 문장의 명사와 동사에 가깝다.</strong> 명사는 클래스(대상), 동사는 관계가 될 가능성이 높다.</li>
+          <li><strong>상위–하위 관계는 "일종(kind-of)"이다.</strong> 하위클래스의 모든 개체는 상위클래스의 개체이기도 하다. 이 관계는 이행적이어서, B가 A의 하위이고 C가 B의 하위이면 C는 A의 하위다.</li>
+          <li><strong>형제 클래스는 같은 수준의 일반성을 가진다.</strong> 책의 같은 수준 절들처럼 나란히 놓일 수 있어야 한다. 잘 짜인 온톨로지에서 직접 하위클래스는 대개 둘에서 열둘 사이다. 하나뿐이면 모델링이 덜 된 신호이고, 열둘을 넘으면 중간 범주가 필요할 수 있다. 다만 자연스러운 묶음이 없다면 인위적인 클래스를 만들지 않는다.</li>
+          <li><strong>새 하위클래스에는 이유가 있어야 한다.</strong> 상위클래스에 없는 속성이 있거나, 제약이 다르거나, 참여하는 관계가 다를 때 만든다. 예외는 용어 계층이다. 전문가들이 실제로 구별해 쓰는 용어라면 새 속성이 없어도 계층으로 두는 편이 탐색과 소통에 낫다.</li>
+          <li><strong>클래스로 나눌지, 속성 값으로 둘지는 도메인이 정한다.</strong> 그 구별이 다른 클래스의 제약을 바꾸거나 전문가가 서로 다른 종류의 대상으로 여긴다면 클래스로 나눈다. 그렇지 않으면 값으로 둔다. 개체가 한 클래스에서 다른 클래스로 자주 옮겨 다니게 되는 구별(예: 지금 차가운 상태인 와인)은 클래스가 아니라 값이다.</li>
+          <li><strong>개체는 표현하려는 가장 구체적인 항목이다.</strong> 어디까지를 클래스로, 어디부터를 개체로 둘지는 역량 질문이 요구하는 세분성으로 정한다. 개념들이 자연스러운 계층을 이루면 개체가 아니라 클래스로 표현한다. 계층을 이룰 수 있는 것은 클래스뿐이기 때문이다.</li>
+          <li><strong>속성의 적용 범위는 가장 일반적으로, 그러나 지나치지 않게.</strong> 속성이 붙는 클래스(정의역)와 값이 될 수 있는 클래스(치역)는 그 속성이 실제로 해당하는 가장 넓은 클래스로 정한다. 상위클래스와 그 하위클래스를 함께 나열했다면 하위클래스는 지우고, 어떤 클래스의 하위클래스를 전부 나열했다면 그 클래스 하나로 바꾼다.</li>
+          <li><strong>범위를 넘어 모델링하지 않는다.</strong> 응용에 필요한 것보다 더 특수화하거나 일반화할 필요가 없고(많아야 각 방향으로 한 수준), 클래스가 가질 수 있는 모든 속성과 관계를 다 넣을 필요도 없다. 어떤 사실을 일부러 빼기로 했다면 그 결정을 문서에 남긴다. 나중에 재사용하는 사람이 알 수 있어야 한다.</li>
+          <li><strong>명명 규약을 정하고 지킨다.</strong> 클래스는 단수형이든 복수형이든 하나로 통일하고, 약어를 피하며, 같은 부모의 하위클래스 이름은 형식을 맞춘다(예: <code>Red Wine</code>과 <code>White Wine</code>이거나 <code>Red</code>와 <code>White</code>, 그 둘을 섞지 않는다). 이름에 "class"나 "slot" 같은 낱말을 붙이지 않는다.</li>
+        </ol>
+        <p class="page-ref">근거: <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=5">3장 5쪽</a> · <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=12">4장 12–20쪽</a> · <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=21">6장 21–23쪽</a>. 규칙의 원문 표현과 와인 예제의 전체 전개는 원문에서 읽는 것이 정확하다.</p>
+      </section>
+
+      <section aria-labelledby="pitfalls-title">
+        <span class="section-no">04 / 흔한 실수</span>
+        <h2 id="pitfalls-title">계층이 틀리는 전형적인 방식</h2>
+        <p>원문 4장은 클래스 계층을 점검할 때 걸리는 오류를 예시와 함께 든다. 판단 기준은 한결같이 "일종" 관계가 성립하는가다.</p>
+        <dl class="concepts">
+          <div><dt>단수와 복수를 상하위로 놓기</dt><dd><code>Wines</code> 아래에 <code>Wine</code>을 두는 식이다. 한 병의 와인은 와인들의 "일종"이 아니다. 이름 형식을 단수나 복수 하나로 통일하면 대부분 예방된다.</dd></div>
+          <div><dt>동의어마다 클래스 만들기</dt><dd>클래스는 개념을 나타내지 낱말을 나타내지 않는다. 같은 대상을 부르는 이름이 여럿이면 클래스는 하나이고, 나머지는 동의어 목록이나 문서에 적는다.</dd></div>
+          <div><dt>순환</dt><dd>A가 B의 하위이면서 B가 A의 하위이면 두 클래스가 같다고 선언한 것과 다름없다. 계층에 순환이 있어서는 안 된다.</dd></div>
+          <div><dt>이름을 줄이다 관계를 깨뜨리기</dt><dd>지역 계층에서 "지역"이라는 낱말을 빼면 <code>Alsace</code>가 <code>France</code>의 하위클래스가 되어 버린다. 알자스는 프랑스의 일종이 아니지만, 알자스 지역은 프랑스 지역의 일종이다. 이름이 개념을 정확히 가리키는지 확인한다.</dd></div>
+          <div><dt>외재적 상태로 클래스 만들기</dt><dd>온도나 위치처럼 바뀌기 쉬운 상태를 클래스로 두면 같은 개체가 클래스를 들락거린다. 이런 구별은 속성 값으로 둔다.</dd></div>
+          <div><dt>도메인이 바뀌었는데 계층을 안 고치기</dt><dd>원문의 예는 진판델이다. 오랫동안 레드로만 분류했지만 로제 색의 화이트 진판델이 나오면서 클래스를 둘로 나누어야 했다. 계층은 도메인의 변화를 따라 고쳐야 한다.</dd></div>
+        </dl>
+        <p class="page-ref">근거: <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=12">원문 12–14쪽</a>, <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=17">17–19쪽</a></p>
+      </section>
+
+      <section aria-labelledby="facets-title">
+        <span class="section-no">05 / 속성의 제약</span>
+        <h2 id="facets-title">값에 무엇을 얼마나 허용할지 적는다</h2>
+        <p>속성만 정하면 "이 값이 무엇이어야 하는가"가 비어 있다. 원문은 속성에 붙는 제약(패싯)과 그 주변 개념을 다음과 같이 나눈다.</p>
+        <dl class="concepts">
+          <div><dt>개수 <small>Cardinality</small></dt><dd>값을 하나만 갖는지(단일) 여럿 갖는지(다중). 시스템에 따라 최소·최대 개수를 따로 적을 수 있고, 최대를 0으로 두어 특정 하위클래스에서 그 속성을 막을 수도 있다.</dd></div>
+          <div><dt>값의 유형 <small>Value type</small></dt><dd>문자열, 수, 참·거짓, 정해진 목록 가운데 하나(열거형), 그리고 다른 클래스의 개체. 마지막 유형이 개체 사이의 관계를 만든다.</dd></div>
+          <div><dt>정의역과 치역 <small>Domain / Range</small></dt><dd>속성이 붙는 클래스들이 정의역, 값으로 올 수 있는 개체의 클래스가 치역이다. 둘 다 03절의 "가장 일반적으로, 그러나 지나치지 않게" 규칙을 따른다.</dd></div>
+          <div><dt>역관계 <small>Inverse slot</small></dt><dd>"와인의 생산자"와 "와이너리가 생산하는 와인"처럼 한쪽을 채우면 다른 쪽이 정해지는 쌍이다. 저장은 중복이지만 입력할 때 어느 쪽에서든 채울 수 있게 해 주고, 시스템이 반대쪽을 자동으로 맞춘다.</dd></div>
+          <div><dt>기본값과 고정값</dt><dd>기본값은 새 개체에 미리 채워 두는 편의 장치라 바꿀 수 있다. 반면 클래스 수준에서 정한 값(예: 디저트 와인의 당도는 "달다")은 하위클래스와 개체에서 바꿀 수 없다. 둘을 혼동하지 않는다.</dd></div>
+          <div><dt>서로소 <small>Disjoint</small></dt><dd>공통 개체를 가질 수 없는 클래스 쌍을 명시하면, 어떤 클래스가 두 서로소 클래스의 하위로 정의됐을 때 시스템이 모델링 오류를 잡아낼 수 있다.</dd></div>
+        </dl>
+        <p class="page-ref">근거: <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=8">원문 8–10쪽</a>, <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=20">20–21쪽</a></p>
       </section>
 
       <section class="example" aria-labelledby="example-title">
-        <span class="section-no">03 / SPATIALFLARE의 적용 해설</span>
+        <span class="section-no">06 / SPATIALFLARE의 적용 해설</span>
         <h2 id="example-title">소공원 데이터에 대입해 보면</h2>
         <p>교목의 수량만 저장하는 데서 한 걸음 더 나아가, 각 나무가 어떤 대상이고 어디에 식재되는지 일관된 뜻으로 표현할 수 있다.</p>
         <div class="table-wrap">
@@ -90,17 +143,21 @@
               <tr><td>개체</td><td>설계도에 배치된 교목-001</td></tr>
               <tr><td>속성</td><td>교목-001의 수고: 4m</td></tr>
               <tr><td>관계</td><td>교목-001의 식재 위치: 식재구역 A</td></tr>
+              <tr><td>역량 질문</td><td>"식재구역 A에 낙엽 교목이 몇 주 있는가", "수고 3m 이상인 수목의 식재 위치는 어디인가"</td></tr>
+              <tr><td>클래스인가, 값인가</td><td>교목·관목·초화는 식재 기준과 수량 산정 방식이 달라 클래스로 나눈다. 낙엽·상록은 같은 교목 안의 값으로 두어도 위 질문에 답할 수 있다.</td></tr>
+              <tr><td>제약</td><td>수고는 수치 하나(단일), 식재 위치는 식재구역 클래스의 개체(치역), 식재구역은 여러 수목을 가진다(다중, 역관계)</td></tr>
             </tbody>
           </table>
         </div>
-        <p>이때 ‘교목은 식물의 한 유형’이라는 분류와 ‘교목이 공원에 속한다’는 구성 관계를 구별해야 한다. 이런 의미 체계는 배치 좌표나 공정 계산과 연결할 수 있지만, 그 계산 자체를 대신하지는 않는다.</p>
+        <p>이때 ‘교목은 식물의 한 유형’이라는 분류와 ‘교목이 공원에 속한다’는 구성 관계를 구별해야 한다. 이런 의미 체계는 배치 좌표나 공정 계산과 연결할 수 있지만, 그 계산 자체를 대신하지는 않는다. 낙엽·상록을 값으로 둘지 클래스로 나눌지는 03절의 규칙대로 응용이 정한다. 계절별 경관 시뮬레이션이 목적이라면 클래스로 나누는 편이 맞을 수 있다.</p>
         <p class="caption">이 예시와 적용 의견은 SpatialFlare가 작성했다. 원문에는 와인 분야의 예시가 사용된다. 유형 관계의 설명은 <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf#page=12">원문 12–13쪽</a>을 참고했다.</p>
       </section>
 
       <section class="reference" aria-labelledby="reference-title">
         <h2 id="reference-title">출처와 읽는 범위</h2>
         <p>Noy, N. F., &amp; McGuinness, D. L. (2001). <cite>Ontology Development 101: A Guide to Creating Your First Ontology.</cite> Stanford University, KSL Technical Report KSL-01-05. <a href="https://protegewiki.stanford.edu/wiki/Ontology101">공식 서지 안내</a>.</p>
-        <p>이 글은 원문의 일부 핵심 개념을 자체 문장으로 정리한 짧은 독서 노트다. 전체 번역이나 공식 해설은 아니며, 원문 도표와 PDF를 재게시하지 않았다. 상세한 설명과 예외는 저자들의 원문에서 확인할 수 있다.</p>
+        <p>이 글은 원문의 핵심 개념, 개발 절차, 설계 규칙을 자체 문장으로 정리한 독서 노트다. 전체 번역이나 공식 해설은 아니며, 원문의 문단·도표·PDF를 재게시하지 않았다. 와인 예제의 전개, 각 규칙의 원문 표현, 참고문헌은 저자들의 원문에서 확인할 수 있다. 원문의 8장 가운데 1·2장(왜, 무엇), 3장(일곱 단계), 4장(계층 점검), 5장(속성 세부), 6장(명명)의 요지를 다루고, 7장(다른 자료)과 8장(결론)은 위 요약에 녹였다.</p>
+        <p class="credit">번역어는 다음을 따랐다. class 클래스, slot 슬롯, facet 패싯, instance 개체(원문 노트에서는 인스턴스), cardinality 개수(카디널리티), competency question 역량 질문, disjoint 서로소. domain은 대상 분야를 뜻할 때 도메인, 속성이 붙는 클래스 집합을 뜻할 때 정의역으로 나누어 옮겼고 range는 치역이다. 예제 온톨로지의 클래스·속성 이름은 원문 표기를 그대로 두었다.</p>
         <p class="credit">원문은 당시 Protégé-2000의 프레임 기반 모델을 사용한다. 이 글은 개념 설계의 입문 원칙을 다루며, 최신 OWL 구현 지침을 설명하는 글은 아니다.</p>
         <nav class="reading-links" aria-label="관련 문헌과 프로젝트">
           <a href="/parametric-design-urbanpark/">공원 파라메트릭 설계 최적화 →</a>
