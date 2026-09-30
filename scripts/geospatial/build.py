@@ -11,6 +11,8 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 BOOK = ROOT / "books/python-geospatial"
 OUT = ROOT / "static/python-geospatial"
+DOMAIN = (ROOT / "static/CNAME").read_text(encoding="utf-8").strip()
+SITE_URL = "https://" + DOMAIN
 
 
 def read_page(name):
@@ -52,12 +54,14 @@ def build():
         body = body.replace("</table>", "</table></div>")
         target.write_text(template.substitute(
             title=html.escape(meta["title"]), description=html.escape(meta["description"], quote=True),
+            page_title=html.escape("파이썬 공간데이터 사이언스 — GeoPandas에서 Spatial AI까지"
+                                  if name == "index.md" else meta["title"] + " · 파이썬 공간데이터 사이언스"),
             eyebrow=html.escape(meta["eyebrow"]), prefix=prefix, body=body,
             nav="\n".join(nav), toc=md.toc,
             lead="" if name == "index.md" else '<p class="description">' + html.escape(meta["description"]) + '</p>',
             page_toc="" if name == "index.md" else '<details class="page-toc"><summary>이 페이지에서</summary>' + md.toc + '</details>',
             source_url="https://github.com/navicoby/navicoby.github.io/blob/main/books/python-geospatial/pages/" + name,
-            canonical="https://navicoby.github.io/python-geospatial/" + str(Path(name).with_suffix(".html")).replace("\\", "/"),
+            canonical=SITE_URL + "/python-geospatial/" + ("" if name == "index.md" else str(Path(name).with_suffix(".html")).replace("\\", "/")),
         ), encoding="utf-8")
     downloads = OUT / "examples"
     downloads.mkdir(parents=True, exist_ok=True)

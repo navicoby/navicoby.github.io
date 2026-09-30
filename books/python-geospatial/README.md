@@ -5,6 +5,7 @@ navicoby.github.io에 연결하는 학습·출판 프로젝트입니다. 2026-09
 ## 바로 보기
 
 - 발행 주소: https://navicoby.github.io/python-geospatial/
+- 기존 `static/CNAME` 설정에 따라 https://spatialflare.com/python-geospatial/ 로 연결됩니다. canonical은 이 공개 도메인을 사용합니다.
 - 집필 스킬: `../../.agents/skills/navicoby-geospatial-author/SKILL.md`
 - 집필 규칙: `CONTRIBUTING.md`
 - 모바일 가이드: `../../.agents/skills/navicoby-geospatial-author/references/mobile.md`
