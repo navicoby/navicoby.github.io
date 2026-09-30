@@ -1,0 +1,31 @@
+# 검증 기록 · 2026-09-30
+
+## 실행 환경
+
+Windows, CPython 3.13.5. 세부 패키지는 requirements-lock.txt. Hugo extended 0.167.0, 저장소의 기존 PaperMod submodule 사용.
+
+## 계산 결과
+
+- buffer_join.py 실행: 공원 3,000㎡, 30m 내 고유 건물 2동, 최단거리 10/10/50m. GPKG·GeoJSON·GeoParquet 및 SVG/Folium HTML 생성.
+- dem_slope.py 실행: 전체 3,000㎡, 유효 경사도 2,763㎡, 교육용 10° 이하 후보 2,334㎡. DEM·경사 GeoTIFF, 후보 GPKG 및 SVG 생성.
+- sentinel2_ndvi.py 합성 모드 실행: 유효픽셀 95%. 실제 관측자료 아님.
+- pytest: **8 passed**. 기하 면적·거리, 경계와 다중 매칭, 알려진 평면의 경사/향, NoData 전파, 회전 격자 거부, 반사도 offset·구름, 0분모, 실제 파일 경로의 합성 GeoTIFF 입출력·정렬 불일치 거부를 검증.
+
+## 출판·화면
+
+- skill-creator quick_validate: 통과. Windows 기본 cp949 문제는 UTF-8 모드로 검사하여 해결.
+- Markdown → HTML: 8페이지 생성.
+- Hugo --minify: 성공.
+- 기존 static navigation 검사: 최상위 정적 프로젝트 **15개 모두 메인에 연결**.
+- 신규 링크 검사: 8페이지 내부 링크·앵커·이미지 대체 텍스트 통과.
+- 브라우저: 8페이지 × 320/375/768/1280px = 32개 조합에서 문서 가로 넘침 없음, 깨진 이미지 없음.
+- 1280px와 375px 랜딩 스크린샷 시각 검토. 모바일 접는 목차, 코드 복사, 코드 줄바꿈 상태 변경, Folium 지도 iframe 및 Leaflet 확대/축소 컨트롤 확인.
+- 기본 배경 레이어가 없는 Folium 지도에서 MarkerCluster의 maxZoom 오류를 발견하여 Leaflet map 옵션으로 수정. 새 브라우저 탭에서 마커 3개·레이어 컨트롤 표시 및 오류 로그 없음 확인.
+
+## 경고·미확인 범위
+
+- Rasterio 내부 from_origin에서 affine의 곱셈 연산에 대한 PendingDeprecationWarning이 발생. 현재 테스트 통과. 예제는 공식 from_origin API를 사용하며 후속 라이브러리 업데이트 시 재확인.
+- 기존 Hugo 설정 languageCode 및 PaperMod Language 필드 관련 deprecated 경고 발생. 신규 섹션의 오류는 아니며 이번에는 기존 테마·전역 설정을 수정하지 않음.
+- NGII/VWorld 인증 다운로드, 실제 Sentinel-2 원본 취득, OSMnx Overpass 다운로드, PyTorch 학습은 미실행. 해당 페이지에 준비 조건·미확인 범위를 명시.
+- VWorld·NSDI 직접 웹 접근이 되지 않아 포털 통합 날짜·현재 세부 메뉴를 확정하지 않음. 공식 공공데이터 상세·메타데이터를 대체 근거로 제공.
+- 외부 링크 전체의 장기 가용성, 스크린리더 전수 감사, 모든 모바일 기기·Safari 검증을 뜻하지 않음.

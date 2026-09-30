@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="title desc">
+<title id="title">공간데이터에서 Spatial AI까지</title><desc id="desc">벡터의 점 선 면, 래스터의 셀, 그래프의 연결을 이해한 뒤 AI와 BIM으로 통합합니다.</desc>
+<rect width="760" height="280" fill="#fbfcfa"/>
+<g stroke="#cad8ca" stroke-width="1"><path d="M30 70H730M30 130H730M30 190H730"/><path d="M130 30V235M280 30V235M430 30V235M580 30V235"/></g>
+<g fill="none" stroke="#317451" stroke-width="2"><path d="M56 177L102 81L152 126L119 190Z"/><path d="M160 140H215M352 140H402M530 140H596" stroke-dasharray="4 5"/><path d="M435 77L484 125L449 185M484 125L527 78M484 125L526 184"/></g>
+<g fill="#317451"><circle cx="56" cy="177" r="4"/><circle cx="102" cy="81" r="4"/><circle cx="152" cy="126" r="4"/><circle cx="119" cy="190" r="4"/><circle cx="435" cy="77" r="5"/><circle cx="484" cy="125" r="5"/><circle cx="449" cy="185" r="5"/><circle cx="527" cy="78" r="5"/><circle cx="526" cy="184" r="5"/></g>
+<g stroke="#fff" stroke-width="2"><path fill="#cbdcc2" d="M224 76h32v32h-32zM256 108h32v32h-32zM288 140h32v32h-32zM320 108h32v32h-32z"/><path fill="#7da878" d="M256 76h32v32h-32zM288 108h32v32h-32zM224 140h32v32h-32zM320 140h32v32h-32z"/><path fill="#315f3c" d="M288 76h32v32h-32zM224 108h32v32h-32zM256 140h32v32h-32zM320 76h32v32h-32z"/></g>
+<g fill="#e0ebdf" stroke="#317451"><rect x="605" y="78" width="91" height="34" rx="3"/><rect x="616" y="117" width="91" height="34" rx="3"/><rect x="627" y="156" width="91" height="34" rx="3"/></g>
+<g fill="#214b35" font-family="sans-serif" font-size="14" text-anchor="middle"><text x="106" y="236">VECTOR</text><text x="288" y="236">RASTER</text><text x="481" y="236">NETWORK</text><text x="662" y="236">GeoAI + BIM</text></g>
+</svg>

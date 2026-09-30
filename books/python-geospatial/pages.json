@@ -1,0 +1,10 @@
+[
+  "index.md",
+  "roadmap.md",
+  "data-sources.md",
+  "stack.md",
+  "chapters/buffer-join.md",
+  "chapters/dem-slope.md",
+  "chapters/sentinel2-ndvi.md",
+  "geoai-bridge.md"
+]

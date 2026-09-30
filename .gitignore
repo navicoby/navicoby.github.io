@@ -10,3 +10,6 @@
 *.key
 __pycache__/
 *.pyc
+/generated/
+/.venv/
+/.pytest_cache/
