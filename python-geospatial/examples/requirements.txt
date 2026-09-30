@@ -1,0 +1,12 @@
+# Verified on CPython 3.13.5 / Windows, 2026-09-30. See requirements-lock.txt.
+geopandas==1.2.0
+shapely==2.1.2
+pyogrio==0.13.0
+pyarrow==25.0.1
+rasterio==1.5.1
+numpy==2.5.3
+matplotlib==3.11.2
+folium==0.20.0
+networkx==3.7
+osmnx==2.1.1
+pytest==9.1.1
