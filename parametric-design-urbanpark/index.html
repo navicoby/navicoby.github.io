@@ -88,45 +88,19 @@
     color:var(--mut);font-size:13px}
   @media (max-width:560px){ .row{grid-template-columns:1fr;gap:3px} .row.park{margin-left:0;margin-right:0} }
 </style>
-<script defer src="/assets/site-chrome.js"></script></head>
+<link rel="stylesheet" href="/assets/page-menu.css"><script defer src="/assets/site-chrome.js"></script></head>
 <body>
 <spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
 <style>
 :host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
-<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#research">Research</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
 </template></spatialflare-header>
 
 
 <div class="wrap">
 
-<div data-sf-local-nav style="position:static;top:auto;width:100%;z-index:auto">
-  <p class="eyebrow">Methodology Review</p>
-  <h1>설계 최적화 방법론, 무엇이 어디서 왔고 무엇을 하는가</h1>
-  <p class="lede">공원을 파라메트릭하게 설계하려면 탐색 알고리즘을 골라야 합니다. 후보가 여덟 가지쯤 되는데 출신과 목적이 제각각입니다. 어떤 것은 1990년대 공학 최적화에서, 어떤 것은 2010년대 로봇 학습에서 왔습니다.</p>
-  <p class="lede">이 글은 <b>각 방법이 누구 손에서 왜 만들어졌고, 어떻게 작동하며, 지금까지 어디에 쓰였는지</b>를 정리한 문헌 검토입니다. 그다음에 공원 설계에 맞는지를 항목마다 따로 적었습니다.</p>
-  <p class="lede" style="font-size:14.2px">방법별 검토는 원논문과 후속 문헌을 직접 확인해 썼습니다. 연도·저자·수치가 들어간 주장은 따로 뽑아 원전에 대조했고, 그 과정에서 <b>37건을 바로잡았습니다.</b> 2차 자료에서 학회 발표 연도와 사전공개 연도와 학술지 게재 연도가 뒤섞이는 일이 잦습니다. 확인되지 않은 것은 단정하지 않고 그렇게 표시했습니다.</p>
-  <nav class="toc" id="toc">
-    <ol>
-      <li><a href="#intro">공원 설계는 무엇을 동시에 만족해야 하는가</a></li>
-      <li><a href="#prior">선행 연구 — 자동설계는 어디까지 왔나</a></li>
-      <li><a href="#lineage">방법론 계보</a></li>
-      <li><a href="#nsga2">NSGA-II — 다목적 진화 최적화의 표준</a></li>
-      <li><a href="#nsga3">NSGA-III — 목적이 많아질 때</a></li>
-      <li><a href="#cmaes">CMA-ES — 연속 변수의 미분 없는 최적화</a></li>
-      <li><a href="#bo">베이지안 최적화 — 비싼 평가를 아끼는 법</a></li>
-      <li><a href="#mapelites">MAP-Elites와 품질·다양성 탐색</a></li>
-      <li><a href="#cmame">QD + CMA-ES — 다양성에 수치 정밀도를 더하다</a></li>
-      <li><a href="#surrogate">서로게이트 결합 — 평가를 학습으로 대체</a></li>
-      <li><a href="#rl">강화학습 — 설계 정책 자체를 배우기</a></li>
-      <li><a href="#moqd">다수목적 품질·다양성</a></li>
-      <li><a href="#metrics">평가 함수 — 실제로 무엇을 계산할 수 있나</a></li>
-      <li><a href="#tools">도구 생태계</a></li>
-      <li><a href="#korea">국내 제도 조건</a></li>
-      <li><a href="#barrier">조경에서 무엇이 걸림돌인가</a></li>
-    </ol>
-  </nav>
-</div>
+
 
 
 <h2 id="intro">공원 설계는 무엇을 동시에 만족해야 하는가</h2>
@@ -516,5 +490,31 @@ flowchart TD
 <footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
 </template></spatialflare-footer>
 
-</body>
+<details class="sf-page-menu"><summary>페이지 메뉴</summary><div class="sf-page-menu-panel"><div data-sf-local-nav style="position:static;top:auto;width:100%;z-index:auto">
+  <p class="eyebrow">Methodology Review</p>
+  <h1>설계 최적화 방법론, 무엇이 어디서 왔고 무엇을 하는가</h1>
+  <p class="lede">공원을 파라메트릭하게 설계하려면 탐색 알고리즘을 골라야 합니다. 후보가 여덟 가지쯤 되는데 출신과 목적이 제각각입니다. 어떤 것은 1990년대 공학 최적화에서, 어떤 것은 2010년대 로봇 학습에서 왔습니다.</p>
+  <p class="lede">이 글은 <b>각 방법이 누구 손에서 왜 만들어졌고, 어떻게 작동하며, 지금까지 어디에 쓰였는지</b>를 정리한 문헌 검토입니다. 그다음에 공원 설계에 맞는지를 항목마다 따로 적었습니다.</p>
+  <p class="lede" style="font-size:14.2px">방법별 검토는 원논문과 후속 문헌을 직접 확인해 썼습니다. 연도·저자·수치가 들어간 주장은 따로 뽑아 원전에 대조했고, 그 과정에서 <b>37건을 바로잡았습니다.</b> 2차 자료에서 학회 발표 연도와 사전공개 연도와 학술지 게재 연도가 뒤섞이는 일이 잦습니다. 확인되지 않은 것은 단정하지 않고 그렇게 표시했습니다.</p>
+  <nav class="toc" id="toc">
+    <ol>
+      <li><a href="#intro">공원 설계는 무엇을 동시에 만족해야 하는가</a></li>
+      <li><a href="#prior">선행 연구 — 자동설계는 어디까지 왔나</a></li>
+      <li><a href="#lineage">방법론 계보</a></li>
+      <li><a href="#nsga2">NSGA-II — 다목적 진화 최적화의 표준</a></li>
+      <li><a href="#nsga3">NSGA-III — 목적이 많아질 때</a></li>
+      <li><a href="#cmaes">CMA-ES — 연속 변수의 미분 없는 최적화</a></li>
+      <li><a href="#bo">베이지안 최적화 — 비싼 평가를 아끼는 법</a></li>
+      <li><a href="#mapelites">MAP-Elites와 품질·다양성 탐색</a></li>
+      <li><a href="#cmame">QD + CMA-ES — 다양성에 수치 정밀도를 더하다</a></li>
+      <li><a href="#surrogate">서로게이트 결합 — 평가를 학습으로 대체</a></li>
+      <li><a href="#rl">강화학습 — 설계 정책 자체를 배우기</a></li>
+      <li><a href="#moqd">다수목적 품질·다양성</a></li>
+      <li><a href="#metrics">평가 함수 — 실제로 무엇을 계산할 수 있나</a></li>
+      <li><a href="#tools">도구 생태계</a></li>
+      <li><a href="#korea">국내 제도 조건</a></li>
+      <li><a href="#barrier">조경에서 무엇이 걸림돌인가</a></li>
+    </ol>
+  </nav>
+</div></div></details></body>
 </html>
