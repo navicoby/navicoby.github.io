@@ -1,0 +1,17 @@
+/* Shared page background; cards, plots and code retain their own surfaces. */
+html,body{background-color:#f5f6f2!important;color-scheme:light}
+body{--bg:#f5f6f2;--paper:#f5f6f2;--theme:#f5f6f2;--primary:#17201c;--content:#17201c;--secondary:#57635c;--border:#d6ded8}
+body>main,main>.hero,main>.wrap>.hero{background-color:#f5f6f2!important}
+/* Page-specific controls live apart from the shared site header. */
+.sf-page-menu{position:fixed!important;right:24px!important;bottom:24px!important;z-index:900!important;width:auto!important;max-width:calc(100vw - 32px)!important;margin:0!important;padding:0!important;border:0!important;font:13px/1.5 "Segoe UI",Arial,sans-serif!important;color:#17201c!important}
+.sf-page-menu>summary{display:block!important;cursor:pointer!important;list-style:none!important;margin:0!important;padding:11px 17px!important;border:1px solid #d6ded8!important;border-radius:4px!important;background:#f5f6f2!important;color:#17201c!important;font:13px/1.5 "Segoe UI",Arial,sans-serif!important;box-shadow:0 3px 14px #17201c0c!important}
+.sf-page-menu>summary::-webkit-details-marker{display:none}
+.sf-page-menu>summary::after{content:" +"!important;color:#2f7d5a!important}
+.sf-page-menu[open]>summary::after{content:" −"!important}
+.sf-page-menu .sf-page-menu-panel{position:absolute!important;bottom:calc(100% + 10px)!important;right:0!important;width:320px!important;max-width:calc(100vw - 32px)!important;max-height:65vh!important;overflow:auto!important;background:#f5f6f2!important;border:1px solid #d6ded8!important;border-radius:5px!important;box-shadow:0 6px 24px #17201c18!important;padding:16px!important}
+.sf-page-menu [data-sf-local-nav],.sf-page-menu [data-sf-local-nav]>div{position:static!important;display:block!important;width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;transform:none!important}
+.sf-page-menu nav,.sf-page-menu .bar-actions,.sf-page-menu .header-inner,.sf-page-menu .top-inner{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;padding:0!important;width:100%!important;max-width:none!important;height:auto!important}
+.sf-page-menu a{font-size:13px!important;color:#245f45!important;white-space:normal!important}
+.sf-page-menu summary:focus-visible{outline:2px solid #2f7d5a!important;outline-offset:3px!important}
+@media(max-width:680px){.sf-page-menu{right:16px!important;bottom:16px!important}}
+@media print{.sf-page-menu{display:none!important}}

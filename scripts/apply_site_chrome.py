@@ -52,6 +52,7 @@ def apply(text, header, footer, is_home=False):
     if parser.body_start is None or parser.body_end is None or parser.head_end is None:
         return text
     edits = []
+    page_controls = []
     for start, end, tag, inner, closing, attrs in parser.regions:
         replacement = ''
         if tag == 'header' and not is_home:
@@ -63,12 +64,15 @@ def apply(text, header, footer, is_home=False):
                 opening = text[start:inner].replace('<header', '<div', 1)
                 opening = re.sub(r'\sstyle=["\'][^"\']*["\']', '', opening)
                 opening = opening[:-1] + ' data-sf-local-nav style="position:static;top:auto;width:100%;z-index:auto">'
-                replacement = opening + content + '</div>'
+                page_controls.append(opening + content + '</div>')
         edits.append((start, end, replacement))
+    controls = ''
+    if page_controls:
+        controls = '<details class="sf-page-menu"><summary>페이지 메뉴</summary><div class="sf-page-menu-panel">' + ''.join(page_controls) + '</div></details>'
     edits.extend([
         (parser.body_start, parser.body_start, '\n' + header + '\n'),
-        (parser.body_end, parser.body_end, '\n' + footer + '\n'),
-        (parser.head_end, parser.head_end, '<script defer src="/assets/site-chrome.js"></script>'),
+        (parser.body_end, parser.body_end, '\n' + footer + '\n' + controls),
+        (parser.head_end, parser.head_end, '<link rel="stylesheet" href="/assets/page-menu.css"><script defer src="/assets/site-chrome.js"></script>'),
     ])
     for start, end, replacement in sorted(edits, reverse=True):
         text = text[:start] + replacement + text[end:]
