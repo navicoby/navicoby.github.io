@@ -2,7 +2,7 @@
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 from collections import Counter
-import hashlib,json,csv
+import hashlib,json,csv,re
 from bs4 import BeautifulSoup
 
 root=Path(__file__).resolve().parents[2]/'static'
@@ -34,6 +34,36 @@ for c in chapters:
     md=(site/'text'/f'ch{c["n"]:02}.md').read_text()
     page=pages[(site/'chapters'/f'ch{c["n"]:02}.html').resolve()]
     if c['status']=='available' and len(page.select_one('.prose').get_text())<len(md)*.7:errors.append(f'ch{c["n"]}: body appears truncated')
+    if c['status']=='available':
+        key=f'ch{c["n"]:02}'
+        refs=page.select('.reference-list>li')
+        assert refs and page.select_one('.references h2').get_text()=='참고문헌',key
+        for n,ref in enumerate(refs,1):
+            assert ref['id']==f'ref-{key}-{n}',key
+            assert ref.select_one('.reference-number').get_text()==f'[{n}]',key
+            assert page.select(f'a.citation[href="#ref-{key}-{n}"]'),(key,n,'unused reference')
+        for citation in page.select('a.citation'):
+            target=page.find(id=citation['href'][1:])
+            assert target and target.select_one('.reference-number').get_text()==citation.get_text(),key
+            assert target.select(f'a[href="#{citation["id"]}"]'),(key,'missing return link')
+        # Every actual body section must have a citation before the next h2.
+        prose=page.select_one('.prose')
+        for h in prose.find_all('h2',recursive=False):
+            nodes=[]
+            for node in h.next_siblings:
+                if getattr(node,'name',None)=='h2' or (getattr(node,'attrs',{}) and 'references' in node.get('class',[])):break
+                nodes.append(str(node))
+            assert 'class="citation"' in ''.join(nodes),(key,h.get_text(),'uncited section')
+        assert (site/'downloads/chapters'/f'{key}.md').is_file()
+coverage=json.loads((site/'downloads/citation-coverage.json').read_text())
+assert sum(v['sections'] for k,v in coverage.items() if k.startswith('ch'))==436
+assert all(v['cited_sections']==v['sections'] for k,v in coverage.items() if k.startswith('ch'))
+combined=BeautifulSoup((site/'downloads/web-edition.md').read_text(),'html.parser')
+ids=[t['id'] for t in combined.select('[id]')]
+assert len(ids)==len(set(ids)),'combined Markdown has duplicate citation anchors'
+idset=set(ids)
+for citation in combined.select('.citation, .citation-back'):
+    assert citation['href'][1:] in idset,'combined Markdown has a broken citation'
 manifest=json.loads((site/'downloads/source-manifest.json').read_text())
 for item in manifest:
     assert hashlib.sha256((site/item['file']).read_bytes()).hexdigest()==item['sha256'],item['file']

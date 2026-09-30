@@ -7,6 +7,7 @@ from pathlib import Path
 import csv, html, json, re
 import markdown
 from bs4 import BeautifulSoup
+from citations import annotate, REPORT
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'static/augmented-reality-landscape'
@@ -72,11 +73,12 @@ def reading_page(title,md,name,eyebrow,summary,chapter=None):
         end+=f'<a href="../index.html#part-{chapter["part"]}">전체 목차 <span>제{chapter["part"]}부</span></a>'
         if n<33:end+=f'<a href="ch{n+1:02}.html">다음 장 → <span>{E(CHAPTERS[n]["title"])}</span></a>'
         end+='</nav>'
-        source=f'<p class="source-note">옵시디언 원고 기반 · 웹판 편집 2026.09.30 · <a href="../text/ch{n:02}.md">이 장의 Markdown</a> · <a href="../editorial.html">편집 범위</a></p>'
+        source=f'<p class="source-note">옵시디언 원고 기반 · 웹판 편집 2026.09.30 · <a href="../downloads/chapters/ch{n:02}.md">이 장의 Markdown</a> · <a href="../editorial.html">편집 범위</a></p>'
         if chapter['status']=='planned':
             content='<div class="planned-note"><p class="eyebrow">집필 예정</p><h2>이 장의 본문은 아직 없습니다.</h2><p>원래 기획의 장 번호를 유지했습니다. 현재 읽을 수 있는 29개 장과 웹판 보완 글은 전체 목차에서 찾을 수 있습니다.</p><a class="button" href="../index.html#contents">수록된 본문 보기</a></div>'
         else:
             source+='<p class="source-note">이 본문은 조사 당시의 연구 원고입니다. 제품 상태·가격·수치와 해석은 출처·조사 범위와 함께 읽어 주세요.</p>'
+            source+=f'<p class="source-note citation-nav"><a href="#references-ch{n:02}">참고문헌 {REPORT[f"ch{n:02}"]["references"]}개 ↓</a> · 본문 [번호]로 출처 확인</p>'
     else:
         end='<nav class="pager" aria-label="관련 페이지"><a href="index.html#contents">← 전체 목차</a><a href="practice.html">현장 가이드</a><a href="evidence.html">사례·근거</a></nav>'
         source='<p class="source-note">웹판 보완 글 · 2026.09.30</p>'
@@ -104,40 +106,49 @@ def literature():
     categories=list(dict.fromkeys(p['category'] for p in PAPERS))
     options=''.join(f'<option>{E(c)}</option>' for c in categories)
     rows=''
-    for p in PAPERS:
+    for number,p in enumerate(PAPERS,1):
         title=E(p['title']);doi=p.get('doi','').strip()
         link=f'<a href="https://doi.org/{E(doi)}" rel="noreferrer">DOI ↗</a>' if doi and not re.search(r'[\s<>]',doi) else '<span>DOI 미기재</span>'
+        if not doi and p.get('source_url'):link=f'<a href="{E(p["source_url"])}" rel="noreferrer">기관 원문 ↗</a>'
+        if p.get('catalog_url'):link+=f' · <a href="{E(p["catalog_url"])}" rel="noreferrer">서지 기록 ↗</a>'
+        authorline=E('; '.join(p.get('authors',[])) or '원 조사 목록에 저자 미기재')
         text=' '.join(str(p.get(k,'')) for k in ['title','category','summary','use','caution','year','doi'])
-        rows+=f'<article class="paper" data-category="{E(p["category"])}" data-search="{E(text.lower())}"><div class="paper-meta"><span>{E(p["category"])}</span><span>{p.get("year") or "연도 미상"}</span></div><h2>{title}</h2><p class="venue">{E(p.get("venue", "") or "게재처 미기재")}</p><p>{E(p.get("summary", ""))}</p><details><summary>조경과의 연결 · 해석 주의점</summary><p><strong>활용 관점</strong> {E(p.get("use", ""))}</p><p><strong>주의점</strong> {E(p.get("caution", ""))}</p></details><div class="paper-link">{link}</div></article>'
+        rows+=f'<article class="paper" id="paper-{number}" data-category="{E(p["category"])}" data-search="{E(text.lower())}"><div class="paper-meta"><span>{E(p["category"])}</span><span>{p.get("year") or "연도 미상"}</span></div><h2><span class="paper-number">[{number}]</span> {title}</h2><p class="paper-authors">{authorline}</p><p class="venue">{E(p.get("citation_venue",p.get("venue", "")) or "게재처 미기재")}</p><p>{E(p.get("summary", ""))}</p><details><summary>조경과의 연결 · 해석 주의점</summary><p><strong>활용 관점</strong> {E(p.get("use", ""))}</p><p><strong>주의점</strong> {E(p.get("caution", ""))}</p></details><div class="paper-link">{link}</div></article>'
         add_search(p['title'],'literature.html?q='+__import__('urllib.parse',fromlist=['quote']).quote(p['title']),text,'문헌')
     body=f'''<main id="main" class="wrap collection"><p class="eyebrow">RESEARCH INDEX</p><h1>문헌으로 이어 읽기</h1><p class="lead">조경 관련 조사에서 분류한 140개 문헌 기록. 원고의 질문을 논문과 연구 자료로 연결합니다.</p><p class="notice">분류·요약은 옵시디언 조사자료를 옮겼습니다. 동일 연구의 다른 판본이 포함될 수 있으며, 모든 전문을 재검증한 목록은 아닙니다. 인용 수와 현재 제품 상태는 제공하지 않습니다.</p><div class="filter-bar"><label>제목·주제·키워드<input type="search" id="paper-query" placeholder="예: 식생, flood, 참여설계" autocomplete="off"></label><label>주제<select id="paper-category"><option value="">전체 주제</option>{options}</select></label><button type="button" id="paper-reset">초기화</button><a href="downloads/literature.csv" download>CSV 내려받기 ↓</a></div><p id="paper-count" role="status" aria-live="polite">140개 문헌 기록</p><div class="papers">{rows}</div><p id="paper-empty" hidden>검색 결과가 없습니다. 다른 단어나 전체 주제로 검색해 보세요.</p><noscript><p>검색 필터에는 JavaScript가 필요합니다. 전체 목록은 아래에서 그대로 읽을 수 있습니다.</p></noscript></main>'''
     return page('문헌으로 이어 읽기',body,'literature.html',active='문헌')
 
 def main():
+    cited={}
     write('index.html',home())
     for c in CHAPTERS:
-        md=(OUT/'text'/f'ch{c["n"]:02}.md').read_text()
+        key=f'ch{c["n"]:02}'
+        md=annotate((OUT/'text'/f'{key}.md').read_text(),key)
+        cited[key]=md
+        write(f'downloads/chapters/{key}.md',md)
         write(f'chapters/ch{c["n"]:02}.html',reading_page(c['title'],md,f'chapters/ch{c["n"]:02}.html',f'제{c["part"]}부 · {PARTS[c["part"]-1][0]} / 제{c["n"]}장',c['summary'],c))
     for key,title,summary in [('practice','조경 AR 현장 적용 가이드','의사결정을 정하고, 데이터를 준비하고, 현장에서 검증하고, 다시 확인할 수 있는 기록을 남기는 방법.'),('evidence','사례와 기술을 읽는 기준','공식 자료로 확인한 기능과, 별도로 검증해야 할 현장 성과를 나눕니다.'),('editorial','이 웹판의 구성과 편집 기록','어떤 원고를 옮겼고 무엇을 보완했는지, 확인 범위와 남은 작업을 기록합니다.')]:
-        write(key+'.html',reading_page(title,(OUT/'text'/f'{key}.md').read_text(),key+'.html','웹판 보완 · 2026.09.30',summary))
+        cited[key]=annotate((OUT/'text'/f'{key}.md').read_text(),key)
+        write(key+'.html',reading_page(title,cited[key],key+'.html','웹판 보완 · 2026.09.30',summary))
     write('literature.html',literature())
     searchbody='''<main id="main" class="wrap collection search-page"><p class="eyebrow">SEARCH THE COLLECTION</p><h1>원고와 문헌 검색</h1><p class="lead">장 제목, 본문, 보완 글, 문헌 기록에서 찾습니다.</p><form id="search-form" class="search-form"><label for="search-query">검색어</label><div><input id="search-query" type="search" name="q" placeholder="예: 수관, 좌표, SLAM, 주민참여" required><button type="submit">검색</button></div></form><p id="search-status" role="status" aria-live="polite">단어를 입력해 검색하세요. 검색 결과에서 해당 글로 이동할 수 있습니다.</p><div id="search-results"></div><noscript><p>전체 검색에는 JavaScript가 필요합니다. <a href="index.html#contents">전체 목차</a> 또는 <a href="downloads/web-edition.md">합본</a>에서 내용을 찾을 수 있습니다.</p></noscript></main>'''
     write('search.html',page('원고와 문헌 검색',searchbody,'search.html',active='검색'))
     write('assets/search-index.json',json.dumps(SEARCH,ensure_ascii=False,separators=(',',':')))
     with (OUT/'downloads/literature.csv').open('w',encoding='utf-8-sig',newline='') as f:
-        w=csv.writer(f,lineterminator="\n");w.writerow(['주제','연도','제목','게재처','DOI','요약','활용 관점','주의점'])
-        for p in PAPERS:w.writerow([p.get(k,'') for k in ['category','year','title','venue','doi','summary','use','caution']])
+        w=csv.writer(f,lineterminator="\n");w.writerow(['주제','연도','제목','저자','게재처','DOI','원문 URL','서지 기록 URL','요약','활용 관점','주의점'])
+        for p in PAPERS:w.writerow([p['category'],p.get('year',''),p['title'],'; '.join(p.get('authors',[])),p.get('citation_venue',p.get('venue','')),p.get('doi',''),p.get('source_url',''),p.get('catalog_url',''),p.get('summary',''),p.get('use',''),p.get('caution','')])
     with (OUT/'downloads/field-checklist.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.writer(f,lineterminator="\n");w.writerow(['프로젝트','시험일시','관찰점 ID','관찰 위치','과제','기기·OS·앱 버전','모델 버전','좌표계·표고 기준','관찰 거리(m)','조명·날씨·수관 조건','위치 편차(m)','높이 편차(m)','방향 편차(도)','추적 회복 시간(s)','판정 기준','결과·문제','대안·시점·계절','생장 가정·출처','화면 파일','검토자','결정·후속 조치']);w.writerow(['']*21)
     combined=['# 증강현실과 조경 — 웹 개정판\n\n편집일: 2026-09-30\n\n本文 29개 장, 집필 예정 4개 장. 보완 범위는 편집 기록을 참조하세요.\n']
-    for key in ['editorial','evidence','practice']:combined.append((OUT/'text'/f'{key}.md').read_text())
+    for key in ['editorial','evidence','practice']:combined.append(cited[key])
     for c in CHAPTERS:
-        content=(OUT/'text'/f'ch{c["n"]:02}.md').read_text()
+        content=cited[f'ch{c["n"]:02}']
         if c['corrections']:content=content.split('\n',1)[0]+'\n\n> 웹판 보완: '+' '.join(c['corrections'])+'\n\n'+content.split('\n',1)[1]
         combined.append(content)
     combined_text='\n\n---\n\n'.join(combined).replace('本文','본문')
     combined_text=re.sub(r'\]\(((?:chapters/|downloads/|text/)[^)]+|(?:index|editorial|practice|evidence|v1)\.html[^)]*|manuscript-v1\.md)\)',lambda m:']('+BASE+m[1]+')',combined_text)
     write('downloads/web-edition.md',combined_text)
+    write('downloads/citation-coverage.json',json.dumps(REPORT,ensure_ascii=False,indent=2)+'\n')
     print(f'Built 39 HTML pages, {len(SEARCH)} search documents, {len(PAPERS)} literature records')
 
 if __name__=='__main__':main()

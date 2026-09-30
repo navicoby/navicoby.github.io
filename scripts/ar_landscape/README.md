@@ -10,6 +10,9 @@ their hashes and source filenames are in `downloads/source-manifest.json`.
 ## Update
 
 1. Edit chapter Markdown, the three editorial articles, or `text/chapters.json`.
+   Keep `text/citation-data.json` section headings and explicit source mappings
+   in sync. The builder refuses unmatched sections or ambiguous paragraph
+   excerpts. Add real bibliographic records, never inferred DOI/author values.
 2. Install the pinned build dependencies in an isolated environment:
    `python3 -m pip install -r scripts/ar_landscape/requirements.txt`.
 3. Run `python3 scripts/ar_landscape/build.py`.
@@ -31,6 +34,13 @@ Obsidian manuscript. Chapters 26, 28 and 33 have scoped editorial corrections;
 the website records these corrections. The 140 literature entries are source
 records, not a deduplicated count of independent studies. The website does not
 claim that every original factual assertion has been reverified.
+
+`citations.py` adds chapter-local numbered endnotes to all 436 chapter sections,
+with additional paragraph/table and row mappings. It preserves unique anchors
+in the combined export. `downloads/chapters/` contains the cited Markdown;
+`text/ch*.md` remains the editable prose. `citation-coverage.json` measures link
+coverage, not factual verification. Literature metadata uses title-matched
+Crossref records where available and original repository/catalog URLs otherwise.
 
 Validation covers local links and fragments, nontruncated chapter exports,
 unique headings, search targets, record counts, original file hashes and local

@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>AI가 바꾼 3차원 · 증강현실과 조경</title><meta name="description" content="증강현실의 개념과 기술에서 조경 실무·식생·현장 검증까지. 옵시디언 원고 29개 장과 140개 문헌 기록을 엮은 연구 웹판."><link rel="canonical" href="https://spatialflare.com/augmented-reality-landscape/chapters/ch22.html"><meta property="og:type" content="article"><meta property="og:title" content="AI가 바꾼 3차원 · 증강현실과 조경"><meta property="og:description" content="증강현실의 개념과 기술에서 조경 실무·식생·현장 검증까지. 옵시디언 원고 29개 장과 140개 문헌 기록을 엮은 연구 웹판."><meta property="og:url" content="https://spatialflare.com/augmented-reality-landscape/chapters/ch22.html"><link rel="stylesheet" href="../assets/site.css"><script defer src="../assets/site.js"></script></head>
-<body><a class="skip" href="#main">본문으로 건너뛰기</a><div id="progress" aria-hidden="true"></div><header class="top"><div class="top-inner"><a class="brand" href="../index.html"><span class="brand-icon">S/F</span><span>SpatialFlare <small>RESEARCH LIBRARY</small></span></a><nav aria-label="주요 메뉴"><a href="../index.html#contents">전체 목차</a><a href="../practice.html">현장 가이드</a><a href="../evidence.html">사례·근거</a><a href="../literature.html">문헌</a><a href="../search.html">검색</a></nav></div></header><main id="main" class="wrap reading"><div class="breadcrumb"><a href="../index.html">연구 라이브러리</a> / 제5부 · 플랫폼과 사회 / 제22장</div><div class="reader-grid"><aside class="reader-sidebar"><details open><summary>이 글의 목차</summary><nav aria-label="절 목차"><a href="#section-1">22.1 3차원을 만드는 일에서 배우는 일로</a><a href="#section-2">22.2 빛의 장을 함수로 적다</a><a href="#section-3">22.3 좌표를 화음으로 바꾸다</a><a href="#section-4">22.4 계산 청구서</a><a href="#section-5">22.5 표를 붙여 가속하다</a><a href="#section-6">22.6 신경망을 버리고 알갱이를 뿌리다</a><a href="#section-7">22.7 스스로 개수를 정하고 타일로 그린다</a><a href="#section-8">22.8 숫자로 보는 전환점</a><a href="#section-9">22.9 용량이라는 대가</a><a href="#section-10">22.10 지도와 위치를 동시에</a><a href="#section-11">22.11 카메라를 모르고도</a><a href="#section-12">22.12 한 장의 사진에서 깊이를</a><a href="#section-13">22.13 가상이 현실 뒤로 숨는 법</a><a href="#section-14">22.14 촬영하지 않은 것을 만들어 내다</a><a href="#section-15">22.15 그래서 무엇이 얼마나 싸졌나</a></nav></details><a class="back-link" href="../index.html#contents">← 전체 6부 목차</a></aside><article><header class="article-head"><p class="eyebrow">제5부 · 플랫폼과 사회 / 제22장</p><h1>AI가 바꾼 3차원</h1><p class="lead">NeRF와 가우시안 스플래팅 등 3차원 재구성과 현장 AR의 연결 지점을 살핍니다.</p><p class="source-note">옵시디언 원고 기반 · 웹판 편집 2026.09.30 · <a href="../text/ch22.md">이 장의 Markdown</a> · <a href="../editorial.html">편집 범위</a></p><p class="source-note">이 본문은 조사 당시의 연구 원고입니다. 제품 상태·가격·수치와 해석은 출처·조사 범위와 함께 읽어 주세요.</p></header><div class="prose"><h2 id="section-1">22.1 3차원을 만드는 일에서 배우는 일로</h2>
+<body><a class="skip" href="#main">본문으로 건너뛰기</a><div id="progress" aria-hidden="true"></div><header class="top"><div class="top-inner"><a class="brand" href="../index.html"><span class="brand-icon">S/F</span><span>SpatialFlare <small>RESEARCH LIBRARY</small></span></a><nav aria-label="주요 메뉴"><a href="../index.html#contents">전체 목차</a><a href="../practice.html">현장 가이드</a><a href="../evidence.html">사례·근거</a><a href="../literature.html">문헌</a><a href="../search.html">검색</a></nav></div></header><main id="main" class="wrap reading"><div class="breadcrumb"><a href="../index.html">연구 라이브러리</a> / 제5부 · 플랫폼과 사회 / 제22장</div><div class="reader-grid"><aside class="reader-sidebar"><details open><summary>이 글의 목차</summary><nav aria-label="절 목차"><a href="#section-1">22.1 3차원을 만드는 일에서 배우는 일로</a><a href="#section-2">22.2 빛의 장을 함수로 적다</a><a href="#section-3">22.3 좌표를 화음으로 바꾸다</a><a href="#section-4">22.4 계산 청구서</a><a href="#section-5">22.5 표를 붙여 가속하다</a><a href="#section-6">22.6 신경망을 버리고 알갱이를 뿌리다</a><a href="#section-7">22.7 스스로 개수를 정하고 타일로 그린다</a><a href="#section-8">22.8 숫자로 보는 전환점</a><a href="#section-9">22.9 용량이라는 대가</a><a href="#section-10">22.10 지도와 위치를 동시에</a><a href="#section-11">22.11 카메라를 모르고도</a><a href="#section-12">22.12 한 장의 사진에서 깊이를</a><a href="#section-13">22.13 가상이 현실 뒤로 숨는 법</a><a href="#section-14">22.14 촬영하지 않은 것을 만들어 내다</a><a href="#section-15">22.15 그래서 무엇이 얼마나 싸졌나</a><a href="#section-16">참고문헌</a></nav></details><a class="back-link" href="../index.html#contents">← 전체 6부 목차</a></aside><article><header class="article-head"><p class="eyebrow">제5부 · 플랫폼과 사회 / 제22장</p><h1>AI가 바꾼 3차원</h1><p class="lead">NeRF와 가우시안 스플래팅 등 3차원 재구성과 현장 AR의 연결 지점을 살핍니다.</p><p class="source-note">옵시디언 원고 기반 · 웹판 편집 2026.09.30 · <a href="../downloads/chapters/ch22.md">이 장의 Markdown</a> · <a href="../editorial.html">편집 범위</a></p><p class="source-note">이 본문은 조사 당시의 연구 원고입니다. 제품 상태·가격·수치와 해석은 출처·조사 범위와 함께 읽어 주세요.</p><p class="source-note citation-nav"><a href="#references-ch22">참고문헌 16개 ↓</a> · 본문 [번호]로 출처 확인</p></header><div class="prose"><h2 id="section-1">22.1 3차원을 만드는 일에서 배우는 일로</h2>
 <p>현실의 공간을 디지털로 옮기는 일은 오랫동안 조립 작업이었다. 사진을 여러 장 찍는다. 같은 지점이 어느 사진의 어느 픽셀에 찍혔는지 대응을 찾는다. 그 대응에서 카메라가 어디 있었는지를 역산한다. 카메라 위치를 알면 삼각측량으로 점의 3차원 좌표가 나온다. 점이 충분히 모이면 삼각형 면으로 잇는다. 마지막으로 그 면 위에 사진을 되붙여 색을 입힌다.</p>
 <p>네 단계가 순차적이다. 앞 단계의 오차는 뒤 단계에서 회복되지 않는다. 카메라 위치가 조금 틀리면 점군이 흐트러진다. 점군이 흐트러지면 면이 울퉁불퉁해진다. 면이 울퉁불퉁하면 텍스처가 늘어진다. 그래서 이 파이프라인은 항상 사람의 손을 요구했다. 실패한 사진을 골라내고, 점군을 잘라내고, 면을 다듬고, 이음선을 고치는 작업이 결과물 한 건마다 붙었다.</p>
 <p>무너지는 자리도 정해져 있었다. 유리, 물, 금속, 나뭇잎, 머리카락. 목록이 잡다해 보이지만 공통점이 하나다. 이들은 삼각형 면의 집합으로 정의되지 않는다. 유리와 금속은 보는 방향에 따라 색이 바뀐다. 잎과 머리카락은 경계가 면이 아니라 확률에 가깝다. 대응점을 찾는 첫 단계부터 이미 성립하지 않는다. 같은 지점이 두 사진에서 다른 색으로 찍히면 대응을 찾을 방법이 없다.</p>
 <p>세상을 종이접기로 재현하려는 시도였다고 말할 수 있다. 상자와 벽은 잘 접힌다. 안개는 접히지 않는다.</p>
 <p>2020년에 전제가 바뀐다. Mildenhall과 동료들이 발표한 NeRF는 형태를 조립하지 않는다. 대신 함수를 하나 학습한다. 그 함수는 공간의 임의의 점에서 임의의 방향을 볼 때 무엇이 보이는지에 답한다. 입력은 사진 여러 장과 각 사진의 촬영 위치뿐이다. 3차원 모델링도, 깊이 센서도, 메시도 필요하지 않다. 만드는 일이 배우는 일로 바뀐 것이다.</p>
-<p>이 전환 이후 5년 사이에 재구성 시간은 하루 단위에서 분 단위로 내려갔다. 렌더링은 프레임당 30초에서 초당 100프레임 이상으로 올라갔다. 이 장은 그 변화가 어떤 원리로 일어났는지를 따라간다. 그리고 무엇이 아직 비싼 채로 남아 있는지를 정직하게 적는다.</p>
+<p>이 전환 이후 5년 사이에 재구성 시간은 하루 단위에서 분 단위로 내려갔다. 렌더링은 프레임당 30초에서 초당 100프레임 이상으로 올라갔다. 이 장은 그 변화가 어떤 원리로 일어났는지를 따라간다. 그리고 무엇이 아직 비싼 채로 남아 있는지를 정직하게 적는다. <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch22-1" id="cite-ch22-1-1" role="doc-noteref">[1]</a><a aria-label="참고문헌 2" class="citation" href="#ref-ch22-2" id="cite-ch22-2-1" role="doc-noteref">[2]</a><a aria-label="참고문헌 3" class="citation" href="#ref-ch22-3" id="cite-ch22-3-1" role="doc-noteref">[3]</a></sup></p>
 <h2 id="section-2">22.2 빛의 장을 함수로 적다</h2>
 <p>NeRF가 학습하는 함수의 입력과 출력을 먼저 보자. 입력은 두 덩어리다. 공간의 한 점을 나타내는 좌표 세 개, 그리고 그 점을 바라보는 시선 방향이다. 방향은 개념적으로 각도 두 개로 말할 수 있고 논문도 입력을 5차원이라 부른다. 다만 실제 구현은 방향을 길이 1인 데카르트 벡터의 세 성분으로 넣는다. 출력은 두 가지다. 그 점의 밀도, 그리고 그 방향에서 보이는 색이다. 밀도는 빛을 얼마나 막는가를 나타낸다.</p>
 <p>여기에 설계상의 비대칭이 하나 숨어 있다. 밀도는 방향과 무관하게 정해지고 색만 방향에 따라 달라진다. 이유가 있다. 물체의 형태는 어디서 보든 같아야 한다. 반면 금속의 하이라이트나 유리의 반사는 보는 위치에 따라 이동한다. 밀도를 방향에 의존시키면 시점을 옮길 때마다 형태 자체가 흔들린다. 색만 방향에 열어 두면 형태의 일관성과 방향 의존 반사를 동시에 얻는다. 종이접기가 못 하던 일이 이 비대칭에서 풀린다.</p>
@@ -45,6 +45,8 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch22-1" id="cite-ch22-1-2" role="doc-noteref">[1]</a></sup> (본문 기준으로 재구성)</p>
+<p><sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch22-1" id="cite-ch22-1-3" role="doc-noteref">[1]</a></sup></p>
 <h2 id="section-3">22.3 좌표를 화음으로 바꾸다</h2>
 <p>좌표 세 개를 그대로 신경망에 넣으면 결과가 흐릿하게 나온다. 같은 신경망, 같은 데이터, 같은 학습 시간인데도 경계가 뭉개진다. 원인은 신경망 자체의 성질에 있다. 일반적인 신경망은 입력에 대해 완만하게 변하는 함수를 먼저, 훨씬 쉽게 학습한다. 급격히 변하는 함수는 훨씬 나중에, 훨씬 어렵게 배운다. 스펙트럴 바이어스라 부르는 편향이다. Tancik과 동료들이 2020년에 이 성질을 푸리에 특징이라는 틀로 정리했다.</p>
 <p>문제를 좌표 쪽에서 보면 이렇다. 3.51미터와 3.52미터는 숫자로 거의 같다. 신경망 입장에서 두 입력은 거의 구별되지 않는다. 그런데 벽과 창틀의 경계는 그 1센티미터 사이에 있다. 입력이 구별되지 않으면 출력도 구별될 수 없다.</p>
@@ -85,7 +87,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>이 장치 하나의 유무가 결과 품질을 눈에 띄게 가른다. 그리고 뒤에 나오는 가속 기법들은 모두 같은 질문의 다른 답이다. 좌표를 어떤 형태로 표현해야 신경망이 적은 계산으로 많은 디테일을 담는가.</p>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 4" class="citation" href="#ref-ch22-4" id="cite-ch22-4-1" role="doc-noteref">[4]</a></sup> (본문 기준으로 재구성)</p>
+<p>이 장치 하나의 유무가 결과 품질을 눈에 띄게 가른다. 그리고 뒤에 나오는 가속 기법들은 모두 같은 질문의 다른 답이다. 좌표를 어떤 형태로 표현해야 신경망이 적은 계산으로 많은 디테일을 담는가. <sup class="citation-group"><a aria-label="참고문헌 4" class="citation" href="#ref-ch22-4" id="cite-ch22-4-2" role="doc-noteref">[4]</a></sup></p>
 <h2 id="section-4">22.4 계산 청구서</h2>
 <p>NeRF의 아름다움은 전부 반복 계산으로 지불된다. 픽셀 하나를 만들려면 신경망을 256번 호출해야 한다. 800×800 이미지는 광선이 64만 개다. 곱하면 1억 6,400만 회다. 논문 부록은 이미지 한 장당 1억 5천만에서 2억 회 사이의 질의가 필요하다고 적는다. 학습은 이 렌더링을 수십만 번 반복하는 일이다.</p>
 <p>손으로 그린 극사실 초상화 같다. 완성작은 사진과 구분이 안 가지만 한 장에 이틀이 걸린다. 증강현실은 초당 60장을 요구하는 매체다.</p>
@@ -125,9 +128,10 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 5" class="citation" href="#ref-ch22-5" id="cite-ch22-5-1" role="doc-noteref">[5]</a></sup> (본문 기준으로 재구성)</p>
 <p>간극의 크기를 계산해 보면 문제의 성격이 드러난다. 30초를 16.7 ms로 나누면 약 1,800배다. 90 Hz 기준인 11.1 ms로 나누면 약 2,700배다. 그것도 렌더링만 그렇다. 장면을 처음 만드는 학습 비용까지 넣으면 간극은 더 벌어진다.</p>
 <p>이 두 숫자가 이후 몇 년의 연구 방향을 정했다. 품질은 이미 증명됐다. 필요한 것은 세 자릿수 이상의 가속이다. 그리고 가속은 두 갈래로 갈렸다. 학습을 줄이는 쪽과 렌더링을 줄이는 쪽이다.</p>
-<p>측정 조건을 기억해 둘 필요가 있다. 프레임당 30초는 V100에서 800×800 합성 장면을 그린 값이다. 뒤에 나올 가속 배수들은 다른 GPU, 다른 해상도, 다른 종류의 장면에서 측정된 것이므로 배수를 그대로 인과로 읽으면 안 된다.</p>
+<p>측정 조건을 기억해 둘 필요가 있다. 프레임당 30초는 V100에서 800×800 합성 장면을 그린 값이다. 뒤에 나올 가속 배수들은 다른 GPU, 다른 해상도, 다른 종류의 장면에서 측정된 것이므로 배수를 그대로 인과로 읽으면 안 된다. <sup class="citation-group"><a aria-label="참고문헌 5" class="citation" href="#ref-ch22-5" id="cite-ch22-5-2" role="doc-noteref">[5]</a></sup></p>
 <h2 id="section-5">22.5 표를 붙여 가속하다</h2>
 <p>Müller와 동료들이 2022년에 낸 답은 역설적이다. 신경망이 느리면 신경망을 작게 만들고, 정보를 학습 가능한 조회표에 지게 한다.</p>
 <p>공간을 여러 해상도의 격자로 동시에 덮는다. 거친 격자부터 촘촘한 격자까지 여러 겹이다. 어떤 좌표를 질의하면 각 해상도에서 주변 격자점 값을 보간해 가져온다. 모든 해상도의 결과를 이어 붙여 하나의 벡터로 만들고, 그 벡터를 아주 작은 신경망에 통과시킨다. 표현의 무게중심이 신경망에서 표로 옮겨 간 것이다.</p>
@@ -165,6 +169,7 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 2" class="citation" href="#ref-ch22-2" id="cite-ch22-2-2" role="doc-noteref">[2]</a></sup> (본문 기준으로 재구성)</p>
 <p>표를 읽을 때 조심할 지점이 셋 있다. 첫째, 이 시간들은 학습 완료까지의 시간이 아니라 11,000 스텝을 도는 데 걸린 시간이다. 그래서 표를 키운 효과는 시간이 아니라 품질로 나타난다. T를 2의 14제곱에서 2의 19제곱으로 키우면 시간은 1분 48초에서 1분 47초로 사실상 같고 PSNR이 22.61에서 24.58로 오른다. 표를 키우면 학습이 빨라진다는 서술은 비교 축을 잘못 짚은 것이다.</p>
 <p>둘째, 논문 캡션은 주파수 인코딩보다 8배 이상 빠르다고 적지만 같은 캡션의 실측값으로는 765초 대 108초, 약 7.1배다. 셋째, 주파수 인코딩 쪽 438,000개는 전부 신경망 파라미터이고 해시 쪽은 신경망 1만에 인코딩 49만 4천이다. 파라미터 수가 같다는 말은 총량의 근사일 뿐 동종 비교가 아니다.</p>
 <p>그래도 방향은 분명하다. 학습 시간이 수 일에서 수 초 단위로 내려갔다. 논문 자신의 표현도 몇 초 안에 학습한다는 것이다. 흔히 인용되는 5분 이내라는 수치는 논문의 성능 주장이 아니라 벤치마크 표의 학습 예산 열 이름이다.</p>
@@ -195,7 +200,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>장면에 따라 프레임당 58 ms에서 358 ms다. 90 Hz 예산인 11.1 ms와 비교하면 아직 다섯 배에서 서른두 배다. 수십 밀리초라는 요약은 가장 유리한 데이터셋만 본 것이다. 학습 병목은 이틀에서 커피 한 잔으로 바뀌었다. 렌더링 병목은 그대로 남았다.</p>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 2" class="citation" href="#ref-ch22-2" id="cite-ch22-2-3" role="doc-noteref">[2]</a></sup> (본문 기준으로 재구성)</p>
+<p>장면에 따라 프레임당 58 ms에서 358 ms다. 90 Hz 예산인 11.1 ms와 비교하면 아직 다섯 배에서 서른두 배다. 수십 밀리초라는 요약은 가장 유리한 데이터셋만 본 것이다. 학습 병목은 이틀에서 커피 한 잔으로 바뀌었다. 렌더링 병목은 그대로 남았다. <sup class="citation-group"><a aria-label="참고문헌 2" class="citation" href="#ref-ch22-2" id="cite-ch22-2-4" role="doc-noteref">[2]</a></sup></p>
 <h2 id="section-6">22.6 신경망을 버리고 알갱이를 뿌리다</h2>
 <p>Kerbl과 동료들이 2023년에 낸 답은 방향을 완전히 바꾼다. 장면을 함수로 두고 광선마다 샘플링하는 구조 자체를 버린다. 대신 반투명한 3차원 타원체 수백만 개를 공간에 배치한다.</p>
 <p>각 타원체는 가우시안이다. 중심에서 멀어질수록 불투명도가 부드럽게 떨어진다. 모양은 이방성이다. 방향에 따라 늘어난 타원이므로 평평한 벽은 납작한 타원으로, 가늘고 긴 구조는 길쭉한 타원으로 맞출 수 있다. 색은 하나의 RGB 값이 아니라 구면조화 계수로 표현한다. 보는 방향에 따라 색이 달라지는 성질이 여기에 담긴다.</p>
@@ -238,7 +244,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>전형적인 장면이 가우시안 100만에서 500만 개를 쓴다. 500만 개면 실수가 2억 9,500만 개다. 이 숫자가 뒤에서 용량 문제로 돌아온다.</p>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 3" class="citation" href="#ref-ch22-3" id="cite-ch22-3-2" role="doc-noteref">[3]</a></sup> (본문 기준으로 재구성)</p>
+<p>전형적인 장면이 가우시안 100만에서 500만 개를 쓴다. 500만 개면 실수가 2억 9,500만 개다. 이 숫자가 뒤에서 용량 문제로 돌아온다. <sup class="citation-group"><a aria-label="참고문헌 3" class="citation" href="#ref-ch22-3" id="cite-ch22-3-3" role="doc-noteref">[3]</a></sup></p>
 <h2 id="section-7">22.7 스스로 개수를 정하고 타일로 그린다</h2>
 <p>알갱이를 뿌린다는 발상만으로는 작동하지 않는다. 몇 개를 어디에 둘지 사람이 정할 수 없기 때문이다. 장면마다 복잡한 부위와 밋밋한 부위가 다르다.</p>
 <p>3DGS는 최적화 도중 개수를 스스로 조절한다. 먼저 위치 그래디언트가 큰 가우시안을 찾는다. 이것은 자기가 맡은 영역을 제대로 못 그리고 있다는 신호다. 그 가우시안이 작으면 복제해 빈 곳을 메운다. 지나치게 크면 둘로 쪼개 세부를 담게 한다. 반대로 불투명도가 임계값 아래로 떨어진 가우시안은 제거한다. 주기적으로 모든 불투명도를 0 근처로 리셋하는 장치도 있다. 카메라 근처에 쓸모없이 떠 있는 얼룩을 걸러내기 위한 것이다.</p>
@@ -279,7 +286,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>7,000 반복으로 이미 실용 품질이 나온다는 점이 실무에서 중요하다. 완전 학습의 6분의 1 정도 시간으로 결과를 먼저 확인하고, 쓸 만하다고 판단한 촬영만 끝까지 돌릴 수 있다.</p>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 6" class="citation" href="#ref-ch22-6" id="cite-ch22-6-1" role="doc-noteref">[6]</a></sup> (본문 기준으로 재구성)</p>
+<p>7,000 반복으로 이미 실용 품질이 나온다는 점이 실무에서 중요하다. 완전 학습의 6분의 1 정도 시간으로 결과를 먼저 확인하고, 쓸 만하다고 판단한 촬영만 끝까지 돌릴 수 있다. <sup class="citation-group"><a aria-label="참고문헌 6" class="citation" href="#ref-ch22-6" id="cite-ch22-6-2" role="doc-noteref">[6]</a></sup></p>
 <h2 id="section-8">22.8 숫자로 보는 전환점</h2>
 <p>기술 세대의 전환은 같은 데이터에서 잰 숫자로 확인해야 한다. 표준 시험대는 Barron과 동료들이 2022년에 제시한 Mip-NeRF 360 데이터셋이다. 카메라가 대상 주위를 360도 도는 실내·실외 장면들이고, 배경이 무한히 멀고 중심 대상은 가깝다. 이 규모 불일치가 초기 NeRF가 가장 취약했던 조건이다. Mip-NeRF 360 자체는 비선형 장면 파라미터화와 왜곡 정칙화로 이 문제를 풀어 품질 기준선을 세웠다. 이전 세대인 mip-NeRF 대비 평균제곱오차를 57% 줄였다. 대가는 학습 시간이었다.</p>
 <p>같은 코스에서 잰 랩타임 표를 읽는 일과 같다. 한 대는 완주에 며칠이 걸리지만 짐이 가볍다. 한 대는 40분에 끝내고 초당 130바퀴를 돌지만 트렁크가 0.7기가바이트다.</p>
@@ -331,6 +339,7 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 7" class="citation" href="#ref-ch22-7" id="cite-ch22-7-1" role="doc-noteref">[7]</a></sup> (본문 기준으로 재구성)</p>
 <p>학습 시간과 렌더링과 용량은 Mip-NeRF 360 데이터셋 기준이다. Plenoxels 용량만 세 데이터셋의 범위다. 표를 읽을 때 조건을 세 가지 붙여야 한다.</p>
 <p>첫째, 이 측정은 A6000 한 장 기준이되 Mip-NeRF 360 방식만 예외다. 48시간은 A6000의 벽시계 시간이 아니다. A100 4장으로 12시간 돌린 것을 한 장 기준으로 환산한 GPU·시간이다. A100이 A6000보다 빠르다는 단서까지 논문이 붙여 놓았다. 시간과 GPU·시간은 다른 단위다.</p>
 <p>둘째, Mip-NeRF 360 원 논문 자신이 보고하는 학습 비용은 이와 다르다. 32코어 TPU v2에서 250,000 반복을 돌려 장면당 6.2시간에서 8.8시간이다. 48시간을 Mip-NeRF 360의 학습 시간으로 쓰면 하드웨어와 단위가 함께 바뀐다.</p>
@@ -378,8 +387,9 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 7" class="citation" href="#ref-ch22-7" id="cite-ch22-7-2" role="doc-noteref">[7]</a></sup> (본문 기준으로 재구성)</p>
 <p>30,000 반복 모델은 27분에서 42분 사이에 학습되고 134에서 154 FPS로 렌더링된다. 7,000 반복 모델은 4분 35초에서 6분 55초에 학습되고 160에서 197 FPS로 렌더링된다. 실촬영 장면의 최고값은 197 FPS다. 합성 장면에서는 180에서 300 FPS까지 나온다. 두 학습 길이의 값을 하나의 범위로 묶으면 안 된다. 41분에서 45분이라는 서술이 돌아다니지만 45분에 해당하는 측정값은 어느 데이터셋에도 없다.</p>
-<p>트레이드오프의 구조는 이렇게 정리된다. Mip-NeRF 360은 최고 품질, 최악 속도, 최소 용량이다. Instant-NGP는 최고 학습속도, 중간 품질, 소용량이다. 3DGS는 최고 속도, 최고급 품질, 최악 용량이다. 3DGS가 지불한 대가는 계산이 아니라 저장 공간이다.</p>
+<p>트레이드오프의 구조는 이렇게 정리된다. Mip-NeRF 360은 최고 품질, 최악 속도, 최소 용량이다. Instant-NGP는 최고 학습속도, 중간 품질, 소용량이다. 3DGS는 최고 속도, 최고급 품질, 최악 용량이다. 3DGS가 지불한 대가는 계산이 아니라 저장 공간이다. <sup class="citation-group"><a aria-label="참고문헌 7" class="citation" href="#ref-ch22-7" id="cite-ch22-7-3" role="doc-noteref">[7]</a></sup></p>
 <h2 id="section-9">22.9 용량이라는 대가</h2>
 <p>빠른 이유가 곧 무거운 이유다. 장면 하나가 수백만 개의 독립적인 가우시안이고 각각이 실수 59개를 들고 있다. 압축 없는 모델은 7,000 반복에서 270 MB에서 523 MB, 30,000 반복에서 411 MB에서 734 MB다. 참고로 같은 표에서 복셀 기반인 Plenoxels는 2.1 GB에서 2.7 GB다. 3DGS는 기가바이트급은 아니다. 다만 8.6 MB인 Mip-NeRF 360이나 13 MB인 Instant-NGP와 비교하면 두 자릿수 차이다.</p>
 <p>배포 경로를 생각하면 이 차이가 곧 이탈률이다. 휴대폰이나 헤드셋에 내려받아 쓰는 형태라면 500 MB짜리 장면은 아무도 받지 않는다. 클라우드에서 스트리밍한다면 용량은 대역폭 비용으로 바뀐다. 어느 쪽이든 압축은 학술적 곁가지가 아니라 제품이 되기 위한 마지막 관문이다.</p>
@@ -414,7 +424,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>압축이 렌더링 속도까지 올린다는 점이 흥미롭다. 가우시안 수가 줄면 투영과 정렬과 합성의 양이 함께 줄기 때문이다. 다만 논문이 보고하는 것은 평균 압축률과 FPS 변화다. 원본 용량을 15로 나누어 압축 후 절대 용량을 짐작하는 계산은 논문이 제시한 값이 아니다.</p>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 8" class="citation" href="#ref-ch22-8" id="cite-ch22-8-1" role="doc-noteref">[8]</a></sup> (본문 기준으로 재구성)</p>
+<p>압축이 렌더링 속도까지 올린다는 점이 흥미롭다. 가우시안 수가 줄면 투영과 정렬과 합성의 양이 함께 줄기 때문이다. 다만 논문이 보고하는 것은 평균 압축률과 FPS 변화다. 원본 용량을 15로 나누어 압축 후 절대 용량을 짐작하는 계산은 논문이 제시한 값이 아니다. <sup class="citation-group"><a aria-label="참고문헌 8" class="citation" href="#ref-ch22-8" id="cite-ch22-8-2" role="doc-noteref">[8]</a></sup></p>
 <h2 id="section-10">22.10 지도와 위치를 동시에</h2>
 <p>SLAM은 카메라가 두 가지를 동시에 푸는 문제다. 내가 지금 어디 있는가, 그리고 주변이 어떻게 생겼는가. 전자를 추적, 후자를 지도작성이라 한다. 둘은 서로를 필요로 한다. 위치를 알아야 관측을 지도에 올릴 수 있고, 지도가 있어야 위치를 맞출 수 있다.</p>
 <p>전통적 SLAM의 지도는 두 종류였다. 성긴 특징점, 또는 부호거리장 복셀이다. 특징점 지도는 너무 듬성하다. 위치추정에는 충분하지만 보고 쓸 수 있는 장면이 아니다. 복셀 지도는 메모리를 많이 먹으면서도 관측하지 않은 영역을 빈 채로 남긴다.</p>
@@ -457,7 +468,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>MonoGS는 깊이 센서 없이 단안 RGB만으로 같은 일을 해낸다. 3DGS를 유일한 표현으로 쓰고 SfM 초기화도 요구하지 않으며, 투명 물체와 미세 구조까지 복원한다. 다만 3 FPS다. 프레임당 약 333 ms다. 90 Hz 예산인 11.1 ms의 서른 배다. 지도가 사진 품질이 되는 방향은 분명하지만, 이 수치는 아직 제품이 아니다. 그 간극이 현재 이 분야의 최전선이다.</p>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 9" class="citation" href="#ref-ch22-9" id="cite-ch22-9-1" role="doc-noteref">[9]</a></sup> (본문 기준으로 재구성)</p>
+<p>MonoGS는 깊이 센서 없이 단안 RGB만으로 같은 일을 해낸다. 3DGS를 유일한 표현으로 쓰고 SfM 초기화도 요구하지 않으며, 투명 물체와 미세 구조까지 복원한다. 다만 3 FPS다. 프레임당 약 333 ms다. 90 Hz 예산인 11.1 ms의 서른 배다. 지도가 사진 품질이 되는 방향은 분명하지만, 이 수치는 아직 제품이 아니다. 그 간극이 현재 이 분야의 최전선이다. <sup class="citation-group"><a aria-label="참고문헌 9" class="citation" href="#ref-ch22-9" id="cite-ch22-9-2" role="doc-noteref">[9]</a></sup></p>
 <h2 id="section-11">22.11 카메라를 모르고도</h2>
 <p>지금까지의 모든 재구성에는 숨은 전제가 있었다. 각 사진을 어디서 어떤 렌즈로 찍었는지를 먼저 알아야 한다는 것이다. 카메라의 위치와 방향, 그리고 초점거리 같은 내부 파라미터다. 보통 COLMAP 같은 SfM 도구로 얻는다.</p>
 <p>그런데 이 단계는 느리고 잘 실패한다. 사진 수가 적으면 안 된다. 시점 차이가 크면 안 된다. 질감 없는 흰 벽이 많으면 대응점을 찾을 수 없어 안 된다. 유리와 반사면이 많으면 잘못된 대응을 만들어 더 나쁘다. 그리고 SfM이 실패하면 그 촬영은 통째로 버려진다. 현장에 다시 가야 한다.</p>
@@ -465,7 +477,7 @@
 <p>핵심 설계는 출력 좌표계다. 두 포인트맵을 모두 첫 번째 카메라의 좌표계로 내놓게 한다. 그러면 두 사진 사이의 상대 자세가 두 포인트맵의 대응에서 자동으로 따라 나온다. 투영 기하학의 제약을 방정식으로 푸는 대신 학습으로 흡수한 것이다. 사진이 세 장 이상이면 쌍별 결과를 전역 정렬로 묶는다.</p>
 <p>지도 제작자에게 사진 두 장을 건네며 이걸 어디서 찍었는지는 나도 모른다고 말하는 것과 같다. 그런데 이 제작자는 사진만 보고 두 촬영 지점의 관계를 알아맞히고 입체 지도를 내놓는다. 삼각측량을 배운 것이 아니라 수많은 장면을 봐서 감이 생긴 것이다.</p>
 <p>논문이 성능을 주장하는 과제는 셋이다. 단안 깊이 추정, 다시점 깊이 추정, 상대 자세 추정이다. 그 외에 픽셀 대응, 카메라 내부 파라미터 복원, 절대 자세 추정은 본문에서 파생 활용으로 소개된다. 하나의 네트워크가 다섯 개 이상의 고전 기하 과제를 통합한다는 식의 집계는 논문에 없다. 벤치마크 수와 응용 수를 섞은 계산이다.</p>
-<p>구조는 특별하지 않다. 표준 트랜스포머다. ViT 인코더와 교차 주의 디코더를 쓰고 사전학습 가중치를 그대로 활용한다. 새로운 기하 연산을 발명한 것이 아니라, 기하 문제를 회귀 문제로 재정의한 것이 기여다. 입력 2장부터 동작하고 카메라 파라미터 사전 지식이 필요 없다는 것이 실무적 의미다. 촬영을 잘해야 한다는 진입장벽이 낮아진다.</p>
+<p>구조는 특별하지 않다. 표준 트랜스포머다. ViT 인코더와 교차 주의 디코더를 쓰고 사전학습 가중치를 그대로 활용한다. 새로운 기하 연산을 발명한 것이 아니라, 기하 문제를 회귀 문제로 재정의한 것이 기여다. 입력 2장부터 동작하고 카메라 파라미터 사전 지식이 필요 없다는 것이 실무적 의미다. 촬영을 잘해야 한다는 진입장벽이 낮아진다. <sup class="citation-group"><a aria-label="참고문헌 10" class="citation" href="#ref-ch22-10" id="cite-ch22-10-1" role="doc-noteref">[10]</a></sup></p>
 <h2 id="section-12">22.12 한 장의 사진에서 깊이를</h2>
 <p>사람은 한 눈을 감아도 어느 것이 가까운지 안다. 단안 깊이 추정은 그 능력을 학습으로 재현한다. 문제는 원리가 아니라 데이터다.</p>
 <p>깊이 정답은 출처마다 성격이 다르다. 실내 RGB-D 스캔, 실외 라이다, 스테레오 영화, 웹 사진에서 SfM으로 뽑은 깊이가 모두 후보다. 그런데 단위가 다르다. 어떤 것은 미터이고 어떤 것은 상대값이다. 원점도 다르다. 어떤 것은 깊이이고 어떤 것은 역깊이다. 정확도도 다르다. 그냥 합쳐 학습시키면 서로 충돌해 망가진다.</p>
@@ -513,8 +525,9 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 11" class="citation" href="#ref-ch22-11" id="cite-ch22-11-1" role="doc-noteref">[11]</a><a aria-label="참고문헌 12" class="citation" href="#ref-ch22-12" id="cite-ch22-12-1" role="doc-noteref">[12]</a><a aria-label="참고문헌 13" class="citation" href="#ref-ch22-13" id="cite-ch22-13-1" role="doc-noteref">[13]</a></sup> (본문 기준으로 재구성)</p>
 <p>해상도 표기에 단위 함정이 하나 있다. 1536×1536은 2,359,296화소, 약 236만 화소다. 논문의 2.25 메가픽셀이라는 표현은 1 메가픽셀을 2의 20제곱으로 세는 이진 기준이다. 이를 십진으로 옮겨 225만 화소라고 쓰면 실제보다 약 5% 낮아진다.</p>
-<p>시간 표기에도 조건이 붙는다. 0.3초는 V100 기준이다. NeRF의 1~2일과 프레임당 30초도 같은 V100에서 잰 값이다. 두 결과를 세대 차이로 대비시킬 때 하드웨어가 같다는 사실을 빼면 안 된다. 바뀐 것은 GPU가 아니라 방법이다.</p>
+<p>시간 표기에도 조건이 붙는다. 0.3초는 V100 기준이다. NeRF의 1~2일과 프레임당 30초도 같은 V100에서 잰 값이다. 두 결과를 세대 차이로 대비시킬 때 하드웨어가 같다는 사실을 빼면 안 된다. 바뀐 것은 GPU가 아니라 방법이다. <sup class="citation-group"><a aria-label="참고문헌 11" class="citation" href="#ref-ch22-11" id="cite-ch22-11-2" role="doc-noteref">[11]</a><a aria-label="참고문헌 12" class="citation" href="#ref-ch22-12" id="cite-ch22-12-2" role="doc-noteref">[12]</a><a aria-label="참고문헌 13" class="citation" href="#ref-ch22-13" id="cite-ch22-13-2" role="doc-noteref">[13]</a></sup></p>
 <h2 id="section-13">22.13 가상이 현실 뒤로 숨는 법</h2>
 <p>증강현실이 합성이 아니라 현실로 보이는 결정적 단서는 가림이다. 가상 캐릭터가 실제 기둥 뒤로 사라져야 한다. 손을 뻗으면 손가락이 가상 버튼 앞에 와야 한다. 사용자는 조명이 조금 틀린 것은 넘어간다. 가상 물체가 벽을 뚫고 떠 있으면 즉시 몰입이 깨진다.</p>
 <p>첫 번째 갈래는 깊이다. ARCore의 깊이 API는 전용 센서 없이 움직임으로부터의 깊이를 쓴다. 사용자가 기기를 움직이는 동안 서로 다른 각도에서 찍힌 프레임들을 비교해 픽셀마다 시차를 재고 거리로 환산한다. 스테레오 카메라 두 대를 시간으로 대체한 셈이다. 그래서 이 경로는 사용자가 움직이기 전에는 깊이를 내놓지 못한다. 특징이 없는 흰 벽에서도 부정확하다. 다만 이 조건은 움직임 기반 경로에 한정된다. ToF 센서가 있는 기기에서는 가용한 모든 소스를 자동으로 병합하므로 카메라가 정지해 있어도 깊이가 나온다.</p>
@@ -544,10 +557,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 14" class="citation" href="#ref-ch22-14" id="cite-ch22-14-1" role="doc-noteref">[14]</a></sup> (본문 기준으로 재구성)</p>
 <p>두 번째 갈래는 의미분할이다. 깊이맵만으로는 경계가 흐려 머리카락 같은 미세 구조에서 반드시 실패한다. 이 픽셀은 사람이다라는 의미 정보는 깊이와 독립적인 단서를 준다. Kirillov와 동료들의 Segment Anything 같은 프롬프트 기반 분할 기초 모델은 이미지 1,100만 장에 붙인 10억 개 이상의 마스크로 학습했고, 제로샷 성능이 지도학습 기법과 대등하거나 우수하다. 학습 때 보지 못한 물체까지 잘라 내므로 임의의 장면에서 마스크를 즉석에서 얻을 수 있다.</p>
 <p>두 갈래가 왜 서로를 필요로 하는지는 해상도에서도 드러난다. 깊이맵은 보통 컬러 영상보다 낮은 해상도로 계산된다. 계산량을 줄이기 위한 선택이다. 그래서 깊이맵을 그대로 확대해 쓰면 경계에 계단이 생기고, 가상 물체의 윤곽이 실제 물체의 윤곽과 한두 픽셀씩 어긋난다. 정지 화면에서는 눈에 잘 안 띈다. 움직이면 그 어긋남이 떨린다. 사람의 시각은 정지한 오차보다 움직이는 오차에 훨씬 민감하다.</p>
 <p>무대에서 배우와 영사된 배경이 자연스럽게 겹치게 하는 일과 같다. 하나는 누가 앞에 서 있나를 거리로 재는 방식이다. 다른 하나는 이 실루엣은 사람이다를 알아보고 오려 내는 방식이다. 거리만 재면 머리카락 끝에서 티가 난다. 오려 내기만 하면 앞뒤가 뒤바뀐다.</p>
-<p>그래서 실무에서는 둘을 결합한다. 깊이로 대략의 앞뒤를 정하고 의미 마스크로 경계를 다듬는다. 그래도 남는 문제가 있다. 반투명한 것이다. 유리컵이나 얇은 커튼은 앞에 있으면서 뒤를 보여 준다. 앞이냐 뒤냐의 이진 판정으로는 표현되지 않는다. 가림은 가장 먼저 눈에 띄고 가장 늦게까지 안 풀린 문제다.</p>
+<p>그래서 실무에서는 둘을 결합한다. 깊이로 대략의 앞뒤를 정하고 의미 마스크로 경계를 다듬는다. 그래도 남는 문제가 있다. 반투명한 것이다. 유리컵이나 얇은 커튼은 앞에 있으면서 뒤를 보여 준다. 앞이냐 뒤냐의 이진 판정으로는 표현되지 않는다. 가림은 가장 먼저 눈에 띄고 가장 늦게까지 안 풀린 문제다. <sup class="citation-group"><a aria-label="참고문헌 14" class="citation" href="#ref-ch22-14" id="cite-ch22-14-2" role="doc-noteref">[14]</a></sup></p>
 <h2 id="section-14">22.14 촬영하지 않은 것을 만들어 내다</h2>
 <p>재구성이 있는 것을 옮기는 일이라면 생성은 없는 것을 만드는 일이다. 3차원 생성의 근본 난점은 데이터다. 텍스트와 이미지를 짝지은 데이터는 수십억 쌍이 있다. 라벨된 3차원 데이터는 그 근처에도 못 간다.</p>
 <p>세 세대의 답이 있었다. 1세대인 DreamFusion은 3차원 데이터를 아예 포기한다. 대신 이미 학습된 2차원 확산 모델을 심판으로 쓴다. 무작위로 초기화한 NeRF를 임의 각도에서 렌더링하고, 이 그림이 해당 텍스트의 그럴듯한 이미지인가를 2차원 모델에게 묻는다. 그 판단을 점수 증류 손실로 NeRF에 역전파한다. 3차원 데이터 없이 3차원이 나온다.</p>
@@ -589,8 +603,9 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 15" class="citation" href="#ref-ch22-15" id="cite-ch22-15-1" role="doc-noteref">[15]</a></sup> (본문 기준으로 재구성)</p>
 <p>생성이 재구성의 빈틈을 메운다. 재구성은 현실에 존재하는 것만 다룰 수 있다. 생성은 존재하지 않는 물체, 설명만 있는 물체를 채운다. 다만 생성물이 그대로 쓸 수 있는 자산인지는 별개 문제다. 위상이 깨끗한가, UV가 붙어 있는가, 스케일이 맞는가, 물리 속성이 정의되어 있는가. 이 질문들은 생성 품질과 무관하게 남는다.</p>
-<p>압축의 한계도 분명하다. 가지치기와 양자화는 이미 만들어진 장면을 줄인다. 처음부터 작게 만드는 것이 아니다. 그래서 학습에 필요한 메모리는 줄지 않는다. 대용량 장면을 다루려면 표현을 바꾸거나 장면을 나누어야 한다.</p>
+<p>압축의 한계도 분명하다. 가지치기와 양자화는 이미 만들어진 장면을 줄인다. 처음부터 작게 만드는 것이 아니다. 그래서 학습에 필요한 메모리는 줄지 않는다. 대용량 장면을 다루려면 표현을 바꾸거나 장면을 나누어야 한다. <sup class="citation-group"><a aria-label="참고문헌 15" class="citation" href="#ref-ch22-15" id="cite-ch22-15-2" role="doc-noteref">[15]</a></sup></p>
 <h2 id="section-15">22.15 그래서 무엇이 얼마나 싸졌나</h2>
 <p>비용 변화를 감상이 아니라 숫자로 정리하면 네 축이 보인다. 계산 시간, 렌더링 속도, 입력 조건, 자산 생산이다.</p>
 <div aria-label="표 — 가로로 스크롤할 수 있습니다" class="table-scroll" role="region" tabindex="0"><table>
@@ -641,6 +656,7 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 16" class="citation" href="#ref-ch22-16" id="cite-ch22-16-1" role="doc-noteref">[16]</a></sup> (본문 기준으로 재구성)</p>
 <p>배수를 계산할 수는 있다. 재구성은 24시간을 6분 55초로 나누면 약 208배, 48시간을 4분 35초로 나누면 약 628배다. 렌더링은 0.033 FPS를 134 FPS와 비교하면 약 4,020배, 197 FPS와 비교하면 약 5,900배다. 다만 두 배수 모두 동일 조건 비교가 아니다. 분모는 V100에서 800×800 합성 장면이고 분자는 A6000에서 데이터셋 원본 해상도의 실촬영 장면이다. 배수의 크기는 방법의 개선과 하드웨어 세대와 측정 조건이 뒤섞인 결과다. 방향은 신뢰할 수 있고 자릿수는 참고치로만 읽어야 한다.</p>
 <p>인쇄술이 필사를 대체했을 때와 비슷하다. 책 한 권을 만드는 비용은 수백 배 떨어졌다. 무엇을 쓸지 정하고 교정을 보는 일의 비용은 그대로였다.</p>
 <p>바뀌지 않은 것도 정직하게 적어야 한다. 첫째 편집 가능성이다. 3DGS 장면에서 이 물체만 옮기기는 메시에서만큼 자명하지 않다. 수백만 개의 알갱이 중 어디부터 어디까지가 그 물체인지가 표현 안에 정의되어 있지 않다. 둘째 재조명이다. 원본 촬영의 그림자와 반사가 표현에 구워져 있다. 새 조명 아래로 옮기면 어색해진다. 셋째 물리다. 충돌 판정과 시뮬레이션은 면과 부피를 전제하는데 반투명 알갱이 집합은 그 전제를 만족하지 않는다. 넷째 품질 검수와 촬영 자체의 인건비다. 이것은 알고리즘이 손댈 수 있는 항목이 아니다.</p>
@@ -669,6 +685,30 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 16" class="citation" href="#ref-ch22-16" id="cite-ch22-16-2" role="doc-noteref">[16]</a></sup> (본문 기준으로 재구성)</p>
 <p>두 결과는 각자의 문제에서 중요한 성취다. 그러나 가림 처리나 실시간 재구성의 완성된 해답으로 배치하려면 예산 초과 배수를 함께 적어야 한다. 한 자릿수가 아니라 스무 배 안팎이다. 경량화와 지연 은닉과 프레임 간 재사용이 그 간극을 메우는 다음 작업이다.</p>
-<p>증강현실이 2020년에 기술 시연이었다가 지금 제품이 될 수 있는 이유는 개별 알고리즘의 우아함이 아니다. 재구성과 렌더링과 자산 생성의 단가가 동시에 수백 배에서 수천 배 떨어졌기 때문이다. 싸진 것은 계산이고, 여전히 비싼 것은 사람이 판단해야 하는 부분이다.</p></div><nav class="pager" aria-label="장 이동"><a href="ch21.html">← 이전 장 <span>문화유산과 건축 — 야외로 나가다</span></a><a href="../index.html#part-5">전체 목차 <span>제5부</span></a><a href="ch23.html">다음 장 → <span>플랫폼과 표준</span></a></nav></article></div></main>
+<p>증강현실이 2020년에 기술 시연이었다가 지금 제품이 될 수 있는 이유는 개별 알고리즘의 우아함이 아니다. 재구성과 렌더링과 자산 생성의 단가가 동시에 수백 배에서 수천 배 떨어졌기 때문이다. 싸진 것은 계산이고, 여전히 비싼 것은 사람이 판단해야 하는 부분이다. <sup class="citation-group"><a aria-label="참고문헌 16" class="citation" href="#ref-ch22-16" id="cite-ch22-16-3" role="doc-noteref">[16]</a></sup></p>
+<section aria-label="참고문헌" class="references" id="references-ch22" role="doc-endnotes">
+<h2 id="section-16">참고문헌</h2>
+<p class="reference-guide">본문의 번호를 누르면 출처로 이동합니다. 절 끝의 번호는 그 절의 사실 자료를, 표 아래의 번호는 표에 사용한 자료를 가리킵니다. 비교·계산·비유와 결론은 필자의 재구성입니다. 한 번호에 함께 사용한 문헌이 둘 이상이면 묶어서 적었습니다.</p>
+<p class="reference-guide">서지정보와 확인 메모는 옵시디언 조사 기록을 바탕으로 복원했습니다. 원 기록의 ‘전문 확인’·‘조회’ 표기는 당시 조사 상태이며 이번 웹판에서 모두 재검증했다는 뜻은 아닙니다. 불완전한 서지사항은 임의로 채우지 않았습니다.</p>
+<ol class="reference-list">
+<li data-source="ai3d-1" id="ref-ch22-1"><span class="reference-number">[1]</span><div>Mildenhall, Srinivasan, Tancik, Barron, Ramamoorthi, Ng, "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis", ECCV 2020 (oral), arXiv:2003.08934 — 초록 및 Sec. 5.3 Implementation details <span class="citation-backs"><a aria-label="참고문헌 1 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-1-1">↩1</a> <a aria-label="참고문헌 1 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-1-2">↩2</a> <a aria-label="참고문헌 1 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch22-1-3">↩3</a></span></div></li>
+<li data-source="ai3d-4" id="ref-ch22-2"><span class="reference-number">[2]</span><div>Müller, Evans, Schied, Keller, "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding", ACM Transactions on Graphics 41(4) (SIGGRAPH 2022), arXiv:2201.05989; 프로젝트 페이지 nvlabs.github.io/instant-ngp <span class="citation-backs"><a aria-label="참고문헌 2 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-2-1">↩1</a> <a aria-label="참고문헌 2 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-2-2">↩2</a> <a aria-label="참고문헌 2 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch22-2-3">↩3</a> <a aria-label="참고문헌 2 인용 위치 4로 돌아가기" class="citation-back" href="#cite-ch22-2-4">↩4</a></span></div></li>
+<li data-source="ai3d-5" id="ref-ch22-3"><span class="reference-number">[3]</span><div>Kerbl, Kopanas, Leimkühler, Drettakis, "3D Gaussian Splatting for Real-Time Radiance Field Rendering", ACM Transactions on Graphics 42(4) (SIGGRAPH 2023), arXiv:2308.04079; 프로젝트 페이지 repo-sam.inria.fr/fungraph/3d-gaussian-splatting <span class="citation-backs"><a aria-label="참고문헌 3 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-3-1">↩1</a> <a aria-label="참고문헌 3 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-3-2">↩2</a> <a aria-label="참고문헌 3 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch22-3-3">↩3</a></span></div></li>
+<li data-source="ai3d-2" id="ref-ch22-4"><span class="reference-number">[4]</span><div>Mildenhall et al., NeRF, ECCV 2020, Sec. 5.1 "Positional encoding"; 배경 이론은 Tancik et al., "Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains", NeurIPS 2020 (arXiv:2006.10739) <span class="citation-backs"><a aria-label="참고문헌 4 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-4-1">↩1</a> <a aria-label="참고문헌 4 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-4-2">↩2</a></span></div></li>
+<li data-source="ai3d-3" id="ref-ch22-5"><span class="reference-number">[5]</span><div>Mildenhall et al., NeRF, ECCV 2020, Sec. 5.3 및 Sec. 6 ("approximately 1–2 days" on a single NVIDIA V100; "approximately 30 seconds per frame") <span class="citation-backs"><a aria-label="참고문헌 5 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-5-1">↩1</a> <a aria-label="참고문헌 5 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-5-2">↩2</a></span></div></li>
+<li data-source="ai3d-6" id="ref-ch22-6"><span class="reference-number">[6]</span><div>Kerbl et al., 3D Gaussian Splatting, ACM TOG 42(4), 2023 — Sec. 5 "Optimization with Adaptive Density Control" 및 Sec. 6 "Fast Differentiable Rasterizer" <span class="citation-backs"><a aria-label="참고문헌 6 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-6-1">↩1</a> <a aria-label="참고문헌 6 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-6-2">↩2</a></span></div></li>
+<li data-source="ai3d-7" id="ref-ch22-7"><span class="reference-number">[7]</span><div>Kerbl et al., 3D Gaussian Splatting, ACM TOG 42(4), 2023 — Table 1~3 (Mip-NeRF360, Tanks&amp;Temples, Deep Blending, 총 13개 실장면 + Blender 합성); Barron, Mildenhall, Verbin, Srinivasan, Hedman, "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields", CVPR 2022, arXiv:2111.12077 <span class="citation-backs"><a aria-label="참고문헌 7 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-7-1">↩1</a> <a aria-label="참고문헌 7 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-7-2">↩2</a> <a aria-label="참고문헌 7 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch22-7-3">↩3</a></span></div></li>
+<li data-source="ai3d-8" id="ref-ch22-8"><span class="reference-number">[8]</span><div>Fan, Wang, Yu, Kong, Zhang, Wang, "LightGaussian: Unbounded 3D Gaussian Compression with 15x Reduction and 200+ FPS", NeurIPS 2024, arXiv:2311.17245 <span class="citation-backs"><a aria-label="참고문헌 8 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-8-1">↩1</a> <a aria-label="참고문헌 8 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-8-2">↩2</a></span></div></li>
+<li data-source="ai3d-9" id="ref-ch22-9"><span class="reference-number">[9]</span><div>Keetha, Karhade, Jatavallabhula, Yang, Scherer, Ramanan, Luiten, "SplaTAM: Splat, Track &amp; Map 3D Gaussians for Dense RGB-D SLAM", CVPR 2024, arXiv:2312.02126; Matsuki, Murai, Kelly, Davison, "Gaussian Splatting SLAM", CVPR 2024 (Highlight), arXiv:2312.06741; 계보로 Sucar et al. "iMAP" ICCV 2021, Zhu et al. "NICE-SLAM" CVPR 2022 <span class="citation-backs"><a aria-label="참고문헌 9 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-9-1">↩1</a> <a aria-label="참고문헌 9 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-9-2">↩2</a></span></div></li>
+<li data-source="ai3d-10" id="ref-ch22-10"><span class="reference-number">[10]</span><div>Wang, Leroy, Cabon, Chidlovskii, Revaud, "DUSt3R: Geometric 3D Vision Made Easy", CVPR 2024, arXiv:2312.14132 (Naver Labs Europe); 후속 MASt3R (ECCV 2024) <span class="citation-backs"><a aria-label="참고문헌 10 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-10-1">↩</a></span></div></li>
+<li data-source="ai3d-11" id="ref-ch22-11"><span class="reference-number">[11]</span><div>Ranftl, Lasinger, Hafner, Schindler, Koltun, "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer", IEEE TPAMI(2020년 8월 게재 승인, arXiv:1907.01341); 후속 DPT (Ranftl et al., ICCV 2021) <span class="citation-backs"><a aria-label="참고문헌 11 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-11-1">↩1</a> <a aria-label="참고문헌 11 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-11-2">↩2</a></span></div></li>
+<li data-source="ai3d-12" id="ref-ch22-12"><span class="reference-number">[12]</span><div>Yang, Kang, Huang, Xu, Feng, Zhao, "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data", CVPR 2024, arXiv:2401.10891; Yang et al., "Depth Anything V2", NeurIPS 2024, arXiv:2406.09414 <span class="citation-backs"><a aria-label="참고문헌 12 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-12-1">↩1</a> <a aria-label="참고문헌 12 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-12-2">↩2</a></span></div></li>
+<li data-source="ai3d-13" id="ref-ch22-13"><span class="reference-number">[13]</span><div>Bochkovskii, Delaunoy, Germain, Santos, Zhou, Richter, Koltun, "Depth Pro: Sharp Monocular Metric Depth in Less Than a Second", ICLR 2025, arXiv:2410.02073 (Apple) <span class="citation-backs"><a aria-label="참고문헌 13 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-13-1">↩1</a> <a aria-label="참고문헌 13 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-13-2">↩2</a></span></div></li>
+<li data-source="ai3d-14" id="ref-ch22-14"><span class="reference-number">[14]</span><div>Google, "Depth adds realism — ARCore Depth API" 개발자 문서(developers.google.com/ar/develop/depth); Du, Turner, Dzitsiuk, Prasso, Duarte, Dourgarian et al., "DepthLab: Real-time 3D Interaction with Depth Maps for Mobile Augmented Reality", UIST 2020; Kirillov, Mintun, Ravi, Mao, Rolland, Gustafson, Xiao, Whitehead, Berg, Lo, Dollár, Girshick, "Segment Anything", ICCV 2023, arXiv:2304.02643 <span class="citation-backs"><a aria-label="참고문헌 14 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-14-1">↩1</a> <a aria-label="참고문헌 14 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-14-2">↩2</a></span></div></li>
+<li data-source="ai3d-15" id="ref-ch22-15"><span class="reference-number">[15]</span><div>Poole, Jain, Barron, Mildenhall, "DreamFusion: Text-to-3D using 2D Diffusion", ICLR 2023, arXiv:2209.14988; Hong, Zhang, Gu, Bi, Zhou, Liu, Liu, Sunkavalli, Bui, Tan, "LRM: Large Reconstruction Model for Single Image to 3D", ICLR 2024, arXiv:2311.04400; Xiang et al., "Structured 3D Latents for Scalable and Versatile 3D Generation (TRELLIS)", arXiv:2412.01506 (Microsoft Research) <span class="citation-backs"><a aria-label="참고문헌 15 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-15-1">↩1</a> <a aria-label="참고문헌 15 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-15-2">↩2</a></span></div></li>
+<li data-source="ai3d-16" id="ref-ch22-16"><span class="reference-number">[16]</span><div>본 항목의 수치는 앞선 항목들의 1차 출처를 종합한 것이다 — Mildenhall et al. ECCV 2020; Müller et al. SIGGRAPH 2022; Kerbl et al. SIGGRAPH 2023 Table 1~3; Fan et al. NeurIPS 2024; Hong et al. ICLR 2024; Bochkovskii et al. ICLR 2025 <span class="citation-backs"><a aria-label="참고문헌 16 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch22-16-1">↩1</a> <a aria-label="참고문헌 16 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch22-16-2">↩2</a> <a aria-label="참고문헌 16 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch22-16-3">↩3</a></span></div></li>
+</ol>
+</section></div><nav class="pager" aria-label="장 이동"><a href="ch21.html">← 이전 장 <span>문화유산과 건축 — 야외로 나가다</span></a><a href="../index.html#part-5">전체 목차 <span>제5부</span></a><a href="ch23.html">다음 장 → <span>플랫폼과 표준</span></a></nav></article></div></main>
 <footer><div class="wrap footer-inner"><a href="/">← SpatialFlare 홈</a><span>증강현실과 조경 · 웹 개정판 · 2026.09.30</span><a href="../editorial.html">구성·편집 기록</a><a href="../index.html#downloads">자료 내려받기</a><a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/augmented-reality-landscape">GitHub</a></div></footer></body></html>
