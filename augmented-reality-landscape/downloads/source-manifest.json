@@ -1,0 +1,32 @@
+[
+  {
+    "source": "40-발행/AR_BOOK.md",
+    "file": "downloads/obsidian-manuscript.md",
+    "sha256": "10d307e64df814a5a7cc0cc459633dbc282c494ac67f540d81b07534c68cc6d4",
+    "bytes": 1382874
+  },
+  {
+    "source": "40-발행/RESEARCH_ALL.md",
+    "file": "downloads/research-notes.md",
+    "sha256": "b5b39b85b9841fcfbc6a2aa89628160cf2b044aa7d2c60322be7fa9c4a7d7200",
+    "bytes": 1453669
+  },
+  {
+    "source": "40-발행/증강현실과조경.pdf",
+    "file": "downloads/landscape-ar-original.pdf",
+    "sha256": "ca2a5d0935275a0dfe4e52d0c669cbdbdb80d0bb6db75d853426441e81a0604e",
+    "bytes": 6620954
+  },
+  {
+    "source": "40-발행/증강현실_조사원본.pdf",
+    "file": "downloads/research-original.pdf",
+    "sha256": "f6152c0fc188c131fe8fbb6ab37f88226a1323232700145ea1f7398f5c35f6a7",
+    "bytes": 7078456
+  },
+  {
+    "source": "40-발행/조경과증강현실_사전조사.pdf",
+    "file": "downloads/preliminary-research.pdf",
+    "sha256": "38dcf6aee120202402995220f63b501b7a35dac906cceeda6f879c87310558e1",
+    "bytes": 738235
+  }
+]
