@@ -44,6 +44,29 @@ def chapter_title(chapter):
 def part_title(part):
     return f"PART {part['number']:02d} · {part['title']}"
 
+def diagram_block(key, prefix, registry):
+    diagram = registry[key]
+    identifier = 'diagram-' + key
+    panels = []
+    for panel in diagram['panels']:
+        path = OUT / 'assets/diagrams' / panel['file']
+        if not path.is_file() or not path.resolve().is_relative_to((OUT/'assets/diagrams').resolve()):
+            raise ValueError('Missing or invalid diagram asset: ' + panel['file'])
+        url = prefix + 'assets/diagrams/' + panel['file']
+        panels.append('<div class="diagram-panel">'
+            + '<h4>' + html.escape(panel['title']) + '</h4>'
+            + f'<img src="{url}" width="{panel["width"]}" height="{panel["height"]}" loading="lazy" alt="{html.escape(panel["alt"], quote=True)}">'
+            + '<p>' + html.escape(panel['note']) + '</p>'
+            + f'<a class="diagram-open" href="{url}" target="_blank" rel="noopener" aria-label="{html.escape(panel["title"], quote=True)} 크게 보기">그림 크게 보기 ↗</a></div>')
+    sources = ' · '.join('<a href="' + html.escape(s['url'], quote=True) + '">' + html.escape(s['label']) + '</a>' for s in diagram['sources'])
+    return (f'<figure class="concept-figure" id="{identifier}" aria-labelledby="{identifier}-title">'
+        + '<div class="diagram-heading"><span>그림으로 이해하기</span>'
+        + f'<h3 id="{identifier}-title">{html.escape(diagram["title"])}</h3></div>'
+        + f'<div class="diagram-panels" data-panels="{len(panels)}">' + ''.join(panels) + '</div>'
+        + '<figcaption><strong class="diagram-takeaway">' + html.escape(diagram['takeaway']) + '</strong>'
+        + '<p>' + html.escape(diagram['caption']) + '</p>'
+        + '<p class="diagram-sources">직접 제작한 교육용 개념도 · 설명 근거: ' + sources + '</p></figcaption></figure>')
+
 def curriculum_markdown(parts):
     sections = []
     for part in parts:
@@ -70,6 +93,7 @@ def navigation(name, support, parts, prefix):
     return "\n".join(items)
 
 def build():
+    diagrams = json.loads((BOOK / 'diagrams.json').read_text(encoding='utf-8'))
     parts = json.loads((BOOK / "curriculum.json").read_text(encoding="utf-8"))
     chapters = [c for p in parts for c in p["chapters"]]
     ids = [c["id"] for c in chapters]
@@ -108,6 +132,7 @@ def build():
         target.parent.mkdir(parents=True, exist_ok=True)
         prefix = "../" * (len(Path(name).parts)-1)
         source = source.replace("{{curriculum}}", curriculum_markdown(parts))
+        source = re.sub(r"\{\{diagram:([a-z0-9-]+)\}\}", lambda m: diagram_block(m[1], prefix, diagrams), source)
         source = re.sub(r"\{\{code:([^}]+)\}\}", code_block, source)
         md = markdown.Markdown(extensions=["fenced_code", "tables", "toc", "sane_lists"],
                                extension_configs={"toc":{"toc_depth":"2-3"}})

@@ -58,4 +58,6 @@ description: navicoby.github.io의 「파이썬 공간데이터 사이언스 —
 
 SVG 개념도와 실제 계산으로 만든 도표를 우선한다. Mermaid는 사이트에 렌더러가 검증된 경우만 사용하며 SVG/텍스트 대안을 둔다. 그림에 변수·단위·범례·가상/실측 구분을 붙인다. 면적이 다른 구역은 원시 건수와 밀도 지도를 구별한다. Folium HeatMap의 화면 커널을 분석용 KDE로 해석하지 않는다.
 
+개념 차이·처리 순서·배열 크기가 이해를 좌우하는 장에는 장식용 이미지 대신 설명용 개념도를 넣는다. 기존 그림은 `scripts/geospatial/illustrate.py`로 재생성하며 설명·alt·출처는 `books/python-geospatial/diagrams.json`, SVG는 `static/python-geospatial/assets/diagrams/`에 둔다. 본문에는 `{{diagram:식별자}}`를 넣는다. 비교 패널은 작은 화면에서 세로로 배치하고, 본문 설명·핵심 문장·크게 보기 링크를 함께 제공한다. 그림의 수치와 연산은 코드로 검산하며 본문 예제와 다른 입력을 쓰면 캡션에 밝힌다. TinyUNet처럼 코드에 대응하는 그림은 채널·격자 크기를 실제 코드와 맞춘다. 이미지 대체 텍스트와 SVG title/desc를 유지하고 320px부터 확인한다.
+
 지도에는 CRS(분석), 축척·분류 기준, 데이터 제공자와 배경지도 attribution을 표시한다. 인터랙티브 지도는 명시적 열기, 제목 있는 iframe, 정적 대안, 전체 화면 링크를 제공한다. 큰 원본 GeoTIFF와 위성영상은 GitHub Pages에 싣지 않고 작은 결과·허용된 파생물·취득 방법을 싣는다.

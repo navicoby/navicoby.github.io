@@ -77,6 +77,12 @@ python scripts/geospatial/check.py --public public
 
 `requirements-lock.txt`는 이번 Windows 환경의 전체 설치 목록입니다. 다른 OS에서는 상위 requirements로 새 환경을 만든 뒤 실행 검증하고 별도 lock을 기록합니다. PyTorch 설치는 사용할 CPU/GPU·CUDA 환경에 맞게 공식 설치 안내에서 선택합니다.
 
+## 개념도 재생성
+
+라이브러리 역할, 벡터/래스터, CRS, 공간조인/교차, 경사/향, Sentinel 밴드/SCL/NDVI, 직선/보행거리, TinyUNet에 8개 개념도(16개 SVG 패널)를 제공합니다. `python scripts/geospatial/illustrate.py`로 SVG와 `diagrams.json`을 재생성한 뒤 `python scripts/geospatial/build.py`를 실행합니다. 설명·수치·접근성 텍스트는 생성기의 원본에서 수정합니다. 본문에는 `{{diagram:vector-raster}}`처럼 참조하고 생성 HTML은 직접 고치지 않습니다.
+
+`diagrams.json`은 생성 산출물이며 부·장 목차는 계속 `curriculum.json`에서 관리합니다. 공개 화면에서는 비교 패널을 데스크톱 두 열, 작은 화면 한 열로 표시하며 개별 SVG를 크게 열 수 있습니다.
+
 ## 새 챕터 요청 예시
 
 > $navicoby-geospatial-author 스킬을 사용해 25장 ‘공원 출입구까지의 보행거리’를 작성하라. 한국 공공 공원 데이터와 OSMnx를 사용하고, 작은 오프라인 그래프 예제와 실제 자료 취득 확장을 구분하라. 현재 저장소 구조를 확인한 뒤 목차와 모바일 페이지를 갱신하라.

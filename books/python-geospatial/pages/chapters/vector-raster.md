@@ -14,6 +14,8 @@ eyebrow: "PART 01 / CHAPTER 02"
 
 GeoDataFrame은 pandas의 표에 geometry 열과 CRS를 더한 자료구조입니다. 한 행이 한 객체, 일반 열은 이름·용도·면적 같은 속성, 활성 geometry 열은 Shapely 도형을 담습니다. GeoSeries는 도형 열 하나입니다. 서로 다른 geometry 타입을 담을 수 있지만 파일 형식과 분석 함수의 제약을 확인해야 합니다.
 
+{{diagram:vector-raster}}
+
 ## 왜 필요한가
 
 공원 안내 포인트로 공원 면적을 계산할 수 없습니다. 반대로 공원 경계 폴리곤만으로 실제 출입구 위치를 알 수 없습니다. 어떤 표현을 받았는지 확인해야 다음 연산이 의미를 가집니다.

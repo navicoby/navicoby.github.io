@@ -8,6 +8,8 @@ eyebrow: START HERE / LIBRARIES & DATA
 
 설치는 내 실행 환경에 기능을 가져오는 일이고, import는 설치한 기능을 현재 코드에서 불러오는 일입니다. 패키지는 코드의 구성·배포 단위입니다. API는 함수의 이름, 입력과 출력처럼 기능을 사용하는 약속입니다. [01장](chapters/spatial-questions.html)에서 처음부터 설명합니다.
 
+{{diagram:tools}}
+
 ## GeoPandas는 무엇인가
 
 **GeoPandas는 위치와 도형을 가진 표를 다루는 Python 라이브러리입니다.** 건물마다 한 행을 만들고 이름·용도·높이를 일반 열로, 건물 외곽선을 geometry 열로 보관합니다. 이 공간표가 GeoDataFrame입니다. pandas는 일반 표를, GeoPandas는 여기에 공간 기능을 더한 표를 다룹니다.

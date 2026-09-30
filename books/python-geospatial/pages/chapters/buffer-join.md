@@ -10,6 +10,8 @@ eyebrow: PART 02 / VECTOR ANALYSIS
 
 버퍼(buffer)는 도형에서 일정 거리 안의 영역입니다. 공간조인(spatial join)은 위치 관계로 두 표를 연결합니다. 공원과 건물을 `intersects`로 조인하면 버퍼에 닿는 건물의 속성과 공원 ID를 같은 행에 놓을 수 있습니다. 도형 자체를 잘라내는 연산은 `overlay` 또는 `intersection`입니다. 조인은 겹친 부분만 남기지 않습니다. [GeoPandas sjoin 문서](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.sjoin.html)
 
+{{diagram:join-overlay}}
+
 ## 왜 필요한가
 
 공원 주변의 잠재 이용 건물을 파악하거나 도로·시설의 이격 관계를 점검하는 첫 단계입니다. 이번 기준은 **공원 폴리곤에서 건물 footprint까지 30m**입니다. 출입구까지 걸어가는 거리는 도로 연결·횡단·장애물을 반영하는 후속 네트워크 분석에서 구합니다.

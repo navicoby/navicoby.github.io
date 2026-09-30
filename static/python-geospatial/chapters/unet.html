@@ -186,6 +186,8 @@
 <h2 id="_1">개념</h2>
 <p>U-Net은 영상 분할에 널리 쓰이는 신경망 구조입니다. 인코더는 공간 크기를 줄이며 특징을 모으고, 디코더는 크기를 다시 키워 픽셀별 출력을 만듭니다. Skip connection은 같은 수준의 인코더 특징을 디코더로 전달해 위치 정보를 보완합니다.</p>
 <p>여기의 TinyUNet은 원 논문의 전체 구조를 재현한 것이 아니라 한 번의 축소와 확대를 가진 교육용 변형입니다. 네 채널 입력을 가정하며 2개 범주의 logits를 출력합니다.</p>
+<figure class="concept-figure" id="diagram-unet" aria-labelledby="diagram-unet-title"><div class="diagram-heading"><span>그림으로 이해하기</span><h3 id="diagram-unet-title">U-Net: 줄여서 읽고, 다시 키우며 위치를 연결합니다</h3></div><div class="diagram-panels" data-panels="1"><div class="diagram-panel"><h4>본문 TinyUNet의 실제 크기</h4><img src="../assets/diagrams/unet-tensor-flow.svg" width="360" height="690" loading="lazy" alt="입력 4×16×16, Encoder 8×16×16, Pool과 Bottom 16×8×8, 확대 16×16×16을 거칩니다. Encoder의 8채널을 skip으로 연결해 24채널로 합친 뒤 8채널을 거쳐 2범주 점수를 출력합니다."><p>숫자는 채널 × 높이 × 너비입니다. 배치 N=1은 생략했습니다. 점선은 해상도가 같은 Encoder 특징을 전달하는 skip connection입니다.</p><a class="diagram-open" href="../assets/diagrams/unet-tensor-flow.svg" target="_blank" rel="noopener" aria-label="본문 TinyUNet의 실제 크기 크게 보기">그림 크게 보기 ↗</a></div></div><figcaption><strong class="diagram-takeaway">확대된 16채널과 이전 단계의 8채널을 연결하면 24채널이 됩니다.</strong><p>32장의 교육용 TinyUNet 코드와 일치하는 크기입니다. 원 논문 전체 구조의 복제나 학습 완료 모델을 의미하지 않습니다. 마지막 출력은 두 범주의 logits이며 아직 최종 분류 지도는 아닙니다.</p><p class="diagram-sources">직접 제작한 교육용 개념도 · 설명 근거: <a href="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/">U-Net 원 논문·저자 자료</a> · <a href="https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html">PyTorch Conv2d</a></p></figcaption></figure>
+
 <h2 id="_2">왜 필요한가</h2>
 <p>넓은 문맥과 세부 경계가 함께 중요한 건물·녹지 분할에 이러한 구조를 적용할 수 있습니다. 하지만 해상도, 라벨 품질, 지역 차이를 해결하는 작업이 모델 구조 선택만큼 중요합니다.</p>
 <h2 id="api">핵심 API</h2>
