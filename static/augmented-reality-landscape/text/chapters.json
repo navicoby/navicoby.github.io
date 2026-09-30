@@ -1,0 +1,305 @@
+[
+  {
+    "n": 1,
+    "title": "유리와 렌즈에서 시작하다",
+    "part": 1,
+    "status": "available",
+    "summary": "광학 결합·입체시·추적이 서로 다른 문제에서 출발해 AR로 만나는 과정을 읽습니다.",
+    "source": "10-증강현실-본문/ch01.md",
+    "corrections": []
+  },
+  {
+    "n": 2,
+    "title": "군대가 먼저 실용화했다",
+    "part": 1,
+    "status": "planned",
+    "summary": "기획에는 포함되어 있으나 본문은 아직 작성되지 않았습니다.",
+    "source": "40-발행/AR_BOOK.md",
+    "corrections": []
+  },
+  {
+    "n": 3,
+    "title": "개인용 장치를 상상한 사람들",
+    "part": 1,
+    "status": "planned",
+    "summary": "기획에는 포함되어 있으나 본문은 아직 작성되지 않았습니다.",
+    "source": "40-발행/AR_BOOK.md",
+    "corrections": []
+  },
+  {
+    "n": 4,
+    "title": "이름과 정의",
+    "part": 1,
+    "status": "available",
+    "summary": "AR·VR·MR의 정의를 구분하고, 목적에 맞는 요구사항과 검수 기준을 세웁니다.",
+    "source": "10-증강현실-본문/ch04.md",
+    "corrections": []
+  },
+  {
+    "n": 5,
+    "title": "눈이라는 제약 조건",
+    "part": 2,
+    "status": "available",
+    "summary": "시야각·해상도·안구 운동이 장치 선택과 현장 가독성에 주는 제약을 살핍니다.",
+    "source": "10-증강현실-본문/ch05.md",
+    "corrections": []
+  },
+  {
+    "n": 6,
+    "title": "눈은 어떻게 거리를 아는가",
+    "part": 2,
+    "status": "available",
+    "summary": "가림·원근·운동시차 등 깊이 단서로 가상 물체가 제자리에 보이는 조건을 이해합니다.",
+    "source": "10-증강현실-본문/ch06.md",
+    "corrections": []
+  },
+  {
+    "n": 7,
+    "title": "수렴과 조절이 어긋날 때",
+    "part": 2,
+    "status": "planned",
+    "summary": "기획에는 포함되어 있으나 본문은 아직 작성되지 않았습니다.",
+    "source": "40-발행/AR_BOOK.md",
+    "corrections": []
+  },
+  {
+    "n": 8,
+    "title": "멀미와 피로",
+    "part": 2,
+    "status": "planned",
+    "summary": "기획에는 포함되어 있으나 본문은 아직 작성되지 않았습니다.",
+    "source": "40-발행/AR_BOOK.md",
+    "corrections": []
+  },
+  {
+    "n": 9,
+    "title": "빛을 눈에 넣는 법",
+    "part": 3,
+    "status": "available",
+    "summary": "광학 시스루와 비디오 시스루의 차이를 밝기·시야·가림의 관점에서 비교합니다.",
+    "source": "10-증강현실-본문/ch09.md",
+    "corrections": []
+  },
+  {
+    "n": 10,
+    "title": "좌표와 자세 — 맞춘다는 것의 수학",
+    "part": 3,
+    "status": "available",
+    "summary": "모델·카메라·현장의 좌표계를 연결하고 자세와 보정의 의미를 이해합니다.",
+    "source": "10-증강현실-본문/ch10.md",
+    "corrections": []
+  },
+  {
+    "n": 11,
+    "title": "기계가 세상을 느끼는 법",
+    "part": 3,
+    "status": "available",
+    "summary": "IMU·카메라·깊이 센서·GNSS가 맡는 역할과 각 센서의 한계를 살핍니다.",
+    "source": "10-증강현실-본문/ch11.md",
+    "corrections": []
+  },
+  {
+    "n": 12,
+    "title": "트래킹과 정합",
+    "part": 3,
+    "status": "available",
+    "summary": "마커에서 SLAM·VIO·VPS까지, 추적과 공간 정합이 해결하는 문제를 구분합니다.",
+    "source": "10-증강현실-본문/ch12.md",
+    "corrections": []
+  },
+  {
+    "n": 13,
+    "title": "20밀리초의 벽",
+    "part": 3,
+    "status": "available",
+    "summary": "지연을 각도 오차로 해석하고, 움직임 속도에 따라 체감 오차가 달라지는 이유를 봅니다.",
+    "source": "10-증강현실-본문/ch13.md",
+    "corrections": []
+  },
+  {
+    "n": 14,
+    "title": "눈이 보는 곳에만 힘을 쏟다",
+    "part": 3,
+    "status": "available",
+    "summary": "시선에 따라 계산을 배분하는 렌더링과 초점·가림 처리의 문제를 연결합니다.",
+    "source": "10-증강현실-본문/ch14.md",
+    "corrections": []
+  },
+  {
+    "n": 15,
+    "title": "어떻게 조작하는가",
+    "part": 3,
+    "status": "available",
+    "summary": "시선·손·음성 입력이 선택과 확정을 나누는 방식, 현장 조작의 부담을 살핍니다.",
+    "source": "10-증강현실-본문/ch15.md",
+    "corrections": []
+  },
+  {
+    "n": 16,
+    "title": "군사 — 가장 먼저, 가장 오래",
+    "part": 4,
+    "status": "available",
+    "summary": "군사 분야의 오랜 수요를 통해 시야 안에 정보를 놓는 목적과 비용을 읽습니다.",
+    "source": "10-증강현실-본문/ch16.md",
+    "corrections": []
+  },
+  {
+    "n": 17,
+    "title": "의료 — 밀리미터가 요구되는 곳",
+    "part": 4,
+    "status": "available",
+    "summary": "정밀도가 중요한 의료 사례를 통해 위치 오차와 검증의 의미를 비교합니다.",
+    "source": "10-증강현실-본문/ch17.md",
+    "corrections": []
+  },
+  {
+    "n": 18,
+    "title": "제조 — 이름이 태어난 곳, 그 뒤",
+    "part": 4,
+    "status": "available",
+    "summary": "제조 현장에서 작업 지시·검사·원격 지원이 채택되거나 중단된 조건을 봅니다.",
+    "source": "10-증강현실-본문/ch18.md",
+    "corrections": []
+  },
+  {
+    "n": 19,
+    "title": "교육 — 효과는 있는데 얼마나",
+    "part": 4,
+    "status": "available",
+    "summary": "교육 효과를 읽을 때 비교 조건·표본·측정 과제가 왜 중요한지 살핍니다.",
+    "source": "10-증강현실-본문/ch19.md",
+    "corrections": []
+  },
+  {
+    "n": 20,
+    "title": "소비자 — 한 번의 성공과 여러 실패",
+    "part": 4,
+    "status": "available",
+    "summary": "소비자 시장의 성공과 실패에서 기술 성능 외에 서비스와 비용의 역할을 읽습니다.",
+    "source": "40-발행/AR_BOOK.md",
+    "corrections": []
+  },
+  {
+    "n": 21,
+    "title": "문화유산과 건축 — 야외로 나가다",
+    "part": 4,
+    "status": "available",
+    "summary": "문화유산과 건축 사례를 통해 실내 기술을 야외로 옮길 때 달라지는 조건을 봅니다.",
+    "source": "40-발행/AR_BOOK.md",
+    "corrections": []
+  },
+  {
+    "n": 22,
+    "title": "AI가 바꾼 3차원",
+    "part": 5,
+    "status": "available",
+    "summary": "NeRF와 가우시안 스플래팅 등 3차원 재구성과 현장 AR의 연결 지점을 살핍니다.",
+    "source": "10-증강현실-본문/ch22.md",
+    "corrections": []
+  },
+  {
+    "n": 23,
+    "title": "플랫폼과 표준",
+    "part": 5,
+    "status": "available",
+    "summary": "표준·파일 형식·플랫폼 의존성을 나누어 장기 운영과 데이터 이동을 검토합니다.",
+    "source": "10-증강현실-본문/ch23.md",
+    "corrections": []
+  },
+  {
+    "n": 24,
+    "title": "몸이 먼저 거부한다",
+    "part": 5,
+    "status": "available",
+    "summary": "착용자의 피로뿐 아니라 방관자의 프라이버시와 사회적 수용을 함께 봅니다.",
+    "source": "10-증강현실-본문/ch24.md",
+    "corrections": []
+  },
+  {
+    "n": 25,
+    "title": "기기의 계보",
+    "part": 5,
+    "status": "available",
+    "summary": "기기별 사양의 나열을 넘어 광학·추적·입력·연산의 계보를 읽습니다.",
+    "source": "10-증강현실-본문/ch25.md",
+    "corrections": []
+  },
+  {
+    "n": 26,
+    "title": "조경 실무의 공개 기록과 도입 간극",
+    "part": 6,
+    "status": "available",
+    "summary": "8개 사무소의 공개 기록을 바탕으로, 조사에서 확인한 것과 확인하지 못한 것을 구분합니다.",
+    "source": "20-조경-본문/ch26.md",
+    "corrections": [
+      "제목과 도입부를 공개 자료 조사의 범위에 맞게 수정했습니다. ‘확인하지 못함’은 ‘존재하지 않음’이 아닙니다. iScape 등의 AR 기능은 별도 보완 자료에서 확인할 수 있습니다."
+    ]
+  },
+  {
+    "n": 27,
+    "title": "손으로 만지는 지형",
+    "part": 6,
+    "status": "available",
+    "summary": "AR Sandbox·Tangible Landscape·CityScope 등 실물 모형과 계산을 연결하는 방식을 봅니다.",
+    "source": "20-조경-본문/ch27.md",
+    "corrections": []
+  },
+  {
+    "n": 28,
+    "title": "야외 경관을 다룬 연구들",
+    "part": 6,
+    "status": "available",
+    "summary": "야외 경관 연구의 목표·정합 방식·평가 조건을 비교하고 실무 전환의 과제를 찾습니다.",
+    "source": "20-조경-본문/ch28.md",
+    "corrections": [
+      "연구 프로토타입의 성과와 다양한 현장에 적용할 수 있다는 증거를 구분하도록 도입부를 수정했습니다."
+    ]
+  },
+  {
+    "n": 29,
+    "title": "주민과 함께 보다",
+    "part": 6,
+    "status": "available",
+    "summary": "주민이 같은 대안을 함께 보고 논의하도록 설계할 때 필요한 참여·기록 조건을 살핍니다.",
+    "source": "20-조경-본문/ch29.md",
+    "corrections": []
+  },
+  {
+    "n": 30,
+    "title": "행정은 무엇을 샀나",
+    "part": 6,
+    "status": "available",
+    "summary": "지자체와 공공기관의 도입을 사업 목적·조달·운영의 관점에서 읽습니다.",
+    "source": "20-조경-본문/ch30.md",
+    "corrections": []
+  },
+  {
+    "n": 31,
+    "title": "접힌 것들의 목록",
+    "part": 6,
+    "status": "available",
+    "summary": "장치·서비스·플랫폼이 바뀔 때 데이터와 프로젝트를 남기는 방법을 생각합니다.",
+    "source": "20-조경-본문/ch31.md",
+    "corrections": []
+  },
+  {
+    "n": 32,
+    "title": "한국에서 일어난 일",
+    "part": 6,
+    "status": "available",
+    "summary": "국내 조경·도시·지하시설물 관련 기록을 구분하고 적용 범위와 근거를 살핍니다.",
+    "source": "20-조경-본문/ch32.md",
+    "corrections": []
+  },
+  {
+    "n": 33,
+    "title": "자라는 것을 어떻게 보여줄까",
+    "part": 6,
+    "status": "available",
+    "summary": "수목의 생장·계절·바람·불확실성을 현장에 표현하기 위한 데이터와 검증 과제를 정리합니다.",
+    "source": "20-조경-본문/ch33.md",
+    "corrections": [
+      "생장·계절 기능과 깊이 거리 설명을 공식 자료로 보완했습니다. 문헌 기록 수를 분야 전체 연구 수로 일반화한 표현, 기업 인수나 저작권 연도를 제품 실패·중단으로 단정한 해석도 수정했습니다. 나머지 업체 수치와 사례는 조사 당시 기록이며 전체 사실을 재검증한 것은 아닙니다."
+    ]
+  }
+]
