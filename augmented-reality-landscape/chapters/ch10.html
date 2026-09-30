@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>좌표와 자세 — 맞춘다는 것의 수학 · 증강현실과 조경</title><meta name="description" content="증강현실의 개념과 기술에서 조경 실무·식생·현장 검증까지. 옵시디언 원고 29개 장과 140개 문헌 기록을 엮은 연구 웹판."><link rel="canonical" href="https://spatialflare.com/augmented-reality-landscape/chapters/ch10.html"><meta property="og:type" content="article"><meta property="og:title" content="좌표와 자세 — 맞춘다는 것의 수학 · 증강현실과 조경"><meta property="og:description" content="증강현실의 개념과 기술에서 조경 실무·식생·현장 검증까지. 옵시디언 원고 29개 장과 140개 문헌 기록을 엮은 연구 웹판."><meta property="og:url" content="https://spatialflare.com/augmented-reality-landscape/chapters/ch10.html"><link rel="stylesheet" href="../assets/site.css"><script defer src="../assets/site.js"></script></head>
-<body><a class="skip" href="#main">본문으로 건너뛰기</a><div id="progress" aria-hidden="true"></div><header class="top"><div class="top-inner"><a class="brand" href="../index.html"><span class="brand-icon">S/F</span><span>SpatialFlare <small>RESEARCH LIBRARY</small></span></a><nav aria-label="주요 메뉴"><a href="../index.html#contents">전체 목차</a><a href="../practice.html">현장 가이드</a><a href="../evidence.html">사례·근거</a><a href="../literature.html">문헌</a><a href="../search.html">검색</a></nav></div></header><main id="main" class="wrap reading"><div class="breadcrumb"><a href="../index.html">연구 라이브러리</a> / 제3부 · 작동 원리 / 제10장</div><div class="reader-grid"><aside class="reader-sidebar"><details open><summary>이 글의 목차</summary><nav aria-label="절 목차"><a href="#section-1">1. 맞춘다는 것은 무엇인가</a><a href="#section-2">2. 다섯 개의 좌표계, 네 개의 고리</a><a href="#section-3">3. 동차좌표 — 나눗셈을 맨 끝으로 미루는 기술</a><a href="#section-4">4. 강체 변환 SE(3) — 자세를 담는 그릇</a><a href="#section-5">5. 오일러각과 짐벌락 — 세 개의 숫자로는 안 되는 이유</a><a href="#section-6">6. 회전행렬과 쿼터니언 — 무거운 표현과 가벼운 표현</a><a href="#section-7">7. 카메라를 숫자로 적기 — 핀홀 모델과 내부 파라미터</a><a href="#section-8">8. 렌즈 왜곡 — 직선이 직선으로 보이지 않는다</a><a href="#section-9">9. 보정 — 체커보드 한 장이 하는 일</a><a href="#section-10">10. 역문제 PnP — 세 점이 만드는 네 개의 답</a><a href="#section-11">11. RANSAC — 평균 대신 합의</a><a href="#section-12">12. 번들 조정 — 전체를 한꺼번에 미세조정하기</a><a href="#section-13">13. 다양체 위의 최적화 — 회전은 더할 수 없다</a><a href="#section-14">14. 센서와 센서 사이 — 공간, 그리고 시간</a><a href="#section-15">15. 측정할 수 없는 눈 — 광학 시스루의 보정</a><a href="#section-16">16. 일곱 번째 좌표 — 지연, 예측, 잔여 오차</a></nav></details><a class="back-link" href="../index.html#contents">← 전체 6부 목차</a></aside><article><header class="article-head"><p class="eyebrow">제3부 · 작동 원리 / 제10장</p><h1>좌표와 자세 — 맞춘다는 것의 수학</h1><p class="lead">모델·카메라·현장의 좌표계를 연결하고 자세와 보정의 의미를 이해합니다.</p><p class="source-note">옵시디언 원고 기반 · 웹판 편집 2026.09.30 · <a href="../text/ch10.md">이 장의 Markdown</a> · <a href="../editorial.html">편집 범위</a></p><p class="source-note">이 본문은 조사 당시의 연구 원고입니다. 제품 상태·가격·수치와 해석은 출처·조사 범위와 함께 읽어 주세요.</p></header><div class="prose"><h2 id="section-1">1. 맞춘다는 것은 무엇인가</h2>
+<body><a class="skip" href="#main">본문으로 건너뛰기</a><div id="progress" aria-hidden="true"></div><header class="top"><div class="top-inner"><a class="brand" href="../index.html"><span class="brand-icon">S/F</span><span>SpatialFlare <small>RESEARCH LIBRARY</small></span></a><nav aria-label="주요 메뉴"><a href="../index.html#contents">전체 목차</a><a href="../practice.html">현장 가이드</a><a href="../evidence.html">사례·근거</a><a href="../literature.html">문헌</a><a href="../search.html">검색</a></nav></div></header><main id="main" class="wrap reading"><div class="breadcrumb"><a href="../index.html">연구 라이브러리</a> / 제3부 · 작동 원리 / 제10장</div><div class="reader-grid"><aside class="reader-sidebar"><details open><summary>이 글의 목차</summary><nav aria-label="절 목차"><a href="#section-1">1. 맞춘다는 것은 무엇인가</a><a href="#section-2">2. 다섯 개의 좌표계, 네 개의 고리</a><a href="#section-3">3. 동차좌표 — 나눗셈을 맨 끝으로 미루는 기술</a><a href="#section-4">4. 강체 변환 SE(3) — 자세를 담는 그릇</a><a href="#section-5">5. 오일러각과 짐벌락 — 세 개의 숫자로는 안 되는 이유</a><a href="#section-6">6. 회전행렬과 쿼터니언 — 무거운 표현과 가벼운 표현</a><a href="#section-7">7. 카메라를 숫자로 적기 — 핀홀 모델과 내부 파라미터</a><a href="#section-8">8. 렌즈 왜곡 — 직선이 직선으로 보이지 않는다</a><a href="#section-9">9. 보정 — 체커보드 한 장이 하는 일</a><a href="#section-10">10. 역문제 PnP — 세 점이 만드는 네 개의 답</a><a href="#section-11">11. RANSAC — 평균 대신 합의</a><a href="#section-12">12. 번들 조정 — 전체를 한꺼번에 미세조정하기</a><a href="#section-13">13. 다양체 위의 최적화 — 회전은 더할 수 없다</a><a href="#section-14">14. 센서와 센서 사이 — 공간, 그리고 시간</a><a href="#section-15">15. 측정할 수 없는 눈 — 광학 시스루의 보정</a><a href="#section-16">16. 일곱 번째 좌표 — 지연, 예측, 잔여 오차</a><a href="#section-17">참고문헌</a></nav></details><a class="back-link" href="../index.html#contents">← 전체 6부 목차</a></aside><article><header class="article-head"><p class="eyebrow">제3부 · 작동 원리 / 제10장</p><h1>좌표와 자세 — 맞춘다는 것의 수학</h1><p class="lead">모델·카메라·현장의 좌표계를 연결하고 자세와 보정의 의미를 이해합니다.</p><p class="source-note">옵시디언 원고 기반 · 웹판 편집 2026.09.30 · <a href="../downloads/chapters/ch10.md">이 장의 Markdown</a> · <a href="../editorial.html">편집 범위</a></p><p class="source-note">이 본문은 조사 당시의 연구 원고입니다. 제품 상태·가격·수치와 해석은 출처·조사 범위와 함께 읽어 주세요.</p><p class="source-note citation-nav"><a href="#references-ch10">참고문헌 16개 ↓</a> · 본문 [번호]로 출처 확인</p></header><div class="prose"><h2 id="section-1">1. 맞춘다는 것은 무엇인가</h2>
 <p>증강현실의 수학은 결국 한 문장으로 요약된다. 실세계의 한 점을 화면의 한 픽셀 자리로 옮겨라.</p>
 <p>이 옮기기가 정확할 때 우리는 정합이 맞았다고 말한다. 가상 물체가 실제 공간의 정해진 자리에 놓여 보이는 상태다. 어긋나면 물체가 벽을 파고들거나 바닥에서 떠오른다. 사용자는 그것을 오차로 인식하지 않는다. 그냥 가짜라고 느낀다.</p>
 <p>그래서 먼저 정해야 할 것이 허용오차다. 기준은 사람 눈이 준다. 인간이 두 점을 구별할 수 있는 최소 시각은 약 1 arcmin이다. 각도로는 0.017°다. 이보다 작은 어긋남은 애초에 보이지 않는다.</p>
@@ -35,9 +35,10 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch10-1" id="cite-ch10-1-1" role="doc-noteref">[1]</a><a aria-label="참고문헌 2" class="citation" href="#ref-ch10-2" id="cite-ch10-2-1" role="doc-noteref">[2]</a></sup> (본문 기준으로 재구성)</p>
 <p>표의 첫 줄이 사실상 목표선이다. 1 m 거리에서 0.29 mm. 이 값을 지키려면 시스템 전체의 각도 오차가 1 arcmin 이내여야 한다. 그런데 뒤에서 보게 될 오차 항목들은 대부분 그보다 한 자리 이상 크다. 1°만 틀어져도 1 m에서 17.5 mm다. 손을 뻗어 만질 거리의 물체라면 이미 실패다.</p>
 <p>두 장의 투명 필름을 겹쳐 놓고 같은 그림을 맞추는 일에 가깝다. 한 장은 세상이고 다른 한 장은 계산 결과다. 두 장이 겹치려면 위치와 방향과 축척이 모두 맞아야 하고, 셋 중 하나만 틀려도 어긋남은 즉시 보인다.</p>
-<p>이 장이 다루는 것은 그 겹치기를 수로 적는 방법이다. 그리고 그 수가 어디에서 틀리는지를 다룬다.</p>
+<p>이 장이 다루는 것은 그 겹치기를 수로 적는 방법이다. 그리고 그 수가 어디에서 틀리는지를 다룬다. <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch10-1" id="cite-ch10-1-2" role="doc-noteref">[1]</a><a aria-label="참고문헌 2" class="citation" href="#ref-ch10-2" id="cite-ch10-2-2" role="doc-noteref">[2]</a></sup></p>
 <h2 id="section-2">2. 다섯 개의 좌표계, 네 개의 고리</h2>
 <p>한 점을 세상에서 화면으로 옮기는 일은 한 번에 일어나지 않는다. 중간에 최소 다섯 개의 기준틀이 끼어 있다.</p>
 <p>방을 기준으로 삼는 세계좌표계가 첫째다. 기기 본체가 기준인 기기좌표계가 둘째다. 렌즈 중심을 원점으로 삼는 카메라좌표계가 셋째다. 센서 픽셀이 기준인 이미지좌표계가 넷째다. 그리고 광학 시스루 기기라면 사용자 눈이 원점인 눈좌표계가 있다.</p>
@@ -75,6 +76,7 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch10-1" id="cite-ch10-1-3" role="doc-noteref">[1]</a></sup> (본문 기준으로 재구성)</p>
 <p>주의할 점이 하나 있다. 이미지좌표계와 눈좌표계는 한 사슬에 연달아 오는 두 고리가 아니다. 서로 배타적인 종단이다. 카메라 영상 위에 그림을 그리는 비디오 시스루는 카메라를 거쳐 이미지에서 끝난다. 반투명 유리 너머로 세상을 직접 보는 광학 시스루는 기기에서 디스플레이와 눈으로 끝난다. 어느 방식인가에 따라 마지막 고리의 정체가 달라지고, 그 고리를 측정할 수 있는지 여부도 완전히 달라진다.</p>
 <p>갱신 속도의 층위도 분리해서 봐야 한다. 흔한 오해가 자세를 카메라 프레임률로 갱신한다는 것이다. 실제 파이프라인은 그렇게 돌지 않는다.</p>
 <div aria-label="표 — 가로로 스크롤할 수 있습니다" class="table-scroll" role="region" tabindex="0"><table>
@@ -99,8 +101,9 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch10-1" id="cite-ch10-1-4" role="doc-noteref">[1]</a></sup> (본문 기준으로 재구성)</p>
 <p>현행 기기의 표시·질의율은 홀로렌즈 2가 120 Hz, 퀘스트 3가 90/120 Hz, 비전 프로가 90~100 Hz 수준이다. 마이크로소프트 문서 기준으로 홀로렌즈 1세대의 디스플레이는 초당 240회 갱신되며 새로 렌더된 영상마다 네 개의 색장을 차례로 보여준다. 자세 갱신률이 렌더 프레임률보다 훨씬 높다는 이 사실이 뒤에서 다룰 지연 보상 기법들의 전제다. 자세가 정말 30~60 Hz에 묶여 있다면 그 기법들은 원리적으로 성립하지 않는다.</p>
-<p>통역을 네 번 거쳐 전달되는 말과 같다. 통역자마다 뉘앙스를 조금씩만 바꿔도 마지막 문장은 처음과 딴판이 되고, 오역은 뒤로 갈수록 크게 벌어진다.</p>
+<p>통역을 네 번 거쳐 전달되는 말과 같다. 통역자마다 뉘앙스를 조금씩만 바꿔도 마지막 문장은 처음과 딴판이 되고, 오역은 뒤로 갈수록 크게 벌어진다. <sup class="citation-group"><a aria-label="참고문헌 1" class="citation" href="#ref-ch10-1" id="cite-ch10-1-5" role="doc-noteref">[1]</a></sup></p>
 <h2 id="section-3">3. 동차좌표 — 나눗셈을 맨 끝으로 미루는 기술</h2>
 <p>유클리드 좌표에서 회전은 행렬 곱이다. 평행이동은 덧셈이다. 성질이 다른 두 연산이 섞이면 변환을 여러 번 합성할 때 식이 지저분해진다. 한 덩어리로 다룰 수도 없다.</p>
 <p>해법은 의외로 단순하다. 좌표 (X, Y, Z)에 1을 덧붙여 (X, Y, Z, 1)로 만든다. 그러면 회전과 이동을 4×4 행렬 하나로 묶을 수 있고, 변환의 합성은 그냥 행렬 곱 한 번이 된다. 차원을 하나 늘려서 두 연산을 같은 종류로 만든 것이다.</p>
@@ -131,8 +134,9 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 3" class="citation" href="#ref-ch10-3" id="cite-ch10-3-1" role="doc-noteref">[3]</a></sup> (본문 기준으로 재구성)</p>
 <p>자유도 11은 곧바로 실용적인 수로 이어진다. 한 점의 대응이 방정식 두 개를 주므로, P를 선형으로 풀려면 최소 6점이 필요하다. 11 ≤ 12이기 때문이다. 이런 식으로 자유도를 세는 습관이 뒤의 모든 절에서 필요한 값을 미리 알려준다.</p>
-<p>그림자놀이를 할 때 손을 움직일 때마다 벽까지의 거리를 계산해 나누지는 않는다. 손은 자유롭게 움직이고, 나눗셈은 그림자가 벽에 닿는 마지막 순간에 한 번 일어난다.</p>
+<p>그림자놀이를 할 때 손을 움직일 때마다 벽까지의 거리를 계산해 나누지는 않는다. 손은 자유롭게 움직이고, 나눗셈은 그림자가 벽에 닿는 마지막 순간에 한 번 일어난다. <sup class="citation-group"><a aria-label="참고문헌 3" class="citation" href="#ref-ch10-3" id="cite-ch10-3-2" role="doc-noteref">[3]</a></sup></p>
 <h2 id="section-4">4. 강체 변환 SE(3) — 자세를 담는 그릇</h2>
 <p>회전하되 늘리거나 찌그러뜨리지 않는 변환이 있다. 거기에 평행이동을 더한 것이 강체 변환이고, 이들의 모임을 SE(3)라 부른다. 자유도는 정확히 6이다. 어느 쪽을 보는가에 3, 어디에 있는가에 3.</p>
 <p>이것이 군을 이룬다는 말은 세 가지를 뜻한다. 두 변환을 이어 붙이면 여전히 강체 변환이다. 아무것도 하지 않는 항등변환이 있다. 모든 변환에 역이 존재한다. 역변환의 공식은 간단해서 R의 전치와 −Rᵀt로 바로 얻는다.</p>
@@ -168,8 +172,9 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 4" class="citation" href="#ref-ch10-4" id="cite-ch10-4-1" role="doc-noteref">[4]</a></sup> (본문 기준으로 재구성)</p>
 <p>한편 SE(3)는 평평한 벡터공간이 아니다. 굽은 다양체다. 그래서 두 자세를 더하거나 평균 내는 일이 그냥은 성립하지 않는다. 최적화할 때는 현재 자세 주변의 평평한 접평면에서 여섯 개 숫자만 흔든 뒤, 지수사상으로 다시 다양체 위로 되돌리는 방식을 쓴다. 이 접공간에 대응하는 대수적 대상이 se(3)이고, 그 원소를 트위스트라 부른다. 축과 각으로 회전을 행렬로 바꾸는 로드리게스 공식 R = I + sinθ[k]× + (1−cosθ)[k]×² 가 이 왕복의 실제 계산식이다. 솔라·데레이·아추탄(2018)과 머레이·리·사스트리(1994)가 이 구조를 추정 문제에 쓰기 좋은 형태로 정리해 두었다.</p>
-<p>지구 표면 위를 걷는 것과 같다. 발밑 1 m 범위는 평평하니 평면 좌표로 계산해도 되지만, 서울에서 뉴욕까지를 평면으로 다루면 틀린다.</p>
+<p>지구 표면 위를 걷는 것과 같다. 발밑 1 m 범위는 평평하니 평면 좌표로 계산해도 되지만, 서울에서 뉴욕까지를 평면으로 다루면 틀린다. <sup class="citation-group"><a aria-label="참고문헌 4" class="citation" href="#ref-ch10-4" id="cite-ch10-4-2" role="doc-noteref">[4]</a></sup></p>
 <h2 id="section-5">5. 오일러각과 짐벌락 — 세 개의 숫자로는 안 되는 이유</h2>
 <p>회전을 세 축 주위의 각도 세 개로 적는 방식이 오일러각이다. 요·피치·롤처럼 사람이 직관적으로 읽을 수 있고 저장도 가볍다. 그런데 치명적인 결함이 있다.</p>
 <p>특정 자세에서 첫 번째 축과 세 번째 축이 물리적으로 같은 방향으로 겹친다. 그 순간 서로 다른 두 각도가 같은 효과를 낸다. 자유도 하나를 잃는다. 이것이 짐벌락이다.</p>
@@ -199,10 +204,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 5" class="citation" href="#ref-ch10-5" id="cite-ch10-5-1" role="doc-noteref">[5]</a></sup> (본문 기준으로 재구성)</p>
 <p>고유 오일러각에서는 ±90°가 완전히 정상적인 자세다. 대신 가운데 각도가 0이 되면 첫 축과 셋째 축이 겹친다. 디벨(2006)은 (3,1,3) 순서에서 가운데 각이 0일 때 첫 각의 변화와 셋째 각의 변화가 같은 효과를 낸다고 명시한다. 관례를 열두 가지로 세어 놓고 특이점을 한 값으로 단정하면, 절반에 대해 틀린 말이 된다.</p>
 <p>실무에서 무서운 것은 각도가 갑자기 튀는 현상 자체가 아니다. 특이점 근처에서 각속도를 오일러각 변화율로 바꾸는 변환행렬의 조건수가 발산한다는 점이다. 야코비안이 무한대로 커지면 칼만 필터나 최적화가 조용히 발산한다. 경보도 없이 결과만 망가진다.</p>
 <p>아폴로 유도장치의 관성플랫폼은 3짐벌 구조여서 실제로 락 영역이 존재했다. 네 번째 짐벌을 추가하자는 제안은 무게와 비용 때문에 기각되었고, 우주비행사들은 회피 기동으로 대처했다.</p>
-<p>북극에 서 있으면 동쪽으로 가라는 말이 의미를 잃는다. 경도선이 한 점으로 모여버렸기 때문이다. 지구가 고장 난 것이 아니라, 구면을 두 각도로 덮으려는 시도 자체에 그런 지점이 생길 수밖에 없다.</p>
+<p>북극에 서 있으면 동쪽으로 가라는 말이 의미를 잃는다. 경도선이 한 점으로 모여버렸기 때문이다. 지구가 고장 난 것이 아니라, 구면을 두 각도로 덮으려는 시도 자체에 그런 지점이 생길 수밖에 없다. <sup class="citation-group"><a aria-label="참고문헌 5" class="citation" href="#ref-ch10-5" id="cite-ch10-5-2" role="doc-noteref">[5]</a></sup></p>
 <h2 id="section-6">6. 회전행렬과 쿼터니언 — 무거운 표현과 가벼운 표현</h2>
 <p>오일러각을 내부 계산에 쓸 수 없다면 대안은 두 가지다. 둘 다 자유도 3을 더 많은 숫자로 표현해서 특이점을 없앤다.</p>
 <p>회전행렬은 3×3 행렬로 적는 방식이다. 조건은 열들이 서로 직교하는 단위벡터일 것, 그리고 행렬식이 +1일 것이다. 행렬식이 −1이면 회전이 아니라 거울상 뒤집기가 되어 오른손이 왼손으로 변한다.</p>
@@ -251,9 +257,10 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 6" class="citation" href="#ref-ch10-6" id="cite-ch10-6-1" role="doc-noteref">[6]</a><a aria-label="참고문헌 7" class="citation" href="#ref-ch10-7" id="cite-ch10-7-1" role="doc-noteref">[7]</a></sup> (본문 기준으로 재구성)</p>
 <p>비용에는 한 가지 반전이 있다. 회전의 합성은 쿼터니언이 싸지만, 벡터 하나를 회전시키는 일은 행렬이 싸다. 행렬로는 곱셈 9회와 덧셈 6회로 끝난다. 정규화 비용도 크게 다르다. 쿼터니언은 제곱근 한 번과 나눗셈 네 번이면 되는데, 행렬의 재직교화는 그보다 훨씬 비싸다.</p>
 <p>그래서 실무의 분업이 정해진다. 관성센서가 초당 수백 번 내보내는 자세 갱신과 예측·보간·필터링은 쿼터니언에서 돌아간다. 그래픽 파이프라인과 셰이더는 결국 행렬을 받는다. 사람에게 숫자를 보여줄 때만 오일러각으로 바꾼다. 디벨(2006)은 이 세 표현의 변환 공식과 특이점을 한자리에 모아 정리했다. 회전행렬은 그 문서의 2절, 오일러각은 5절, 쿼터니언은 6절에서 다룬다.</p>
-<p>시계 문자판에서 11시 55분 방향에서 12시 5분 방향으로 가는 길은 두 개다. 시계 방향으로 10분어치, 아니면 반대로 50분어치. 쿼터니언의 부호를 맞춘다는 것은 짧은 쪽으로 가라고 정해주는 일이다.</p>
+<p>시계 문자판에서 11시 55분 방향에서 12시 5분 방향으로 가는 길은 두 개다. 시계 방향으로 10분어치, 아니면 반대로 50분어치. 쿼터니언의 부호를 맞춘다는 것은 짧은 쪽으로 가라고 정해주는 일이다. <sup class="citation-group"><a aria-label="참고문헌 6" class="citation" href="#ref-ch10-6" id="cite-ch10-6-2" role="doc-noteref">[6]</a><a aria-label="참고문헌 7" class="citation" href="#ref-ch10-7" id="cite-ch10-7-2" role="doc-noteref">[7]</a></sup></p>
 <h2 id="section-7">7. 카메라를 숫자로 적기 — 핀홀 모델과 내부 파라미터</h2>
 <p>카메라가 하는 일을 가장 단순하게 적으면 이렇다. 공간의 점을 렌즈 중심과 잇는 직선을 긋고, 그 직선이 센서 평면과 만나는 자리를 찾는다. 수식으로는 u = fx·X/Z + cx 꼴이 된다.</p>
 <p>여기서 Z로 나누는 것이 바로 원근이다. 멀수록 작게 보이는 현상 전체가 이 나눗셈 하나에서 나온다.</p>
@@ -283,9 +290,10 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 8" class="citation" href="#ref-ch10-8" id="cite-ch10-8-1" role="doc-noteref">[8]</a></sup> (본문 기준으로 재구성)</p>
 <p>한 화면 안에서 편차가 45%에 달한다. 그리고 앞 절의 표에 나온 목표선 1 arcmin과 비교하면 사정이 분명해진다. 픽셀 한 칸이 이미 사람 눈의 분간 한계보다 두 배 이상 굵다. 화면 중심의 오차 1픽셀은 감춰지지 않는다.</p>
 <p>픽셀 단위 초점거리를 물리 초점거리로 환산할 때도 함정이 있다. 1423 px에 픽셀 피치 1.0 µm를 곱하면 1.42 mm가 나오는데, 이 계산은 센서 폭이 1920 × 1.0 µm = 1.92 mm임을 전제한다. 실제 스마트폰 메인 센서는 가로가 4000 px을 넘고 폭이 5~9 mm대이며, 물리 초점거리는 4~7 mm 범위다. 1080p 출력은 그 센서에서 다운스케일이나 비닝을 거쳐 나오므로, 유효 샘플링 피치가 물리 픽셀 피치의 두 배에서 네 배가 된다. fx는 출력 영상의 픽셀 수가 아니라 실제 샘플링 피치에 묶인 양이다. 출력 해상도를 센서 화소수로 혼동하면 단위 사슬이 끊어진다.</p>
-<p>바늘구멍 사진기를 떠올리면 된다. 상자 한쪽에 구멍을 뚫고 반대쪽에 종이를 대면 거꾸로 된 상이 맺힌다. 구멍과 종이 사이의 거리가 초점거리이고, 구멍 정면에 오는 종이 위의 점이 주점이다.</p>
+<p>바늘구멍 사진기를 떠올리면 된다. 상자 한쪽에 구멍을 뚫고 반대쪽에 종이를 대면 거꾸로 된 상이 맺힌다. 구멍과 종이 사이의 거리가 초점거리이고, 구멍 정면에 오는 종이 위의 점이 주점이다. <sup class="citation-group"><a aria-label="참고문헌 8" class="citation" href="#ref-ch10-8" id="cite-ch10-8-2" role="doc-noteref">[8]</a></sup></p>
 <h2 id="section-8">8. 렌즈 왜곡 — 직선이 직선으로 보이지 않는다</h2>
 <p>핀홀 모델은 거짓말을 조금 한다. 실제 렌즈를 통과한 빛은 정확히 직선 경로를 따르지 않는다. 그래서 세상의 곧은 직선이 영상에서 휘어 보인다.</p>
 <p>주된 성분은 두 가지다. 하나는 반경 방향 왜곡이다. 영상 중심에서 멀어질수록 점이 안쪽으로 당겨지거나 바깥으로 밀려난다. 전자를 배럴, 후자를 핀쿠션이라 부른다. 렌즈가 회전대칭이기 때문에 이 성분은 중심으로부터의 거리 r의 짝수 거듭제곱 급수 k1·r² + k2·r⁴ + k3·r⁶로 근사한다. 다른 하나는 접선 방향 왜곡이다. 렌즈와 센서가 완벽히 평행하게 조립되지 않았을 때 생기며 p1, p2 두 계수로 표현한다.</p>
@@ -319,10 +327,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 9" class="citation" href="#ref-ch10-9" id="cite-ch10-9-1" role="doc-noteref">[9]</a></sup> (본문 기준으로 재구성)</p>
 <p>이 표는 널리 인용되는 수치 하나를 무너뜨린다. 스마트폰 광각의 k1이 −0.1에서 −0.3 수준이고 1080p 모서리 변위가 10~30 px이라는 서술은 자릿수가 맞지 않는다. 그 정도 계수라면 변위는 66 px에서 198 px이다. 10~30 px이 나오려면 k1이 −0.015에서 −0.045 사이여야 한다. 그리고 화각 120° 이상에서야 변위가 100 px을 넘는다는 서술도 성립하지 않는다. 화각 68°에 k1 = −0.2만으로 이미 132 px이다.</p>
 <p>화각이 아주 넓은 어안 렌즈에서는 이 다항식 모델 자체가 발산한다. 그래서 r = f·θ 같은 등거리 모델이나 등입체각 모델로 갈아타야 한다.</p>
 <p>보정하지 않으면 증상이 특징적으로 나타난다. 화면 가운데의 가상 물체는 잘 붙어 있는데 가장자리로 갈수록 눈에 띄게 떨어진다. 사용자가 고개를 돌려 대상을 화면 구석으로 보낼 때마다 정합이 깨지는 것처럼 느껴진다.</p>
-<p>볼록한 숟가락 뒷면에 비친 얼굴이다. 코는 제자리인데 귀와 턱은 바깥으로 밀려 부풀어 보인다.</p>
+<p>볼록한 숟가락 뒷면에 비친 얼굴이다. 코는 제자리인데 귀와 턱은 바깥으로 밀려 부풀어 보인다. <sup class="citation-group"><a aria-label="참고문헌 9" class="citation" href="#ref-ch10-9" id="cite-ch10-9-2" role="doc-noteref">[9]</a></sup></p>
 <h2 id="section-9">9. 보정 — 체커보드 한 장이 하는 일</h2>
 <p>보정은 K와 왜곡 계수를 실제로 재는 작업이다. 원리는 간단하다. 3차원 위치를 정확히 아는 점들과 그 점들이 영상에 찍힌 위치를 짝지어 놓고, 그 짝들을 가장 잘 설명하는 파라미터를 찾는다.</p>
 <p>평면 체커보드가 표준이 된 이유는 두 가지다. 평면이라 정확하게 만들기 쉽다. 그리고 코너 위치를 서브픽셀 정밀도로 검출할 수 있다.</p>
@@ -374,10 +383,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 10" class="citation" href="#ref-ch10-10" id="cite-ch10-10-1" role="doc-noteref">[10]</a></sup> (본문 기준으로 재구성)</p>
 <p>표의 오른쪽 열을 따로 둔 이유가 있다. 최소 자세 수만이 원논문에서 유도되는 값이고, 나머지는 널리 쓰이는 보정 도구들이 경험으로 쌓은 권고다. 문헌에 귀속하면 틀린 인용이 된다.</p>
 <p>두 값을 나란히 놓으면 생각할 거리가 하나 생긴다. 코너 검출 정밀도가 0.05~0.1 px인데 양호한 보정의 RMS 재투영 오차는 0.1~0.5 px이다. 차이만큼은 검출 잡음이 아니라 모델 오차다. 다항식 왜곡 모델이 실제 렌즈를 완전히 설명하지 못한다는 뜻이다.</p>
 <p>보정 오차가 뒤에 어떻게 실려 가는지도 감으로 잡아 둘 만하다. 보정이 0.5 px 어긋나면 2 m 거리의 가상 물체가 약 1 mm 틀어진다. 이 오차는 이후 모든 단계에 그대로 전달되며, 아무리 좋은 추적 알고리즘도 이것을 되돌릴 수 없다.</p>
-<p>자를 만들 때 길이를 이미 아는 막대 여러 개를 대보며 눈금을 새기는 일과 같다. 막대를 항상 같은 각도로만 대면 눈금의 일부는 영원히 정해지지 않는다.</p>
+<p>자를 만들 때 길이를 이미 아는 막대 여러 개를 대보며 눈금을 새기는 일과 같다. 막대를 항상 같은 각도로만 대면 눈금의 일부는 영원히 정해지지 않는다. <sup class="citation-group"><a aria-label="참고문헌 10" class="citation" href="#ref-ch10-10" id="cite-ch10-10-2" role="doc-noteref">[10]</a></sup></p>
 <h2 id="section-10">10. 역문제 PnP — 세 점이 만드는 네 개의 답</h2>
 <p>증강현실이 매 프레임 푸는 핵심 방정식이 이것이다. 공간에서 위치를 아는 점 n개가 영상의 어디에 찍혔는지 알 때, 카메라가 어디에서 어느 방향으로 보고 있었는지를 역산한다.</p>
 <p>미지수는 여섯 개다. 회전 3, 이동 3. 점 하나가 방정식 두 개를 주므로 이론상 3점이면 충분하다.</p>
@@ -420,10 +430,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 11" class="citation" href="#ref-ch10-11" id="cite-ch10-11-1" role="doc-noteref">[11]</a></sup> (본문 기준으로 재구성)</p>
 <p>어느 방법을 쓰든 마지막에는 항상 비선형 정제를 붙인다. 초기해를 출발점으로 삼아 재투영 오차를 가우스-뉴턴이나 레벤버그-마쿼트로 줄이는 단계다. 실무의 수렴 판정은 평균 재투영 오차 1 px 이하를 쓴다.</p>
 <p>순서를 뒤집으면 실패한다. 초기해 없이 비선형 최적화만 돌리면 엉뚱한 국소최소로 빠진다. 닫힌 형태 해법이 여전히 필요한 이유가 정확도가 아니라 출발점 제공에 있다.</p>
 <p>마커 기반 방식은 마커 네 귀퉁이로 이 문제를 푸는 것이 사실상 전부다. 마커 없는 방식도 지도에 저장된 3차원 특징점과 현재 영상의 대응으로 같은 문제를 매 프레임 푼다.</p>
-<p>밤하늘에서 별 세 개의 실제 위치를 알면 내가 지구 어디에 서 있는지 대략 알 수 있다. 하지만 세 개만으로는 헷갈리는 후보 지점이 남고, 네 번째 별을 확인해야 하나로 좁혀진다.</p>
+<p>밤하늘에서 별 세 개의 실제 위치를 알면 내가 지구 어디에 서 있는지 대략 알 수 있다. 하지만 세 개만으로는 헷갈리는 후보 지점이 남고, 네 번째 별을 확인해야 하나로 좁혀진다. <sup class="citation-group"><a aria-label="참고문헌 11" class="citation" href="#ref-ch10-11" id="cite-ch10-11-2" role="doc-noteref">[11]</a></sup></p>
 <h2 id="section-11">11. RANSAC — 평균 대신 합의</h2>
 <p>최소제곱법은 모든 데이터가 조금씩만 틀렸다고 가정한다. 그 가정이 깨지면 무너진다. 아주 멀리 떨어진 이상치가 단 하나만 섞여도 최소제곱해는 그쪽으로 끌려간다. 통계 용어로 붕괴점이 0이다.</p>
 <p>그런데 영상 특징점 매칭은 본질적으로 이상치 투성이다. 비슷하게 생긴 벽돌, 창틀, 반복 무늬는 엉뚱한 곳끼리 짝지어진다. 실제 현장에서 오대응 비율이 20~70%인 것은 전혀 이상한 일이 아니다.</p>
@@ -447,10 +458,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 12" class="citation" href="#ref-ch10-12" id="cite-ch10-12-1" role="doc-noteref">[12]</a></sup> (본문 기준으로 재구성)</p>
 <p>같은 이상치 비율에서 표본 크기만 두 배로 늘었는데 반복 횟수는 16배가 되었다. 이 공식은 이상치 비율에 대해서는 완만하지만 최소 표본 크기에 대해서는 지수적으로 커진다. 그래서 최소 몇 점으로 풀 수 있는가를 줄이는 연구가 그토록 중요하다. 앞 절의 P3P 같은 최소 해법이 존재하는 실질적 이유가 여기 있다.</p>
 <p>내부점 판정 임계값에도 자주 틀리는 지점이 있다. 측정 잡음 표준편차의 약 두 배를 쓰라는 처방이 흔한데, 자유도가 맞지 않는다. 재투영 오차는 점과 점 사이의 거리이므로 자유도가 2다. 하틀리와 지서만(2004)의 표준 처방은 카이제곱 95% 분위를 써서 t² = 5.99σ², 곧 t ≈ 2.45σ다. 1.96σ는 t² = 3.84σ²에 해당하며 자유도 1인 점과 직선 사이의 거리에 적용된다. 2σ를 쓰면 임계값이 약 20% 낮아져 참 내부점을 체계적으로 버린다.</p>
 <p>기본 얼개는 단순하지만 변형이 많다. MSAC은 내부점을 세는 대신 잔차의 크기를 반영한다. PROSAC은 좋은 대응을 먼저 뽑는다. LO-RANSAC과 GC-RANSAC은 채택된 모델 주변에서 국소 최적화를 덧붙인다.</p>
-<p>설문 응답의 절반이 장난이라도, 무작위로 네 명씩 뽑아 이 네 명이 같은 이야기를 하는가를 수십 번 확인하면 진짜 다수 의견을 찾아낼 수 있다. 평균을 내면 장난 응답이 결과를 망치지만, 합의를 세면 망치지 못한다.</p>
+<p>설문 응답의 절반이 장난이라도, 무작위로 네 명씩 뽑아 이 네 명이 같은 이야기를 하는가를 수십 번 확인하면 진짜 다수 의견을 찾아낼 수 있다. 평균을 내면 장난 응답이 결과를 망치지만, 합의를 세면 망치지 못한다. <sup class="citation-group"><a aria-label="참고문헌 12" class="citation" href="#ref-ch10-12" id="cite-ch10-12-2" role="doc-noteref">[12]</a></sup></p>
 <h2 id="section-12">12. 번들 조정 — 전체를 한꺼번에 미세조정하기</h2>
 <p>프레임마다 따로 자세를 풀면 오차가 쌓여 지도가 휘어진다. 번들 조정은 모든 카메라 자세와 모든 3차원 점을 동시에 미지수로 놓고, 관측된 모든 영상점과 재투영된 점 사이의 거리 제곱합을 한꺼번에 최소화한다. 이름의 번들은 각 3차원 점에서 여러 카메라로 뻗어 나가는 광선 다발을 뜻한다. 트리그스·맥로클런·하틀리·피츠기번(2000)이 이 문제의 표준적 정리를 제공했다.</p>
 <p>문제는 크기다. 카메라 100대와 점 5만 개면 미지수가 15만 개를 넘는다.</p>
@@ -490,9 +502,10 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 13" class="citation" href="#ref-ch10-13" id="cite-ch10-13-1" role="doc-noteref">[13]</a></sup> (본문 기준으로 재구성)</p>
 <p>연산량 쪽은 흔히 과장된다. 대칭 행렬의 촐레스키 분해는 N³가 아니라 약 N³/3이다. 그리고 초당 10¹¹에서 10¹² 연산을 하는 기계라면 수 시간 규모로 느리기는 해도 불가능은 아니다. 진짜 장벽은 아래 줄이다. 배정도 실수로 181 GB인 행렬은 애초에 메모리에 올라가지 않는다. 희소성과 슈어 보수를 쓰는 첫째 동기는 연산 절감이 아니라 밀집 저장 회피다.</p>
 <p>이 문제에는 또 하나 특이한 성질이 있다. 게이지 자유도다. 재구성 전체를 통째로 회전시키거나 옮기거나 확대해도 재투영 오차는 변하지 않는다. 일곱 개의 자유도를 따로 고정하지 않으면 해가 유일하지 않다. 그리고 RANSAC이 놓친 잔여 이상치를 위해 후버나 코시 같은 로버스트 손실함수를 씌우는 것이 표준이다. 세레스 솔버, g2o, GTSAM 같은 구현들이 이 조각들을 모아 제공한다. 아가르왈 외(2011)는 이 기법으로 도시 규모 재구성을 하루 안에 수행한 사례를 보고했다.</p>
-<p>여러 사람이 찍은 사진을 벽에 핀으로 붙여 하나의 지도를 만든다고 하자. 한 장씩 차례로 붙이면 마지막에 크게 어긋난다. 전부 헐겁게 붙여 놓고 모든 사진이 동시에 가장 덜 어긋나도록 핀을 함께 밀어 넣는 것이 번들 조정이다.</p>
+<p>여러 사람이 찍은 사진을 벽에 핀으로 붙여 하나의 지도를 만든다고 하자. 한 장씩 차례로 붙이면 마지막에 크게 어긋난다. 전부 헐겁게 붙여 놓고 모든 사진이 동시에 가장 덜 어긋나도록 핀을 함께 밀어 넣는 것이 번들 조정이다. <sup class="citation-group"><a aria-label="참고문헌 13" class="citation" href="#ref-ch10-13" id="cite-ch10-13-2" role="doc-noteref">[13]</a></sup></p>
 <h2 id="section-13">13. 다양체 위의 최적화 — 회전은 더할 수 없다</h2>
 <p>앞의 최적화들이 은근슬쩍 넘어간 문제가 있다. 최적화 알고리즘은 현재 값에 작은 변화량을 더하는 일을 반복한다. 그런데 회전은 더할 수 있는 대상이 아니다. 두 회전행렬을 성분끼리 더하면 회전행렬이 아니고, 두 오일러각을 평균 내면 엉뚱한 자세가 나온다.</p>
 <p>해법은 리트랙션이다. 현재 추정된 회전 R 주변의 접평면에서 3차원 벡터 δ만큼 움직이고, 그 δ를 지수사상으로 회전으로 바꿔 R에 곱한다. 식으로는 R ← R·exp([δ]×)다. 곱한 결과는 항상 정확한 회전이다. 이동은 원래 벡터공간이니 그냥 더한다. 결과적으로 자세 하나당 정확히 여섯 개의 숫자만 흔들게 되고, 자유도가 남거나 모자라지 않는다.</p>
@@ -518,10 +531,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 14" class="citation" href="#ref-ch10-14" id="cite-ch10-14-1" role="doc-noteref">[14]</a></sup> (본문 기준으로 재구성)</p>
 <p>30°에서의 값은 기준을 고정해서 읽어야 한다. 참값 sinθ를 분모로 삼으면 4.72%이고, θ를 분모로 삼으면 4.51%다. 한 문서 안에서 분모 기준이 바뀌면 같은 계산이 다른 값으로 보인다.</p>
 <p>포르스터·칼로네·델라어트·스카라무자(2017)는 관성 측정의 사전적분을 이 다양체 구조 위에서 정식화해, 시각-관성 추정을 실시간으로 풀 수 있게 만들었다. 솔라 외(2018)의 정리와 함께 이 계열이 현행 추적 시스템의 수학적 기반이다.</p>
 <p>규칙을 지키지 않으면 증상이 늦게 나타난다. 최적화가 미세하게 회전이 아닌 행렬을 만들어내고, 그 오염이 누적되어 며칠 뒤에나 드러나는 드리프트가 된다. 추적 코드의 조용한 버그가 대개 여기에서 나온다.</p>
-<p>지구본 위에서 한 걸음 옮기는 방법은 두 가지다. 공중으로 직진해 지구를 뚫고 나가거나, 발밑의 땅을 따라 표면 위를 걷거나. 두 번째가 지수사상이 하는 일이다.</p>
+<p>지구본 위에서 한 걸음 옮기는 방법은 두 가지다. 공중으로 직진해 지구를 뚫고 나가거나, 발밑의 땅을 따라 표면 위를 걷거나. 두 번째가 지수사상이 하는 일이다. <sup class="citation-group"><a aria-label="참고문헌 14" class="citation" href="#ref-ch10-14" id="cite-ch10-14-2" role="doc-noteref">[14]</a></sup></p>
 <h2 id="section-14">14. 센서와 센서 사이 — 공간, 그리고 시간</h2>
 <p>기기 한 대 안에는 카메라와 관성센서와 디스플레이가 각각 다른 위치에 서로 다른 방향으로 붙어 있다. 이들 사이의 고정된 상대 자세를 모르면, 기기가 회전할 때마다 지렛대 효과로 위치 오차가 생긴다.</p>
 <p>여기서 정식화를 정확히 해야 한다. 두 센서가 같은 움직임을 각자의 좌표계에서 관측했을 때 성립하는 AX = XB 형태의 방정식이 있다. 차이와 렌츠(1989)의 손-눈 보정이다. 그런데 이 정식화는 두 장치가 모두 완전한 6자유도 자세를 준다는 전제 위에 있다. 관성센서는 자세를 주지 않는다. 각속도와 비력을 준다. 그래서 카메라와 관성센서 사이에는 이 방정식을 그대로 쓸 수 없다.</p>
@@ -562,9 +576,10 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 15" class="citation" href="#ref-ch10-15" id="cite-ch10-15-1" role="doc-noteref">[15]</a></sup> (본문 기준으로 재구성)</p>
 <p>표의 두 오차는 원인이 다르므로 한 묶음으로 비교하면 안 된다. 0.87 mm는 레버암과 시간 오프셋이 곱해진 결과다. 레버암이 0이면 사라진다. 1°는 200°/s에 5 ms를 곱한 순수한 시간 정렬 오차다. 레버암이 0이어도 그대로 발생한다. 하나는 배치 문제이고 다른 하나는 동기화 문제다. 대책도 각각 다르다.</p>
 <p>크기의 감만 말하면 회전 성분이 지배적이다. 1°의 각도 오차는 1 m 거리에서 약 17.5 mm의 어긋남이 된다. 같은 상황의 병진 오차 0.87 mm와는 성질이 다른 양이지만, 사용자가 보게 되는 어긋남의 주범이 어느 쪽인지는 분명하다.</p>
-<p>버스 앞쪽에 앉은 사람과 뒤쪽에 앉은 사람은 같은 회전을 겪지만 이동 거리가 다르다. 두 사람의 좌석 간격을 모르면 뒷사람의 기록으로 앞사람의 위치를 계산할 수 없고, 두 사람의 시계가 5 ms 어긋나 있으면 급커브에서만 어긋남이 드러난다.</p>
+<p>버스 앞쪽에 앉은 사람과 뒤쪽에 앉은 사람은 같은 회전을 겪지만 이동 거리가 다르다. 두 사람의 좌석 간격을 모르면 뒷사람의 기록으로 앞사람의 위치를 계산할 수 없고, 두 사람의 시계가 5 ms 어긋나 있으면 급커브에서만 어긋남이 드러난다. <sup class="citation-group"><a aria-label="참고문헌 15" class="citation" href="#ref-ch10-15" id="cite-ch10-15-2" role="doc-noteref">[15]</a></sup></p>
 <h2 id="section-15">15. 측정할 수 없는 눈 — 광학 시스루의 보정</h2>
 <p>지금까지의 사슬은 모두 측정 가능한 고리로 이어져 있었다. 마지막 고리는 그렇지 않다.</p>
 <p>카메라 영상 위에 그림을 그리는 비디오 시스루에서는 마지막 고리가 이미지좌표계다. 여기서 흔한 오해가 하나 있다. 카메라의 투영 중심이 곧 사용자의 눈이라는 설명이다. 그렇지 않다. 패스스루 기기의 카메라는 눈보다 수 센티미터 앞이나 바깥에 놓인다. 그래서 촬영 영상을 눈 시점으로 다시 투영해야 하고, 고전적인 정시성 설계가 거울 폴딩으로 카메라를 광학적으로 눈 위치까지 옮겼던 이유도 이것이다. 비디오 시스루가 없애주는 것은 눈 위치를 모른다는 문제이지, 시점 오프셋 문제 자체가 아니다.</p>
@@ -604,10 +619,11 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 16" class="citation" href="#ref-ch10-16" id="cite-ch10-16-1" role="doc-noteref">[16]</a></sup> (본문 기준으로 재구성)</p>
 <p>어려움은 여러 겹이다. 첫째, 측정 장비가 사람이다. 머리 떨림과 조준 편향과 피로가 그대로 잡음이 된다. 둘째, 기기가 코 위에서 조금만 미끄러져도 애써 구한 보정이 무효가 된다. 셋째, 사람마다 동공간거리가 다르다. 도지슨(2004)의 값으로 표준편차 3.8 mm는 평균의 6%에 해당한다. 넷째, 시차의 기하학 때문에 시점의 작은 이동이 곧 정합 오차로 증폭된다. 가상 상이 맺히는 거리 D와 실제 물체 거리 d가 다르면, 시점이 δ만큼 움직일 때 어긋남은 δ(1 − d/D)가 된다. 가상 상면 2 m, 실물 0.5 m, 시점 이동 5 mm라면 어긋남은 3.75 mm다. 0.5 m 거리에서 각도로 환산하면 약 0.43°이고, 1절의 표에서 본 목표선 1 arcmin의 스물다섯 배가 넘는다.</p>
 <p>안구 회전을 어떻게 볼지는 견해가 갈린다. 시선을 돌리면 안구가 회전하고, 입사동이 눈 회전중심 앞 약 11 mm에 있으므로 실효 시점이 밀리미터 단위로 움직인다. 이것을 치명적 문제로 보는 관점이 있다. 반면 아주마(1997)는 홀러웨이의 분석을 근거로 반대 결론을 명시한다. 사용자의 눈이 기기에 대해 회전할 수는 있으나 그로 인한 오차는 매우 작고, 눈의 회전중심을 그래픽 모델의 시점으로 쓰면 광학 시스루 기기에서 눈추적이 필요 없어진다는 것이다. 어느 쪽이 맞는지는 상 거리와 물체 거리의 조합에 달려 있으므로, 위의 시차 공식에 실제 조건을 넣어 판단하는 것이 옳다.</p>
 <p>그루버트·이토·모저·스완(2018)은 이 계열의 보정 방법들을 조사해 정리했다. 현재의 중심 과제는 자동 눈추적으로 사용자 정렬 절차를 아예 없애는 쪽이다.</p>
-<p>남이 쓴 안경을 대신 맞춰주는 일과 같다. 그 사람의 시야 안에서 무엇이 어떻게 겹쳐 보이는지는 오직 그 사람만 알고, 우리는 지금 겹쳤는지 묻는 것 외에 확인할 방법이 없다.</p>
+<p>남이 쓴 안경을 대신 맞춰주는 일과 같다. 그 사람의 시야 안에서 무엇이 어떻게 겹쳐 보이는지는 오직 그 사람만 알고, 우리는 지금 겹쳤는지 묻는 것 외에 확인할 방법이 없다. <sup class="citation-group"><a aria-label="참고문헌 16" class="citation" href="#ref-ch10-16" id="cite-ch10-16-2" role="doc-noteref">[16]</a></sup></p>
 <h2 id="section-16">16. 일곱 번째 좌표 — 지연, 예측, 잔여 오차</h2>
 <p>앞의 모든 수학이 완벽해도 어긋날 수 있다. 계산에 쓰인 자세는 과거의 값이고, 그 결과로 그려진 그림은 미래에 눈에 도달하기 때문이다.</p>
 <p>센서가 자세를 읽는 순간부터 그 결과가 빛이 되어 눈에 닿기까지의 시간을 모션-투-포톤 지연이라 부른다. 그 사이에 머리가 움직였다면 어긋남의 크기는 정확히 각속도 곱하기 지연 시간이다. 이 곱이 문제의 전부라는 사실이 중요하다. 지연을 절반으로 줄이면 오차도 절반이 된다.</p>
@@ -654,6 +670,7 @@
 </tr>
 </tbody>
 </table></div>
+<p class="table-source">표 출처: <sup class="citation-group"><a aria-label="참고문헌 2" class="citation" href="#ref-ch10-2" id="cite-ch10-2-3" role="doc-noteref">[2]</a></sup> (본문 기준으로 재구성)</p>
 <p>널리 인용되는 홀러웨이의 경험칙도 조건을 붙여 읽어야 한다. 지연 1 ms당 약 1 mm라는 값은 대상 거리 500 mm에서 나온 것이다. 그리고 회전 성분 0.44 mm/ms와 병진 성분 0.5 mm/ms를 합산한 최악의 경우다. 절반이 병진 기여다. 같은 문서의 평균 속도를 넣으면 약 0.33 mm/ms로 3분의 1이 된다. 거리와 조건과 성분 구성을 빼고 1 mm/ms만 인용하면 세 배 과대 추정이 된다.</p>
 <p>지연 요구가 얼마나 가혹한지는 아주마(1997)의 계산이 잘 보여준다. 50°/s의 중등도 회전에서 각도 오차를 0.5° 이하로 유지하려면 시스템 지연이 10 ms 이하여야 한다. 그런데 60 Hz 디스플레이에 프레임버퍼를 주사하는 일만으로 16.67 ms가 소모된다. 같은 문서의 다른 예시에서는 지연 100 ms와 회전 50°/s, 팔 길이 68 cm 조건에서 정합 오차가 거의 60 mm에 이른다.</p>
 <p>대책은 세 갈래다.</p>
@@ -663,5 +680,28 @@
 <p>타임워프의 한계도 정확히 알아야 한다. 이 기법이 보정하는 것은 방향이다. 깊이를 함께 쓰더라도 병진 성분은 근사에 그치고, 가려졌던 영역이 드러나는 문제가 남는다. 근거리 정합에서 결정적인 성분이 바로 그 남는 쪽이다.</p>
 <p>결국 시간은 좌표계 하나를 더 추가하는 셈이다. 이 축을 무시한 기하학은 정지 상태에서만 맞는다.</p>
 <p>움직이는 기차 창밖으로 공을 던져 표적을 맞히는 일과 같다. 던지는 순간의 표적 위치를 겨누면 반드시 빗나가고, 공이 도착할 시각의 위치를 겨눠야 한다. 그런데 바람이 불면 예측이 흔들려, 더 멀리 내다볼수록 더 크게 틀릴 수 있다.</p>
-<p>맞춘다는 것은 하나의 계산이 아니라 다섯 개의 좌표계와 네 개의 고리, 그리고 시간이라는 한 축으로 이루어진 사슬 전체를 동시에 맞추는 일이다. 사슬의 오차는 더해지지 않고 곱해지며, 목표선인 1 arcmin은 어느 한 고리만 잘 맞춰서는 결코 지킬 수 없다.</p></div><nav class="pager" aria-label="장 이동"><a href="ch09.html">← 이전 장 <span>빛을 눈에 넣는 법</span></a><a href="../index.html#part-3">전체 목차 <span>제3부</span></a><a href="ch11.html">다음 장 → <span>기계가 세상을 느끼는 법</span></a></nav></article></div></main>
+<p>맞춘다는 것은 하나의 계산이 아니라 다섯 개의 좌표계와 네 개의 고리, 그리고 시간이라는 한 축으로 이루어진 사슬 전체를 동시에 맞추는 일이다. 사슬의 오차는 더해지지 않고 곱해지며, 목표선인 1 arcmin은 어느 한 고리만 잘 맞춰서는 결코 지킬 수 없다. <sup class="citation-group"><a aria-label="참고문헌 2" class="citation" href="#ref-ch10-2" id="cite-ch10-2-4" role="doc-noteref">[2]</a></sup></p>
+<section aria-label="참고문헌" class="references" id="references-ch10" role="doc-endnotes">
+<h2 id="section-17">참고문헌</h2>
+<p class="reference-guide">본문의 번호를 누르면 출처로 이동합니다. 절 끝의 번호는 그 절의 사실 자료를, 표 아래의 번호는 표에 사용한 자료를 가리킵니다. 비교·계산·비유와 결론은 필자의 재구성입니다. 한 번호에 함께 사용한 문헌이 둘 이상이면 묶어서 적었습니다.</p>
+<p class="reference-guide">서지정보와 확인 메모는 옵시디언 조사 기록을 바탕으로 복원했습니다. 원 기록의 ‘전문 확인’·‘조회’ 표기는 당시 조사 상태이며 이번 웹판에서 모두 재검증했다는 뜻은 아닙니다. 불완전한 서지사항은 임의로 채우지 않았습니다.</p>
+<ol class="reference-list">
+<li data-source="math-1" id="ref-ch10-1"><span class="reference-number">[1]</span><div>Hartley &amp; Zisserman, 『Multiple View Geometry in Computer Vision』 2nd ed. (Cambridge, 2004), Ch.6 §6.1 'Finite cameras'; Szeliski, 『Computer Vision: Algorithms and Applications』 2nd ed. (2022), §2.1 <span class="citation-backs"><a aria-label="참고문헌 1 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-1-1">↩1</a> <a aria-label="참고문헌 1 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-1-2">↩2</a> <a aria-label="참고문헌 1 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch10-1-3">↩3</a> <a aria-label="참고문헌 1 인용 위치 4로 돌아가기" class="citation-back" href="#cite-ch10-1-4">↩4</a> <a aria-label="참고문헌 1 인용 위치 5로 돌아가기" class="citation-back" href="#cite-ch10-1-5">↩5</a></span></div></li>
+<li data-source="math-16" id="ref-ch10-2"><span class="reference-number">[2]</span><div>R. Azuma, 「A Survey of Augmented Reality」, Presence: Teleoperators and Virtual Environments 6(4):355–385 (1997); R. Holloway, 「Registration Error Analysis for Augmented Reality」, Presence 6(4):413–432 (1997); R. Azuma &amp; G. Bishop, 「Improving Static and Dynamic Registration in an Optical See-through HMD」, SIGGRAPH '94, pp.197–204 <span class="citation-backs"><a aria-label="참고문헌 2 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-2-1">↩1</a> <a aria-label="참고문헌 2 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-2-2">↩2</a> <a aria-label="참고문헌 2 인용 위치 3로 돌아가기" class="citation-back" href="#cite-ch10-2-3">↩3</a> <a aria-label="참고문헌 2 인용 위치 4로 돌아가기" class="citation-back" href="#cite-ch10-2-4">↩4</a></span></div></li>
+<li data-source="math-2" id="ref-ch10-3"><span class="reference-number">[3]</span><div>Hartley &amp; Zisserman, 『Multiple View Geometry』 2nd ed. (2004), Ch.2 §2.2 'The 2D projective plane' 및 Ch.3; Szeliski 2nd ed. (2022), §2.1.1~2.1.4 <span class="citation-backs"><a aria-label="참고문헌 3 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-3-1">↩1</a> <a aria-label="참고문헌 3 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-3-2">↩2</a></span></div></li>
+<li data-source="math-3" id="ref-ch10-4"><span class="reference-number">[4]</span><div>Solà, Deray, Atchuthan, 「A micro Lie theory for state estimation in robotics」, arXiv:1812.01537 (2018); Murray, Li, Sastry, 『A Mathematical Introduction to Robotic Manipulation』 (CRC, 1994), Ch.2 <span class="citation-backs"><a aria-label="참고문헌 4 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-4-1">↩1</a> <a aria-label="참고문헌 4 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-4-2">↩2</a></span></div></li>
+<li data-source="math-4" id="ref-ch10-5"><span class="reference-number">[5]</span><div>Stuelpnagel, 「On the Parametrization of the Three-Dimensional Rotation Group」, SIAM Review 6(4):422–430 (1964); Diebel, 「Representing Attitude: Euler Angles, Unit Quaternions, and Rotation Vectors」, Stanford Univ. tech report (2006) <span class="citation-backs"><a aria-label="참고문헌 5 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-5-1">↩1</a> <a aria-label="참고문헌 5 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-5-2">↩2</a></span></div></li>
+<li data-source="math-5" id="ref-ch10-6"><span class="reference-number">[6]</span><div>Hartley &amp; Zisserman, 『Multiple View Geometry』 2nd ed. (2004), Appendix 4 'Matrix properties and decompositions'; Diebel (2006) §5 <span class="citation-backs"><a aria-label="참고문헌 6 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-6-1">↩1</a> <a aria-label="참고문헌 6 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-6-2">↩2</a></span></div></li>
+<li data-source="math-6" id="ref-ch10-7"><span class="reference-number">[7]</span><div>Shoemake, 「Animating Rotation with Quaternion Curves」, SIGGRAPH '85, Computer Graphics 19(3):245–254 (1985); Diebel (2006) §6 <span class="citation-backs"><a aria-label="참고문헌 7 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-7-1">↩1</a> <a aria-label="참고문헌 7 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-7-2">↩2</a></span></div></li>
+<li data-source="math-7" id="ref-ch10-8"><span class="reference-number">[8]</span><div>Hartley &amp; Zisserman, 『Multiple View Geometry』 2nd ed. (2004), §6.1 'Finite cameras'; Szeliski 2nd ed. (2022), §2.1.5 'Camera intrinsics' <span class="citation-backs"><a aria-label="참고문헌 8 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-8-1">↩1</a> <a aria-label="참고문헌 8 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-8-2">↩2</a></span></div></li>
+<li data-source="math-8" id="ref-ch10-9"><span class="reference-number">[9]</span><div>D.C. Brown, 「Decentering Distortion of Lenses」, Photogrammetric Engineering 32(3):444–462 (1966); OpenCV calib3d 모듈 문서 'Camera Calibration and 3D Reconstruction' <span class="citation-backs"><a aria-label="참고문헌 9 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-9-1">↩1</a> <a aria-label="참고문헌 9 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-9-2">↩2</a></span></div></li>
+<li data-source="math-9" id="ref-ch10-10"><span class="reference-number">[10]</span><div>Z. Zhang, 「A Flexible New Technique for Camera Calibration」, IEEE TPAMI 22(11):1330–1334 (2000); Hartley &amp; Zisserman 2nd ed. (2004), Ch.8 <span class="citation-backs"><a aria-label="참고문헌 10 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-10-1">↩1</a> <a aria-label="참고문헌 10 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-10-2">↩2</a></span></div></li>
+<li data-source="math-10" id="ref-ch10-11"><span class="reference-number">[11]</span><div>X.-S. Gao, X.-R. Hou, J. Tang, H.-F. Cheng, 「Complete Solution Classification for the Perspective-Three-Point Problem」, IEEE TPAMI 25(8):930–943 (2003); V. Lepetit, F. Moreno-Noguer, P. Fua, 「EPnP: An Accurate O(n) Solution to the PnP Problem」, IJCV 81(2):155–166 (2009) <span class="citation-backs"><a aria-label="참고문헌 11 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-11-1">↩1</a> <a aria-label="참고문헌 11 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-11-2">↩2</a></span></div></li>
+<li data-source="math-11" id="ref-ch10-12"><span class="reference-number">[12]</span><div>M.A. Fischler &amp; R.C. Bolles, 「Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography」, Communications of the ACM 24(6):381–395 (1981); Hartley &amp; Zisserman 2nd ed. (2004), §4.7 및 Table 4.3 <span class="citation-backs"><a aria-label="참고문헌 12 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-12-1">↩1</a> <a aria-label="참고문헌 12 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-12-2">↩2</a></span></div></li>
+<li data-source="math-12" id="ref-ch10-13"><span class="reference-number">[13]</span><div>B. Triggs, P. McLauchlan, R. Hartley, A. Fitzgibbon, 「Bundle Adjustment — A Modern Synthesis」, Vision Algorithms '99, LNCS 1883:298–372 (Springer, 2000); S. Agarwal et al., 「Building Rome in a Day」, CACM 54(10):105–112 (2011) <span class="citation-backs"><a aria-label="참고문헌 13 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-13-1">↩1</a> <a aria-label="참고문헌 13 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-13-2">↩2</a></span></div></li>
+<li data-source="math-13" id="ref-ch10-14"><span class="reference-number">[14]</span><div>J. Solà, J. Deray, D. Atchuthan, 「A micro Lie theory for state estimation in robotics」, arXiv:1812.01537 (2018); C. Forster, L. Carlone, F. Dellaert, D. Scaramuzza, 「On-Manifold Preintegration for Real-Time Visual-Inertial Odometry」, IEEE Trans. Robotics 33(1):1–21 (2017) <span class="citation-backs"><a aria-label="참고문헌 14 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-14-1">↩1</a> <a aria-label="참고문헌 14 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-14-2">↩2</a></span></div></li>
+<li data-source="math-14" id="ref-ch10-15"><span class="reference-number">[15]</span><div>R.Y. Tsai &amp; R.K. Lenz, 「A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/Eye Calibration」, IEEE Trans. Robotics and Automation 5(3):345–358 (1989); P. Furgale, J. Rehder, R. Siegwart, 「Unified Temporal and Spatial Calibration for Multi-Sensor Systems」, IROS 2013 (Kalibr); F.M. Mirzaei &amp; S.I. Roumeliotis, 「A Kalman Filter-Based Algorithm for IMU-Camera Calibration」, IEEE Trans. Robotics 24(5):1143–1156 (2008) <span class="citation-backs"><a aria-label="참고문헌 15 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-15-1">↩1</a> <a aria-label="참고문헌 15 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-15-2">↩2</a></span></div></li>
+<li data-source="math-15" id="ref-ch10-16"><span class="reference-number">[16]</span><div>M. Tuceryan &amp; N. Navab, 「Single Point Active Alignment Method (SPAAM) for Optical See-Through HMD Calibration for AR」, IEEE/ACM ISAR 2000, pp.149–158; J. Grubert, Y. Itoh, K. Moser, J.E. Swan II, 「A Survey of Calibration Methods for Optical See-Through Head-Mounted Displays」, IEEE TVCG 24(9):2649–2662 (2018); N.A. Dodgson, 「Variation and Extrema of Human Interpupillary Distance」, Proc. SPIE 5291 (2004) <span class="citation-backs"><a aria-label="참고문헌 16 인용 위치 1로 돌아가기" class="citation-back" href="#cite-ch10-16-1">↩1</a> <a aria-label="참고문헌 16 인용 위치 2로 돌아가기" class="citation-back" href="#cite-ch10-16-2">↩2</a></span></div></li>
+</ol>
+</section></div><nav class="pager" aria-label="장 이동"><a href="ch09.html">← 이전 장 <span>빛을 눈에 넣는 법</span></a><a href="../index.html#part-3">전체 목차 <span>제3부</span></a><a href="ch11.html">다음 장 → <span>기계가 세상을 느끼는 법</span></a></nav></article></div></main>
 <footer><div class="wrap footer-inner"><a href="/">← SpatialFlare 홈</a><span>증강현실과 조경 · 웹 개정판 · 2026.09.30</span><a href="../editorial.html">구성·편집 기록</a><a href="../index.html#downloads">자료 내려받기</a><a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/augmented-reality-landscape">GitHub</a></div></footer></body></html>
