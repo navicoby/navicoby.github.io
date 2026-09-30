@@ -571,7 +571,8 @@ function renderChapter(n){
   document.getElementById("prev").onclick=()=>go(c.n-1);
   document.getElementById("next").onclick=()=>go(c.n+1);
   renderNav(search.value);
-  window.scrollTo({top: document.querySelector(".layout").offsetTop-10, behavior:"smooth"});
+  const layout = document.querySelector(".layout, .shell, main");
+  if (layout) window.scrollTo({top: Math.max(0, layout.offsetTop-10), behavior:"smooth"});
 }
 function go(n){
   if(n<1||n>27) return;
