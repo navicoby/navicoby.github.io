@@ -4,7 +4,9 @@ description: 문서 조사와 실제 실행 환경을 구별하고 오래된 예
 eyebrow: TOOLS / REPRODUCIBILITY
 ---
 
-**공식 문서 조사일: 2026-09-30.** 아래 버전은 이 초안의 로컬 검증 환경입니다. 모든 시스템에서의 호환성 보증이나 “언제나 최신”이라는 뜻은 아닙니다. Windows CPython **3.13.5**에서 검증했습니다. GPU/PyTorch 학습 환경은 별도 단계입니다.
+**공식 문서 조사일: 2026-09-30.** 아래 버전은 이 초안의 로컬 검증 환경입니다. 모든 시스템에서의 호환성 보증이나 “언제나 최신”이라는 뜻은 아닙니다. Windows CPython **3.13.5**에서 검증했습니다. PyTorch CPU 텐서·CNN·손실·작은 U-Net 예제도 실행했습니다. GPU 학습과 실자료 모델 성능 검증은 별도 단계입니다.
+
+도구 이름이 낯설면 [도구와 용어 안내](glossary.html)를 먼저 읽으세요. 종류·입력·출력과 역할을 설명합니다.
 
 ## 실습 환경 만들기
 
@@ -43,7 +45,7 @@ macOS/Linux:
 | Folium | 0.20.0 | Map, Marker/Popup, MarkerCluster, GeoJson, LayerControl |
 | NetworkX | 3.7 | 가중 최단경로, 연결요소, 도달 가능한 노드 |
 | OSMnx | 2.1.1 | graph_from_point, projection.project_graph, convert.graph_to_gdfs, routing.shortest_path |
-| PyTorch / scikit-image | 선택 단계·이번 실행 미포함 | Dataset/DataLoader, Conv2d, 분할 손실 / label·regionprops |
+| PyTorch / scikit-image | 2.14.0 / 0.26.0 (CPU 예제 실행) | Dataset/DataLoader, Conv2d, 분할 손실 / label·regionprops |
 
 GeoPandas stable 문서의 표시 버전과 설치된 배포 버전이 다를 수 있습니다. Folium `latest` 문서는 조사 시 **1.0.0rc1**을 표시했으므로 실습은 설치·검증한 안정 배포 0.20.0을 사용했습니다. 실제 전체 의존성은 저장소의 `requirements-lock.txt`에 기록합니다.
 
@@ -98,3 +100,13 @@ print("800m 이내 도달 노드:", len(distance))
 ## 시각화 선택
 
 Matplotlib choropleth는 원시 건수·면적당 밀도·인구당 비율을 구분하고 색 구간을 고정합니다. Folium HeatMap은 줌과 화면 반경에 영향을 받는 표시 방식으로, 면적당 밀도나 KDE 분석 결과와 동일하지 않습니다. 분포를 평가하려면 분석 단위·대역폭·정규화를 먼저 정하고 결과를 지도에 그립니다. [GeoPandas plotting](https://geopandas.org/en/stable/docs/user_guide/mapping.html), [Folium HeatMap](https://python-visualization.github.io/folium/latest/user_guide/plugins/heatmap.html)
+
+## AI 장의 추가 설치
+
+29~32장은 CPU로도 작은 예제를 실행할 수 있습니다. 기본 requirements 설치 뒤 아래 선택 의존성을 설치합니다.
+
+```text
+python -m pip install -r books/python-geospatial/requirements-ai.txt
+```
+
+GPU 환경은 [PyTorch 공식 설치 안내](https://pytorch.org/get-started/locally/)에서 선택하세요. 이번 검증은 CPU 예제이며 GPU 가속 훈련은 수행하지 않았습니다.

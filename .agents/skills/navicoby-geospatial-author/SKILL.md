@@ -7,7 +7,7 @@ description: navicoby.github.io의 「파이썬 공간데이터 사이언스 —
 
 ## 목적과 독자
 
-실무 조경·도시계획 독자가 Python geospatial foundation → urban/landscape analysis → GeoAI/Spatial AI로 진행하도록 돕는다. GIS 초급자에게는 좌표·단위·자료구조를, 설계 실무자에게는 분석 결과가 의사결정을 바꾸는 이유를 설명한다. Python의 변수·함수·배열 기본은 선수 지식으로 두고 필요한 부분만 짧게 복습한다.
+실무 조경·도시계획 독자가 Python geospatial foundation → urban/landscape analysis → GeoAI/Spatial AI로 진행하도록 돕는다. GIS 초급자에게는 좌표·단위·자료구조를, 설계 실무자에게는 분석 결과가 의사결정을 바꾸는 이유를 설명한다. 라이브러리라는 말이 낯선 독자도 포함한다. 첫 언급에서 도구의 종류(언어·라이브러리·파일 형식·데이터·서비스), 뜻, 입력과 출력, 필요한 이유를 설명한다. 설치·import·API와 배열·좌표계 기초를 생략하지 않는다.
 
 정식 제목은 **파이썬 공간데이터 사이언스 — GeoPandas에서 Spatial AI까지**. Sentinel-2A를 포함한 Sentinel-2 위성영상, 한국 공공데이터, OSM, BIM 연계를 기본 범위에 포함한다. 특정 위성의 현재 운영 상태·재방문 주기를 기억에 의존해 단정하지 않는다.
 
@@ -15,19 +15,20 @@ description: navicoby.github.io의 「파이썬 공간데이터 사이언스 —
 
 작업 시작 시 현재 저장소의 `AGENTS.md`, `README.md`, `hugo.toml`, `layouts/index.html`, `.github/workflows/`와 해당 콘텐츠를 읽는다. 조사 당시(2026-09-30) Hugo + PaperMod이며, 독립 학습서는 `static/<route>/index.html`을 메인에 연결하는 방식이었다. 이후 구조가 바뀌면 현재 저장소를 우선한다.
 
-이 프로젝트의 집필 원본은 `books/python-geospatial/pages/`, 실행 예제는 `books/python-geospatial/examples/`, 빌더는 `scripts/geospatial/build.py`, 발행 경로는 `static/python-geospatial/`이다. 공통 스타일은 기존 사이트의 연녹색 바탕·진녹색 링크·절제된 타이포그래피를 따른다. 새 장은 pages 목록에 넣고 공통 탐색에 표시한다. 기존 사이트의 다른 경로, 테마, 배포 설정을 불필요하게 바꾸지 않는다.
+이 프로젝트의 집필 원본은 `books/python-geospatial/pages/`, 실행 예제는 `books/python-geospatial/examples/`, 빌더는 `scripts/geospatial/build.py`, 발행 경로는 `static/python-geospatial/`이다. 공통 스타일은 기존 사이트의 연녹색 바탕·진녹색 링크·절제된 타이포그래피를 따른다. 부와 장의 단일 목차 원본은 books/python-geospatial/curriculum.json이다. 보조 안내만 pages.json에 둔다. 새 장은 curriculum.json과 Markdown 본문을 함께 추가한다. 빌더가 부 소개·왼쪽/모바일 목차·전체 로드맵·장 제목·이전/다음 링크를 동일 목록에서 생성한다. 기존 사이트의 다른 경로, 테마, 배포 설정을 불필요하게 바꾸지 않는다.
 
 스킬 폴더만 전달받았다면 아래 references로 집필 규칙을 확인한다. 저장소가 없으면 원본 구조를 보존한 적용 파일 묶음을 만든 뒤 미적용 상태를 정확하게 알린다. 사용자가 사이트 연결·배포를 요청했다면 검증된 결과를 그 범위에서 반영한다. 요청하지 않은 공유·게시를 이 스킬 자체로 승인하지 않는다.
 
 ## 새 장을 만드는 순서
 
-1. 요청한 주제와 전체 `roadmap.md`의 선수·후속 장을 연결한다. 누락된 사소한 선택은 합리적으로 정하고 기록한다.
+1. 요청한 주제와 전체 curriculum.json의 선수·후속 장을 연결한다. 누락된 사소한 선택은 합리적으로 정하고 기록한다.
 2. 해당 라이브러리의 공식 안정 문서·릴리스와 데이터 제공기관의 상세 페이지를 확인한다. 검색 요약만으로 API나 라이선스를 확정하지 않는다. 참조한 날짜와 실제 실행 버전을 구분한다.
 3. [챕터 템플릿](references/chapter-template.md)으로 개념 → 왜 필요한가 → 핵심 API → 최소 실행 예제 → 조경/도시 실무 예제 → 시각화 → 흔한 오류 → 연습문제 → 다음 단계를 구성한다. 앞에 목표·선수 지식·시간·데이터·환경, 뒤에 출처를 둔다.
 4. 네트워크 없이 재현되는 작은 예제를 먼저 작성한다. 실제 데이터를 다루는 확장은 별도로 제공한다. 가상 자료는 제목·그림·설명에 가상이라고 명시한다.
 5. 실행 파일을 실행해 결과를 확인하고 코드·본문·그림을 맞춘다. 미실행 예제는 실행됐다고 말하지 않는다. 본문 코드에 `{{code:filename.py}}`를 쓰면 빌더가 실행 원본을 그대로 넣는다. 긴 파일은 주요 단계만 본문에 설명하고 전체 파일 다운로드를 제공한다.
 6. 빌더와 링크 검사를 실행하고 Hugo를 빌드한다. `scripts/check_static_navigation.py --public public`을 통과시킨다. [모바일 가이드](references/mobile.md)에 따라 코드·표·지도와 실제 모바일 폭을 확인한다.
-7. 완성 장, 실행 조건, 출처, 확인 결과, 적용/게시 상태를 간결하게 보고한다. 전체 목차만 작성한 장을 완성 장으로 표시하지 않는다.
+7. 모든 부와 장이 실제 본문으로 연결되는지 검사한다. scripts/geospatial/verify_lessons.py로 예제를 실행하고 링크 검사 후 모바일 화면을 다시 점검한다.
+8. 완성 장, 실행 조건, 출처, 확인 결과, 적용/게시 상태를 간결하게 보고한다. 전체 목차만 작성한 장을 완성 장으로 표시하지 않는다.
 
 ## 문체와 교육 원칙
 

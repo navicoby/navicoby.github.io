@@ -1,0 +1,3 @@
+# CPU examples verified 2026-09-30; GPU wheel selection may differ.
+torch==2.14.0
+scikit-image==0.26.0

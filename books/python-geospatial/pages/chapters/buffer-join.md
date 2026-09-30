@@ -106,7 +106,7 @@ geometry가 유효하지 않으면 원인과 수정 결과를 비교합니다. �
 
 ## 다음 단계
 
-공원 안으로 들어가 [DEM 경사도](dem-slope.html)를 계산합니다. 도로 경로를 다루고 싶다면 [목차 Part 7](../roadmap.html#part-7)을 참고합니다.
+[08장 clip·overlay·intersection·dissolve](overlay-dissolve.html)에서 겹치는 면적을 계산합니다. 지형은 [18장 DEM](dem-slope.html), 보행 경로는 [7부 도시 네트워크](../parts/network.html)에서 이어집니다.
 
 ## 출처
 

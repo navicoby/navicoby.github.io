@@ -1,6 +1,6 @@
 # 챕터 원본 템플릿
 
-`books/python-geospatial/pages/chapters/<slug>.md`에 저장한다. 아래 frontmatter와 절을 채우고 `books/python-geospatial/pages.json`의 순서에 등록한다. `draft` 글을 완성 링크로 공개하지 않는다.
+`books/python-geospatial/pages/chapters/<slug>.md`에 저장한다. 아래 frontmatter와 절을 채우고 `books/python-geospatial/curriculum.json`의 해당 부에 등록한다. 보조 안내만 pages.json에 넣는다. `draft` 글을 완성 링크로 공개하지 않는다.
 
 ```yaml
 ---

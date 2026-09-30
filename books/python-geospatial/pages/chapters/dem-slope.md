@@ -107,7 +107,7 @@ cropped, new_transform = mask(
 
 ## 다음 단계
 
-지형과 다른 종류의 래스터인 [Sentinel-2 식생지수](sentinel2-ndvi.html)로 넘어갑니다. 두 자료를 합칠 때는 CRS뿐 아니라 transform·해상도·행열 크기·시간 기준도 맞춥니다.
+[19장 Sentinel-2A와 센서·해상도](satellite-basics.html)에서 위성영상의 관측 조건을 먼저 이해하고 [22장 식생지수](sentinel2-ndvi.html)로 이어집니다. 지형과 영상을 합칠 때는 CRS뿐 아니라 transform·해상도·행열 크기·시간 기준도 맞춥니다.
 
 ## 출처
 

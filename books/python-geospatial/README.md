@@ -1,6 +1,6 @@
 # 파이썬 공간데이터 사이언스 — GeoPandas에서 Spatial AI까지
 
-navicoby.github.io에 연결하는 학습·출판 프로젝트입니다. 2026-09-30 공개 초안 v0.1. 10부 35장 목차와 샘플 3장, 데이터 수집·환경·GeoAI/BIM 안내를 포함합니다.
+navicoby.github.io에 연결하는 학습·출판 프로젝트입니다. 2026-09-30 학습 본문 v0.2. 10부 소개, 35장 본문·실행 예제, 라이브러리 정의와 6개 보조 안내를 포함합니다.
 
 ## 바로 보기
 
@@ -9,9 +9,9 @@ navicoby.github.io에 연결하는 학습·출판 프로젝트입니다. 2026-09
 - 집필 스킬: `../../.agents/skills/navicoby-geospatial-author/SKILL.md`
 - 집필 규칙: `CONTRIBUTING.md`
 - 모바일 가이드: `../../.agents/skills/navicoby-geospatial-author/references/mobile.md`
-- 원본 목차: `pages/roadmap.md`
+- 목차 단일 원본: `curriculum.json` (부 소개·탐색·전체 목차·이전/다음 장 자동 생성)
 
-샘플은 버퍼·공간조인, DEM 경사도, Sentinel-2/NDVI입니다. 외부 자료 접근 없이 실행할 수 있는 합성 데이터와 실제 자료로 옮기는 절차를 분리했습니다. Sentinel-2 실제 원본 취득 및 PyTorch 학습은 이번 실행 검증 범위에 포함하지 않았습니다.
+35장 모두 개념·예제·해석·오류·연습을 제공합니다. 버퍼·공간조인, DEM 경사도, Sentinel-2/NDVI는 확장 실습입니다. 추가 32개 예제는 CPU에서 오프라인 실행하며 PyTorch 순전파·역전파도 확인합니다. 실제 위성 취득·OSM 다운로드·실자료 AI 훈련은 별도 확장입니다.
 
 ## 기존 저장소 검사 결과
 
@@ -32,17 +32,18 @@ navicoby.github.io에 연결하는 학습·출판 프로젝트입니다. 2026-09
   references/{chapter-template,mobile,sources}.md
 books/python-geospatial/
   README.md  CONTRIBUTING.md  QA.md
-  pages.json
+  curriculum.json  pages.json
   pages/
-    index.md  roadmap.md  data-sources.md  stack.md  geoai-bridge.md
-    chapters/{buffer-join,dem-slope,sentinel2-ndvi}.md
-  examples/{buffer_join,dem_slope,sentinel2_ndvi,test_analysis}.py
+    index.md  roadmap.md  glossary.md  data-sources.md  stack.md  geoai-bridge.md
+    chapters/*.md  # 35장
+  examples/{chapterNN,buffer_join,dem_slope,sentinel2_ndvi,test_analysis}.py
   templates/page.html
-  requirements.txt  requirements-build.txt  requirements-lock.txt
-scripts/geospatial/{build,check}.py
+  requirements.txt  requirements-ai.txt  requirements-build.txt  requirements-lock.txt
+scripts/geospatial/{build,check,verify_lessons}.py
 static/python-geospatial/
   index.html  roadmap.html  data-sources.html  stack.html  geoai-bridge.html
-  chapters/*.html
+  parts/*.html  # 10부 소개
+  chapters/*.html  # 35장 본문
   assets/{book.css,book.js,learning-path.svg,buffer.svg,terrain.svg,ndvi.svg}
   maps/park-map.html
   examples/*.py, requirements*.txt
@@ -58,10 +59,12 @@ Markdown이 집필 원본이며 빌더가 HTML을 생성합니다. CSS/JS/SVG �
 ```text
 python -m pip install -r books/python-geospatial/requirements.txt
 python -m pip install -r books/python-geospatial/requirements-build.txt
+python -m pip install -r books/python-geospatial/requirements-ai.txt
 python books/python-geospatial/examples/buffer_join.py --out generated/vector
 python books/python-geospatial/examples/dem_slope.py --out generated/terrain
 python books/python-geospatial/examples/sentinel2_ndvi.py --demo --out generated/satellite
 python -m pytest books/python-geospatial/examples/test_analysis.py -q
+python scripts/geospatial/verify_lessons.py
 python scripts/geospatial/build.py
 hugo --minify
 python scripts/check_static_navigation.py --public public

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="지도 색이 나타내는 분모와 범례를 설명하고 SVG 지도를 저장합니다.">
+<meta name="theme-color" content="#eef1ee">
+<title>09 · Matplotlib·단계구분도·히트맵 · 파이썬 공간데이터 사이언스</title>
+<link rel="canonical" href="https://spatialflare.com/python-geospatial/chapters/map-design.html">
+<link rel="stylesheet" href="../assets/book.css">
+<script src="../assets/book.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 바로가기</a>
+<header class="masthead"><a class="brand" href="/">SPATIALFLARE <span>↗</span></a><span class="edition">PYTHON GEOSPATIAL / 2026</span></header>
+<div class="layout">
+<aside class="sidebar" aria-label="책 탐색">
+  <a class="book-title" href="../index.html">파이썬<br>공간데이터 사이언스<span>GeoPandas에서 Spatial AI까지</span></a>
+  <p class="nav-label">전체 10부 · 35장</p><nav aria-label="전체 목차"><a class="" href="../index.html">파이썬 공간데이터 사이언스</a>
+<a class="" href="../roadmap.html">전체 목차와 학습 로드맵</a>
+<a class="" href="../glossary.html">도구와 용어부터 이해하기</a>
+<a class="" href="../data-sources.html">한국 공공데이터·OSM·위성영상 수집 안내</a>
+<a class="" href="../stack.html">실행 환경과 최신 API 메모</a>
+<a class="" href="../geoai-bridge.html">GeoAI와 BIM으로 연결하기</a>
+<details class="nav-part"><summary>PART 01 · 공간데이터라는 언어</summary>
+<a class="part-overview" href="../parts/foundations.html">1부 안내</a>
+<a class="" href="../chapters/spatial-questions.html">01 · 공간 질문과 Python 라이브러리</a>
+<a class="" href="../chapters/vector-raster.html">02 · 벡터·래스터와 GeoDataFrame</a>
+<a class="" href="../chapters/crs.html">03 · 좌표계·CRS·EPSG와 단위</a>
+<a class="" href="../chapters/python-environment.html">04 · 설치·import·배열과 재현 환경</a>
+</details>
+<details class="nav-part"><summary>PART 02 · GeoPandas와 Shapely</summary>
+<a class="part-overview" href="../parts/vector.html">2부 안내</a>
+<a class="" href="../chapters/vector-io.html">05 · 공간 파일 입출력과 GeoParquet</a>
+<a class="" href="../chapters/geometry.html">06 · 속성 조회와 geometry 연산</a>
+<a class="" href="../chapters/buffer-join.html">07 · 공원 주변 건물을 찾는 버퍼와 공간조인</a>
+<a class="" href="../chapters/overlay-dissolve.html">08 · clip·overlay·intersection·dissolve</a>
+</details>
+<details class="nav-part" open><summary>PART 03 · 지도와 공간 시각화</summary>
+<a class="part-overview" href="../parts/visualization.html">3부 안내</a>
+<a class="" href="../chapters/map-design.html" aria-current="page">09 · Matplotlib·단계구분도·히트맵</a>
+<a class="" href="../chapters/folium.html">10 · Folium으로 인터랙티브 지도 만들기</a>
+<a class="" href="../chapters/web-maps.html">11 · 웹지도 게시와 모바일 읽기</a>
+</details>
+<details class="nav-part"><summary>PART 04 · 한국 공공자료와 도시 벡터</summary>
+<a class="part-overview" href="../parts/public-data.html">4부 안내</a>
+<a class="" href="../chapters/data-portals.html">12 · NGII·VWorld·서울·공공데이터포털</a>
+<a class="" href="../chapters/data-quality.html">13 · 자료 취득·인코딩·품질·라이선스</a>
+<a class="" href="../chapters/urban-buildings.html">14 · 건물·도로·필지·녹지의 관계</a>
+</details>
+<details class="nav-part"><summary>PART 05 · Rasterio와 지형 분석</summary>
+<a class="part-overview" href="../parts/terrain.html">5부 안내</a>
+<a class="" href="../chapters/raster-basics.html">15 · Rasterio란 무엇인가: band·격자·NoData</a>
+<a class="" href="../chapters/raster-crop.html">16 · 마스킹·자르기·재투영·격자 정렬</a>
+<a class="" href="../chapters/raster-vector.html">17 · 벡터↔래스터 변환</a>
+<a class="" href="../chapters/dem-slope.html">18 · DEM으로 경사도와 식재 후보지 읽기</a>
+</details>
+<details class="nav-part"><summary>PART 06 · Sentinel-2와 위성영상</summary>
+<a class="part-overview" href="../parts/satellite.html">6부 안내</a>
+<a class="" href="../chapters/satellite-basics.html">19 · Sentinel-2A와 센서·해상도</a>
+<a class="" href="../chapters/satellite-access.html">20 · Copernicus Browser·STAC·영상 취득</a>
+<a class="" href="../chapters/satellite-bands.html">21 · 밴드·SCL·반사도 보정·정렬</a>
+<a class="" href="../chapters/sentinel2-ndvi.html">22 · Sentinel-2A에서 시작하는 식생지수 분석</a>
+</details>
+<details class="nav-part"><summary>PART 07 · 도시 네트워크</summary>
+<a class="part-overview" href="../parts/network.html">7부 안내</a>
+<a class="" href="../chapters/networkx.html">23 · NetworkX와 노드·간선·가중치</a>
+<a class="" href="../chapters/osmnx.html">24 · OpenStreetMap과 OSMnx 도로망</a>
+<a class="" href="../chapters/walking-distance.html">25 · 최단경로와 공원 출입구 접근성</a>
+<a class="" href="../chapters/service-area.html">26 · 서비스권·등시간권과 보행 가정</a>
+</details>
+<details class="nav-part"><summary>PART 08 · 조경·도시 분석 프로젝트</summary>
+<a class="part-overview" href="../parts/landscape.html">8부 안내</a>
+<a class="" href="../chapters/urban-indicators.html">27 · 녹지 접근성·밀도·인구 분모</a>
+<a class="" href="../chapters/site-evaluation.html">28 · 공원 후보지 평가와 가중치 민감도</a>
+</details>
+<details class="nav-part"><summary>PART 09 · GeoAI 기초와 검증</summary>
+<a class="part-overview" href="../parts/geoai.html">9부 안내</a>
+<a class="" href="../chapters/tensors.html">29 · NumPy에서 PyTorch 텐서로</a>
+<a class="" href="../chapters/convolution.html">30 · CNN과 convolution의 작동</a>
+<a class="" href="../chapters/segmentation.html">31 · Semantic segmentation과 라벨</a>
+<a class="" href="../chapters/unet.html">32 · U-Net의 구조와 작은 구현</a>
+<a class="" href="../chapters/geoai-validation.html">33 · 공간 분할·IoU·오류 지도</a>
+</details>
+<details class="nav-part"><summary>PART 10 · GIS·BIM·Spatial AI 통합</summary>
+<a class="part-overview" href="../parts/integration.html">10부 안내</a>
+<a class="" href="../chapters/gis-bim.html">34 · GIS와 IFC/BIM의 좌표·속성 연결</a>
+<a class="" href="../chapters/capstone.html">35 · 최종 실습: 공원 분석 묶음 만들기</a>
+</details></nav>
+  <div class="sidebar-note">학습 본문 v0.2<br>10부 · 35장 본문과 예제<br>자료 확인 2026-09-30</div>
+</aside>
+<main id="main" tabindex="-1">
+  <details class="mobile-nav"><summary>전체 목차 열기 · 10부 35장</summary><nav aria-label="모바일 전체 목차"><a class="" href="../index.html">파이썬 공간데이터 사이언스</a>
+<a class="" href="../roadmap.html">전체 목차와 학습 로드맵</a>
+<a class="" href="../glossary.html">도구와 용어부터 이해하기</a>
+<a class="" href="../data-sources.html">한국 공공데이터·OSM·위성영상 수집 안내</a>
+<a class="" href="../stack.html">실행 환경과 최신 API 메모</a>
+<a class="" href="../geoai-bridge.html">GeoAI와 BIM으로 연결하기</a>
+<details class="nav-part"><summary>PART 01 · 공간데이터라는 언어</summary>
+<a class="part-overview" href="../parts/foundations.html">1부 안내</a>
+<a class="" href="../chapters/spatial-questions.html">01 · 공간 질문과 Python 라이브러리</a>
+<a class="" href="../chapters/vector-raster.html">02 · 벡터·래스터와 GeoDataFrame</a>
+<a class="" href="../chapters/crs.html">03 · 좌표계·CRS·EPSG와 단위</a>
+<a class="" href="../chapters/python-environment.html">04 · 설치·import·배열과 재현 환경</a>
+</details>
+<details class="nav-part"><summary>PART 02 · GeoPandas와 Shapely</summary>
+<a class="part-overview" href="../parts/vector.html">2부 안내</a>
+<a class="" href="../chapters/vector-io.html">05 · 공간 파일 입출력과 GeoParquet</a>
+<a class="" href="../chapters/geometry.html">06 · 속성 조회와 geometry 연산</a>
+<a class="" href="../chapters/buffer-join.html">07 · 공원 주변 건물을 찾는 버퍼와 공간조인</a>
+<a class="" href="../chapters/overlay-dissolve.html">08 · clip·overlay·intersection·dissolve</a>
+</details>
+<details class="nav-part" open><summary>PART 03 · 지도와 공간 시각화</summary>
+<a class="part-overview" href="../parts/visualization.html">3부 안내</a>
+<a class="" href="../chapters/map-design.html" aria-current="page">09 · Matplotlib·단계구분도·히트맵</a>
+<a class="" href="../chapters/folium.html">10 · Folium으로 인터랙티브 지도 만들기</a>
+<a class="" href="../chapters/web-maps.html">11 · 웹지도 게시와 모바일 읽기</a>
+</details>
+<details class="nav-part"><summary>PART 04 · 한국 공공자료와 도시 벡터</summary>
+<a class="part-overview" href="../parts/public-data.html">4부 안내</a>
+<a class="" href="../chapters/data-portals.html">12 · NGII·VWorld·서울·공공데이터포털</a>
+<a class="" href="../chapters/data-quality.html">13 · 자료 취득·인코딩·품질·라이선스</a>
+<a class="" href="../chapters/urban-buildings.html">14 · 건물·도로·필지·녹지의 관계</a>
+</details>
+<details class="nav-part"><summary>PART 05 · Rasterio와 지형 분석</summary>
+<a class="part-overview" href="../parts/terrain.html">5부 안내</a>
+<a class="" href="../chapters/raster-basics.html">15 · Rasterio란 무엇인가: band·격자·NoData</a>
+<a class="" href="../chapters/raster-crop.html">16 · 마스킹·자르기·재투영·격자 정렬</a>
+<a class="" href="../chapters/raster-vector.html">17 · 벡터↔래스터 변환</a>
+<a class="" href="../chapters/dem-slope.html">18 · DEM으로 경사도와 식재 후보지 읽기</a>
+</details>
+<details class="nav-part"><summary>PART 06 · Sentinel-2와 위성영상</summary>
+<a class="part-overview" href="../parts/satellite.html">6부 안내</a>
+<a class="" href="../chapters/satellite-basics.html">19 · Sentinel-2A와 센서·해상도</a>
+<a class="" href="../chapters/satellite-access.html">20 · Copernicus Browser·STAC·영상 취득</a>
+<a class="" href="../chapters/satellite-bands.html">21 · 밴드·SCL·반사도 보정·정렬</a>
+<a class="" href="../chapters/sentinel2-ndvi.html">22 · Sentinel-2A에서 시작하는 식생지수 분석</a>
+</details>
+<details class="nav-part"><summary>PART 07 · 도시 네트워크</summary>
+<a class="part-overview" href="../parts/network.html">7부 안내</a>
+<a class="" href="../chapters/networkx.html">23 · NetworkX와 노드·간선·가중치</a>
+<a class="" href="../chapters/osmnx.html">24 · OpenStreetMap과 OSMnx 도로망</a>
+<a class="" href="../chapters/walking-distance.html">25 · 최단경로와 공원 출입구 접근성</a>
+<a class="" href="../chapters/service-area.html">26 · 서비스권·등시간권과 보행 가정</a>
+</details>
+<details class="nav-part"><summary>PART 08 · 조경·도시 분석 프로젝트</summary>
+<a class="part-overview" href="../parts/landscape.html">8부 안내</a>
+<a class="" href="../chapters/urban-indicators.html">27 · 녹지 접근성·밀도·인구 분모</a>
+<a class="" href="../chapters/site-evaluation.html">28 · 공원 후보지 평가와 가중치 민감도</a>
+</details>
+<details class="nav-part"><summary>PART 09 · GeoAI 기초와 검증</summary>
+<a class="part-overview" href="../parts/geoai.html">9부 안내</a>
+<a class="" href="../chapters/tensors.html">29 · NumPy에서 PyTorch 텐서로</a>
+<a class="" href="../chapters/convolution.html">30 · CNN과 convolution의 작동</a>
+<a class="" href="../chapters/segmentation.html">31 · Semantic segmentation과 라벨</a>
+<a class="" href="../chapters/unet.html">32 · U-Net의 구조와 작은 구현</a>
+<a class="" href="../chapters/geoai-validation.html">33 · 공간 분할·IoU·오류 지도</a>
+</details>
+<details class="nav-part"><summary>PART 10 · GIS·BIM·Spatial AI 통합</summary>
+<a class="part-overview" href="../parts/integration.html">10부 안내</a>
+<a class="" href="../chapters/gis-bim.html">34 · GIS와 IFC/BIM의 좌표·속성 연결</a>
+<a class="" href="../chapters/capstone.html">35 · 최종 실습: 공원 분석 묶음 만들기</a>
+</details></nav></details>
+  <div class="breadcrumbs" aria-label="현재 위치"><a href="../index.html">책 소개</a> <span>›</span> <a href="../parts/visualization.html">PART 03 · 지도와 공간 시각화</a></div>
+  <article>
+    <p class="eyebrow">PART 03 / CHAPTER 09</p>
+    <h1>09 · Matplotlib·단계구분도·히트맵</h1>
+<p class="description">지도 색이 나타내는 분모와 범례를 설명하고 SVG 지도를 저장합니다.</p>
+<details class="page-toc"><summary>이 페이지에서</summary><div class="toc">
+<ul>
+<li><a href="#_1">개념</a></li>
+<li><a href="#_2">왜 필요한가</a></li>
+<li><a href="#api">핵심 API</a></li>
+<li><a href="#_3">최소 실행 예제</a></li>
+<li><a href="#_4">조경·도시 실무 예제</a></li>
+<li><a href="#_5">시각화와 결과 읽기</a></li>
+<li><a href="#_6">흔한 오류</a></li>
+<li><a href="#_7">연습문제</a></li>
+<li><a href="#_8">다음 단계</a></li>
+<li><a href="#_9">출처</a></li>
+</ul>
+</div>
+</details>
+    <p><strong>학습 목표:</strong> 지도 색이 나타내는 분모와 범례를 설명하고 SVG 지도를 저장합니다.</p>
+<p><strong>준비:</strong> <a href="../stack.html">실행 환경</a> · <a href="../glossary.html">도구와 용어</a>. 예제 자료는 별도 표시가 없는 한 합성 자료입니다.</p>
+<h2 id="_1">개념</h2>
+<p>Matplotlib은 Python에서 그래프와 지도를 그리는 시각화 라이브러리입니다. GeoPandas의 plot()은 이를 이용해 도형을 그립니다. 단계구분도(choropleth)는 행정구역이나 필지 같은 구역의 값을 색으로 표현합니다. 히트맵은 문맥에 따라 격자 값의 색상 표현 또는 점 주변을 부드럽게 확산시킨 밀도 표현을 뜻합니다.</p>
+<p>점 밀도 히트맵의 진한 색은 반드시 많은 인구나 높은 위험을 뜻하지 않습니다. 입력 점의 수, 가중치, 반경, 축척이 결과에 영향을 줍니다.</p>
+<h2 id="_2">왜 필요한가</h2>
+<p>큰 공원에 나무가 많다는 사실과 단위 면적당 나무가 조밀하다는 사실은 다릅니다. 조경 설계 비교에서는 총량과 밀도를 구분해 표현해야 합니다.</p>
+<h2 id="api">핵심 API</h2>
+<p>gdf.plot(column=..., legend=True, ax=ax)로 속성 지도를 만듭니다. ax.set_aspect('equal')로 축척을 유지하고 fig.savefig(..., format='svg')로 확대 가능한 그림을 저장합니다.</p>
+<h2 id="_3">최소 실행 예제</h2>
+<pre><code class="language-python">import matplotlib
+matplotlib.use(&quot;Agg&quot;)
+import matplotlib.pyplot as plt
+import geopandas as gpd
+from shapely.geometry import box
+
+zones = gpd.GeoDataFrame(
+    {&quot;trees&quot;: [10, 20]},
+    geometry=[box(0, 0, 100, 100), box(120, 0, 320, 100)], crs=5179
+)
+zones[&quot;trees_per_ha&quot;] = zones[&quot;trees&quot;] / (zones.area / 10000)
+fig, ax = plt.subplots(figsize=(7, 3))
+zones.plot(column=&quot;trees_per_ha&quot;, legend=True, vmin=0, vmax=20,
+           cmap=&quot;YlGn&quot;, edgecolor=&quot;black&quot;, ax=ax)
+ax.set_aspect(&quot;equal&quot;)
+ax.set_title(&quot;Synthetic tree density (trees/ha)&quot;)
+fig.savefig(&quot;density.svg&quot;, bbox_inches=&quot;tight&quot;)
+plt.close(fig)
+assert zones[&quot;trees_per_ha&quot;].tolist() == [10, 10]
+print(&quot;density.svg&quot;)
+</code></pre>
+<h2 id="_4">조경·도시 실무 예제</h2>
+<p>1ha에 10그루인 구역과 2ha에 20그루인 구역의 밀도는 같습니다. 위 SVG는 합성 자료입니다. 실제 녹지 비교에서는 조사 시점, 수목의 정의, 조사 누락 범위를 범례와 함께 적습니다.</p>
+<h2 id="_5">시각화와 결과 읽기</h2>
+<p>양의 밀도에는 순차형 색상, 평균 대비 편차에는 발산형 색상을 사용하세요. 결측값은 0과 다른 색으로 표시하고, 여러 지도를 비교할 때 같은 범례 범위를 유지합니다.</p>
+<h2 id="_6">흔한 오류</h2>
+<p>지도마다 자동 최솟값·최댓값을 쓰면 같은 색이 다른 값을 뜻할 수 있습니다. 밀도 분모가 0인 구역은 별도로 처리하세요. 색만으로 정보를 전달하지 말고 표나 수치 설명을 함께 둡니다.</p>
+<h2 id="_7">연습문제</h2>
+<p>각 구역의 총 나무 수 지도와 밀도 지도를 각각 만들고 색상 차이를 설명하세요.</p>
+<p><a href="../examples/chapter09.py">전체 예제 내려받기</a> · 실행: <code>python chapter09.py</code></p>
+<h2 id="_8">다음 단계</h2>
+<p><a href="folium.html">10 · Folium으로 인터랙티브 지도 만들기</a>로 이어집니다.</p>
+<h2 id="_9">출처</h2>
+<p><a href="https://geopandas.org/en/stable/docs/user_guide/mapping.html">GeoPandas 지도</a>, <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html">Matplotlib 저장</a>. 확인 2026-09-30.</p>
+  </article>
+<nav class="chapter-pager" aria-label="이전·다음 장"><a rel="prev" href="../chapters/overlay-dissolve.html"><small>이전 장</small>08 · clip·overlay·intersection·dissolve</a><a rel="next" href="../chapters/folium.html"><small>다음 장</small>10 · Folium으로 인터랙티브 지도 만들기</a></nav>
+  <footer class="page-footer"><a href="https://github.com/navicoby/navicoby.github.io/blob/main/books/python-geospatial/pages/chapters/map-design.md">집필 원본 보기 ↗</a><a href="../roadmap.html">전체 목차</a><a href="#main">위로 ↑</a><p>SpatialFlare · 학습 본문 v0.2 · 2026-09-30<br>예제의 가상 자료와 실제 관측·설계 조건을 구별해 사용합니다.</p></footer>
+</main>
+</div>
+<p class="sr-only" id="status" role="status" aria-live="polite"></p>
+</body>
+</html>

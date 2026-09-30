@@ -137,7 +137,7 @@ python books/python-geospatial/examples/sentinel2_ndvi.py --red B04_crop.tif --n
 
 ## 다음 단계
 
-NDWI(녹색–NIR)와 MNDWI(녹색–SWIR), NDBI(SWIR–NIR)는 서로 다른 질문을 다룹니다. 지수 이름과 밴드 정의를 명시하고 적용 논문을 확인합니다. 다음은 지형·영상·도로 정보를 함께 쓰는 [GeoAI와 BIM 연결](../geoai-bridge.html)입니다.
+[23장 NetworkX와 노드·간선·가중치](networkx.html)에서 영상과 다른 공간 표현인 도로망을 배웁니다. 지형·영상·도로의 통합 방향은 [GeoAI와 BIM 연결](../geoai-bridge.html)에서 함께 읽습니다. NDWI·MNDWI·NDBI 등 추가 지수는 밴드 정의와 적용 논문을 확인한 뒤 확장하세요.
 
 ## 출처와 자료 이용
 
