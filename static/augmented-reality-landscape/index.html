@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>증강현실과 조경 · 기획·시범원고 v1</title>
+<meta name="description" content="증강현실의 역사와 원리에서 조경 설계·현장 적용까지. 『증강현실과 조경』 기획·시범원고 v1.">
+<link rel="canonical" href="https://navicoby.github.io/augmented-reality-landscape/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="증강현실과 조경 · 기획·시범원고 v1">
+<meta property="og:description" content="기술의 역사와 원리에서 경관 설계·현장 적용까지">
+<meta property="og:url" content="https://navicoby.github.io/augmented-reality-landscape/">
+<style>
+:root{--bg:#f1f4f1;--paper:#fbfcfa;--ink:#17211c;--mut:#5d6962;--line:#d8dfda;--green:#2f7d5a;--green2:#225f44;--soft:#e6efe9;--sand:#f4f0e7;--code:#eef2ef;--max:1180px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.76 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--green2);text-decoration:none} a:hover{text-decoration:underline;text-underline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:8px 12px;z-index:100}.skip:focus{left:8px}
+.progress{position:fixed;left:0;top:0;height:3px;background:var(--green);width:0;z-index:50}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(251,252,250,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar .inner{max-width:var(--max);margin:auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;gap:10px;align-items:baseline;color:var(--ink);font-weight:720;letter-spacing:-.02em}.brand span{font:11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--green2);letter-spacing:.12em;text-transform:uppercase}
+.topnav{display:flex;gap:18px;align-items:center;font-size:13px}.topnav a{color:var(--mut)}
+.cover{background:linear-gradient(135deg,#eef5f0 0%,#fbfcfa 58%,#f2eee5 100%);border-bottom:1px solid var(--line)}
+.cover-inner{max-width:var(--max);margin:auto;padding:76px 24px 62px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:70px;align-items:end}
+.eyebrow{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--green2);margin:0 0 18px}
+.cover h1{font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.055em;margin:0 0 20px;font-weight:760}
+.subtitle{font-size:clamp(19px,2.4vw,27px);line-height:1.45;letter-spacing:-.025em;max-width:22ch;margin:0 0 24px;color:#34413a}
+.cover-note{max-width:58ch;color:var(--mut);margin:0}
+.meta-box{border:1px solid var(--line);background:rgba(255,255,255,.63);padding:24px;border-radius:12px}.meta-box strong{display:block;font-size:18px;margin-bottom:8px}.meta-box p{margin:6px 0;color:var(--mut);font-size:14px}
+.meta-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.button{display:inline-block;padding:9px 12px;border:1px solid var(--green);border-radius:6px;background:var(--green);color:#fff;font-size:13px;font-weight:650}.button:hover{text-decoration:none;background:var(--green2)}.button.ghost{background:transparent;color:var(--green2);border-color:var(--line)}
+.parts{max-width:var(--max);margin:auto;padding:26px 24px 34px;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.part-card{min-width:0;border-top:2px solid var(--line);padding:11px 5px 0}.part-card b{display:block;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--green2);margin-bottom:6px}.part-card strong{display:block;font-size:13px;line-height:1.35}.part-card span{display:block;color:var(--mut);font-size:11.5px;line-height:1.45;margin-top:4px}
+.layout{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:250px minmax(0,760px);gap:54px;padding:52px 24px 90px;justify-content:center}
+.sidebar{position:sticky;top:72px;align-self:start;max-height:calc(100vh - 92px);overflow:auto;padding-right:12px}.sidebar h2{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);margin:0 0 12px}.toc{display:grid;gap:1px}.toc a{font-size:12.5px;line-height:1.38;color:var(--mut);padding:6px 8px;border-left:2px solid transparent;border-radius:0 4px 4px 0}.toc a:hover,.toc a.active{color:var(--green2);background:var(--soft);border-left-color:var(--green);text-decoration:none}.sidebar .source{font-size:12px;color:var(--mut);border-top:1px solid var(--line);margin-top:18px;padding-top:14px}
+article{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:clamp(28px,5vw,58px);box-shadow:0 12px 32px rgba(32,60,44,.035)}
+article>h1{font-size:clamp(29px,4vw,41px);line-height:1.22;letter-spacing:-.035em;margin:3.2em 0 .8em;border-top:1px solid var(--line);padding-top:1.1em}article>h1:first-of-type{margin-top:0;border-top:0;padding-top:0}
+article h2{font-size:22px;line-height:1.35;letter-spacing:-.025em;margin:2.5em 0 .65em}article h3{font-size:18px;margin:2em 0 .5em}article p{margin:0 0 1.15em}article ul,article ol{padding-left:1.4em;margin:0 0 1.3em}article li{margin:.35em 0}article blockquote{margin:1.5em 0;padding:14px 18px;border-left:3px solid var(--green);background:var(--soft);color:#33423a}article hr{border:0;border-top:1px solid var(--line);margin:2.8em 0}
+article table{border-collapse:collapse;width:100%;margin:1.5em 0 2em;font-size:14px;display:block;overflow-x:auto}article th,article td{border:1px solid var(--line);padding:10px 11px;text-align:left;vertical-align:top;min-width:130px}article th{background:#eef2ee;font-weight:700}
+article code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--code);border:1px solid #dde4df;padding:.12em .32em;border-radius:4px;font-size:.9em}article pre{background:#17211c;color:#edf4ef;padding:16px 18px;border-radius:7px;overflow:auto}article pre code{background:none;border:0;padding:0;color:inherit}
+.heading-anchor{color:inherit!important;text-decoration:none!important}.refmark{display:inline-block;font:10px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--green2);background:var(--soft);border:1px solid #d2e0d7;border-radius:3px;padding:0 5px;vertical-align:.12em;white-space:nowrap}.reading-note{margin:0 0 28px;padding:14px 16px;background:var(--sand);border:1px solid #e7dec9;border-radius:7px;color:#514b3d;font-size:13px}.loading{color:var(--mut)}
+footer{border-top:1px solid var(--line);background:#e9eeea;color:var(--mut)}footer .inner{max-width:var(--max);margin:auto;padding:24px;display:flex;justify-content:space-between;gap:20px;font-size:12.5px}
+@media(max-width:980px){.cover-inner{grid-template-columns:1fr;gap:32px}.parts{grid-template-columns:repeat(3,1fr)}.layout{grid-template-columns:1fr;max-width:810px}.sidebar{position:relative;top:auto;max-height:none;padding:0}.toc{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.toc a{border:1px solid var(--line);border-left-width:1px;background:var(--paper)}}
+@media(max-width:620px){.topnav a:not(:first-child){display:none}.cover-inner{padding-top:54px}.cover h1{font-size:47px}.parts{grid-template-columns:repeat(2,1fr)}.layout{padding:28px 14px 60px}article{border-radius:6px;padding:26px 20px}.toc{grid-template-columns:1fr 1fr}footer .inner{display:block}}
+@media print{.topbar,.sidebar,.progress,.meta-actions,.parts{display:none!important}body{background:#fff}.layout{display:block;max-width:800px;padding:0}article{border:0;box-shadow:none;padding:0}.cover-inner{padding:30px 0}.cover{border:0}a{color:inherit}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip" href="#manuscript">본문으로 건너뛰기</a>
+<header class="topbar"><div class="inner"><a class="brand" href="https://navicoby.github.io/">SpatialFlare <span>/ book draft</span></a><nav class="topnav" aria-label="상단 메뉴"><a href="https://navicoby.github.io/">홈</a><a href="#contents">목차</a><a href="manuscript-v1.md">Markdown</a></nav></div></header>
+<section class="cover"><div class="cover-inner"><div><p class="eyebrow">Landscape × Augmented Reality</p><h1>증강현실과<br>조경</h1><p class="subtitle">기술의 역사와 원리에서 경관 설계·현장 적용까지</p><p class="cover-note">증강현실을 설명한 뒤 조경 사례를 덧붙이는 책이 아니라, 기술을 이해하고 현장에 적용하며 그 결과를 검증하는 책을 목표로 한 기획·시범원고입니다.</p></div><aside class="meta-box"><strong>기획·시범원고 v1</strong><p>편집 기준일 · 2026.09.30</p><p>6부 24장 구성 · 서문 + 8개 시범 장 수록</p><p>출간 교정본이 아닌 작업 중 원고입니다.</p><div class="meta-actions"><a class="button" href="#manuscript">원고 읽기 ↓</a><a class="button ghost" href="manuscript-v1.md">원본 MD ↗</a></div></aside></div>
+<div class="parts">
+<div class="part-card"><b>01</b><strong>개념과 역사</strong><span>정의에서 야외 AR의 역사까지</span></div>
+<div class="part-card"><b>02</b><strong>작동 원리</strong><span>좌표·추적·센서·렌더링</span></div>
+<div class="part-card"><b>03</b><strong>조경 데이터</strong><span>BIM·GIS·3D 모델과 배포</span></div>
+<div class="part-card"><b>04</b><strong>조경 사례</strong><span>지형·식재·주민참여</span></div>
+<div class="part-card"><b>05</b><strong>현장 적용</strong><span>수목 배치와 시간 시나리오</span></div>
+<div class="part-card"><b>06</b><strong>검증</strong><span>정확도·사용성·운영 가능성</span></div>
+</div></section>
+<main class="layout" id="contents"><aside class="sidebar"><h2>이 원고의 목차</h2><nav class="toc" id="toc"></nav><p class="source">v1은 전체 24장의 완성본이 아닙니다. 시범 작성된 장과 집필 방향, 참고문헌을 포함합니다.</p></aside><article id="manuscript"><p class="reading-note"><strong>읽기 안내.</strong> 이 페이지는 2026년 9월 30일의 v1을 그대로 보존한 웹 판입니다. 이후 장별 원고가 확정되면 이 페이지와 별개로 개정판을 갱신합니다.</p><p class="loading">원고를 불러오는 중입니다…</p></article></main>
+<footer><div class="inner"><span>SpatialFlare · 『증강현실과 조경』 v1 · 2026</span><span><a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/augmented-reality-landscape">GitHub source ↗</a></span></div></footer>
+<script>
+const article=document.getElementById('manuscript'), toc=document.getElementById('toc'), bar=document.getElementById('progress');
+function slug(s){return s.toLowerCase().replace(/[\[\]“”‘’'".,:;!?(){}\/\\]+/g,'').replace(/\s+/g,'-').replace(/[^0-9a-z가-힣_-]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'')||'section'}
+fetch('manuscript-v1.md').then(r=>{if(!r.ok)throw new Error('원고를 불러오지 못했습니다.');return r.text()}).then(md=>{
+  const start=md.indexOf('# 이 파일을 읽기 전에');
+  if(start>=0)md=md.slice(start);
+  marked.setOptions({gfm:true,breaks:false});
+  const note=article.querySelector('.reading-note').outerHTML;
+  article.innerHTML=note+marked.parse(md);
+  const used=new Map();
+  article.querySelectorAll('h1,h2,h3').forEach(h=>{
+    let base=slug(h.textContent), n=(used.get(base)||0)+1;used.set(base,n);h.id=n===1?base:base+'-'+n;
+    const a=document.createElement('a');a.className='heading-anchor';a.href='#'+h.id;a.innerHTML=h.innerHTML;h.innerHTML='';h.appendChild(a);
+  });
+  article.innerHTML=article.innerHTML.replace(/\[R(\d{2})\]/g,'<span class="refmark">R$1</span>');
+  article.querySelectorAll('h1').forEach(h=>{const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.replace(/^제/,'');toc.appendChild(a)});
+  sync();
+}).catch(err=>{article.querySelector('.loading').innerHTML=err.message+' <a href="manuscript-v1.md">Markdown 원고 열기</a>';});
+function sync(){
+  const d=document.documentElement,max=d.scrollHeight-d.clientHeight;bar.style.width=(max?d.scrollTop/max*100:0)+'%';
+  let cur=null;document.querySelectorAll('#toc a').forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<150)cur=a});
+  document.querySelectorAll('#toc a').forEach(a=>a.classList.toggle('active',a===cur));
+}
+addEventListener('scroll',sync,{passive:true});addEventListener('resize',sync);
+</script>
+</body></html>
