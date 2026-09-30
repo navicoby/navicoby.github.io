@@ -1,6 +1,14 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="GT7 주행 기록으로 살펴보는 개인 드라이빙 훈련. 랩 비교, 주행 궤적, 페달 분석과 코스 좌표 검증."><title>드라이빙 시뮬레이션 훈련</title><link rel="stylesheet" href="style.css?v=5239d8e9e983"><script src="training.js?v=d37c4bfccc57" defer></script><script src="app.js?v=9ac1795c9122" defer></script></head>
-<body><main>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="GT7 주행 기록으로 살펴보는 개인 드라이빙 훈련. 랩 비교, 주행 궤적, 페달 분석과 코스 좌표 검증."><title>드라이빙 시뮬레이션 훈련</title><link rel="stylesheet" href="style.css?v=5239d8e9e983"><script src="training.js?v=d37c4bfccc57" defer></script><script src="app.js?v=9ac1795c9122" defer></script><script defer src="/assets/site-chrome.js"></script></head>
+<body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#research">Research</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+<main>
 <header><a class="home" href="/">SPATIALFLARE / DRIVING JOURNAL</a><span class="tag">GRAN TURISMO 7</span></header>
 <section class="hero"><div><p class="eyebrow">기록하고, 비교하고, 다시 달리기</p><h1>드라이빙<br>시뮬레이션 훈련<span>.</span></h1><p class="intro">주행 궤적과 랩타임, 속도와 페달 입력을 비교합니다.<br>지난 기록을 살피고 다음 연습에 반영하는 훈련 일지.</p><a class="training-shortcut" href="#training">다음 랩 연습 보기 ↓</a></div><div class="sync"><span class="dot"></span> 매일 22:00 · 한국 시간<p id="updated">기록을 불러오는 중…</p><small>iCloud → 주행 분석 → 훈련 기록</small></div></section>
 <div id="error" role="alert" hidden></div>
@@ -15,4 +23,12 @@
 <details class="insights"><summary>참고: 각 랩 거리 10등분 비교</summary><p id="insight"></p><div id="sections" class="sections"></div><p class="muted">구간 1–10은 각 랩의 경로를 같은 거리 비율로 나눈 추정 구간입니다. GT7 공식 섹터나 정확히 같은 노면 위치를 뜻하지 않습니다. 차량 세팅·타이어·날씨는 확인되지 않습니다.</p></details>
 <details><summary>코스 식별과 좌표 검증</summary><div id="track-audit"></div><p>원본 X/Z, 전체 궤적과 진행 방향을 공개 기준 랩에 대조합니다. 모호한 레이아웃·역방향·좌표 이동 또는 반전 의심은 자동 확정하지 않습니다. 코스명은 추정이며 수신된 공식 ID가 아닙니다.</p><p><a href="research.html">실제 코스 조사 및 좌우 반전 검토 →</a></p></details></div></section>
 <footer><p>개인 주행 데이터에서 계산한 훈련 기록입니다. 원본 로그는 iCloud에 보관하며, 이 페이지에는 날짜·차량·랩타임·표시용 궤적과 분석 결과가 공개됩니다.</p><p>좌표 자료: <a href="https://github.com/zetetos/gt-telemetry">gt-telemetry</a> · <a href="LICENSE-gt-telemetry.txt">MIT 라이선스</a> · <a href="research.html">분석 방법과 검증 범위</a></p></footer>
-</main></body></html>
+</main>
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body></html>

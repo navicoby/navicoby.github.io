@@ -125,11 +125,19 @@ article table{-webkit-overflow-scrolling:touch}
 @media print{.topbar,.sidebar,.progress,.meta-actions,.parts{display:none!important}body{background:#fff}.layout{display:block;max-width:800px;padding:0}article{border:0;box-shadow:none;padding:0}.cover-inner{padding:30px 0}.cover{border:0}a{color:inherit}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
-</head>
+<script defer src="/assets/site-chrome.js"></script></head>
 <body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#research">Research</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
 <div class="progress" id="progress" aria-hidden="true"></div>
 <a class="skip" href="#manuscript">본문으로 건너뛰기</a>
-<header class="topbar"><div class="inner"><a class="brand" href="https://navicoby.github.io/">SpatialFlare <span>/ book draft</span></a><nav class="topnav" aria-label="상단 메뉴"><a href="https://navicoby.github.io/">홈</a><a href="#contents">목차</a><a href="manuscript-v1.md">Markdown</a></nav></div></header>
+<div class="topbar" data-sf-local-nav style="position:static;top:auto;width:100%;z-index:auto"><div class="inner"><nav class="topnav" aria-label="상단 메뉴"><a href="https://navicoby.github.io/">홈</a><a href="#contents">목차</a><a href="manuscript-v1.md">Markdown</a></nav></div></div>
 <section class="cover"><div class="cover-inner"><div><p class="eyebrow">Landscape × Augmented Reality</p><h1>증강현실과<br>조경</h1><p class="subtitle">기술의 역사와 원리에서 경관 설계·현장 적용까지</p><p class="cover-note">증강현실을 설명한 뒤 조경 사례를 덧붙이는 책이 아니라, 기술을 이해하고 현장에 적용하며 그 결과를 검증하는 책을 목표로 한 기획·시범원고입니다.</p></div><aside class="meta-box"><strong>기획·시범원고 v1</strong><p>편집 기준일 · 2026.09.30</p><p>6부 24장 구성 · 서문 + 8개 시범 장 수록</p><p>출간 교정본이 아닌 작업 중 원고입니다.</p><div class="meta-actions"><a class="button" href="#manuscript">원고 읽기 ↓</a><a class="button ghost" href="manuscript-v1.md">원본 MD ↗</a></div></aside></div>
 <div class="parts">
 <div class="part-card"><b>01</b><strong>개념과 역사</strong><span>정의에서 야외 AR의 역사까지</span></div>
@@ -140,7 +148,7 @@ article table{-webkit-overflow-scrolling:touch}
 <div class="part-card"><b>06</b><strong>검증</strong><span>정확도·사용성·운영 가능성</span></div>
 </div></section>
 <main class="layout" id="contents"><aside class="sidebar" id="sidebar"><button class="toc-toggle" id="toc-toggle" type="button" aria-expanded="false" aria-controls="toc-body">이 원고의 목차 <span>열기 ↓</span></button><div class="toc-body" id="toc-body"><h2>이 원고의 목차</h2><nav class="toc" id="toc"></nav><p class="source">v1은 전체 24장의 완성본이 아닙니다. 시범 작성된 장과 집필 방향, 참고문헌을 포함합니다.</p></div></aside><article id="manuscript"><p class="reading-note"><strong>읽기 안내.</strong> 이 페이지는 2026년 9월 30일의 v1을 그대로 보존한 웹 판입니다. 이후 장별 원고가 확정되면 이 페이지와 별개로 개정판을 갱신합니다.</p><p class="loading">원고를 불러오는 중입니다…</p></article></main>
-<footer><div class="inner"><span>SpatialFlare · 『증강현실과 조경』 v1 · 2026</span><span><a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/augmented-reality-landscape">GitHub source ↗</a></span></div></footer>
+
 <script>
 const article=document.getElementById('manuscript'), toc=document.getElementById('toc'), bar=document.getElementById('progress'), sidebar=document.getElementById('sidebar'), tocToggle=document.getElementById('toc-toggle');
 function slug(s){return s.toLowerCase().replace(/[\[\]“”‘’'".,:;!?(){}\/\\]+/g,'').replace(/\s+/g,'-').replace(/[^0-9a-z가-힣_-]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'')||'section'}
@@ -166,4 +174,12 @@ function sync(){
 }
 tocToggle.addEventListener('click',()=>{const open=sidebar.classList.toggle('open');tocToggle.setAttribute('aria-expanded',String(open));tocToggle.querySelector('span').textContent=open?'닫기 ↑':'열기 ↓'});toc.addEventListener('click',()=>{if(matchMedia('(max-width:620px)').matches){sidebar.classList.remove('open');tocToggle.setAttribute('aria-expanded','false');tocToggle.querySelector('span').textContent='열기 ↓'}});addEventListener('scroll',sync,{passive:true});addEventListener('resize',sync);
 </script>
+
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
 </body></html>
