@@ -22,9 +22,11 @@ def write(name,content):
 
 def page(title,body,name='index.html',prefix='',active=''):
     description='증강현실의 개념과 기술에서 조경 실무·식생·현장 검증까지. 옵시디언 원고 29개 장과 140개 문헌 기록을 엮은 연구 웹판.'
+    full_title = title + (' · 웹 개정판' if name == 'index.html' else ' · 증강현실과 조경')
+    canonical = BASE + ('' if name == 'index.html' else name)
     nav=''.join(f'<a href="{prefix}{url}"'+(' aria-current="page"' if active==label else '')+f'>{label}</a>' for label,url in [('전체 목차','index.html#contents'),('현장 가이드','practice.html'),('사례·근거','evidence.html'),('문헌','literature.html'),('검색','search.html')])
     return f'''<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>{E(title)} · 증강현실과 조경</title><meta name="description" content="{description}"><link rel="canonical" href="{BASE+name}"><meta property="og:type" content="article"><meta property="og:title" content="{E(title)} · 증강현실과 조경"><meta property="og:description" content="{description}"><meta property="og:url" content="{BASE+name}"><link rel="stylesheet" href="{prefix}assets/site.css"><script defer src="{prefix}assets/site.js"></script></head>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>{E(full_title)}</title><meta name="description" content="{description}"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{E(full_title)}"><meta property="og:description" content="{description}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="{prefix}assets/site.css"><script defer src="{prefix}assets/site.js"></script></head>
 <body><a class="skip" href="#main">본문으로 건너뛰기</a><div id="progress" aria-hidden="true"></div><header class="top"><div class="top-inner"><a class="brand" href="{prefix}index.html"><span class="brand-icon">S/F</span><span>SpatialFlare <small>RESEARCH LIBRARY</small></span></a><nav aria-label="주요 메뉴">{nav}</nav></div></header>{body}
 <footer><div class="wrap footer-inner"><a href="/">← SpatialFlare 홈</a><span>증강현실과 조경 · 웹 개정판 · 2026.09.30</span><a href="{prefix}editorial.html">구성·편집 기록</a><a href="{prefix}index.html#downloads">자료 내려받기</a><a href="https://github.com/navicoby/navicoby.github.io/tree/main/static/augmented-reality-landscape">GitHub</a></div></footer></body></html>'''
 
