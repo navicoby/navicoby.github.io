@@ -89,7 +89,7 @@ def apply(text, header, footer, is_home=False):
         # Keep their DOM before those scripts; CSS handles the bottom-right placement.
         (parser.body_start, parser.body_start, '\n' + header + '\n' + controls),
         (parser.body_end, parser.body_end, '\n' + footer + '\n'),
-        (parser.head_end, parser.head_end, '<link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-contrast"><script defer src="/assets/site-chrome.js"></script>'),
+        (parser.head_end, parser.head_end, '<link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-light"><script defer src="/assets/site-chrome.js?v=20261001-dwn-light"></script>'),
     ])
     for start, end, replacement in sorted(edits, reverse=True):
         text = text[:start] + replacement + text[end:]
