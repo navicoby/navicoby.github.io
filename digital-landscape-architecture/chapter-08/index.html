@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko" data-dla="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#f5f6f2"><meta name="description" content="디지털 조경학 · Digital Landscape Architecture. 관측과 분석에서 설계·시공·관리까지. 저자 원고의 15장과 도판을 읽는 출간 준비 웹판."><title>온톨로지·지식그래프와 조경의 규칙 | 디지털 조경학 · SPATIALFLARE</title><link rel="canonical" href="https://navicoby.github.io/digital-landscape-architecture/chapter-08/"><link rel="icon" href="/assets/spatialflare-logo.png"><link rel="stylesheet" href="/digital-landscape-architecture/book.css?v=20261002-book-1"><script defer src="/digital-landscape-architecture/book.js?v=20261002-book-1"></script><link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-light"><script defer src="/assets/site-chrome.js?v=20261001-dwn-light"></script></head><body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
+<main class="dla-page is-reading" id="book-top"><a class="skip-link" href="#book-content">본문으로 건너뛰기</a><div class="book-toolbar"><div class="book-wrap toolbar-inner"><a class="book-brand" href="/digital-landscape-architecture/">디지털 조경학<span>Digital Landscape Architecture</span></a><div class="toolbar-actions"><div class="type-tools" role="group" aria-label="본문 글자 크기"><button type="button" data-size="-1" aria-label="본문 글자 작게">A−</button><button type="button" data-size="1" aria-label="본문 글자 크게">A+</button></div><button class="search-open" type="button">검색 <span aria-hidden="true">⌕</span></button><details class="mobile-toc"><summary>목차</summary><div class="mobile-toc-panel"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 같은 대상을 같은 의미로 읽기</a><a class="level-3" href="#section-002">8.1 이름을 맞추는 것에서 개념을 정의하는 것으로</a><a class="level-3" href="#section-003">8.2 클래스·개체·속성과 관계</a><a class="level-2" href="#unit-02">2단위. 사실을 연결하고 조건을 검사하기</a><a class="level-3" href="#section-005">8.3 RDF와 OWL의 기본 역할</a><a class="level-3" href="#section-006">8.4 의미 추론과 자료 검증을 구별한다</a><a class="level-2" href="#unit-03">3단위. 문헌과 시방에서 의미 모델을 만드는 과정</a><a class="level-3" href="#section-008">8.5 질문을 먼저 정하고 작은 범위에서 만든다</a><a class="level-3" href="#section-009">8.6 AI가 도울 수 있는 추출과 사람이 결정할 의미</a><a class="level-2" href="#unit-04">4단위. 질의하고 근거를 따라가기</a><a class="level-3" href="#section-011">8.7 질문을 자료의 연결로 바꾸기</a><a class="level-3" href="#section-012">8.8 지식도 버전과 불확실성을 가진다</a></nav><div class="toc-heading">전체 15장</div><nav aria-label="모바일 책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/" aria-current="page"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내</a></div></details></div></div><div class="reading-progress" aria-hidden="true"></div></div>
+<div class="book-wrap book-layout"><aside class="book-sidebar"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 같은 대상을 같은 의미로 읽기</a><a class="level-3" href="#section-002">8.1 이름을 맞추는 것에서 개념을 정의하는 것으로</a><a class="level-3" href="#section-003">8.2 클래스·개체·속성과 관계</a><a class="level-2" href="#unit-02">2단위. 사실을 연결하고 조건을 검사하기</a><a class="level-3" href="#section-005">8.3 RDF와 OWL의 기본 역할</a><a class="level-3" href="#section-006">8.4 의미 추론과 자료 검증을 구별한다</a><a class="level-2" href="#unit-03">3단위. 문헌과 시방에서 의미 모델을 만드는 과정</a><a class="level-3" href="#section-008">8.5 질문을 먼저 정하고 작은 범위에서 만든다</a><a class="level-3" href="#section-009">8.6 AI가 도울 수 있는 추출과 사람이 결정할 의미</a><a class="level-2" href="#unit-04">4단위. 질의하고 근거를 따라가기</a><a class="level-3" href="#section-011">8.7 질문을 자료의 연결로 바꾸기</a><a class="level-3" href="#section-012">8.8 지식도 버전과 불확실성을 가진다</a></nav><details class="all-chapters" ><summary>전체 15장</summary><nav aria-label="책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/" aria-current="page"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav></details><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌 ↗</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내 ↗</a></aside><div id="book-content" tabindex="-1"><div class="chapter-head" id="sec-ch08"><p class="eyebrow">CHAPTER 08 / 15</p><h1>온톨로지·지식그래프와 조경의 규칙</h1><div class="chapter-meta"><span>4개 집필 단위</span><span>PDF 145–150쪽</span><a href="/digital-landscape-architecture/edition/">출간 준비 웹판</a></div></div><p class="chapter-notice">저자 Markdown 원고를 바탕으로 한 웹판입니다. 2026-09-14 PDF에서 보강된 설명은 별도로 표시했습니다.</p><article class="book-prose" id="reading"><h2 id="unit-01">1단위. 같은 대상을 같은 의미로 읽기</h2>
+<h3 id="section-002">8.1 이름을 맞추는 것에서 개념을 정의하는 것으로</h3>
+<p>설계 파일에는 ‘교목’, 수량표에는 ‘수목’, 조사표에는 ‘느티나무’가 적혀 있을 수 있다. 세 표현은 일부 대상에서 겹치지만 같은 뜻은 아니다. 수목이라는 넓은 범주, 형태에 따른 범주, 수종 이름을 모두 하나의 코드로 바꾸면 구분이 사라진다. 자동 분류와 검토를 하려면 단어를 통일하는 것뿐 아니라 단어 사이의 의미를 정리해야 한다.</p>
+<p><strong>통제어휘</strong>는 사용할 용어와 표기 규칙을 정한 목록이다. <strong>분류체계</strong>는 대상을 일정한 기준으로 나누고 범주 사이의 구조를 만든다. **온톨로지(ontology)**는 다루는 영역의 개념·속성·관계와 그 의미를 명시한 모델이다. **지식그래프(knowledge graph)**는 그 의미를 바탕으로 개별 대상과 사실·주장을 관계로 연결한 자료다. 온톨로지는 질문에 필요한 의미 구조를, 지식그래프는 그 구조에 들어가는 개별 기록을 중심으로 이해하면 좋다.</p>
+<p>전통적인 시방서 목차와 수목 대장은 이미 용어를 정리하는 역할을 했다. 디지털 의미 모델은 여러 문서와 프로그램이 그 구분을 함께 사용하도록 만든다. 단순 수량 집계만 필요하면 잘 정리한 표와 코드 사전이 충분할 수 있다. 문서마다 다른 이름을 연결하고, 객체–작업–근거–검측을 가로질러 질문해야 할 때 관계 구조의 가치가 커진다.</p>
+<p>SKOS는 대표 이름·다른 이름, 넓은 개념·좁은 개념 등의 관계로 어휘체계를 표현하는 방법이다. ‘상위 개념’ 관계와 생물학적 분류, 부품 관계를 무조건 같은 것으로 만들지 않는 것이 중요하다. <a href="https://www.w3.org/TR/skos-primer/" rel="noopener noreferrer">W3C: SKOS Primer</a></p>
+<h3 id="section-003">8.2 클래스·개체·속성과 관계</h3>
+<p>**클래스(class)**는 공통 조건으로 묶은 대상의 종류이고, **개체(instance)**는 그 종류에 속하는 특정 대상이다. ‘수목’은 클래스이고 D03의 TREE-017은 개체다. ‘수종’과 ‘규격’은 그 수목을 설명하는 속성이다. 수종 이름과 규격 값은 클래스의 이름을 대신하지 않는다.</p>
+<p>관계는 두 대상을 연결한다. ‘수목이 구역에 속한다’, ‘식재 작업이 수목을 대상으로 한다’, ‘검측 기록이 작업을 확인한다’처럼 방향과 의미를 정한다. ‘수목의 부분인 가지’와 ‘구역에 있는 수목’은 모두 포함처럼 보이지만 관계가 다르다. 부분 관계를 공간 포함 관계로 바꾸면 수목을 이동할 때 가지의 소속까지 잘못 해석할 수 있다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">구분</th>
+<th scope="col">조경에서의 예</th>
+<th scope="col">기록할 의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>종류</td>
+<td>수목, 포장, 작업, 관측</td>
+<td>무엇을 한 항목으로 다룰지</td>
+</tr>
+<tr>
+<td>개별 대상</td>
+<td>TREE-017, PAVE-002</td>
+<td>변하지 않는 식별자</td>
+</tr>
+<tr>
+<td>속성</td>
+<td>계획 면적 60 m²</td>
+<td>값의 단위와 설계·관측 구분</td>
+</tr>
+<tr>
+<td>관계</td>
+<td>작업이 객체를 대상으로 함</td>
+<td>양쪽 ID와 방향·적용 시점</td>
+</tr>
+</tbody>
+</table></div>
+<p>ID는 화면에 보이는 이름과 분리한다. 이름이 바뀌어도 같은 객체의 과거 기록을 따라갈 수 있어야 한다. 반대로 교체한 수목이 같은 자리에 심어졌다면 이전 개체와 새 개체를 어떻게 구분할지 자산 식별 정책이 필요하다. 위치나 수종이 같다는 것만으로 같은 개체라고 결정하지 않는다.</p>
+<h2 id="unit-02">2단위. 사실을 연결하고 조건을 검사하기</h2>
+<h3 id="section-005">8.3 RDF와 OWL의 기본 역할</h3>
+<p><strong>RDF</strong>는 정보를 주어–술어–목적어의 세 항목으로 표현한다. 이 세 항목을 **트리플(triple)**이라고 한다. 조경의 예로 ‘TREE-017 — 유형 — 수목’, ‘관측 A — 대상 후보 — TREE-017’처럼 쓸 수 있다. 같은 ID가 여러 문장의 주어나 목적어로 등장하면서 기록이 연결된다. 다음은 문법을 익히기 위한 코드가 아니라 의미를 보여주는 자체 표다. <a href="https://www.w3.org/TR/rdf11-primer/" rel="noopener noreferrer">W3C: RDF 트리플</a></p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">주어</th>
+<th scope="col">관계</th>
+<th scope="col">목적어</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAVE-002</td>
+<td>계획 면적 기록을 가짐</td>
+<td>면적기록-P2</td>
+</tr>
+<tr>
+<td>면적기록-P2</td>
+<td>값</td>
+<td>60</td>
+</tr>
+<tr>
+<td>면적기록-P2</td>
+<td>단위</td>
+<td>m²</td>
+</tr>
+<tr>
+<td>면적기록-P2</td>
+<td>근거 버전</td>
+<td>D03</td>
+</tr>
+</tbody>
+</table></div>
+<p>면적을 별도 기록으로 만든 이유는 숫자에 단위와 버전, 설계·관측 구분을 붙이기 위해서다. 모든 속성을 이렇게 복잡하게 만들 필요는 없지만, 검토의 근거가 되는 양에는 출처를 따라갈 구조가 필요하다. ‘60’이라는 숫자만으로는 어떤 면적이며 언제의 값인지 알 수 없다.</p>
+<p><strong>OWL</strong>은 클래스와 관계의 의미를 논리적으로 기술하는 언어다. 예를 들어 정한 모델에서 교목을 수목의 하위 클래스로 선언하고 어떤 개체를 교목으로 기록했다면, 그 개체가 수목에도 속한다는 결론을 추론할 수 있다. 이 추론은 입력한 의미와 사실을 따른 것이며 현장에서 나무를 새로 발견한 것은 아니다.</p>
+<p>OWL의 <strong>개방세계 가정</strong>에서는 기록되지 않은 사실이 곧 거짓이라는 뜻이 아니다. 수종 정보가 없으면 수종이 없는 나무라고 단정하지 않는다. 이 원리는 자료가 부분적으로 연결되는 환경에 적합하지만, 필수 필드 누락을 검사하는 업무와는 역할이 다르다. <a href="https://www.w3.org/TR/owl2-primer/" rel="noopener noreferrer">W3C: OWL과 개방세계</a></p>
+<h3 id="section-006">8.4 의미 추론과 자료 검증을 구별한다</h3>
+<p>**자료 검증(validation)**은 정한 요구 조건을 자료가 만족하는지 확인하는 과정이다. ‘이 단계의 수목 정보에는 규격 값과 단위가 있어야 한다’는 요구는 현장에 실제로 나무가 있는지를 추론하는 것과 다르다. 데이터 계약을 검사하는 질문이다.</p>
+<p><strong>SHACL</strong>은 RDF 자료가 특정 형태와 제약을 만족하는지 검사하고 결과를 보고하는 언어다. 필수 값의 수, 자료형, 허용 범위 등을 규칙으로 표현할 수 있다. 검증 결과에는 어떤 대상의 어느 속성이 어떤 조건에 맞지 않는지 남긴다. <a href="https://www.w3.org/TR/shacl/" rel="noopener noreferrer">W3C: SHACL 검증과 보고</a></p>
+<p>D03 집수정의 관저 표고는 미정이다. ‘관로 시공 검토에 들어가기 전에 관저 표고가 필요하다’는 자체 자료 요구를 적용하면 필요한 값이 없다고 보고할 수 있다. 이 결과를 실제 시공 불량으로 부르지 않는다. 아직 자료가 부족하여 해당 검토를 진행할 수 없다는 뜻이다. 설계 초기 단계에는 허용되는 미정 값도 시공 전 단계에서는 필수일 수 있으므로 적용 단계와 조건을 함께 둔다.</p>
+<p>이 규칙을 기록한다면 이름은 “시공 전 관저 표고 준비”, 대상은 “관로 시공 검토 대상 집수정”, 요구는 “표고 값·단위·높이 기준 존재”, 결과는 “입력 준비/추가 조사 필요”가 된다. 이는 책에서 만든 자료 요구 예이며 법정 시공 기준을 인용한 것이 아니다.</p>
+<p>숫자 크기 검증에는 단위가 전제된다. mm 값을 m로 해석한 상태에서 범위 검사를 통과시키지 않도록 변환과 검증의 순서를 정한다. 검증할 객체 범위가 비어 있으면 누락 자료가 있어도 검사 결과가 깨끗해 보일 수 있다. 실행 때는 대상 객체 수와 적용 규칙 수를 함께 보고한다.</p>
+<p>규칙에 없던 문제가 남을 수 있으므로 ‘자료 규칙 통과’와 ‘설계 전체 적합’을 별도 상태로 기록한다.</p>
+<aside aria-label="PDF 검토보완본 추가 설명" class="revision-addition" id="pdf-addition-08"><p class="revision-label">검토보완본 추가 설명 · PDF 147쪽</p><h4>하나의 숫자가 서로 다른 주장을 나타내는 경우</h4><p>‘판석포장 면적은 60m²다’라는 문장을 자동 수집했다고 생각해 보자. 설계 수량표의 값이면 계획량이고, 검측 기록의 값이면 정한 방법으로 확인한 양이며, 주민의 요청에 나온 값이면 요구나 제안일 수 있다. 같은 대상명과 숫자가 있어도 세 문장을 같은 사실로 합칠 수 없다.</p>
+<p>문헌·설계 문서·현장 기록에서 온톨로지를 만들 때는 먼저 대상에 관한 주장을 기록하고, 그 주장의 출처와 종류를 붙이는 것이 유용하다. AI는 문장에 등장한 대상명·수치·단위와 근거 위치의 초안을 추출할 수 있다. 사람은 그 숫자가 실제로 무엇을 주장하는지와 같은 객체를 가리키는지 확인한다. 이후 확정된 대상 ID와 어휘에 연결하고, 필요한 자료 규칙을 검사한다. 이 순서에서는 추출 결과를 곧바로 승인된 자산 상태로 저장하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">기록할 구분</th>
+<th scope="col">D03 판석포장에 적용한 자체 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대상</td>
+<td>PAVE-002</td>
+</tr>
+<tr>
+<td>주장 종류</td>
+<td>설계 면적</td>
+</tr>
+<tr>
+<td>값과 단위</td>
+<td>60, m²</td>
+</tr>
+<tr>
+<td>근거</td>
+<td>D03 설계 객체의 면적 속성</td>
+</tr>
+<tr>
+<td>관측·검측의 존재</td>
+<td>이 설계값만으로는 확인되지 않음</td>
+</tr>
+<tr>
+<td>활용</td>
+<td>설계 수량 집계의 입력</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 구조는 처음에는 일반적인 표나 관계형 데이터베이스로도 관리할 수 있다. 여러 조직의 어휘, 다양한 문헌과 이력을 이어 조회해야 할 때 RDF·온톨로지의 공통 식별자와 명시적인 관계가 유용해진다. 사용할 기술은 연결할 자료와 질문의 복잡성에 맞춰 정한다. 조경 업무의 의미를 정의하는 작업은 어느 저장 방식을 쓰더라도 필요하다.</p>
+</aside>
+<h2 id="unit-03">3단위. 문헌과 시방에서 의미 모델을 만드는 과정</h2>
+<h3 id="section-008">8.5 질문을 먼저 정하고 작은 범위에서 만든다</h3>
+<p>온톨로지 구축을 시작하며 조경의 모든 용어를 수집하면 분량만 커지고 어디에 쓸지 불분명해질 수 있다. 먼저 시스템이 답해야 할 질문을 정한다. 예를 들어 ‘이 식재 작업에 필요한 수목 규격이 모두 있는가’, ‘이 관측은 어느 설계 버전의 어느 객체와 비교했는가’처럼 입력과 출력이 분명한 질문을 둔다. 이를 온톨로지가 답할 수 있어야 하는 **역량 질문(competency question)**으로 활용할 수 있다.</p>
+<p>다음은 자료의 권위와 적용 범위를 구분하는 일이다. 국가·기관 기준, 프로젝트 시방, 연구 논문, 제조사 설명은 서로 다른 성격을 가진다. 한 문서에서 제시한 실험 조건을 모든 수목의 시공 기준으로 올리지 않는다. 사용자가 제공한 조경시방서는 3장의 WBS 구성 근거이며, 이 장에서는 그 내용을 객체·작업·검측 항목에 연결하는 방법을 설명한다.</p>
+<p>작은 범위에서 구축할 때는 다음 순서가 유용하다.</p>
+<ol>
+<li>질문에 필요한 자료와 해당 버전·적용 범위를 정한다.</li>
+<li>용어의 정의와 서로 다른 표기를 기록한다.</li>
+<li>클래스·속성·관계와 값의 단위를 구분한다.</li>
+<li>D03의 소수 객체에 적용해 누락·모호함을 찾는다.</li>
+<li>질의와 자료 검증을 실행할 수 있는 형태로 구체화하고 검토 이력을 남긴다.</li>
+</ol>
+<p>이는 정답 하나로 고정된 구축법이 아니라, 실제 질문에서 의미 모델이 작동하는지 확인하기 위한 편집·설계 절차다. 기존 표준의 이름을 그대로 가져오는 경우에도 적용 의미가 맞는지 확인하고, 원 표준 버전과 자체 확장 부분을 구별한다.</p>
+<h3 id="section-009">8.6 AI가 도울 수 있는 추출과 사람이 결정할 의미</h3>
+<p>디지털 문헌 수집은 검색식·수집 날짜·포함 기준을 기록하는 데서 시작한다. 같은 보고서의 복사본과 개정판을 구별하고, 문서 ID와 절·쪽 위치를 남긴다. 스캔 PDF에는 OCR이 필요할 수 있지만 표의 열이 섞이거나 단위가 빠질 수 있으므로 추출 결과를 원문과 대조한다. 2장의 사회분석에서 주민 발언을 구조화할 때도 같은 원칙이 적용된다.</p>
+<p>AI는 용어 후보, 속성 후보, 관계 문장, 적용 조건을 추출하는 초안을 만들 수 있다. 그 결과는 ‘원문 위치 — 추출한 주장 — 조건 — 제안 관계 — 확인 상태’로 저장한다. 문서에 없는 적용 범위를 AI가 덧붙이거나, 권고를 의무로 바꾸지 않았는지 확인한다. 단순한 문장 요약보다 <strong>주장의 주체·조건·단위·근거 위치를 보존하는 구조화</strong>가 후속 검토에 유용하다.</p>
+<figure class="book-figure" data-book-figure="fig-ch08-meaning-and-checks" id="fig-ch08-meaning-and-checks"><img alt="문서와 관측에서 나온 주장 후보를 원문과 대조하고, 검토한 의미 모델을 질의와 자료 검증으로 나누어 사용한다." decoding="async" height="2607" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch08-meaning-and-checks.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 44 · PDF 149쪽</span><a aria-label="도판 44 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch08-meaning-and-checks.webp">크게 보기 ↗</a></div><p>문서와 관측에서 나온 주장 후보를 원문과 대조하고, 검토한 의미 모델을 질의와 자료 검증으로 나누어 사용한다.</p></figcaption></figure>
+<p><em>자체 개념도. AI 추출 후보에서 검토한 의미 모델로 넘어가는 단계에는 사람의 의미 확인이 포함된다.</em></p>
+<p>‘그늘이 부족하다’는 주민 의견을 예로 들어 보자. AI는 그늘·이용 시각·장소 등의 항목을 찾을 수 있지만, 이 의견을 곧바로 ‘모든 보행로의 그늘 비율을 특정 값 이상으로 한다’는 기준으로 바꿀 근거는 없다. 의견의 맥락을 보존하고, 현장 관측·설계 목표·합의 과정을 통해 검토 항목을 정한다. 디지털 분석이 사회적 판단을 지워서는 안 된다.</p>
+<p>어느 방법이 최선인지는 질문에 달려 있다. 용어 검색이면 통제어휘, 표준 필드 검증이면 스키마·규칙, 여러 문서의 사실 연결이면 지식그래프가 적합할 수 있다. LLM이 생성한 온톨로지의 크기보다, 필요한 질문에 근거를 제시하며 답할 수 있는지를 평가한다. 자동화는 초안 추출과 반복 검사에 쓰고 의미를 확정한 책임과 버전은 별도로 기록한다.</p>
+<h2 id="unit-04">4단위. 질의하고 근거를 따라가기</h2>
+<h3 id="section-011">8.7 질문을 자료의 연결로 바꾸기</h3>
+<p>**질의(query)**는 자료에서 정한 조건에 맞는 항목과 관계를 찾는 요청이다. 관계형 데이터베이스의 표 연결과 마찬가지로, 지식그래프에서는 관계를 따라 패턴을 찾는다. <strong>SPARQL</strong>은 RDF 그래프에 이런 질의를 표현하는 언어다. 필수 관계와 선택적 관계를 구분할 수 있다. 예를 들어 표고가 없는 집수정도 목록에 남기려면 그 값이 없는 항목이 질의 과정에서 빠지지 않도록 구성한다. <a href="https://www.w3.org/TR/sparql11-query/" rel="noopener noreferrer">W3C: SPARQL의 선택적 값</a></p>
+<p>조경의 질의를 세 종류로 나누어 보면 구현 역할이 분명해진다. ‘판석포장 객체를 찾아라’는 유형 검색이다. ‘그 객체를 대상으로 하는 작업과 검측 기록을 찾아라’는 관계 검색이다. ‘관로에서 특정 거리 안에 있는 수목을 찾아라’는 기하 계산을 포함한다. 마지막 질문은 의미 모델에 관계 이름을 만들었다고 거리가 자동 계산되는 것이 아니다. 좌표·기하 엔진과 연결하고 계산 결과와 조건을 저장해야 한다.</p>
+<p>3장의 IFC에서 추출한 객체와 속성도 같은 방식으로 연결할 수 있다. IFC가 주는 정보, 자체 WBS 분류, 시방 근거, 관측 기록을 각자 보존하면서 공통 ID로 묶는다. 파일 형식을 하나로 강제하는 것보다, 원본과 변환 결과 사이 어떤 정보가 유지되는지 설명할 수 있는 것이 중요하다.</p>
+<h3 id="section-012">8.8 지식도 버전과 불확실성을 가진다</h3>
+<p>**출처·생성 이력(provenance)**은 자료나 주장이 어디서 나왔고 누가 어떤 활동으로 만들었는지 나타내는 정보다. W3C의 PROV-O는 자료·활동·행위자 등의 관계를 표현한다. 이 원고에서는 문서 버전, 추출 과정, 사람 검토와 결과 사이 연결을 설명하는 데 이 개념을 사용한다. <a href="https://www.w3.org/TR/prov-o/" rel="noopener noreferrer">W3C: PROV-O</a></p>
+<p>시방 개정으로 요구 속성이 달라지면 이전 규칙을 삭제하지 않고 새 버전을 만든다. 진행 중인 프로젝트가 어느 규칙을 적용했는지도 남긴다. 새 규칙으로 검사했을 때 결과가 달라진 이유를 객체 변경과 규칙 변경으로 나누어 볼 수 있어야 한다.</p>
+<p>문서끼리 주장이 다르면 하나를 조용히 덮어쓰지 않는다. 적용 지역·시기·대상·근거 수준이 다를 수 있다. ‘문헌 A에서 이런 조건을 보고했다’와 ‘현재 프로젝트가 이 기준을 채택했다’는 다른 관계다. 문헌에 등장한 사실을 프로젝트의 확정 속성으로 자동 승격하지 않는다.</p>
+<p>온톨로지와 지식그래프가 준비되면 AI 검토는 근거를 찾고 결과를 설명하는 데 이 구조를 이용할 수 있다. 하지만 모든 판단을 논리 규칙으로 표현할 수 있는 것은 아니다. 경관 경험과 사회적 가치처럼 합의와 해석이 필요한 내용은 그 판단 과정 자체를 기록한다. 다음 9장은 관계의 패턴을 학습하는 GNN을 다루며, 의미를 명시하는 이 장의 규칙과 학습된 관계 특징을 구별한다.</p>
+</article><nav class="chapter-pagination" aria-label="이전 장과 다음 장"><a href="/digital-landscape-architecture/chapter-07/"><small>← 이전 장</small>공간 그래프와 설계–현장 대응</a><a href="/digital-landscape-architecture/chapter-09/"><small>다음 장 →</small>GNN으로 공간의 관계를 학습한다</a></nav></div></div><div class="book-wrap book-colophon"><span>© 2026 김수영 · 출간 준비 원고</span><div><a href="/digital-landscape-architecture/edition/">판본 안내</a><a href="/#literature">SPATIALFLARE 자료실 ↗</a></div></div>
+<dialog id="book-search" aria-labelledby="search-title"><div class="dialog-bar"><h2 id="search-title">책 안에서 찾기</h2><button type="button" data-close="book-search" aria-label="검색 닫기">닫기 ×</button></div><label class="search-label" for="search-query">본문·단위 제목·보완 설명 검색</label><input type="search" id="search-query" placeholder="예: 관측, IFC, 좌표, 미대응" autocomplete="off"><p id="search-status" role="status">검색어를 입력하세요.</p><ol id="search-results"></ol></dialog>
+<dialog id="figure-viewer" aria-label="도판 크게 보기"><div class="dialog-bar"><span id="figure-label">원고 도판</span><button type="button" data-close="figure-viewer" aria-label="도판 닫기">닫기 ×</button></div><div class="figure-full"><img alt="" id="large-figure"></div><p id="figure-description"></p><a id="figure-file" target="_blank" rel="noopener">이미지 원본 열기 ↗</a></dialog>
+<noscript><div class="book-wrap no-script">본문·목차·도판은 JavaScript 없이 읽을 수 있습니다. 검색과 글자 크기 조절에는 JavaScript가 필요합니다.</div></noscript></main>
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body></html>

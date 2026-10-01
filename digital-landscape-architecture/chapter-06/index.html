@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko" data-dla="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#f5f6f2"><meta name="description" content="디지털 조경학 · Digital Landscape Architecture. 관측과 분석에서 설계·시공·관리까지. 저자 원고의 15장과 도판을 읽는 출간 준비 웹판."><title>드론·GIS와 공간 AI를 위한 3D·4D 공간표현 | 디지털 조경학 · SPATIALFLARE</title><link rel="canonical" href="https://navicoby.github.io/digital-landscape-architecture/chapter-06/"><link rel="icon" href="/assets/spatialflare-logo.png"><link rel="stylesheet" href="/digital-landscape-architecture/book.css?v=20261002-book-1"><script defer src="/digital-landscape-architecture/book.js?v=20261002-book-1"></script><link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-light"><script defer src="/assets/site-chrome.js?v=20261001-dwn-light"></script></head><body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
+<main class="dla-page is-reading" id="book-top"><a class="skip-link" href="#book-content">본문으로 건너뛰기</a><div class="book-toolbar"><div class="book-wrap toolbar-inner"><a class="book-brand" href="/digital-landscape-architecture/">디지털 조경학<span>Digital Landscape Architecture</span></a><div class="toolbar-actions"><div class="type-tools" role="group" aria-label="본문 글자 크기"><button type="button" data-size="-1" aria-label="본문 글자 작게">A−</button><button type="button" data-size="1" aria-label="본문 글자 크게">A+</button></div><button class="search-open" type="button">검색 <span aria-hidden="true">⌕</span></button><details class="mobile-toc"><summary>목차</summary><div class="mobile-toc-panel"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 지형에서 3차원 공간으로</a><a class="level-3" href="#section-002">6.1 높이 하나로 표현할 수 있는 공간</a><a class="level-3" href="#section-003">6.2 점군과 메시: 점과 표면은 다르다</a><a class="level-2" href="#unit-02">2단위. 복셀과 점유지도로 공간을 나누기</a><a class="level-3" href="#section-005">6.3 작은 부피 단위에 무엇을 저장하는가</a><a class="level-2" href="#unit-03">3단위. 표면까지의 거리를 공간에 저장하기</a><a class="level-3" href="#section-007">6.4 SDF·TSDF·ESDF의 역할</a><a class="level-2" href="#unit-04">4단위. 영상에서 새로운 시점의 장면을 만들기</a><a class="level-3" href="#section-009">6.5 NeRF와 가우시안 장면표현</a><a class="level-2" href="#unit-05">5단위. 공간을 맞추고 실제 차이를 계산하기</a><a class="level-3" href="#section-011">6.6 좌표 정합과 객체 대응</a><a class="level-3" href="#section-012">6.7 경사·단면·절성토와 시간 변화</a></nav><div class="toc-heading">전체 15장</div><nav aria-label="모바일 책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/" aria-current="page"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내</a></div></details></div></div><div class="reading-progress" aria-hidden="true"></div></div>
+<div class="book-wrap book-layout"><aside class="book-sidebar"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 지형에서 3차원 공간으로</a><a class="level-3" href="#section-002">6.1 높이 하나로 표현할 수 있는 공간</a><a class="level-3" href="#section-003">6.2 점군과 메시: 점과 표면은 다르다</a><a class="level-2" href="#unit-02">2단위. 복셀과 점유지도로 공간을 나누기</a><a class="level-3" href="#section-005">6.3 작은 부피 단위에 무엇을 저장하는가</a><a class="level-2" href="#unit-03">3단위. 표면까지의 거리를 공간에 저장하기</a><a class="level-3" href="#section-007">6.4 SDF·TSDF·ESDF의 역할</a><a class="level-2" href="#unit-04">4단위. 영상에서 새로운 시점의 장면을 만들기</a><a class="level-3" href="#section-009">6.5 NeRF와 가우시안 장면표현</a><a class="level-2" href="#unit-05">5단위. 공간을 맞추고 실제 차이를 계산하기</a><a class="level-3" href="#section-011">6.6 좌표 정합과 객체 대응</a><a class="level-3" href="#section-012">6.7 경사·단면·절성토와 시간 변화</a></nav><details class="all-chapters" ><summary>전체 15장</summary><nav aria-label="책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/" aria-current="page"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav></details><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌 ↗</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내 ↗</a></aside><div id="book-content" tabindex="-1"><div class="chapter-head" id="sec-ch06"><p class="eyebrow">CHAPTER 06 / 15</p><h1>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</h1><div class="chapter-meta"><span>5개 집필 단위</span><span>PDF 133–139쪽</span><a href="/digital-landscape-architecture/edition/">출간 준비 웹판</a></div></div><p class="chapter-notice">저자 Markdown 원고를 바탕으로 한 웹판입니다. 2026-09-14 PDF에서 보강된 설명은 별도로 표시했습니다.</p><article class="book-prose" id="reading"><h2 id="unit-01">1단위. 지형에서 3차원 공간으로</h2>
+<h3 id="section-002">6.1 높이 하나로 표현할 수 있는 공간</h3>
+<p>수목 아래로 보행로가 지나가는 공원을 생각해 보자. 같은 평면 위치에 지면, 사람의 머리 위 빈 공간, 가지와 잎이 함께 존재한다. 그 위치에 높이 하나만 저장하는 지도는 이 모든 것을 동시에 표현할 수 없다. 조경의 공간자료를 선택할 때는 무엇을 자세히 보일지에 앞서 <strong>어떤 관계를 저장할 수 있는 표현인가</strong>를 물어야 한다.</p>
+<p>**높이장(height field)**은 평면 위치마다 높이 값을 연결한 표현이다. 지형 래스터의 한 셀에 높이 하나를 저장하는 방식이 대표적이다. <strong>2.5차원 표현</strong>은 이처럼 평면 위치와 높이를 결합하지만 같은 위치에 여러 높이의 공간 구조를 자유롭게 저장하지 못하는 표현을 가리킨다. 등고선과 지형 단면을 디지털로 계산할 때 유용하다. 수직 벽이나 수관 아래 공간을 모두 나타내려면 다른 표현을 함께 써야 한다.</p>
+<p><strong>DSM</strong>은 건물·식생을 포함해 관측한 표면의 높이를 나타내고, <strong>DTM</strong>은 지형을 표현하려는 자료다. 용어의 사용과 제품 구성은 기관마다 차이가 있으므로 자료 설명을 확인한다. USGS 용어집도 DTM의 여러 사용법을 구분한다. <a href="https://www.usgs.gov/ngp-standards-and-specifications/lidar-base-specification-glossary" rel="noopener noreferrer">USGS: 지형·표면 모형 용어</a> 조경에서 배수 방향을 계산하려면 수관 상단의 높이와 실제 지표면을 혼동해서는 안 된다. 지면 신호가 없는 곳을 주변 값으로 메웠다면 그 영역은 직접 관측된 지면과 구분한다.</p>
+<p>전통적인 등고선 설계는 지형을 읽고 계획고를 정한 다음 필요한 단면에서 높이 차이를 확인했다. 디지털 지형은 이를 연속된 격자나 삼각망에서 계산하도록 확장한다. **TIN(불규칙 삼각망)**은 높이를 가진 점을 삼각형으로 연결한 지형 표현이다. 지형의 급격한 변화선, 예를 들어 포장 경계나 배수로 가장자리를 적절히 반영하면 중요한 형상이 임의로 평탄화되는 문제를 줄일 수 있다. 어느 쪽을 쓰든 표현 단위와 입력 오차가 결과에 남는다.</p>
+<aside aria-label="PDF 검토보완본 추가 설명" class="revision-addition" id="pdf-addition-06"><p class="revision-label">검토보완본 추가 설명 · PDF 133쪽</p><h4>해상도를 높이는 것과 근거를 더하는 것은 다르다</h4><p>1 m 간격으로 얻은 지면 높이를 0.1 m 격자로 다시 저장하면 셀은 많아진다. 그러나 원 관측 사이에 새로운 측정점이 생긴 것은 아니다. 이 과정의 보간(interpolation)은 주변의 알려진 값과 정한 관계를 이용해 미지 위치의 값을 추정하는 것이다. 곡면이 부드러워져도 원래 관측하지 못한 턱이나 좁은 배수로가 복구되었다고 볼 수 없다.</p>
+<p>자료를 바꿀 때는 원 관측 간격, 출력 격자 크기, 보간 방법을 각각 남긴다. 배수 방향에 민감한 경계는 촬영 간격을 촘촘하게 바꾸는 일뿐 아니라 지면을 실제로 볼 수 있는 추가 관측이나 경계선 측량으로 보완할 수 있다. 설계자가 얻으려는 것은 작은 셀 자체가 아니라 질문을 판단할 수 있는 공간 정보다.</p>
+</aside>
+<h3 id="section-003">6.2 점군과 메시: 점과 표면은 다르다</h3>
+<p>**점군(point cloud)**은 좌표와 선택적인 색·강도·분류 속성을 가진 점들의 집합이다. 점 하나는 특정 위치를 나타내지만 이웃 점과 어떤 면을 이룬다는 연결은 기본적으로 없다. 라이다의 반사점이나 사진측량으로 복원한 점은 같은 파일에 담길 수 있어도 관측 원리와 오차 특성은 다르다.</p>
+<p>**메시(mesh)**는 꼭짓점과 그 연결로 모서리·면을 구성한 표현이다. 삼각형 메시는 점 세 개로 표면 조각을 만들고 이를 이어 형상을 나타낸다. 면의 방향을 나타내는 **법선(normal)**은 음영 처리와 표면 거리 계산에 활용된다. 점군에서 법선을 추정할 때는 이웃 범위에 따라 결과가 달라질 수 있다. 가는 줄기와 넓은 포장을 같은 이웃 크기로 처리하는 것이 적절한지 확인해야 한다.</p>
+<p>점군을 메시로 바꾸는 <strong>표면 복원</strong>은 단순한 파일 변환보다 많은 가정을 포함한다. 점 사이를 어디까지 연결할지, 구멍을 메울지, 잡음을 얼마나 평활화할지 정한다. Open3D는 여러 표면 복원 방법을 제공하고, Poisson 복원에서 점이 드문 곳까지 표면이 확장될 수 있음을 설명한다. 외형이 매끈해졌다는 사실만으로 실제 표면이 확인된 것은 아니다. <a href="https://www.open3d.org/docs/latest/tutorial/geometry/surface_reconstruction.html" rel="noopener noreferrer">Open3D: 표면 복원</a></p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">표현</th>
+<th scope="col">공원에서 잘 다루는 질문</th>
+<th scope="col">추가로 필요한 정보</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지형 래스터·TIN</td>
+<td>지면의 경사·단면·계획고 차이</td>
+<td>지면 분류, 경계선, 높이 기준</td>
+</tr>
+<tr>
+<td>점군</td>
+<td>관측된 위치와 형상의 분포</td>
+<td>관측 방향, 점의 품질, 누락 영역</td>
+</tr>
+<tr>
+<td>메시</td>
+<td>표면의 연결·면적·시각화</td>
+<td>복원 가정, 구멍과 비정상 면의 확인</td>
+</tr>
+</tbody>
+</table></div>
+<p>수목 메시가 닫힌 덩어리로 보이더라도 잎·가지 사이 공극이나 목재의 실제 체적과 일치하지 않을 수 있다. 수관 외피 면적, 지면에 투영한 수관 면적, 목재량은 서로 다른 대상량이다. 표면을 만든 뒤 그 표면이 무엇을 대표하는지 정의해야 계산 결과가 조경적 의미를 가진다.</p>
+<h2 id="unit-02">2단위. 복셀과 점유지도로 공간을 나누기</h2>
+<h3 id="section-005">6.3 작은 부피 단위에 무엇을 저장하는가</h3>
+<p>**복셀(voxel)**은 3차원 공간을 나눈 작은 부피 단위다. 2장의 래스터가 평면을 셀로 나누었다면, 복셀 격자는 높이 방향까지 나눈다. 칸마다 점의 존재, 점유 가능성, 색, 물성 또는 거리 값을 저장할 수 있다. 복셀 자체가 AI 모델인 것은 아니다. AI나 물리 계산이 읽을 공간의 표현이 될 수 있다는 뜻이다.</p>
+<p>점군을 복셀로 바꾸는 간단한 방법은 점이 들어간 칸을 표시하는 것이다. Open3D의 기본 점군 복셀화는 칸 안에 점이 하나 이상 있으면 해당 칸을 생성한다. 메시 복셀화는 삼각형과 만나는 칸을 생성한다. 이 두 과정은 수목의 내부를 실제 목재로 채웠다는 뜻이 아니다. <a href="https://www.open3d.org/docs/latest/tutorial/geometry/voxelization.html" rel="noopener noreferrer">Open3D: 복셀화</a></p>
+<p>복셀 주소를 정하려면 원점과 축 방향, 칸의 크기가 필요하다. 같은 점도 격자 원점이 달라지면 다른 칸에 들어갈 수 있다. 두 시점의 점유 칸을 비교할 때는 칸 크기뿐 아니라 원점과 좌표 기준도 맞춰야 한다. 경계에 걸친 가는 줄기는 작은 위치 오차로 인접 칸을 오갈 수 있다.</p>
+<p>복셀화에서 생기는 중요한 구분은 <strong>관측된 표면</strong>, <strong>비어 있음을 관측한 공간</strong>, <strong>아직 관측하지 못한 공간</strong>이다. 센서에서 반사점까지의 광선 경로를 알면 그 경로의 일부를 빈 공간에 대한 증거로 사용할 수 있다. 그러나 반사점 뒤쪽은 보지 못한 공간일 수 있다. 점군 파일에 점이 없다는 사실만으로 이 구분을 복원할 수는 없다.</p>
+<figure class="book-figure" data-book-figure="fig-ch06-occupancy" id="fig-ch06-occupancy"><img alt="관측 방향 앞쪽에는 빈 공간에 대한 증거가 있고, 반사된 표면 칸 뒤쪽은 미관측으로 남는다. 점이 없는 칸 전체를 빈 공간으로 바꾸지 않는다." decoding="async" height="1222" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch06-occupancy.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 42 · PDF 135쪽</span><a aria-label="도판 42 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch06-occupancy.webp">크게 보기 ↗</a></div><p>관측 방향 앞쪽에는 빈 공간에 대한 증거가 있고, 반사된 표면 칸 뒤쪽은 미관측으로 남는다. 점이 없는 칸 전체를 빈 공간으로 바꾸지 않는다.</p></figcaption></figure>
+<p><em>자체 개념도. 단면에 표시한 칸은 3차원 복셀의 한 층을 뜻한다. 실제 공원 스캔이나 충돌 검사 결과가 아니다.</em></p>
+<p>**점유지도(occupancy map)**는 위치별로 장애물이 차지하는지 또는 그 가능성을 기록한 지도다. 반복 관측으로 점유 증거를 갱신하는 방식이 있으며, 수관처럼 바람에 움직이는 부분은 정적인 지면과 같은 방식으로 누적하기 어렵다. 점유 상태에 시점을 붙여야 오래된 관측을 현재의 빈 공간으로 오해하지 않는다.</p>
+<p>해상도를 높이면 계산량이 얼마나 늘어날까. 다음은 한 변 1 m인 상자를 동일한 크기의 칸으로 모두 저장하는 독립적인 산술 예다. 공원 전체나 특정 수목의 치수를 뜻하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">복셀 한 변</th>
+<th scope="col" style="text-align:right">축마다 필요한 칸</th>
+<th scope="col" style="text-align:right">전체 칸 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.25 m</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">64</td>
+</tr>
+<tr>
+<td>0.125 m</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">512</td>
+</tr>
+<tr>
+<td>0.0625 m</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">4,096</td>
+</tr>
+</tbody>
+</table></div>
+<p>한 변을 절반으로 줄이면 축별 칸이 두 배가 되어 전체는 여덟 배가 된다. 모든 칸에 같은 양의 값을 저장한다면 값 저장량도 여덟 배다. 실제 파일 크기·메모리·처리시간은 색·속성·색인과 구현에 따라 달라지므로 이 비율을 실행시간 결과로 제시하지 않는다. 작은 칸은 가는 가지와 좁은 틈을 표현할 여지를 늘리지만, 원 관측에 그 정보가 있어야 한다.</p>
+<p>**희소 격자(sparse grid)**는 필요한 칸이나 칸 묶음만 저장하여 빈 영역의 저장 부담을 줄이는 방식이다. **옥트리(octree)**는 3차원 공간을 계층적으로 여덟 부분으로 나누는 자료구조다. 필요한 영역을 더 깊이 나눌 수 있고 가까운 점을 찾는 데도 쓰인다. 단순히 압축 파일로 만드는 것과는 다르며, 자료를 찾고 계산하는 구조 자체를 바꾸는 것이다. <a href="https://www.open3d.org/docs/latest/tutorial/geometry/octree.html" rel="noopener noreferrer">Open3D: 옥트리</a></p>
+<p>같은 가상 수목 TREE-017을 여러 표현으로 읽으면 차이가 분명해진다. BIM은 계획 위치와 수종·규격을, 점군은 관측된 줄기·수관의 점을, 메시는 그 점에서 복원한 표면을, 복셀은 선택한 칸 크기에서 표면이 차지하는 공간을 나타낸다. 그래프에서는 이 수목과 보행로·다른 수목 사이 관계를 남긴다. 현재 D03에는 설계 객체만 있으므로 나머지는 앞으로 관측을 넣었을 때의 설명 경로이며, 실제 수목 스캔을 변환한 결과가 아니다.</p>
+<p>조경에서는 BIM 객체 ID와 복셀을 함께 쓸 수 있다. ‘이 복셀은 TREE-017의 관측 표면 후보와 연결된다’는 대응표를 따로 둔다. 하나의 칸에 여러 수목의 점이 섞이면 ID 하나를 임의로 선택하지 않는다. 객체의 의미와 공간의 칸은 다른 단위이므로 다대다 관계나 미확인 상태를 표현할 수 있어야 한다.</p>
+<h2 id="unit-03">3단위. 표면까지의 거리를 공간에 저장하기</h2>
+<h3 id="section-007">6.4 SDF·TSDF·ESDF의 역할</h3>
+<p>보행로를 따라 이동하는 장비에는 장애물이 있는 칸뿐 아니라 얼마나 가까운지도 필요하다. **거리장(distance field)**은 공간의 위치마다 정한 표면 또는 장애물까지의 거리를 연결한 표현이다. 거리 값은 복셀에 저장할 수도 있고 다른 함수로 계산할 수도 있다. 복셀과 거리장은 경쟁하는 자료 형식이 아니라 ‘어디에 저장하는가’와 ‘무엇을 저장하는가’에 관한 구분이다.</p>
+<p>**SDF(signed distance field)**는 표면까지의 거리에 안팎을 나타내는 부호를 붙인 표현이다. 표면에서는 0이 된다. 내부를 음수로 할지 외부를 음수로 할지는 구현의 약속이므로 자료 설명에 쓴다. 닫히지 않은 관측 표면에서 내부·외부를 어떻게 판단했는지도 중요하다. 수목의 드문 점 몇 개만으로 견고한 내부 경계를 자동으로 얻는 것은 아니다.</p>
+<p>**TSDF(truncated signed distance field)**는 표면 주변의 제한된 범위에서 부호 있는 거리 정보를 관리한다. 여러 깊이 관측을 가중하여 결합하는 표면 복원에 쓰인다. 절단 거리 밖의 값은 제한되거나 저장되지 않을 수 있으므로 그 값을 먼 장애물까지의 실제 거리로 해석하지 않는다. 깊이 카메라의 관측 방향을 따라 계산하는 거리와 유클리드 최단거리는 일치하지 않을 수 있다. TSDF의 모든 값을 곧바로 장애물까지의 정확한 최단거리로 읽어서는 안 된다.</p>
+<p>**ESDF(Euclidean signed distance field)**는 유클리드 거리 관계를 이용해 주변 장애물이나 표면과의 거리를 표현한다. NVIDIA의 nvblox는 TSDF 기반 복원과 ESDF 생성을 연결하여 재구성과 경로계획에 사용한다. 원고에서는 이 방법의 역할만 소개하며 해당 소프트웨어로 공원을 복원하거나 로봇을 움직였다는 결과를 만들지 않는다. <a href="https://nvidia-isaac-ros.github.io/concepts/scene_reconstruction/nvblox/technical_details.html" rel="noopener noreferrer">NVIDIA Isaac ROS: nvblox 기술 설명</a></p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">표현</th>
+<th scope="col">읽으려는 정보</th>
+<th scope="col">조경에서 연결할 업무</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>점유지도</td>
+<td>어느 곳이 차지되었거나 미관측인가</td>
+<td>접근 후보와 조사 필요 영역 구분</td>
+</tr>
+<tr>
+<td>TSDF</td>
+<td>여러 깊이 관측이 만드는 표면은 어디인가</td>
+<td>반복 스캔의 표면 복원</td>
+</tr>
+<tr>
+<td>ESDF</td>
+<td>주변 장애물과 얼마나 떨어져 있는가</td>
+<td>이동·장비 배치의 간격 검토</td>
+</tr>
+</tbody>
+</table></div>
+<p>거리 값이 충분하다는 것과 장비가 통과할 수 있다는 것은 별도다. 장비의 폭·회전·높이와 지면의 경사·지지력, 작업 중 움직임을 함께 고려해야 한다. 사람이나 장비가 이동하면 지도는 갱신되어야 한다. 미관측 칸의 값을 임의로 큰 거리로 채우면 보지 못한 곳을 넓은 통로처럼 만들 수 있다.</p>
+<p>이 때문에 거리 자료에는 격자 크기, 원점, 단위, 거리의 정의, 계산 가능한 영역과 관측 시점을 함께 남긴다. 13장에서 작업 동선과 보호구역을 계산할 때 이러한 자료가 입력 조건이 된다. 여기서의 거리는 계산용 기하정보이며 현장 안전거리를 새로 정하는 기준이 아니다.</p>
+<h2 id="unit-04">4단위. 영상에서 새로운 시점의 장면을 만들기</h2>
+<h3 id="section-009">6.5 NeRF와 가우시안 장면표현</h3>
+<p>설계 회의에서 현장을 자유롭게 둘러볼 수 있다면 평면 사진보다 공간 관계를 설명하기 쉬울 수 있다. 이 목적에서는 관측한 사진 사이의 새로운 시점을 자연스럽게 보여주는 능력이 중요하다. 한편 관저 높이와 포장 경사를 검토할 때는 좌표·표면·오차가 중요하다. 장면표현을 비교하려면 먼저 어느 결과를 평가하는지 정해야 한다.</p>
+<p>**복사장(radiance field)**은 공간의 위치와 바라보는 방향에 따른 빛의 정보를 다루는 표현이다. <strong>NeRF</strong>의 원 연구는 위치와 시선 방향을 입력받아 밀도와 방향에 따른 빛을 나타내는 신경망을 최적화하고, 이를 광선에 따라 합성하여 새로운 시점의 영상을 생성했다. 여기서 밀도는 렌더링 과정의 값이며 곧바로 토양 밀도나 목재의 물리적 밀도를 뜻하지 않는다. <a href="https://www.matthewtancik.com/nerf" rel="noopener noreferrer">NeRF: 원 연구의 방법 소개</a></p>
+<p>**3D 가우시안 스플래팅(3DGS)**의 원 연구는 장면을 위치·크기·방향·불투명도·색 관련 정보를 가진 가우시안 요소로 표현한다. 이 요소를 화면에 투영하고 합성하여 장면을 그린다. 가우시안 중심점이 실제 수목 표면의 측량점과 일대일로 대응한다고 가정해서는 안 된다. 요소의 모양과 분포는 영상을 잘 재현하도록 최적화되기 때문이다. <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" rel="noopener noreferrer">3DGS: 원 연구 초록</a></p>
+<p>NeRF는 2020년, 대표적인 3DGS 연구는 2023년에 발표되었지만, 발표 연도만으로 현재의 유효성을 판단할 수는 없다. 예를 들어 2025년 3DGUT는 가우시안 표현에서 왜곡된 카메라와 다른 광선 효과를 다루는 방향을 제시했다. 이는 기술 계열이 확장되고 있다는 사례이며 조경 현장의 보급률이나 측량 성능을 뜻하지 않는다. <a href="https://research.nvidia.com/labs/toronto-ai/3DGUT/" rel="noopener noreferrer">NVIDIA: 3DGUT</a></p>
+<p>같은 수목 장면을 비교할 때는 서로 다른 질문을 둔다. 원 사진과 새로운 시점이 시각적으로 자연스러운지, 줄기 표면의 위치가 독립 측량과 맞는지, 수관 아래 가림을 표현하는지, 필요한 장치에서 충분히 빠르게 표시되는지를 각각 평가한다. 한 지표가 좋다는 이유로 다른 지표를 통과했다고 처리하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">사용할 목적</th>
+<th scope="col">우선 확인할 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>현장 이해와 의사소통</td>
+<td>시점 이동 시 깨짐·가림·빈 부분, 읽기 쉬운 화면</td>
+</tr>
+<tr>
+<td>치수와 높이 비교</td>
+<td>추출 기하의 정의, 좌표 기준, 독립적인 오차 확인</td>
+</tr>
+<tr>
+<td>객체 정보 연결</td>
+<td>표현 요소와 BIM·관측 ID의 대응 방식</td>
+</tr>
+<tr>
+<td>시간 변화</td>
+<td>조명·시점 변화와 실제 변화의 분리</td>
+</tr>
+</tbody>
+</table></div>
+<p>가우시안 표현에서 메시나 깊이를 추출하는 연구와 구현도 있으므로 이를 측정과 원천적으로 분리된 기술로 볼 필요는 없다. 다만 변환했다는 사실만으로 기하 정확도가 보장되는 것은 아니다. 어떤 관측과 제약을 사용했고 무엇을 검증했는지 따라가야 한다. 책은 특정 모델의 유행을 쫓는 사용법보다, 새로운 표현이 등장해도 이런 질문으로 선택할 수 있는 기준을 중심에 둔다.</p>
+<h2 id="unit-05">5단위. 공간을 맞추고 실제 차이를 계산하기</h2>
+<h3 id="section-011">6.6 좌표 정합과 객체 대응</h3>
+<p>두 번 스캔한 공원을 화면에서 포개면 모든 수목이 조금씩 이동해 보일 수 있다. 실제 변화일 수도 있지만 두 자료의 좌표가 어긋난 결과일 수도 있다. **정합(registration)**은 자료 사이의 대응을 이용해 같은 기준에서 비교하도록 위치와 방향 등의 관계를 추정하는 과정이다. 단위를 바꾸는 일, 국가 좌표계 사이 변환, 관측끼리의 정합은 구별해서 기록한다.</p>
+<p><strong>강체 변환</strong>은 길이와 각도를 유지한 채 회전·이동시키는 변환이다. 축척까지 추정하는 경우에는 닮음 변환을 사용할 수 있다. 현장에 없는 변형을 자유롭게 허용하면 실제 설계 차이까지 줄여버릴 수 있으므로, 비교 목적에 맞는 변환 자유도를 선택한다. 좌표계가 다르다고 항상 점군을 자유 변형해야 하는 것은 아니다.</p>
+<p>**ICP(iterative closest point)**는 현재 위치에서 가까운 점 등의 대응을 찾고, 그 대응의 차이를 줄이는 변환을 반복 갱신하는 방법이다. Open3D 문서는 초기 정렬과 반복 과정, 대응 비율과 잔차를 함께 설명한다. 반복 수렴은 올바른 장소에 맞았다는 보증이 아니다. 비슷한 수목이 반복되는 구역에서는 잘못된 이웃에 맞을 수 있다. <a href="https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html" rel="noopener noreferrer">Open3D: ICP</a></p>
+<p>움직이는 잎, 새로 쌓인 자재, 굴착한 지형을 모두 정합 기준으로 쓰면 변화 자체가 정렬을 끌어갈 수 있다. 비교 기간에 안정적이고 분포가 적절한 기준을 선택하고, 변환에 사용하지 않은 점이나 구조로 확인한다. 자료 내부의 정합 잔차와 독립 검사점 오차는 다른 숫자다.</p>
+<p>또한 정합은 공간 전체를 같은 기준에 놓는 일이고, <strong>객체 대응</strong>은 어느 관측이 어느 설계 객체인지 정하는 일이다. 두 점군을 잘 맞추어도 수관이 겹치는 곳에서 개별 수목 ID가 자동 확정되지는 않는다. 변환 행렬·오차·입력 버전을 다음 7장의 대응 과정에 전달한다.</p>
+<h3 id="section-012">6.7 경사·단면·절성토와 시간 변화</h3>
+<p>지형 경사는 높이 변화가 수평 거리에서 얼마나 급하게 나타나는지를 표현한다. 래스터에서 이웃 셀의 높이 차이로 계산할 수 있으나, 셀 크기와 계산 이웃에 따라 작은 단차가 평활화되거나 잡음이 강조될 수 있다. 설계한 배수로가 격자보다 좁다면 평균된 지형에서 배수 경로가 사라질 수도 있다. 단면은 공간을 정한 선으로 잘라 읽는 것이므로 그 선의 위치와 추출 간격도 남긴다.</p>
+<p><strong>절성토량</strong>은 같은 기준과 범위의 기존 지형과 계획 지형 사이 높이 차이를 면적에 걸쳐 합산하여 구할 수 있다. 독립적인 교육 예로 2 m × 2 m 셀 세 개에서 계획고와 기존고의 차이가 각각 +0.10 m, −0.20 m, +0.05 m라고 하자. 양수를 성토로 정의하면 성토는 0.60 m³, 절토는 0.80 m³다. 순 차이는 −0.20 m³이지만 이를 ‘총 토공량 0.20 m³’라고 부르지 않는다. 절토·성토의 위치와 운반·다짐·체적 변화 조건을 따로 보아야 한다.</p>
+<p>이 계산은 입력 높이 차이를 그대로 합산한 산술이다. D03의 지형이나 공사 물량을 새로 계산한 결과가 아니다. 실제 수량에는 경계 셀 면적, 포장 구조, 표토 제거, 체적 변화와 측량 오차 등이 관련된다. 값이 없는 셀은 0의 높이 차이로 채우지 말고 비교 불가 면적을 따로 집계한다.</p>
+<p><strong>4D 공간표현</strong>은 3차원 형상에 시간을 연결하는 접근이다. 공정표에 따른 예정 형상, 날짜별 관측 형상, 예측 모형의 미래 상태는 시간의 의미가 다르다. 같은 시간축 화면에 놓더라도 상태 종류를 분리한다. 예를 들어 공정의 예정 완료일, 현장 촬영 시각, 강우 계산의 경과 초는 서로 다른 시간 필드다. 날짜 두 개의 메시를 만들었다고 그 사이 생장·침식 과정을 물리적으로 설명한 것은 아니다.</p>
+<p>시간 차이를 해석할 때는 관측 오차와 정합 오차를 함께 검토한다. 작은 높이 변화가 오차와 비슷한 크기라면 ‘변화 없음’ 대신 ‘이 자료로는 구별하기 어려움’으로 기록할 수 있다. 더 촘촘한 격자를 만든다고 기존 관측 오차가 사라지지는 않는다. 이 장의 공간표현은 11장의 물리 계산, 12장의 상태 갱신, 13장의 이동 계획에서 서로 다른 목적에 맞게 사용된다.</p>
+</article><nav class="chapter-pagination" aria-label="이전 장과 다음 장"><a href="/digital-landscape-architecture/chapter-05/"><small>← 이전 장</small>드론과 현장영상으로 조경을 관측한다</a><a href="/digital-landscape-architecture/chapter-07/"><small>다음 장 →</small>공간 그래프와 설계–현장 대응</a></nav></div></div><div class="book-wrap book-colophon"><span>© 2026 김수영 · 출간 준비 원고</span><div><a href="/digital-landscape-architecture/edition/">판본 안내</a><a href="/#literature">SPATIALFLARE 자료실 ↗</a></div></div>
+<dialog id="book-search" aria-labelledby="search-title"><div class="dialog-bar"><h2 id="search-title">책 안에서 찾기</h2><button type="button" data-close="book-search" aria-label="검색 닫기">닫기 ×</button></div><label class="search-label" for="search-query">본문·단위 제목·보완 설명 검색</label><input type="search" id="search-query" placeholder="예: 관측, IFC, 좌표, 미대응" autocomplete="off"><p id="search-status" role="status">검색어를 입력하세요.</p><ol id="search-results"></ol></dialog>
+<dialog id="figure-viewer" aria-label="도판 크게 보기"><div class="dialog-bar"><span id="figure-label">원고 도판</span><button type="button" data-close="figure-viewer" aria-label="도판 닫기">닫기 ×</button></div><div class="figure-full"><img alt="" id="large-figure"></div><p id="figure-description"></p><a id="figure-file" target="_blank" rel="noopener">이미지 원본 열기 ↗</a></dialog>
+<noscript><div class="book-wrap no-script">본문·목차·도판은 JavaScript 없이 읽을 수 있습니다. 검색과 글자 크기 조절에는 JavaScript가 필요합니다.</div></noscript></main>
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body></html>

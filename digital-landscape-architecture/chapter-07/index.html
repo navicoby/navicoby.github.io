@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko" data-dla="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#f5f6f2"><meta name="description" content="디지털 조경학 · Digital Landscape Architecture. 관측과 분석에서 설계·시공·관리까지. 저자 원고의 15장과 도판을 읽는 출간 준비 웹판."><title>공간 그래프와 설계–현장 대응 | 디지털 조경학 · SPATIALFLARE</title><link rel="canonical" href="https://navicoby.github.io/digital-landscape-architecture/chapter-07/"><link rel="icon" href="/assets/spatialflare-logo.png"><link rel="stylesheet" href="/digital-landscape-architecture/book.css?v=20261002-book-1"><script defer src="/digital-landscape-architecture/book.js?v=20261002-book-1"></script><link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-light"><script defer src="/assets/site-chrome.js?v=20261001-dwn-light"></script></head><body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
+<main class="dla-page is-reading" id="book-top"><a class="skip-link" href="#book-content">본문으로 건너뛰기</a><div class="book-toolbar"><div class="book-wrap toolbar-inner"><a class="book-brand" href="/digital-landscape-architecture/">디지털 조경학<span>Digital Landscape Architecture</span></a><div class="toolbar-actions"><div class="type-tools" role="group" aria-label="본문 글자 크기"><button type="button" data-size="-1" aria-label="본문 글자 작게">A−</button><button type="button" data-size="1" aria-label="본문 글자 크게">A+</button></div><button class="search-open" type="button">검색 <span aria-hidden="true">⌕</span></button><details class="mobile-toc"><summary>목차</summary><div class="mobile-toc-panel"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 공간을 객체와 관계로 읽기</a><a class="level-3" href="#section-002">7.1 그래프는 무엇을 표현하는가</a><a class="level-3" href="#section-003">7.2 가까움·포함·연결을 구별한다</a><a class="level-2" href="#unit-02">2단위. 설계 객체와 관측 객체를 대응시키기</a><a class="level-3" href="#section-005">7.3 후보를 만들기 전에 맞출 기준</a><a class="level-3" href="#section-006">7.4 가까운 것을 각각 고르는 문제</a><a class="level-2" href="#unit-03">3단위. 관계를 더하고 불확실한 대응을 남기기</a><a class="level-3" href="#section-008">7.5 주변 관계는 어떤 도움을 주는가</a><a class="level-3" href="#section-009">7.6 대응이 설계 변경과 검측으로 이어지는 방식</a></nav><div class="toc-heading">전체 15장</div><nav aria-label="모바일 책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/" aria-current="page"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내</a></div></details></div></div><div class="reading-progress" aria-hidden="true"></div></div>
+<div class="book-wrap book-layout"><aside class="book-sidebar"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 공간을 객체와 관계로 읽기</a><a class="level-3" href="#section-002">7.1 그래프는 무엇을 표현하는가</a><a class="level-3" href="#section-003">7.2 가까움·포함·연결을 구별한다</a><a class="level-2" href="#unit-02">2단위. 설계 객체와 관측 객체를 대응시키기</a><a class="level-3" href="#section-005">7.3 후보를 만들기 전에 맞출 기준</a><a class="level-3" href="#section-006">7.4 가까운 것을 각각 고르는 문제</a><a class="level-2" href="#unit-03">3단위. 관계를 더하고 불확실한 대응을 남기기</a><a class="level-3" href="#section-008">7.5 주변 관계는 어떤 도움을 주는가</a><a class="level-3" href="#section-009">7.6 대응이 설계 변경과 검측으로 이어지는 방식</a></nav><details class="all-chapters" ><summary>전체 15장</summary><nav aria-label="책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/" aria-current="page"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav></details><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌 ↗</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내 ↗</a></aside><div id="book-content" tabindex="-1"><div class="chapter-head" id="sec-ch07"><p class="eyebrow">CHAPTER 07 / 15</p><h1>공간 그래프와 설계–현장 대응</h1><div class="chapter-meta"><span>3개 집필 단위</span><span>PDF 140–144쪽</span><a href="/digital-landscape-architecture/edition/">출간 준비 웹판</a></div></div><p class="chapter-notice">저자 Markdown 원고를 바탕으로 한 웹판입니다. 2026-09-14 PDF에서 보강된 설명은 별도로 표시했습니다.</p><article class="book-prose" id="reading"><h2 id="unit-01">1단위. 공간을 객체와 관계로 읽기</h2>
+<h3 id="section-002">7.1 그래프는 무엇을 표현하는가</h3>
+<p>같은 수종의 나무가 여러 그루 서 있으면 사진에서 나무 한 그루의 모습만 보고 설계 ID를 찾기 어렵다. 주변 벤치, 보행로, 다른 수목과의 배치를 함께 보면 후보를 좁힐 수 있다. 이때 필요한 것은 점을 더 촘촘하게 만드는 일과 더불어 <strong>객체 사이의 관계를 기록하는 일</strong>이다.</p>
+<p>**그래프(graph)**는 노드와 노드를 잇는 간선으로 구성된 표현이다. **노드(node)**는 분석의 단위이고 **간선(edge)**은 정한 관계다. 공원의 수목·벤치·집수정을 노드로 만들 수도 있고, 식재구역이나 보행로의 교차점을 노드로 만들 수도 있다. 무엇을 노드로 삼는지는 질문에 따라 결정한다. 그래프라고 해서 항상 개별 물체를 뜻하는 것은 아니다. NetworkX의 기본 설명도 그래프를 노드와 그 쌍 사이 연결로 정의한다. <a href="https://networkx.org/documentation/stable/tutorial.html" rel="noopener noreferrer">NetworkX: 그래프와 속성</a></p>
+<p><strong>공간 그래프</strong>는 위치·인접·연결·포함 같은 공간 관계를 중심으로 구성한 그래프다. 지형 메시의 꼭짓점 연결도 그래프가 될 수 있지만, 이 장에서는 객체와 구역의 관계에 집중한다. 상세 기하를 그래프로 묶으면 관계 계산이 쉬워지는 대신 작은 가지나 포장 모서리 같은 형상 정보는 생략될 수 있다. 필요할 때 원 기하로 돌아갈 ID를 남긴다.</p>
+<p>전통적인 설계 검토에서도 ‘벤치 옆 나무’, ‘보행로 북쪽 식재지’처럼 관계를 사용했다. 디지털 그래프는 이런 표현을 관계의 이름과 계산 규칙으로 명시한다. 사람이 관계를 해석하던 맥락을 모두 자동화할 수는 없지만, 같은 기준으로 반복 확인할 수 있는 부분을 늘릴 수 있다.</p>
+<h3 id="section-003">7.2 가까움·포함·연결을 구별한다</h3>
+<p>‘가깝다’는 관계부터 구체화해 보자. 두 수목의 밑동 중심 사이 거리인지, 수관 경계 사이 최소거리인지에 따라 값이 다르다. 평면 거리를 사용할지 3차원 거리를 사용할지도 정해야 한다. 연결할 거리 기준을 바꾸면 그래프의 모양과 분석 결과가 바뀐다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">관계</th>
+<th scope="col">뜻과 방향</th>
+<th scope="col">계산·입력 조건</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>인접</td>
+<td>정한 거리 조건을 만족함</td>
+<td>기준점·경계, 단위, 임계값</td>
+</tr>
+<tr>
+<td>포함</td>
+<td>객체가 구역 안에 속함</td>
+<td>구역 버전, 경계의 처리 규칙</td>
+</tr>
+<tr>
+<td>연결</td>
+<td>실제 통행·배수 등이 이어짐</td>
+<td>출입구·관로 접속 등 기능 정보</td>
+</tr>
+<tr>
+<td>선행</td>
+<td>한 작업이 다른 작업보다 먼저 필요함</td>
+<td>시공 방식과 작업 의존성</td>
+</tr>
+</tbody>
+</table></div>
+<p>가까운 관로 두 개가 실제로 접속되었다고 할 수 없고, 가까운 보행로 두 개가 담장을 넘어 연결된다고 할 수도 없다. 연결 관계는 거리 조건만으로 만들지 않는다. 포함 관계도 구역을 걸치는 객체를 어느 한쪽에 임의로 넣기보다 다중 소속이나 경계 객체로 기록할 수 있다.</p>
+<p><strong>방향 그래프</strong>는 간선에 시작과 끝이 있는 그래프다. 배수의 흐름이나 작업 선행 관계에 유용하다. 다만 관로의 설계 연결 방향과 실제 유량 방향은 수리 조건에 따라 다를 수 있다. <strong>가중치</strong>는 거리·이동시간·비용처럼 간선에 부여하는 값이다. 가중치가 클수록 가까운지 먼지, 좋은지 나쁜지 명시해야 한다. 거리와 유사도를 같은 이름으로 넣으면 알고리즘이 반대 의미로 읽을 수 있다.</p>
+<p>그래프를 만들 때는 노드 목록과 간선 목록을 따로 저장한다. 노드는 ID·유형·위치·출처를, 간선은 양 끝 ID·관계 종류·계산값·계산 규칙 버전을 가진다. 이 구조가 있으면 설계가 바뀌었을 때 영향받은 관계만 다시 계산할 수 있다. 3장의 WBS와 8장의 의미 모델에도 같은 객체 ID를 사용할 수 있다.</p>
+<h2 id="unit-02">2단위. 설계 객체와 관측 객체를 대응시키기</h2>
+<h3 id="section-005">7.3 후보를 만들기 전에 맞출 기준</h3>
+<p>**객체 대응(matching)**은 두 자료의 항목이 같은 실제 대상을 가리키는지 판단하는 작업이다. 설계 수목과 관측 수목, 서로 다른 날짜의 관측 개체가 그 예다. 사진 속 검출 상자 ID는 한 영상의 표시를 가리키며, 여러 시점에서 같은 나무를 가리키는 자산 ID와 구별한다.</p>
+<p>먼저 좌표·단위·시점을 맞추고, 위치의 의미를 확인한다. 설계는 줄기 밑동 중심인데 관측은 수관의 중심이면 정상적인 나무도 멀리 떨어진 것으로 보일 수 있다. 경사진 수목이나 비대칭 수관에서는 이 차이가 더 커진다. 위치 오차에 관한 6장의 정합 기록도 입력으로 사용한다.</p>
+<p>가장 단순한 **기준방법(baseline)**은 가까운 설계 객체를 후보로 찾는 것이다. 기준방법은 복잡한 AI가 실제로 무엇을 더하는지 비교할 출발점이다. 거리만 쓰는 방법, 유형과 거리를 함께 쓰는 방법, 주변 관계를 더하는 방법을 같은 관측자료로 비교한다. 간단한 방법이 충분하다면 그 결과를 사용할 수 있으며 관계 학습을 반드시 추가할 필요는 없다.</p>
+<p>여러 특징으로 비용을 만들 때는 척도를 맞춘다. 거리의 m 값과 수관 크기의 m² 차이를 그대로 더하면 단위가 섞인다. 각 차이를 정한 기준으로 나누어 무차원화하거나 별도 조건으로 검사하고, 가중치의 의미를 남긴다. 위치가 결측인 항목은 거리 0으로 넣지 않는다.</p>
+<p>후보를 만들 때는 유형 불일치나 너무 큰 거리를 제외하는 **게이트(gating)**를 둘 수 있다. 게이트는 판단할 쌍을 줄이는 조건이다. 위치가 불확실한 자료에 지나치게 작은 거리 게이트를 쓰면 정답 후보가 처음부터 사라진다. 후보를 만든 규칙과 제외 이유를 보존해야 다음 검토자가 원인을 찾을 수 있다.</p>
+<h3 id="section-006">7.4 가까운 것을 각각 고르는 문제</h3>
+<p>두 설계 수목이 모두 같은 관측을 가장 가깝다고 판단할 수 있다. 각 행에서 가장 작은 값을 독립적으로 고르면 하나의 관측이 두 개의 자산으로 집계된다. 한 관측 개체가 한 설계 개체에 대응한다는 조건이 타당하다면 전체 조합을 함께 선택해야 한다.</p>
+<p><strong>이분 그래프</strong>는 노드를 두 집합으로 나누고 서로 다른 집합 사이의 관계를 나타낸다. 설계 객체 집합과 관측 객체 집합을 양쪽에 놓고 후보 쌍을 간선으로 연결할 수 있다. 각 쌍의 부적합 정도를 나타낸 표를 <strong>비용 행렬</strong>이라고 하자. 다음 값은 방법 설명을 위해 직접 정한 무차원 비용이며 D03의 실제 거리나 관측 결과가 아니다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">설계 후보</th>
+<th scope="col" style="text-align:right">관측 O1</th>
+<th scope="col" style="text-align:right">관측 O2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>설계 D1</td>
+<td style="text-align:right">0.20</td>
+<td style="text-align:right">0.30</td>
+</tr>
+<tr>
+<td>설계 D2</td>
+<td style="text-align:right">0.25</td>
+<td style="text-align:right">1.20</td>
+</tr>
+</tbody>
+</table></div>
+<p>각각 최소값을 고르면 D1과 D2가 모두 O1을 선택한다. 일대일 조합은 두 가지다. D1–O1과 D2–O2의 총비용은 1.40이고, D1–O2와 D2–O1은 0.55다. 총비용이 작은 후자가 전체 조건에 더 적합하다. 이때도 비용 정의가 잘못되었다면 최소비용 결과가 실제 정답일 이유는 없다.</p>
+<p><strong>선형 할당 문제</strong>는 이런 일대일 조합의 비용 합을 최소화하는 문제다. SciPy는 이를 계산하는 함수를 제공한다. 이 함수에 표를 넣는 것만으로 누락·오검출·미대응 정책이 완성되지는 않는다. 그 정책을 비용과 제약에 반영해야 한다. 직사각 행렬은 수가 많은 쪽의 일부 항목을 남길 수 있지만, 같은 수의 잘못된 후보들을 자동으로 거부하는 정책까지 제공하는 것은 아니다. <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html" rel="noopener noreferrer">SciPy: 선형 할당</a></p>
+<figure class="book-figure" data-book-figure="fig-ch07-matching" id="fig-ch07-matching"><img alt="설계와 관측 사이 후보 비용을 계산하고, 중복 없는 전체 조합과 미대응 선택지를 함께 검토한 뒤 대응표를 남긴다." decoding="async" height="2905" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch07-matching.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 43 · PDF 142쪽</span><a aria-label="도판 43 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch07-matching.webp">크게 보기 ↗</a></div><p>설계와 관측 사이 후보 비용을 계산하고, 중복 없는 전체 조합과 미대응 선택지를 함께 검토한 뒤 대응표를 남긴다.</p></figcaption></figure>
+<p><em>자체 절차도. 선은 실제 공원의 대응 정답이 아니라 처리 순서를 나타낸다.</em></p>
+<p>설계에는 있으나 아직 심지 않은 나무, 관측에는 있으나 설계에 없는 기존 수목이 있을 수 있다. 따라서 모든 항목을 억지로 짝짓지 않는다. 미대응 선택의 비용을 두거나 금지 쌍을 명시하고, 결과에서 보류하는 기준도 정한다. 이 기준은 평가자료를 본 뒤 유리하게 바꾸지 않고 별도의 개발 자료에서 검토한다.</p>
+<aside aria-label="PDF 검토보완본 추가 설명" class="revision-addition" id="pdf-addition-07"><p class="revision-label">검토보완본 추가 설명 · PDF 143쪽</p><h4>대응하지 않는 선택도 계산에 넣는다</h4><p>미대응을 허용한다는 문장을 실제 계산 규칙으로 바꾸어 보자. 별도의 자체 예에서 D1-O1의 비용은 0.20이고, D1-O2는 0.80, D2-O1과 D2-O2는 각각 0.90이라고 하자. 설계 항목 하나를 미대응으로 남기는 비용과 관측 항목 하나를 미대응으로 남기는 비용을 각각 0.30으로 정한다. 이 값들은 계산 원리를 보여주기 위한 가정이다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">선택</th>
+<th scope="col">계산</th>
+<th scope="col">총비용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1-O1, D2-O2를 모두 연결</td>
+<td>0.20 + 0.90</td>
+<td>1.10</td>
+</tr>
+<tr>
+<td>D1-O2, D2-O1을 모두 연결</td>
+<td>0.80 + 0.90</td>
+<td>1.70</td>
+</tr>
+<tr>
+<td>D1-O1만 연결, D2와 O2는 미대응</td>
+<td>0.20 + 0.30 + 0.30</td>
+<td>0.80</td>
+</tr>
+<tr>
+<td>네 항목을 모두 미대응으로 남김</td>
+<td>4 × 0.30</td>
+<td>1.20</td>
+</tr>
+</tbody>
+</table></div>
+<p>다른 한 쌍만 연결하는 선택은 비용이 1.40 이상이므로 이 예에서는 세 번째 선택의 총비용이 가장 작다. 미대응 비용이 너무 크면 부적절한 연결을 강제하고, 너무 작으면 유용한 대응까지 버릴 수 있다. 실제로는 객체 유형과 오류의 영향을 고려해 정책을 정하고, 별도 검증자료에서 그 효과를 확인한다. 표의 0.30은 신뢰도 30%나 거리 0.30 m를 뜻하지 않는다.</p>
+<p>결과표에는 설계 ID, 관측 ID, 대응 상태, 비용, 적용 규칙, 확인 근거를 남길 수 있다. D2의 미대응 사유는 아직 ‘설계 대상과 연결할 관측을 채택하지 못함’이다. 식재 누락, 가림, 촬영 누락, 위치 오차 중 무엇 때문인지는 후속 관측으로 구별해야 한다. 미대응 기록을 곧바로 시공 누락 판정으로 바꾸지 않는 것이 10장의 검토와 연결되는 지점이다.</p>
+</aside>
+<h2 id="unit-03">3단위. 관계를 더하고 불확실한 대응을 남기기</h2>
+<h3 id="section-008">7.5 주변 관계는 어떤 도움을 주는가</h3>
+<p>비슷한 수관 두 개가 있어도 하나는 보행로에 가깝고 다른 하나는 초본 구역 안쪽에 있을 수 있다. 객체의 색·크기뿐 아니라 주변 관계를 비교하면 후보를 좁힐 수 있다. 이를 위해 각 객체의 이웃 유형, 이웃까지의 거리, 구역 포함 관계 등을 특징으로 정리할 수 있다.</p>
+<p>관계는 항상 도움이 되는 정보는 아니다. 벤치가 옮겨졌거나 관측에서 초본 경계가 잘못 추출되면 이웃 특징도 틀린다. 모든 관계를 강한 제약으로 적용하면 올바른 수목 대응을 배제할 수 있다. 안정적인 구조와 변화하기 쉬운 관계를 구분하고, 관계의 출처와 관측 시점을 붙인다.</p>
+<p>최상 후보와 차순위 후보의 비용 차이를 보면 애매한 항목을 찾는 데 도움이 된다. 그러나 그 차이는 실제 정답 확률이 아니다. 후보가 전부 틀려도 한 후보가 상대적으로 가장 좋을 수 있다. ‘비용이 가장 작음’, ‘선택 기준을 통과함’, ‘사람이 확인함’을 별도 상태로 남긴다.</p>
+<p>대응 결과에는 설계 ID, 관측 ID, 선택한 방법, 비용 구성, 제외·보류 이유, 근거 자료를 함께 둔다. 사람이 수정한 경우에는 원 제안과 수정 후 연결을 모두 보존한다. 그래야 탐지 오류인지 위치 오류인지, 대응 규칙의 문제인지 확인할 수 있다.</p>
+<h3 id="section-009">7.6 대응이 설계 변경과 검측으로 이어지는 방식</h3>
+<p>설계 위치가 바뀌면 주변 관계를 다시 계산하고, 해당 객체의 WBS·관측 계획·검토 결과가 어떤 버전에 기반했는지 확인한다. 관측의 좌표를 설계에 맞게 덮어쓰는 방식은 차이 자체를 지우므로 사용하지 않는다. 설계는 의도, 관측은 기록, 대응표는 두 자료 사이의 판단이다.</p>
+<p>D03의 TREE-017을 촬영했다고 가정하는 설명에서도 관측자료가 없으면 좌표 차이나 대응 성공률을 채울 수 없다. 현재 책의 E1은 설계–관측 대응을 비교하기 위한 대표 실험 계획이다. 관측 생성 규칙, 정답표, 장면·시점별 자료 분리와 비교 조건을 마련한 뒤 실행해야 한다. 이 장의 비용 표는 할당 원리의 산술이며 E1 성능 결과를 대신하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">비교 조건</th>
+<th scope="col">확인할 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>거리만 사용</td>
+<td>기본 위치 정보로 어느 정도 구별되는가</td>
+</tr>
+<tr>
+<td>유형과 거리 사용</td>
+<td>다른 종류의 객체에 연결하는 오류가 줄어드는가</td>
+</tr>
+<tr>
+<td>관계 추가</td>
+<td>이웃이 도움이 되는 조건과 방해되는 조건은 무엇인가</td>
+</tr>
+<tr>
+<td>관계 제거·누락 증가</td>
+<td>결과가 특정 관계나 완전한 관측에 과도하게 의존하는가</td>
+</tr>
+</tbody>
+</table></div>
+<p>성능은 전체 성공률 하나로 끝내지 않는다. 오대응·미대응·보류를 따로 세고, 처음부터 검출하지 못한 객체와 잘못 연결한 객체도 구분한다. 동일한 관측 입력으로 방법을 비교해야 무엇이 차이를 만들었는지 해석할 수 있다. 계절과 촬영 조건이 다른 장면에서도 결과를 확인해야 새로운 현장에 대한 주장을 할 수 있다.</p>
+<p>관측 객체가 설계 객체와 대응되었다고 시공 품질이 자동 승인되는 것도 아니다. 대응은 어느 대상을 비교할지 정해 줄 뿐, 규격·위치·시공 방법·완료 기준의 검사는 별도로 필요하다. 다음 8장은 이 검사에서 사용하는 이름·속성·규칙의 의미를 일관되게 표현하는 방법을 다룬다.</p>
+</article><nav class="chapter-pagination" aria-label="이전 장과 다음 장"><a href="/digital-landscape-architecture/chapter-06/"><small>← 이전 장</small>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</a><a href="/digital-landscape-architecture/chapter-08/"><small>다음 장 →</small>온톨로지·지식그래프와 조경의 규칙</a></nav></div></div><div class="book-wrap book-colophon"><span>© 2026 김수영 · 출간 준비 원고</span><div><a href="/digital-landscape-architecture/edition/">판본 안내</a><a href="/#literature">SPATIALFLARE 자료실 ↗</a></div></div>
+<dialog id="book-search" aria-labelledby="search-title"><div class="dialog-bar"><h2 id="search-title">책 안에서 찾기</h2><button type="button" data-close="book-search" aria-label="검색 닫기">닫기 ×</button></div><label class="search-label" for="search-query">본문·단위 제목·보완 설명 검색</label><input type="search" id="search-query" placeholder="예: 관측, IFC, 좌표, 미대응" autocomplete="off"><p id="search-status" role="status">검색어를 입력하세요.</p><ol id="search-results"></ol></dialog>
+<dialog id="figure-viewer" aria-label="도판 크게 보기"><div class="dialog-bar"><span id="figure-label">원고 도판</span><button type="button" data-close="figure-viewer" aria-label="도판 닫기">닫기 ×</button></div><div class="figure-full"><img alt="" id="large-figure"></div><p id="figure-description"></p><a id="figure-file" target="_blank" rel="noopener">이미지 원본 열기 ↗</a></dialog>
+<noscript><div class="book-wrap no-script">본문·목차·도판은 JavaScript 없이 읽을 수 있습니다. 검색과 글자 크기 조절에는 JavaScript가 필요합니다.</div></noscript></main>
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body></html>

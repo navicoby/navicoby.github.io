@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="ko" data-dla="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#f5f6f2"><meta name="description" content="디지털 조경학 · Digital Landscape Architecture. 관측과 분석에서 설계·시공·관리까지. 저자 원고의 15장과 도판을 읽는 출간 준비 웹판."><title>드론과 현장영상으로 조경을 관측한다 | 디지털 조경학 · SPATIALFLARE</title><link rel="canonical" href="https://navicoby.github.io/digital-landscape-architecture/chapter-05/"><link rel="icon" href="/assets/spatialflare-logo.png"><link rel="stylesheet" href="/digital-landscape-architecture/book.css?v=20261002-book-1"><script defer src="/digital-landscape-architecture/book.js?v=20261002-book-1"></script><link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-light"><script defer src="/assets/site-chrome.js?v=20261001-dwn-light"></script></head><body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
+<main class="dla-page is-reading" id="book-top"><a class="skip-link" href="#book-content">본문으로 건너뛰기</a><div class="book-toolbar"><div class="book-wrap toolbar-inner"><a class="book-brand" href="/digital-landscape-architecture/">디지털 조경학<span>Digital Landscape Architecture</span></a><div class="toolbar-actions"><div class="type-tools" role="group" aria-label="본문 글자 크기"><button type="button" data-size="-1" aria-label="본문 글자 작게">A−</button><button type="button" data-size="1" aria-label="본문 글자 크게">A+</button></div><button class="search-open" type="button">검색 <span aria-hidden="true">⌕</span></button><details class="mobile-toc"><summary>목차</summary><div class="mobile-toc-panel"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 디지털 기술로 현장을 관측하고 측정하기</a><a class="level-3" href="#section-002">5.1 현장조사에서 디지털 관측과 측정으로</a><a class="level-3" href="#section-010">5.2 분석 질문을 관측 항목으로 바꾸기</a><a class="level-2" href="#unit-02">2단위. 어디에서 무엇으로 관측할 것인가</a><a class="level-3" href="#section-016">5.3 위에서 보기와 지상에서 보기</a><a class="level-3" href="#section-023">5.4 RGB·다중분광·열화상·거리 센서</a><a class="level-2" href="#unit-03">3단위. 필요한 세부 정보가 보이도록 촬영하기</a><a class="level-3" href="#section-032">5.5 해상도는 관측 질문에서 정한다</a><a class="level-3" href="#section-033">5.6 중복 촬영과 관측 조건을 설계한다</a><a class="level-2" href="#unit-04">4단위. 위치와 자료 품질을 확인하기</a><a class="level-3" href="#section-035">5.7 카메라의 위치와 대상의 위치를 연결한다</a><a class="level-3" href="#section-036">5.8 파일을 모으는 것에서 검토 가능한 자료로</a><a class="level-2" href="#unit-05">5단위. 현장영상을 AI 분석 자료로 바꾸기</a><a class="level-3" href="#section-038">5.9 라벨은 관측의 해석 규칙이다</a><a class="level-3" href="#section-039">5.10 자동 초안, 사람 수정, 반복 분석</a><a class="level-2" href="#unit-06">6단위. 반복 관측을 설계와 관리에 전달하기</a><a class="level-3" href="#section-041">5.11 화면의 차이와 현장의 변화를 구별한다</a><a class="level-3" href="#section-042">5.12 현장 자료를 다음 업무가 읽을 수 있게 한다</a></nav><div class="toc-heading">전체 15장</div><nav aria-label="모바일 책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/" aria-current="page"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내</a></div></details></div></div><div class="reading-progress" aria-hidden="true"></div></div>
+<div class="book-wrap book-layout"><aside class="book-sidebar"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. 디지털 기술로 현장을 관측하고 측정하기</a><a class="level-3" href="#section-002">5.1 현장조사에서 디지털 관측과 측정으로</a><a class="level-3" href="#section-010">5.2 분석 질문을 관측 항목으로 바꾸기</a><a class="level-2" href="#unit-02">2단위. 어디에서 무엇으로 관측할 것인가</a><a class="level-3" href="#section-016">5.3 위에서 보기와 지상에서 보기</a><a class="level-3" href="#section-023">5.4 RGB·다중분광·열화상·거리 센서</a><a class="level-2" href="#unit-03">3단위. 필요한 세부 정보가 보이도록 촬영하기</a><a class="level-3" href="#section-032">5.5 해상도는 관측 질문에서 정한다</a><a class="level-3" href="#section-033">5.6 중복 촬영과 관측 조건을 설계한다</a><a class="level-2" href="#unit-04">4단위. 위치와 자료 품질을 확인하기</a><a class="level-3" href="#section-035">5.7 카메라의 위치와 대상의 위치를 연결한다</a><a class="level-3" href="#section-036">5.8 파일을 모으는 것에서 검토 가능한 자료로</a><a class="level-2" href="#unit-05">5단위. 현장영상을 AI 분석 자료로 바꾸기</a><a class="level-3" href="#section-038">5.9 라벨은 관측의 해석 규칙이다</a><a class="level-3" href="#section-039">5.10 자동 초안, 사람 수정, 반복 분석</a><a class="level-2" href="#unit-06">6단위. 반복 관측을 설계와 관리에 전달하기</a><a class="level-3" href="#section-041">5.11 화면의 차이와 현장의 변화를 구별한다</a><a class="level-3" href="#section-042">5.12 현장 자료를 다음 업무가 읽을 수 있게 한다</a></nav><details class="all-chapters" ><summary>전체 15장</summary><nav aria-label="책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/" aria-current="page"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav></details><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌 ↗</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내 ↗</a></aside><div id="book-content" tabindex="-1"><div class="chapter-head" id="sec-ch05"><p class="eyebrow">CHAPTER 05 / 15</p><h1>드론과 현장영상으로 조경을 관측한다</h1><div class="chapter-meta"><span>6개 집필 단위</span><span>PDF 113–132쪽</span><a href="/digital-landscape-architecture/edition/">출간 준비 웹판</a></div></div><p class="chapter-notice">저자 Markdown 원고를 바탕으로 한 웹판입니다. 2026-09-14 PDF에서 보강된 설명은 별도로 표시했습니다.</p><article class="book-prose" id="reading"><h2 id="unit-01">1단위. 디지털 기술로 현장을 관측하고 측정하기</h2>
+<p><em>5.1–5.2 초고 · 자료 조사 기준일: 2026년 9월 13일</em></p>
+<h3 id="section-002">5.1 현장조사에서 디지털 관측과 측정으로</h3>
+<p>공원을 설계하기 전에 현장의 수목과 지형을 알아야 한다. 시공 중에는 판석이 놓인 범위와 집수정의 높이를 확인해야 하고, 준공 뒤에는 초본이 얼마나 지면을 덮고 있는지 살펴볼 수 있다. 이때 필요한 정보는 서로 다르다. 수관이 잘 보이는 항공사진으로 줄기 밑동의 위치까지 확인할 수 있는 것은 아니며, 포장 표면을 선명하게 재현한 3차원 장면만으로 물이 어느 방향으로 흐르는지 판단하기도 어렵다. 먼저 정할 것은 <strong>어떤 대상을 어떤 값이나 기록으로 남길 것인가</strong>이다.</p>
+<p>디지털 관측의 장점은 한 번에 많은 자료를 얻는 데서 그치지 않는다. 같은 자료를 다른 사람이 다시 살펴보고, 위치와 시점을 기준으로 비교하며, 처리 과정을 반복할 수 있다는 데도 있다. 이 장에서는 현장을 촬영하거나 스캔하는 일에서 출발해, 자료를 설계·시공·관리의 근거로 사용할 수 있도록 정리하는 방법을 다룬다.</p>
+<h4 id="section-003">관측, 측정, 해석은 어떻게 다른가</h4>
+<p>이 책에서 **관측(observation)**은 특정 장소와 시점에서 대상의 모습이나 상태를 감지하여 기록하는 활동을 뜻한다. 카메라의 영상, 레이저의 반사 신호, 현장 조사자의 메모가 그 기록에 해당한다. ‘나무의 윗부분이 영상에 보인다’는 관측과 ‘나무의 높이가 얼마다’라는 결과 사이에는 아직 처리해야 할 일이 있다.</p>
+<p>**측정(measurement)**은 정한 대상량에 대해 수량값을 얻는 과정이다. 수목의 높이, 판석 구간의 면적, 집수정 뚜껑의 표고처럼 무엇을 잴지 먼저 정하고, 측정 절차와 기준에 따라 값을 얻는다. 계산을 거친 값도 측정 결과가 될 수 있다. 사진측량처럼 관측자료와 기하 모형으로 길이를 구하는 방법도 있으므로, ‘센서로 직접 읽으면 측정이고 계산하면 측정이 아니다’라고 나눌 수는 없다. 다만 그 계산을 지탱하는 관측·보정·기준과 확인 절차가 있어야 한다. <a href="https://jcgm.bipm.org/vim/en/2.1.html" rel="noopener noreferrer">JCGM VIM: 측정</a></p>
+<p>**해석(interpretation)**은 관측과 측정 결과를 다른 지식이나 판단 기준에 연결해 의미를 부여하는 활동이다. 영상에서 판석을 구별하는 것은 범주를 판단하는 일이고, 판석 면적을 구하는 것은 수량을 얻는 일이다. 그 면적이 설계와 부합하는지 판단하려면 설계 범위와 허용 조건도 필요하다. 마찬가지로 수목의 색이 이전과 달라졌다는 관측에서 생육 불량의 원인을 판단하려면 계절, 조명, 수종, 현장 상태 같은 정보를 함께 보아야 한다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">구분</th>
+<th scope="col">공원에서 묻는 말</th>
+<th scope="col">남길 기록의 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>관측</td>
+<td>지금 무엇이 어떻게 보이는가?</td>
+<td>원 영상, 스캔 신호, 촬영 시각, 가림 기록</td>
+</tr>
+<tr>
+<td>측정</td>
+<td>정한 대상량의 값은 얼마인가?</td>
+<td>수고 m, 수평 투영면적 m², 기준에 대한 표고 m</td>
+</tr>
+<tr>
+<td>해석</td>
+<td>그 결과가 업무상 무엇을 의미하는가?</td>
+<td>설계와 비교할 차이, 추가 확인 대상, 유지관리 검토 의견</td>
+</tr>
+</tbody>
+</table></div>
+<p>세 활동은 실제 조사에서 반복하며 연결된다. 해석하다가 자료가 부족한 것을 발견하면 다시 관측한다. 이 구분은 조사 절차를 고정하려는 것이 아니라, 어떤 결론이 어떤 자료에서 나왔는지 따라갈 수 있게 한다.</p>
+<h4 id="section-004">기존 조사는 디지털 자료와 어떻게 이어지는가</h4>
+<p>현장 답사에서는 조사자가 중요한 대상을 선택하고, 조사표와 스케치·사진에 특징을 기록해 왔다. 길이는 줄자로, 높이 차이는 수준측량으로, 필요한 점의 위치는 토털스테이션 등의 장비로 얻을 수 있다. 이런 조사에서는 사람이 선택한 점과 항목을 정확하게 기록하는 일이 중요하다. 토털스테이션이나 전자 야장도 이미 디지털 기술을 사용하는 도구이므로, 기존 조사 전체를 종이와 수작업으로만 설명해서는 안 된다.</p>
+<p>영상과 스캔을 활용하면 관측 범위를 면과 공간으로 넓힐 수 있다. 포장 경계의 대표점만 남기는 대신 주변 영상과 3차원 점들을 함께 보관하고, 이후 다른 질문이 생겼을 때 원 자료로 돌아갈 수 있다. 객체 탐지, 경계 추출, 자료 분류처럼 반복되는 작업도 자동화할 수 있다. 그 과정에서 중요한 기준점이나 작은 높이 차이는 별도 측정으로 보완할 수 있다. 관측의 밀도를 높이는 방법과 필요한 기준을 확인하는 방법이 하나의 조사 계획 안에서 만나는 것이다.</p>
+<h4 id="section-005">장비, 측정 방법, 자료의 형태를 구별하기</h4>
+<p>드론, 라이다, 점군, 가우시안 스플래팅은 서로 다른 종류의 개념이다. 드론에 카메라와 라이다를 함께 실을 수 있고, 점군은 라이다 자료와 사진 모두에서 만들어질 수 있다. 이름을 같은 목록에 놓고 어느 기술이 더 새로운지 비교하면, 실제로 무엇을 선택해야 하는지 불분명해진다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">기술·개념</th>
+<th scope="col">무엇인가</th>
+<th scope="col">관측·측정 흐름에서 맡는 역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>드론·차량·삼각대</td>
+<td>센서를 배치하거나 운반하는 플랫폼</td>
+<td>어디에서 어떤 방향으로 관측할지 결정</td>
+</tr>
+<tr>
+<td>카메라</td>
+<td>빛을 감지해 영상으로 기록하는 센서</td>
+<td>색·밝기·무늬와 시점별 모습을 기록</td>
+</tr>
+<tr>
+<td>라이다(LiDAR)</td>
+<td>레이저 신호를 이용하는 거리 측정 기술</td>
+<td>센서와 반사 대상 사이 거리 정보를 획득</td>
+</tr>
+<tr>
+<td>사진측량(photogrammetry)</td>
+<td>영상의 기하 관계로 위치·형상·치수를 구하는 방법</td>
+<td>여러 영상의 대응점과 촬영 기하를 이용해 공간을 복원</td>
+</tr>
+<tr>
+<td>점군(point cloud, 포인트 클라우드)</td>
+<td>3차원 좌표를 가진 점들의 집합</td>
+<td>관측·복원한 공간의 위치 정보를 저장</td>
+</tr>
+<tr>
+<td>3D 가우시안 스플래팅(3DGS)</td>
+<td>공간의 여러 가우시안 요소로 장면을 표현하고 렌더링하는 방법</td>
+<td>촬영하지 않은 시점에서도 장면의 모습을 생성</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 구분 위에 AI가 들어간다. AI는 영상의 수목을 찾을 수도 있고, 여러 영상 사이의 대응이나 깊이를 추정할 수도 있다. ‘AI 관측 장비’라는 이름만으로 얻을 정보가 정해지는 것은 아니다. 입력이 무엇이고 어떤 값이나 표현을 출력하는지를 보아야 한다.</p>
+<h4 id="section-006">라이다는 거리를 얻고, 점군은 위치를 담는다</h4>
+<p>**라이다(Light Detection and Ranging, LiDAR)**의 대표적인 방식인 펄스 방식은 레이저를 보낸 뒤 반사 신호가 돌아오는 데 걸린 시간을 이용해 거리를 구한다. 이를 발사 방향과 센서의 위치·자세 정보에 결합하면 반사 지점의 3차원 좌표를 계산할 수 있다. 항공 라이다에서 레이저 스캐너와 위치·자세 측정 장치를 함께 사용하는 이유다. <a href="https://www.usgs.gov/faqs/what-lidar-data-and-where-can-i-download-it" rel="noopener noreferrer">USGS: 라이다의 거리 측정과 점군</a></p>
+<p>공원에서는 수관·줄기·지면·시설 표면의 형상을 파악하는 데 이러한 자료를 검토할 수 있다. 다만 센서에서 가려진 부분은 관측 조건을 따로 확인해야 한다. 수관 사이로 지면의 반사 신호를 얻은 경우와, 지면이 전혀 관측되지 않은 경우는 다르다. 주변 지면으로 빈 부분을 메웠다면 그 부분은 보간한 결과라는 표시가 필요하다. 스캔 방향과 관측 위치를 추가하는 것이 도움이 될 수 있지만, 빈 곳이 모두 자동으로 해결되는 것은 아니다.</p>
+<p><strong>점군</strong>의 각 점에는 기본적으로 x·y·z 좌표가 있고, 자료에 따라 색이나 반사 강도, 분류 코드 같은 속성이 붙는다. 점이 많은 화면을 보면 공간 전체를 완전히 측정한 것처럼 느끼기 쉽다. 그러나 점의 개수와 밀도는 자료의 촘촘함을 나타낼 뿐, 위치가 얼마나 정확한지와 관측이 얼마나 완전한지는 따로 확인해야 한다. 한 방향에서 관측한 수목의 뒷면이나 수관 아래에는 여전히 누락이 있을 수 있다.</p>
+<p>점군에서 수고를 계산하려면 수목에 속하는 점을 구별하고, 꼭대기와 기준 지면을 정해야 한다. 이 과정에는 분류, 이상점 처리, 기준 선택이 들어간다. 레이저 거리값이 존재한다는 사실과 그 자료에서 계산한 수고가 목적에 맞는다는 판단은 서로 연결되지만 같은 확인은 아니다.</p>
+<h4 id="section-007">사진에서 공간을 복원하는 방법</h4>
+<p><strong>사진측량</strong>은 영상에 나타난 대상과 촬영 기하의 관계를 이용한다. 같은 대상을 다른 위치에서 촬영하면, 같은 모서리나 무늬가 각 영상에서 다른 위치에 나타난다. 이 대응 관계로 카메라의 위치·방향과 대상의 3차원 위치를 구할 수 있다.</p>
+<p>대표적인 흐름인 **SfM(Structure from Motion)**은 겹치는 영상들에서 카메라의 위치·방향과 성긴 3차원 구조를 함께 복원한다. 이어서 **MVS(Multi-View Stereo)**는 여러 시점의 영상을 이용해 더 촘촘한 깊이와 형상을 구한다. COLMAP의 공식 문서는 이 흐름에서 깊이 자료를 합쳐 점군을 만들고 표면으로 이어가는 방법을 설명한다. 즉, 점군은 레이저로만 얻는 자료가 아니다. <a href="https://colmap.github.io/tutorial.html" rel="noopener noreferrer">COLMAP: 영상 기반 3차원 복원</a></p>
+<p>조경에서는 지형과 포장 경계를 함께 기록하거나, 노출된 시공 상태를 여러 방향에서 남기는 데 이러한 방법을 검토할 수 있다. 그러나 서로 대응할 수 있는 세부 무늬, 적절한 시점 차이, 대상의 움직임과 가림을 살펴야 한다. 바람에 움직이는 잎을 고정된 표면처럼 처리하는 것과 같은 문제가 생길 수 있다.</p>
+<p>또한 모양이 복원됐다는 사실만으로 현장 좌표와 실제 크기가 확정되는 것은 아니다. 알려진 거리나 위치 등 외부 기준으로 축척과 좌표를 연결하고 결과를 확인해야 한다. COLMAP도 복원 모형을 기준 좌표에 맞추는 지리 정합 과정을 별도로 설명한다. 기준의 품질과 연결 오차는 결과에 영향을 준다. 이 장의 5.7에서 기준점과 독립 검사점의 역할을 다룬다. <a href="https://colmap.github.io/faq.html#geo-registration" rel="noopener noreferrer">COLMAP: 지리 정합</a></p>
+<h4 id="section-008">최근 영상 AI는 무엇을 바꾸고 있는가</h4>
+<p>최근에는 영상에서 깊이와 카메라 정보, 공간의 점들을 함께 추정하는 학습 기반 방법도 연구되고 있다. **깊이 지도(depth map)**는 영상의 위치마다 카메라에서 장면까지의 깊이 정보를 대응시킨 자료다. 깊이의 정의와 실제 단위는 사용한 모델과 출력 규약을 확인해야 한다.</p>
+<p>2025년 발표된 **VGGT(Visual Geometry Grounded Transformer)**는 한 장 또는 여러 장의 영상에서 카메라 매개변수, 깊이 지도, 3차원 점 지도와 점의 추적 정보를 함께 추정하는 방법을 제시했다. 이는 공간 복원의 여러 정보를 학습된 모델이 함께 예측하는 방향을 보여 주는 사례다. <a href="https://vgg-t.github.io/" rel="noopener noreferrer">VGGT 연구진의 방법 소개</a></p>
+<p>조경 업무에 연결해 보면, 현장 영상을 빠르게 공간 초안으로 만들거나 추가 관측이 필요한 곳을 검토하는 보조 수단으로 생각할 수 있다. 이는 이 책의 활용 제안이며 공원에서 검증한 성능 결과는 아니다. 학습된 형태에 기대어 그럴듯한 깊이를 추정하는 능력과, 해당 현장의 실제 치수를 요구 오차 안에서 구하는 능력은 구별해 평가해야 한다. 필요한 부분의 관측이 부족하다면 처리 속도를 높여도 그 부족함 자체가 사라지는 것은 아니다.</p>
+<h4 id="section-009">가우시안 스플래팅은 어디에 놓이는가</h4>
+<p>**3D 가우시안 스플래팅(3D Gaussian Splatting, 3DGS)**은 공간에 위치·퍼짐·색·불투명도 등의 정보를 가진 요소들을 배치하고, 이를 화면에 합성해 장면을 표현한다. 원 연구는 여러 사진으로 기록한 장면을 새로운 시점에서 빠르게 렌더링하는 데 초점을 맞췄다. 여기서 ‘가우시안’은 표현에 쓰이는 요소이고, 센서가 현장에서 직접 측정한 물체 조각을 뜻하지 않는다. <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" rel="noopener noreferrer">Kerbl 등, 2023</a></p>
+<p>2023년에 발표된 방법이지만 연구와 제품 적용은 이어지고 있다. 예를 들어 Esri는 2026년 5월 ArcGIS Reality Studio 업데이트에서 가우시안 스플랫의 표현 개선을 발표했다. 이 사례는 기술이 계속 개발되고 있다는 근거로 소개한다. 제품 소개문만으로 특정 조경 현장의 측량 정확도가 검증됐다고 볼 수는 없다. <a href="https://www.esri.com/arcgis-blog/products/arcgisrealitystudio/imagery/whats-new-in-arcgis-reality-studio-may-2026" rel="noopener noreferrer">Esri, 2026년 5월 발표</a></p>
+<p>이러한 표현은 현장 상황을 여러 방향에서 살펴보고 공유하는 데 유용할 수 있다. 한편 집수정 뚜껑의 높이나 포장 경사를 재려면 사용할 기하정보, 기준 좌표, 오차 확인 절차가 필요하다. 가우시안 표현을 다른 깊이·기하 자료와 결합할 수도 있으므로 이를 측정과 영원히 분리된 기술로 취급할 필요는 없다. <strong>보기에 자연스러운 장면과 측정에 사용할 수 있는 공간의 차이를 확인하는 것</strong>이 핵심이다. 점군·메시·복셀·가우시안 표현의 원리와 변환은 6장에서 이어간다.</p>
+<figure class="book-figure" data-book-figure="fig-ch05-observation-routes" id="fig-ch05-observation-routes"><img alt="레이저 반사와 위치·자세 정보에서는 거리 계산을 거쳐 점군을 얻는다. 겹치는 영상에서는 SfM·MVS를 거쳐 점군을 만들 수 있고, 학습 기반 영상 기하 방법은 깊이와 점 위치 등을 추정한다. 영상과 카메라 정보를 이용한 가우시안 표현은 새로운 시점의 모습을 생성한다. 네 줄은 서로 다른 대표 경로이며 모두를 순서대로 수행한다는 뜻이 아니다." decoding="async" height="1724" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch05-observation-routes.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 38 · PDF 116쪽</span><a aria-label="도판 38 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch05-observation-routes.webp">크게 보기 ↗</a></div><p>레이저 반사와 위치·자세 정보에서는 거리 계산을 거쳐 점군을 얻는다. 겹치는 영상에서는 SfM·MVS를 거쳐 점군을 만들 수 있고, 학습 기반 영상 기하 방법은 깊이와 점 위치 등을 추정한다. 영상과 카메라 정보를 이용한 가우시안 표현은 새로운 시점의 모습을 생성한다. 네 줄은 서로 다른 대표 경로이며 모두를 순서대로 수행한다는 뜻이 아니다.</p></figcaption></figure>
+<p><em>그림 5-1. 관측 입력과 공간 자료를 연결하는 대표 경로. 점군의 형태가 같아도 자료를 얻은 방법은 다를 수 있다. 실제 처리에서는 경로를 결합하기도 한다. 자체 제작한 개념도이며 장비·모델 실행 결과가 아니다.</em></p>
+<h3 id="section-010">5.2 분석 질문을 관측 항목으로 바꾸기</h3>
+<h4 id="section-011">대상의 이름만으로는 무엇을 잴지 정해지지 않는다</h4>
+<p>‘수목 조사’라는 요청에는 위치, 수고, 줄기 굵기, 수관의 범위, 수종, 개체 수가 함께 섞일 수 있다. 이 가운데 측정하려는 양을 **측정대상량(measurand)**이라고 한다. ‘나무’는 대상의 이름이고 ‘정한 기준 지면에서 꼭대기까지의 수직 높이’가 측정대상량이다. 측정대상량에는 무엇을 어떤 상태와 기준에서 측정할지에 대한 설명이 필요하다. <a href="https://jcgm.bipm.org/vim/en/2.3.html" rel="noopener noreferrer">JCGM VIM: 측정대상량</a></p>
+<p>수고를 구할 때는 줄기 밑동의 지면을 기준으로 할지 다른 기준을 쓸지 정해야 한다. 위에서 본 수관 면적을 구할 때는 수평면에 투영한 경계인지, 잎 사이의 빈 곳을 제외한 가시 피복인지 정해야 한다. 같은 수목에서도 이 정의에 따라 필요한 관측 방향과 결과가 달라진다. ‘수종’처럼 범주를 정하는 항목은 측정대상량과 구별하여 판독 항목으로 남긴다.</p>
+<figure class="book-figure" data-book-figure="fig-ch05-measurands" id="fig-ch05-measurands"><img alt="왼쪽은 측면의 수목과 경사진 지면에서 줄기 밑동의 기준 높이와 꼭대기 사이 수직 높이를 표시한다. 오른쪽은 위에서 본 수관의 외곽 경계를 평면에 투영해 그 안의 면적을 표시한다. 수고는 m, 투영면적은 m²로 기록하며 수관 내부의 빈 곳을 포함하는 외곽 경계 면적과 잎이 보이는 피복 면적은 구분한다." decoding="async" height="1527" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch05-measurands.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 39 · PDF 117쪽</span><a aria-label="도판 39 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch05-measurands.webp">크게 보기 ↗</a></div><p>왼쪽은 측면의 수목과 경사진 지면에서 줄기 밑동의 기준 높이와 꼭대기 사이 수직 높이를 표시한다. 오른쪽은 위에서 본 수관의 외곽 경계를 평면에 투영해 그 안의 면적을 표시한다. 수고는 m, 투영면적은 m²로 기록하며 수관 내부의 빈 곳을 포함하는 외곽 경계 면적과 잎이 보이는 피복 면적은 구분한다.</p></figcaption></figure>
+<p><em>그림 5-2. 같은 수목에서도 먼저 정해야 할 측정대상량. 오른쪽은 선택한 수관 외곽선 안의 수평 투영면적이다. 잎이 보이는 부분만의 면적이나 지면에 드리운 그림자 면적을 뜻하지 않는다. 수치와 축척을 부여하지 않은 자체 개념도다.</em></p>
+<h4 id="section-012">가상 공원에서 관측 질문을 구체화하기</h4>
+<p>공통 가상 공원 D03의 설계에는 수목, 판석·블록 포장, 초본, 집수정과 관로가 들어 있다. 이 설계 목록은 앞으로 확인할 대상을 정하는 자료다. 설계에 기록된 수량과 위치를 실제 관측값으로 옮겨 쓰지는 않는다. 다음 표는 관측을 계획하는 예이며 실제 촬영·측정 결과가 아니다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">관측 질문</th>
+<th scope="col">먼저 정의할 항목</th>
+<th scope="col">필요한 자료와 시점</th>
+<th scope="col">결과를 읽는 조건</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수목이 어디에 서 있는가?</td>
+<td>줄기 밑동의 대표 위치와 좌표 기준</td>
+<td>지상에서 밑동이 보이는 영상·스캔 또는 위치 측정</td>
+<td>위에서 본 수관 중심을 줄기 위치로 자동 대체하지 않음</td>
+</tr>
+<tr>
+<td>수목 높이와 수관 범위는 얼마인가?</td>
+<td>수고의 지면 기준, 수관 외곽 경계 규칙</td>
+<td>꼭대기·기준 지면과 수관 범위를 확인할 수 있는 관측</td>
+<td>지면 누락과 수관 중첩을 표시하고 분리 결과를 검토</td>
+</tr>
+<tr>
+<td>판석이 놓인 면적은 얼마인가?</td>
+<td>완료된 판석의 경계와 면적의 정의</td>
+<td>시공 단계별 영상과 축척·좌표를 확인한 자료</td>
+<td>수평 투영면적과 실제 굴곡진 표면적을 구별</td>
+</tr>
+<tr>
+<td>초본이 지면을 얼마나 덮었는가?</td>
+<td>조사 구역과 그 안의 가시 피복 비율</td>
+<td>경계를 식별할 수 있는 상부 영상과 조사 시점</td>
+<td>피복률을 식재 개체 수로 바로 바꾸지 않음</td>
+</tr>
+<tr>
+<td>집수정 높이가 계획과 부합하는가?</td>
+<td>뚜껑 상단의 측점, 표고 기준, 비교할 설계값</td>
+<td>해당 측점의 높이 측정과 위치를 식별할 기록</td>
+<td>뚜껑의 표고로 내부 관저고를 대신하지 않음</td>
+</tr>
+<tr>
+<td>관로가 어디에 어떤 높이로 놓였는가?</td>
+<td>측점·연결부와 측정할 관의 표면 또는 관저 위치</td>
+<td>되메우기 전에 노출된 상태의 위치·높이 기록</td>
+<td>관 상단을 쟀다면 관저고와 구별하여 필요한 치수·변환 근거를 남김</td>
+</tr>
+</tbody>
+</table></div>
+<p>집수정과 관로는 특히 관측 시점이 중요하다. 지상 영상과 일반적인 지상·항공 라이다가 되메운 토양 아래의 관로를 그대로 보여 주는 것은 아니다. 매설 뒤 관로 위치를 확인하려면 시공 중 기록이나 별도의 지하 탐사 등 추가 근거가 필요하다. 이 공원의 설계 자료에서 아직 정하지 않은 집수정 뚜껑 표고와 관저고는 빈 항목으로 유지한다. 관측 계획을 작성했다고 설계값이나 현장값을 만들어 넣지는 않는다.</p>
+<h4 id="section-013">필요한 품질을 질문에서 정하기</h4>
+<p>작은 집수정 뚜껑을 영상에서 찾으려는 일과 뚜껑의 높이를 설계값과 비교하려는 일은 요구하는 품질이 다르다. 전자에서는 대상이 구별되는 세부 정보와 가림이 중요하다. 후자에서는 높이 기준과 측점, 측정 오차도 중요하다. 센서의 화소 수나 점군의 점 개수 하나로 두 목적의 적합성을 동시에 판단할 수 없다.</p>
+<p>**측정불확도(measurement uncertainty)**는 이용한 정보를 바탕으로 측정대상량에 부여할 수 있는 값들의 퍼짐을 나타내는 양이다. 반복 측정의 차이뿐 아니라 기준과 보정 등에서 오는 성분도 관련된다. 이 절에서는 ‘값 옆에 얼마나 신뢰할 수 있는지의 근거를 함께 남겨야 한다’는 의미로 이해하면 된다. 뒤에서 오차를 비교할 때는 어떤 방법으로 구한 불확도나 오차 지표인지 구체적으로 밝힌다. <a href="https://jcgm.bipm.org/vim/en/2.26.html" rel="noopener noreferrer">JCGM VIM: 측정불확도</a></p>
+<p>예를 들어 작은 높이 차이를 구별해야 하는 작업이라면, 허용할 수 있는 차이를 먼저 정하고 그 차이를 판별할 수 있는 관측·측정 절차를 선택한다. 결과를 맞추는 데 사용한 기준 자료만으로 품질을 선언하지 않고, 별도로 확보한 측정값이나 검사 자료로 확인하는 계획도 세운다. AI의 분류 점수, 점군 밀도, 화면의 선명도는 이러한 위치·높이의 확인을 대신하지 않는다.</p>
+<h4 id="section-014">관측 계획을 자동 처리의 출발점으로 만들기</h4>
+<p>관측 항목이 정리되면 자동화할 일을 구체적으로 나눌 수 있다. 촬영 시각과 파일 정보를 읽어 구역별로 정리하고, 탐지 모델이 검토할 수목이나 집수정 후보를 제시하게 할 수 있다. 경계와 축척이 확인된 자료에서는 면적을 계산하고, 동일한 위치 기준에 놓인 기록에서는 시점별 차이를 집계할 수 있다. 자동화의 입력은 단순한 사진 폴더에 그치지 않고 관측 목적·단위·기준·확인 상태가 붙은 기록이 된다.</p>
+<p>판석 포장 <code>PAVE-002</code>를 확인하는 계획을 예로 들면 다음과 같다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">기록할 정보</th>
+<th scope="col">이 단계에서 정할 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>목적과 대상</td>
+<td>특정 시공 시점에 완료된 판석의 수평 투영면적 확인; 설계 객체 <code>PAVE-002</code>와 대조 예정</td>
+</tr>
+<tr>
+<td>경계 규칙</td>
+<td>완료된 판석 외곽을 표시; 자재를 쌓아 둔 곳과 미시공 구간은 별도로 구분</td>
+</tr>
+<tr>
+<td>관측 근거</td>
+<td>원 영상·스캔의 식별자, 관측 시각·구역·센서와 실제 보이는 범위</td>
+</tr>
+<tr>
+<td>측정 기준</td>
+<td>면적 단위 m², 축척·좌표의 근거, 가려진 부분의 처리 방법</td>
+</tr>
+<tr>
+<td>처리 이력</td>
+<td>사용한 방법과 버전, 모델의 초안, 사람이 수정한 경계와 사유</td>
+</tr>
+<tr>
+<td>결과와 확인</td>
+<td>아직 측정하지 않았으므로 결과값은 비움; 관측 후 면적과 확인 자료를 연결</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 기록에서 설계 객체 ID는 대조할 대상을 가리킨다. 영상에서 찾은 영역이 그 객체와 같은 대상인지 확인하는 일은 남아 있다. 원 관측 기록과 수정 이력을 보존하면 나중에 경계 규칙이나 분석 방법을 바꾸었을 때 다시 계산할 수 있다. 가림 때문에 면적 일부를 알 수 없다면 ‘확인 불가’ 범위를 남기고 추가 관측으로 연결한다.</p>
+<p>여기까지의 목적은 현장을 무조건 정교한 3차원 모형으로 만드는 것이 아니다. 어떤 질문에는 위치를 확인한 사진과 조사표로 충분할 수 있고, 어떤 질문에는 여러 시점의 영상과 거리·높이 측정이 함께 필요하다. 필요한 정보를 먼저 정하면 다음 선택이 분명해진다. <strong>어디에서 관측할 것인가, 그리고 그 위치에 어떤 센서를 놓을 것인가.</strong> 다음 단위 5.3–5.4에서는 관측 플랫폼과 센서를 이 질문에 따라 비교한다.</p>
+<hr/>
+<p><a href="/digital-landscape-architecture/chapter-05/">5장 목차</a> · <span class="unavailable-source" data-source-path="../../references/ch05-unit01-sources.csv" title="원고에 참조된 별도 파일 · 제공된 두 원고 파일에 포함되지 않아 웹판에서 열 수 없습니다.">이 단위의 조사 자료와 열람 범위</span></p>
+<h2 id="unit-02">2단위. 어디에서 무엇으로 관측할 것인가</h2>
+<p><em>5.3–5.4 초고 · 자료 조사 기준일: 2026년 9월 13일</em></p>
+<h3 id="section-016">5.3 위에서 보기와 지상에서 보기</h3>
+<p>공원의 수목 위치와 초본 피복, 집수정 상태를 조사한다고 하자. 드론으로 전체를 한 번 촬영하면 주변 배치와 수관의 범위를 함께 볼 수 있다. 그러나 수관 아래의 줄기와 작은 시설물이 모두 드러나는 것은 아니다. 반대로 사람이 보행로를 따라 촬영하면 줄기와 시설물에 가까이 다가갈 수 있지만 공원 전체의 경계를 한눈에 담기는 어렵다. <strong>같은 센서를 사용해도 관측 위치가 달라지면 확보하는 정보가 달라진다.</strong></p>
+<h4 id="section-017">관측 플랫폼과 시점</h4>
+<p>**관측 플랫폼(platform)**은 센서를 지지하거나 운반하는 수단이다. 드론과 차량뿐 아니라 삼각대, 고정 지주, 사람이 들고 이동하는 장치도 이 역할을 한다. 센서가 무엇을 감지하는지는 5.4의 질문이고, 플랫폼은 센서를 어느 위치에 놓을 수 있는지와 관련된다.</p>
+<p>**시점(viewpoint)**은 대상을 바라보는 위치와 방향이다. 항공 촬영에서 **수직 촬영(nadir-looking imaging)**은 카메라를 대체로 바로 아래로 향하게 하고, **경사 촬영(oblique imaging)**은 아래쪽을 비스듬히 바라본다. 전자는 수관과 포장의 평면적인 분포를 살피기 좋고, 후자는 시설물의 측면과 수목의 입체적 관계를 보완할 수 있다. 촬영 방향을 바꾸면 물체가 서로 가리는 관계도 달라진다.</p>
+<p>관측 위치를 정할 때에는 화면 안에 대상이 들어오는지와 필요한 부분이 실제로 보이는지를 구별해야 한다. 수목 전체가 화면에 들어와도 밑동은 초본이나 시설물에 가려질 수 있다. **시야각(field of view)**은 센서가 한 번에 담는 방향의 범위이고, **가림(occlusion)**은 그 범위 안에 있는 대상 일부를 다른 물체가 막는 현상이다. 넓은 시야각만으로 가림이 해결되지는 않는다.</p>
+<h4 id="section-018">상공 관측: 넓은 범위와 수관 위의 정보</h4>
+<p>드론은 상공의 관측 위치를 선택할 수 있는 플랫폼이다. 공원의 식재지·포장·시설 배치, 수관이 덮은 범위, 시공 구역의 진행 상태를 연결해 기록하는 데 검토할 수 있다. 위성영상으로 지역 맥락을 파악한 뒤 특정 공원을 더 자세하게 관측하는 방식으로 2장의 GIS 자료와 이어질 수도 있다.</p>
+<p>상공에서 얻은 한 장의 사진이 곧 정확한 평면도인 것은 아니다. 원근과 지형·물체의 높이가 영상 속 위치에 영향을 준다. 면적과 위치를 다루려면 촬영 기하와 기준을 확인한 자료가 필요하다. 이러한 기하학적 영향을 보정하여 지도처럼 활용하도록 처리한 영상이 **정사영상(orthorectified imagery)**이다. 원 영상과 정사영상의 역할은 다르며, 정사영상에도 복원·보정 오차가 남을 수 있다. 영상에서 공간을 복원하는 흐름은 앞 단위의 사진측량 설명과 연결된다. <a href="https://www.usgs.gov/faqs/what-a-digital-orthophoto-quadrangle-doq-or-orthoimage" rel="noopener noreferrer">USGS: 정사영상의 정의</a></p>
+<p>상공 관측의 계획에는 수관 위의 정보와 수관 아래의 정보를 구별해 적는다. 수관 외곽의 분포를 파악했다면 그것은 확보한 성과다. 줄기 밑동이나 가려진 집수정이 남았다면 지상 관측 목록으로 넘긴다. 비행 가능 여부와 현장 접근 조건은 촬영 계획을 실행하기 전에 확인해야 할 입력 조건이며, 이 절에서 특정 비행 높이나 일률적인 운용 수치를 정하지 않는다.</p>
+<h4 id="section-019">지상 관측: 필요한 부분에 가까이 접근하기</h4>
+<p>지상 카메라·스마트폰으로는 줄기, 수목 표찰, 포장 이음부와 시설 표면처럼 필요한 부분을 선택해 기록할 수 있다. 기존의 사진 대장에서는 사진 번호와 설명을 사람이 맞추는 일이 많았다. 디지털 기록에서는 촬영 시각·관측 구역·대상 ID를 연결하고, 전체 위치를 보여 주는 사진과 세부 사진을 묶어 저장할 수 있다.</p>
+<p>근접 사진의 해상도가 높더라도 사진 속 대상이 어느 위치의 어느 객체인지 알 수 없으면 다른 기록과 연결하기 어렵다. 집수정 뚜껑만 크게 찍은 사진에는 그 뚜껑이 공원의 어느 곳에 있는지 함께 남겨야 한다. 사진 파일에 들어 있는 카메라의 위치도 대상 자체의 위치와 같지는 않다. 필요한 경우 주변 맥락을 담은 사진과 대상의 위치 측정을 함께 사용한다.</p>
+<p><strong>360도 영상</strong>은 한 관측 위치에서 여러 방향의 모습을 기록하는 데 도움이 된다. 보행로를 따라 주변 맥락을 살펴보거나 이전 조사 위치를 다시 찾는 자료로 검토할 수 있다. 다만 한 위치에서 주변을 넓게 담는 것과 대상까지의 거리를 얻는 것은 별개다. 거리나 공간 형상이 필요하면 다른 시점의 영상, 깊이 정보 또는 별도 측정과 연결한다.</p>
+<p>지상 라이다도 센서를 어디에 놓는지에 따라 얻는 면이 달라진다. 한 지점에 세워 스캔하는 방식에서는 해당 위치에서 보이는 표면을 기록하고, 필요한 경우 위치를 바꿔 보완한다. 움직이며 스캔하는 방식에서는 연속적으로 변하는 센서의 위치와 방향을 함께 알아야 한다. 플랫폼을 움직이는 일과 자료를 하나의 좌표 안에 연결하는 일이 함께 계획되어야 한다.</p>
+<h4 id="section-020">이동 관측: 이동 경로와 공간 기록을 연결하기</h4>
+<p>손에 들거나 배낭·차량에 장착한 센서로 공원을 통과하면서 연속 자료를 얻을 수 있다. 이동 관측은 보행로와 수목 사이의 공간을 따라 기록한다는 장점이 있다. 반면 이동 중 센서가 어느 위치에서 어느 방향을 보고 있었는지 알지 못하면 서로 다른 시각의 점과 영상을 정확히 합치기 어렵다.</p>
+<p>**SLAM(Simultaneous Localization and Mapping, 동시적 위치추정 및 지도작성)**은 관측자료를 이용해 자신의 위치를 추정하면서 주변 지도를 함께 만드는 방법이다. 영상, 레이저 자료, 관성 정보 등을 사용하는 여러 구성이 있다. **관성측정장치(IMU)**는 가속도와 각속도 등을 기록하며, 영상이나 거리 정보와 결합해 센서의 움직임을 추정하는 데 사용될 수 있다.</p>
+<p>예를 들어 ORB-SLAM3는 단안·스테레오·RGB-D 영상과 관성 정보를 활용하는 구성을 제시했다. 이 사례는 이동하며 얻은 영상과 움직임 정보를 연결하는 방법을 소개하기 위한 것이다. 모든 이동형 스캐너가 같은 알고리즘을 쓴다는 뜻은 아니다. <a href="https://arxiv.org/abs/2007.11898" rel="noopener noreferrer">ORB-SLAM3 연구 초록</a></p>
+<p>이렇게 만든 지도도 기준 좌표와의 연결, 이동 중 누적 오차, 추적이 끊긴 구간을 확인해야 한다. 비슷한 줄기가 반복되는 구간이나 바람에 움직이는 식생에서는 안정적으로 대응할 특징을 얻는 데 어려움이 있을 수 있다. 이미 지나온 장소를 다시 관측하여 지도의 일관성을 확인하는 방법도 있지만, 되돌아왔다는 사실만으로 모든 위치 오차가 없어졌다고 볼 수는 없다. SLAM과 정합의 원리는 6장에서 이어간다.</p>
+<h4 id="section-021">고정 관측: 같은 방향을 반복해서 기록하기</h4>
+<p>고정 카메라는 센서를 같은 위치에 두고 정해진 간격이나 조건에 따라 촬영한다. 한 번에 공원 전체를 조사하는 대신, 정한 범위의 상태가 시간에 따라 어떻게 달라지는지 기록한다. 초본 식재지의 계절 변화나 일정 구간의 시공 진행을 비교하는 질문에 검토할 수 있다.</p>
+<p>PhenoCam은 카메라 영상의 시계열에서 식생 색과 수관의 변화, 계절 변화 시기 등을 파악하는 자료를 제공해 온 사례다. NEON도 고정한 카메라에서 수관 위와 아래의 식생을 반복 관측하고 PhenoCam의 처리 기준과 연결한다. 익숙한 카메라에서도 관측 위치와 시점을 관리하고 반복 자료를 분석하면 다른 종류의 정보를 얻을 수 있다. <a href="https://www.neonscience.org/data-collection/phenocams" rel="noopener noreferrer">NEON: 고정 카메라와 식생 관측</a></p>
+<p>고정한 카메라도 렌즈의 오염, 지주의 움직임, 노출 변화와 성장한 수목의 가림 영향을 받는다. 따라서 ‘같은 파일 이름 규칙으로 사진이 계속 쌓인다’는 상태와 ‘같은 조건에서 비교할 자료가 쌓인다’는 상태는 다르다. 반복 관측의 비교 조건과 변화 해석은 5.11에서 다룬다.</p>
+<figure class="book-figure" data-book-figure="fig-ch05-platform-views" id="fig-ch05-platform-views"><img alt="같은 공원 단면을 세 번 보여 준다. 상공에서는 카메라의 관측선이 수관 윗면에 닿고, 지상에서는 줄기와 집수정 주변을 향하며, 고정 관측에서는 한 위치에서 초본 구역을 반복해서 기록한다. 선은 설명할 대상을 가리키며 완전한 가시권이나 센서의 성능을 계산한 결과가 아니다." decoding="async" height="1593" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch05-platform-views.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 40 · PDF 121쪽</span><a aria-label="도판 40 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch05-platform-views.webp">크게 보기 ↗</a></div><p>같은 공원 단면을 세 번 보여 준다. 상공에서는 카메라의 관측선이 수관 윗면에 닿고, 지상에서는 줄기와 집수정 주변을 향하며, 고정 관측에서는 한 위치에서 초본 구역을 반복해서 기록한다. 선은 설명할 대상을 가리키며 완전한 가시권이나 센서의 성능을 계산한 결과가 아니다.</p></figcaption></figure>
+<p><em>그림 5-3. 관측 위치가 달라지면 같은 공원에서도 확보하는 정보가 달라진다. 배치와 높이를 단순화한 자체 개념도이며, D03의 측량 도면이나 비행 계획이 아니다.</em></p>
+<h4 id="section-022">공통 공원의 관측을 조합하기</h4>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">필요한 정보</th>
+<th scope="col">우선 검토할 관측</th>
+<th scope="col">함께 확보할 보완 정보</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수관과 포장 구역의 전체 배치</td>
+<td>상공의 수직·경사 영상</td>
+<td>가려진 곳의 지상 기록과 위치 기준</td>
+</tr>
+<tr>
+<td>개별 수목의 줄기와 밑동</td>
+<td>지상 근접 촬영·스캔</td>
+<td>개체를 식별할 표찰·주변 맥락·기준 위치</td>
+</tr>
+<tr>
+<td>판석·집수정의 세부 상태</td>
+<td>지상 관측과 필요한 측점의 측정</td>
+<td>전체 구역 사진, 비교할 설계 항목</td>
+</tr>
+<tr>
+<td>초본 구역의 시점별 변화</td>
+<td>같은 범위를 보는 고정 또는 반복 관측</td>
+<td>날짜·조명·계절·관리 이력</td>
+</tr>
+<tr>
+<td>노출된 관로와 연결부</td>
+<td>되메우기 전 지상 관측</td>
+<td>측점·높이 기준·연결부 식별 기록</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 표는 모든 장비를 동시에 쓰라는 목록이 아니다. 관측 목적을 충족하는 자료가 있다면 같은 정보를 중복해서 얻을 필요가 있는지 판단한다. 가상 공원의 설계 객체와 수량은 그대로 두고, 어떤 자료를 어느 시점에 추가로 확보할지만 계획한다.</p>
+<h3 id="section-023">5.4 RGB·다중분광·열화상·거리 센서</h3>
+<h4 id="section-024">센서는 어떤 신호를 기록하는가</h4>
+<p>센서를 비교할 때는 입력 신호부터 확인해야 한다. RGB 카메라와 다중분광 카메라는 주로 대상에서 반사된 빛을 기록한다. 열화상 카메라는 대상과 주변에서 오는 열적외선 복사를 감지한다. 라이다는 스스로 레이저 신호를 보내고 되돌아오는 신호를 이용한다.</p>
+<p>이처럼 주변의 빛이나 대상이 방출하는 에너지를 받는 방식을 <strong>수동 관측(passive sensing)</strong>, 관측 장치가 신호를 보내고 그 반응을 받는 방식을 **능동 관측(active sensing)**이라고 한다. 여기서 능동·수동은 자동·수동 조작의 구분이 아니다. 고정 카메라가 자동 촬영하더라도 자체 조명 없이 주변 빛을 기록한다면 수동 관측에 해당한다. 라이다는 자체 광원을 사용하는 능동 센서의 예다. <a href="https://www.neonscience.org/data-collection/lidar" rel="noopener noreferrer">NEON: 라이다와 능동 관측</a></p>
+<h4 id="section-025">RGB: 형태와 색의 관계를 기록하기</h4>
+<p><strong>RGB 영상</strong>은 빨강·초록·파랑의 세 채널로 색을 표현한다. 조경에서는 수목·초본·포장·시설물을 구별하고, 형태와 표면의 무늬를 확인하며, 시점별 모습을 비교하는 기본 입력이 된다. 4장의 분류·탐지·분할 모델도 이러한 영상을 사용할 수 있다.</p>
+<p>한편 영상의 픽셀값은 대상의 성질만을 나타내지 않는다. 대상에 들어온 빛, 그림자, 촬영 방향, 노출과 색 보정의 영향을 함께 받는다. 그래서 초본이 더 어둡게 보인다는 이유만으로 생육 상태가 나빠졌다고 단정할 수 없다. 촬영한 색을 비교하려는지, 물체의 종류를 구별하려는지에 따라 관리할 조건이 달라진다.</p>
+<p>보통의 컬러 사진은 사람이 보기 좋은 결과를 만들도록 처리되어 있다. 정량적인 밝기·분광 분석을 할 때에는 어떤 원 자료와 보정 정보가 남아 있는지 확인해야 한다. 실제 센서의 방사 보정 문서에서도 원 픽셀값을 물리적인 복사량으로 바꾸기 위해 노출·센서 이득·검은 신호 수준·렌즈 주변부 감광 등의 정보를 사용한다. <a href="https://support.micasense.com/hc/en-us/articles/115000351194-Radiometric-Calibration-Model-for-MicaSense-Sensors" rel="noopener noreferrer">MicaSense: 방사 보정 모형</a></p>
+<h4 id="section-026">다중분광: 눈에 보이는 색 밖의 차이를 기록하기</h4>
+<p>**분광(spectral)**은 빛을 파장별로 나누어 보는 관점이다. **밴드(band)**는 센서가 구분해서 기록하는 특정 파장 구간을 뜻한다. **다중분광 영상(multispectral imagery)**은 여러 밴드의 자료를 각각 기록한다. 식생 관측에서는 가시광뿐 아니라 근적외선(NIR) 등 다른 파장대의 반응을 비교할 수 있다. 여기서 주로 이용하는 근적외선 반사광과 뒤에서 다룰 열화상의 열적외선 복사는 서로 다른 정보다. 어떤 밴드를 제공하는지는 장비에 따라 다르며, 화면에 빨간색으로 표시한 영역이 실제 빨간 빛만을 관측했다는 뜻도 아니다.</p>
+<p>물질마다 파장에 따른 반사 특성이 다르므로, 밴드를 조합하면 RGB 사진에서 비슷하게 보이는 대상의 차이를 살펴볼 수 있다. 초본 식재지의 시점별 변화를 조사한다면 먼저 같은 구역의 밴드별 값을 확보하고, 해당 값이 비교 가능한 반사율인지 확인하는 순서가 필요하다.</p>
+<p>**반사율(reflectance)**은 정한 파장과 관측 조건에서 입사한 빛에 비해 반사되는 빛의 비율과 관련된 값이다. 원 영상의 밝기와는 구별한다. 센서에 도달한 빛이 많아진 이유가 대상의 변화인지, 햇빛이 강해진 결과인지 구별하기 위해 기준과 보정 자료가 필요하다.</p>
+<p>예를 들어 알려진 반사 특성을 가진 **반사율 기준판(calibrated reflectance panel)**을 촬영해 영상값과 반사율의 관계를 정할 수 있다. MicaSense의 문서는 먼저 원 픽셀을 복사량으로 바꾸고 기준판의 알려진 반사율과 연결하는 흐름을 설명한다. 이는 특정 제조사의 보정 절차를 소개하는 예이며, 모든 센서에 같은 계수를 적용하는 방법은 아니다. <a href="https://support.micasense.com/hc/en-us/articles/115000765514-Use-of-Calibrated-Reflectance-Panels-For-MicaSense-Data" rel="noopener noreferrer">MicaSense: 반사율 기준판의 사용</a></p>
+<p>위쪽에서 들어오는 빛을 기록하는 일사 센서와 기준판을 함께 쓰는 구성도 있다. 비행 중 구름 등의 영향으로 조명이 바뀌면 그 변화를 보정 자료에 반영하려는 것이다. 센서를 탑재했다는 사실만으로 다른 날의 값이 자동으로 완벽하게 비교되는 것은 아니며, 장비·자료에 맞는 보정과 확인이 뒤따라야 한다. <a href="https://support.micasense.com/hc/en-us/articles/219901327-What-does-RedEdge-s-Downwelling-Light-Sensor-DLS-do-for-my-data" rel="noopener noreferrer">MicaSense: 하향광 센서와 기준판</a></p>
+<h4 id="section-027">식생지수는 측정한 밴드를 조합한 값이다</h4>
+<p>**식생지수(vegetation index)**는 식생의 분광 특성을 살피기 위해 여러 밴드의 값을 조합한 지표다. 대표적인 **NDVI(정규화 식생지수)**는 근적외선과 적색의 차이를 두 값의 합으로 나눈다. 반사율 자료로 계산할 때 식은 다음과 같다. <a href="https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index" rel="noopener noreferrer">USGS: NDVI</a></p>
+<div aria-label="수식" class="equation" role="region" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">NDVI</mi><mo>=</mo><mfrac><mrow><msub><mi>ρ</mi><mi mathvariant="normal">NIR</mi></msub><mo>−</mo><msub><mi>ρ</mi><mi mathvariant="normal">Red</mi></msub></mrow><mrow><msub><mi>ρ</mi><mi mathvariant="normal">NIR</mi></msub><mo>+</mo><msub><mi>ρ</mi><mi mathvariant="normal">Red</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{NDVI}=\frac{\rho_{\mathrm{NIR}}-\rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}}+\rho_{\mathrm{Red}}}</annotation></semantics></math></div>
+<p>여기서 <span class="inline-math">ρ</span>는 해당 밴드의 반사율이다. 두 밴드는 같은 지표 위치를 나타내도록 맞춰야 하며, 합이 0이거나 결측·품질 부적합인 자료는 별도로 처리한다. 여러 밴드가 들어온다는 사실과 그 밴드들이 같은 대상을 정확히 가리킨다는 사실은 구분해 확인한다.</p>
+<p>NDVI는 추가 센서가 직접 읽어 주는 ‘수목 건강 점수’가 아니다. 초본 구역에서 값이 달라졌다면 가시 식생의 양과 상태, 흙이 드러난 비율, 그림자와 관측 조건 등을 함께 검토해야 한다. RGB 영상과 관리 이력, 필요한 현장 확인을 결합하면 차이가 생긴 구역을 좁힐 수 있다. 질병이나 수분 부족의 원인을 특정하는 일에는 별도의 근거가 필요하다. 여러 파장대를 더 세밀하게 기록하는 초분광 관측도 있지만, 이 절에서는 밴드 선택과 반사율 비교의 기본 흐름에 집중한다.</p>
+<h4 id="section-028">열화상: 표면에서 오는 열복사를 해석하기</h4>
+<p>**열화상(thermal imaging)**은 열적외선 복사 신호를 영상으로 나타내는 기술이다. 계측용 열화상 장비는 이 신호와 보정 정보를 이용해 대상의 표면온도를 계산한다. 카메라가 받는 신호에는 대상에서 방출된 복사뿐 아니라 주변에서 반사된 복사와 대기의 영향도 들어간다. <a href="https://support.flir.com/docdownload/assets/web/2p5q/en-us/T505000.xml.html" rel="noopener noreferrer">FLIR: 열화상 측정 원리</a></p>
+<p>**방사율(emissivity)**은 같은 온도의 이상적인 흑체에 비해 대상이 복사를 방출하는 정도다. 흑체는 복사를 설명하는 기준이 되는 이상적 물체다. 재료와 표면 상태 등에 따라 방사율이 달라지므로, 같은 촬영 조건에서도 판석·금속 뚜껑·잎을 무조건 같은 설정으로 비교해서는 안 된다. 반사된 주변 복사, 대상까지의 거리와 대기 조건도 검토 항목이다.</p>
+<p>조경에서는 그늘과 양지의 포장 표면, 서로 다른 재료의 표면, 식재 구역의 온도 분포를 살피는 데 열화상을 검토할 수 있다. 이때 얻는 값은 그 표면의 온도다. 사람이 서 있는 높이의 기온이나 사람이 느끼는 열쾌적성을 표면온도 하나로 대신할 수는 없다. 촬영 시각과 일사·바람·표면의 젖음 여부 같은 조건을 함께 기록해야 비교의 의미를 설명할 수 있다.</p>
+<p>열화상 화면의 빨강·파랑은 표시용 색상표다. 서로 다른 온도 범위를 각 화면에 자동으로 배정하면 같은 빨강도 다른 온도를 뜻할 수 있다. 따라서 화면 색만 나란히 놓기보다 값과 단위, 표시 범위를 함께 읽어야 한다. 온도를 계산할 원 자료가 남아 있는지도 확인한다. FLIR의 공식 문서도 온도 계측 기능과 온도 범위·표시 척도·측정 매개변수를 구별한다. <a href="https://docs.flir.com/T810605/en-US/latest/s10.html" rel="noopener noreferrer">FLIR: 온도 측정과 표시</a></p>
+<h4 id="section-029">라이다와 깊이 카메라: 형상과 거리를 위한 입력</h4>
+<p>라이다의 거리 측정 원리는 5.1에서 설명했다. 센서 선택에서는 어떤 범위와 방향에서 어느 부분의 반사 신호를 얻을 수 있는지가 중요하다. 항공 관측은 수관 위의 구조를, 지상 관측은 접근한 방향의 줄기와 시설 표면을 보완하는 식으로 사용할 수 있다.</p>
+<p>장비와 조건에 따라 한 레이저 펄스에서 여러 반사 신호가 기록되기도 한다. 잎과 가지 사이의 틈으로 진행한 일부 빛이 다른 높이의 표면에서 되돌아올 수 있기 때문이다. NEON의 항공 라이다 설명도 이러한 다중 반사를 식생의 수직 구조를 파악하는 정보로 다룬다. 이는 모든 잎이나 토양을 투과한다는 뜻이 아니며, 지면 신호를 실제로 얻었는지 확인해야 한다. 점군을 높이·분류·강도 등으로 색칠해 보여 주는 방식도 있으므로 화면의 색만으로 센서가 RGB를 측정했다고 판단하지 않는다. <a href="https://www.neonscience.org/data-collection/lidar" rel="noopener noreferrer">NEON: 식생의 반사 신호와 점군</a></p>
+<p><strong>RGB-D</strong>는 색상 영상(RGB)과 깊이 정보(Depth)를 함께 다루는 구성을 가리킨다. 깊이를 얻는 원리가 모두 같은 것은 아니다. 예를 들어 스테레오 방식은 서로 다른 위치의 두 영상에서 같은 특징이 나타나는 위치 차이를 이용한다. RealSense의 기술 문서는 깊이 계산에 양쪽 영상의 품질이 중요하며, 밝고 어두운 영역이 함께 있는 상황이 문제가 될 수 있음을 설명한다. <a href="https://dev.realsenseai.com/docs/high-dynamic-range-with-stereoscopic-depth-cameras/" rel="noopener noreferrer">RealSense: 스테레오 깊이와 영상 조건</a></p>
+<p>깊이 카메라는 보행로 주변의 가까운 형상을 기록하거나 이동 관측의 입력으로 검토할 수 있다. 다만 사용 거리와 조명, 표면 특성에 따라 유효한 깊이를 얻는 영역이 달라진다. 깊이값이 비어 있는 곳을 자동으로 빈 공간이나 안전한 통로로 해석해서는 안 된다. 단위와 결측값 규칙도 자료의 설명을 따라 읽어야 한다. 예를 들어 RealSense의 특정 깊이 형식은 깊이를 정하지 못한 픽셀에 0을 저장한다. 이는 대상까지의 실제 거리가 0이라는 뜻이 아니다. <a href="https://dev.realsenseai.com/docs/projection-in-realsense-sdk-2-0/" rel="noopener noreferrer">RealSense: 깊이 형식과 결측값</a></p>
+<figure class="book-figure" data-book-figure="fig-ch05-sensor-signals" id="fig-ch05-sensor-signals"><img alt="네 센서 계열의 신호와 처리 과정을 비교한다. RGB는 가시광 신호를 색·형태의 영상으로, 다중분광은 밴드별 신호를 보정해 반사율과 지수로, 열화상은 열복사 신호를 보정해 표면온도로, 라이다는 반사 신호와 위치 정보를 거리·점군으로 연결한다. 색상표와 모델 판단은 센서가 기록한 신호와 구별한다." decoding="async" height="1726" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch05-sensor-signals.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 41 · PDF 125쪽</span><a aria-label="도판 41 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch05-sensor-signals.webp">크게 보기 ↗</a></div><p>네 센서 계열의 신호와 처리 과정을 비교한다. RGB는 가시광 신호를 색·형태의 영상으로, 다중분광은 밴드별 신호를 보정해 반사율과 지수로, 열화상은 열복사 신호를 보정해 표면온도로, 라이다는 반사 신호와 위치 정보를 거리·점군으로 연결한다. 색상표와 모델 판단은 센서가 기록한 신호와 구별한다.</p></figcaption></figure>
+<p><em>그림 5-4. 센서가 받는 신호에서 활용할 정보까지. 설명을 위해 대표 경로를 단순화했다. 센서 사양 비교나 가상 공원의 실제 측정 결과가 아니다.</em></p>
+<h4 id="section-030">여러 센서의 자료를 같은 대상으로 연결하기</h4>
+<p>**다중센서 결합(sensor fusion)**은 서로 다른 센서의 관측을 연결해 하나의 질문에 사용하는 것이다. 공원에서 수관의 형태는 라이다로, 보이는 표면은 RGB로, 밴드별 반사 특성은 다중분광으로 살펴볼 수 있다. 각 자료를 함께 해석하려면 같은 대상과 시점을 가리키는지 먼저 확인해야 한다.</p>
+<p>첫째는 <strong>시간 동기화</strong>다. 연속 촬영과 스캔의 시각이 어긋나면 움직이는 잎이나 사람, 이동 장비가 다른 위치에 기록될 수 있다. 둘째는 <strong>기하 보정과 정합</strong>이다. 센서들이 같은 장치에 붙어 있어도 설치 위치와 방향이 다르면 각 영상에서 같은 대상이 나타나는 위치가 달라진다. 이러한 센서 사이의 위치·방향 관계를 **외부 매개변수(extrinsic parameters)**로 나타낼 수 있다. RealSense의 공식 문서는 색상 센서와 깊이 센서의 좌표계가 서로 다를 수 있으며 이 관계를 사용해 자료를 대응시키는 방법을 설명한다. <a href="https://dev.realsenseai.com/docs/projection-in-realsense-sdk-2-0/" rel="noopener noreferrer">RealSense: 센서 간 좌표 관계</a></p>
+<p>셋째는 <strong>값의 의미와 유효 범위</strong>다. RGB의 초록, 식생지수의 초록, 열화상 색상표의 초록은 같은 값이 아니다. 서로 다른 격자 크기의 자료를 같은 화면 크기로 늘려 놓는 것만으로 세부 정보가 같아지지도 않는다. 원 자료의 종류·보정·단위·유효 범위를 남겨 두어야 후속 AI가 무엇을 입력받았는지 설명할 수 있다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">공원의 질문</th>
+<th scope="col">우선 확보할 정보</th>
+<th scope="col">추가 센서를 검토할 이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>판석과 초본의 경계를 구별할 수 있는가?</td>
+<td>경계가 드러나는 RGB 영상</td>
+<td>필요한 경계가 RGB에서 구별되지 않을 때 다른 밴드나 현장 확인 검토</td>
+</tr>
+<tr>
+<td>식재지의 분광 반응이 시점별로 달라졌는가?</td>
+<td>보정된 다중분광 자료와 동일 구역의 정의</td>
+<td>RGB와 관리 기록으로 피복·그림자·작업 이력 대조</td>
+</tr>
+<tr>
+<td>포장 표면의 온도 분포가 다른가?</td>
+<td>계측 가능한 열화상과 재료·환경 조건</td>
+<td>RGB로 재료·그늘 범위를 확인; 기온 질문에는 별도 기온 관측</td>
+</tr>
+<tr>
+<td>수관 아래에 어떤 형상이 있는가?</td>
+<td>해당 부분에 접근한 거리·깊이 관측</td>
+<td>RGB로 대상의 종류와 상태를 보완하고 누락 구역 확인</td>
+</tr>
+<tr>
+<td>집수정 높이를 설계와 비교할 수 있는가?</td>
+<td>필요한 측점의 높이와 기준 정보</td>
+<td>영상은 측점·대상 식별을 보조; 영상 색이나 식생지수로 높이를 대신하지 않음</td>
+</tr>
+</tbody>
+</table></div>
+<p>센서마다 얻은 자료를 동일한 폴더 규칙으로 정리하고, 관측 시각·장비·보정 여부·유효 범위를 자동 검사하는 일부터 시작할 수 있다. 그 다음 같은 객체나 구역에 연결한 자료를 탐지·분할·변화 분석에 넣는다. AI가 어떤 정보를 잘 구별하는지와 별개로, <strong>센서가 필요한 신호를 기록했는지</strong>를 확인하는 단계가 먼저 있어야 한다.</p>
+<p>플랫폼과 센서를 골랐다면 다음은 관측의 세부 조건이다. 작은 집수정이 영상에서 얼마나 크게 보여야 하는지, 어떤 방향과 간격으로 촬영해야 필요한 부분을 남길 수 있는지를 정해야 한다. 다음 단위 5.5–5.6에서는 해상도와 촬영 방향·중복·동선·시점을 다룬다.</p>
+<hr/>
+<p><a href="/digital-landscape-architecture/chapter-05/">5장 목차</a> · <a href="/digital-landscape-architecture/chapter-05/#unit-01">앞 단위: 디지털 관측과 측정</a> · <span class="unavailable-source" data-source-path="../../references/ch05-unit02-sources.csv" title="원고에 참조된 별도 파일 · 제공된 두 원고 파일에 포함되지 않아 웹판에서 열 수 없습니다.">조사 자료와 열람 범위</span></p>
+<h2 id="unit-03">3단위. 필요한 세부 정보가 보이도록 촬영하기</h2>
+<h3 id="section-032">5.5 해상도는 관측 질문에서 정한다</h3>
+<p>공원 전체의 포장 범위를 구분하는 사진과 판석 사이의 작은 틈을 확인하는 사진은 요구 조건이 다르다. 넓은 공간이 한 장에 들어온다고 작은 결함까지 기록되는 것은 아니다. 촬영 계획은 먼저 무엇을 구별할지 정하고, 그 대상이 영상에서 얼마나 크게 나타나야 할지 검토하는 과정이다.</p>
+<p>**지상표본거리(GSD, ground sampling distance)**는 영상의 이웃한 픽셀 중심 사이 거리를 지상에서 환산한 값이다. 단위는 보통 cm/pixel 또는 m/pixel이다. 영상 전체의 픽셀 수가 같아도 먼 곳에서 넓은 면적을 담으면 GSD가 커진다. 같은 지면에서 GSD가 작을수록 더 작은 간격으로 표면을 표본화한다. PIX4D의 정의도 촬영 거리, 센서 크기, 초점거리, 영상 폭을 함께 고려한다. <a href="https://support.pix4d.com/hc/en-us/articles/202559809" rel="noopener noreferrer">PIX4D: GSD</a></p>
+<p>평평한 표면을 수직으로 촬영하는 이상적인 카메라를 생각하면 관계를 쉽게 이해할 수 있다. 촬영 거리와 센서 폭을 곱한 뒤 초점거리와 영상 폭의 곱으로 나누면 GSD를 근사할 수 있다. 촬영 거리와 센서·초점거리에는 서로 일관된 길이 단위를 사용해야 한다. 실제 비행에서는 지형 높이, 카메라 기울기와 렌즈 특성이 달라지므로 한 장 안에서도 지상에서의 표본 간격이 일정하지 않을 수 있다.</p>
+<p>공통 공원의 집수정을 떠올리되, 여기서는 실제 설계 규격과 관계없는 <strong>폭 0.60 m의 가상 표적</strong>을 따로 둔다. 표적이 평면에 놓여 있고 수직 촬영되었다는 가정이다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">가정한 GSD</th>
+<th scope="col" style="text-align:right">표적 폭에 해당하는 픽셀 수</th>
+<th scope="col">확인할 수 있는 것의 차이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.05 m/pixel</td>
+<td style="text-align:right">약 12 pixel</td>
+<td>전체 윤곽을 표현할 공간이 적다</td>
+</tr>
+<tr>
+<td>0.02 m/pixel</td>
+<td style="text-align:right">약 30 pixel</td>
+<td>같은 폭을 더 세밀하게 표본화한다</td>
+</tr>
+<tr>
+<td>0.01 m/pixel</td>
+<td style="text-align:right">약 60 pixel</td>
+<td>작은 무늬를 담을 여지가 늘어난다</td>
+</tr>
+</tbody>
+</table></div>
+<p>계산은 표적 폭을 GSD로 나눈 것이다. 이 표는 특정 픽셀 수에서 집수정이나 파손을 반드시 탐지한다는 성능 기준이 아니다. 명암 차이, 흐림, 가림과 학습자료에 따라 인식 결과가 달라진다. 또한 D03 집수정의 실제 뚜껑 폭을 새로 정한 것이 아니다. 촬영 계획을 이해하기 위한 독립적인 가정이다.</p>
+<p>GSD는 표본 간격이며, 렌즈가 구분하는 세부 정보와 영상의 선명도를 모두 대표하지는 않는다. 출력 영상을 더 작은 픽셀로 재표본화해도 촬영 때 없었던 세부 관측이 새로 생기지 않는다.</p>
+<p><strong>GSD와 위치 정확도도 구별한다.</strong> 촘촘한 격자의 사진이 지도에서 전체적으로 밀려 있을 수 있다. 반대로 알려진 표적의 중심은 여러 영상의 정보를 이용해 픽셀 간격보다 세밀하게 추정할 수도 있다. 출력 영상의 픽셀 크기만으로 좌표 오차의 상한이나 하한을 단정하지 않는다. 실제 위치 정확도는 독립된 검사점으로 확인한다.</p>
+<p>전통적인 현장조사는 필요한 부위에 다가가 자나 줄자로 재측정했다. 디지털 관측에서도 이 선택은 남아 있다. 전체 지도용 상공 영상에 지상 근접 사진을 더하면, 모든 구역을 가장 높은 해상도로 반복 촬영하는 부담을 줄일 수 있다. D03에서는 포장 범위는 상공 자료로, 판석의 모서리와 수목 아래 집수정은 접근 가능한 지상 시점으로 보완하는 계획이 가능하다. 디지털 기술의 이점은 이 선택을 객체 ID와 촬영 목록으로 기록하여 누락 부분을 다시 찾을 수 있다는 데 있다.</p>
+<h3 id="section-033">5.6 중복 촬영과 관측 조건을 설계한다</h3>
+<p><strong>촬영 중복도</strong>는 이웃 영상이 공통으로 담는 지표 범위의 비율이다. 이동 방향으로 겹치는 전방 중복과 이웃 비행 줄 사이에서 겹치는 측방 중복을 구별한다. 사진측량은 여러 영상에서 같은 특징을 찾아 카메라와 표면의 관계를 계산하므로 중복 촬영이 필요하다. 다만 같은 물체가 같은 위치에 계속 보인다는 조건도 중요하다. 바람에 흔들리는 잎이나 이동 장비는 단순히 사진을 더 찍는다고 안정된 대응점이 되지 않는다.</p>
+<p>OpenDroneMap은 2D·2.5D 결과와 완전한 3D 결과의 촬영 구성을 구별하고, 식생·건물·지형의 복잡성을 고려하도록 안내한다. 책에서는 해당 수치를 모든 공원에 적용할 표준으로 옮기지 않는다. 수직 영상과 경사 영상의 조합을 목표 산출물에 맞춰 정한다는 방법을 가져온다. <a href="https://docs.opendronemap.org/flying/" rel="noopener noreferrer">OpenDroneMap: Flying Tips</a></p>
+<p>겹치는 사진 수가 많아도 수관 아래 지면은 모든 사진에서 가릴 수 있다. 따라서 계획도에는 비행선 외에 <strong>목표 표면</strong>과 <strong>보완 시점</strong>을 표시한다. 위에서 보이는 수관, 옆에서 보이는 줄기, 지면 가까이에서 보이는 집수정 뚜껑은 서로 다른 목표다. ‘공원 면적을 모두 촬영했다’와 ‘필요한 표면을 모두 관측했다’는 별도 항목으로 기록한다.</p>
+<p>영상의 선명도에는 노출 시간 동안 카메라나 대상이 움직인 정도도 관련된다. 짧은 노출은 움직임 흐림을 줄이는 데 도움이 되지만 빛이 부족하면 신호가 약해지거나 이득을 높여 잡음이 늘 수 있다. 풍속만 보고 결정하기보다 시험 사진에서 가는 가지·포장 경계가 번지는지 확인한다. 자동 노출로 사진마다 밝기가 크게 바뀌면 반복 비교가 어려워질 수 있으므로 설정과 촬영 당시의 빛도 남긴다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">촬영 목록의 항목</th>
+<th scope="col">D03에서의 적용 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>목적과 객체</td>
+<td>PAVE-002 판석포장 범위 및 표면 기록</td>
+</tr>
+<tr>
+<td>전체 위치 자료</td>
+<td>공원 안에서 어느 포장인지 확인할 상공·전경 자료</td>
+</tr>
+<tr>
+<td>보완 자료</td>
+<td>수관 아래 경계와 판석 접합부의 근접 영상</td>
+</tr>
+<tr>
+<td>관측 불가 사유</td>
+<td>가림, 접근 불가, 흐림 등을 개별 기록</td>
+</tr>
+<tr>
+<td>재촬영 조건</td>
+<td>필요한 경계가 보이지 않거나 위치 연결이 안 되는 경우</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 목록은 실제 비행 명령이 아니다. 운용자는 현장 접근 조건과 장비의 운용 가능 범위를 별도로 확인하고 구체적인 경로를 정한다. 자동화 프로그램은 계획한 객체 중 촬영 기록이 없는 항목, 파일이 손상된 항목, 필요한 시점이 빠진 항목을 먼저 찾아줄 수 있다. 이렇게 작성한 촬영 목록은 다음 단위의 위치·품질 기록과 연결된다.</p>
+<h2 id="unit-04">4단위. 위치와 자료 품질을 확인하기</h2>
+<h3 id="section-035">5.7 카메라의 위치와 대상의 위치를 연결한다</h3>
+<p>드론 사진의 위치 정보가 정밀하더라도 사진 속 모든 수목의 좌표가 같은 정확도로 정해지는 것은 아니다. 사진에는 촬영 위치가 기록되고, 객체 위치는 카메라의 방향·내부 특성·표면의 기하와 영상에서의 대응을 거쳐 계산된다. 이 과정을 이해해야 ‘RTK 드론으로 찍었으니 검측에 바로 쓸 수 있다’는 성급한 결론을 피할 수 있다.</p>
+<p><strong>GNSS</strong>는 위성 신호를 이용하는 위치 결정 체계다. <strong>RTK</strong>는 기준국 등의 보정 정보를 관측 중에 이용하고, <strong>PPK</strong>는 저장한 관측자료를 후처리하여 위치를 계산하는 방식이다. 둘 다 카메라 위치의 품질을 개선하는 구성에 쓰일 수 있으나, 촬영 시각과 위치 기록의 불일치, 안테나와 카메라 사이 거리, 좌표·높이 기준의 오류까지 이름만으로 해결하지는 않는다.</p>
+<p>**지상기준점(GCP)**은 위치를 알고 있는 지점과 영상 속 그 지점을 연결하여 결과의 위치·형상을 조정하는 데 사용하는 점이다. **검사점(checkpoint)**은 그 조정에 사용하지 않고 결과가 기준 위치와 얼마나 다른지 확인하는 점이다. PIX4D의 문서도 GCP와 검사점의 역할을 구분한다. 기준점에 잘 맞는 결과가 그 사이의 모든 곳에서도 잘 맞는다고 가정하지 않기 위해서다. <a href="https://support.pix4d.com/hc/en-us/articles/115000140963" rel="noopener noreferrer">PIX4D: 기준점과 검사점</a></p>
+<p>일부 소프트웨어는 검사점의 영상 표식을 내부 기하 계산에 활용할 수 있으므로, 알려진 검사점 좌표를 보정에 쓰지 않는지와 영상 표식의 사용 범위를 처리 설정에서 확인한다. 평가 자료를 완전히 분리했다는 주장에는 이 구분도 필요하다.</p>
+<p>기준점과 검사점은 모양이 다른 물건이 아니라 <strong>계산에서 맡긴 역할이 다른 기록</strong>이다. 검사점 결과를 보며 처리 설정을 여러 번 조정했다면 그 점은 이미 선택에 영향을 주었다. 최종 독립 검증에는 별도의 자료가 필요하다. 점의 개수뿐 아니라 공원 가장자리·중앙·높이 변화가 있는 곳에 어떻게 분포하는지, 영상에서 정확히 식별되는지도 함께 살핀다. <a href="https://docs.opendronemap.org/gcp/" rel="noopener noreferrer">OpenDroneMap: GCP의 역할과 가시성</a></p>
+<p>좌표 기준에는 수평 좌표계와 높이 기준을 함께 쓴다. 국내 좌표계는 2장에서 설명한 기준을 사용하며, 타원체고와 표고를 같은 값처럼 혼합하지 않는다. D03는 교육용 로컬 좌표이므로 임의의 국가 좌표를 붙여 실제 위치로 제시하지 않는다. 현재 집수정의 뚜껑·관저 표고가 미정이면 그 상태를 유지한다. 파일을 읽기 위해 0을 넣는 관행은 ‘미측정’과 ‘실제 표고 0 m’를 섞으므로 원고의 자료 계약에서는 허용하지 않는다.</p>
+<p>허용할 위치 오차는 결과를 본 뒤 정하지 않고, 사용할 설계 판단과 검측 조건에서 먼저 정한다. 이 책은 모든 조경 작업에 공통인 허용오차 숫자를 새로 제시하지 않는다.</p>
+<p>위치 품질 보고에는 오차를 집계한 숫자와 그 숫자가 대표하는 범위를 함께 적는다. 검사점이 포장 위에만 있다면 수관 내부의 기하 품질까지 검증한 것이 아니다. 수평 오차가 작더라도 배수 방향을 결정하는 높이 차이에 필요한 정확도는 충분하지 않을 수 있다. 검증의 대상과 실제 설계 판단의 대상을 일치시키는 일이 장비 이름보다 우선한다.</p>
+<h3 id="section-036">5.8 파일을 모으는 것에서 검토 가능한 자료로</h3>
+<p>전통적인 사진대장은 현장 사진과 촬영 메모를 묶었다. 디지털 자료 목록은 여기에 파일 식별자, 촬영 시점, 센서, 좌표 기준, 품질 상태와 처리 이력을 더한다. 이때 원본과 처리 결과를 같은 파일명으로 덮어쓰면, 밝기 보정이나 위치 수정이 언제 생겼는지 확인하기 어렵다.</p>
+<p>자료를 <strong>원 관측 → 보정 자료 → 분석 결과 → 검토 결과</strong>로 연결한다. 각 결과에는 바로 앞 입력의 ID와 처리 버전을 기록한다. 예를 들어 색상 보정 영상과 수목 분할 마스크는 원 사진을 공유하지만 서로 다른 자료다. 마스크가 수정되어도 원 영상의 촬영 시각은 바뀌지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">필드 묶음</th>
+<th scope="col">기록할 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>식별과 시간</td>
+<td>파일 ID, 촬영 시각과 시간대, 관측 회차</td>
+</tr>
+<tr>
+<td>공간과 장비</td>
+<td>좌표·높이 기준, 센서 ID, 촬영 위치·방향의 출처</td>
+</tr>
+<tr>
+<td>자료 계보</td>
+<td>원본 ID, 처리 방법·버전, 생성 시각</td>
+</tr>
+<tr>
+<td>품질과 사용 범위</td>
+<td>흐림·가림·결측 상태, 확인자, 가능한 분석</td>
+</tr>
+</tbody>
+</table></div>
+<p>파일 해시라는 디지털 지문을 함께 두면 파일 내용이 바뀌었는지 비교할 수 있다. 다만 해시가 일치한다는 것은 같은 파일이라는 뜻이며, 현장 정보가 사실이라는 인증은 아니다. 좌표 필드가 존재한다는 검사도 좌표가 맞다는 검사와 구별한다.</p>
+<p>자동 품질 관리는 먼저 명확한 조건부터 시작한다. 읽히지 않는 파일, 중복 ID, 잘못된 시간 형식, 다른 단위, 원본이 없는 결과를 탐지한다. 흐림이나 과다 노출은 지표를 계산해 검토 후보로 모을 수 있지만, 임계값은 센서와 목적에 따라 정한다. 어두운 수목 아래 사진을 밝은 하늘 사진과 같은 기준으로 제거하면 필요한 관측이 오히려 사라질 수 있다.</p>
+<p>재촬영은 전체를 반복하기보다 실패한 분석 질문으로 되돌아간다. 판석 경계가 가려졌다면 그 경계를 보완하고, 객체 위치를 연결할 전경이 빠졌다면 전경을 보완한다. 원자료가 부족한 상태에서 보간이나 AI 복원으로 그럴듯한 화면을 만드는 것은 관측을 추가한 것과 다르다. 보간한 영역은 그 사실을 표시하여 다음 분석자가 측정값과 구별할 수 있게 한다.</p>
+<h2 id="unit-05">5단위. 현장영상을 AI 분석 자료로 바꾸기</h2>
+<h3 id="section-038">5.9 라벨은 관측의 해석 규칙이다</h3>
+<p>공원 사진의 ‘수목’을 표시하라는 지시만으로는 일관된 자료가 만들어지기 어렵다. 수관 전체를 그릴지, 보이는 잎만 표시할지, 겹쳐 보이는 수목을 하나로 묶을지가 정해지지 않았기 때문이다. <strong>라벨</strong>은 영상의 대상이나 영역에 부여하는 이름·범주·속성이다. **주석 작업(annotation)**은 그 이름을 위치·영역·시간 구간에 연결하는 과정이다.</p>
+<p>기존 조사자는 조사표의 분류 기준을 맞춘 뒤 개체를 세었다. AI 자료에서도 먼저 라벨 정의서를 만든다. 수종처럼 현장에서 추가 확인해야 하는 속성과, 사진에서 보이는 수관 범위처럼 영상 자체에서 판단하는 속성을 분리한다. ‘갈색 잎이 관측됨’과 ‘병해에 감염됨’은 같은 라벨이 아니다. 진단 근거가 없는 사진에 병명을 정답으로 넣으면 모델은 불확실한 해석을 학습한다.</p>
+<p>공통 공원의 수목 수를 세는 과제라면, 객체 범위·가림 처리·최소 식별 조건·중복 영상 처리 규칙이 필요하다. 두 장에 나타난 같은 나무에 영상 주석 ID는 두 개가 생길 수 있지만 실제 개체는 하나다. 개체 연결은 7장의 대응 문제로 넘기고, 여기서는 영상 속 표시와 설계 객체 ID를 동일시하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">모호한 항목</th>
+<th scope="col">정의서에서 결정할 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수관이 겹친 두 나무</td>
+<td>분리가 가능할 때만 개체 마스크를 만들지 여부</td>
+</tr>
+<tr>
+<td>나무 일부만 보임</td>
+<td>보이는 영역만 표시하고 가림 속성을 남길지 여부</td>
+</tr>
+<tr>
+<td>판석 위의 낙엽</td>
+<td>표면의 관측 범주와 바닥 재료의 추정 범주 구분</td>
+</tr>
+<tr>
+<td>집수정이 안 보임</td>
+<td>존재하지 않음과 관측 불가의 구분</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>참조 라벨</strong>은 평가에서 비교 기준으로 쓰는 주석이다. 사람이 만들었다고 오류가 없지는 않다. 일부 자료를 여러 사람이 독립적으로 표시하고 불일치 이유를 확인하면, 작업자의 실수와 정의서의 모호함을 구별할 수 있다. CVAT는 검토 모드와 검증 자료를 이용한 주석 품질 비교 기능을 제공한다. 이 책에서 가져올 방법은 도구가 표시한 불일치를 살펴 정의와 주석을 개선하는 것이다. <a href="https://docs.cvat.ai/docs/qa-analytics/auto-qa/" rel="noopener noreferrer">CVAT: 주석 품질 관리</a></p>
+<h3 id="section-039">5.10 자동 초안, 사람 수정, 반복 분석</h3>
+<p>자동 주석은 기반모델이나 기존 탐지·분할 모델로 라벨 초안을 생성하는 방식이다. 4장에서 설명한 점·상자·언어 프롬프트를 이용하면 사람이 처음부터 모든 경계를 그리는 작업을 줄일 수 있다. CVAT도 연결한 모델로 자동 주석을 생성하는 기능을 제공한다. 그러나 사용할 수 있는 모델과 범주는 실행 환경에 따라 다르며, 도구 설치만으로 조경의 모든 수종·시설물 라벨이 준비되는 것은 아니다. <a href="https://docs.cvat.ai/docs/annotation/auto-annotation/automatic-annotation/" rel="noopener noreferrer">CVAT: 자동 주석</a></p>
+<p>작업 흐름은 원 영상과 모델 버전을 고정하고, 예측을 저장한 뒤, 사람이 수정한 결과를 별도로 남기는 구조가 적합하다. 이렇게 하면 어떤 오류가 반복되는지 추적할 수 있다. 나중에 모델을 바꾸어도 이전 예측과 사람 수정 사이의 차이를 비교할 수 있다.</p>
+<p>VLM은 촬영 메모를 정리하거나 이미지에 나타난 대상을 서술하는 데 보조적으로 쓸 수 있다. 반면 정확한 픽셀 경계, 수량, 좌표를 얻으려면 그 출력 형식에 맞는 도구와 검증이 필요하다. 문장에 ‘집수정 세 개’라고 적혔다고 객체별 위치가 확인되는 것은 아니다. 먼저 각 검출의 위치와 근거 영상을 연결해야 중복 집계 여부를 검토할 수 있다.</p>
+<p>모델이 자주 틀리는 자료를 다음 주석 대상으로 고르는 **능동학습(active learning)**이라는 접근도 있다. 연구자의 기술보고서는 모델이 학습에 사용할 주석 대상을 선택하는 방법으로 이를 소개한다. <a href="https://burrsettles.com/pub/settles.activelearning.pdf" rel="noopener noreferrer">Settles: 능동학습의 정의</a> 가령 기존 모델이 어려워하는 가림·역광 장면을 사람이 더 표시하고 다시 학습하는 방식이다. 불확실성 점수가 큰 자료만 고르면 특정 유형에 편중될 수 있으므로 계절·공간·촬영 조건의 다양성도 고려한다. 이 선택은 학습자료를 개선하기 위한 절차다. 최종 평가자료는 성능을 본 뒤 학습에 되돌려 넣지 않도록 별도로 관리한다.</p>
+<p>배치 분석에서는 각 파일의 성공·실패 상태를 기록한다. 실패한 파일을 조용히 건너뛰고 나머지 수목 수를 공원의 총수량이라고 보고하면 누락을 숨기게 된다. 결과표에는 분석 대상 수, 처리 완료 수, 사람 검토 수와 보류 수를 함께 둔다. 조경 실무에서 자동화의 성과는 처리 속도뿐 아니라 누락과 수정 내용을 다시 찾을 수 있는지로도 평가할 수 있다.</p>
+<p>학습용으로 이어지는 자료는 장소·관측 회차를 기준으로 분리한다. 같은 나무의 거의 같은 사진이 학습과 평가 양쪽에 들어가면 새로운 현장에 대한 성능을 과대평가할 수 있다. 모델의 구조보다 먼저 자료가 어떤 질문에 답할 수 있도록 구성되었는지 확인하는 이유다.</p>
+<h2 id="unit-06">6단위. 반복 관측을 설계와 관리에 전달하기</h2>
+<h3 id="section-041">5.11 화면의 차이와 현장의 변화를 구별한다</h3>
+<p>지난달보다 수관의 초록색 영역이 줄었다면 나무 상태가 나빠진 것일까. 잎이 떨어지는 계절일 수도 있고, 카메라 위치가 바뀌어 다른 나무에 가렸을 수도 있다. <strong>변화 탐지</strong>는 서로 다른 시점의 자료에서 차이를 찾아내는 작업이다. 그 차이가 어떤 실제 변화에 해당하는지 해석하려면 관측 조건과 공간적 대응을 함께 확인해야 한다.</p>
+<p>기존 반복 조사는 같은 조사구와 사진점을 다시 찾는 방식으로 비교 가능성을 확보했다. 디지털 반복 관측은 여기에 위치·방향·센서·촬영 시각·처리 버전의 기록을 더한다. 정확히 같은 조건을 재현하기 어려우면 무엇이 달라졌는지 남긴다. 고정 카메라도 렌즈 오염이나 노출 설정이 달라질 수 있으므로 ‘고정’이라는 말만으로 모든 조건이 같다고 판단하지 않는다.</p>
+<p>차이를 계산하기 전에 비교 단위를 정한다. 사진 전체의 녹색 픽셀 비율, 개별 수목의 수관 투영면적, 식재구역의 피복 비율은 서로 다른 지표다. 가림이 심해진 부분을 분모에 그대로 넣을지, 비교 가능한 영역만 사용할지도 사전에 정해야 한다. 분모가 달라진 비율 두 개는 같은 양의 변화처럼 읽기 어렵다.</p>
+<p>D03에는 집수정 세 개가 설계되어 있다. 어느 관측 회차에서 두 개만 식별되었다고 가정해도 설계 수량을 두 개로 줄이지 않는다. 먼저 나머지 하나의 계획 위치가 촬영되었는지, 가렸는지, 탐지가 실패했는지를 확인한다. ‘미검출 → 검토 필요’라는 정보 흐름은 만들 수 있지만 ‘미검출 → 철거 완료’라는 갱신은 근거가 부족하다.</p>
+<p>이때 유용한 기록은 <strong>관측 사건</strong>이다. 관측 ID, 시각, 후보 객체 ID, 관측 내용, 품질 상태, 근거 파일과 확인 상태를 묶는다. 객체와의 대응이 불확실하면 후보를 남기고 확정 ID를 비워 둔다. 관측 사건은 자산의 상태를 바꿀 근거가 될 수 있지만, 사건이 들어왔다는 사실만으로 상태를 바꾸지는 않는다.</p>
+<h3 id="section-042">5.12 현장 자료를 다음 업무가 읽을 수 있게 한다</h3>
+<p>5장의 결과는 사진 폴더 하나로 끝나지 않는다. 다음 업무에는 관측 파일, 공간 기준, 품질 기록, 객체별 해석, 미확인 항목을 함께 전달한다. GIS는 위치에 따른 분포를 분석하고, BIM은 설계 객체·속성과 연결하며, 3차원 처리는 점군과 표면을 구성한다. 각 업무가 필요한 자료의 형식은 다르지만 원 관측으로 되돌아갈 연결은 공유한다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">다음 업무</th>
+<th scope="col">전달할 핵심</th>
+<th scope="col">아직 확정하지 않을 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GIS 분석</td>
+<td>좌표·시점·분석 범위·결측 영역</td>
+<td>검증하지 않은 공간 정확도</td>
+</tr>
+<tr>
+<td>설계–현장 대응</td>
+<td>관측 ID·유형·위치 후보·품질</td>
+<td>영상만으로 확정한 BIM ID</td>
+</tr>
+<tr>
+<td>시공 확인</td>
+<td>대상 작업·근거 사진·관측 항목</td>
+<td>외관만으로 판단한 매설부 적합성</td>
+</tr>
+<tr>
+<td>유지관리</td>
+<td>반복 관측 사건·검토 상태</td>
+<td>진단 근거 없는 처방</td>
+</tr>
+</tbody>
+</table></div>
+<p>예를 들어 PAVE-002를 넘길 때에는 설계 면적 60 m²와 관측으로 구한 면적을 서로 다른 열에 둔다. 관측 면적이 아직 없으면 빈 값으로 두고, 원 영상 ID·보이는 경계·좌표 기준·검토 상태를 먼저 전달한다. 값이 같을 것이라는 기대를 측정값으로 채우지 않는다.</p>
+<p>자동 전달은 자료 계약으로 구현한다. 자료 계약은 필드 이름, 단위, 허용 값, 필수 항목과 결측 표현을 정한 약속이다. 예를 들어 위치가 없으면 빈 값을 허용하되 위치가 필요한 자동 대응 단계는 보류하고, 좌표계가 확인된 경우에만 거리를 계산한다. 센서별 파일을 같은 형식으로 변환하는 프로그램과, 값의 의미를 검토하는 절차를 함께 둔다.</p>
+<p>관로 공사에는 관측 시점이 특히 중요하다. 매설 후의 표면 영상으로는 관의 바닥 지지 상태나 접합부를 직접 확인할 수 없다. 공정과 관측 계획을 연결하여 되메우기 전에 필요한 자료를 확보해야 한다. 3장의 WBS가 ‘어떤 작업을 언제 수행하는가’를 알려준다면, 5장의 관측 계획은 ‘그 작업의 어떤 상태를 언제 기록해야 하는가’를 덧붙인다.</p>
+<p>이 장에서는 실제 비행·센서 측정·모델 추론을 수행하지 않았다. 공통 공원의 설계 자료로 관측 계획과 기록 구조를 설명했다. 다음 6장은 이렇게 얻은 자료를 점군·메시·복셀과 지형으로 표현할 때 무엇이 보존되고 무엇이 달라지는지 다룬다. 자료가 풍부해지는 단계와 공간을 정확히 계산할 수 있는 단계 사이의 조건을 이해하는 것이 연결점이다.</p>
+</article><div class="source-warning"><b>별도 실행자료 안내</b><p>원고의 점선 밑줄 파일명은 제공된 두 원고 파일에 포함되지 않은 실행자료를 가리킵니다. 본문에 적힌 계산·실험의 실행 여부는 원고의 설명을 따르며, 웹페이지 제작 과정에서 새로 실행했다고 표시하지 않습니다.</p></div><nav class="chapter-pagination" aria-label="이전 장과 다음 장"><a href="/digital-landscape-architecture/chapter-04/"><small>← 이전 장</small>컴퓨터는 조경공간을 어떻게 보는가</a><a href="/digital-landscape-architecture/chapter-06/"><small>다음 장 →</small>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</a></nav></div></div><div class="book-wrap book-colophon"><span>© 2026 김수영 · 출간 준비 원고</span><div><a href="/digital-landscape-architecture/edition/">판본 안내</a><a href="/#literature">SPATIALFLARE 자료실 ↗</a></div></div>
+<dialog id="book-search" aria-labelledby="search-title"><div class="dialog-bar"><h2 id="search-title">책 안에서 찾기</h2><button type="button" data-close="book-search" aria-label="검색 닫기">닫기 ×</button></div><label class="search-label" for="search-query">본문·단위 제목·보완 설명 검색</label><input type="search" id="search-query" placeholder="예: 관측, IFC, 좌표, 미대응" autocomplete="off"><p id="search-status" role="status">검색어를 입력하세요.</p><ol id="search-results"></ol></dialog>
+<dialog id="figure-viewer" aria-label="도판 크게 보기"><div class="dialog-bar"><span id="figure-label">원고 도판</span><button type="button" data-close="figure-viewer" aria-label="도판 닫기">닫기 ×</button></div><div class="figure-full"><img alt="" id="large-figure"></div><p id="figure-description"></p><a id="figure-file" target="_blank" rel="noopener">이미지 원본 열기 ↗</a></dialog>
+<noscript><div class="book-wrap no-script">본문·목차·도판은 JavaScript 없이 읽을 수 있습니다. 검색과 글자 크기 조절에는 JavaScript가 필요합니다.</div></noscript></main>
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body></html>

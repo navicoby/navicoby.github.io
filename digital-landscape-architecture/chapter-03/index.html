@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="ko" data-dla="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="theme-color" content="#f5f6f2"><meta name="description" content="디지털 조경학 · Digital Landscape Architecture. 관측과 분석에서 설계·시공·관리까지. 저자 원고의 15장과 도판을 읽는 출간 준비 웹판."><title>Landscape BIM·IFC와 시공 전환 | 디지털 조경학 · SPATIALFLARE</title><link rel="canonical" href="https://navicoby.github.io/digital-landscape-architecture/chapter-03/"><link rel="icon" href="/assets/spatialflare-logo.png"><link rel="stylesheet" href="/digital-landscape-architecture/book.css?v=20261002-book-1"><script defer src="/digital-landscape-architecture/book.js?v=20261002-book-1"></script><link rel="stylesheet" href="/assets/page-menu.css?v=20261001-dwn-light"><script defer src="/assets/site-chrome.js?v=20261001-dwn-light"></script></head><body>
+<spatialflare-header style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;color:#17201c;background:#f5f6f2;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}header{border-bottom:1px solid #d6ded8}.inner{width:min(1320px,calc(100% - 96px));margin:auto;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:13px;font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:18px;font-weight:500;letter-spacing:.16em;white-space:nowrap}.mark{display:block;width:38px;height:45px;object-fit:contain}nav{display:flex;flex-wrap:wrap;gap:25px}nav a{font-size:12px;color:#57635c;padding:8px 0;transition:color .2s}nav a:hover{color:#2f7d5a}@media(max-width:1000px){.inner{width:calc(100% - 56px)}nav{gap:16px}}@media(max-width:680px){.inner{width:calc(100% - 40px);padding:22px 0;min-height:unset;align-items:flex-start;flex-direction:column;gap:16px}.brand{font-size:16px}nav{gap:19px;row-gap:4px}nav a{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<header><div class="inner"><a class="brand" href="/#top" aria-label="SPATIALFLARE home"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt=""><span>SPATIALFLARE</span></a><nav aria-label="Main navigation"><a href="/#top">Home</a><a href="/#literature">Literature</a><a href="/#projects">Projects</a><a href="/#notes">Notes</a><a href="/#etc">ETC</a></nav></div></header>
+</template></spatialflare-header>
+
+
+<main class="dla-page is-reading" id="book-top"><a class="skip-link" href="#book-content">본문으로 건너뛰기</a><div class="book-toolbar"><div class="book-wrap toolbar-inner"><a class="book-brand" href="/digital-landscape-architecture/">디지털 조경학<span>Digital Landscape Architecture</span></a><div class="toolbar-actions"><div class="type-tools" role="group" aria-label="본문 글자 크기"><button type="button" data-size="-1" aria-label="본문 글자 작게">A−</button><button type="button" data-size="1" aria-label="본문 글자 크게">A+</button></div><button class="search-open" type="button">검색 <span aria-hidden="true">⌕</span></button><details class="mobile-toc"><summary>목차</summary><div class="mobile-toc-panel"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. BIM·IFC와 수목 라이브러리</a><a class="level-3" href="#section-002">3.1 먼저 익힐 말: 무엇을, 누가, 어떤 정보로 관리하는가?</a><a class="level-3" href="#sec-ch03-status">3.2 국내외 BIM·IFC는 어디까지 왔는가?</a><a class="level-3" href="#sec-ch03-library">3.3 수목 라이브러리는 공정 계산의 입력이다</a><a class="level-2" href="#unit-02">2단위. 시방 기준에서 WBS·OBS로</a><a class="level-3" href="#sec-ch03-wbs-basis">3.4 WBS를 만드는 순서: 조경시방서에서 작업 묶음으로</a><a class="level-3" href="#sec-ch03-case">3.5 공통 사례: 40×30m 가상 공원</a><a class="level-2" href="#unit-03">3단위. 물량·공기·설계 변경의 자동 계산</a><a class="level-3" href="#sec-ch03-duration">3.6 물량에서 작업기간을 계산한다</a><a class="level-3" href="#sec-ch03-automation">3.7 설계 변경을 자동으로 공정에 반영한다</a><a class="level-2" href="#unit-04">4단위. IFC 추출과 작업동선 후보</a><a class="level-3" href="#sec-ch03-open-ifc">3.8 IFC 개방 플랫폼에서 데이터를 꺼낸다</a><a class="level-2" href="#unit-05">5단위. 4D 연결·시공 지시·검측</a><a class="level-3" href="#sec-ch03-navisworks">3.9 Navisworks TimeLiner로 연결하는 방법</a><a class="level-3" href="#sec-ch03-inspection">3.10 공정에서 시공 지시와 검측으로</a><a class="level-3" href="#section-033">3.11 적용 범위와 남은 검증</a></nav><div class="toc-heading">전체 15장</div><nav aria-label="모바일 책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/" aria-current="page"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내</a></div></details></div></div><div class="reading-progress" aria-hidden="true"></div></div>
+<div class="book-wrap book-layout"><aside class="book-sidebar"><div class="toc-heading">이 장의 목차</div><nav class="unit-nav" aria-label="이 장의 목차"><a class="level-2" href="#unit-01">1단위. BIM·IFC와 수목 라이브러리</a><a class="level-3" href="#section-002">3.1 먼저 익힐 말: 무엇을, 누가, 어떤 정보로 관리하는가?</a><a class="level-3" href="#sec-ch03-status">3.2 국내외 BIM·IFC는 어디까지 왔는가?</a><a class="level-3" href="#sec-ch03-library">3.3 수목 라이브러리는 공정 계산의 입력이다</a><a class="level-2" href="#unit-02">2단위. 시방 기준에서 WBS·OBS로</a><a class="level-3" href="#sec-ch03-wbs-basis">3.4 WBS를 만드는 순서: 조경시방서에서 작업 묶음으로</a><a class="level-3" href="#sec-ch03-case">3.5 공통 사례: 40×30m 가상 공원</a><a class="level-2" href="#unit-03">3단위. 물량·공기·설계 변경의 자동 계산</a><a class="level-3" href="#sec-ch03-duration">3.6 물량에서 작업기간을 계산한다</a><a class="level-3" href="#sec-ch03-automation">3.7 설계 변경을 자동으로 공정에 반영한다</a><a class="level-2" href="#unit-04">4단위. IFC 추출과 작업동선 후보</a><a class="level-3" href="#sec-ch03-open-ifc">3.8 IFC 개방 플랫폼에서 데이터를 꺼낸다</a><a class="level-2" href="#unit-05">5단위. 4D 연결·시공 지시·검측</a><a class="level-3" href="#sec-ch03-navisworks">3.9 Navisworks TimeLiner로 연결하는 방법</a><a class="level-3" href="#sec-ch03-inspection">3.10 공정에서 시공 지시와 검측으로</a><a class="level-3" href="#section-033">3.11 적용 범위와 남은 검증</a></nav><details class="all-chapters" ><summary>전체 15장</summary><nav aria-label="책 전체 목차"><a href="/digital-landscape-architecture/chapter-01/"><span>01</span><span>디지털 기술로 연결하는 조경계획·설계·시공·유지관리</span></a><a href="/digital-landscape-architecture/chapter-02/"><span>02</span><span>GIS와 조경 공간분석의 기초</span></a><a href="/digital-landscape-architecture/chapter-03/" aria-current="page"><span>03</span><span>Landscape BIM·IFC와 시공 전환</span></a><a href="/digital-landscape-architecture/chapter-04/"><span>04</span><span>컴퓨터는 조경공간을 어떻게 보는가</span></a><a href="/digital-landscape-architecture/chapter-05/"><span>05</span><span>드론과 현장영상으로 조경을 관측한다</span></a><a href="/digital-landscape-architecture/chapter-06/"><span>06</span><span>드론·GIS와 공간 AI를 위한 3D·4D 공간표현</span></a><a href="/digital-landscape-architecture/chapter-07/"><span>07</span><span>공간 그래프와 설계–현장 대응</span></a><a href="/digital-landscape-architecture/chapter-08/"><span>08</span><span>온톨로지·지식그래프와 조경의 규칙</span></a><a href="/digital-landscape-architecture/chapter-09/"><span>09</span><span>GNN으로 공간의 관계를 학습한다</span></a><a href="/digital-landscape-architecture/chapter-10/"><span>10</span><span>디지털 조경설계: 공간분석·대안 생성·AI 검토</span></a><a href="/digital-landscape-architecture/chapter-11/"><span>11</span><span>기후리스크와 리질리언스 설계의 디지털 검증</span></a><a href="/digital-landscape-architecture/chapter-12/"><span>12</span><span>조경 디지털트윈과 월드모델</span></a><a href="/digital-landscape-architecture/chapter-13/"><span>13</span><span>시공·유지관리 로봇을 준비하는 피지컬 AI</span></a><a href="/digital-landscape-architecture/chapter-14/"><span>14</span><span>하나의 조경공간을 연결하는 통합 사례</span></a><a href="/digital-landscape-architecture/chapter-15/"><span>15</span><span>검증·재현·공유: 디지털 조경의 연구와 공공성</span></a></nav></details><a class="sidebar-meta" href="/digital-landscape-architecture/references/">참고문헌 ↗</a><a class="sidebar-meta" href="/digital-landscape-architecture/edition/">원고와 웹판 안내 ↗</a></aside><div id="book-content" tabindex="-1"><div class="chapter-head" id="sec-ch03"><p class="eyebrow">CHAPTER 03 / 15</p><h1>Landscape BIM·IFC와 시공 전환</h1><div class="chapter-meta"><span>5개 집필 단위</span><span>PDF 56–77쪽</span><a href="/digital-landscape-architecture/edition/">출간 준비 웹판</a></div></div><p class="chapter-notice">저자 Markdown 원고를 바탕으로 한 웹판입니다. 2026-09-14 PDF에서 보강된 설명은 별도로 표시했습니다.</p><article class="book-prose" id="reading"><h2 id="unit-01">1단위. BIM·IFC와 수목 라이브러리</h2>
+<p>설계자가 공원에 느티나무 열 그루를 배치했다. 그 순간 수량표에는 열 그루가 잡힌다. 하지만 공정표에 적을 말은 ‘나무 10주’만으로 충분하지 않다. 어느 구역인지, 어떤 규격인지, 어느 작업조가 언제 들어갈 수 있는지 알아야 기간을 계산할 수 있다. 나무가 추가되면 수량과 작업기간을 다시 계산하고, 다른 작업의 날짜도 바뀌는지 확인해야 한다.</p>
+<p>이 장의 질문은 **“설계를 하면 시공에 필요한 정보가 어디까지 자동으로 이어질 수 있는가?”**이다. 같은 공원의 설계 객체를 WBS에 분류하고, 작업조와 생산성을 연결하여 공사기간을 산정한다. IFC 개방 플랫폼에서 데이터를 추출하는 과정을 실제 예제로 실행하고, 공정에 따라 바뀌는 작업동선·출입 통제구역 후보와 검측 기록까지 연결한다.</p>
+<blockquote>
+<p><strong>집필 초고 v0.3 · 저자 검토용.</strong> 가상 설계 D03의 배치·규격·생산성·통행 규칙은 교육용 가정이다. 예제 IFC의 생성·재추출, WBS·공기 계산, 평면 동선 후보 검사는 실행했다. 실제 저작도구 간 교환, Navisworks 연동, 현장 시공·안전 검증은 미실행이다.</p>
+</blockquote>
+<h3 id="section-002">3.1 먼저 익힐 말: 무엇을, 누가, 어떤 정보로 관리하는가?</h3>
+<p>**BIM(Building Information Modeling, 건설정보모델링)**은 건설 대상의 형상과 정보를 만들어 공유하고, 설계·시공·운영의 판단에 사용하는 과정이다. 수목을 입체로 표현하고 수종·규격·위치를 기록하는 일, 변경된 정보를 다른 참여자에게 전달하는 일이 함께 들어간다. 영국의 정보관리 정책도 BIM을 절차·표준·기술이 결합해 생애주기 정보를 생산·교환·확인·활용하는 것으로 설명한다. (Infrastructure and Projects Authority 2021년)</p>
+<p><strong>Landscape BIM</strong>은 이러한 접근을 조경의 수목·토양·지형·포장·시설물과 그 작업에 적용한다. 수목 한 그루는 개별 **객체(object)**이고, 수고·수종·위치 등은 **속성(property)**이다. ‘같은 유형을 사용한다’, ‘A구역에 속한다’, ‘이 작업의 대상이다’는 **관계(relationship)**다. 화면의 모양이 같더라도 다른 규격이나 다른 공정에 속하면 구별할 수 있어야 한다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">개념</th>
+<th scope="col">답하려는 질문</th>
+<th scope="col">공원 사례</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BIM</td>
+<td>무엇을 만들며 어떤 정보를 공유하는가?</td>
+<td>느티나무 객체와 규격·위치·버전</td>
+</tr>
+<tr>
+<td>IFC</td>
+<td>서로 다른 프로그램에 어떤 구조로 전달하는가?</td>
+<td>객체·속성·관계를 교환하는 표준</td>
+</tr>
+<tr>
+<td>WBS</td>
+<td>프로젝트의 작업 범위를 어떻게 나눌 것인가?</td>
+<td>A구역 → 수목식재 → 느티나무 Z1 식재</td>
+</tr>
+<tr>
+<td>OBS</td>
+<td>어떤 조직이 일을 맡는가?</td>
+<td>시공조직 → 식재조 O-T</td>
+</tr>
+<tr>
+<td>공정 활동</td>
+<td>언제부터 얼마 동안 무엇을 하는가?</td>
+<td>A구역 느티나무 10주를 2작업일 동안 식재</td>
+</tr>
+<tr>
+<td>검측</td>
+<td>어떤 기준과 증거로 확인하는가?</td>
+<td>해당 수목·굴착·식재의 검사 기록</td>
+</tr>
+</tbody>
+</table></div>
+<p>**WBS(Work Breakdown Structure, 작업분류체계)**는 전체 작업 범위를 계층으로 나눈 체계다. 그 하위 작업 묶음의 포함 범위와 완료 조건을 풀어 쓴 문서를 WBS 사전이라고 한다. **OBS(Organizational Breakdown Structure, 조직분류체계)**는 일을 맡는 조직의 관계를 정리한다. 둘을 연결하여 누가 어느 작업을 책임지는지 나타낸 표가 **RAM(Responsibility Assignment Matrix, 책임배정표)**다. (U.S. Department of Energy, 일자 없음)</p>
+<p>객체 ID, WBS 코드와 공정 활동 ID는 따로 둔다. <code>TREE-001</code>은 나무 한 그루, <code>A.20.10</code>은 그 나무가 속한 작업 묶음, <code>T06</code>은 그 묶음의 식재 활동이다. 이 책의 업무 ID와 IFC의 <code>GlobalId</code>는 별도 열에 함께 보관한다. 예제에서는 각 업무 ID에 대응하는 고정 GlobalId를 생성하여 IFC를 다시 읽은 뒤에도 같은 대상을 추적한다.</p>
+<h3 id="sec-ch03-status">3.2 국내외 BIM·IFC는 어디까지 왔는가?</h3>
+<p>확인 기준일은 <strong>2026년 9월 13일</strong>이다. 정책의 발표, 기관의 구축 사례와 소프트웨어 기능을 구별해서 읽는다.</p>
+<p>국내에서는 국토교통부가 2022년 「건설산업 BIM 시행지침」을 발주자·설계자·시공자편으로 배포했다. 기관별 특성에 맞는 적용지침을 마련할 수 있도록 BIM 성과품 작성·납품·활용의 방법과 절차를 제공하는 자료다. 이 자료가 존재한다는 사실만으로 모든 조경공사에 동일한 BIM 의무와 납품 형식이 적용된다고 해석할 수는 없다. 실제 사업에서는 발주 문서와 적용지침을 확인한다. (국토교통부 2022년)</p>
+<p>조경의 구체적 사례로, 제공받은 2025년 11월 「조경 BIM 수목 라이브러리 구축 용역 최종보고서」는 수목 라이브러리와 템플릿, 파일럿 모델을 보고한다. 규격별 678유형과 35속성은 수목 정보를 반복 사용할 기반이 된다. 이는 해당 과업이 보고한 구축 사례이며 국내 전체 보급률을 보여주는 통계는 아니다. (림인포테크 2025년)</p>
+<p>영국의 2021년 「Transforming Infrastructure Performance: Roadmap to 2030」 부록 B는 정보관리 요구를 UK BIM Framework 및 ISO 19650과 연결한다. 여기서 배울 점은 발주자가 필요한 정보를 먼저 정하고, 전달·확인·보관 책임을 사업 절차에 넣는다는 것이다. (Infrastructure and Projects Authority 2021년)</p>
+<p>싱가포르 CORENET X는 BIM 대상 사업의 제출에 IFC+SG를 사용하고, 제출 전 모델의 완전성을 확인하는 절차를 안내한다. 2026년 7월 23일 BCA 발표에서는 적용 계획을 조정하여 <strong>2026년 10월 1일부터 신규 사업 중 연면적 5,000m² 이상</strong>을 대상으로 확대한다고 밝혔다. 그 미만 사업은 의무 대상에서 제외하는 방향을 발표했다. 따라서 과거의 ‘2026년 10월 모든 신규 사업’ 계획을 그대로 현재 일정으로 쓰면 오류가 된다. 이 기준은 싱가포르의 해당 제출 제도이며, 이 책의 공원 면적에 대입할 기준이 아니다. (CORENET X, 일자 없음; Building and Construction Authority 2026년)</p>
+<p>국제 데이터 표준인 **IFC(Industry Foundation Classes)**는 프로그램 사이에서 건설 정보를 교환하는 구조를 정의한다. ISO 16739-1:2024의 범위는 건축물과 기반시설의 생애주기 정보를 포함한다. 표준의 범위와 특정 프로그램이 실제로 읽고 쓰는 범위는 따로 확인해야 한다. (International Organization for Standardization 2024년)</p>
+<h4 id="section-004">조경 객체를 IFC에 대응한다</h4>
+<p>IFC 4.3.2.0의 <code>IfcGeographicElement</code>는 수목·지형 등의 지리적 요소를 설명하며, 유형 목록의 <code>VEGETATION</code>은 식생을 나타낸다. <code>IfcGeographicElementType</code>는 여러 개체에 공통인 유형 정보를 다룬다. (buildingSMART International, 일자 없음-a, 일자 없음-c, 일자 없음-b)</p>
+<p><code>Pset_VegetationCommon</code>에는 학명 <code>BotanicalName</code>과 지역명 <code>LocalName</code>이 있고, 적용 대상은 <code>IfcGeographicElement/VEGETATION</code>의 개별 객체다. 라이브러리에서 공통으로 관리한 이름도 내보낼 때 어느 객체에 붙는지 확인해야 한다. (buildingSMART International, 일자 없음-h)</p>
+<p>수고·흉고직경·WBS·검측 기록까지 모두 이 속성 집합에 있다고 가정하지 않는다. 표준 항목, 합의한 확장 속성, 외부 작업표를 대응표로 정한다. 제공된 「조경분야 BIM 정보작성기준(안)」의 <code>Pset_SH_Landscape</code>는 문서의 제안이며 buildingSMART 표준 속성 집합으로 소개하지 않는다. 이 기준안의 공식 발행·채택 여부도 확인되지 않았다. (작성자 미상 2026년)</p>
+<p>교환 후에는 객체 수, 유형 참조, 단위, 좌표, 필수 속성과 작업 연결을 다시 읽어 대조한다. 이 장의 실행 예제는 이 정보 구조를 IFC 4.3 ADD2에 기록하고 IfcOpenShell로 다시 읽는다. 다만 이 교재가 정한 평면 형상·속성 규약을 대상으로 하며, 임의의 상용 설계 파일을 모두 처리하는 범용 가져오기는 아니다.</p>
+<h3 id="sec-ch03-library">3.3 수목 라이브러리는 공정 계산의 입력이다</h3>
+<p>수목 라이브러리는 반복 사용할 형상과 속성의 집합이다. **유형(type)**에는 수종·규격·라이브러리 버전 등 공통 정보를 둔다. 그 유형을 현장에 배치한 **인스턴스(instance)**에는 개별 ID·위치·설계 버전·시공 상태를 둔다. 같은 유형의 나무 열 그루는 공통 규격을 공유하지만 위치와 검측 기록은 각자 갖는다.</p>
+<p>제공된 최종보고서의 표 4-1은 PDF 77쪽, 인쇄면 70쪽에 있다. 보고서는 100종에 걸친 규격별 유형을 총 678개로 정리하고, 유형마다 35속성을 두어 총 23,730개의 변수값을 제시한다. 계산은 <strong>678×35=23,730</strong>이다. 별도 기준안에 적힌 ‘100×678×35’는 이 결과와 일치하지 않으므로 원고에 옮기지 않았다. (림인포테크 2025년; 작성자 미상 2026년)</p>
+<p>보고서에서 참고할 구조는 수종과 규격뿐 아니라 작성·버전, 시공 물량, 생태특성, 환경성능을 구분한다는 점이다. 예를 들어 수고·수관폭은 m, 흉고직경·근원직경은 cm로 기록한다. 이 구분을 지워 단위 없는 ‘직경 15’로 내보내면 설계·반입 확인·물량 계산이 모두 흔들릴 수 있다. 환경성능 값은 적용 식·자료·조건을 따로 확인해야 하므로 이번 공기 산정에는 사용하지 않는다.</p>
+<p>가상 사례에서는 교목 두 유형과 초본 한 유형을 사용한다. <strong>다음 규격과 배치는 계산 학습용이며 수종 선정이나 식재 간격의 적합성을 검증한 설계안이 아니다.</strong></p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">유형</th>
+<th scope="col">수종</th>
+<th scope="col">수고</th>
+<th scope="col">수관폭</th>
+<th scope="col">직경의 종류·값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z1 · L02</td>
+<td>느티나무</td>
+<td>4.0m</td>
+<td>2.0m</td>
+<td>흉고직경 15cm</td>
+</tr>
+<tr>
+<td>I1 · L02</td>
+<td>이팝나무</td>
+<td>3.0m</td>
+<td>1.5m</td>
+<td>근원직경 10cm</td>
+</tr>
+</tbody>
+</table></div>
+<p>초본 H1·L03은 맥문동, 포트 지름 9cm, 식재 밀도 16본/m²로 가정한다. 초본의 포트 규격과 식재 밀도는 교목의 수고·직경과 다른 항목이다. 동일한 표 열에 의미가 다른 값을 억지로 넣지 않는다.</p>
+<p>‘느티나무’라는 이름이 같아도 규격·작업 방법·반입 조건이 다르면 하루 작업량이 달라질 수 있다. 자동 분류에는 수종 이름뿐 아니라 유형 ID와 구역을 함께 사용한다. 유형 변경 시에는 참조하는 객체를 찾아 새 버전을 적용하고, 이미 발행한 작업 지시와 검측 이력을 보존한다.</p>
+<h2 id="unit-02">2단위. 시방 기준에서 WBS·OBS로</h2>
+<h3 id="sec-ch03-wbs-basis">3.4 WBS를 만드는 순서: 조경시방서에서 작업 묶음으로</h3>
+<p>공원 객체를 분류하기 전에 <strong>무엇을 한 작업으로 볼 것인가</strong>부터 정한다. 이 장은 조경시방서를 읽어 작업의 포함 범위와 검사·완료 조건을 찾고, 설계의 구역·규격·공법·작업량을 겹쳐 WBS를 구축한다. 시방서가 ‘A구역 느티나무 10주’라는 WBS를 직접 제시하는 것은 아니다. 이 작업 묶음은 <strong>시방 요구를 빠뜨리지 않으면서 공정을 계산하도록 작성한 계획자의 분류</strong>다.</p>
+<h4 id="section-008">1. 시방서에서 작업 범위와 확인 지점을 찾는다</h4>
+<p>먼저 대상 사업에 적용할 시방서와 설계 문서를 확인한다. 교재에서는 검토자료로 제공받은 2024년 개정 표기의 KCS 조경 시방서를 참고했다. 장·절 제목뿐 아니라 재료, 시공 방법, 선행 조건, 검사와 마감 요구를 읽어 <strong>무엇을 포함해야 완료라고 할 수 있는지</strong> 적는다. KCS 34 10 10의 공사계획·단계 확인, 식재·배수·포장별 시공 조항이 이 작업의 근거다. (국토교통부 2024년a, 2024년d, 2024년f, 2024년i)</p>
+<p>예를 들어 느티나무 식재에는 나무를 세우는 일만 있는 것이 아니다. 해당 조건의 반입 확인, 구덩이 굴착·검사, 식재·물다짐·지주 설치가 연결된다. 이후 반복 관수·양생은 다른 기간과 담당으로 관리할 수 있다. 우배수에는 굴착·기초·관 설치·연결·확인·되메움이, 습식 판석에는 기층 확인·포설·보호·줄눈이 연결된다. 실제 공법에 적용되는 요구를 WBS 사전에 적고 제외 범위도 표시한다.</p>
+<h4 id="section-009">2. 설계 구역으로 작업 위치를 나눈다</h4>
+<p>같은 시방을 적용해도 A와 B의 작업 가능 시점·진입 조건·인계 구간이 다르면 따로 관리할 이유가 생긴다. 구역은 단순히 도면에 이름을 붙인 경계가 아니라, 작업조가 들어가 연속적으로 일하고 검사·인계할 수 있는 범위로 정한다.</p>
+<p>이 사례는 A·B 식재구역과 공통 시설·보행로 C를 사용한다. 구역을 세분할 때에는 구역 밖 공통 관로·준비·관리 업무가 빠지지 않도록 확인한다. 실제 사업에서는 계약이나 공종을 상위에 두고 구역을 하위에 둘 수도 있다.</p>
+<h4 id="section-010">3. 공법·규격·작업 조건이 같을 때 묶는다</h4>
+<p>같은 생산성을 적용하기 어려우면 분할을 검토한다. 블록과 습식 판석은 포설 방법·보호 시간·완료 조건이 다르므로 나눈다. 교목과 초본은 수량 표현과 작업 방법이 다르다. 우수 이송관과 유공 암거는 기능·재료·여과층 구성과 시공 범위가 달라 구분한다.</p>
+<p>같은 공종 안에서도 규격·운반 거리·매설 깊이·굴착 단면·작업 장비·담당 또는 검사 구간이 달라지면 별도의 작업 묶음이 필요할 수 있다. 조건이 같고 같은 작업조가 연속 시공할 수 있다면 작은 물량마다 WBS를 늘릴 필요는 없다.</p>
+<h4 id="section-011">4. 작업량으로 묶음의 크기와 공정 활동을 정한다</h4>
+<p>분류가 끝나면 설계에서 물량을 읽어 하루 작업량과 비교한다. ‘A구역 느티나무 Z1’ 묶음에 10주가 있고 하루 5주를 처리한다면 활동은 2작업일이다. 개별 수목 ID는 유지하면서 공정표에서는 열 그루를 묶고, 매일 처리할 다섯 그루의 작업 지시를 따로 만들 수 있다.</p>
+<p>물량이 늘어도 조건이 같다면 WBS를 유지하고 기간을 갱신한다. 구간별 인계·장비 접근·검사 주기가 달라지는 규모라면 활동을 나누거나 하위 WBS를 추가한다. <strong>‘무조건 10주마다 나눈다’ 같은 공통 기준은 두지 않는다.</strong> 물량, 생산성, 공간과 확인 가능한 완료 단위를 함께 본다.</p>
+<p>검사·양생 때문에 중간에 멈추어야 한다면 물리 WBS 안에 여러 활동을 연결한다. 우수관 30m의 굴착·부설·검사·되메움을 각각 일정에 표시해도 물리 관로의 물량은 30m다. 매몰 전 검사는 여러 WBS의 객체를 함께 확인할 수 있다. 관로를 더 작은 검사 구간으로 나누어야 하는 현장에서는 구간별 활동과 통제 범위도 함께 나눈다.</p>
+<h4 id="section-012">5. 분류 근거를 WBS 사전과 자동 규칙으로 남긴다</h4>
+<p>WBS 사전에는 코드·대상·구역·유형, 포함·제외 작업, 물량 단위와 산출 방법, 시방 조항·검사·완료 조건, 담당·선행 조건을 기록한다. 생산성의 출처와 가정은 별도 연결한다. 그래야 설계자가 객체를 배치했을 때 어떤 기준으로 분류되었는지 되짚을 수 있다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">구분 기준</th>
+<th scope="col">이 공원에서의 판단</th>
+<th scope="col">WBS·공정에 남기는 정보</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>시방상 작업 범위</td>
+<td>식재에 굴착·확인·물다짐 등이 포함</td>
+<td>포함 작업과 검사 지점</td>
+</tr>
+<tr>
+<td>구역·접근 조건</td>
+<td>A와 B의 위치·시공 순서가 다름</td>
+<td>A·B 별도 묶음, 위치 검사</td>
+</tr>
+<tr>
+<td>공법</td>
+<td>블록과 습식 판석의 시공·보호가 다름</td>
+<td>C.10.10 / C.10.20</td>
+</tr>
+<tr>
+<td>유형·규격</td>
+<td>느티 Z1·이팝 I1·초본 H1 구별</td>
+<td>유형별 규칙·작업량 단위</td>
+</tr>
+<tr>
+<td>기능·단면 조건</td>
+<td>우수관과 유공 암거의 범위가 다름</td>
+<td>C.30.20 / A.30.10</td>
+</tr>
+<tr>
+<td>작업량·관리 주기</td>
+<td>10주를 하루 5주씩 처리</td>
+<td>WBS 유지, T06 2작업일·일별 대상</td>
+</tr>
+<tr>
+<td>검사·대기</td>
+<td>매몰 전 확인, 판석 보호 기간</td>
+<td>별도 활동·선후관계·달력</td>
+</tr>
+<tr>
+<td>수행 조직</td>
+<td>교목과 초본이 같은 식재조 사용</td>
+<td>OBS 연결과 중복 배치 검사</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 기준을 컴퓨터가 읽는 규칙으로 바꾸면 ‘종류=수목, 구역=A, 유형=Z1 → A.20.10’이 된다. 시방서는 <strong>작업 범위·시공 조건·확인 기준</strong>, 설계는 <strong>위치·유형·물량</strong>, 작업계획은 <strong>담당·생산성·순서·달력</strong>의 근거를 제공한다. 세 정보가 합쳐져 WBS와 공정 계산이 만들어진다. 다음 공원 사례는 이 순서를 실제 데이터로 보여준다.</p>
+<h3 id="sec-ch03-case">3.5 공통 사례: 40×30m 가상 공원</h3>
+<p>기존 가상 공원 <code>PARK-SYN-001</code>의 외곽과 초기 수목 세 그루·벤치 두 개의 ID 및 위치를 유지하고, <strong>설계 D03</strong>에 판석포장·초본·집수정·우수관·유공 암거를 추가했다. 남서 모서리를 원점으로 한 로컬 좌표이며 x는 동쪽, y는 북쪽, 단위는 m다. 실제 측량 좌표계나 지형을 대신하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">설계 범위</th>
+<th scope="col">물량</th>
+<th scope="col">객체 표현</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A·B 식재기반</td>
+<td>각 300m²</td>
+<td>면 객체 2개</td>
+</tr>
+<tr>
+<td>A 느티나무 Z1 / 이팝나무 I1</td>
+<td>10주 / 8주</td>
+<td>개별 수목 18개</td>
+</tr>
+<tr>
+<td>B 느티나무 Z1</td>
+<td>6주</td>
+<td>개별 수목 6개</td>
+</tr>
+<tr>
+<td>A·B 초본 H1</td>
+<td>각 60m²</td>
+<td>식재 면 객체 2개</td>
+</tr>
+<tr>
+<td>보행로 블록 / 판석</td>
+<td>180m² / 60m²</td>
+<td>포장 면 객체 2개</td>
+</tr>
+<tr>
+<td>벤치</td>
+<td>2개</td>
+<td>개별 시설물 2개</td>
+</tr>
+<tr>
+<td>집수정</td>
+<td>3개</td>
+<td>개별 시설물 3개</td>
+</tr>
+<tr>
+<td>우수관로</td>
+<td>14+12+4=30m</td>
+<td>중심선 객체 3개</td>
+</tr>
+<tr>
+<td>유공 암거</td>
+<td>12+6=18m</td>
+<td>꺾인 중심선 객체 1개</td>
+</tr>
+</tbody>
+</table></div>
+<p>설계 객체는 총 <strong>39개</strong>다. 초본 2개는 두 식재 면을 의미하며 식물 두 본이라는 뜻이 아니다. 공원 1,200m² 중 식재기반 600m²와 포장 240m²를 작업하고, 나머지 360m²의 지표는 유지한다. 초본 120m²는 식재기반 안에 포함되고, 벤치는 포장 안에 있으며, 관로는 지중에 겹친다. 이 물량을 모두 부지 면적으로 더하지 않는다. 지중 공사를 위한 국부 굴착·복구는 별도 작업 범위다.</p>
+<figure class="book-figure" data-book-figure="fig-ch03-park" id="fig-ch03-park"><img alt="판석·블록·초본을 포함한 가상 공원의 지표 설계." decoding="async" height="2331" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-park.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 17 · PDF 61쪽</span><a aria-label="도판 17 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-park.webp">크게 보기 ↗</a></div><p>판석·블록·초본을 포함한 가상 공원의 지표 설계.</p></figcaption></figure>
+<p>그림의 긴 설명: A는 x=0–20m, B는 x=20–40m의 남쪽 식재구역이다. 초본 띠는 y=12–15m에 있다. 보행로는 y=18–24m이며 서측 x=0–10m를 판석으로 구분했다. 두 벤치는 (12,22)m와 (28,22)m다. 배치와 밀도는 계산 입력이며 생육·경관 적합성을 검증한 설계안은 아니다.</p>
+<figure class="book-figure" data-book-figure="fig-ch03-drain" id="fig-ch03-drain"><img alt="같은 공원의 집수정·우수관·유공 암거 연결." decoding="async" height="2331" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-drain.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 18 · PDF 62쪽</span><a aria-label="도판 18 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-drain.webp">크게 보기 ↗</a></div><p>같은 공원의 집수정·우수관·유공 암거 연결.</p></figcaption></figure>
+<p>그림의 긴 설명: 집수정은 (10,19), (24,19), (36,19)m, 가상 방류 연결점은 (40,19)m다. 유공 암거는 (16,7)에서 (10,7)을 거쳐 첫 집수정으로 연결한다. 우수관은 모인 물의 이송, 유공 암거는 토양 속 물을 모으는 심토층 배수의 예로 구분했다. 여기서 ‘암거’는 <strong>유공관·여과재를 사용하는 지중 배수</strong>이며 박스형 암거 구조물 공사를 뜻하지 않는다. 기능 차이는 KCS 34 50 65의 심토층 배수와 배수관 설치 조항을 참고했다. (국토교통부 2024년f)</p>
+<p>관경·관저고·집수정 높이·유출량·방류 허용 여부는 미확정이다. 이 도식으로 배수능력이나 시공 가능성을 판단할 수 없다. 관로 물량은 평면 중심선 길이이며 관의 실제 절단·발주 길이나 구배를 반영한 3차원 길이와 구분한다.</p>
+<h4 id="section-014">공정 계산에 좋은 WBS 단위를 고른다</h4>
+<p>‘수목식재’는 전체를 설명하기에 편하지만 작업기간을 계산하기에는 넓다. ‘느티나무 10주’는 위치·규격·작업조가 빠져 있다. **‘A구역 느티나무 Z1 10주 식재’**라고 쓰면 같은 조건에서 연속 작업할 대상을 묶고 생산성을 연결하기 쉬워진다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">분류 방식</th>
+<th scope="col">장점</th>
+<th scope="col">더 확인할 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>공종: 수목식재</td>
+<td>전체 범위를 보기 쉽다</td>
+<td>구역·규격별 생산성 차이</td>
+</tr>
+<tr>
+<td>수종: 느티나무 식재</td>
+<td>발주·반입 집계에 편하다</td>
+<td>접근·장비 조건의 차이</td>
+</tr>
+<tr>
+<td>구역×공종×유형</td>
+<td>위치와 생산성 적용 범위가 드러난다</td>
+<td>묶음을 지나치게 작게 나누지 않았는가</td>
+</tr>
+<tr>
+<td>수목 한 그루마다 활동 생성</td>
+<td>개별 상태를 추적한다</td>
+<td>반복 작업의 공정표가 과도하게 복잡해지는가</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 사례의 WBS는 <strong>구역 → 공종 → 같은 조건의 작업 묶음</strong>이다. 기준은 같은 생산성·담당·완료 조건을 적용할 수 있는가이다. 관로라면 구역·관경·재질·매설 깊이·굴착 단면·공법이 달라질 때 묶음을 나눌 수 있다. 이 예제의 우수관 30m는 동일한 조건이라는 임시 가정으로 묶었다. 깊이가 다른 구간까지 길이만 합하면 생산성 적용이 부정확해진다.</p>
+<figure class="book-figure" data-book-figure="fig-ch03-wbs" id="fig-ch03-wbs"><img alt="A구역의 교목·초본 WBS와 공정 활동 연결." decoding="async" height="2549" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-wbs.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 19 · PDF 63쪽</span><a aria-label="도판 19 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-wbs.webp">크게 보기 ↗</a></div><p>A구역의 교목·초본 WBS와 공정 활동 연결.</p></figcaption></figure>
+<p>그림의 긴 설명: 실선은 포함 관계, 점선은 WBS 묶음과 공정 활동의 연결이다. 시간의 선후관계는 별도의 공정 관계망에 둔다. 물량은 설계 객체에서 읽으므로 수량이 바뀔 때마다 WBS 코드까지 바꾸지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">WBS</th>
+<th scope="col">작업 묶음·분리 근거</th>
+<th scope="col">연결 활동</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.10 / B.10</td>
+<td>구역별 식재기반</td>
+<td>T02 / T03</td>
+</tr>
+<tr>
+<td>A.20.10 / A.20.20</td>
+<td>A 느티 / 이팝</td>
+<td>T06 / T07</td>
+</tr>
+<tr>
+<td>B.20.10</td>
+<td>B 느티</td>
+<td>T08</td>
+</tr>
+<tr>
+<td>A.20.30 / B.20.30</td>
+<td>초본: 구역·면적 단위·식재 방법</td>
+<td>T24 / T25</td>
+</tr>
+<tr>
+<td>C.10.10</td>
+<td>블록포장: 공법·마감 범위</td>
+<td>T05</td>
+</tr>
+<tr>
+<td>C.10.20</td>
+<td>판석포장: 습식 공법·보호 기간</td>
+<td>기층 확인 T19 → 포설 T20 → 양생 T21 → 줄눈 T22</td>
+</tr>
+<tr>
+<td>C.20</td>
+<td>벤치</td>
+<td>기초 T04, 상부 T09</td>
+</tr>
+<tr>
+<td>C.30.10</td>
+<td>집수정</td>
+<td>설치 T13, 매몰 전 검사 T16</td>
+</tr>
+<tr>
+<td>C.30.20</td>
+<td>우수관로: 동일 단면·시공 조건 가정</td>
+<td>굴착 T12, 부설 T14, 검사 T16, 되메움 T17</td>
+</tr>
+<tr>
+<td>A.30.10</td>
+<td>유공 암거: 여과재를 포함한 시공 범위</td>
+<td>굴착·관 설치 T15, 검사 T16, 여과재·복토 T18</td>
+</tr>
+<tr>
+<td>M.10 / M.20 / M.30 / M.40</td>
+<td>준비 / 식생 관리 / 인계 / 매몰 전 검사</td>
+<td>T01 / T11 / T10 / T16</td>
+</tr>
+</tbody>
+</table></div>
+<p>물리 객체를 분류하는 묶음은 13개이고, 준비·검사·관리·인계는 별도 계획 범위다. <strong>벤치 객체 2개, WBS 묶음 1개, 설치 활동 2개</strong>가 될 수 있다. 우수관 30m가 굴착·부설·되메움 활동마다 등장해도 관로가 90m가 되지는 않는다. 판석 60m²도 여러 활동의 동일 대상이다. 물리 물량은 객체–WBS 표에서, 활동별 작업량은 객체–활동 표에서 집계한다.</p>
+<h4 id="section-015">시방서로 작업 범위와 검사 지점을 정의한다</h4>
+<p>시방서는 WBS 사전의 포함 범위·재료·확인 지점을 정하는 근거다. 제공된 <strong>2024년 12월 10일 개정 표기가 있는 KCS PDF 판본</strong>을 참고했다. 시방 목차를 그대로 공정표로 옮기지 않고 실제 공법과 작업조에 맞춰 묶었다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">작업 범위</th>
+<th scope="col">참고 조항</th>
+<th scope="col">공정·검측에 반영한 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>식재기반</td>
+<td>KCS 34 30 10, 2.1(6), 3.1.1</td>
+<td>토양 적합성·정리</td>
+</tr>
+<tr>
+<td>수목 반입·굴착·식재</td>
+<td>KCS 34 40 05, 1.5.2(3); 34 40 10, 3.1.1–3.1.3</td>
+<td>반입과 구덩이 검사·당일 식재 묶음</td>
+</tr>
+<tr>
+<td>초본</td>
+<td>KCS 34 40 10, 3.1.9</td>
+<td>식재상 정리·식재·초기 관수</td>
+</tr>
+<tr>
+<td>우수관·집수정·유공 암거</td>
+<td>KCS 34 50 65, 1.8, 3.1.8–3.1.11</td>
+<td>기초·연결·구배·여과재·통수 등 확인</td>
+</tr>
+<tr>
+<td>블록포장</td>
+<td>KCS 34 60 05, 3.3; 34 60 15, 3.2.2</td>
+<td>하부·블록·마감</td>
+</tr>
+<tr>
+<td>습식 판석포장</td>
+<td>KCS 34 60 20, 3.1.2</td>
+<td>기층·모르타르·판석·보호·줄눈</td>
+</tr>
+<tr>
+<td>벤치</td>
+<td>KCS 34 50 20, 3.2.1–3.2.2</td>
+<td>기초·고정·포장 접점</td>
+</tr>
+<tr>
+<td>계획·단계 확인·인계</td>
+<td>KCS 34 10 10, 1.8.6, 3.1</td>
+<td>선후관계와 검사 기록</td>
+</tr>
+</tbody>
+</table></div>
+<p>시방 근거: (국토교통부 2024년b, 2024년c, 2024년d, 2024년f, 2024년g, 2024년h, 2024년i, 2024년e, 2024년a)</p>
+<p>수목은 당일 처리할 수량을 <strong>굴착→구덩이 검사→식재→물다짐·지주 설치</strong>로 이어 작업하는 묶음이다. KCS 34 40 10의 3.1.1(1), (5)를 참고하여, 열 그루의 구덩이를 모두 파 놓고 여러 날 기다리는 계획으로 해석하지 않는다. 검사 대기는 별도 반영한다.</p>
+<p>관로는 매몰되면 확인하기 어려운 기초·접합·연결 정보를 남기도록 <strong>T16 매몰 전 검사</strong>를 계획상 정지 지점으로 넣었다. 일반적인 단계 확인과 배수 설치 요구를 결합해 교재가 정한 활동이다. 관수 배관의 압력시험 조항을 중력식 우수관에 그대로 적용하지 않는다. 최종 배수 기능·연결·뚜껑 높이 등은 해당 설계와 배수시설 확인 항목에 따라 검사한다.</p>
+<p>판석 시방 3.1.2(10)은 포설 후 하루가 지나 충분히 경화한 상태의 줄눈 작업을, (12)는 판석을 놓는 때부터 줄눈 전까지 <strong>하루 두 차례 살수와 비닐 덮개를 이용한 최소 3일 보호</strong>를 설명한다. 따라서 ‘하루 뒤 줄눈’ 하나만 읽어 양생을 생략하지 않는다. 예제는 마지막 포설 다음 날부터 온전한 3역일을 배정하고 주말 관리조를 둔다. 포설 중 시작한 보호도 이어지며, 시간 경과만으로 재료 상태를 합격 처리하지 않는다. (국토교통부 2024년i)</p>
+<p>이 사례의 판석 하부는 적합한 기존 콘크리트 기층을 확인·정리하는 조건이다. 신설 관로는 그 구간 내부를 지나지 않는다. 기층을 새로 타설해야 한다면 타설·기층 양생·검사를 추가한다. 식재·관로·포장의 하루 생산성은 KCS에서 가져온 값이 아니다.</p>
+<h4 id="section-016">OBS로 담당과 작업조의 가용성을 연결한다</h4>
+<p>시공조직 아래 현장관리 O-M, 기반 조성 O-E, 식재 O-T, 포장 O-P, 시설 O-F, 우배수 O-D를 각 1개 조로 둔다. 식생 관리 O-C와 포장 양생·보호 O-Q는 별도 관리조이며 주말에도 필요한 관리를 편성한다. 검사 O-I는 감독 역할의 담당이다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">책임배정 예</th>
+<th scope="col">수행</th>
+<th scope="col">확인·기록</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>교목과 초본</td>
+<td>O-T</td>
+<td>객체별 반입·식재 기록, O-I 확인</td>
+</tr>
+<tr>
+<td>우배수 설치</td>
+<td>O-D</td>
+<td>T16은 O-I, 작업 기록은 O-M 관리</td>
+</tr>
+<tr>
+<td>판석·블록</td>
+<td>O-P</td>
+<td>하부·줄눈·마감 확인</td>
+</tr>
+<tr>
+<td>판석 보호</td>
+<td>O-Q</td>
+<td>살수·덮개·상태 기록</td>
+</tr>
+<tr>
+<td>식생 관리</td>
+<td>O-C</td>
+<td>최초 식재부터 인계까지 일자별 기록</td>
+</tr>
+</tbody>
+</table></div>
+<p>같은 O-T가 동시에 두 장소에서 일하지 않도록 작업 순서를 정한다. 실제로 식재조를 증원한다면 OBS의 수용량과 활동 배치도 함께 바꾼다. 검사 담당을 공정표에 넣었다는 사실이 실제 검사 승인이나 감독 권한을 만들어 주지는 않는다.</p>
+<h2 id="unit-03">3단위. 물량·공기·설계 변경의 자동 계산</h2>
+<h3 id="sec-ch03-duration">3.6 물량에서 작업기간을 계산한다</h3>
+<p>계산 범위는 착공 준비부터 최종 검측·인계까지다. 설계 검토·조달·토양시험 결과 확인·사전제작 벤치 기초의 생산은 착공 전에 끝났다고 가정한다. 적합한 기존 기반을 사용하며 대규모 절성토는 제외하지만, 우배수의 국부 터파기·되메움은 포함한다.</p>
+<p>물량을 <span class="inline-math">Q</span>, 작업조 하나의 하루 생산성을 <span class="inline-math">P</span>, 같은 능력의 작업조 수를 <span class="inline-math">N</span>이라 하면 단순 작업기간은 다음과 같다.</p>
+<div aria-label="수식" class="equation" role="region" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>raw</mi></msub><mo>=</mo><mfrac><mi>Q</mi><mrow><mi>P</mi><mo>×</mo><mi>N</mi></mrow></mfrac><mo>,</mo><mspace width="2em"></mspace><mi>D</mi><mo>=</mo><mo>⌈</mo><msub><mi>D</mi><mi>raw</mi></msub><mo>⌉</mo></mrow><annotation encoding="application/x-tex">D_{raw}=\frac{Q}{P\times N},\qquad D=\lceil D_{raw}\rceil</annotation></semantics></math></div>
+<p><span class="inline-math">P</span>가 주/(조·작업일)이면 <span class="inline-math">D</span>는 작업일이다. 하루 단위 계획이므로 활동마다 올림한다. 인원이 늘어도 공간·장비·반입 능력이 부족하면 생산성이 배수로 증가하지 않는다.</p>
+<p><strong>A구역 느티나무 10주</strong>, <strong>5주/(조·작업일)</strong>, <strong>1개 조</strong>이면 <span class="inline-math">10/(5×1)=2</span>작업일이다. B 느티나무 6주는 접근 조건이 불리하다는 교육 설정으로 3주/(조·작업일)를 적용하여 2일이다. 실제 적용 시에는 접근 조건을 확인하고 같은 범위의 현장 실적으로 생산성을 보정한다.</p>
+<h4 id="section-019">초본은 면적과 반입 수량을 분리한다</h4>
+<p>A 초본 60m²에 밀도 16본/m²를 적용하면 <strong>960본</strong>, A·B 합계는 <strong>1,920본</strong>이다. 예제는 여분과 손실을 0으로 두었다. 실제 발주에는 포장 단위와 손실·예비 수량을 별도 계산한다.</p>
+<p>공정에는 30m²/(조·작업일)를 가정하여 구역마다 2일을 배정한다. 이 생산성은 H1의 규격·밀도·식재상 조건에 대응한다. 밀도가 바뀌면 반입 수량뿐 아니라 면적당 작업량과 생산성의 적합성도 재검토해야 한다. <strong>식재 면 두 개, 면적 120m², 반입 식물 1,920본, 식재 활동 두 개</strong>는 서로 다른 집계다.</p>
+<h4 id="section-020">공법별로 작업일과 대기 시간을 계산한다</h4>
+<p>아래 생산성은 모두 교육용 임의값이며 1개 조 기준이다. 준비·검사·인계는 계획자가 정한 고정 기간이고, 양생은 생산량으로 나누지 않는 경과 시간이다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">활동</th>
+<th scope="col">물량</th>
+<th scope="col">생산성/조·작업일</th>
+<th scope="col">기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T01 착공 준비·측설</td>
+<td>1식</td>
+<td>계획 고정값</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T12 우수관 터파기·기초</td>
+<td>30m</td>
+<td>30m</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T13 집수정 설치·접속 준비</td>
+<td>3개</td>
+<td>3개</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T14 우수관 부설·접합</td>
+<td>30m</td>
+<td>30m</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T15 유공 암거 터파기·관 설치</td>
+<td>18m</td>
+<td>18m</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T16 매몰 전 검사·기록</td>
+<td>1식</td>
+<td>계획 고정값</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T17 우수관 되메우기·다짐</td>
+<td>30m</td>
+<td>30m</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T18 암거 여과재·복토</td>
+<td>18m</td>
+<td>18m</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T02 A구역 식재기반</td>
+<td>300m²</td>
+<td>150m²</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T03 B구역 식재기반</td>
+<td>300m²</td>
+<td>150m²</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T06 A구역 느티나무 Z1 식재</td>
+<td>10주</td>
+<td>5주</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T04 벤치 사전제작 기초 설치</td>
+<td>2개</td>
+<td>2개</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T07 A구역 이팝나무 I1 식재</td>
+<td>8주</td>
+<td>8주</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T05 보행로 블록포장</td>
+<td>180m²</td>
+<td>80m²</td>
+<td>3작업일</td>
+</tr>
+<tr>
+<td>T08 B구역 느티나무 Z1 식재</td>
+<td>6주</td>
+<td>3주</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T09 벤치 상부 조립·고정</td>
+<td>2개</td>
+<td>2개</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T19 판석 기존 기층 확인·정리</td>
+<td>60m²</td>
+<td>60m²</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T24 A구역 초본 식재</td>
+<td>60m²</td>
+<td>30m²</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T20 판석 붙임·포설</td>
+<td>60m²</td>
+<td>30m²</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T21 판석 양생·보호</td>
+<td>3역일</td>
+<td>경과 시간</td>
+<td>3역일</td>
+</tr>
+<tr>
+<td>T22 판석 줄눈·세척·확인</td>
+<td>60m²</td>
+<td>60m²</td>
+<td>1작업일</td>
+</tr>
+<tr>
+<td>T25 B구역 초본 식재</td>
+<td>60m²</td>
+<td>30m²</td>
+<td>2작업일</td>
+</tr>
+<tr>
+<td>T10 정리·최종 검측·인계</td>
+<td>1식</td>
+<td>계획 고정값</td>
+<td>1작업일</td>
+</tr>
+</tbody>
+</table></div>
+<p>같은 우수관 30m가 T12·T14·T17의 작업량으로 반복된다. 굴착 단면과 시공 조건이 같다는 가정 아래 길이당 생산성을 사용했다. 토공 체적이 필요하면 중심선 길이에 승인된 굴착 단면을 적용하고 집수정 굴착·겹침·작업 여유를 따로 처리한다.</p>
+<p><strong>T21의 3역일은 작업조를 두 배로 늘려 1.5일로 줄일 수 없다.</strong> 2026년 11월 26일 판석 포설 완료 후 27–29일을 보호 기간으로 잡았다. 금·토·일을 포함하며, 줄눈 작업조는 월요일인 30일에 돌아온다. 판석 포설 중의 보호는 포설 작업과 병행한다.</p>
+<h4 id="section-021">전체 기간은 활동별 기간의 합계와 다르다</h4>
+<p>우배수 작업과 매몰 전 검사를 먼저 진행하고 되메움 후 식재기반·포장으로 넘어간다. 기반 조성조는 A→B, 식재조는 A 느티→A 이팝→B 느티→A 초본→B 초본 순으로 배치했다. 포장조는 블록→판석 기층 확인→판석 포설→보호 기간 후 줄눈 순이다. A 초본은 인접 블록의 장비 작업 종료를 기다린다. B 초본은 공통 접근로의 판석 마감 후 들어가는 <strong>이 사례의 동선상 작업 순서</strong>로 두었다. 모든 현장에 필요한 기술적 선후관계는 아니다.</p>
+<p>자동 계산에는 사람이 정한 기술 순서·작업조 순서·검사·양생 조건을 입력한다. 작업 하나의 가장 이른 시작은 선행 작업의 완료를 모두 기다린 시점이다. 그 다음 <strong>해당 작업의 달력</strong>에서 필요한 일수를 센다. 일반 작업은 월–금, 양생은 역일을 사용하므로 날짜 위에서 단순히 모든 기간을 더하지 않는다.</p>
+<figure class="book-figure" data-book-figure="fig-ch03-gantt" id="fig-ch03-gantt"><img alt="공정표 전반: 우배수·매몰 전 검사·식재기반." decoding="async" height="1652" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-gantt.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 20 · PDF 68쪽</span><a aria-label="도판 20 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-gantt.webp">크게 보기 ↗</a></div><p>공정표 전반: 우배수·매몰 전 검사·식재기반.</p></figcaption></figure>
+<figure class="book-figure" data-book-figure="fig-ch03-gantt-2" id="fig-ch03-gantt-2"><img alt="공정표 후반: 포장·교목·초본·양생·인계." decoding="async" height="1750" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-gantt-2.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 21 · PDF 69쪽</span><a aria-label="도판 21 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-gantt-2.webp">크게 보기 ↗</a></div><p>공정표 후반: 포장·교목·초본·양생·인계.</p></figcaption></figure>
+<p>그림의 긴 설명: 음영 열은 토·일, 짙은 막대와 별표는 현재 달력·작업조 순서에서 총여유가 0인 활동이다. 황색은 포장 보호 기간, 별도 관리 행은 식재 이후의 관수·식생 관리다. 이 예제의 총여유는 역일 축으로 계산하며 휴일 때문에 생기는 달력상 여유도 포함한다. 모든 가능한 순서를 탐색하는 최적화 결과는 아니다.</p>
+<p><strong>완료일은 2026년 12월 3일이다.</strong> 가상 착공일 11월 2일부터 포함해 <strong>32역일</strong>, 그 기간에 들어 있는 월–금은 <strong>24작업일</strong>이다. 개별 일반 활동의 기간 합계는 31작업일이지만 여러 작업조가 병행한다. 여기에 3역일 양생을 단순 합산해 전체 기간을 구해서는 안 된다. 최초 식재 11월 16일부터 인계까지 18역일의 식생 관리도 병행한다.</p>
+<p>공휴일·기상·조달 지연·재검사·실제 통행 제약은 아직 반영하지 않았다. 뒤의 동선 검사는 이 공정안을 공간상으로 검토하는 추가 단계다. 경로가 막히면 동선·공법·작업 순서를 조정하고 공기와 공간을 다시 계산해야 한다. 이번 자동 계산기는 그 조정을 스스로 최적화하거나 기준 계획을 승인하지 않는다.</p>
+<h3 id="sec-ch03-automation">3.7 설계 변경을 자동으로 공정에 반영한다</h3>
+<p>입력은 설계 객체·라이브러리, 분류 규칙, 활동 양식, 생산성, OBS, 선후관계와 달력이다. IFC는 설계 정보의 전달을 맡고, 별도 규칙표가 어떤 작업으로 바꿀지 정한다. 처음 이 규칙을 만드는 데는 계획자의 판단이 필요하다. 같은 구조의 설계가 변경되면 반복 분류·집계·계산을 자동으로 수행한다.</p>
+<figure class="book-figure" data-book-figure="fig-ch03-auto" id="fig-ch03-auto"><img alt="IFC에서 WBS·공정·공간 검토·검측으로 이어지는 구조." decoding="async" height="4445" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-auto.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 22 · PDF 70쪽</span><a aria-label="도판 22 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-auto.webp">크게 보기 ↗</a></div><p>IFC에서 WBS·공정·공간 검토·검측으로 이어지는 구조.</p></figcaption></figure>
+<p>그림의 긴 설명: 계산 결과와 승인된 작업 지시는 별개다. 분류 오류·자원 중복·막힌 경로를 발견하면 입력을 고쳐 재계산한다. IFC의 설계 버전, 계산 규칙 버전과 기존 기준 계획을 남겨 무엇이 바뀌었는지 추적한다.</p>
+<p>예제 규칙은 ‘수목, A구역, Z1이면 A.20.10’처럼 명시한다. 구역명은 수목 좌표와도 대조한다. 규칙에 없거나 두 규칙에 동시에 맞는 객체는 오류로 남긴다. 새 공종·새 규격·물량 0인 작업은 작업 범위와 의존관계를 다시 정하도록 한다. 누락된 객체를 무시한 채 짧은 공기를 제시하지 않는다.</p>
+<h4 id="section-023">변경 실험: 어떤 변경이 준공일을 바꾸는가?</h4>
+<p>한 번에 한 입력만 바꿔 다시 계산했다. 수목 증가는 수량 시험이며 추가 배치의 적합성까지 검증하지 않았다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">변경</th>
+<th scope="col">해당 활동의 변화</th>
+<th scope="col">전체 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기본안: A 느티 10주</td>
+<td>T06 2작업일</td>
+<td>24작업일·32역일, 12월 3일</td>
+</tr>
+<tr>
+<td>A 느티 20주</td>
+<td>T06 4작업일</td>
+<td>24작업일·32역일, 12월 3일</td>
+</tr>
+<tr>
+<td>A 느티 25주</td>
+<td>T06 5작업일</td>
+<td>24작업일·32역일, 12월 3일</td>
+</tr>
+<tr>
+<td>판석 보호 3→5역일</td>
+<td>T21 2역일 증가</td>
+<td>26작업일·36역일, 12월 7일</td>
+</tr>
+<tr>
+<td>매몰 전 검사 1→3작업일</td>
+<td>T16 2작업일 증가</td>
+<td>28작업일·38역일, 12월 9일</td>
+</tr>
+</tbody>
+</table></div>
+<p>확장안에서는 A 느티가 25주가 되어도 뒤의 포장·B 초본 경로를 늦추지 않는다. 반면 검사 지연은 뒤의 공사를 이동시키고, 양생과 주말을 만나는 위치까지 달라져 완료일이 6역일 늦어진다. <strong>변경량만큼 준공일을 더하는 대신, 전체 관계망과 달력을 다시 계산</strong>해야 한다.</p>
+<p>D02의 11작업일은 우배수·초본·판석을 포함하지 않은 이전 범위의 결과다. D03의 24작업일과 같은 공사 범위의 효율 비교로 사용하지 않는다. 이전 입력과 결과는 별도로 보존했다.</p>
+<h4 id="section-024">직접 재현하기</h4>
+<p>예제 폴더에는 설계·라이브러리·분류 규칙·활동·OBS·가정이 있고 <code>generated/</code>는 재생성되는 결과다. Python 3에서 다음과 같이 표 기반 계산을 실행한다.</p>
+<pre tabindex="0"><code class="language-text">python3 scripts/park_schedule.py
+</code></pre>
+<p><code>object-wbs.csv</code>는 물리 물량, <code>object-tasks.csv</code>는 작업 대상, <code>herb-supplies.csv</code>는 초본 반입 수량, <code>schedule.csv</code>는 일정이다. 수량표를 손으로 수정하지 말고 설계 객체의 변경 후보 사본을 만든 뒤 계산한다. 비교 기준인 D03 원본과 이전 계산 결과는 보존하고, 실행할 입력 경로와 버전을 구별한다. 다음 절에서는 같은 계산을 IFC 추출 결과로 실행한다.</p>
+<h2 id="unit-04">4단위. IFC 추출과 작업동선 후보</h2>
+<h3 id="sec-ch03-open-ifc">3.8 IFC 개방 플랫폼에서 데이터를 꺼낸다</h3>
+<p><strong>IFC는 데이터 표준이고, IfcOpenShell은 그 데이터를 읽고 쓰는 오픈소스 도구다. Bonsai는 IFC를 직접 저작·검토하는 개방 플랫폼이다.</strong> Bonsai로 모델을 다루고 IfcOpenShell로 반복 처리를 구성할 수 있다. 공식 프로젝트는 IFC 파싱·기하 처리와 관련 도구를 제공하며, Bonsai는 IfcOpenShell 위에 구축되어 있다. 이 장은 IfcOpenShell 0.8.5를 실행했다. Bonsai 화면 조작은 시험하지 않았다. (IfcOpenShell contributors, 일자 없음-e; Bonsai contributors, 일자 없음)</p>
+<p>수업의 흐름은 <strong>저작도구/Bonsai → IFC → 정보·형상 추출 → 검사 → WBS·물량 → 공기 → 동선·통제구역 후보 → 검토</strong>다. Navisworks는 이 결과를 기존 4D 업무로 가져가는 선택 경로가 된다.</p>
+<h4 id="section-027">먼저 교환 규약을 정한다</h4>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">IFC에서 읽는 정보</th>
+<th scope="col">예제의 사용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GlobalId·업무 ID</td>
+<td>설계 객체와 작업·검측의 지속적 연결</td>
+</tr>
+<tr>
+<td>IFC 클래스·종류·구역·유형</td>
+<td>WBS 규칙에 대조</td>
+</tr>
+<tr>
+<td>유형 관계와 라이브러리 속성</td>
+<td>수종·규격·초본 밀도</td>
+</tr>
+<tr>
+<td>단위·객체 배치</td>
+<td>로컬 좌표를 m로 정규화</td>
+</tr>
+<tr>
+<td>FootPrint의 사각 경계</td>
+<td>기반·포장·초본의 면적</td>
+</tr>
+<tr>
+<td>Axis의 꺾인 중심선</td>
+<td>우수관·유공 암거의 평면 길이</td>
+</tr>
+<tr>
+<td>관로 시작·종료 노드</td>
+<td>집수정·외부 경계점 연결 검사</td>
+</tr>
+</tbody>
+</table></div>
+<p>예제의 식생은 <code>IfcGeographicElement</code>, 포장은 <code>IfcSlab</code>, 벤치는 <code>IfcFurnishingElement</code>, 집수정은 <code>IfcDistributionChamberElement</code>, 관로는 <code>IfcPipeSegment</code>로 표현한다. 식재기반은 임시 대응인 <code>IfcBuildingElementProxy</code>다. 이 대응은 <strong>교재의 교환 규약</strong>이며 조경 전 분야의 표준 분류안이 아니다.</p>
+<p><code>DL_Automation</code>과 <code>DL_Library</code>는 교재의 사용자 정의 속성 집합이다. 표준 <code>Pset_VegetationCommon</code>의 지역명과 구별한다. 우수관과 유공 암거는 같은 IFC 클래스라도 종류·유형 속성으로 구별한다. 시작·종료 노드도 사용자 정의 연결 정보이며 IFC 포트 연결 관계를 구현한 것은 아니다.</p>
+<p>IfcOpenShell의 <code>get_psets</code>·<code>get_pset</code>은 객체 및 유형의 속성을 읽고, <code>get_type</code>은 유형 참조를 찾는다. 객체 배치는 상위 배치를 포함한 변환을 적용해야 한다. 예제는 로컬 배치 행렬과 길이 단위 배율로 좌표를 정규화한다. 표시된 좌표 숫자만 복사하면 mm와 m, 객체 내부 좌표와 현장 좌표를 혼동할 수 있다. (IfcOpenShell contributors, 일자 없음-b, 일자 없음-c)</p>
+<h4 id="section-028">실제 IFC 예제에서 실행한 범위</h4>
+<p>제공한 <code>park-d03.ifc</code>는 IFC 4.3 ADD2의 <strong>점 배치·사각 FootPrint·꺾인 Axis를 사용한 평면 정보 모델</strong>이다. 관경·깊이가 없는 관에 임의의 3차원 관체를 만들어 넣지 않았다. 수목·벤치·집수정의 개수와 위치는 객체 배치에서, 면적과 길이는 IFC 형상에서 다시 계산한다. 별도 JSON의 물량을 IFC 속성에서 그대로 복사해 성공으로 처리한 결과가 아니다.</p>
+<p>예제 실행은 다음 순서다. 필요한 공개 도구와 버전은 부속 자료에 기록했다.</p>
+<pre tabindex="0"><code class="language-text">python scripts/ifc_park.py --create-example
+python scripts/park_logistics.py
+</code></pre>
+<p>첫 명령은 제공한 합성 설계로 IFC를 만들고 <strong>파일을 다시 열어</strong> 속성·기하를 추출한다. 생성 없이 이미 있는 예제 IFC를 읽을 때는 <code>--create-example</code>을 빼면 된다. 필수 구역 속성이 없는 객체, 중복 ID, 맞지 않는 유형·형상은 오류로 처리한다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">재추출 검증</th>
+<th scope="col">결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>설계 객체·GlobalId</td>
+<td>39개, 업무 ID 대응 유지</td>
+</tr>
+<tr>
+<td>식물 유형</td>
+<td>Z1·I1·H1, 3개</td>
+</tr>
+<tr>
+<td>주요 물량</td>
+<td>교목 24주, 초본 120m², 포장 240m², 우수관 30m, 암거 18m</td>
+</tr>
+<tr>
+<td>초본 공급 수량</td>
+<td>유형 밀도를 읽어 1,920본</td>
+</tr>
+<tr>
+<td>WBS·일정</td>
+<td>13개 물리 묶음, 24작업일·32역일</td>
+</tr>
+<tr>
+<td>IFC 형식 검사</td>
+<td>IfcOpenShell 속성·EXPRESS 규칙 검사에서 보고 메시지 0개</td>
+</tr>
+</tbody>
+</table></div>
+<p>형식 검사는 IFC 속성 값과 스키마 규칙의 일관성에 관한 것이다. 다른 저작도구의 호환성이나 구조·배수·안전 적합성 검사가 아니다. (IfcOpenShell contributors, 일자 없음-d)</p>
+<p>실제 프로젝트의 곡선 경계·복합 솔리드·매핑된 형상·회전한 면·지리참조 등은 추출기를 확장해야 한다. IfcOpenShell은 <code>create_shape</code>와 geometry iterator를 제공하며 대량 형상 처리에는 iterator를 안내한다. 이 장의 추출기는 제한된 형상 규약을 명시적으로 검사한다. 낯선 형상을 대략적인 외접 사각형 면적으로 바꿔 계속 계산하지 않는다. (IfcOpenShell contributors, 일자 없음-a)</p>
+<h4 id="sec-ch03-logistics">작업동선과 안전구역 후보도 계산한다</h4>
+<p>공정표를 공간에 겹치면 ‘그날 어디를 통과할 수 있는가’를 묻게 된다. 우수관 굴착 중에는 개구부가 남고, 판석 포설 후에는 양생 중인 면을 보호해야 한다. <strong>공정의 날짜와 객체 형상을 함께 읽으면 통행에서 제외할 범위를 자동 갱신</strong>할 수 있다.</p>
+<p>이 장의 안전구역 설정은 여기서 출입 통제구역과 보호구역의 <strong>후보 경계 생성</strong>으로 구현한다. 경계 밖 전체가 안전하다는 판정은 아니다. 국내 안전보건규칙의 차량계 건설기계 관련 조항은 지반·도로 폭 등의 전도 방지, 접촉 위험 장소의 출입 통제와 유도, 장비의 사용상 안전도 준수를 다룬다. 일정한 반경 하나만으로 이 요구 전체를 충족했다고 볼 수 없다. (고용노동부 2026년)</p>
+<p>추가 입력에는 현장 경계·임시 보행 공간·출발점·작업 접근점, 장비 폭·회전 범위, 굴착 단면·추가 이격, 보호할 식생·포장 상태가 들어간다. 실제 적용 시에는 기존 매설물·지반·경사·가공선·적재물·사람의 이동·유도 방식도 확인한다. IFC에 없는 조건은 작업계획 데이터로 보완하고 출처와 검토자를 기록한다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">교재의 규칙</th>
+<th scope="col">생성할 범위</th>
+<th scope="col">입력의 성격</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>관로 중심선 → 굴착 폭/2 + 추가 이격</td>
+<td>굴착부 출입 통제 후보</td>
+<td>굴착 폭 1m·추가 1m는 학습용 가정</td>
+</tr>
+<tr>
+<td>장비 위치 → 회전 범위 + 추가 여유</td>
+<td>장비 작업 통제 후보</td>
+<td>회전 2m·추가 1m는 가상 장비 설정</td>
+</tr>
+<tr>
+<td>판석 면 → 보호 여유</td>
+<td>포설 시작부터 마감까지의 보호 후보</td>
+<td>0.5m는 예제 설정</td>
+</tr>
+<tr>
+<td>식재 시작 객체·면 → 보호 범위</td>
+<td>교목·초본 보호 후보</td>
+<td>일괄 작업 묶음을 보수적으로 예약</td>
+</tr>
+<tr>
+<td>북측 보행 띠</td>
+<td>운반장비 통행 제외</td>
+<td>가상 현장 운영 계획</td>
+</tr>
+</tbody>
+</table></div>
+<p>이 수치는 법정 안전거리나 실제 장비 제원이 아니다. 굴착부의 붕괴 위험에 필요한 이격·지보공 설계도 대신하지 않는다. 평면에서 경계를 일정 거리만큼 확장하는 계산을 **버퍼(buffer)**라고 한다. Shapely의 버퍼 연산으로 이런 영역을 만들 수 있다. (Shapely contributors, 일자 없음)</p>
+<p>그 다음 출발점에서 접근점까지 0.5m 격자 위의 연결을 탐색한다. 선의 점만 피하게 하면 폭이 있는 장비가 경계와 충돌할 수 있다. 예제는 운반장비 폭 2m에 양쪽 여유 각 0.5m를 가정하여 <strong>총 3m 통행 띠 전체</strong>와 모든 통제 후보의 겹침을 확인한다. 격자 사이의 연속 선분도 검사하여 장애물을 가로지르는 지름길을 허용하지 않는다.</p>
+<figure class="book-figure" data-book-figure="fig-ch03-logistics" id="fig-ch03-logistics"><img alt="IFC 위치와 공정을 사용한 굴착 시점의 동선 후보 검사." decoding="async" height="2331" loading="lazy" src="/digital-landscape-architecture/assets/figures/fig-ch03-logistics.webp" width="2400"/><figcaption><div class="figure-meta"><span>원고 도판 23 · PDF 74쪽</span><a aria-label="도판 23 크게 보기" class="figure-zoom" data-zoom="" href="/digital-landscape-architecture/assets/figures/fig-ch03-logistics.webp">크게 보기 ↗</a></div><p>IFC 위치와 공정을 사용한 굴착 시점의 동선 후보 검사.</p></figcaption></figure>
+<p>그림의 긴 설명: 출발점 (2,25)m, 접근점 (24,15)m 사이 직선 통행 띠는 굴착 구간과 충돌한다. 계산된 55m 경로는 입력한 통제 후보와 현장 경계를 피한다. 북측에는 보행 공간을 예약했다. 실제 차량의 회전반경·지내력·종단경사·보행자 움직임을 모델링하지 않은 평면 후보이므로 곧바로 운행 지시로 사용하지 않는다.</p>
+<p>두 시점을 실제로 계산했다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">계획 시점</th>
+<th scope="col">확인 결과</th>
+<th scope="col">다음 결정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11월 6일: 우배수 작업 중</td>
+<td>직선 통행 띠가 굴착과 충돌. 55m 우회 후보 생성</td>
+<td>굴착 안정성·장비 회전·작업면 조건 검토</td>
+</tr>
+<tr>
+<td>11월 28일: 판석 양생 중</td>
+<td>같은 출발점이 보호 범위에 걸려 경로 없음</td>
+<td>출입 위치·작업 시점·운반 방법 변경 검토</td>
+</tr>
+</tbody>
+</table></div>
+<p>‘경로 없음’도 유용한 자동화 결과다. 통제 폭을 임의로 줄여 통과시키지 않고 계획 담당자에게 원인과 관련 객체를 전달한다. 출입구 이동 후보나 공정 조정안을 검토한 뒤 다시 계산할 수 있다. 보행 통로와 장비 통로를 겹쳐 써야 한다면 교차 관리·시간 분리·유도 등 별도 계획이 필요하다.</p>
+<p>이번 결과는 <strong>계획 미리보기</strong>다. 달력상 T17이 끝났다는 이유로 실제 열린 굴착부의 통제를 해제하지 않는다. 현장 운영에서는 실제 되메움·검측 확인과 책임자의 해제 기록을 읽어 상태를 바꿔야 한다. 토·일에도 열린 굴착부의 통제는 유지되도록 예제를 검사했다.</p>
+<p>IFC에서 꺼낸 데이터와 공정·동선·안전 검토는 서로 갱신되는 구조로 발전할 수 있다. 이번 예제는 후보 생성과 충돌·막힘 검출까지 실행했으며, 동선 때문에 바뀔 생산성이나 공정 순서를 자동 최적화하지 않았다. 승인된 계획과 현장 작업 허가는 별도 기록으로 남긴다.</p>
+<h2 id="unit-05">5단위. 4D 연결·시공 지시·검측</h2>
+<h3 id="sec-ch03-navisworks">3.9 Navisworks TimeLiner로 연결하는 방법</h3>
+<p>기존 업무에 Navisworks를 사용한다면 같은 WBS와 활동 ID를 유지해서 연결할 수 있다. Autodesk의 공식 도움말은 TimeLiner가 외부 자료의 작업 계층을 가져오고, 검색·선택 세트에서 작업을 생성하거나 규칙으로 모델 형상을 작업에 부착하는 기능을 설명한다. 여기서 확인한 기능은 작업 생성·연결·시각화이며, 수목 물량에서 적절한 생산성과 시공 순서를 스스로 결정한다는 근거는 아니다. (Autodesk, 일자 없음-c)</p>
+<p>실무 연결 절차는 다음과 같이 구성할 수 있다.</p>
+<ol>
+<li>설계 도구에서 객체 ID·구역·유형·WBS를 내보내고, 받을 모델에서 속성이 유지되는지 확인한다.</li>
+<li>이 예제처럼 외부에서 공기를 계산하거나 기존 공정관리 도구의 일정을 준비한다.</li>
+<li><code>timeliner-import.csv</code>를 TimeLiner의 CSV 자료로 추가하여 열을 대응한다. Synchronization ID는 T01 같은 고정 ID, Task Name은 T01 같은 세트 연결 이름으로 맞춘다. 읽기 좋은 작업 설명은 별도 사용자 열에 둔다.</li>
+<li>같은 이름의 검색 세트 또는 모델 속성에 맞는 연결 규칙으로 객체를 부착한다. 객체 하나가 여러 단계의 대상일 수 있으므로 벤치 기초 T04와 상부 T09는 구성 요소 또는 세트를 나누어 4D 표현을 확인한다.</li>
+<li>변경 후 기존 작업 갱신과 신규·삭제 작업의 계층 재구축을 구분하고, 연결 누락·중복과 날짜를 대조한다.</li>
+</ol>
+<p>CSV 갱신에서 고정된 고유 ID를 유지해야 한다는 점과 이름·날짜 열의 대응은 Autodesk CSV 가져오기 안내에 근거한다. 기존 작업 정보의 갱신과 작업 계층의 재구축도 별도 기능이다. (Autodesk, 일자 없음-a, 일자 없음-b)</p>
+<p>제공 CSV는 교환 준비용이다. T11의 <code>Care</code> 작업 형식은 해당 프로젝트에 맞게 정의하고, 물리 객체가 없는 준비·인계 작업은 전체 현장의 상태를 설명하는 방식으로 표시한다. 이번 집필에서는 Navisworks에 가져오거나 4D 재생을 시험하지 않았다. 파일 형식과 속성 연결을 확인한 작은 모델부터 시험하는 것이 다음 단계다.</p>
+<p>IFC에는 작업을 표현하는 <code>IfcTask</code>, 상하 작업 관계를 설명하는 <code>IfcRelNests</code>, 시간적 선후관계를 나타내는 <code>IfcRelSequence</code>가 있다. 표준에 표현 구조가 존재하는 것과 사용하는 프로그램이 이를 모두 보존하는 것은 다르다. 작업표를 외부에 두는 경우에도 고유 ID로 모델과 연결할 수 있다. (buildingSMART International, 일자 없음-f, 일자 없음-d, 일자 없음-e)</p>
+<h3 id="sec-ch03-inspection">3.10 공정에서 시공 지시와 검측으로</h3>
+<p>공정표의 ‘A구역 느티나무 10주 식재’는 오늘 무엇을 해야 하는지 알려준다. 작업자가 실행하려면 대상 ID 목록, 설계 위치·규격, 현장 기준점, 반입·검사 조건, 접근 경로와 완료 기준이 더 필요하다. 장비를 활용하려면 장비 작업 범위·진입제한·보호구역도 별도 명세한다. 이를 모두 표준 IFC 속성이라고 가정하지 않는다.</p>
+<div aria-label="표 · 화면보다 넓으면 가로로 스크롤하세요" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">연결 정보</th>
+<th scope="col">TREE-001의 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>설계 대상</td>
+<td>TREE-001, A구역 (8,8)m, D03</td>
+</tr>
+<tr>
+<td>수목 유형</td>
+<td>느티나무 Z1, 라이브러리 L02</td>
+</tr>
+<tr>
+<td>작업 범위</td>
+<td>A.20.10, 활동 T06의 대상 10주 중 1주</td>
+</tr>
+<tr>
+<td>수행 조직</td>
+<td>식재조 O-T</td>
+</tr>
+<tr>
+<td>선행 확인</td>
+<td>A기반·반입 수목·해당 구덩이 검사 기록</td>
+</tr>
+<tr>
+<td>수행 증거</td>
+<td>수행일, 실제 위치·규격, 사진·측정표의 식별자</td>
+</tr>
+<tr>
+<td>완료 판단</td>
+<td>적용 설계·시방 조항·확인 방법·판정자·판정일</td>
+</tr>
+</tbody>
+</table></div>
+<p>공정과 검측의 관리 단위는 달라도 된다. T06 전체가 50% 진행되었다는 보고와 그 안의 어느 나무 다섯 그루를 심었는지 연결되어야 다음 날 일을 정하고 누락을 찾을 수 있다. 구덩이 검사처럼 되메움 전에 확인해야 할 것은 최종 검측일까지 미루지 않는다.</p>
+<p>교육용 상태 예를 들어 T06의 10주 중 식재 완료 보고는 5주, 검측 확인은 4주, 1주는 확인 대기라고 하자. 완료 보고 비율은 50%, 확인 비율은 40%다. 이를 공원 전체의 공정률이나 기성금 비율로 바꾸려면 다른 작업의 가중치와 계약상 산정 규칙이 필요하다. 이 숫자는 설명을 위한 합성 상태이며 실제 시공 증거가 아니다.</p>
+<p>관측값과 판정도 구분한다. 같은 좌표 기준의 설계 위치 <span class="inline-math">(8.00,8.00)</span>m와 관측 위치 <span class="inline-math">(8.03,8.04)</span>m의 평면 차이는 다음과 같다.</p>
+<div aria-label="수식" class="equation" role="region" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo>(</mo><mn>8.03</mn><mo>−</mo><mn>8.00</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mn>8.04</mn><mo>−</mo><mn>8.00</mn><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.05</mn><mspace width=".3em"></mspace><mi mathvariant="normal">m</mi></mrow><annotation encoding="application/x-tex">e=\sqrt{(8.03-8.00)^2+(8.04-8.00)^2}=0.05\;m</annotation></semantics></math></div>
+<p>0.05m는 계산한 차이이며 허용오차가 아니다. 좌표 정합·측정 오차·적용 기준을 확인한 뒤 판정한다. 이 장의 예제에는 실제 현장 기준점과 승인된 허용오차가 없으므로 위치 합격 판정을 생성하지 않는다.</p>
+<p>자동 검사는 목적에 맞춰 나눈다. ID 중복·유형 참조·단위·분류 규칙은 정보 검사, 선후관계의 순환과 작업조 중복은 공정 검사, 위치 차이는 기하 계산이다. buildingSMART IDS는 IFC 정보요구를 기계가 해석하도록 명세하는 데 사용하며 기하 검사는 범위에 포함하지 않는다. IDS 하나로 현장 검측을 전부 자동 판정한다고 설명하지 않는다. (buildingSMART International, 일자 없음-g)</p>
+<h3 id="section-033">3.11 적용 범위와 남은 검증</h3>
+<p>가상 공원 D03은 교목·초본·판석·블록·벤치·집수정·우수관·유공 암거를 함께 다룬다. 같은 IFC에서 39개 객체를 추출하고, 13개 물리 WBS 묶음과 공정 활동을 연결해 24개 평일 작업 슬롯·32역일의 계획을 계산했다. 이 달력의 평일 수와 실제 작업자의 투입 인일은 다른 값이다. 공정 시점에 따른 통제구역 후보와 동선 검사도 실행했다.</p>
+<p>이 결과의 유효 범위는 제공한 평면 IFC 규약, 합성 규격·생산성, 고정 작업조 순서와 명시한 공간 규칙이다. 실제 저작도구 간 교환, 배수 설계, 장비 운행, 현장 안전·시공·검측은 검증하지 않았다. 정보·일정·공간의 일관성을 확인하는 자동화와 현장 조건을 근거로 계획을 확정하는 판단이 함께 필요하다.</p>
+</article><nav class="chapter-pagination" aria-label="이전 장과 다음 장"><a href="/digital-landscape-architecture/chapter-02/"><small>← 이전 장</small>GIS와 조경 공간분석의 기초</a><a href="/digital-landscape-architecture/chapter-04/"><small>다음 장 →</small>컴퓨터는 조경공간을 어떻게 보는가</a></nav></div></div><div class="book-wrap book-colophon"><span>© 2026 김수영 · 출간 준비 원고</span><div><a href="/digital-landscape-architecture/edition/">판본 안내</a><a href="/#literature">SPATIALFLARE 자료실 ↗</a></div></div>
+<dialog id="book-search" aria-labelledby="search-title"><div class="dialog-bar"><h2 id="search-title">책 안에서 찾기</h2><button type="button" data-close="book-search" aria-label="검색 닫기">닫기 ×</button></div><label class="search-label" for="search-query">본문·단위 제목·보완 설명 검색</label><input type="search" id="search-query" placeholder="예: 관측, IFC, 좌표, 미대응" autocomplete="off"><p id="search-status" role="status">검색어를 입력하세요.</p><ol id="search-results"></ol></dialog>
+<dialog id="figure-viewer" aria-label="도판 크게 보기"><div class="dialog-bar"><span id="figure-label">원고 도판</span><button type="button" data-close="figure-viewer" aria-label="도판 닫기">닫기 ×</button></div><div class="figure-full"><img alt="" id="large-figure"></div><p id="figure-description"></p><a id="figure-file" target="_blank" rel="noopener">이미지 원본 열기 ↗</a></dialog>
+<noscript><div class="book-wrap no-script">본문·목차·도판은 JavaScript 없이 읽을 수 있습니다. 검색과 글자 크기 조절에는 JavaScript가 필요합니다.</div></noscript></main>
+<spatialflare-footer style="display:block;width:100%;flex:none"><template shadowrootmode="open">
+<style>
+:host{display:block;background:#f5f6f2;color:#17201c;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:left;line-height:normal}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #2f7d5a;outline-offset:6px}footer{border-top:1px solid #d6ded8;padding:33px 0 30px}.inner{width:min(1320px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:28px}.left{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.left span,.right{font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#57635c}.right{text-align:right}.back{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap;color:#57635c}.back:hover,.right a:hover{color:#2f7d5a}.brand{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;transform:translateY(-5px)}.mark{display:block;width:74px;height:90px;object-fit:contain}.brand span{font-family:"Aptos Display","Segoe UI",Arial,sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em}@media(max-width:1000px){.inner{width:calc(100% - 56px)}}@media(max-width:680px){.inner{width:calc(100% - 40px);gap:12px}.left{gap:12px}.left span,.right{font-size:9px}.mark{width:62px;height:76px}.brand span,.back{font-size:10px}}
+</style>
+<footer><div class="inner"><div class="left"><a class="back" href="#" onclick="window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});return false">Back to top ↑</a><span>LANDSCAPE · ENERGY · SPATIAL INTELLIGENCE</span></div><div class="brand"><img class="mark" src="/assets/spatialflare-logo.png" width="100" height="122" alt="SPATIALFLARE branching graph logo"><span>SPATIALFLARE</span></div><div class="right"><a href="mailto:navicoby@gmail.com">navicoby@gmail.com</a></div></div></footer>
+</template></spatialflare-footer>
+
+</body></html>
