@@ -44,7 +44,22 @@ class Regions(HTMLParser):
                 break
 
 
+def add_designwnature_entry(text):
+    """Register the standalone guide in Literature without rewriting the home layout.
+
+    Handles quoted and Hugo-minified attributes. Idempotent if the layout later
+    includes the link itself. Only the homepage calls this function.
+    """
+    if re.search(r'\bhref\s*=\s*["\']?/designwnature/(?:["\'\s>])', text):
+        return text
+    pattern = r'(<section\b[^>]*\bid=(?:"literature"|\'literature\'|literature)(?=[\s>])[^>]*>.*?<div\b[^>]*\bclass=(?:"entries"|\'entries\'|entries)(?=[\s>])[^>]*>)'
+    entry = '<a class="entry" href="/designwnature/"><span class="entry-name">Design with Nature — Nature-based Solutions</span><span class="tag">Ecology / NbS</span></a>'
+    return re.sub(pattern, lambda m: m.group(1) + entry, text, count=1, flags=re.S | re.I)
+
+
 def apply(text, header, footer, is_home=False):
+    if is_home:
+        text = add_designwnature_entry(text)
     if '<spatialflare-header' in text:
         return text
     parser = Regions(text)
