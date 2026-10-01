@@ -173,7 +173,7 @@ def register_home(path):
     if 'href="'+BASE+'"' in text or 'href='+BASE in text:
         print('Book already registered on homepage.'); return
     pattern = r'(<section\b[^>]*\bid=(?:"literature"|\'literature\'|literature)(?=[\s>])[^>]*>.*?<div\b[^>]*\bclass=(?:"entries"|\'entries\'|entries)(?=[\s>])[^>]*>)'
-    entry = f'<a class="entry" href="{BASE}"><span class="entry-name">Digital Landscape Architecture — 디지털 조경학</span><span class="tag">Book / Landscape</span></a>'
+    entry = f'<a class="entry" href="{BASE}"><span class="entry-name">Digital Landscape Architecture</span><span class="tag">Book / Landscape</span></a>'
     result, count = re.subn(pattern, lambda m:m[1]+entry, text, count=1, flags=re.S|re.I)
     if count != 1:
         raise ValueError('Homepage Literature section was not found; existing homepage was not changed.')

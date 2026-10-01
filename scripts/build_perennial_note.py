@@ -10,7 +10,12 @@ headings = re.findall(r'^# (.+)$', source, re.M)
 body = re.sub(r'^# (.+)$', r'## \1', source, flags=re.M)
 # Separate bold run-in headings from their paragraphs; words remain unchanged.
 body = re.sub(r'^(\*\*[^\n]+?\*\*)(?=\S)', r'\1\n\n', body, flags=re.M)
-engine = MarkdownIt('commonmark', {'html': False})
+# Obsidian permits bold spans next to Korean text even when their edge is
+# punctuation. CommonMark leaves those delimiters visible. Escape source HTML
+# first, then explicitly translate paired bold markers without changing words.
+body = escape(body, quote=False)
+body = re.sub(r'\*\*([^\n]+?)\*\*', r'<strong>\1</strong>', body)
+engine = MarkdownIt('commonmark', {'html': True})
 rendered = engine.render(body)
 for i, title in enumerate(headings, 1):
     rendered = rendered.replace('<h2>' + escape(title) + '</h2>', f'<h2 id="section-{i}">' + escape(title) + '</h2>', 1)
@@ -18,7 +23,7 @@ toc = ''.join(f'<li><a href="#section-{i}">{escape(title)}</a></li>' for i, titl
 page = '''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>숙근초의 정의 및 특성 | SPATIALFLARE</title>
-<meta name="description" content="숙근초의 정의 및 특성 — Obsidian 식재 설계 노트.">
+<meta name="description" content="숙근초의 정의 및 특성과 식재 설계.">
 <link rel="canonical" href="https://navicoby.github.io/perennial-plants/">
 <style>
 :root{color-scheme:light;--bg:#f5f6f2;--ink:#17201c;--muted:#57635c;--line:#d6ded8;--green:#245f45}
@@ -28,7 +33,6 @@ page = '''<!doctype html>
 <header><a href="/">SPATIALFLARE</a> · <a href="/#literature">Literature</a></header>
 <main id="content"><div class="eyebrow">LITERATURE / PLANTING NOTE</div>
 <h1>숙근초의 정의 및 특성</h1>
-<aside class="source-info">Obsidian 노트의 본문을 옮긴 글입니다. 원문의 번호 인용 표기를 유지했습니다. 해당 번호에 대응하는 참고문헌 목록은 원본 노트에 포함되어 있지 않습니다.</aside>
 <details><summary>목차 · 6개 절</summary><ol>''' + toc + '''</ol></details>
 <article>''' + rendered + '''</article></main>
 <footer><a href="/#literature">← Literature</a></footer></body></html>'''
