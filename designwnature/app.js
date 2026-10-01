@@ -141,41 +141,6 @@
     $('#dw-filter-status').textContent=`${button.textContent} · ${count}개 항목`;
   }));
 
-  const key='dwn-notebook-v1';
-  const form=$('#dw-note-form');
-  const fields=$$('textarea',form);
-  const status=$('#dw-save-status');
-  try {
-    const saved=JSON.parse(localStorage.getItem(key)||'null');
-    if(saved&&saved.version===1&&saved.notes&&typeof saved.notes==='object') {
-      fields.forEach(f=>{if(typeof saved.notes[f.name]==='string')f.value=saved.notes[f.name].slice(0,6000);});
-      status.textContent='이 브라우저에 저장한 노트를 불러왔습니다. 수정한 뒤 다시 저장하세요.';
-    }
-  } catch (_) { /* A damaged or unavailable store must never prevent reading. */ }
-  form.addEventListener('submit',e=>e.preventDefault());
-  form.addEventListener('input',()=>{status.textContent='수정 중 · 변경 내용은 아직 저장하지 않았습니다. 서버로 전송하지 않습니다.';});
-  const getNotes=()=>Object.fromEntries(fields.map(f=>[f.name,f.value]));
-  $('#dw-save').addEventListener('click',()=>{
-    try {
-      localStorage.setItem(key,JSON.stringify({version:1,updatedAt:new Date().toISOString(),notes:getNotes()}));
-      status.textContent='이 브라우저에 저장했습니다. 다른 기기로 전송하거나 동기화하지 않습니다.';
-    } catch (_) { status.textContent='브라우저 저장소를 사용할 수 없습니다. 노트 내려받기로 기록을 보관하세요.'; }
-  });
-  $('#dw-clear').addEventListener('click',()=>{
-    if(!window.confirm('입력한 노트와 이 기기에 저장된 노트를 모두 지울까요?'))return;
-    fields.forEach(f=>{f.value='';});
-    try {localStorage.removeItem(key);status.textContent='입력한 노트와 이 기기에 저장한 노트를 지웠습니다.';}
-    catch (_) {status.textContent='화면의 노트는 지웠습니다. 저장소 접근이 차단되어 저장 내용 삭제 여부는 확인할 수 없습니다.';}
-  });
-  $('#dw-export').addEventListener('click',()=>{
-    const titles=['대상지와 해결하려는 문제','작동하는 자연의 과정','개입과 대안','사람과 생물다양성','자료와 불확실성','검증과 운영'];
-    const text='# 자연기반해법 대상지 검토노트\n\n출처: https://navicoby.github.io/designwnature/\n작성일: '+new Date().toLocaleDateString('ko-KR')+'\n\n독립적인 학습용 기록입니다. 공식 NbS 적합성 평가나 인증이 아닙니다.\n\n'+fields.map((f,i)=>`## ${i+1}. ${titles[i]}\n\n${f.value||'(미작성)'}\n`).join('\n');
-    const url=URL.createObjectURL(new Blob([text],{type:'text/markdown;charset=utf-8'}));
-    const a=document.createElement('a');a.href=url;a.download='designwnature-field-notes.md';document.body.append(a);a.click();a.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),1500);
-    status.textContent='노트 파일을 만들었습니다. 이 동작은 브라우저 저장과 별개입니다.';
-  });
-  $('#dw-print').addEventListener('click',()=>window.print());
 
   $$('.dw-mobile-menu nav a').forEach(link=>link.addEventListener('click',()=>{link.closest('details').open=false;}));
   const sideLinks=$$('.dw-sidebar nav a');
