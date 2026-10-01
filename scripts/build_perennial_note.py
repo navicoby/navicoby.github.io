@@ -9,7 +9,7 @@ source = (ROOT / 'books/perennial-plants/note.md').read_text(encoding='utf-8-sig
 headings = re.findall(r'^# (.+)$', source, re.M)
 body = re.sub(r'^# (.+)$', r'## \1', source, flags=re.M)
 # Separate bold run-in headings from their paragraphs; words remain unchanged.
-body = re.sub(r'^(\*\*[^\n]+?\*\*)(?=\S)', r'\1\n\n', body, flags=re.M)
+body = re.sub(r'^(\*\*[^\n]+?\*\*)(?=\S)(?![은는이가을를의])', r'\1\n\n', body, flags=re.M)
 # Obsidian permits bold spans next to Korean text even when their edge is
 # punctuation. CommonMark leaves those delimiters visible. Escape source HTML
 # first, then explicitly translate paired bold markers without changing words.
