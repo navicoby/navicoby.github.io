@@ -1,0 +1,82 @@
+name: Import Digital Landscape Architecture source snapshot
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-digital-landscape.yml']
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source conversion dependencies
+        run: python -m pip install PyMuPDF==1.26.7 Pillow==12.3.0
+      - name: Import only the two author-approved book files
+        shell: python
+        run: |
+          from pathlib import Path
+          from urllib.request import urlopen
+          import hashlib, json, re, io
+          import fitz
+          from PIL import Image
+          root = Path('books/digital-landscape-architecture')
+          if (root / 'source-manifest.json').exists():
+              print('Source snapshot already imported; leaving it unchanged.')
+              raise SystemExit(0)
+          sources = [
+            ('manuscript.md', '909656947ff94758e18c779fa043f3842ba22580fef8944a8d65683f22fa0a49', 'https://sdmntpraustraliaeast.oaiusercontent.com/files/00000000-03d8-81fa-9573-fb26302325a0/raw?se=2026-10-01T14%3A50%3A59Z&sp=r&sv=2026-02-06&sr=b&scid=cf46a69d-8595-5c38-923f-551003352911&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T11%3A18%3A16Z&ske=2026-10-02T11%3A18%3A16Z&sks=b&skv=2026-02-06&sig=M2IXxxpUeS9QEqZx7kKIEdJTiIvy4uWtymCZyQ1tETg%3D'),
+            ('review.pdf', 'c148a6d69c585b1db019c282b5cfe9d2a1870c81a819ef16b19aef6bffd36223', 'https://sdmntprnznorth.oaiusercontent.com/files/00000000-a194-820b-9e5c-70c575c51b23/raw?se=2026-10-01T14%3A51%3A24Z&sp=r&sv=2026-02-06&sr=b&scid=1aad5340-48e7-5276-8cfd-df1ebf7ea0d1&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T13%3A17%3A38Z&ske=2026-10-02T13%3A17%3A38Z&sks=b&skv=2026-02-06&sig=hBTuERp0ncq6aUPgsu0Zib4maOOdDU1/1cjiFCq88ts%3D')
+          ]
+          raw = {}
+          for name, digest, url in sources:
+              try:
+                  with urlopen(url, timeout=60) as response:
+                      data = response.read(20000000)
+              except Exception:
+                  raise SystemExit('Approved source transfer failed or expired; no source files committed.') from None
+              if hashlib.sha256(data).hexdigest() != digest:
+                  raise SystemExit('Source checksum mismatch; stopping without publishing.')
+              raw[name] = data
+          md = raw['manuscript.md'].decode('utf-8')
+          doc = fitz.open(stream=raw['review.pdf'], filetype='pdf')
+          figures = re.findall(r'!\[([^\]]*)\]\(([^)]+)\)', md)
+          images = [(i+1, entry['xref']) for i, page in enumerate(doc) for entry in page.get_image_info(xrefs=True)]
+          if len(figures) != 50 or len(images) != 50 or len(doc) != 189:
+              raise SystemExit('Book source structure differs from inspected source.')
+          chapters = [(int(re.match(r'(\d+)장', title)[1]), page) for level, title, page in doc.get_toc() if level == 1 and re.match(r'\d+장', title)]
+          root.mkdir(parents=True, exist_ok=True)
+          asset_dir = Path('static/digital-landscape-architecture/assets/figures')
+          asset_dir.mkdir(parents=True, exist_ok=True)
+          manifest = []
+          for (alt, path), (page_no, xref) in zip(figures, images):
+              expected_chapter = int(re.search(r'fig-ch(\d+)', path)[1])
+              actual_chapter = max(ch for ch, page in chapters if page <= page_no)
+              if expected_chapter != actual_chapter:
+                  raise SystemExit('Figure-to-chapter mapping mismatch.')
+              filename = Path(path).stem + '.webp'
+              image = Image.open(io.BytesIO(doc.extract_image(xref)['image'])).convert('RGB')
+              image.save(asset_dir / filename, 'WEBP', lossless=True, method=4)
+              manifest.append({'source': path, 'file': filename, 'alt': alt, 'pdf_page': page_no, 'width': image.width, 'height': image.height})
+          (root / 'manuscript.md').write_bytes(raw['manuscript.md'])
+          (root / 'figures.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+          pages = [{'page': i+1, 'text': page.get_text(), 'links': [{'text': page.get_textbox(link['from']), 'uri': link.get('uri')} for link in page.get_links() if link.get('uri')]} for i, page in enumerate(doc)]
+          (root / 'review-pages.json').write_text(json.dumps({'toc': doc.get_toc(), 'pages': pages}, ensure_ascii=False, indent=2), encoding='utf-8')
+          (root / 'source-manifest.json').write_text(json.dumps({'title':'디지털 조경학','english_title':'Digital Landscape Architecture','author':'김수영','source_edition':'2026-09-14','pdf_pages':189,'chapters':15,'units':63,'figures':50,'markdown_sha256':sources[0][1],'pdf_sha256':sources[1][1],'note':'Author-approved manuscript snapshot. The PDF original and transfer URLs are not included in the book source directory. Review-page text is retained for editorial comparison.'}, ensure_ascii=False, indent=2), encoding='utf-8')
+          print('Imported 15 chapters, 50 author-created figures, and the 189-page review text. Source hashes verified.')
+      - name: Commit the verified source snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add books/digital-landscape-architecture static/digital-landscape-architecture/assets/figures
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add verified author manuscript and original book figures'
+          git pull --rebase origin main
+          git push origin HEAD:main
