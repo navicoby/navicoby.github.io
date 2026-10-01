@@ -23,7 +23,8 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          from urllib.request import urlopen
+          from urllib.request import urlopen, Request
+          from urllib.error import HTTPError, URLError
           import hashlib, json, re, io
           import fitz
           from PIL import Image
@@ -32,16 +33,18 @@ jobs:
               print('Source snapshot already imported; leaving it unchanged.')
               raise SystemExit(0)
           sources = [
-            ('manuscript.md', '909656947ff94758e18c779fa043f3842ba22580fef8944a8d65683f22fa0a49', 'https://sdmntpraustraliaeast.oaiusercontent.com/files/00000000-03d8-81fa-9573-fb26302325a0/raw?se=2026-10-01T14%3A50%3A59Z&sp=r&sv=2026-02-06&sr=b&scid=cf46a69d-8595-5c38-923f-551003352911&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T11%3A18%3A16Z&ske=2026-10-02T11%3A18%3A16Z&sks=b&skv=2026-02-06&sig=M2IXxxpUeS9QEqZx7kKIEdJTiIvy4uWtymCZyQ1tETg%3D'),
-            ('review.pdf', 'c148a6d69c585b1db019c282b5cfe9d2a1870c81a819ef16b19aef6bffd36223', 'https://sdmntprnznorth.oaiusercontent.com/files/00000000-a194-820b-9e5c-70c575c51b23/raw?se=2026-10-01T14%3A51%3A24Z&sp=r&sv=2026-02-06&sr=b&scid=1aad5340-48e7-5276-8cfd-df1ebf7ea0d1&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T13%3A17%3A38Z&ske=2026-10-02T13%3A17%3A38Z&sks=b&skv=2026-02-06&sig=hBTuERp0ncq6aUPgsu0Zib4maOOdDU1/1cjiFCq88ts%3D')
+            ('manuscript.md', '909656947ff94758e18c779fa043f3842ba22580fef8944a8d65683f22fa0a49', 'https://sdmntprnznorth.oaiusercontent.com/files/00000000-2bf4-820b-852d-cfd2ed73fb19/raw?se=2026-10-01T14%3A57%3A25Z&sp=r&sv=2026-02-06&sr=b&scid=08c5939e-e1bf-593d-8f61-4055f42b31de&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T14%3A37%3A26Z&ske=2026-10-02T14%3A37%3A26Z&sks=b&skv=2026-02-06&sig=zOF/wird5acJJIRTHXPBBKEEnjlcI%2Bz%2BNuqE8H/egLE%3D'),
+            ('review.pdf', 'c148a6d69c585b1db019c282b5cfe9d2a1870c81a819ef16b19aef6bffd36223', 'https://sdmntprwestus2.oaiusercontent.com/files/00000000-908c-81f8-9e7c-42415e8c9ec5/raw?se=2026-10-01T14%3A58%3A34Z&sp=r&sv=2026-02-06&sr=b&scid=1b9089d3-0efd-5601-adc3-2951104318e5&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T13%3A29%3A42Z&ske=2026-10-02T13%3A29%3A42Z&sks=b&skv=2026-02-06&sig=CgKrOS279QbkR1LbB45rqgskgUU5W/C2g2JSly6dr3o%3D')
           ]
           raw = {}
           for name, digest, url in sources:
               try:
-                  with urlopen(url, timeout=60) as response:
+                  with urlopen(Request(url, headers={'User-Agent':'Mozilla/5.0'}), timeout=60) as response:
                       data = response.read(20000000)
-              except Exception:
-                  raise SystemExit('Approved source transfer failed or expired; no source files committed.') from None
+              except HTTPError as e:
+                  raise SystemExit(f'Source transfer {name}: HTTP {e.code}. Nothing published.') from None
+              except URLError as e:
+                  raise SystemExit(f'Source transfer {name}: {e.reason}. Nothing published.') from None
               if hashlib.sha256(data).hexdigest() != digest:
                   raise SystemExit('Source checksum mismatch; stopping without publishing.')
               raw[name] = data
@@ -69,8 +72,8 @@ jobs:
           (root / 'figures.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
           pages = [{'page': i+1, 'text': page.get_text(), 'links': [{'text': page.get_textbox(link['from']), 'uri': link.get('uri')} for link in page.get_links() if link.get('uri')]} for i, page in enumerate(doc)]
           (root / 'review-pages.json').write_text(json.dumps({'toc': doc.get_toc(), 'pages': pages}, ensure_ascii=False, indent=2), encoding='utf-8')
-          (root / 'source-manifest.json').write_text(json.dumps({'title':'디지털 조경학','english_title':'Digital Landscape Architecture','author':'김수영','source_edition':'2026-09-14','pdf_pages':189,'chapters':15,'units':63,'figures':50,'markdown_sha256':sources[0][1],'pdf_sha256':sources[1][1],'note':'Author-approved manuscript snapshot. The PDF original and transfer URLs are not included in the book source directory. Review-page text is retained for editorial comparison.'}, ensure_ascii=False, indent=2), encoding='utf-8')
-          print('Imported 15 chapters, 50 author-created figures, and the 189-page review text. Source hashes verified.')
+          (root / 'source-manifest.json').write_text(json.dumps({'title':'디지털 조경학','english_title':'Digital Landscape Architecture','author':'김수영','source_edition':'2026-09-14','pdf_pages':189,'chapters':15,'units':63,'figures':50,'markdown_sha256':sources[0][1],'pdf_sha256':sources[1][1],'note':'Author-approved manuscript snapshot. Original PDF and transfer URLs are not included in the book directory. Review-page text retained for editorial comparison.'}, ensure_ascii=False, indent=2), encoding='utf-8')
+          print('Imported 15 chapters, 50 author-created figures, and 189 review pages. Source hashes verified.')
       - name: Commit the verified source snapshot
         run: |
           git config user.name 'github-actions[bot]'
