@@ -95,7 +95,7 @@ $$
 예를 들어 A = {1,2} 이면
 
 $$
-\mathcal{P}(A)=\{\varnothing,\{1\},\{2\},\{1,2\}\}
+\mathcal{P}(A)=\lbrace\varnothing,\lbrace 1\rbrace,\lbrace 2\rbrace,\lbrace 1,2\rbrace\rbrace
 $$
 
 ```mermaid
@@ -120,19 +120,19 @@ flowchart TD
 ### 합집합
 
 $$
-A \cup B = \{x \mid x\in A \text{ 또는 } x\in B\}
+A \cup B = \lbrace x \mid x\in A \text{ 또는 } x\in B \rbrace
 $$
 
 ### 교집합
 
 $$
-A \cap B = \{x \mid x\in A \text{ 그리고 } x\in B\}
+A \cap B = \lbrace x \mid x\in A \text{ 그리고 } x\in B \rbrace
 $$
 
 ### 차집합
 
 $$
-A \setminus B = \{x \mid x\in A \text{ 이고 } x\notin B\}
+A \setminus B = \lbrace x \mid x\in A \text{ 이고 } x\notin B \rbrace
 $$
 
 ### 여집합
@@ -169,7 +169,7 @@ flowchart LR
 
 ### 러셀의 역설 아이디어
 
-$R = \{x \mid x \notin x\}$ 라는 집합을 생각해 보자.
+$R = \lbrace x \mid x \notin x \rbrace$ 라는 집합을 생각해 보자.
 
 이제 R ∈ R 인지 물으면 모순이 생긴다.
 
@@ -222,13 +222,13 @@ $$
 이를 바탕으로 **데카르트 곱**을 정의한다.
 
 $$
-A \times B = \{(a,b) \mid a\in A,\, b\in B\}
+A \times B = \lbrace (a,b) \mid a\in A,\, b\in B \rbrace
 $$
 
 예:
 
 $$
-\{1,2\}\times\{x,y\} = \{(1,x),(1,y),(2,x),(2,y)\}
+\lbrace 1,2\rbrace\times\lbrace x,y\rbrace = \lbrace (1,x),(1,y),(2,x),(2,y)\rbrace
 $$
 
 ```mermaid
