@@ -71,10 +71,10 @@
     "publisher": "한국에너지공단 재생에너지센터",
     "publication_date": "상시 갱신",
     "url": "https://www.knrec.or.kr/biz/introduce/new_policy/intro_kre100.do",
-    "scope": "참여대상, 현재 안내된 5개 이행수단, 사용 확인 절차",
+    "scope": "참여대상(수전받는 입주기업 포함), 5개 이행수단, 사용 확인 절차",
     "type": "제도 안내",
     "verified_material": "웹 본문",
-    "checked_on": "2026-09-23"
+    "checked_on": "2026-10-05"
   },
   {
     "id": "S08",
@@ -115,10 +115,10 @@
     "publisher": "GHG Protocol",
     "publication_date": "2015 / 웹 갱신",
     "url": "https://ghgprotocol.org/scope-2-guidance",
-    "scope": "구매한 전기·열 등의 배출량 산정 및 계약 수단의 품질 기준",
+    "scope": "지역기반·시장기반 구분, 이중 보고, 배출계수 자료 우선순위, 회피배출과 인벤토리 구분, 계약 수단 품질 기준",
     "type": "회계 지침",
-    "verified_material": "웹 본문",
-    "checked_on": "2026-09-23"
+    "verified_material": "웹 본문 및 연결 PDF §§1.5, 6.5–6.9, 7.1 / Table 7.1 관련 부분",
+    "checked_on": "2026-10-05"
   },
   {
     "id": "S12",
