@@ -1,0 +1,13 @@
+{{- $ctx := .context -}}
+{{- $section := .section -}}
+{{- $items := index $ctx.Site.Data.home $section -}}
+{{- range $items -}}
+  {{- if .dynamic -}}
+    {{- $pages := where $ctx.Site.RegularPages "Params.home_section" $section -}}
+    {{- range sort $pages "Params.home_order" "asc" -}}
+<a class="entry" href="{{ .RelPermalink }}"><span class="entry-name">{{ .Params.home_title | default .Title }}</span><span class="tag">{{ .Params.home_tag | default "Article" }}</span></a>
+    {{- end -}}
+  {{- else -}}
+<a class="entry" href="{{ .url }}"><span class="entry-name">{{ .title }}</span><span class="tag">{{ .tag }}</span></a>
+  {{- end -}}
+{{- end -}}

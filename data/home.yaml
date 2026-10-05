@@ -1,0 +1,76 @@
+# Homepage navigation data.
+# Existing standalone/static pages live here.
+# Hugo content posts are inserted at each "dynamic: true" slot when their
+# front matter contains home_section matching the section name.
+
+literature:
+  - title: "Digital Landscape Architecture"
+    url: "/digital-landscape-architecture/"
+    tag: "Book / Landscape"
+  - title: "Landscape BIM Research"
+    url: "/landscape-bim-research/"
+    tag: "Landscape BIM"
+  - title: "Augmented Reality and Landscape Architecture"
+    url: "/augmented-reality-landscape/"
+    tag: "Research"
+  - title: "Spatial AI — Research"
+    url: "/research/"
+    tag: "Research"
+  - title: "Spatial Data Science with Python"
+    url: "/python-geospatial/"
+    tag: "Spatial data"
+  - title: "Perennial Plants: Definition and Characteristics"
+    url: "/perennial-plants/"
+    tag: "Planting"
+  - title: "Ontology101"
+    url: "/ontology101/"
+    tag: "Knowledge"
+  - dynamic: true
+  - title: "2026 RE100 Trends"
+    url: "/2026-re100/"
+    tag: "Energy"
+  - title: "C++ Study Guide"
+    url: "/ppp/"
+    tag: "Programming"
+
+projects:
+  - title: "IFC 4.3 for Landscape BIM"
+    url: "/landscape-ifc4_3/"
+    tag: "Research"
+  - title: "Vertical Bifacial PV on Vacant Land"
+    url: "/vertical-pv/"
+    tag: "Research"
+  - title: "Parametric Design Optimization for Urban Parks"
+    url: "/parametric-design-urbanpark/"
+    tag: "Design"
+  - title: "Automated Path Design for Pocket Parks"
+    url: "/park-path-design/"
+    tag: "Computation"
+  - title: "Sodium ESS Virtual Lab"
+    url: "/sodium-lab/"
+    tag: "Energy"
+  - title: "IFC-Based Construction Simulation for Pocket Park Design"
+    url: "/pocket-park/"
+    tag: "BIM / Simulation"
+  - dynamic: true
+
+notes:
+  - title: "MicroDuck Training Log"
+    url: "/microduck-log/"
+    tag: "Training log"
+  - title: "C++ 100 Drills"
+    url: "/ppp-drill/"
+    tag: "Practice"
+  - dynamic: true
+
+etc:
+  - title: "Coffee Brewing"
+    url: "/coffee-brewing/"
+    tag: "Everyday"
+  - title: "Driving Simulation Training"
+    url: "/driving-simulation/"
+    tag: "Simulation"
+  - title: "iRacing Analysis"
+    url: "/iRacing-Analysis/"
+    tag: "Analysis"
+  - dynamic: true

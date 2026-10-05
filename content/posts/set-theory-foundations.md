@@ -2,6 +2,10 @@
 title: "집합론 기초: 집합, 관계, 함수, 순서수, 기수"
 date: 2026-10-05
 draft: false
+home_section: "literature"
+home_title: "집합론 기초"
+home_tag: "Mathematics"
+home_order: 10
 mermaid: true
 math: true
 tags: ["집합론", "수학", "논리학", "온톨로지"]
