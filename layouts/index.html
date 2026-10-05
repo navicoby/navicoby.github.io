@@ -67,6 +67,13 @@ header{border-bottom:1px solid var(--line)}.header-inner{min-height:100px;displa
 .footer-layout .footer-brand span{font-size:11px;letter-spacing:.18em}
 @media(max-width:680px){.brand{font-size:16px}.footer-layout .footer-brand span{font-size:10px}}
 .entries > a.entry{display:grid;grid-template-columns:minmax(0,1fr) 110px 18px;align-items:baseline;gap:20px;padding:18px 0}.entries > a.entry::after{content:"↗";color:var(--muted);font:15px var(--mono)}.entries > a.entry:hover .entry-name{color:var(--green)}@media(max-width:680px){.entries > a.entry{grid-template-columns:minmax(0,1fr) 18px;gap:15px;padding:16px 0}}
+
+/* Plain-text directory lists: Literature / Projects / Notes / ETC */
+.text-index{font:15px/1.9 var(--mono);letter-spacing:-.01em;padding-top:1px}
+.text-index a{display:block;width:max-content;max-width:100%;color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:#b6c0ba}
+.text-index a:hover{color:var(--green);text-decoration-color:var(--green)}
+.text-index a:focus-visible{outline:1px dotted var(--green);outline-offset:4px}
+@media(max-width:680px){.text-index{font-size:14px;line-height:2}}
 </style>
 </head>
 <body id="top">
@@ -89,16 +96,16 @@ header{border-bottom:1px solid var(--line)}.header-inner{min-height:100px;displa
 <article class="theme"><svg class="theme-visual" viewBox="0 0 600 140" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1"><path d="M35 109L420 125L563 65L188 48Z" opacity=".25"/><path d="M130 101V34L155 24V91ZM215 104V37L240 27V94ZM300 108V41L325 31V98ZM385 111V44L410 34V101Z"/><path d="M100 116L475 130M165 109L200 94M250 112L285 97M335 116L370 101" opacity=".35"/></g><circle cx="509" cy="28" r="13" stroke="currentColor" opacity=".7"/></svg><h3>Energy</h3><p>Vertical photovoltaics,<br>energy storage and RE100.</p></article>
 <article class="theme"><svg class="theme-visual" viewBox="0 0 600 140" fill="none" aria-hidden="true"><g stroke="currentColor" opacity=".45"><path d="M70 80L170 30L290 70L390 25L520 65L420 115L290 70L180 120L70 80M170 30L180 120M390 25L420 115M170 30L420 115"/></g><g fill="currentColor"><circle cx="70" cy="80" r="4"/><circle cx="170" cy="30" r="4"/><circle cx="290" cy="70" r="6"/><circle cx="390" cy="25" r="4"/><circle cx="520" cy="65" r="4"/><circle cx="420" cy="115" r="4"/><circle cx="180" cy="120" r="4"/></g><circle cx="290" cy="70" r="19" stroke="currentColor" opacity=".3"/></svg><h3>Spatial AI</h3><p>Spatial data, computation<br>and intelligent systems.</p></article>
 </div></section>
-<section class="section index" id="literature" aria-labelledby="literature-title"><div class="index-title"><span class="eyebrow">02</span><h2 id="literature-title">Literature</h2></div><div class="entries">
+<section class="section index" id="literature" aria-labelledby="literature-title"><div class="index-title"><span class="eyebrow">02</span><h2 id="literature-title">Literature</h2></div><div class="text-index">
 {{ partial "home-entry-list.html" (dict "context" . "section" "literature") }}
 </div></section>
-<section class="section index" id="projects" aria-labelledby="projects-title"><div class="index-title"><span class="eyebrow">03</span><h2 id="projects-title">Projects</h2></div><div class="entries">
+<section class="section index" id="projects" aria-labelledby="projects-title"><div class="index-title"><span class="eyebrow">03</span><h2 id="projects-title">Projects</h2></div><div class="text-index">
 {{ partial "home-entry-list.html" (dict "context" . "section" "projects") }}
 </div></section>
-<section class="section index" id="notes" aria-labelledby="notes-title"><div class="index-title"><span class="eyebrow">04</span><h2 id="notes-title">Notes</h2></div><div class="entries">
+<section class="section index" id="notes" aria-labelledby="notes-title"><div class="index-title"><span class="eyebrow">04</span><h2 id="notes-title">Notes</h2></div><div class="text-index">
 {{ partial "home-entry-list.html" (dict "context" . "section" "notes") }}
 </div></section>
-<section class="section index" id="etc" aria-labelledby="etc-title"><div class="index-title"><span class="eyebrow">05</span><h2 id="etc-title">ETC</h2></div><div class="entries">
+<section class="section index" id="etc" aria-labelledby="etc-title"><div class="index-title"><span class="eyebrow">05</span><h2 id="etc-title">ETC</h2></div><div class="text-index">
 {{ partial "home-entry-list.html" (dict "context" . "section" "etc") }}
 </div></section>
 </main>

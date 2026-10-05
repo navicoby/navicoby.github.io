@@ -5,9 +5,9 @@
   {{- if .dynamic -}}
     {{- $pages := where $ctx.Site.RegularPages "Params.home_section" $section -}}
     {{- range sort $pages "Params.home_order" "asc" -}}
-<a class="entry" href="{{ .RelPermalink }}"><span class="entry-name">{{ .Params.home_title | default .Title }}</span><span class="tag">{{ .Params.home_tag | default "Article" }}</span></a>
+<a href="{{ .RelPermalink }}">{{ .Params.home_title | default .Title }}</a>
     {{- end -}}
   {{- else -}}
-<a class="entry" href="{{ .url }}"><span class="entry-name">{{ .title }}</span><span class="tag">{{ .tag }}</span></a>
+<a href="{{ .url }}">{{ .title }}</a>
   {{- end -}}
 {{- end -}}
