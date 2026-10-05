@@ -1,4 +1,8 @@
 {{- if .Params.math }}
+<style>
+.post-content code:not(.language-mermaid){background:transparent!important;color:inherit!important;padding:0!important;border:0!important;font-family:inherit!important;font-size:inherit!important}
+.mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+</style>
 <script>
 window.MathJax = {
   tex: {
@@ -15,5 +19,7 @@ window.MathJax = {
 <style>
 .mermaid { margin: 2rem auto; text-align: center; overflow-x: auto; }
 .post-content .mermaid svg { max-width: 100%; height: auto; }
+.post-content .mermaid .nodeLabel, .post-content .mermaid .edgeLabel { color: #17201c !important; }
+.post-content .mermaid .label-container { fill: #f5f6f2 !important; stroke: #d6ded8 !important; }
 </style>
 {{- end }}
