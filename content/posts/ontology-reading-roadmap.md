@@ -139,7 +139,7 @@ draft: false
 34. 명제논리와 1차 술어논리  
     ∀, ∃, predicate, relation, implication, identity.
 
-35. 집합론·관계·함수의 기초  
+35. [집합론·관계·함수의 기초](/posts/set-theory-foundations/)  
     set, subset, Cartesian product, relation, function, equivalence relation, partial order.
 
 ## 9단계 — Description Logic과 Semantic Web
