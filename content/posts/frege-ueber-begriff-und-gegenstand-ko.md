@@ -1,7 +1,10 @@
 ---
-title: "고틀로프 프레게 — 개념과 대상에 관하여"
+title: "Frege - On Concept and Object"
 date: 2026-10-07
 draft: false
+slug: "frege-on-concept-and-object"
+aliases:
+  - "/posts/frege-ueber-begriff-und-gegenstand-ko/"
 ---
 
 고틀로프 프레게(Gottlob Frege)의 1892년 논문 「Über Begriff und Gegenstand」의 한국어 번역이다. 원문은 *Vierteljahrsschrift für wissenschaftliche Philosophie* 16권 2호, 192–205쪽에 발표되었다.
