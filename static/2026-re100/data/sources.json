@@ -52,7 +52,8 @@
     "scope": "Sections 1.4·1.11·3·4. 보고 일정, 시간대 매칭, 인정 판단",
     "type": "보고 지침",
     "verified_material": "PDF 원문",
-    "checked_on": "2026-09-23"
+    "checked_on": "2026-10-08",
+    "rechecked_scope": "2026년 보고 안내, 연간·시간대 매칭 구분, 현행 기술기준의 시장·발전원·설비·증빙 조건"
   },
   {
     "id": "S06",
@@ -74,7 +75,7 @@
     "scope": "참여대상(수전받는 입주기업 포함), 5개 이행수단, 사용 확인 절차",
     "type": "제도 안내",
     "verified_material": "웹 본문",
-    "checked_on": "2026-10-05"
+    "checked_on": "2026-10-08"
   },
   {
     "id": "S08",
@@ -118,7 +119,8 @@
     "scope": "지역기반·시장기반 구분, 이중 보고, 배출계수 자료 우선순위, 회피배출과 인벤토리 구분, 계약 수단 품질 기준",
     "type": "회계 지침",
     "verified_material": "웹 본문 및 연결 PDF §§1.5, 6.5–6.9, 7.1 / Table 7.1 관련 부분",
-    "checked_on": "2026-10-05"
+    "checked_on": "2026-10-08",
+    "rechecked_scope": "웹 품질 기준 설명 및 PDF §5.2.1 임대자산 경계, §6.4.1·Table 6.1 환경속성 판매·자가소비; 기존 산정 해설은 2026-10-05 확인 범위 유지"
   },
   {
     "id": "S12",
@@ -163,5 +165,39 @@
     "type": "시장 분석",
     "verified_material": "웹 본문",
     "checked_on": "2026-09-23"
+  },
+  {
+    "id": "S16",
+    "title": "한국형 녹색대전환(K-GX) 전략 풀본",
+    "publisher": "관계부처 합동 / 금융위원회 공식 첨부",
+    "publication_date": "2026-10-07",
+    "url": "https://www.fsc.go.kr/no010101/87890?curPage=1&srchBeginDt=&srchCtgry=1&srchEndDt=&srchKey=&srchText=",
+    "pdf_url": "https://www.fsc.go.kr/comm/getFile?fileNo=4&fileTy=ATTACH&srvcId=BBSTY1&upperNo=87890",
+    "scope": "본문 pp.14–15·18–22·29–31·46·48, PDF 26–27·30–34·41–43·58·60쪽. 공급·발전단가 목표, REC 개편, PPA 지원, 건물·도시 전환. 목표·추진과제와 시행기준 구별",
+    "type": "국가 전략·정책 목표·추진과제",
+    "verified_material": "61쪽 PDF 원문, 관련 표·추진일정 및 9쪽 페이지 이미지 대조, 정부 공식 첨부목록 확인",
+    "checked_on": "2026-10-08"
+  },
+  {
+    "id": "S17",
+    "title": "K-GX 전략 국민보고회 정부 발표",
+    "publisher": "재정경제부 / 소통혁신24",
+    "publication_date": "2026-10-07",
+    "url": "https://sotong.go.kr/front/board/boardContentsView.do?board_id=250&contents_id=4906b6d0a3b24402b74f970dd5b18a34&menu_id=599",
+    "scope": "2026-10-07 발표 사실과 산업·에너지·도시를 연결하는 정책 방향. 구체적 수치·일정은 S16 풀본 우선",
+    "type": "공식 보도자료",
+    "verified_material": "웹 본문",
+    "checked_on": "2026-10-08"
+  },
+  {
+    "id": "S18",
+    "title": "K-RE100 지분참여 FAQ",
+    "publisher": "한국에너지공단 재생에너지센터",
+    "publication_date": "웹 본문에 별도 날짜 미표시",
+    "url": "https://www.knrec.or.kr/biz/faq/faq_view.do?depth_1=A020000&depth_2=A020400&no=306",
+    "scope": "투자 후 별도의 PPA 또는 REC 구매계약 필요, 지분·출자비율과 계약의 구분",
+    "type": "운영기관 FAQ",
+    "verified_material": "지분참여 설명 본문",
+    "checked_on": "2026-10-08"
   }
 ]
