@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-08T01:30:01Z",
- "count": 999,
+ "generated": "2026-10-09T01:30:00Z",
+ "count": 1013,
  "topics": {
-  "clonal-plant-modeling": 95,
-  "world-models": 543,
-  "spatial-ai": 102,
+  "world-models": 549,
+  "agent-based-ecology": 31,
+  "spatial-ai": 108,
+  "clonal-plant-modeling": 96,
   "plant-3d-reconstruction": 84,
-  "agent-based-ecology": 30,
   "plant-digital-twin": 54,
   "construction-bim": 35,
   "functional-structural-plant": 44,
@@ -18,6 +18,289 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.10515",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.10515v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.10515v1",
+   "oa": true,
+   "title": "RoboJEPA: Scaling Robotic Latent World Models",
+   "published": "2026-10-07",
+   "authors": [
+    "Artem Zholus",
+    "Nicolas Beltran-Velez",
+    "Jianhao Yuan",
+    "Sarath Chandar",
+    "Tushar Nagarajan",
+    "Daniel Severo",
+    "Koustuv Sinha",
+    "Michal Drozdzal",
+    "Adriana Romero Soriano",
+    "Jeannette Bohg",
+    "Nicolas Ballas",
+    "Mahmoud Assran"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 다양한 로봇 구현체(12개)로 학습된 Joint Embedding Predictive Architecture(JEPA) 기반의 세계 모델인 RoboJEPA를 제시하며, 컴퓨팅 자원과 모델 크기에 따른 성능 변화의 스케일링 법칙을 정립했습니다. 연구 결과, 모델의 상상 오류(imagination error)가 컴퓨팅에 따라 예측 가능하게 변화하며, 이는 실제 로봇 계획 성능과 강하게 상관관계가 있음을 입증했습니다. 또한, 이 잠재적 세계 모델을 로봇 에이전트로 직접 배포하여 실제 하드웨어에서 장기 계획 작업을 수행할 수 있음을 보여주었습니다."
+  },
+  {
+   "id": "arxiv:2610.10274",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.10274v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.10274v1",
+   "oa": true,
+   "title": "Sparse Planning in Visual World Models via Cost Gradients",
+   "published": "2026-10-07",
+   "authors": [
+    "Yingchen Xu",
+    "Edward Grefenstette"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 훈련 없이 목표 조건화된 선택기(selector)인 COSTGRAD를 제안했다. COSTGRAD는 계획 비용에 대한 각 토큰의 기울기 크기를 이용하여 토큰의 중요도를 판단하고, 이를 통해 예측뿐 아니라 실제 계획에 중요한 토큰을 선별한다. 그 결과, COSTGRAD는 50% 희소성 환경에서 기존의 전체 토큰 계획 성능을 유지하거나 능가했으며, 환경 계획 단계당 약 2.6배의 속도 향상을 달성했다."
+  },
+  {
+   "id": "arxiv:2610.09940",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09940v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09940v1",
+   "oa": true,
+   "title": "Juno: Taming Predictive Latents for Vision-Language-Action Models",
+   "published": "2026-10-07",
+   "authors": [
+    "Yuchen Zhu",
+    "Chenyi Xu",
+    "Yulin Zhang",
+    "Gang Xu",
+    "Wentao Zhu"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 비전-언어-행동(VLA) 모델에 사용되는 예측 잠재 벡터(predictive latents)의 문제를 해결하기 위해 Juno라는 통합 프레임워크를 제안했다. Juno는 제어에 맞춘 표현 백본, 예측 교사, 적응형 동역학 모델 역할을 수행하며, 이를 통해 모델의 사전 학습, 정책 학습, 배포 단계에서 발생하는 불일치를 해소했다. SimplerEnv 환경에서 Juno를 적용한 결과, 기존 최적 모델 대비 평균 성공률을 60.9%에서 68.5%로 향상시켰다."
+  },
+  {
+   "id": "arxiv:2610.09785",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09785v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09785v1",
+   "oa": true,
+   "title": "UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map",
+   "published": "2026-10-07",
+   "authors": [
+    "Keke Yang",
+    "Erqi Wang",
+    "Sainan Guan",
+    "Hongliang Ren"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 실제 액션 주석 없이 임상 초음파 영상에서 사전 지식을 추출하여 상호작용 가능한 월드 모델을 학습하는 UltraWorld를 제안한다. 임상 영상을 기반으로 생성 모델을 적응시키고 3D 해부학적 마스크를 사용하여 합성 쌍을 생성한 뒤, 이를 통해 미래 관측을 예측하는 월드 모델을 자체 증류(self-distill)하여 예측 정확도와 액션 추적 성능을 향상시켰다."
+  },
+  {
+   "id": "arxiv:2610.09763",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09763v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09763v1",
+   "oa": true,
+   "title": "Beyond Policy Support: Interaction Constrained Offline Reinforcement Learning for Autonomous Driving",
+   "published": "2026-10-07",
+   "authors": [
+    "Mahmoud Selim",
+    "Cristina Cipriani",
+    "Karl Henrik Johansson"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 오프라인 강화 학습에서 발생하는 '상호작용 분포 이동(Interaction Distribution Shift, IDS)' 문제를 해결하기 위해 상호작용 수준의 분포 이동을 명시적으로 제어하는 Offline RL 프레임워크인 Interaction-Constrained Drive Policy(ICDP)를 제안합니다. 연구 결과, 공동 지원 저하 현상이 자율주행 에이전트의 지원과 잔여 상호작용 지원으로 분해되며, 후자는 명시적인 공동 밀도 모델링 없이도 대비 밀도 비율 추정(contrastive density-ratio estimation)을 통해 추출 가능함을 보였습니다."
+  },
+  {
+   "id": "arxiv:2610.09759",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09759v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09759v1",
+   "oa": true,
+   "title": "Unrolled Flow Models for Reasoning",
+   "published": "2026-10-07",
+   "authors": [
+    "Faissal Izermine",
+    "Hanru Bai",
+    "Oscar Davis",
+    "T. Konstantin Rusch"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 흐름 매칭(Flow matching)을 사용하여 그래프 도달성 문제(graph reachability)를 해결하는 모델을 제안했다. 특히, 모델의 잠재 상태를 무작위 구간에서 순차적으로 롤아웃(rollout)하여 훈련함으로써, 기존 모델의 한계를 극복하고 추가적인 통합 단계가 추론 성능 향상에 기여함을 입증했다."
+  },
+  {
+   "id": "arxiv:2610.10492",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.10492v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.10492v1",
+   "oa": true,
+   "title": "Stochasticity and Environmental Switching Shape Quorum Sensing Evolution in Bacterial Populations",
+   "published": "2026-10-07",
+   "authors": [
+    "Uttam Kumar",
+    "Hong-Yan Shih"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "agent-based-ecology",
+   "added": "2026-10-09",
+   "tldr": "이 연구는 두 개의 자동 유도체 토글 스위치 네트워크를 통해 박테리아 집단이 변동하는 환경에 적응하는 방식을 조사했다. 개별 세포 수준에서 막 투과성이 진화하는 특성이며, 환경 빈도가 진화 결과의 주요 결정 요인으로 작용하여 특정 특성이 우세하게 진화하거나 두 특성이 공존하는 양상을 결정했다."
+  },
+  {
+   "id": "arxiv:2610.10387",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.10387v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.10387v1",
+   "oa": true,
+   "title": "NeRFifyMesh: Optimizing Neural Radiance Fields from Textured Meshes for Robotics Scene Building",
+   "published": "2026-10-07",
+   "authors": [
+    "Nillan Nimal",
+    "Mahboubeh Asadi",
+    "Sajad Saeedi"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 기존의 메시(mesh) 모델을 NeRF 표현으로 변환하기 위한 새로운 파이프라인을 제시한다. 이 방법은 메시의 기하학과 텍스처를 샘플링하여 실제 기반(ground truth) 방사장(radiance field)을 생성함으로써, 카메라 기반 샘플링 없이도 NeRF 모델을 학습시키는 것을 가능하게 한다. 성능 평가 결과, 이 방법은 기존 방법들과 비교하여 유사한 렌더링 품질을 보였으며, 추출된 지오메트리를 활용한 충돌 시뮬레이션 등 응용 분야에서 유효성이 입증되었다."
+  },
+  {
+   "id": "arxiv:2610.10181",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.10181v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.10181v1",
+   "oa": true,
+   "title": "Argos: Adapt Rich Geometric Priors for Generalizable Online Scene-Change-Detection",
+   "published": "2026-10-07",
+   "authors": [
+    "Ruihan Xu",
+    "Jiae Yoon",
+    "Kaichen Zhou",
+    "Ue-Hwan Kim",
+    "Luca Carlone"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 기하학적 기반 모델(GFM)의 암시적 3D 지식을 활용하여 시점 변화나 가림 현상에 강건한 장면 변화 탐지 및 3D 재구성을 수행하는 Argos를 제안합니다. 다양한 데이터셋을 공동으로 학습시켜 도메인 간 일반화 능력을 향상시켰으며, 이를 통해 기존 방법론 대비 변화 탐지 IoU에서 최대 42.01%, F1 점수에서 27.91% 향상된 성능을 입증했습니다."
+  },
+  {
+   "id": "arxiv:2610.09857",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09857v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09857v1",
+   "oa": true,
+   "title": "Towards Accurate End-Effector Localization for UMI-Style Robotic Manipulation Teaching",
+   "published": "2026-10-07",
+   "authors": [
+    "Junjie Zhang",
+    "Deteng Zhang",
+    "Zhisong Xu",
+    "Bo Sun",
+    "Liuyang Li",
+    "Yihong Tian",
+    "Jie Yin"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 로봇 시연 학습을 위해 정확한 말단 장치(end-effector) 위치 파악을 목표로, 실제 및 시뮬레이션 기반의 데이터셋(MILD)을 구축했습니다. 또한, 사전에 지도화되지 않은 작업 공간에서 마커를 이용해 위치 추정할 수 있도록 시퀀스 기반의 AprilTag 기하학을 결합한 AprilVINS 시스템을 제안했으며, 이를 통해 밀리미터 수준의 TCP 상대 위치 오차를 달성했습니다."
+  },
+  {
+   "id": "arxiv:2610.09746",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09746v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09746v1",
+   "oa": true,
+   "title": "Flow-of-Thought: A Framework for Visual Reasoning",
+   "published": "2026-10-07",
+   "authors": [
+    "Mariia Baidachna",
+    "Nicolas Pugeault"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 인간의 시각적 상상 능력을 모방하기 위해 중간 추론 단계로 시각적 스케치 생성을 통합하는 Flow-of-Thought(FoT) 프레임워크를 제안한다. $SO(2)$ 그룹 궤도와 누적 최단 경로를 기반으로 학습된 2D 흐름장(flow field)을 활용하여, FoT는 테트리스 및 색깔 도형 분류에서 100%와 99%의 정확도를 달성했으며, 다른 모델 대비 공간 추론 능력에서 성능 향상을 입증했다."
+  },
+  {
+   "id": "arxiv:2610.09631",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09631v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09631v1",
+   "oa": true,
+   "title": "Fast and Robust Teach-and-Repeat Navigation Using MixVPR Visual Place Recognition*",
+   "published": "2026-10-07",
+   "authors": [
+    "Václav Truhlařík",
+    "Tomáš Pivoňka",
+    "Libor Přeučil"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-09",
+   "tldr": "이 연구는 기존 딥러닝 기반의 계산 집약적인 방법 대신, 최신 시각적 위치 인식 기술인 MixVPR을 활용하여 효율적인 티치-앤-리피트 내비게이션 시스템을 개발했다. 테스트 결과, 이 시스템은 실내외 환경 모두에서 기존 최신 시스템과 동등한 수준의 견고성과 정밀한 항법 성능을 달성했으며, 낮은 하드웨어 요구 사항 덕분에 다양한 로봇 플랫폼에 적용 가능함을 입증했다."
+  },
+  {
+   "id": "arxiv:2610.09488",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.09488v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.09488v1",
+   "oa": true,
+   "title": "SiGNgapore - An Interactive Dataset for Sign-based Visual Navigation",
+   "published": "2026-10-07",
+   "authors": [
+    "Nicky Zimmerman",
+    "Joel Loo",
+    "Zishuo Wang",
+    "David Hsu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-09",
+   "tldr": "이 논문은 싱가포르의 다양한 공공장소에서 수집한 데이터를 활용하여, 인간이 만든 표지판 중심의 지도 없는(mapless) 내비게이션을 위한 인터랙티브 데이터셋을 구축했습니다. 이 데이터셋에는 탐색 보조 표지판 주변의 RGB, 깊이, 오도메트리, IMU 측정 데이터와 56개의 장거리 탐색 임무 및 450개 이상의 시나리오가 포함되어 있습니다."
+  },
+  {
+   "id": "oa:10.5091/plecevo.128527",
+   "source": "OpenAlex",
+   "venue": "Plant Ecology and Evolution",
+   "url": "https://doi.org/10.5091/plecevo.128527",
+   "doi": "10.5091/plecevo.128527",
+   "pdf_url": "https://plecevo.eu/article/128527/download/pdf/",
+   "oa": true,
+   "title": "A field investigation into potential reproductive and resistance advantages of purple-petalled plants in polymorphic populations of horsenettle (Solanum carolinense)",
+   "published": "2024-10-02",
+   "authors": [
+    "Michael Joseph Wise",
+    "Heather F. Sahli"
+   ],
+   "cat": "article",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-10-09",
+   "tldr": "이 연구는 호센네틀(Solanum carolinense)의 꽃 색깔 다형성(polymorphism)을 연구하기 위해 현장 수집된 개체들을 공동 정원 실험에 적용했다. 분석 결과, 보라색 꽃잎을 가진 개체는 흰색이나 연보라색 개체에 비해 꽃눈 개시, 개화, 그리고 열매 및 씨앗 생산량이 유의미하게 더 높았다."
+  },
   {
    "id": "arxiv:2610.07855",
    "source": "arXiv",
