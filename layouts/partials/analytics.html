@@ -1,0 +1,59 @@
+{{- $ga := .Site.Params.analytics.ga4Id | default "" -}}
+{{- $clarity := .Site.Params.analytics.clarityId | default "" -}}
+{{- if or $ga $clarity }}
+<style>
+#sf-analytics-consent{position:fixed;bottom:16px;left:16px;right:16px;max-width:540px;margin:auto;padding:16px 18px;background:#fff;color:#17201c;border:1px solid #d6ded8;box-shadow:0 8px 28px #0002;z-index:9999;font:14px/1.5 Arial,sans-serif}
+#sf-analytics-consent button{border:1px solid #2f7d5a;background:#2f7d5a;color:white;padding:8px 13px;margin:9px 8px 0 0;cursor:pointer}
+#sf-analytics-consent button[data-choice="reject"]{background:white;color:#17201c}
+#sf-analytics-consent[hidden]{display:none}
+</style>
+<div id="sf-analytics-consent" role="region" aria-label="방문 통계 선택" hidden>
+  방문 통계와 사이트 개선을 위해 선택적 분석 도구를 사용합니다. 동의 전에는 분석 스크립트를 실행하지 않습니다.
+  <div><button type="button" data-choice="accept">분석에 동의</button><button type="button" data-choice="reject">거부</button></div>
+</div>
+<script>
+(function(){
+  'use strict';
+  var gaId = {{ $ga | jsonify | safeJS }};
+  var clarityId = {{ $clarity | jsonify | safeJS }};
+  var key = 'sf_analytics_consent_v1';
+  function loadAnalytics(){
+    if(gaId){
+      window.dataLayer=window.dataLayer||[];
+      window.gtag=function(){window.dataLayer.push(arguments);};
+      window.gtag('js',new Date());
+      window.gtag('config',gaId,{anonymize_ip:true});
+      var ga=document.createElement('script');
+      ga.async=true;
+      ga.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(gaId);
+      document.head.appendChild(ga);
+    }
+    if(clarityId){
+      window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};
+      var cl=document.createElement('script');
+      cl.async=true;
+      cl.src='https://www.clarity.ms/tag/'+encodeURIComponent(clarityId);
+      document.head.appendChild(cl);
+    }
+  }
+  var consent;
+  try { consent=localStorage.getItem(key); } catch(e) { consent=null; }
+  if(consent==='accept'){loadAnalytics();return;}
+  if(consent==='reject'){return;}
+  function show(){
+    var banner=document.getElementById('sf-analytics-consent');
+    if(!banner)return;
+    banner.hidden=false;
+    banner.addEventListener('click',function(event){
+      var choice=event.target && event.target.getAttribute('data-choice');
+      if(choice!=='accept' && choice!=='reject')return;
+      try{localStorage.setItem(key,choice);}catch(e){}
+      banner.hidden=true;
+      if(choice==='accept')loadAnalytics();
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);
+  else show();
+})();
+</script>
+{{- end }}
