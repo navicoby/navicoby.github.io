@@ -7,10 +7,6 @@
 #sf-analytics-consent button[data-choice="reject"]{background:white;color:#17201c}
 #sf-analytics-consent[hidden]{display:none}
 </style>
-<div id="sf-analytics-consent" role="region" aria-label="방문 통계 선택" hidden>
-  방문 통계와 사이트 개선을 위해 선택적 분석 도구를 사용합니다. 동의 전에는 분석 스크립트를 실행하지 않습니다.
-  <div><button type="button" data-choice="accept">분석에 동의</button><button type="button" data-choice="reject">거부</button></div>
-</div>
 <script>
 (function(){
   'use strict';
@@ -41,8 +37,18 @@
   if(consent==='accept'){loadAnalytics();return;}
   if(consent==='reject'){return;}
   function show(){
-    var banner=document.getElementById('sf-analytics-consent');
-    if(!banner)return;
+    var banner=document.createElement('div');
+    banner.id='sf-analytics-consent';
+    banner.setAttribute('role','region');
+    banner.setAttribute('aria-label','방문 통계 선택');
+    banner.textContent='방문 통계와 사이트 개선을 위해 선택적 분석 도구를 사용합니다. 동의 전에는 분석 스크립트를 실행하지 않습니다.';
+    var buttons=document.createElement('div');
+    [['accept','분석에 동의'],['reject','거부']].forEach(function(item){
+      var button=document.createElement('button');
+      button.type='button';button.setAttribute('data-choice',item[0]);button.textContent=item[1];buttons.appendChild(button);
+    });
+    banner.appendChild(buttons);
+    document.body.appendChild(banner);
     banner.hidden=false;
     banner.addEventListener('click',function(event){
       var choice=event.target && event.target.getAttribute('data-choice');
