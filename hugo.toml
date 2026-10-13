@@ -7,6 +7,10 @@ theme = "PaperMod"
   author = "navicoby"
   mainSections = ["posts"]
 
+[params.analytics]
+  ga4Id = ""
+  clarityId = ""
+
 [outputs]
   home = ["HTML", "JSON"]
   page = ["HTML"]
