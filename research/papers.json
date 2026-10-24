@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-23T01:30:01Z",
- "count": 1187,
+ "generated": "2026-10-24T01:30:00Z",
+ "count": 1200,
  "topics": {
-  "world-models": 631,
+  "world-models": 637,
+  "spatial-ai": 185,
+  "functional-structural-plant": 45,
   "construction-bim": 44,
-  "spatial-ai": 179,
   "clonal-plant-modeling": 101,
   "plant-digital-twin": 57,
   "agent-based-ecology": 33,
   "plant-3d-reconstruction": 86,
-  "functional-structural-plant": 44,
   "landscape-bim": 12
  },
  "sources": [
@@ -18,6 +18,277 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.31668",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31668v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31668v1",
+   "oa": true,
+   "title": "Reading, Writing, Sharing, and Interacting with the World through Video",
+   "published": "2026-10-22",
+   "authors": [
+    "Shengqiong Wu",
+    "Meng Luo",
+    "Bobo Li",
+    "Ziwei Liu",
+    "Shuicheng Yan",
+    "Ming-Hsuan Yang",
+    "Philip Torr",
+    "Hao Fei"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31617",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31617v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31617v1",
+   "oa": true,
+   "title": "DiffDreamer: Coupling World Models with Differentiable Simulation for Agile Quadrotor Control",
+   "published": "2026-10-22",
+   "authors": [
+    "Fanxing Li",
+    "Yuxiang Huang",
+    "Shengyang Wang",
+    "Fangyu Sun",
+    "Shuyu Wu",
+    "Tianbao Zhang",
+    "Dexin Zuo",
+    "Yan Yufei",
+    "Danping Zou",
+    "Wenxian Yu"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31474",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31474v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31474v1",
+   "oa": true,
+   "title": "Skeleton-Grounded Latent Action Model for Robot World Models",
+   "published": "2026-10-22",
+   "authors": [
+    "Qi Lv",
+    "Jiayi Lin",
+    "Yuxin Jiang",
+    "Jianzong Wang",
+    "Xiang Deng",
+    "Mike Shou Zheng"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31194",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31194v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31194v1",
+   "oa": true,
+   "title": "Inside-JEPA: From Prediction to Relational Grounding in Latent World Models",
+   "published": "2026-10-22",
+   "authors": [
+    "Hossein Resani",
+    "Javen Qinfeng Shi"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31066",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31066v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31066v1",
+   "oa": true,
+   "title": "Dual Exam: Controlled Evaluation of Multimodal Agents and World Models",
+   "published": "2026-10-22",
+   "authors": [
+    "Zhefan Rao",
+    "Meng Chu",
+    "Xuan Zhang",
+    "Jingfan Chen",
+    "Guohao Cai",
+    "Runyi Li",
+    "Shiyi Du",
+    "Ning Lu",
+    "Xu Huang",
+    "Zhixuan Chen",
+    "Feng Nie",
+    "Harold Haodong Chen"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.30988",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30988v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30988v1",
+   "oa": true,
+   "title": "In-Context Learning World Models for Robot Dual-Arm Manipulation of Soft Garment with Partial Observations",
+   "published": "2026-10-22",
+   "authors": [
+    "Hengyi Sim",
+    "Quentin Rouxel",
+    "Dennis Hong",
+    "Darwin Caldwell",
+    "Fei Chen"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31518",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31518v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31518v1",
+   "oa": true,
+   "title": "SCOPE: Scene-graph Construction Optimized by Plan Error-correction for Robot Long-term Planning Datasets",
+   "published": "2026-10-22",
+   "authors": [
+    "Chaoyue Li",
+    "Zeyu Gao",
+    "Yanfeng Lu",
+    "Fan Luo"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31476",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31476v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31476v1",
+   "oa": true,
+   "title": "Point-Level Refinable Semantic Mapping for Spatial Understanding",
+   "published": "2026-10-22",
+   "authors": [
+    "Taimeng Fu",
+    "Yi Du",
+    "Zitong Zhan",
+    "Qiwei Du",
+    "Shaoshu Su",
+    "Zhipeng Zhao",
+    "Chen Wang"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31321",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31321v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31321v1",
+   "oa": true,
+   "title": "MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model",
+   "published": "2026-10-22",
+   "authors": [
+    "Xinyang Lu",
+    "Shengzhe Wei",
+    "Sheng Tang",
+    "Weiqi Zhang",
+    "Juntong Fang",
+    "Zesong Li"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31221",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31221v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31221v1",
+   "oa": true,
+   "title": "Consistent Distributed Invariant EKF SLAM with Point and Object Features",
+   "published": "2026-10-22",
+   "authors": [
+    "Mengya Xu",
+    "Xianjia Yu",
+    "Ha Sier",
+    "Shoudong Huang",
+    "Tomi Westerlund"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.31121",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.31121v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.31121v1",
+   "oa": true,
+   "title": "RGraph-Eval: Task-Grounded Scene Graphs for Evaluating Robot Video Generation",
+   "published": "2026-10-22",
+   "authors": [
+    "Aleksandr Lazarev",
+    "Sofia Zimina",
+    "Roman Kuznetsov",
+    "Tatiana Zemskova",
+    "Iaroslav Koshelev",
+    "Dmitry Yudin"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.30774",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30774v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30774v1",
+   "oa": true,
+   "title": "Evaluation of Front-End Feature Matching for Lunar Visual SLAM",
+   "published": "2026-10-22",
+   "authors": [
+    "Guillem Casadesus Vila",
+    "Grace Gao"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-24"
+  },
+  {
+   "id": "oa:10.1017/qpb.2026.10056",
+   "source": "OpenAlex",
+   "venue": "Quantitative Plant Biology",
+   "url": "https://doi.org/10.1017/qpb.2026.10056",
+   "doi": "10.1017/qpb.2026.10056",
+   "pdf_url": "https://doi.org/10.1017/qpb.2026.10056",
+   "oa": true,
+   "title": "Gymnosperms – A forgotten model for phyllotaxis research",
+   "published": "2026-01-01",
+   "authors": [
+    "Alicja Banasiak",
+    "Edyta Magdalena Gola"
+   ],
+   "cat": "article",
+   "topic": "functional-structural-plant",
+   "added": "2026-10-24"
+  },
   {
    "id": "arxiv:2610.30136",
    "source": "arXiv",
