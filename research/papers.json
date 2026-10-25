@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-24T01:30:00Z",
- "count": 1200,
+ "generated": "2026-10-25T01:30:03Z",
+ "count": 1212,
  "topics": {
-  "world-models": 637,
-  "spatial-ai": 185,
+  "world-models": 643,
+  "spatial-ai": 191,
   "functional-structural-plant": 45,
   "construction-bim": 44,
   "clonal-plant-modeling": 101,
@@ -18,6 +18,251 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.30814",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30814v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30814v1",
+   "oa": true,
+   "title": "DRILL: Training World Models to Improve Policies, Not Predict Pixels",
+   "published": "2026-10-22",
+   "authors": [
+    "Zhaolu Kang",
+    "Tailong Luo",
+    "Lei Wei",
+    "Guangyuan Dong",
+    "Sihan Liu",
+    "Yingjie He",
+    "Siheng Wang",
+    "Shuaibo Li",
+    "Rongchao Zhang",
+    "Zhen Tian",
+    "Richeng Xuan",
+    "Zhichao Hu"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30789",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30789v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30789v1",
+   "oa": true,
+   "title": "An Introduction to World Models for Generalist Agents",
+   "published": "2026-10-22",
+   "authors": [
+    "Zhihui Zhu"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30781",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30781v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30781v1",
+   "oa": true,
+   "title": "DeXplicit: Making Physical State Explicit in Dexterous Manipulation World Models",
+   "published": "2026-10-22",
+   "authors": [
+    "Adam Lee",
+    "Mutian Xu",
+    "Yukang Cao",
+    "Shulin Tian",
+    "Ziwei Liu"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30724",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30724v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30724v1",
+   "oa": true,
+   "title": "Learning from Next-Frame Prediction: Towards Unified and Scalable Visual Representation Learning",
+   "published": "2026-10-22",
+   "authors": [
+    "Yifeng Yao",
+    "Jinghan Li",
+    "Zhihao Zhang",
+    "Yajiao Xiong",
+    "Yang Jin",
+    "Kun Xu",
+    "Huishuai Zhang",
+    "Dongyan Zhao"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30657",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30657v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30657v1",
+   "oa": true,
+   "title": "Anticipating Social Consequences with Distributional World Models",
+   "published": "2026-10-22",
+   "authors": [
+    "Viet-Thanh Pham",
+    "Thuy-Trang Vu",
+    "Zhuang Li",
+    "Lizhen Qu",
+    "Gholamreza Haffari"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30753",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30753v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30753v1",
+   "oa": true,
+   "title": "FilmFlow: Agentic System for 3D Virtual Film Cinematography",
+   "published": "2026-10-22",
+   "authors": [
+    "Yiming Zhang",
+    "Jiarui Guo",
+    "Haojia Wei",
+    "Yifei Liu",
+    "Yifan Yang",
+    "Hongjie Zhang",
+    "Xue Yang",
+    "Zhihang Zhong"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30660",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30660v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30660v1",
+   "oa": true,
+   "title": "A Topology-Guided GeoAI Agentic Framework for Urban Flood Screening",
+   "published": "2026-10-22",
+   "authors": [
+    "Yutian Tao",
+    "Haoan Feng",
+    "Xin Xu",
+    "Leila De Floriani"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30606",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30606v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30606v1",
+   "oa": true,
+   "title": "CMAR-search: Commonsense and Memory Augmented Reasoning for Object Search in Dynamic Interactive Environments",
+   "published": "2026-10-22",
+   "authors": [
+    "Kaiyao Liao",
+    "Qingfeng Li",
+    "Xinlei Zhang",
+    "Chen Chen",
+    "Qing Sun",
+    "Jianwei Niu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.30488",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.30488v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.30488v1",
+   "oa": true,
+   "title": "From Single-Actor Environments to Multi-Actor Event Worlds: Can LLMs Be Event World Models?",
+   "published": "2026-10-21",
+   "authors": [
+    "Juntong Ni",
+    "Zewen Liu",
+    "Bohan Wang",
+    "Lige Zhang",
+    "Wei Jin"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.28964",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.28964v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.28964v1",
+   "oa": true,
+   "title": "Can Quantum Layers offer Performance and Security Advantages in Vision-Language Models?",
+   "published": "2026-10-20",
+   "authors": [
+    "Md Khalid Syfullah",
+    "Alvi Ataur Khalil"
+   ],
+   "cat": "quant-ph",
+   "topic": "spatial-ai",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.28882",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.28882v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.28882v1",
+   "oa": true,
+   "title": "inr2action: Encoding Robot Episodes as Neural Implicit Representations for Recall and Action",
+   "published": "2026-10-20",
+   "authors": [
+    "Leann Alhashishi",
+    "Christos Margadji",
+    "Sebastian William Pattinson"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-25"
+  },
+  {
+   "id": "arxiv:2610.28190",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.28190v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.28190v1",
+   "oa": true,
+   "title": "CrossFit-GS: Out-of-Fold Pose Estimation for COLMAP-Free 3D Gaussian Splatting",
+   "published": "2026-10-20",
+   "authors": [
+    "Zijian Wu",
+    "Jinliang Wang",
+    "Mingfeng Jiang",
+    "Zidian Lin",
+    "Ying Song",
+    "Ziqian Lu"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-25"
+  },
   {
    "id": "arxiv:2610.31668",
    "source": "arXiv",
