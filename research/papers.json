@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-25T01:30:03Z",
- "count": 1212,
+ "generated": "2026-10-26T01:30:03Z",
+ "count": 1223,
  "topics": {
-  "world-models": 643,
-  "spatial-ai": 191,
+  "world-models": 649,
+  "spatial-ai": 196,
   "functional-structural-plant": 45,
   "construction-bim": 44,
   "clonal-plant-modeling": 101,
@@ -18,6 +18,236 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.29435",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.29435v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.29435v1",
+   "oa": true,
+   "title": "Events, Not Pixels: Where World Models Get the Return Wrong",
+   "published": "2026-10-21",
+   "authors": [
+    "Haoyue Liu",
+    "Xiaoying Tang"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.29408",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.29408v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.29408v1",
+   "oa": true,
+   "title": "LiveAct: Towards Real-Time Multi-Agent World Models with Heterogeneous Action Interfaces",
+   "published": "2026-10-21",
+   "authors": [
+    "Xinyu Wang",
+    "Huafeng Shi",
+    "Yue Ma",
+    "Zijie Meng",
+    "Teng Xi",
+    "Yuzhuo Chen",
+    "Yucheng Wang",
+    "Ruicheng Zhang",
+    "Guoxin Zhang",
+    "Pengfei Wan",
+    "Xiu Li",
+    "Fangneng Zhan"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.29385",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.29385v2",
+   "pdf_url": "https://arxiv.org/pdf/2610.29385v2",
+   "oa": true,
+   "title": "Parallelizable Probabilistic Latent Reasoning for Diverse Reasoning Trajectories",
+   "published": "2026-10-21",
+   "authors": [
+    "Seokhyun Lee",
+    "Seongjun Lee",
+    "Changhee Lee"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.29308",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.29308v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.29308v1",
+   "oa": true,
+   "title": "LLM-Based Exogenous World Modeling for Dynamic Scheduling",
+   "published": "2026-10-21",
+   "authors": [
+    "Ni Zhang",
+    "Haofeng Yuan",
+    "Jianan Zhou",
+    "Shiji Song",
+    "Zhiguang Cao"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.29246",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.29246v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.29246v1",
+   "oa": true,
+   "title": "DepState-JEPA: Learning Depth-Grounded State Representation for Visual Perception and Manipulation",
+   "published": "2026-10-21",
+   "authors": [
+    "Xiujian Liang",
+    "Liuyuan Na",
+    "Zehao Du",
+    "Jiacheng Xu",
+    "Weixi Song",
+    "Mingyang Sun",
+    "Xingjun Ma",
+    "Cewu Lu",
+    "Jianhua Sun"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.29168",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.29168v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.29168v1",
+   "oa": true,
+   "title": "How Representational Priors Shape Generalization in World Action Models",
+   "published": "2026-10-21",
+   "authors": [
+    "Junha Chun",
+    "Youngjoon Jeong",
+    "Taesup Kim"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.28033",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.28033v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.28033v1",
+   "oa": true,
+   "title": "Spherical Geometry-Aware Panoptic Scene Graph Generation for Equirectangular Panoramas",
+   "published": "2026-10-20",
+   "authors": [
+    "Zhe Wu",
+    "Xiaoyan Fei",
+    "Xinyi Jiang",
+    "Yanxu Wei",
+    "Junming Rao",
+    "Yihong Yan",
+    "Xuewei Li"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.28018",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.28018v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.28018v1",
+   "oa": true,
+   "title": "P$^3$-VLM: A Point-based Alternative for Grounded 3D Vision-Language Models",
+   "published": "2026-10-20",
+   "authors": [
+    "Anna-Maria Halacheva",
+    "Jan-Nico Zaech",
+    "Sombit Dey",
+    "Luc Van Gool",
+    "Danda Pani Paudel"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.27865",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.27865v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.27865v1",
+   "oa": true,
+   "title": "Frontier LLMs Enter the World of Robotics: A Cross-Model Evaluation on RoboColiseum",
+   "published": "2026-10-20",
+   "authors": [
+    "Da Huang",
+    "Jichao Wang",
+    "Junhui Wu",
+    "Tong Ran",
+    "Linting Guo",
+    "Siying Zhang",
+    "Chuang Men",
+    "Sukai Wang",
+    "Yue Zhou",
+    "Maoqing Yao",
+    "Mo Wu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.27696",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.27696v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.27696v1",
+   "oa": true,
+   "title": "PanoGraphGS: Unifying Panoptic Segmentation and Hierarchical 3D Scene Graphs with Gaussian Splatting",
+   "published": "2026-10-20",
+   "authors": [
+    "Jinghan Gao",
+    "Siyu Wang",
+    "Dongyu Feng",
+    "Yiyuan Pan",
+    "Rong Xiong"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-26"
+  },
+  {
+   "id": "arxiv:2610.27622",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.27622v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.27622v1",
+   "oa": true,
+   "title": "A Head Camera Is (Almost) All You Need: An Electronics-Free UMI Glove Labelled and Observed by One Moving Camera",
+   "published": "2026-10-20",
+   "authors": [
+    "Yosub Shin",
+    "Yuan Liu",
+    "Igor Molybog"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-26"
+  },
   {
    "id": "arxiv:2610.30814",
    "source": "arXiv",
