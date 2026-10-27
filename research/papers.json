@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-26T01:30:03Z",
- "count": 1223,
+ "generated": "2026-10-27T01:30:04Z",
+ "count": 1232,
  "topics": {
-  "world-models": 649,
-  "spatial-ai": 196,
+  "world-models": 655,
+  "spatial-ai": 199,
   "functional-structural-plant": 45,
   "construction-bim": 44,
   "clonal-plant-modeling": 101,
@@ -18,6 +18,192 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.32977",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32977v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32977v1",
+   "oa": true,
+   "title": "UniAction: Unified Action Conditioning for World Models",
+   "published": "2026-10-23",
+   "authors": [
+    "Bowen Xue",
+    "Zizhang Li",
+    "Hong-Xing Yu",
+    "Jiajun Wu"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32742",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32742v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32742v1",
+   "oa": true,
+   "title": "Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection",
+   "published": "2026-10-23",
+   "authors": [
+    "Luke Beddow",
+    "George Mavroghenis",
+    "Rodrigo Chacon Quesada",
+    "Kamil Dreczkowski",
+    "Cong Sun",
+    "Jiankai Wang",
+    "Oscar Kwong-Fai Pang",
+    "Antoine Cully"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32657",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32657v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32657v1",
+   "oa": true,
+   "title": "DT-JEPA: Learning to Predict Future Representations for Decision-Making",
+   "published": "2026-10-23",
+   "authors": [
+    "Changxu Ni",
+    "Yiyang Ni",
+    "Jun Li",
+    "Feiran You",
+    "Hongyang Du",
+    "Haitao Zhao",
+    "Shi Jin"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32562",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32562v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32562v1",
+   "oa": true,
+   "title": "Shared Is Not Enough: Predictor Width and Factor Readability Under Masked Latent Prediction",
+   "published": "2026-10-23",
+   "authors": [
+    "Nilotpal Kakati"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32554",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32554v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32554v1",
+   "oa": true,
+   "title": "HGWM: Hierarchical Graph-Guided World Model for Zero-Shot Object Navigation via Graph Matching",
+   "published": "2026-10-23",
+   "authors": [
+    "I-tak Ieong",
+    "Hao Tang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32414",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32414v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32414v1",
+   "oa": true,
+   "title": "When Does Dynamics Randomization Test Context Inference?",
+   "published": "2026-10-23",
+   "authors": [
+    "Oleg Smirnov",
+    "Sofiane Ennadir",
+    "John Pertoft",
+    "Bjartur Hjaltason",
+    "Sara Karimi"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32976",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32976v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32976v1",
+   "oa": true,
+   "title": "FlexGlue: Sparse-to-Dense Feature Matching and Visual Disambiguation",
+   "published": "2026-10-23",
+   "authors": [
+    "Philipp Lindenberger",
+    "Paul-Edouard Sarlin",
+    "Ondrej Miksik",
+    "Marc Pollefeys"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32965",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32965v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32965v1",
+   "oa": true,
+   "title": "RynnUnify: Towards Unified Embodied Brain",
+   "published": "2026-10-23",
+   "authors": [
+    "Minghao Zhu",
+    "Bohan Hou",
+    "Kun Xiang",
+    "Zixuan Wang",
+    "Yinzhou Tang",
+    "Yifei Yang",
+    "Zhikai Wang",
+    "Tianyi Zhang",
+    "Kehan Li",
+    "Haoyu Zhao",
+    "Siteng Huang",
+    "Leigang Qu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.32177",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.32177v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.32177v1",
+   "oa": true,
+   "title": "$Ψ$-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model",
+   "published": "2026-10-23",
+   "authors": [
+    "Khai Loong Aw",
+    "Klemen Kotar",
+    "Baihan Zhang",
+    "Yifan Liu",
+    "Lilian Chen",
+    "Atlas Kazemian",
+    "Rahul Venkatesh",
+    "Daniel Yamins"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-10-27"
+  },
   {
    "id": "arxiv:2610.29435",
    "source": "arXiv",
