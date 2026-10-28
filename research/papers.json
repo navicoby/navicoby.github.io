@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-27T01:30:04Z",
- "count": 1232,
+ "generated": "2026-10-28T01:30:04Z",
+ "count": 1248,
  "topics": {
-  "world-models": 655,
-  "spatial-ai": 199,
+  "world-models": 661,
+  "spatial-ai": 205,
+  "plant-3d-reconstruction": 88,
+  "construction-bim": 45,
+  "clonal-plant-modeling": 102,
   "functional-structural-plant": 45,
-  "construction-bim": 44,
-  "clonal-plant-modeling": 101,
   "plant-digital-twin": 57,
   "agent-based-ecology": 33,
-  "plant-3d-reconstruction": 86,
   "landscape-bim": 12
  },
  "sources": [
@@ -18,6 +18,317 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.35636",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35636v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35636v1",
+   "oa": true,
+   "title": "Adapt for Planning, Not just Prediction: Optimistic Test-Time World Model Adaptation",
+   "published": "2026-10-26",
+   "authors": [
+    "Akshay Mete",
+    "Dileep Kalathil",
+    "P. R. Kumar"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35529",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35529v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35529v1",
+   "oa": true,
+   "title": "WorldPager: Zero-Stall Tiered Memory for Long-Horizon World Models on a Single Consumer GPU",
+   "published": "2026-10-26",
+   "authors": [
+    "Bingnan Liu",
+    "Ruini Xue"
+   ],
+   "cat": "cs.DC",
+   "topic": "world-models",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35044",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35044v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35044v1",
+   "oa": true,
+   "title": "DriveUniTok: A Unified Multimodal Tokenizer for Driving World-Action Models",
+   "published": "2026-10-26",
+   "authors": [
+    "Jingbo Xu",
+    "Hanchao Leng",
+    "JiaHui Huang",
+    "Hanbing Li",
+    "Jingwei Zhao",
+    "Kuiyuan Yang",
+    "Chen Gao",
+    "Guang Chen",
+    "Hangjun Ye",
+    "Yong Li"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.34797",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.34797v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.34797v1",
+   "oa": true,
+   "title": "TimeWorld: Towards Action-Conditioned Multimodal World Models for Time Series Forecasting",
+   "published": "2026-10-26",
+   "authors": [
+    "Hang Ni",
+    "Weijia Zhang",
+    "Hao Liu"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.34663",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.34663v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.34663v1",
+   "oa": true,
+   "title": "Video World Models Need Predictable Latents",
+   "published": "2026-10-26",
+   "authors": [
+    "Mattia Scardecchia",
+    "Sherry Yang"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.34650",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.34650v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.34650v1",
+   "oa": true,
+   "title": "Dream to Assist: Intent-Conditioned World Models for Shared Vehicle Control",
+   "published": "2026-10-26",
+   "authors": [
+    "Jonathan DeCastro",
+    "Thomas Balch",
+    "Emily Sumner",
+    "Deepak Gopinath",
+    "Laporsha Dees",
+    "Patricio Reyes Gomez",
+    "Elliot Weiss",
+    "Megan Applegate-Kenton",
+    "Todd Rowell",
+    "John Leonard",
+    "Avinash Balachandran",
+    "Guy Rosman"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35642",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35642v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35642v1",
+   "oa": true,
+   "title": "VPR-Space: A Benchmark for Visual Place Recognition in Space Analog Domains",
+   "published": "2026-10-26",
+   "authors": [
+    "Richard Fechner",
+    "Peer Neubert"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35621",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35621v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35621v1",
+   "oa": true,
+   "title": "Synthetic Deformable Tubular Benchmark: A mechanically annotated dataset for evaluating deformable 3D reconstruction",
+   "published": "2026-10-26",
+   "authors": [
+    "Íñigo Cirauqui-Viloria"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35554",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35554v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35554v1",
+   "oa": true,
+   "title": "Metric Scale for Insta360 Structure-from-Motion from the Camera's Embedded IMU",
+   "published": "2026-10-26",
+   "authors": [
+    "Davide Cuttini",
+    "Diego Di Tommaso",
+    "Alessio Antoniacomi",
+    "Luca Simonetti"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35522",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35522v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35522v1",
+   "oa": true,
+   "title": "Generative Structure from Motion with Native 3D Diffusion",
+   "published": "2026-10-26",
+   "authors": [
+    "Haobin Duan",
+    "Binbin Huang",
+    "Mochu Xiang",
+    "Yiqun Zhao",
+    "Zibo Zhao",
+    "Yi Ma",
+    "Shenghua Gao"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35501",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35501v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35501v1",
+   "oa": true,
+   "title": "Learning Scene Coordinate Reconstruction from Unposed Images via Pose Graph Optimization",
+   "published": "2026-10-26",
+   "authors": [
+    "Tze Ho Elden Tse",
+    "Jizong Peng",
+    "Angela Yao"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.35312",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.35312v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.35312v1",
+   "oa": true,
+   "title": "OVM-Occ: Open-Vocabulary Monocular Occupancy Prediction via Geometry-Aware Vision-Language Distillation",
+   "published": "2026-10-26",
+   "authors": [
+    "Shuyang Yu",
+    "Haibo Qin",
+    "Shaohan Hu",
+    "Wei Shan",
+    "Xiaoqing Guan",
+    "You Wang",
+    "Guang Li"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.34321",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.34321v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.34321v1",
+   "oa": true,
+   "title": "TopX: Text-to-Motion for Unseen Skeletons from the Skeleton File Alone",
+   "published": "2026-10-25",
+   "authors": [
+    "Tengjiao Sun",
+    "Pengcheng Fang",
+    "Xiaoyu Zhan",
+    "Dongjie Fu",
+    "Xiaohao Cai",
+    "Hansung Kim"
+   ],
+   "cat": "cs.CV",
+   "topic": "plant-3d-reconstruction",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "arxiv:2610.34040",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.34040v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.34040v1",
+   "oa": true,
+   "title": "Cut a Wall, See a Wall: Identity Substitution in Occluded Point-Cloud Perception for Construction Robots",
+   "published": "2026-10-25",
+   "authors": [
+    "Tsung-Lung Yang"
+   ],
+   "cat": "cs.RO",
+   "topic": "construction-bim",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "oa:10.3897/bdj.14.e191083",
+   "source": "OpenAlex",
+   "venue": "Biodiversity Data Journal",
+   "url": "https://doi.org/10.3897/bdj.14.e191083",
+   "doi": "10.3897/bdj.14.e191083",
+   "pdf_url": "https://doi.org/10.3897/bdj.14.e191083",
+   "oa": true,
+   "title": "Photogrammetry and 3D Gaussian Splatting for 4D plant growth capture and greenhouse digital twins",
+   "published": "2026-10-23",
+   "authors": [
+    "Toivo Ylinampa",
+    "Urmas Kõljalg"
+   ],
+   "cat": "article",
+   "topic": "plant-3d-reconstruction",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "oa:10.3389/fgene.2026.1810782",
+   "source": "OpenAlex",
+   "venue": "Frontiers in Genetics",
+   "url": "https://doi.org/10.3389/fgene.2026.1810782",
+   "doi": "10.3389/fgene.2026.1810782",
+   "pdf_url": "https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2026.1810782/pdf",
+   "oa": true,
+   "title": "Mating portfolio and neutral mechanisms are primary causes of genet-ramet frequencies and spatial distributions in smooth cordgrass (Spartina alterniflora) along salt marsh tidal gradients",
+   "published": "2026-04-30",
+   "authors": [
+    "Jewel Tomasula",
+    "Seamus Caslin",
+    "Gina M. Wimp",
+    "Matthew B. Hamilton"
+   ],
+   "cat": "article",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-10-28"
+  },
   {
    "id": "arxiv:2610.32977",
    "source": "arXiv",
