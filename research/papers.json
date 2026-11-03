@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-02T01:30:00Z",
- "count": 1306,
+ "generated": "2026-11-03T01:30:04Z",
+ "count": 1320,
  "topics": {
-  "world-models": 692,
-  "clonal-plant-modeling": 104,
-  "spatial-ai": 227,
+  "clonal-plant-modeling": 105,
+  "world-models": 698,
+  "spatial-ai": 233,
+  "plant-3d-reconstruction": 89,
   "construction-bim": 46,
   "plant-digital-twin": 59,
-  "plant-3d-reconstruction": 88,
   "functional-structural-plant": 45,
   "agent-based-ecology": 33,
   "landscape-bim": 12
@@ -18,6 +18,293 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2610.41650",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41650v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41650v1",
+   "oa": true,
+   "title": "Genetic weight of a mutant in a biparental Moran model with infinite selection",
+   "published": "2026-10-30",
+   "authors": [
+    "Camille Coron",
+    "Olivier Hénard"
+   ],
+   "cat": "math.PR",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.42146",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.42146v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.42146v1",
+   "oa": true,
+   "title": "Hierarchical World Models with Implicit Dynamics",
+   "published": "2026-10-30",
+   "authors": [
+    "Gaoyue Zhou",
+    "Yvonne Wu",
+    "Zichen Jeff Cui",
+    "Nicolas Ballas",
+    "Mido Assran",
+    "Lerrel Pinto",
+    "Yann LeCun"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.42096",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.42096v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.42096v1",
+   "oa": true,
+   "title": "CausalWAM: Learning the Causes of Actions in World Action Models",
+   "published": "2026-10-30",
+   "authors": [
+    "Juntao Cheng",
+    "Jinzhou Tang",
+    "Fan Feng",
+    "Henrik I. Christensen",
+    "Yujia Zheng"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41330",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41330v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41330v1",
+   "oa": true,
+   "title": "Cross-Embodiment Motion Planning by Coupling Body-Agnostic World Model with Differentiable Ego-Dynamics",
+   "published": "2026-10-30",
+   "authors": [
+    "Zhidong Wang",
+    "Zirui Li",
+    "Haoran Xu",
+    "Yujie Yan",
+    "Zitong Shan",
+    "Jingsong Liang",
+    "Han Yu",
+    "Chen Lv"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41273",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41273v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41273v1",
+   "oa": true,
+   "title": "SPT-Flow: One Integration, Many Futures in Continuous-Time World Models",
+   "published": "2026-10-30",
+   "authors": [
+    "Mingyang Lyu",
+    "Yinqian Sun",
+    "Gongce Cao",
+    "Yuhao Zhang",
+    "Lu Jia",
+    "Qian Zhang",
+    "Bo Wang",
+    "Pin Lyu"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41130",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41130v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41130v1",
+   "oa": true,
+   "title": "One Verdict Is Not Enough: Regression Testing Learned World Models and Their Test Harnesses",
+   "published": "2026-10-30",
+   "authors": [
+    "Junyu Huo",
+    "Zihao Wan",
+    "Ziqi Mao",
+    "Gouri Ginde"
+   ],
+   "cat": "cs.SE",
+   "topic": "world-models",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41768",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41768v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41768v1",
+   "oa": true,
+   "title": "Visual-Inertial RGB-D SLAM with Encoders for a Differential Wheeled Robot",
+   "published": "2026-10-30",
+   "authors": [
+    "Zhanghao Zhu",
+    "Yutaka Kaizu",
+    "Kenichi Furuhashi",
+    "Kenji Imou"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41651",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41651v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41651v1",
+   "oa": true,
+   "title": "When Depth Lies: Benchmarking Vision-Language Models on Mirror-Induced RGB-D Ambiguity",
+   "published": "2026-10-30",
+   "authors": [
+    "Hao Yin",
+    "Tianchen Guo",
+    "Heming Du",
+    "Yan Ke",
+    "Yanbin Liu",
+    "Xin Yu"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41602",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41602v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41602v1",
+   "oa": true,
+   "title": "DrawSplat: Atlanta World-Guided Implicit Gaussian SLAM for Indoor Reconstruction",
+   "published": "2026-10-30",
+   "authors": [
+    "Fan Zhu",
+    "Zhisong Xu",
+    "Ziyu Chen",
+    "Zhenjun Zhao",
+    "Takayuki Okatani"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41389",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41389v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41389v1",
+   "oa": true,
+   "title": "Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives",
+   "published": "2026-10-30",
+   "authors": [
+    "Xiwei Liu",
+    "Yulong Li",
+    "Xinling Zhuang",
+    "Xuhui Li",
+    "Yichen Li",
+    "Haolin Yang",
+    "Zhixiang Lu",
+    "Yutong Xie"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41320",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41320v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41320v1",
+   "oa": true,
+   "title": "Learning from Physical Experience:Context-Space Adaptation for Robotic Manipulation",
+   "published": "2026-10-30",
+   "authors": [
+    "Yihan Zeng",
+    "Yisu Li",
+    "Kaixin Huang",
+    "Marc WuDunn",
+    "Amelia Kovacs",
+    "Mikael Harseno",
+    "Kimmy Lin",
+    "Porter Hunley",
+    "Fred Shentu",
+    "Philipp Wu",
+    "Zhongyu Li",
+    "Zike Yan"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41314",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41314v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41314v1",
+   "oa": true,
+   "title": "GenDSR: Transferring Representations from Video Generation Models for Dynamic Spatial Reasoning",
+   "published": "2026-10-30",
+   "authors": [
+    "Ke Yang",
+    "Zhenyu Zhang",
+    "Jun Li"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.41043",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.41043v1",
+   "pdf_url": "https://arxiv.org/pdf/2610.41043v1",
+   "oa": true,
+   "title": "Meshless Latent Dynamics Models for Model Order Reduction of time-dependent Partial Differential Equations",
+   "published": "2026-10-29",
+   "authors": [
+    "Lorenzo Tomada",
+    "Federico Pichi",
+    "Gianluigi Rozza"
+   ],
+   "cat": "math.NA",
+   "topic": "world-models",
+   "added": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.05900",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2610.05900v3",
+   "pdf_url": "https://arxiv.org/pdf/2610.05900v3",
+   "oa": true,
+   "title": "Sub-Voxel Displacement and Ipsilateral Territory Decoupling for 3D Bilateral Coronary Artery Tree Reconstruction in Cardiac CT Angiography",
+   "published": "2026-10-05",
+   "authors": [
+    "Zeyu Jia",
+    "Xin Ming"
+   ],
+   "cat": "cs.CV",
+   "topic": "plant-3d-reconstruction",
+   "added": "2026-11-03"
+  },
   {
    "id": "arxiv:2610.39721",
    "source": "arXiv",
