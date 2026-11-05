@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-04T01:30:03Z",
- "count": 1340,
+ "generated": "2026-11-05T01:30:02Z",
+ "count": 1353,
  "topics": {
-  "clonal-plant-modeling": 107,
+  "clonal-plant-modeling": 108,
+  "world-models": 713,
+  "spatial-ai": 245,
   "plant-3d-reconstruction": 90,
-  "world-models": 707,
-  "spatial-ai": 239,
   "plant-digital-twin": 60,
   "construction-bim": 47,
   "functional-structural-plant": 45,
@@ -18,6 +18,273 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.04149",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04149v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04149v1",
+   "oa": true,
+   "title": "Evolving view on phylogenetic networks",
+   "published": "2026-11-03",
+   "authors": [
+    "Claudia Solis-Lemus"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05280",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05280v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05280v1",
+   "oa": true,
+   "title": "YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction",
+   "published": "2026-11-03",
+   "authors": [
+    "Shengyu Wang",
+    "Tengyue Nong",
+    "Junming Liu",
+    "Haosong Peng",
+    "Siyu Li",
+    "Ruiqi Lei",
+    "Fushuo Huo",
+    "Yuhao Pan",
+    "Yunfeng Fan",
+    "Ding Wang",
+    "Nan Cheng",
+    "Haozhao Wang"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05072",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05072v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05072v1",
+   "oa": true,
+   "title": "Trajectory Evaluation via Rollout-Free World Model for End-to-end Autonomous Driving",
+   "published": "2026-11-03",
+   "authors": [
+    "Junzhe Wang",
+    "Jinqing Zhang",
+    "Qingjie Liu"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.04873",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04873v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04873v1",
+   "oa": true,
+   "title": "Trusting Imagined Futures: Auditing Imagined Rewards for VLA Post-Training",
+   "published": "2026-11-03",
+   "authors": [
+    "Zicheng Kong",
+    "Zhenbo Xu",
+    "Haoyan Zhang",
+    "Jinghan Yang",
+    "Zhenzhen Li",
+    "Yiwei Ru",
+    "Liuyu Xiang",
+    "WanTing Xu",
+    "Min Ren",
+    "Zhaofeng He"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.04870",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04870v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04870v1",
+   "oa": true,
+   "title": "PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations",
+   "published": "2026-11-03",
+   "authors": [
+    "Travis Davies",
+    "Wentao Ma",
+    "Lihao Guo",
+    "Tengfei Ma",
+    "Xiaowen Chang",
+    "Jiafeng Xu",
+    "Shilong Wang",
+    "Yiqi Deng",
+    "Shaowen He",
+    "Xiaoqi Li",
+    "Qian Zhu",
+    "Ran Cheng"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.04571",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04571v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04571v1",
+   "oa": true,
+   "title": "Ground-Wing: A Parametric 3D Wing-in-Ground-Effect Dataset for Benchmarking Neural Surrogate Models",
+   "published": "2026-11-03",
+   "authors": [
+    "Andrea Cenzato",
+    "Lukas Karch",
+    "Andre Luckow",
+    "Yoran Pichon",
+    "Francesco Pasqua",
+    "Abouzar Ghasemi",
+    "Rishikesh Ranade",
+    "Ira Shokar",
+    "Julia Kowalski"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.04566",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04566v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04566v1",
+   "oa": true,
+   "title": "A research world model of power engineering learns its dynamics and reveals what-ifs",
+   "published": "2026-11-03",
+   "authors": [
+    "Fanping Sui",
+    "Ying Zhang",
+    "Liwei Lin"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05361",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05361v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05361v1",
+   "oa": true,
+   "title": "Visibility-Aware Reference Generation for Benchmarking Visual 3D Reconstruction in Vegetation-Rich Environments",
+   "published": "2026-11-03",
+   "authors": [
+    "Zhipeng Zhong",
+    "Matthew Coombes",
+    "Cunjia Liu"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05286",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05286v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05286v1",
+   "oa": true,
+   "title": "Anchored Rank-Adversarial Fine-Tuning Pretrained Visual Place Recognition Models",
+   "published": "2026-11-03",
+   "authors": [
+    "Mostafa Kira",
+    "Bader Rasheed",
+    "Manuel Mazzara"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05241",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05241v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05241v1",
+   "oa": true,
+   "title": "Shrinkage prior for implicit generative models",
+   "published": "2026-11-03",
+   "authors": [
+    "Shreya Sinha-Roy",
+    "Christian P. Robert",
+    "Ritabrata Dutta"
+   ],
+   "cat": "cs.LG",
+   "topic": "spatial-ai",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05084",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05084v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05084v1",
+   "oa": true,
+   "title": "Sparse Anchors for Visual Multi-Session Registration in Changing Environments",
+   "published": "2026-11-03",
+   "authors": [
+    "Yunus Talha Erzurumlu",
+    "Niklas Trekel",
+    "Saurabh Gupta",
+    "Nico Koltermann",
+    "Olga Vysotska",
+    "Jens Behley",
+    "Louis Wiesmann",
+    "Cyrill Stachniss"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05058",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.05058v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.05058v1",
+   "oa": true,
+   "title": "Do Agentic Policies Need to Look at Every Step? Geometric Abstraction for Reasoning and Action",
+   "published": "2026-11-03",
+   "authors": [
+    "Yihang Liu",
+    "Yiming Chen",
+    "Mingzhe Zheng"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.04397",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04397v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04397v1",
+   "oa": true,
+   "title": "Auditing Targetless Camera-LiDAR Extrinsic Correction before Recursive Use",
+   "published": "2026-11-03",
+   "authors": [
+    "Bo Ma",
+    "Weiqi Yan"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-05"
+  },
   {
    "id": "arxiv:2611.02700",
    "source": "arXiv",
