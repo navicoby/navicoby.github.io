@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-07T01:30:00Z",
- "count": 1387,
+ "generated": "2026-11-08T01:30:00Z",
+ "count": 1399,
  "topics": {
-  "world-models": 725,
-  "spatial-ai": 263,
+  "world-models": 732,
+  "spatial-ai": 268,
   "plant-3d-reconstruction": 91,
   "plant-digital-twin": 62,
   "functional-structural-plant": 46,
@@ -18,6 +18,255 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.07912",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.07912v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.07912v1",
+   "oa": true,
+   "title": "GuidedWAM: Training-Free Energy Guidance for World Action Models in Autonomous Driving",
+   "published": "2026-11-05",
+   "authors": [
+    "Xiyan Su",
+    "Finn Rasmus Schäfer",
+    "Hojun Lim",
+    "Frank Diermeyer",
+    "Johannes Betz",
+    "Markus Lienkamp"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.07873",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.07873v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.07873v1",
+   "oa": true,
+   "title": "PVDepth: Panoramic Video Depth Estimation via Geometry-Aware Spatiotemporal Adaptation",
+   "published": "2026-11-05",
+   "authors": [
+    "Chuanxin Song",
+    "Peixi Peng"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.07867",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.07867v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.07867v1",
+   "oa": true,
+   "title": "PlayGen2: Learning Real-Time Playable Worlds with Explicit 3D State",
+   "published": "2026-11-05",
+   "authors": [
+    "Jihai Zhang",
+    "Yuhan Zhou",
+    "Junyou Li",
+    "Deheng Ye",
+    "Qi Dou",
+    "Yu Cheng"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.07850",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.07850v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.07850v1",
+   "oa": true,
+   "title": "Learning Robotic World Models with Semantic and Visual Feedback",
+   "published": "2026-11-05",
+   "authors": [
+    "Hao Wu",
+    "Yuqi Li",
+    "Yizhou Zhao",
+    "Kun Wang",
+    "Xiao Luo",
+    "Yu Cheng",
+    "Bo An",
+    "Yingli Tian",
+    "Laszlo A. Jeni",
+    "Ming-Hsuan Yang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.07730",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.07730v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.07730v1",
+   "oa": true,
+   "title": "Seeing Beyond the Next Step: World-Model-Guided Human-Like Navigation in Multi-Agent Scenes",
+   "published": "2026-11-05",
+   "authors": [
+    "Seong-Eun Hong",
+    "JuYeong Hwang",
+    "Jinhyun Kim",
+    "Hanyoung Jang",
+    "HyeongYeop Kang"
+   ],
+   "cat": "cs.GR",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.07403",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.07403v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.07403v1",
+   "oa": true,
+   "title": "Dynamic Watermarking and Action-Conditioned Latent Dynamics for Secure Vision-Based Controllers",
+   "published": "2026-11-05",
+   "authors": [
+    "Aditya Parameshwaran",
+    "Navid Aftabi",
+    "Abhishek Hanchate",
+    "Satish T. S. Bukkapatnam",
+    "Dan Li",
+    "Yue Wang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.04379",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04379v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04379v1",
+   "oa": true,
+   "title": "Understanding Backdoor Attacks in Scene Graph Generation via Global Context Pathway",
+   "published": "2026-11-03",
+   "authors": [
+    "Xiaoguang Chang",
+    "Tuo Chen",
+    "Chengze Jiang",
+    "Teng Wang",
+    "Changyin Sun"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.04358",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04358v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04358v1",
+   "oa": true,
+   "title": "EndoS3:Endoscopic Semantic Splatting SLAM",
+   "published": "2026-11-03",
+   "authors": [
+    "Mona Sheikh Zeinoddin",
+    "Benjamin Wright",
+    "Zafer Tandogdu",
+    "Greg Shaw",
+    "Evangelos Mazomenos",
+    "Danail Stoyanov"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.04244",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.04244v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.04244v1",
+   "oa": true,
+   "title": "CounterSketch: Physics-Grounded Counterfactual Reasoning for Sketch-to-Video Generation",
+   "published": "2026-11-03",
+   "authors": [
+    "Hien Trinh",
+    "Tan-Hiep To",
+    "Dinh-Khoi Vo",
+    "Tam V. Nguyen",
+    "Minh-Triet Tran",
+    "Trung-Nghia Le"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.03937",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.03937v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.03937v1",
+   "oa": true,
+   "title": "FlowBench: Counterfactual Imagination Training for Spatial Intelligence",
+   "published": "2026-11-02",
+   "authors": [
+    "Yifan Liu",
+    "Baihan Zhang",
+    "Khai Loong Aw",
+    "Klemen Kotar",
+    "Daniel L. K. Yamins"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "arxiv:2611.03932",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.03932v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.03932v1",
+   "oa": true,
+   "title": "CoReMatch: Recurrent Continuous Coordinate Refinement for Real-Time Robotic Feature Matching",
+   "published": "2026-11-02",
+   "authors": [
+    "Robert J. Wang",
+    "Charles Ling",
+    "Boyu Wang"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "oa:10.1109/mcom.001.2500346",
+   "source": "OpenAlex",
+   "venue": "IEEE Communications Magazine",
+   "url": "https://doi.org/10.1109/mcom.001.2500346",
+   "doi": "10.1109/mcom.001.2500346",
+   "pdf_url": "https://arxiv.org/pdf/2506.00417",
+   "oa": true,
+   "title": "World Models for Cognitive Agents: Transforming Edge Intelligence in Future Networks",
+   "published": "2026-01-01",
+   "authors": [
+    "Changyuan Zhao",
+    "Ruichen Zhang",
+    "Jiacheng Wang",
+    "Gaosheng Zhao",
+    "Dusit Tao Niyato",
+    "Geng Sun",
+    "Shiwen Mao",
+    "Dong In Kim"
+   ],
+   "cat": "article",
+   "topic": "world-models",
+   "added": "2026-11-08"
+  },
   {
    "id": "arxiv:2611.08392",
    "source": "arXiv",
