@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-09T01:30:02Z",
- "count": 1405,
+ "generated": "2026-11-10T01:30:00Z",
+ "count": 1416,
  "topics": {
-  "world-models": 738,
-  "spatial-ai": 268,
+  "clonal-plant-modeling": 109,
+  "world-models": 744,
+  "spatial-ai": 272,
   "plant-3d-reconstruction": 91,
   "plant-digital-twin": 62,
   "functional-structural-plant": 46,
-  "clonal-plant-modeling": 108,
   "construction-bim": 47,
   "agent-based-ecology": 33,
   "landscape-bim": 12
@@ -18,6 +18,231 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.09748",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09748v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09748v1",
+   "oa": true,
+   "title": "Predicting fitness from genomic offset: a multivariate latent-trait framework",
+   "published": "2026-11-06",
+   "authors": [
+    "Olivier François"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09625",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09625v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09625v1",
+   "oa": true,
+   "title": "Encoding Memory in World Models with Test-Time Model-Based Reinforcement Learning",
+   "published": "2026-11-06",
+   "authors": [
+    "Maxime Burchi",
+    "Fayaz Ali Dharejo",
+    "Radu Timofte"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09302",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09302v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09302v1",
+   "oa": true,
+   "title": "A Stochastic Latent Variable Generalization of Joint-Embedding Predictive Architectures",
+   "published": "2026-11-06",
+   "authors": [
+    "Nikos Giakoumoglou",
+    "Paschalis Giakoumoglou",
+    "Tania Stathaki"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09124",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09124v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09124v1",
+   "oa": true,
+   "title": "Toward the Era of Agentic Embodied Intelligence",
+   "published": "2026-11-06",
+   "authors": [
+    "Chao Liang",
+    "Ke Chen",
+    "Fengxiaoxiao Li",
+    "Shibo Huang",
+    "Yufeng Sun",
+    "Zhaokai Yin",
+    "Jianhuan Lai",
+    "Haozhe Feng",
+    "Chenghuan Jia",
+    "Zhipeng Zhang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09058",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09058v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09058v1",
+   "oa": true,
+   "title": "ProtoCouncil: Multi-Encoder Anatomical Prototypes for Prostate Cancer Detection in Micro-Ultrasound",
+   "published": "2026-11-06",
+   "authors": [
+    "Mohammad Mahdi Abootorabi",
+    "Nooshin Maghsoodi",
+    "Armin Saadat",
+    "Obed Dzikunu",
+    "Zhuoxin Guo",
+    "Hannes Cash",
+    "Ferdinand Luger",
+    "Adam Kinnaird",
+    "Brian Wodlinger",
+    "Parvin Mousavi",
+    "Purang Abolmaesumi"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.08989",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.08989v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.08989v1",
+   "oa": true,
+   "title": "LEF-JEPA: Denoising-Trained Latent Energy Fields for Spatial Representation Learning",
+   "published": "2026-11-06",
+   "authors": [
+    "Zhiyuan Liu",
+    "Zhihao Xu",
+    "Sicheng Liu",
+    "Huanhuan Huang"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.08898",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.08898v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.08898v1",
+   "oa": true,
+   "title": "FATHOM: World-Model-Guided Diffusion Action-Trajectory Selection for Sparse-Marker AUV Tracking",
+   "published": "2026-11-06",
+   "authors": [
+    "Xiaorui Wang",
+    "Zeyu Sha",
+    "Mingyang Yang",
+    "David Chen Wang",
+    "Feitian Zhang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09866",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09866v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09866v1",
+   "oa": true,
+   "title": "GRAC: Graph-Based Retrieval-Augmented Captioning for Surgical Scene Description",
+   "published": "2026-11-06",
+   "authors": [
+    "Rochak Dhakal",
+    "Chen Zhao",
+    "Soup Cobb",
+    "Xin Qian",
+    "Xiaofeng Yang",
+    "Weihua Zhou"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09816",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09816v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09816v1",
+   "oa": true,
+   "title": "BEV3SR: Evidence-Aware 3D Spatial Reasoning from Video",
+   "published": "2026-11-06",
+   "authors": [
+    "Fan Zhu",
+    "Rui Yu"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.09511",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.09511v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.09511v1",
+   "oa": true,
+   "title": "V-STORM: A Structure-Aware Grounded Chain of Thought Dataset for Faithful and Fine-Grained Spatio-Temporal Video Reasoning",
+   "published": "2026-11-06",
+   "authors": [
+    "Dian Jiao",
+    "Yuqian Yuan",
+    "Jiaqi Zhu",
+    "Mingjian Gao",
+    "Siwen Tan",
+    "Yunqi Cao",
+    "Jinhui Li",
+    "Sijing Li",
+    "Zhenxuan Fan",
+    "Haoyang Wang",
+    "Wenqiao Zhang",
+    "Siliang Tang"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.08861",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.08861v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.08861v1",
+   "oa": true,
+   "title": "Align3D: Image-Structure Co-Aligned 3D Scene Generation with Observability-Aware Fidelity-Preserving Guidance",
+   "published": "2026-11-06",
+   "authors": [
+    "Chenliang Zhou",
+    "Yifan Wang",
+    "Andrzej Banburski-Fahey"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-10"
+  },
   {
    "id": "arxiv:2611.07245",
    "source": "arXiv",
