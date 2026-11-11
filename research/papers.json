@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-10T01:30:00Z",
- "count": 1416,
+ "generated": "2026-11-11T01:30:04Z",
+ "count": 1431,
  "topics": {
-  "clonal-plant-modeling": 109,
-  "world-models": 744,
-  "spatial-ai": 272,
-  "plant-3d-reconstruction": 91,
+  "clonal-plant-modeling": 111,
+  "plant-3d-reconstruction": 92,
+  "world-models": 750,
+  "spatial-ai": 278,
   "plant-digital-twin": 62,
   "functional-structural-plant": 46,
   "construction-bim": 47,
@@ -18,6 +18,303 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.12094",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12094v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12094v1",
+   "oa": true,
+   "title": "Introduction to genetic simulation for animal breeding and genetics",
+   "published": "2026-11-09",
+   "authors": [
+    "Martin Johnsson"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12739",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12739v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12739v1",
+   "oa": true,
+   "title": "Plant Orbiter: 3D Plant Reconstruction and Generation with Video Diffusion Orbit Cameras and 3D Gaussian Splatting",
+   "published": "2026-11-09",
+   "authors": [
+    "Zane K. J. Hartley",
+    "Yong En Kok",
+    "Lewis A. G. Stuart",
+    "Andrew P. French",
+    "Michael P. Pound"
+   ],
+   "cat": "cs.CV",
+   "topic": "plant-3d-reconstruction",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12824",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12824v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12824v1",
+   "oa": true,
+   "title": "DreamLander: A 6-DOF World Model based Reinforcement Learning Planetary Lander",
+   "published": "2026-11-09",
+   "authors": [
+    "George Nehma",
+    "Patrick Quinn",
+    "Madhur Tiwari",
+    "Camilo Riano-Rios"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12732",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12732v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12732v1",
+   "oa": true,
+   "title": "$Σ$-LeWM: Learning World Models via S-Information for Robot Control",
+   "published": "2026-11-09",
+   "authors": [
+    "Xinrui Zu",
+    "Michael Przystupa",
+    "Zhao Yang",
+    "Shujian Yu",
+    "Kevin Sebastian Luck"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12678",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12678v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12678v1",
+   "oa": true,
+   "title": "Library of Hands: Fix the Hands, Not the World Model",
+   "published": "2026-11-09",
+   "authors": [
+    "Hasaan Ahmad",
+    "Qizhen Ying",
+    "Yuxuan Sun",
+    "Tianjin Huang",
+    "Guangming Wang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12557",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12557v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12557v1",
+   "oa": true,
+   "title": "WanderBench: Can World Models Explore Dynamic Worlds from Video?",
+   "published": "2026-11-09",
+   "authors": [
+    "Yuhang Chen",
+    "Jiheng Li",
+    "Jiale Wang",
+    "Zai Wang",
+    "Guangyue Liu"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12353",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12353v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12353v1",
+   "oa": true,
+   "title": "QCC-WM: Linking Macro-State Dynamics and Visual Generation via Quotient Causal Construction",
+   "published": "2026-11-09",
+   "authors": [
+    "Zhizhong Fu",
+    "Wei Zhou",
+    "Zhaoyang Jiang",
+    "Yudong Lin",
+    "Songlun Li",
+    "Zhi Li",
+    "Feifan Chen",
+    "Gaoming Li",
+    "Xiaorong Ding",
+    "Yifan Chen"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12324",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12324v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12324v1",
+   "oa": true,
+   "title": "How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time",
+   "published": "2026-11-09",
+   "authors": [
+    "Ku Onoda",
+    "Haruto Kawano",
+    "Shota Takashiro",
+    "Kohei Hayashi"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12452",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12452v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12452v1",
+   "oa": true,
+   "title": "V3DSAM: Semantic-Geometric Loop Verification and Geometry-Anchored Persistent Instance Mapping for Feed-Forward Dense SLAM",
+   "published": "2026-11-09",
+   "authors": [
+    "Maolin Ye",
+    "Dongqing Zhao",
+    "Linyang Li",
+    "Shuai Xue",
+    "Yuan Liu",
+    "Yiyuan Wang",
+    "Wen Li"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12175",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12175v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12175v1",
+   "oa": true,
+   "title": "GeoMind: A Benchmark for Spatial Understanding in Robotic Manipulation",
+   "published": "2026-11-09",
+   "authors": [
+    "Jinghe Wang",
+    "Xinrui Cao",
+    "Duo Wu",
+    "Chenghao Gu",
+    "Yong Zhong",
+    "Linjia Kang",
+    "Tianyi Xiong",
+    "Zhi Wang"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12038",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12038v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12038v1",
+   "oa": true,
+   "title": "DPGS-SLAM: Diffusion-Prior and Provenance-Aware Monocular Gaussian Splatting SLAM for Dynamic Visual Sensing",
+   "published": "2026-11-09",
+   "authors": [
+    "Yifan Luo",
+    "Takafumi Matsumaru",
+    "Vibekananda Dutta",
+    "Xin He"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.11934",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.11934v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.11934v1",
+   "oa": true,
+   "title": "Scale-Consistent Monocular Fisheye Visual Odometry via Spherical Bundle Adjustment-Guided Unsupervised Depth Learning",
+   "published": "2026-11-09",
+   "authors": [
+    "Wanhui Luo",
+    "Hongbo Zhao",
+    "Yi Zhou",
+    "Qijun Chen",
+    "Yiming Nie",
+    "Rui Fan"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.11825",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.11825v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.11825v1",
+   "oa": true,
+   "title": "ACROSSVAM3.0: Resource-Bounded 4D Scene Construction and Adaptive Surface Association",
+   "published": "2026-11-09",
+   "authors": [
+    "Nan Wu",
+    "Hong Yee Hung"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.11809",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.11809v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.11809v1",
+   "oa": true,
+   "title": "Budget-aware Correspondence-driven View Selection for Real-time 3D Perception of Mobile Robots",
+   "published": "2026-11-09",
+   "authors": [
+    "Vaishnav Ramesh",
+    "Jacob Carter",
+    "Shivali J. Patel",
+    "Sanjeev J. Koppal",
+    "Md Jahidul Islam"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.10986",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.10986v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.10986v1",
+   "oa": true,
+   "title": "The forces at hand: social learning is permissive, not instructive, for the evolution of phenotypic plasticity",
+   "published": "2026-11-07",
+   "authors": [
+    "Nam H. Le"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-11"
+  },
   {
    "id": "arxiv:2611.09748",
    "source": "arXiv",
