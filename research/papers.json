@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-12T01:30:00Z",
- "count": 1451,
+ "generated": "2026-11-13T01:30:03Z",
+ "count": 1463,
  "topics": {
-  "world-models": 757,
-  "spatial-ai": 284,
+  "world-models": 763,
+  "spatial-ai": 290,
   "clonal-plant-modeling": 114,
   "plant-3d-reconstruction": 94,
   "plant-digital-twin": 63,
@@ -18,6 +18,251 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.13572",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.13572v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.13572v1",
+   "oa": true,
+   "title": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
+   "published": "2026-11-10",
+   "authors": [
+    "Yuqi Wang",
+    "Fengyuan Liu",
+    "Mukai Li",
+    "Haochen Luo",
+    "Lei Li",
+    "Qi Liu"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.13348",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.13348v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.13348v1",
+   "oa": true,
+   "title": "ProTEUS: A mutation-resolved world model for closed-loop protein evolution",
+   "published": "2026-11-09",
+   "authors": [
+    "Yikun Zhang",
+    "Minghao Guo",
+    "Guangxue Xu",
+    "Peter Yichen Chen",
+    "Wojciech Matusik",
+    "Wengong Jin",
+    "Jingjing Chai",
+    "Kaiyi Jiang"
+   ],
+   "cat": "q-bio.BM",
+   "topic": "world-models",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.13229",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.13229v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.13229v1",
+   "oa": true,
+   "title": "Incorporating World Models in Decision Making for Next Best View Selection in Active Sensing",
+   "published": "2026-11-09",
+   "authors": [
+    "Nikita Sarawgi",
+    "Omey M. Manyar",
+    "Satyandra K. Gupta"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.13113",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.13113v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.13113v1",
+   "oa": true,
+   "title": "Building World Models from Intrinsic Motivation",
+   "published": "2026-11-09",
+   "authors": [
+    "Reece Keller",
+    "Declan Kutscher",
+    "Xaq Pitkow",
+    "Aran Nayebi"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.12319",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12319v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12319v1",
+   "oa": true,
+   "title": "Mitigating SM-Level Load Imbalance in 3D Gaussian Splatting on GPUs",
+   "published": "2026-11-09",
+   "authors": [
+    "Junha Ryu",
+    "Hoi-Jun Yoo"
+   ],
+   "cat": "cs.DC",
+   "topic": "world-models",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.12200",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.12200v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.12200v1",
+   "oa": true,
+   "title": "Learning to Act with World Models by Valuing What Comes Next",
+   "published": "2026-11-09",
+   "authors": [
+    "Chenghao Gao",
+    "Zhi Zhang",
+    "Dian Jin",
+    "Yihe Pan",
+    "Doudou Zhou"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.11169",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.11169v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.11169v1",
+   "oa": true,
+   "title": "Map2SLAM: From Streaming Map Prediction to Real-Time SLAM",
+   "published": "2026-11-08",
+   "authors": [
+    "Jian Gao",
+    "Lin-Zhuo Chen",
+    "Yihang Chen",
+    "Jiagang Chen",
+    "Jiacheng Dong",
+    "Xun Cao",
+    "Nan Xue",
+    "Yinghao Xu",
+    "Yao Yao"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.10637",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.10637v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.10637v1",
+   "oa": true,
+   "title": "VAComp: View-Aware Full Projector Compensation",
+   "published": "2026-11-07",
+   "authors": [
+    "Kai Zhou",
+    "Qingyue Deng",
+    "Bingyao Huang"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.10552",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.10552v2",
+   "pdf_url": "https://arxiv.org/pdf/2611.10552v2",
+   "oa": true,
+   "title": "Seeing Isn't Enough: Unlocking Visual Reasoning by Bridging the Reasoning-Access Gap with TIGER",
+   "published": "2026-11-07",
+   "authors": [
+    "Gregory Kang Ruey Lau",
+    "Minh Huynh Nguyen",
+    "Bryan Kian Hsiang Low"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.10547",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.10547v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.10547v1",
+   "oa": true,
+   "title": "HSGNav: Hypothesis Scene Graphs for Multi-Scale Lifelong Navigation under Object Relocation",
+   "published": "2026-11-07",
+   "authors": [
+    "Kaiyao Liao",
+    "Qingfeng Li",
+    "Chen Chen",
+    "Qing Sun",
+    "Ningbo Gu",
+    "Xiaoze Wu",
+    "Haochen Zhao",
+    "Ying Li",
+    "Jianwei Niu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.10506",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.10506v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.10506v1",
+   "oa": true,
+   "title": "SRA: Spatial Reasoning Adapter via Evolving Social Interaction Graphs for Trajectory Prediction",
+   "published": "2026-11-07",
+   "authors": [
+    "Jaewoo Jeong",
+    "Seonkyu Song",
+    "Hyeonwoo Park",
+    "Jegyeong Cho",
+    "Yujin Bae",
+    "Giwon Lee",
+    "Daehee Park",
+    "Kuk-Jin Yoon"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.10483",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.10483v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.10483v1",
+   "oa": true,
+   "title": "They Can See It but Not Say It: Iterative Self Knowledge Re-expression in Visual Reasoning Relative Pose Identification",
+   "published": "2026-11-07",
+   "authors": [
+    "Mengyu Wang",
+    "Ken Deng",
+    "Yftah Ziser",
+    "Shay B. Cohen",
+    "Tiejun Ma"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-13"
+  },
   {
    "id": "arxiv:2611.14496",
    "source": "arXiv",
