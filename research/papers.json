@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-16T01:30:03Z",
- "count": 1493,
+ "generated": "2026-11-17T01:30:00Z",
+ "count": 1501,
  "topics": {
-  "world-models": 781,
+  "world-models": 787,
+  "spatial-ai": 301,
+  "functional-structural-plant": 48,
   "clonal-plant-modeling": 116,
-  "spatial-ai": 300,
   "plant-3d-reconstruction": 94,
   "plant-digital-twin": 63,
-  "functional-structural-plant": 47,
   "construction-bim": 47,
   "agent-based-ecology": 33,
   "landscape-bim": 12
@@ -18,6 +18,168 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.18458",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.18458v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.18458v1",
+   "oa": true,
+   "title": "When to Trust Simulated Patient Responses:Support-Gated World Models for Vasopressor Decision Support",
+   "published": "2026-11-13",
+   "authors": [
+    "Yifan Jin",
+    "Tao Liu"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.18393",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.18393v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.18393v1",
+   "oa": true,
+   "title": "WeatherDreamer: Learning a World Model from Multimodal Earth Observations",
+   "published": "2026-11-13",
+   "authors": [
+    "Kate Duffy",
+    "Elise Penn",
+    "Tristan Ballard",
+    "August Posch",
+    "Thomas J. Vandal"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.18097",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.18097v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.18097v1",
+   "oa": true,
+   "title": "AG-JEPA: Anatomically Guided Joint Embedding Predictive Architecture for Neurodegenerative Representation Learning",
+   "published": "2026-11-13",
+   "authors": [
+    "Azad Singh",
+    "Ayantika Das",
+    "Amog Rao",
+    "Aiman Farooq",
+    "Anirban Porya",
+    "Ananya Shukla",
+    "Sowbhagya Suresh",
+    "Srinivasan Iyengar",
+    "Mohit Jain",
+    "Mercy Prasanna Ranjit"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.17905",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.17905v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.17905v1",
+   "oa": true,
+   "title": "Cracks in Embeddings: Robustness and Stability of JEPA-Based Chest X-Ray Representations",
+   "published": "2026-11-13",
+   "authors": [
+    "Zahid Mansur",
+    "Kalpana Yadav",
+    "Deepak Mishra"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.17831",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.17831v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.17831v1",
+   "oa": true,
+   "title": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+   "published": "2026-11-13",
+   "authors": [
+    "Keuntae Kim",
+    "Dongjun Kim",
+    "Yong Suk Choi"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.17775",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.17775v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.17775v1",
+   "oa": true,
+   "title": "Beyond Prediction Gain: LASR as a Metric for Action-Grounded Latents in World Models",
+   "published": "2026-11-13",
+   "authors": [
+    "Yu Zhou",
+    "Changsong Lei",
+    "Yixiang Wei",
+    "Kairui Wen",
+    "Huankun Sheng",
+    "Ming Li",
+    "Yeying Fan",
+    "Yu-Hui Wen",
+    "Yong-Jin Liu"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.18298",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.18298v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.18298v1",
+   "oa": true,
+   "title": "Objectives as Policies: Vision-Language Model Cost Programs for Contact-Rich Manipulation",
+   "published": "2026-11-13",
+   "authors": [
+    "Zihao Lu",
+    "Trong Gia Hung Nguyen",
+    "Fuquan Wang",
+    "Yifan Zhu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-17"
+  },
+  {
+   "id": "oa:10.1093/insilicoplants/diae018",
+   "source": "OpenAlex",
+   "venue": "in silico Plants",
+   "url": "https://doi.org/10.1093/insilicoplants/diae018",
+   "doi": "10.1093/insilicoplants/diae018",
+   "pdf_url": "https://academic.oup.com/insilicoplants/advance-article-pdf/doi/10.1093/insilicoplants/diae018/60011011/diae018.pdf",
+   "oa": true,
+   "title": "Identifying and quantifying the contribution of maize plant traits to nitrogen uptake and use through plant modelling",
+   "published": "2024-07-01",
+   "authors": [
+    "Jie Lu",
+    "T.J. Stomph",
+    "Guohua Mi",
+    "Lixing Yuan",
+    "Jochem B. Evers"
+   ],
+   "cat": "article",
+   "topic": "functional-structural-plant",
+   "added": "2026-11-17"
+  },
   {
    "id": "arxiv:2611.15602",
    "source": "arXiv",
