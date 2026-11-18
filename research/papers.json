@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-17T01:30:00Z",
- "count": 1501,
+ "generated": "2026-11-18T01:30:03Z",
+ "count": 1515,
  "topics": {
-  "world-models": 787,
-  "spatial-ai": 301,
+  "world-models": 793,
+  "plant-digital-twin": 64,
+  "spatial-ai": 307,
+  "clonal-plant-modeling": 117,
   "functional-structural-plant": 48,
-  "clonal-plant-modeling": 116,
   "plant-3d-reconstruction": 94,
-  "plant-digital-twin": 63,
   "construction-bim": 47,
   "agent-based-ecology": 33,
   "landscape-bim": 12
@@ -18,6 +18,292 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.21596",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.21596v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.21596v1",
+   "oa": true,
+   "title": "SADL: On the Demand-Supply Geometry of Representation Collapse",
+   "published": "2026-11-16",
+   "authors": [
+    "Junhan Sun",
+    "Yigui Feng",
+    "Mingzhe Liu",
+    "Haoyan Xu",
+    "Lei Ye",
+    "Ziqi Han",
+    "Hanru Bai",
+    "Yanzhao Zhang",
+    "Hao Zhao",
+    "Guofeng Zhang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.21517",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.21517v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.21517v1",
+   "oa": true,
+   "title": "Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models",
+   "published": "2026-11-16",
+   "authors": [
+    "Itamar Mishani",
+    "Mukund Krishnakumar",
+    "Oren Salzman",
+    "Maxim Likhachev"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.21479",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.21479v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.21479v1",
+   "oa": true,
+   "title": "LynnReal-Hand: Unlocking World Interaction with Hand Control",
+   "published": "2026-11-16",
+   "authors": [
+    "Shaohao Rui",
+    "Chaoyang Zhang",
+    "Xiaofeng Mao",
+    "Weijie Ma"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20916",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20916v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20916v1",
+   "oa": true,
+   "title": "EviBridge: Encoding Predictive Visual Evidence for Proactive Interaction",
+   "published": "2026-11-16",
+   "authors": [
+    "Zhichao Huang",
+    "Changheng Cai",
+    "Song Ren",
+    "Zhichen Zhao",
+    "Hongsen Liu",
+    "Chaoyang Zheng",
+    "Wenxi Wu",
+    "Yichen Long",
+    "Yuan Fang",
+    "Luya Wang",
+    "Gufeng Liu",
+    "Yuchen Wang"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20899",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20899v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20899v1",
+   "oa": true,
+   "title": "SciWorldBench: Do Video World Models Really Understand Scientific Experiments?",
+   "published": "2026-11-16",
+   "authors": [
+    "Xue Yang",
+    "Haonan Cai",
+    "Xinyu Hang",
+    "Zhimeng Huang",
+    "Xuanyi Liu",
+    "Chuanmin Jia",
+    "Siwei Ma"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20811",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20811v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20811v1",
+   "oa": true,
+   "title": "Auditing World-Model Explanations in Retail Forecasting: Faithfulness, Accuracy and Price Response",
+   "published": "2026-11-16",
+   "authors": [
+    "Kathik Iyer"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20851",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20851v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20851v1",
+   "oa": true,
+   "title": "artist: A Python package for differentiable ray tracing and gradient-based optimization of solar tower power plant operation",
+   "published": "2026-11-16",
+   "authors": [
+    "Marlene Busch",
+    "Marie Weiel",
+    "Kaleb Phipps",
+    "Daniel Maldonado Quinto",
+    "Max Pargmann",
+    "Robert Pitz-Paal",
+    "Markus Götz"
+   ],
+   "cat": "cs.LG",
+   "topic": "plant-digital-twin",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.21143",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.21143v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.21143v1",
+   "oa": true,
+   "title": "WinDEX: Metric 3D Hand Motion Reconstruction in the Wild for Dexterous Teleoperation and Policy Learning",
+   "published": "2026-11-16",
+   "authors": [
+    "Hongyu Ma",
+    "Hairong Qu",
+    "Shiqi Zhao",
+    "Yongsong Yang",
+    "Kai Shi",
+    "Jiahao Ai",
+    "Xin You",
+    "Peng Yin"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20767",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20767v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20767v1",
+   "oa": true,
+   "title": "UNITE: Consolidating Embodied VLM Specialists via Shared-Anchor One-Bit Factorization",
+   "published": "2026-11-16",
+   "authors": [
+    "Tao Tao",
+    "Anke Tang",
+    "Enneng Yang",
+    "Zhi Hou",
+    "Xiaogang Wang",
+    "Dacheng Tao"
+   ],
+   "cat": "cs.LG",
+   "topic": "spatial-ai",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20730",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20730v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20730v1",
+   "oa": true,
+   "title": "Selective Sensor Acquisition for Multimodal Place Recognition",
+   "published": "2026-11-16",
+   "authors": [
+    "Margaux Edwards",
+    "Tobias Fischer",
+    "Michael Milford"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20570",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20570v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20570v1",
+   "oa": true,
+   "title": "OrthoMark: Place Recognition with Point-Anchored Orthographic Height Mark",
+   "published": "2026-11-16",
+   "authors": [
+    "Haichuan Li"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20568",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20568v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20568v1",
+   "oa": true,
+   "title": "sqrtVINS-Based 360 Visual-Inertial SLAM Systems: Hilti-Trimble SLAM Challenge 2026 Entry",
+   "published": "2026-11-16",
+   "authors": [
+    "Jungwoo Lee",
+    "Hogyun Kim",
+    "Jiwon Choi",
+    "Jinyong Jeong",
+    "Younggun Cho"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.20558",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.20558v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.20558v1",
+   "oa": true,
+   "title": "Vision-Language Grounded Semantic Navigation for Autonomous Mobile Robots",
+   "published": "2026-11-16",
+   "authors": [
+    "Ravindran Vasoor Saravanan",
+    "Chittin Varunav Ravi",
+    "Madhumita Singh",
+    "Thirulok Sundar Mohan Rasu"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.18781",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.18781v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.18781v1",
+   "oa": true,
+   "title": "How shared pedigrees shape gene genealogies in finite admixed populations",
+   "published": "2026-11-12",
+   "authors": [
+    "Gaspard Dousson Lys",
+    "Camille Coron",
+    "Tristan Mary-Huard",
+    "Paul Verdu"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-18"
+  },
   {
    "id": "arxiv:2611.18458",
    "source": "arXiv",
