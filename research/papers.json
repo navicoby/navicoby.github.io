@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-19T01:30:01Z",
- "count": 1530,
+ "generated": "2026-11-20T01:30:00Z",
+ "count": 1547,
  "topics": {
-  "world-models": 800,
-  "spatial-ai": 314,
-  "plant-digital-twin": 65,
-  "clonal-plant-modeling": 117,
+  "world-models": 807,
+  "spatial-ai": 320,
+  "clonal-plant-modeling": 118,
+  "construction-bim": 49,
+  "plant-digital-twin": 66,
   "functional-structural-plant": 48,
   "plant-3d-reconstruction": 94,
-  "construction-bim": 47,
   "agent-based-ecology": 33,
   "landscape-bim": 12
  },
@@ -18,6 +18,345 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.24940",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24940v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24940v1",
+   "oa": true,
+   "title": "$Z$-sight: Unifying Vision-Language-Action and Latent World Modeling",
+   "published": "2026-11-18",
+   "authors": [
+    "Junjie Ye",
+    "Yiqi Zhao",
+    "Muchen Xu",
+    "Celina Shiyu Wang",
+    "Hao Dong",
+    "Ruohai Ge",
+    "Rong Xue",
+    "Benjamin J Kolligs",
+    "Aditya Dutt",
+    "Sasanka Nagavalli",
+    "Nassim A. Samad",
+    "Gaurav S. Sukhatme"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24925",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24925v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24925v1",
+   "oa": true,
+   "title": "Render the Robot, Generate the World: One Video World Model Across Embodiments",
+   "published": "2026-11-18",
+   "authors": [
+    "Yash Jangir",
+    "Karan Mirakhor",
+    "Renos Zabounidis",
+    "Muhammad Zubair Irshad",
+    "Sergey Zakharov",
+    "Yonatan Bisk",
+    "Homanga Bharadhwaj"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24869",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24869v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24869v1",
+   "oa": true,
+   "title": "WorldRuler: Interactive World Modeling under Configurable Rules",
+   "published": "2026-11-18",
+   "authors": [
+    "Mingliang Zhai",
+    "Chuanhao Li",
+    "Jiaming Tan",
+    "Zhen Li",
+    "Yuwei Wu",
+    "Yunde Jia",
+    "Zian Meng",
+    "Yuanyang Yin",
+    "Kaipeng Zhang"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24840",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24840v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24840v1",
+   "oa": true,
+   "title": "Does the Action Matter? Probing Action-Conditioned Semantic Forecasting as a World Model for Autonomous Driving",
+   "published": "2026-11-18",
+   "authors": [
+    "Binay Kumar Singh",
+    "Niels Da Vitoria Lobo"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24836",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24836v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24836v1",
+   "oa": true,
+   "title": "DiWALI: Diffusion Policy Learning in World Models via Latent Action Inference from Human and Robot Play",
+   "published": "2026-11-18",
+   "authors": [
+    "Akshay L Chandra",
+    "Iman Nematollahi",
+    "Lingyue Zhao",
+    "Daria Kulikova",
+    "Angela P. Schoellig",
+    "Fabien Despinoy",
+    "Abhinav Valada"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24781",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24781v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24781v1",
+   "oa": true,
+   "title": "Reconstruction vs. Prediction Pre-Training of Discrete Video Representations for Continuous Control",
+   "published": "2026-11-18",
+   "authors": [
+    "Ron Kosova",
+    "Francesco Croce"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24696",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24696v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24696v1",
+   "oa": true,
+   "title": "Improving Zero-shot 3D Semantic Mapping in Offroad with Geometric Priors",
+   "published": "2026-11-18",
+   "authors": [
+    "Eerik Alamikkotervo",
+    "Risto Ojala"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24371",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24371v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24371v1",
+   "oa": true,
+   "title": "One Affinity, Two Axes: Bidirectional Slot Attention for Iterative Aggregation across the Structure--Detail Spectrum in Visual Retrieval",
+   "published": "2026-11-18",
+   "authors": [
+    "Zihang Wang",
+    "Wenkai Zhu",
+    "Lingdong Kong",
+    "Teng Yan",
+    "Alan Liang",
+    "Shuyuan Li",
+    "Xieyuanli Chen",
+    "Dong Kong",
+    "Guanyu Zong"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24310",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24310v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24310v1",
+   "oa": true,
+   "title": "Proprioceptive Simultaneous Base and Terrain Elevation Estimation for Legged Robot Locomotion",
+   "published": "2026-11-18",
+   "authors": [
+    "Michael Maravgakis",
+    "Stylianos Piperakis",
+    "Panos Trahanias"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.24004",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.24004v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.24004v1",
+   "oa": true,
+   "title": "Space-X: Self-Evolving Spatial Agents Weaving Clues into Evidence Chains",
+   "published": "2026-11-18",
+   "authors": [
+    "Zijian Zhang",
+    "Wenqing Tian",
+    "Qiang Liu",
+    "Liang Wang"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.23935",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.23935v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.23935v1",
+   "oa": true,
+   "title": "Facet-SLAM: Real-Time Triangle Splatting SLAM",
+   "published": "2026-11-18",
+   "authors": [
+    "Edward Beng Wai Tan",
+    "Siew-Kei Lam"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.22541",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.22541v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.22541v1",
+   "oa": true,
+   "title": "From Perception to Simulation: Unveiling and Empowering Mental Spatial Dynamics in MLLMs",
+   "published": "2026-11-17",
+   "authors": [
+    "Jiachun Li",
+    "Zhuoran Jin",
+    "Kang Liu",
+    "Jun Zhao"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "oa:10.48550/arxiv.2603.23245",
+   "source": "OpenAlex",
+   "venue": "Transactions on machine learning research",
+   "url": "https://doi.org/10.48550/arxiv.2603.23245",
+   "doi": "10.48550/arxiv.2603.23245",
+   "pdf_url": "https://openreview.net/pdf?id=T6OrPlyPV4",
+   "oa": true,
+   "title": "Neural ODE and SDE Models for Adaptation and Planning in Model-Based Reinforcement Learning",
+   "published": "2026-03-24",
+   "authors": [
+    "Chao Han",
+    "Stefanos Ioannou",
+    "Luca Manneschi",
+    "Thomas J. Hayward",
+    "Michael Mangan",
+    "Aditya Gilra",
+    "Eleni Vasilaki"
+   ],
+   "cat": "article",
+   "topic": "world-models",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "oa:10.1007/s10592-025-01689-z",
+   "source": "OpenAlex",
+   "venue": "Conservation Genetics",
+   "url": "https://doi.org/10.1007/s10592-025-01689-z",
+   "doi": "10.1007/s10592-025-01689-z",
+   "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10592-025-01689-z.pdf",
+   "oa": true,
+   "title": "Clonal reproduction and hydrochory drive colony and population structure in a narrowly endemic and endangered emergent aquatic plant (Sagittaria fasciculata; Alismataceae)",
+   "published": "2025-03-21",
+   "authors": [
+    "Skyler J. Fox",
+    "Ashley B. Morris"
+   ],
+   "cat": "article",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "oa:W7233627490",
+   "source": "OpenAlex",
+   "venue": "ROSA P",
+   "url": "https://openalex.org/W7233627490",
+   "pdf_url": "https://rosap.ntl.bts.gov/view/dot/86958/dot_86958_DS1.pdf",
+   "oa": true,
+   "title": "Digital Collaboration Using Industry Foundation Classes (IFC) and Building Information Modeling",
+   "published": "2025-01-01",
+   "authors": [
+    "Kristen Sara Cetin",
+    "Behlul Kula",
+    "Taylor E. Stenzel",
+    "Bora Çetin",
+    "Surya Congress"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "oa:10.3389/fbuil.2024.1375873",
+   "source": "OpenAlex",
+   "venue": "Frontiers in Built Environment",
+   "url": "https://doi.org/10.3389/fbuil.2024.1375873",
+   "doi": "10.3389/fbuil.2024.1375873",
+   "pdf_url": "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2024.1375873/pdf",
+   "oa": true,
+   "title": "Semi-automated creation of IFC bridge models from point clouds for maintenance applications",
+   "published": "2024-06-24",
+   "authors": [
+    "Yohann Schatz",
+    "Bernd Domer"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "oa:10.3390/electronics13112209",
+   "source": "OpenAlex",
+   "venue": "Electronics",
+   "url": "https://doi.org/10.3390/electronics13112209",
+   "doi": "10.3390/electronics13112209",
+   "pdf_url": "https://www.mdpi.com/2079-9292/13/11/2209/pdf?version=1717601777",
+   "oa": true,
+   "title": "Digital Twins in Agriculture: A Review of Recent Progress and Open Issues",
+   "published": "2024-06-05",
+   "authors": [
+    "Wang Li"
+   ],
+   "cat": "article",
+   "topic": "plant-digital-twin",
+   "added": "2026-11-20"
+  },
   {
    "id": "arxiv:2611.23118",
    "source": "arXiv",
