@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-20T01:30:00Z",
- "count": 1547,
+ "generated": "2026-11-21T01:30:02Z",
+ "count": 1561,
  "topics": {
-  "world-models": 807,
-  "spatial-ai": 320,
-  "clonal-plant-modeling": 118,
+  "clonal-plant-modeling": 119,
+  "world-models": 813,
+  "spatial-ai": 326,
+  "plant-digital-twin": 67,
   "construction-bim": 49,
-  "plant-digital-twin": 66,
   "functional-structural-plant": 48,
   "plant-3d-reconstruction": 94,
   "agent-based-ecology": 33,
@@ -18,6 +18,292 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.25491",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.25491v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.25491v1",
+   "oa": true,
+   "title": "Dynamical Variational Theory of Stochastic Reaction Networks",
+   "published": "2026-11-19",
+   "authors": [
+    "Moshir Harsh",
+    "Peter Sollich"
+   ],
+   "cat": "cond-mat.stat-mech",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26615",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26615v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26615v1",
+   "oa": true,
+   "title": "ScaleWorld: High-Resolution World Generation through Shared Prediction and Refinement",
+   "published": "2026-11-19",
+   "authors": [
+    "Yansong Qu",
+    "Wesker Zheng",
+    "Quanjian Song",
+    "Zhiyuan Zhang",
+    "Xiao Cao",
+    "Shengchuan Zhang",
+    "Liujuan Cao"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26516",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26516v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26516v1",
+   "oa": true,
+   "title": "Plan4D: Generative Plannable 4D Worlds",
+   "published": "2026-11-19",
+   "authors": [
+    "Hangwei Zhang",
+    "Rujing Dang",
+    "Ruimin Lin",
+    "Jiahong Wu",
+    "Xiangxiang Chu",
+    "Chuanxia Zheng"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26464",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26464v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26464v1",
+   "oa": true,
+   "title": "Monte Carlo Pass Search for Setpieces",
+   "published": "2026-11-19",
+   "authors": [
+    "Andrew Kang"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26419",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26419v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26419v1",
+   "oa": true,
+   "title": "FEA solver integration of a composite World Model with a Spiking Neural Network memory Block for computationally efficient modelling of defects and variabilities",
+   "published": "2026-11-19",
+   "authors": [
+    "Bassam El Said",
+    "Adam Sobey"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26366",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26366v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26366v1",
+   "oa": true,
+   "title": "World Models Favor Learned Priors over Visual Evidence",
+   "published": "2026-11-19",
+   "authors": [
+    "Han Xiao",
+    "Zhiyong Bao",
+    "Xiaotong Liu",
+    "Yanhao Chen",
+    "Qingqiang Wu"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26211",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26211v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26211v1",
+   "oa": true,
+   "title": "SpecWM: Turning Verification into Refinement for Streaming World Models",
+   "published": "2026-11-19",
+   "authors": [
+    "Jiaming Li",
+    "Lingzhen Li",
+    "Xiaze Yang",
+    "Chenyu Zhu",
+    "Kaiqi Liu",
+    "Xiaotong Zhao",
+    "Songlian Li",
+    "Toyota Li",
+    "Alan Zhao",
+    "Haobin Zhong",
+    "Yue Ma",
+    "Zhiyuan Ma"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26493",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26493v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26493v1",
+   "oa": true,
+   "title": "SGAR: Feed-Forward 3D Reconstruction via Sparse Geometry-Guided Attention",
+   "published": "2026-11-19",
+   "authors": [
+    "Aoxiang Fan",
+    "Maria Pilligua",
+    "Corentin Dumery",
+    "Oliver Heinimann",
+    "Pascal Fua"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26177",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26177v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26177v1",
+   "oa": true,
+   "title": "SpatialScout-V2: Can VLM Agents Actively Explore Real-World 3D Scenes and Localize Objects?",
+   "published": "2026-11-19",
+   "authors": [
+    "Zhaoxi Zhang",
+    "Hao Liang",
+    "Linxuan Wu",
+    "Yiming Xu",
+    "Yifu Yuan",
+    "Kun Liang",
+    "Chenming Tang",
+    "Meiyi Qiang",
+    "Wentao Zhang",
+    "Weikang Li",
+    "Yunfang Wu"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.26083",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.26083v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.26083v1",
+   "oa": true,
+   "title": "Reference-Twist-Based Velocity-Domain Spatiotemporal Calibration for mmWave Radar, Event Camera, and IMU",
+   "published": "2026-11-19",
+   "authors": [
+    "Zhenghao Zou",
+    "Yang Lyu",
+    "Xiaohu Guo",
+    "Chunhui Zhao",
+    "Quan Pan"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.25925",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.25925v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.25925v1",
+   "oa": true,
+   "title": "SpatialMem: Building Quantitative Spatial Reasoning Agents with Hierarchical Memory",
+   "published": "2026-11-19",
+   "authors": [
+    "Zinan Zheng",
+    "Nuo Chen",
+    "Jia Li"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.25865",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.25865v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.25865v1",
+   "oa": true,
+   "title": "Thinking in Streams: Proactive Spatial Reasoning with Vision-Language Models",
+   "published": "2026-11-19",
+   "authors": [
+    "Junyoung Hong",
+    "Minsu Kim",
+    "Jaehyun Kim",
+    "Jeonghwan Cho",
+    "Jiwoo Lee",
+    "Seon Joo Kim"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "arxiv:2611.25722",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.25722v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.25722v1",
+   "oa": true,
+   "title": "DACA: Dual-Anchor Collaborative Agent for Zero-Shot 3D Visual Grounding",
+   "published": "2026-11-19",
+   "authors": [
+    "Jiaming Liu",
+    "Linghe Kong",
+    "Guixu Zhang",
+    "Huaxi Huang"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-21"
+  },
+  {
+   "id": "oa:10.1016/j.compag.2025.110880",
+   "source": "OpenAlex",
+   "venue": "Computers and Electronics in Agriculture",
+   "url": "https://doi.org/10.1016/j.compag.2025.110880",
+   "doi": "10.1016/j.compag.2025.110880",
+   "pdf_url": "https://doi.org/10.1016/j.compag.2025.110880",
+   "oa": true,
+   "title": "Digital twin for lettuce growth in six climate zones (‘Climate 2050′)",
+   "published": "2025-08-13",
+   "authors": [
+    "Shu Liang",
+    "Nguyen Van Duc Long",
+    "Mst Irin Parvin",
+    "Marc Escribà‐Gelonch",
+    "Stephen Lantin",
+    "Volker Hessel"
+   ],
+   "cat": "article",
+   "topic": "plant-digital-twin",
+   "added": "2026-11-21"
+  },
   {
    "id": "arxiv:2611.24940",
    "source": "arXiv",
