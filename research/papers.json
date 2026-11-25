@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-24T01:30:00Z",
- "count": 1601,
+ "generated": "2026-11-25T01:30:02Z",
+ "count": 1619,
  "topics": {
-  "clonal-plant-modeling": 121,
-  "world-models": 834,
-  "spatial-ai": 342,
-  "construction-bim": 50,
-  "plant-digital-twin": 67,
+  "world-models": 840,
+  "spatial-ai": 348,
+  "clonal-plant-modeling": 122,
+  "plant-3d-reconstruction": 95,
+  "agent-based-ecology": 34,
+  "construction-bim": 52,
+  "plant-digital-twin": 68,
   "functional-structural-plant": 48,
-  "plant-3d-reconstruction": 94,
-  "agent-based-ecology": 33,
   "landscape-bim": 12
  },
  "sources": [
@@ -18,6 +18,374 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.30955",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30955v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30955v1",
+   "oa": true,
+   "title": "LeCellModel: Interpretable Density Estimation over the Gene Expression Manifold",
+   "published": "2026-11-23",
+   "authors": [
+    "Gil Karin",
+    "Artemii Bakulin",
+    "Nir Yosef"
+   ],
+   "cat": "q-bio.GN",
+   "topic": "world-models",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30907",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30907v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30907v1",
+   "oa": true,
+   "title": "DexLatentWorld: 3D Cross-Embodiment Latent Action World Models for Zero-Shot Robotic Manipulation",
+   "published": "2026-11-23",
+   "authors": [
+    "Vinay Udit Mohan",
+    "Xuchuan Huang",
+    "Rolandos Alexandros Potamias"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30898",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30898v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30898v1",
+   "oa": true,
+   "title": "World Models as Native Latent Action Models",
+   "published": "2026-11-23",
+   "authors": [
+    "Qinyue Li",
+    "Weijie Qiao",
+    "Qingyi Tao",
+    "Zerui Gong",
+    "Zhe Yang",
+    "Quanzhou Li",
+    "Taolin Zhang",
+    "Jinglin He",
+    "Zhonghua Wu",
+    "Chen Change Loy"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30836",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30836v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30836v1",
+   "oa": true,
+   "title": "Can Multimodal Fusion MakeSense for Embodied Vision in Degraded Sensing?",
+   "published": "2026-11-23",
+   "authors": [
+    "Cheng-Ru Chou",
+    "Shih-Yu Lai",
+    "Pei-Lin Chiang",
+    "Shou-Po Tsai",
+    "Jing-Zhe Huang",
+    "Fukuharu Tanaka",
+    "Hirozumi Yamaguchi",
+    "Bing-Yu Chen",
+    "Yu-Lun Liu",
+    "Hsun-Ping Hsieh"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30714",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30714v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30714v1",
+   "oa": true,
+   "title": "LiveAudio: From Bidirectional to Autoregressive Diffusion for Real-Time Streaming Video-to-Audio Generation",
+   "published": "2026-11-23",
+   "authors": [
+    "Yuxuan Jiang",
+    "Zehua Chen",
+    "Yusheng Dai",
+    "Andong Wang",
+    "Weibei Dou",
+    "Jun Zhu"
+   ],
+   "cat": "cs.SD",
+   "topic": "world-models",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30666",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30666v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30666v1",
+   "oa": true,
+   "title": "Zhengrong: World Models with Pole-Based Action-Response Factorization for Direct Visual Planning",
+   "published": "2026-11-23",
+   "authors": [
+    "Yu Zhang",
+    "Jingrui Li",
+    "Congyu Wang",
+    "Yuhang Cheng",
+    "Wenbo Chen",
+    "Xiaobo Zhang",
+    "Jing Zou",
+    "Yuxi Dai"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.31215",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.31215v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.31215v1",
+   "oa": true,
+   "title": "Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning",
+   "published": "2026-11-23",
+   "authors": [
+    "Xiwei Liu",
+    "Yulong Li",
+    "Xuhui Li",
+    "Xinlin Zhuang",
+    "Zhixiang Lu",
+    "Haolin Yang",
+    "Jianxu Chen",
+    "Yifan Lu",
+    "Zhiran Zhang",
+    "Yutong Xie"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.31209",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.31209v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.31209v1",
+   "oa": true,
+   "title": "WorldLatent: A Unified 4D Latent Space for World Perception and Generation",
+   "published": "2026-11-23",
+   "authors": [
+    "Jingxi Chen",
+    "Yujia Chen",
+    "Cornelia Fermuller",
+    "Yiannis Aloimonos",
+    "Wen-Sheng Chu",
+    "Du Tran"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.31021",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.31021v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.31021v1",
+   "oa": true,
+   "title": "Parsing Visual Latents for Multimodal Spatial Reasoning",
+   "published": "2026-11-23",
+   "authors": [
+    "Zhuoying Yang",
+    "Yichen Guo",
+    "Kathy Jia",
+    "Zichang Su",
+    "Ayesha Kashif",
+    "Nange Hai",
+    "Jeffrey Ming Han Li",
+    "Zhewen He",
+    "Silvio Kempf",
+    "Ni Jiachen",
+    "Junjie Yang",
+    "Muhammad Hamza"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30964",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30964v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30964v1",
+   "oa": true,
+   "title": "Graph2Scene: Relation-Aware Text-to-Image Generation with Graph-Guided Diffusion Model",
+   "published": "2026-11-23",
+   "authors": [
+    "Peizheng Li",
+    "Xin Ai",
+    "Guanghui Cheng",
+    "Zikang Dong",
+    "Qiange Wang",
+    "Yanfeng Zhang"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30859",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30859v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30859v1",
+   "oa": true,
+   "title": "CableMoE: Harm-Regularized Mean-Residual Expert Fusion for Transmission-Corridor Segmentation",
+   "published": "2026-11-23",
+   "authors": [
+    "Shima Salehi"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.30769",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.30769v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.30769v1",
+   "oa": true,
+   "title": "Screening for nonrigidity in structure from motion using projected reprojection residuals",
+   "published": "2026-11-23",
+   "authors": [
+    "Íñigo Cirauqui-Viloria"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.29703",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.29703v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.29703v1",
+   "oa": true,
+   "title": "A high-dimensional perspective of assortative mating: definition, dynamics, and limiting results",
+   "published": "2026-11-22",
+   "authors": [
+    "Kári Hlynsson"
+   ],
+   "cat": "math.ST",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.29148",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.29148v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.29148v1",
+   "oa": true,
+   "title": "ArborNet: Volume- and skeleton-aware completion of tree quantitative structure models from incomplete point clouds using anchor-conditioned graph learning",
+   "published": "2026-11-22",
+   "authors": [
+    "Ge Jiang",
+    "Tiangang Yin",
+    "Wei Yao",
+    "Wai Yeung Yan",
+    "Qi Chen",
+    "Jinhong Wang",
+    "Qihao Weng"
+   ],
+   "cat": "cs.CV",
+   "topic": "plant-3d-reconstruction",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.28755",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.28755v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.28755v1",
+   "oa": true,
+   "title": "Who Speaks for the Water? Simulating Discursive Closure and Power Asymmetries in Hydrosocial Governance",
+   "published": "2026-11-21",
+   "authors": [
+    "Mario Lillo-Saavedra",
+    "Marcela Salgado-Vargas",
+    "Ángel García-Pedrero",
+    "Diego Rivera",
+    "Marcelo Somos-Valenzuela"
+   ],
+   "cat": "cs.MA",
+   "topic": "agent-based-ecology",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.28820",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.28820v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.28820v1",
+   "oa": true,
+   "title": "PointNeXt Adapter Improved Model for BIM Component Defect Association under Construction Images and Design Model Attributes",
+   "published": "2026-11-21",
+   "authors": [
+    "Na Yu"
+   ],
+   "cat": "cs.CV",
+   "topic": "construction-bim",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.28197",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.28197v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.28197v1",
+   "oa": true,
+   "title": "From Point Clouds to Engineering Models: Benchmarking Agentic 3D Reconstruction in the Built Environment",
+   "published": "2026-11-20",
+   "authors": [
+    "Changyu Du",
+    "Stavros Nousias",
+    "Syed Salman Ahmed",
+    "Kai Dietmair",
+    "Mohammad Alrabab'h",
+    "André Borrmann"
+   ],
+   "cat": "cs.AI",
+   "topic": "construction-bim",
+   "added": "2026-11-25"
+  },
+  {
+   "id": "oa:10.5281/zenodo.22710929",
+   "source": "OpenAlex",
+   "venue": "Research consortium archive.",
+   "url": "https://doi.org/10.5281/zenodo.22710929",
+   "doi": "10.5281/zenodo.22710929",
+   "pdf_url": "https://rcresearcharchive.com/index.php/Journal/article/download/1135/1154",
+   "oa": true,
+   "title": "Digital Twin Crop Canopies Combining UAV LiDAR, Hyperspectral Imaging, and Disease Epidemiology Models for Precision Plant Health Monitoring",
+   "published": "2026-02-25",
+   "authors": [
+    "Research Consortium Archive"
+   ],
+   "cat": "article",
+   "topic": "plant-digital-twin",
+   "added": "2026-11-25"
+  },
   {
    "id": "arxiv:2611.27368",
    "source": "arXiv",
