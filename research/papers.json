@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-26T01:30:04Z",
- "count": 1633,
+ "generated": "2026-11-27T01:30:02Z",
+ "count": 1646,
  "topics": {
-  "clonal-plant-modeling": 123,
+  "clonal-plant-modeling": 124,
+  "world-models": 852,
+  "spatial-ai": 360,
   "plant-3d-reconstruction": 96,
-  "world-models": 846,
-  "spatial-ai": 354,
   "agent-based-ecology": 34,
   "construction-bim": 52,
   "plant-digital-twin": 68,
@@ -18,6 +18,274 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2611.33634",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.33634v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.33634v1",
+   "oa": true,
+   "title": "The evolution of extreme spatial heterochiasmy in amphibians: interactions between sex-specific meiotic program and chromosome architecture",
+   "published": "2026-11-25",
+   "authors": [
+    "Ezgi Unal",
+    "Paris Veltsos",
+    "Wen-Juan Ma"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34830",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34830v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34830v1",
+   "oa": true,
+   "title": "Not all world models can doubt: how training objective and architecture shape epistemic uncertainty in JEPA and RSSM world models",
+   "published": "2026-11-25",
+   "authors": [
+    "Simon Baur",
+    "Wojciech Samek",
+    "Jackie Ma"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34739",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34739v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34739v1",
+   "oa": true,
+   "title": "Was the Model Given the Right Action? Auditing and Repairing Action Interfaces in Navigation World Models",
+   "published": "2026-11-25",
+   "authors": [
+    "Ajmain Istiak Apon",
+    "Md Mehedi Hasan",
+    "Sejuti Rahman"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34730",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34730v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34730v1",
+   "oa": true,
+   "title": "WorldInteract: Controllable Streaming Video Generation for Multi-Material Interactions",
+   "published": "2026-11-25",
+   "authors": [
+    "Ahmed Hatem",
+    "Caoliwen Wang",
+    "Robert Hoang",
+    "Siyuan Chen",
+    "Spencer Szabados",
+    "Zike Wu",
+    "Xiyang Tan",
+    "Shenyifan Lu",
+    "Rafael Bischof",
+    "Bernd Bickel",
+    "Renjie Liao",
+    "Peter Yichen Chen"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34693",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34693v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34693v1",
+   "oa": true,
+   "title": "ShowNow: Fine-Grained Speculative Streaming for Responsive World Models",
+   "published": "2026-11-25",
+   "authors": [
+    "Yiren Song",
+    "Guian Fang",
+    "Mike Zheng Shou"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34656",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34656v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34656v1",
+   "oa": true,
+   "title": "Do We Still Need Reinforcement Learning When We Can Read the World Model?",
+   "published": "2026-11-25",
+   "authors": [
+    "Mingchao Zhang",
+    "Miduo Cui",
+    "Kangze He",
+    "Yuanjun Li",
+    "Dapeng Li",
+    "Ce Zhang",
+    "Chuanchen Luo",
+    "Xue Yan",
+    "Mingzhe Xing",
+    "Zhumin Chen",
+    "Hangyu Mao",
+    "Bin Zhang"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34644",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34644v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34644v1",
+   "oa": true,
+   "title": "Motion Beyond Pixels: Learning Future Visual Representations for Object-Centric Dynamics",
+   "published": "2026-11-25",
+   "authors": [
+    "Chengzhi Zhao",
+    "Juelin Li",
+    "Zhennan Wang",
+    "Sheng Wang",
+    "Zhuoman Liu",
+    "Yuhao Lu",
+    "Jiongxu Chen",
+    "Haitang Feng",
+    "Yanjie Li",
+    "Lin Shao"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34932",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34932v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34932v1",
+   "oa": true,
+   "title": "MERLoc: Robust Robot Localization in Dynamic Environments with Pose-Based Retrieval over 3D Gaussian Splatting References",
+   "published": "2026-11-25",
+   "authors": [
+    "Michael Baumgartner",
+    "Dario Mylonopoulos",
+    "Sammy Christen",
+    "Markus Gross",
+    "Moritz Bacher"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34877",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34877v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34877v1",
+   "oa": true,
+   "title": "Towards Closing the Performance Gap in Cross-Modal Place Recognition",
+   "published": "2026-11-25",
+   "authors": [
+    "Ofer Idan",
+    "Dan Badur",
+    "Yoli Shavit"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34745",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34745v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34745v1",
+   "oa": true,
+   "title": "How Well Do Vision-Language Scene Graphs Serve as Memory for Embodied Question Answering?",
+   "published": "2026-11-25",
+   "authors": [
+    "Divyansh Pandey",
+    "Shubh Garg",
+    "Vedant Khandelwal",
+    "Niyati Rawal",
+    "Amit Sheth"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34549",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34549v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34549v1",
+   "oa": true,
+   "title": "CADENCE: Sensor-GroundedWorld-Consistent Gaussian SLAM for Collaborative Mobile Reconstruction",
+   "published": "2026-11-25",
+   "authors": [
+    "Reshad Ul Karim",
+    "Abrar Samin",
+    "Md Rashad Al Hasan Rony"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.34046",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.34046v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.34046v1",
+   "oa": true,
+   "title": "End-to-End Image-Goal Navigation for Agile Quadrotors via Recurrent State Distillation",
+   "published": "2026-11-25",
+   "authors": [
+    "Simone Nascivera",
+    "Ismail Geles",
+    "Davide Scaramuzza"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "arxiv:2611.33991",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2611.33991v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.33991v1",
+   "oa": true,
+   "title": "QK-Bench: Benchmarking Quantitative Kinematic Understanding for Dynamic Spatial Intelligence",
+   "published": "2026-11-25",
+   "authors": [
+    "Lennox Wei",
+    "Jiaqi Yao",
+    "Shixin Sun",
+    "Yuanzheng Zhang",
+    "Jianhua Han",
+    "Meng Tian",
+    "Shaohui Liu",
+    "Wangmeng Zuo"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-11-27"
+  },
   {
    "id": "oa:10.1093/jpe/rtag246",
    "source": "OpenAlex",
